@@ -121,7 +121,7 @@ bir satırlık iş.
 ## Yayına alma (GitHub Pages)
 
 `.github/workflows/daily.yml` her gün 06:00'da (TR) çalışır: feed sağlığını kontrol eder, bülteni
-üretir, testleri koşar, `site/data`'yı işler ve Pages'e dağıtır.
+üretir, testleri koşar ve Pages'e dağıtır. Bülten doğrudan Pages çıktısına girer, depoya işlenmez.
 
 Depo kuruludur; **Settings → Pages → Source** `GitHub Actions` olarak ayarlıdır.
 `main` dalına her push ve her sabahki cron çalışması yayını tazeler.
