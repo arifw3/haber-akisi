@@ -1,5 +1,7 @@
 __pycache__/
 *.py[cod]
+.shot-*.png
+.wide-*.png
 .preview*.png
 site/_probe.html
 .venv/

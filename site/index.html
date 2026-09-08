@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Haber Akışı</title>
-<meta name="description" content="Google Haberler'den günlük Türkçe sesli haber bülteni">
-<meta name="theme-color" content="#dbe7dc">
+<meta name="description" content="Google Haberler'den günlük Türkçe haber bülteni — okuyun ya da hands-free dinleyin">
+<meta name="theme-color" content="#f4f5f7">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Haber Akışı">
 <link rel="manifest" href="manifest.webmanifest">
@@ -17,139 +17,110 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        ink:  { DEFAULT: "#12211a", soft: "#5a6b62", faint: "#8d9c93" },
-        leaf: { 50:"#f2f7f2", 100:"#e3efe4", 200:"#cfe2d1", 300:"#a9cbad",
-                400:"#7fb085", 500:"#579462", 600:"#3f7a4c", 700:"#33603d" }
+        ink:   { DEFAULT: "#0d1220", soft: "#5b6577", faint: "#9aa3b2" },
+        brand: { 50:"#eff6ff", 100:"#dbeafe", 500:"#2f7df6", 600:"#1868e8", 700:"#1355c4" },
+        shell: "#f4f5f7"
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"]
       },
       boxShadow: {
-        card: "0 18px 40px -18px rgba(18,33,26,.30), 0 2px 8px -2px rgba(18,33,26,.08)",
-        deck: "0 10px 24px -14px rgba(18,33,26,.28)",
-        bar:  "0 -6px 24px -12px rgba(18,33,26,.20)"
+        hero: "0 22px 44px -20px rgba(13,18,32,.45)",
+        card: "0 10px 30px -18px rgba(13,18,32,.28)",
+        nav:  "0 -4px 30px -12px rgba(13,18,32,.18)",
+        pill: "0 8px 20px -10px rgba(24,104,232,.65)"
       },
-      borderRadius: { xl2: "1.75rem" }
+      borderRadius: { xl2: "1.5rem", xl3: "2rem" }
     }
   }
 }
 </script>
 <style>
   html, body { overscroll-behavior-y: none; overflow-x: hidden; }
+  body { background: #f4f5f7; }
   * { min-width: 0; }
-  body {
-    background: radial-gradient(120% 80% at 50% 0%, #eef5ee 0%, #e2ece3 45%, #d8e6da 100%) fixed;
-  }
+
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-  /* Kart destesi: on kart tam boy, arkadakiler yukarida kademeli durur */
-  .deck-card {
-    position: absolute;
-    left: 0; right: 0; top: 0;
-    /* on kart akista: yukseklik icerige gore buyur */
-    transition: transform .45s cubic-bezier(.22,.9,.26,1), opacity .35s ease;
-    will-change: transform, opacity;
-  }
-  .deck-card[data-state="front"]  { position: relative; z-index: 40; }
-  .deck-card[data-state="behind"] { z-index: 30; pointer-events: none; }
-  .deck-card[data-state="gone"]   { z-index: 10; pointer-events: none; opacity: 0; }
+  .snap-x-mandatory { scroll-snap-type: x mandatory; }
 
-  @keyframes pulse-ring {
-    0%   { box-shadow: 0 0 0 0 rgba(87,148,98,.45); }
-    70%  { box-shadow: 0 0 0 14px rgba(87,148,98,0); }
-    100% { box-shadow: 0 0 0 0 rgba(87,148,98,0); }
+  /* Haber görseli yok (RSS vermiyor): kategoriye göre gradient + ince doku */
+  .hero-tex::after {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 18% 22%, rgba(255,255,255,.16) 0, transparent 42%),
+      radial-gradient(circle at 82% 78%, rgba(0,0,0,.22) 0, transparent 55%);
+    pointer-events: none;
   }
-  .speaking { animation: pulse-ring 2s infinite; }
 
-  @media (prefers-reduced-motion: reduce) {
-    .deck-card { transition: none; }
-    .speaking { animation: none; }
-  }
+  .view { animation: fade .28s ease both; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  @keyframes eq { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+  .eq span { display:block; width:3px; height:14px; border-radius:2px; background:currentColor;
+             transform-origin:center bottom; animation: eq .9s ease-in-out infinite; }
+  .eq span:nth-child(2){ animation-delay:.15s }
+  .eq span:nth-child(3){ animation-delay:.3s }
+
+  @media (prefers-reduced-motion: reduce) { .view, .eq span { animation: none; } }
 </style>
 </head>
-<body class="h-full font-sans text-ink antialiased selection:bg-leaf-200">
+<body class="min-h-full font-sans text-ink antialiased">
 
-<div class="mx-auto flex h-full w-full max-w-md flex-col px-5 pb-28 pt-[max(1rem,env(safe-area-inset-top))]">
-
-  <header class="flex shrink-0 items-start justify-between gap-3">
-    <div class="min-w-0">
-      <p id="today" class="text-[13px] font-medium text-ink-faint">&nbsp;</p>
-      <h1 class="mt-0.5 text-[27px] font-bold leading-tight tracking-tight">Haber Akışı</h1>
-    </div>
-    <div class="flex shrink-0 gap-2 pt-1">
-      <button id="btn-search" aria-label="Ara"
-        class="grid h-11 w-11 place-items-center rounded-full bg-white/80 shadow-deck backdrop-blur transition active:scale-95">
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <button id="btn-refresh" aria-label="Yenile"
-        class="grid h-11 w-11 place-items-center rounded-full bg-white/80 shadow-deck backdrop-blur transition active:scale-95">
-        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M20 11a8 8 0 1 0-2.3 5.7" stroke-linecap="round"/>
-          <path d="M20 4v7h-7" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-  </header>
-
-  <div id="search-wrap" class="mt-3 hidden shrink-0">
-    <input id="search" type="search" placeholder="Haberlerde ara…" autocomplete="off"
-      class="w-full rounded-2xl border border-leaf-200 bg-white/90 px-4 py-3 text-[15px] outline-none placeholder:text-ink-faint focus:border-leaf-400">
-  </div>
-
-  <nav id="chips" class="no-scrollbar mt-4 flex shrink-0 gap-2 overflow-x-auto pb-1"></nav>
-
-  <section id="listen-bar" class="mt-4 shrink-0 rounded-xl2 bg-white/75 p-3 shadow-deck backdrop-blur">
-    <div class="flex items-center gap-3">
-      <button id="btn-play" aria-label="Sesli dinlemeyi başlat"
-        class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-leaf-600 text-white shadow-lg transition active:scale-95">
-        <svg id="ico-play" class="h-6 w-6 translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
-        <svg id="ico-pause" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z"/></svg>
-      </button>
-      <div class="min-w-0 flex-1">
-        <p id="listen-title" class="truncate text-[15px] font-semibold">Sesli bülten</p>
-        <p id="listen-sub" class="truncate text-[13px] text-ink-soft">Yükleniyor…</p>
-        <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-leaf-100">
-          <div id="progress" class="h-full w-0 rounded-full bg-leaf-500 transition-[width] duration-300"></div>
-        </div>
-      </div>
-      <button id="btn-next" aria-label="Sonraki haber"
-        class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-leaf-100 text-leaf-700 transition active:scale-95">
-        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5.5v13l9-6.5zM16.5 5H19v14h-2.5z"/></svg>
-      </button>
-    </div>
-  </section>
-
-  <main class="no-scrollbar relative mt-5 min-h-0 flex-1 overflow-y-auto pb-6">
-    <div id="deck" class="relative pt-8"></div>
-    <p id="empty" class="hidden pt-16 text-center text-[15px] text-ink-soft"></p>
-  </main>
+<div class="mx-auto flex min-h-screen w-full max-w-md flex-col">
+  <header id="topbar" class="sticky top-0 z-40 bg-shell/85 px-5 pb-2 pt-[max(0.9rem,env(safe-area-inset-top))] backdrop-blur-xl"></header>
+  <main id="view" class="flex-1 px-5 pb-44"></main>
 </div>
 
-<nav class="pointer-events-none fixed inset-x-0 bottom-0 z-50 pb-[max(.75rem,env(safe-area-inset-bottom))]">
-  <div class="pointer-events-auto mx-auto flex max-w-[19rem] items-center justify-between rounded-full bg-white/90 p-2 shadow-bar backdrop-blur-xl">
-    <button data-view="feed" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Akış">
-      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+<!-- Hands-free mini oynatıcı -->
+<div id="mini" class="pointer-events-none fixed inset-x-0 bottom-[5.6rem] z-40 hidden px-5">
+  <div class="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-xl2 bg-ink px-3 py-2.5 text-white shadow-hero">
+    <button id="mini-toggle" class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/15 transition active:scale-95" aria-label="Duraklat">
+      <svg id="mini-pause" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z"/></svg>
+      <svg id="mini-play" class="hidden h-5 w-5 translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+    </button>
+    <div class="min-w-0 flex-1">
+      <p id="mini-title" class="truncate text-[13.5px] font-semibold leading-tight">—</p>
+      <p id="mini-sub" class="truncate text-[12px] text-white/60">—</p>
+    </div>
+    <div id="mini-eq" class="eq flex shrink-0 items-end gap-[3px] text-brand-500"><span></span><span></span><span></span></div>
+    <button id="mini-next" class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/10 transition active:scale-95" aria-label="Sonraki">
+      <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5.5v13l9-6.5zM16.5 5H19v14h-2.5z"/></svg>
+    </button>
+    <button id="mini-close" class="grid h-10 w-10 shrink-0 place-items-center rounded-full text-white/60 transition active:scale-95" aria-label="Dinlemeyi kapat">
+      <svg class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<nav class="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-5 pb-[max(.85rem,env(safe-area-inset-bottom))] pt-2">
+  <div class="pointer-events-auto mx-auto flex max-w-md items-center justify-between rounded-full bg-white/95 p-2 shadow-nav backdrop-blur-xl">
+    <button data-nav="home" class="nav-btn flex items-center gap-2 rounded-full px-4 py-3 transition" aria-label="Ana sayfa">
+      <svg class="h-[22px] w-[22px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
         <path d="M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z" stroke-linejoin="round"/>
       </svg>
+      <span class="nav-label hidden text-[14px] font-semibold">Ana sayfa</span>
     </button>
-    <button data-view="listen" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Dinle">
-      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+    <button data-nav="discover" class="nav-btn flex items-center gap-2 rounded-full px-4 py-3 transition" aria-label="Keşfet">
+      <svg class="h-[22px] w-[22px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5"/><path d="M15 9l-2.2 4.8L8 16l2.2-4.8z" stroke-linejoin="round"/>
+      </svg>
+      <span class="nav-label hidden text-[14px] font-semibold">Keşfet</span>
+    </button>
+    <button data-nav="listen" class="nav-btn flex items-center gap-2 rounded-full px-4 py-3 transition" aria-label="Dinle">
+      <svg class="h-[22px] w-[22px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
         <path d="M4 14v-3a8 8 0 0 1 16 0v3" stroke-linecap="round"/>
         <rect x="2.5" y="13" width="4.5" height="7" rx="2.2"/><rect x="17" y="13" width="4.5" height="7" rx="2.2"/>
       </svg>
+      <span class="nav-label hidden text-[14px] font-semibold">Dinle</span>
     </button>
-    <button data-view="saved" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Kaydedilenler">
-      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+    <button data-nav="saved" class="nav-btn flex items-center gap-2 rounded-full px-4 py-3 transition" aria-label="Kaydedilenler">
+      <svg class="h-[22px] w-[22px] shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
         <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
       </svg>
-    </button>
-    <button data-view="about" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Hakkında">
-      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
-        <circle cx="12" cy="8.5" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke-linecap="round"/>
-      </svg>
+      <span class="nav-label hidden text-[14px] font-semibold">Kayıtlı</span>
     </button>
   </div>
 </nav>

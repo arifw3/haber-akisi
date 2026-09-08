@@ -1,55 +1,68 @@
-/* Haber Akışı — Google Haberler bülteni + hands-free dinleme
+/* Haber Akışı — Google Haberler bülteni
  *
- * İki mod aynı veriyi paylaşır:
- *   1. Elle gezinme  — kartı kaydır / tıkla
- *   2. Hands-free    — sırayla seslendirir, okunan haber öne gelir
+ * Dört ekran: Ana sayfa (öne çıkanlar + öneriler), Keşfet (arama + kategori),
+ * Detay (olayın farklı kaynaklardaki halleri), Kayıtlı.
  *
- * Ses kaynağı: bültende hazır MP3 varsa o çalar (cue'larla senkron),
- * yoksa tarayıcının kendi Türkçe sesi (Web Speech API) devreye girer.
- * Böylece API anahtarı olmadan da hands-free çalışır.
+ * Hands-free: sırayla seslendirir, mini oynatıcı her ekranda görünür.
+ * Hazır ses dosyası varsa onu çalar; yoksa tarayıcının Türkçe sesine
+ * (Web Speech API) düşer, böylece API anahtarı olmadan da çalışır.
+ *
+ * Görsel notu: Google Haberler RSS görsel vermiyor (media:content / enclosure /
+ * thumbnail hiçbiri yok). Habere alakasız stok görsel koymak yanıltıcı olurdu;
+ * onun yerine kategoriye göre deterministik gradient + yayıncı logosu kullanılıyor.
  */
 "use strict";
 
 const DATA_URL = "data/latest.json";
 const SAVED_KEY = "mynews:saved";
-const RATE_KEY = "mynews:rate";
 
 const $ = (sel) => document.querySelector(sel);
 
 const el = {
-  today: $("#today"),
-  chips: $("#chips"),
-  deck: $("#deck"),
-  empty: $("#empty"),
-  play: $("#btn-play"),
-  next: $("#btn-next"),
-  refresh: $("#btn-refresh"),
-  searchBtn: $("#btn-search"),
-  searchWrap: $("#search-wrap"),
-  search: $("#search"),
-  icoPlay: $("#ico-play"),
-  icoPause: $("#ico-pause"),
-  listenTitle: $("#listen-title"),
-  listenSub: $("#listen-sub"),
-  progress: $("#progress"),
+  topbar: $("#topbar"),
+  view: $("#view"),
   player: $("#player"),
+  mini: $("#mini"),
+  miniTitle: $("#mini-title"),
+  miniSub: $("#mini-sub"),
+  miniToggle: $("#mini-toggle"),
+  miniPlay: $("#mini-play"),
+  miniPause: $("#mini-pause"),
+  miniEq: $("#mini-eq"),
+  miniNext: $("#mini-next"),
+  miniClose: $("#mini-close"),
 };
 
 const state = {
   bulletin: null,
+  view: "home",
+  detailId: null,
   segment: "all",
-  view: "feed",
   query: "",
-  list: [],
+  queue: [],
   index: 0,
   playing: false,
-  rate: Number(localStorage.getItem(RATE_KEY)) || 1,
+  rate: 1,
   voice: null,
   saved: new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")),
   wakeLock: null,
 };
 
-/* ---------------------------------------------------------------- yardımcı */
+/* Kategori paletleri — hero gradienti ve rozet rengi buradan türer. */
+const PALETTE = {
+  "turkiye":         { from: "#1d3f8f", to: "#3b74d8", chip: "bg-brand-600" },
+  "bilim-teknoloji": { from: "#4b2a86", to: "#7b53d6", chip: "bg-violet-600" },
+  "spor":            { from: "#0c5c4a", to: "#12a07f", chip: "bg-emerald-600" },
+};
+const FALLBACK_PALETTE = { from: "#2b3547", to: "#5a6b80", chip: "bg-slate-600" };
+
+/* ------------------------------------------------------------- yardımcılar */
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text ?? "";
+  return div.innerHTML;
+}
 
 function relativeTime(hours) {
   if (hours == null) return "";
@@ -61,30 +74,30 @@ function relativeTime(hours) {
 
 function formatDate(iso) {
   try {
-    return new Date(iso).toLocaleDateString("tr-TR", {
-      day: "numeric", month: "long", year: "numeric",
-    });
+    return new Date(iso).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
   } catch {
-    return iso;
+    return String(iso);
   }
 }
 
-function escapeHtml(text) {
-  const div = document.createElement("div");
-  div.textContent = text ?? "";
-  return div.innerHTML;
+function hashOf(text) {
+  let h = 0;
+  for (let i = 0; i < (text || "").length; i += 1) h = (h * 31 + text.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
+
+function paletteOf(item) {
+  return PALETTE[item.segment] || FALLBACK_PALETTE;
+}
+
+function heroStyle(item) {
+  const p = paletteOf(item);
+  const angle = 118 + (hashOf(item.title) % 54);
+  return `background-image:linear-gradient(${angle}deg, ${p.from}, ${p.to})`;
 }
 
 function persistSaved() {
   localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved]));
-}
-
-/* ------------------------------------------------------------------ veri */
-
-async function loadBulletin() {
-  const res = await fetch(DATA_URL, { cache: "no-cache" });
-  if (!res.ok) throw new Error(`Bülten yüklenemedi (${res.status})`);
-  return res.json();
 }
 
 function allItems() {
@@ -94,15 +107,13 @@ function allItems() {
   );
 }
 
-function computeList() {
-  let items = allItems();
+function itemById(id) {
+  return allItems().find((i) => i.id === id) || null;
+}
 
-  if (state.view === "saved") {
-    items = items.filter((i) => state.saved.has(i.link));
-  } else if (state.segment !== "all") {
-    items = items.filter((i) => i.segment === state.segment);
-  }
-
+function filtered() {
+  let items = state.segment === "all" ? interleaved() : allItems();
+  if (state.segment !== "all") items = items.filter((i) => i.segment === state.segment);
   if (state.query) {
     const q = state.query.toLocaleLowerCase("tr");
     items = items.filter(
@@ -111,183 +122,405 @@ function computeList() {
         (i.publisher || "").toLocaleLowerCase("tr").includes(q)
     );
   }
-
-  state.list = items;
-  if (state.index >= items.length) state.index = 0;
+  return items;
 }
 
-/* --------------------------------------------------------------- arayüz */
+/* Segmentleri sırayla harmanlar: düz skor sıralaması tek kategoriyi
+ * kümeliyordu (tüm öne çıkanlar Spor, tüm öneriler Türkiye). */
+function interleaved() {
+  const buckets = new Map();
+  for (const item of allItems()) {
+    if (!buckets.has(item.segment)) buckets.set(item.segment, []);
+    buckets.get(item.segment).push(item);
+  }
+  for (const list of buckets.values()) list.sort((a, b) => b.score - a.score);
 
-function renderChips() {
-  const segments = state.bulletin ? state.bulletin.segments : [];
-  const chips = [{ key: "all", title: "Tümü" }, ...segments.map((s) => ({ key: s.key, title: s.title }))];
-
-  el.chips.innerHTML = chips
-    .map((c) => {
-      const active = c.key === state.segment;
-      const cls = active
-        ? "bg-ink text-white"
-        : "bg-white/70 text-ink-soft hover:bg-white";
-      return `<button data-chip="${c.key}" class="shrink-0 rounded-full px-4 py-2 text-[14px] font-semibold shadow-deck backdrop-blur transition active:scale-95 ${cls}">${escapeHtml(c.title)}</button>`;
-    })
-    .join("");
+  const out = [];
+  let picked = true;
+  while (picked) {
+    picked = false;
+    for (const list of buckets.values()) {
+      const next = list.shift();
+      if (next) {
+        out.push(next);
+        picked = true;
+      }
+    }
+  }
+  return out;
 }
 
-function cardMarkup(item, position) {
-  const saved = state.saved.has(item.link);
-  const badge =
-    item.source_count >= 3
-      ? `<span class="inline-flex items-center gap-1 rounded-full bg-leaf-100 px-2.5 py-1 text-[12px] font-semibold text-leaf-700">
-           <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>
-           ${item.source_count} kaynak
-         </span>`
-      : `<span class="rounded-full bg-white px-2.5 py-1 text-[12px] font-medium text-ink-faint ring-1 ring-leaf-100">tek kaynak</span>`;
+function savedItems() {
+  return allItems().filter((i) => state.saved.has(i.link));
+}
 
-  const related = (item.related || [])
-    .slice(0, 3)
-    .map(
-      (r) => `<li class="flex gap-2 text-[13px] leading-snug text-ink-soft">
-                <span class="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-leaf-300"></span>
-                <span class="min-w-0"><span class="font-medium text-ink">${escapeHtml(r.source)}</span> — ${escapeHtml(r.title)}</span>
-              </li>`
-    )
-    .join("");
+/* --------------------------------------------------------- ortak parçalar */
 
-  const fallbackLogo = (item.publisher || "?").trim().charAt(0).toUpperCase();
+function logoMarkup(item, size = "h-7 w-7", textSize = "text-[11px]") {
+  const initial = (item.publisher || "?").trim().charAt(0).toUpperCase();
+  return `<span class="grid ${size} shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-1 ring-black/5 ${textSize} font-bold text-ink-soft">
+    <img src="${escapeHtml(item.favicon)}" alt="" loading="lazy" class="h-full w-full object-cover"
+         onerror="this.replaceWith(document.createTextNode('${initial}'))">
+  </span>`;
+}
 
+function verifiedBadge() {
+  return `<svg class="h-[15px] w-[15px] shrink-0 text-brand-500" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="doğrulanmış kaynak">
+    <path d="M12 2.2 14.3 4l2.9-.2.9 2.7 2.4 1.6-1 2.7 1 2.7-2.4 1.6-.9 2.7-2.9-.2L12 21.8 9.7 20l-2.9.2-.9-2.7L3.5 16l1-2.7-1-2.7 2.4-1.6.9-2.7 2.9.2z"/>
+    <path d="m8.6 12.2 2.2 2.2 4.4-4.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+
+function sourceBadge(count) {
+  if (count < 3) {
+    return `<span class="rounded-full bg-black/25 px-2 py-[3px] text-[11px] font-medium text-white/80 backdrop-blur">tek kaynak</span>`;
+  }
+  return `<span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur">
+    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${count} kaynak
+  </span>`;
+}
+
+function sourceChip(count) {
+  const strong = count >= 3;
+  return `<span class="inline-flex shrink-0 items-center gap-1 rounded-full ${strong ? "bg-brand-50 text-brand-700" : "bg-black/5 text-ink-faint"} px-2 py-[3px] text-[11px] font-semibold">
+    ${strong ? `<svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${count} kaynak` : "tek kaynak"}
+  </span>`;
+}
+
+/* Ana sayfadaki geniş kart */
+function heroCard(item) {
+  const p = paletteOf(item);
   return `
-  <article class="deck-card" data-state="${position}" data-link="${escapeHtml(item.link)}">
-    <div class="rounded-xl2 bg-white p-5 shadow-card">
-      <div class="flex items-center gap-3">
-        <div class="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-leaf-100 text-[15px] font-bold text-leaf-700">
-          <img src="${escapeHtml(item.favicon)}" alt="" loading="lazy"
-               class="h-full w-full object-cover"
-               onerror="this.replaceWith(document.createTextNode('${fallbackLogo}'))">
-        </div>
-        <div class="min-w-0 flex-1">
-          <p class="truncate text-[15px] font-semibold">${escapeHtml(item.publisher)}</p>
-          <p class="text-[13px] text-ink-faint">${relativeTime(item.age_hours)} · ${escapeHtml(item.segmentTitle)}</p>
-        </div>
-        <button data-act="save" aria-label="${saved ? "Kaydedilenlerden çıkar" : "Kaydet"}"
-          class="grid h-10 w-10 shrink-0 place-items-center rounded-full transition active:scale-90 ${saved ? "bg-leaf-600 text-white" : "bg-leaf-50 text-ink-soft"}">
-          <svg class="h-[18px] w-[18px]" fill="${saved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
-            <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
-          </svg>
-        </button>
+  <article data-open="${escapeHtml(item.id)}"
+    class="hero-tex relative h-[15.5rem] w-[19.5rem] shrink-0 cursor-pointer snap-start overflow-hidden rounded-xl2 shadow-hero"
+    style="${heroStyle(item)}">
+    <span class="absolute right-5 top-3 text-[5.5rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>
+    <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+    <span class="absolute left-4 top-4 rounded-full ${p.chip} px-3 py-1 text-[12px] font-semibold text-white shadow">${escapeHtml(item.segmentTitle)}</span>
+    <div class="absolute inset-x-0 bottom-0 p-4">
+      <div class="flex items-center gap-1.5 text-[12.5px] text-white/85">
+        <span class="truncate font-medium">${escapeHtml(item.publisher)}</span>
+        ${verifiedBadge()}
+        <span class="text-white/60">•</span>
+        <span class="shrink-0">${relativeTime(item.age_hours)}</span>
       </div>
+      <h3 class="mt-1.5 line-clamp-2 text-[18px] font-bold leading-snug text-white">${escapeHtml(item.title)}</h3>
+      <div class="mt-2">${sourceBadge(item.source_count)}</div>
+    </div>
+  </article>`;
+}
 
-      <h2 class="mt-4 text-[21px] font-bold leading-[1.28] tracking-tight">${escapeHtml(item.title)}</h2>
-
-      <div class="mt-3 flex items-center gap-2">${badge}</div>
-
-      ${related ? `<ul class="mt-4 space-y-2 border-t border-leaf-100 pt-4">${related}</ul>` : ""}
-
-      <div class="mt-5 flex items-center gap-2">
-        <button data-act="speak"
-          class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-leaf-600 px-4 py-3 text-[14px] font-semibold text-white transition active:scale-[.98]">
-          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
-          Bu haberi oku
-        </button>
-        <a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer"
-          class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-leaf-50 text-ink-soft transition active:scale-95" aria-label="Kaynağa git">
-          <svg class="h-[18px] w-[18px]" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
-            <path d="M14 5h5v5M19 5l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" stroke-linecap="round"/>
-          </svg>
-        </a>
+/* Liste satırı */
+function listRow(item) {
+  return `
+  <article data-open="${escapeHtml(item.id)}" class="flex cursor-pointer gap-3 py-3">
+    <div class="hero-tex relative h-[4.6rem] w-[4.6rem] shrink-0 overflow-hidden rounded-2xl" style="${heroStyle(item)}">
+      <span class="absolute inset-0 grid place-items-center text-[26px] font-black text-white/25">${escapeHtml((item.publisher || "?").charAt(0))}</span>
+    </div>
+    <div class="min-w-0 flex-1">
+      <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(item.segmentTitle)}</p>
+      <h3 class="mt-0.5 line-clamp-2 text-[15.5px] font-semibold leading-snug">${escapeHtml(item.title)}</h3>
+      <div class="mt-1.5 flex items-center gap-2">
+        ${logoMarkup(item, "h-5 w-5", "text-[10px]")}
+        <span class="truncate text-[12.5px] text-ink-soft">${escapeHtml(item.publisher)}</span>
+        <span class="text-ink-faint">•</span>
+        <span class="shrink-0 text-[12.5px] text-ink-faint">${relativeTime(item.age_hours)}</span>
       </div>
     </div>
   </article>`;
 }
 
-function stubMarkup(item) {
-  const fallbackLogo = (item.publisher || "?").trim().charAt(0).toUpperCase();
-  return `
-  <article class="deck-card" data-state="behind">
-    <div class="rounded-xl2 bg-white/95 px-5 py-4 shadow-deck">
-      <div class="flex items-center gap-3">
-        <div class="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-full bg-leaf-100 text-[13px] font-bold text-leaf-700">
-          <img src="${escapeHtml(item.favicon)}" alt="" loading="lazy" class="h-full w-full object-cover"
-               onerror="this.replaceWith(document.createTextNode('${fallbackLogo}'))">
-        </div>
-        <p class="min-w-0 flex-1 truncate text-[14px] font-semibold text-ink-soft">${escapeHtml(item.publisher)}</p>
-        <span class="shrink-0 text-[12px] text-ink-faint">${relativeTime(item.age_hours)}</span>
-      </div>
-    </div>
-  </article>`;
+function sectionHeader(title, action) {
+  return `<div class="flex items-baseline justify-between">
+    <h2 class="text-[19px] font-bold tracking-tight">${escapeHtml(title)}</h2>
+    ${action ? `<button data-nav-to="${action.view}" class="text-[13.5px] font-semibold text-brand-600">${escapeHtml(action.label)}</button>` : ""}
+  </div>`;
 }
 
-function renderDeck() {
-  computeList();
+/* ------------------------------------------------------------- üst çubuk */
 
-  if (!state.list.length) {
-    el.deck.innerHTML = "";
-    el.empty.classList.remove("hidden");
-    el.empty.textContent =
-      state.view === "saved"
-        ? "Henüz haber kaydetmediniz. Kartlardaki yer imi düğmesini kullanın."
-        : "Bu filtrede haber yok.";
+function renderTopbar() {
+  if (state.view === "detail") {
+    el.topbar.innerHTML = "";
+    el.topbar.classList.add("hidden");
     return;
   }
-  el.empty.classList.add("hidden");
+  el.topbar.classList.remove("hidden");
 
-  // Öndeki kart tam gövde, arkadakiler yalnızca ince şerit.
-  const front = state.list[state.index];
-  const behind = state.list.slice(state.index + 1, state.index + 3);
+  if (state.view === "home") {
+    el.topbar.innerHTML = `
+      <div class="flex items-center justify-between">
+        <div class="min-w-0">
+          <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(formatDate(state.bulletin?.generated_at))}</p>
+          <h1 class="text-[24px] font-bold leading-tight tracking-tight">Haber Akışı</h1>
+        </div>
+        <div class="flex shrink-0 gap-2">
+          <button data-nav-to="discover" class="grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Ara">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
+          </button>
+          <button id="btn-refresh" class="relative grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Yenile">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M20 11a8 8 0 1 0-2.3 5.7" stroke-linecap="round"/><path d="M20 4v7h-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>`;
+    return;
+  }
 
-  el.deck.innerHTML =
-    behind.map((item) => stubMarkup(item)).join("") + cardMarkup(front, "front");
-
-  el.deck.querySelectorAll('[data-state="behind"]').forEach((node, i) => {
-    const depth = i + 1;
-    node.style.transform = `translateY(${32 - 13 * depth}px) scale(${1 - 0.05 * depth})`;
-    node.style.opacity = String(1 - 0.28 * depth);
-  });
-
-  const frontNode = el.deck.querySelector('[data-state="front"]');
-  if (frontNode && state.playing) frontNode.firstElementChild.classList.add("speaking");
-
-  updateStatus();
+  const titles = {
+    discover: ["Keşfet", "Tüm kategorilerden haberler"],
+    saved: ["Kayıtlı", "Sonra okumak için ayırdıklarınız"],
+  };
+  const [title, sub] = titles[state.view] || ["", ""];
+  el.topbar.innerHTML = `
+    <button data-nav-to="home" class="mb-2 grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Geri">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <h1 class="text-[30px] font-bold leading-tight tracking-tight">${escapeHtml(title)}</h1>
+    <p class="mt-0.5 text-[13.5px] text-ink-soft">${escapeHtml(sub)}</p>`;
 }
 
-function updateStatus() {
-  const total = state.list.length;
-  const current = state.list[state.index];
-  el.listenTitle.textContent = state.playing && current ? current.publisher : "Sesli bülten";
-  el.listenSub.textContent = total
-    ? `${state.index + 1} / ${total} · ${state.playing ? "okunuyor" : "otomatik okur"}`
-    : "haber yok";
-  el.progress.style.width = total ? `${((state.index + (state.playing ? 1 : 0)) / total) * 100}%` : "0%";
+/* ---------------------------------------------------------------- ekranlar */
 
-  el.icoPlay.classList.toggle("hidden", state.playing);
-  el.icoPause.classList.toggle("hidden", !state.playing);
-  el.play.setAttribute("aria-label", state.playing ? "Duraklat" : "Sesli dinlemeyi başlat");
+function renderHome() {
+  const ordered = interleaved();
+  const featured = ordered.slice(0, 6);
+  const rest = ordered.slice(6, 21);
+
+  el.view.innerHTML = `
+    <div class="view">
+      ${sectionHeader("Öne çıkanlar", { label: "Tümü", view: "discover" })}
+      <div id="carousel" class="no-scrollbar snap-x-mandatory -mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-2">
+        ${featured.map(heroCard).join("")}
+      </div>
+      <div id="dots" class="mt-1 flex justify-center gap-1.5">
+        ${featured.map((_, i) => `<span class="h-1.5 rounded-full transition-all ${i === 0 ? "w-5 bg-brand-600" : "w-1.5 bg-ink-faint/40"}"></span>`).join("")}
+      </div>
+
+      <div class="mt-6">
+        ${sectionHeader("Öneriler", { label: "Tümü", view: "discover" })}
+        <div class="mt-1 divide-y divide-black/5">${rest.map(listRow).join("")}</div>
+      </div>
+    </div>`;
+
+  wireCarousel();
+}
+
+function wireCarousel() {
+  const carousel = $("#carousel");
+  const dots = $("#dots");
+  if (!carousel || !dots) return;
+  carousel.addEventListener(
+    "scroll",
+    () => {
+      const card = carousel.firstElementChild;
+      if (!card) return;
+      const width = card.getBoundingClientRect().width + 12;
+      const active = Math.round(carousel.scrollLeft / width);
+      [...dots.children].forEach((dot, i) => {
+        dot.className = `h-1.5 rounded-full transition-all ${i === active ? "w-5 bg-brand-600" : "w-1.5 bg-ink-faint/40"}`;
+      });
+    },
+    { passive: true }
+  );
+}
+
+function discoverList(items) {
+  return items.length
+    ? items.map(listRow).join("")
+    : `<p class="py-16 text-center text-[15px] text-ink-soft">Eşleşen haber yok.</p>`;
+}
+
+function renderDiscover() {
+  const segments = state.bulletin ? state.bulletin.segments : [];
+  const chips = [{ key: "all", title: "Tümü" }, ...segments.map((s) => ({ key: s.key, title: s.title }))];
+  const items = filtered();
+
+  el.view.innerHTML = `
+    <div class="view">
+      <div class="relative mt-1">
+        <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/>
+        </svg>
+        <input id="search" type="search" value="${escapeHtml(state.query)}" placeholder="Haberlerde ara…" autocomplete="off"
+          class="w-full rounded-2xl border-0 bg-white py-3.5 pl-12 pr-4 text-[15px] shadow-card outline-none ring-1 ring-black/5 placeholder:text-ink-faint focus:ring-2 focus:ring-brand-500">
+      </div>
+
+      <div class="no-scrollbar -mx-5 mt-4 flex gap-2 overflow-x-auto px-5">
+        ${chips
+          .map((c) => {
+            const active = c.key === state.segment;
+            return `<button data-chip="${c.key}" class="shrink-0 rounded-full px-4 py-2 text-[14px] font-semibold transition active:scale-95 ${
+              active ? "bg-brand-600 text-white shadow-pill" : "bg-white text-ink-soft ring-1 ring-black/5"
+            }">${escapeHtml(c.title)}</button>`;
+          })
+          .join("")}
+      </div>
+
+      <p id="count" class="mt-4 text-[13px] text-ink-faint">${items.length} haber</p>
+      <div id="results" class="divide-y divide-black/5">${discoverList(items)}</div>
+    </div>`;
+
+  $("#search")?.addEventListener("input", (event) => {
+    state.query = event.target.value.trim();
+    const list = filtered();
+    $("#count").textContent = `${list.length} haber`;
+    $("#results").innerHTML = discoverList(list);
+  });
+}
+
+function renderSaved() {
+  const items = savedItems();
+  el.view.innerHTML = `
+    <div class="view mt-2">
+      ${
+        items.length
+          ? `<div class="divide-y divide-black/5">${items.map(listRow).join("")}</div>`
+          : `<div class="grid place-items-center py-24 text-center">
+               <svg class="h-12 w-12 text-ink-faint/50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                 <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
+               </svg>
+               <p class="mt-3 text-[15px] text-ink-soft">Henüz haber kaydetmediniz.</p>
+               <p class="mt-1 text-[13.5px] text-ink-faint">Bir haberi açıp yer imi düğmesine dokunun.</p>
+             </div>`
+      }
+    </div>`;
+}
+
+function renderDetail() {
+  const item = itemById(state.detailId);
+  if (!item) return navigate("home");
+
+  const p = paletteOf(item);
+  const saved = state.saved.has(item.link);
+  const related = (item.related || []).filter((r) => r.title && r.title !== item.title);
+
+  el.view.innerHTML = `
+    <div class="view -mx-5">
+      <section class="hero-tex relative h-[19rem]" style="${heroStyle(item)}">
+        <span class="absolute right-6 top-6 text-[9rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/30 to-transparent"></div>
+
+        <div class="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-[max(1rem,env(safe-area-inset-top))]">
+          <button data-back class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="Geri">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="flex gap-2">
+            <button data-save class="grid h-11 w-11 place-items-center rounded-full ${saved ? "bg-brand-600" : "bg-black/30"} text-white backdrop-blur transition active:scale-95" aria-label="${saved ? "Kaydedilenlerden çıkar" : "Kaydet"}">
+              <svg class="h-5 w-5" fill="${saved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button data-share class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="Paylaş">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+                <circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/>
+                <path d="m8.2 10.8 7.6-4M8.2 13.2l7.6 4" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="absolute inset-x-0 bottom-0 p-5 pb-9">
+          <span class="rounded-full ${p.chip} px-3 py-1 text-[12px] font-semibold text-white shadow">${escapeHtml(item.segmentTitle)}</span>
+          <h1 class="mt-3 text-[25px] font-bold leading-[1.22] text-white">${escapeHtml(item.title)}</h1>
+          <p class="mt-2 text-[13px] text-white/75">${relativeTime(item.age_hours)} · ${escapeHtml(item.domain)}</p>
+        </div>
+      </section>
+
+      <section class="relative -mt-8 min-h-[60vh] rounded-t-xl3 bg-white px-5 pb-10 pt-6 shadow-[0_-12px_30px_-18px_rgba(13,18,32,.35)]">
+        <div class="flex items-center gap-2.5">
+          ${logoMarkup(item, "h-11 w-11", "text-[16px]")}
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-1.5">
+              <p class="truncate text-[16px] font-bold">${escapeHtml(item.publisher)}</p>
+              ${verifiedBadge()}
+            </div>
+            <p class="truncate text-[12.5px] text-ink-faint">${escapeHtml(item.domain)}</p>
+          </div>
+          ${sourceChip(item.source_count)}
+        </div>
+
+        <p class="mt-5 text-[16px] leading-relaxed text-ink-soft">${escapeHtml(item.speech)}</p>
+
+        ${
+          related.length
+            ? `<h2 class="mt-7 text-[15px] font-bold">Aynı olayı yazan diğer kaynaklar</h2>
+               <ul class="mt-3 space-y-3">
+                 ${related
+                   .map(
+                     (r) => `<li class="flex gap-2.5">
+                       <span class="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full" style="background:${p.to}"></span>
+                       <span class="min-w-0 text-[14.5px] leading-snug text-ink-soft">
+                         <span class="font-semibold text-ink">${escapeHtml(r.source)}</span> — ${escapeHtml(r.title)}
+                       </span>
+                     </li>`
+                   )
+                   .join("")}
+               </ul>`
+            : ""
+        }
+
+        <div class="mt-7 flex items-center gap-2">
+          <button data-listen class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-3.5 text-[15px] font-semibold text-white shadow-pill transition active:scale-[.98]">
+            <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+            Buradan dinle
+          </button>
+          <a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer"
+             class="grid h-[3.15rem] w-[3.15rem] shrink-0 place-items-center rounded-full bg-black/5 text-ink-soft transition active:scale-95" aria-label="Kaynağa git">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+              <path d="M14 5h5v5M19 5l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-4 text-[12px] leading-relaxed text-ink-faint">
+          Google Haberler makale gövdesi vermediği için özet başlıkla sınırlıdır; tam metin için kaynağa gidin.
+        </p>
+      </section>
+    </div>`;
+}
+
+const RENDERERS = { home: renderHome, discover: renderDiscover, saved: renderSaved, detail: renderDetail };
+
+function navigate(view, param) {
+  state.view = view;
+  if (view === "detail") state.detailId = param;
+
+  renderTopbar();
+  (RENDERERS[view] || renderHome)();
+  setNav(view);
+  window.scrollTo(0, 0);
 }
 
 function setNav(view) {
+  const active = view === "detail" ? null : view;
   document.querySelectorAll(".nav-btn").forEach((btn) => {
-    const active = btn.dataset.view === view;
-    btn.classList.toggle("bg-leaf-600", active);
-    btn.classList.toggle("text-white", active);
-    btn.classList.toggle("text-ink-soft", !active);
+    const on = btn.dataset.nav === active;
+    btn.classList.toggle("bg-brand-600", on);
+    btn.classList.toggle("text-white", on);
+    btn.classList.toggle("shadow-pill", on);
+    btn.classList.toggle("text-ink-faint", !on);
+    btn.querySelector(".nav-label").classList.toggle("hidden", !on);
   });
 }
 
-/* -------------------------------------------------------------- konuşma */
+/* ------------------------------------------------------------ hands-free */
 
 function pickVoice() {
   const voices = speechSynthesis.getVoices();
-  if (!voices.length) return null;
   return (
     voices.find((v) => v.lang === "tr-TR") ||
-    voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("tr")) ||
+    voices.find((v) => (v.lang || "").toLowerCase().startsWith("tr")) ||
     null
   );
 }
 
 function initVoices() {
+  if (!("speechSynthesis" in window)) return;
   state.voice = pickVoice();
-  if (!state.voice && "onvoiceschanged" in speechSynthesis) {
+  if (!state.voice) {
     speechSynthesis.onvoiceschanged = () => {
       state.voice = pickVoice();
     };
@@ -310,22 +543,26 @@ function stopKeepAlive() {
   keepAlive = null;
 }
 
-/* Bir haber bitince sıradakine geç. Her iki ses kaynağı da bunu çağırır. */
 function advance() {
   if (!state.playing) return;
-  if (state.index >= state.list.length - 1) return stop(true);
+  if (state.index >= state.queue.length - 1) return stopListening(true);
   state.index += 1;
-  renderDeck();
   playCurrent();
 }
 
-/* Hazır ses dosyası varsa onu çal, yoksa tarayıcının Türkçe sesine düş. */
 function playCurrent() {
-  const item = state.list[state.index];
-  if (!item) return stop();
+  const item = state.queue[state.index];
+  if (!item) return stopListening();
 
   if ("speechSynthesis" in window) speechSynthesis.cancel();
   el.player.pause();
+  updateMini();
+
+  // Detay ekranındaysak dinlenen haber kendiliğinden öne gelsin.
+  if (state.view === "detail" && state.detailId !== item.id) {
+    state.detailId = item.id;
+    renderDetail();
+  }
 
   if (item.audio) {
     el.player.src = item.audio;
@@ -339,27 +576,19 @@ function playCurrent() {
 
 function speakItem(item) {
   if (!("speechSynthesis" in window)) {
-    el.listenSub.textContent = "Bu tarayıcı seslendirmeyi desteklemiyor.";
+    el.miniSub.textContent = "Tarayıcı seslendirmeyi desteklemiyor";
     state.playing = false;
-    return updateStatus();
+    return;
   }
-
   speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(item.speech || item.title);
   utter.lang = "tr-TR";
   utter.rate = state.rate;
-  utter.pitch = 1;
   if (state.voice) utter.voice = state.voice;
-
   utter.onend = advance;
   utter.onerror = (event) => {
-    // "interrupted" bizim cancel çağrımızdır, hata sayılmaz.
-    if (event.error && event.error !== "interrupted" && event.error !== "canceled") {
-      console.warn("Seslendirme hatası:", event.error);
-      stop();
-    }
+    if (event.error && !["interrupted", "canceled"].includes(event.error)) stopListening();
   };
-
   speechSynthesis.speak(utter);
   startKeepAlive();
 }
@@ -368,7 +597,7 @@ async function requestWakeLock() {
   try {
     if ("wakeLock" in navigator) state.wakeLock = await navigator.wakeLock.request("screen");
   } catch {
-    /* pil tasarrufu modunda reddedilebilir, önemli değil */
+    /* pil tasarrufu modunda reddedilebilir */
   }
 }
 
@@ -379,15 +608,16 @@ function releaseWakeLock() {
   }
 }
 
-function play() {
-  if (!state.list.length) return;
+function startListening(queue, startIndex = 0) {
+  if (!queue.length) return;
+  state.queue = queue;
+  state.index = Math.max(0, startIndex);
   state.playing = true;
   requestWakeLock();
   playCurrent();
-  renderDeck();
 }
 
-function stop(finished = false) {
+function stopListening(finished = false) {
   state.playing = false;
   stopKeepAlive();
   releaseWakeLock();
@@ -395,201 +625,165 @@ function stop(finished = false) {
   el.player.onended = null;
   el.player.pause();
   if (finished) state.index = 0;
-  renderDeck();
+  updateMini();
 }
 
-function toggle() {
-  state.playing ? stop() : play();
+function pauseListening() {
+  state.playing = false;
+  stopKeepAlive();
+  if ("speechSynthesis" in window) speechSynthesis.cancel();
+  el.player.pause();
+  updateMini();
 }
 
-function next() {
-  if (state.index < state.list.length - 1) {
-    state.index += 1;
-  } else {
-    state.index = 0;
-  }
-  renderDeck();
-  if (state.playing) playCurrent();
+function updateMini() {
+  const item = state.queue[state.index];
+  el.mini.classList.toggle("hidden", !item);
+  if (!item) return;
+
+  el.miniTitle.textContent = item.title;
+  el.miniSub.textContent = `${item.publisher} · ${state.index + 1}/${state.queue.length}`;
+  el.miniPlay.classList.toggle("hidden", state.playing);
+  el.miniPause.classList.toggle("hidden", !state.playing);
+  el.miniEq.style.visibility = state.playing ? "visible" : "hidden";
+  el.miniToggle.setAttribute("aria-label", state.playing ? "Duraklat" : "Devam et");
 }
 
-function prev() {
-  state.index = state.index > 0 ? state.index - 1 : 0;
-  renderDeck();
-  if (state.playing) playCurrent();
-}
+/* ---------------------------------------------------------- etkileşimler */
 
-/* ------------------------------------------------------------- etkileşim */
-
-el.play.addEventListener("click", toggle);
-el.next.addEventListener("click", next);
-
-el.refresh.addEventListener("click", async () => {
-  el.refresh.classList.add("animate-spin");
-  try {
-    state.bulletin = await loadBulletin();
-    state.index = 0;
-    renderChips();
-    renderDeck();
-  } catch (err) {
-    el.listenSub.textContent = err.message;
-  } finally {
-    el.refresh.classList.remove("animate-spin");
-  }
-});
-
-el.searchBtn.addEventListener("click", () => {
-  el.searchWrap.classList.toggle("hidden");
-  if (!el.searchWrap.classList.contains("hidden")) el.search.focus();
-  else {
-    el.search.value = "";
-    state.query = "";
-    renderDeck();
-  }
-});
-
-el.search.addEventListener("input", (event) => {
-  state.query = event.target.value.trim();
-  state.index = 0;
-  renderDeck();
-});
-
-el.chips.addEventListener("click", (event) => {
-  const btn = event.target.closest("[data-chip]");
-  if (!btn) return;
-  state.segment = btn.dataset.chip;
-  state.index = 0;
-  renderChips();
-  renderDeck();
-  if (state.playing) playCurrent();
-});
-
-el.deck.addEventListener("click", (event) => {
-  const card = event.target.closest(".deck-card");
-  if (!card || card.dataset.state !== "front") return;
-
-  const action = event.target.closest("[data-act]");
-  if (!action) return;
-
-  if (action.dataset.act === "save") {
-    const link = card.dataset.link;
-    state.saved.has(link) ? state.saved.delete(link) : state.saved.add(link);
-    persistSaved();
-    renderDeck();
-  }
-
-  if (action.dataset.act === "speak") {
-    state.playing = true;
-    requestWakeLock();
-    playCurrent();
-    renderDeck();
-  }
-});
-
-document.querySelectorAll(".nav-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const view = btn.dataset.view;
-    setNav(view);
-
+document.addEventListener("click", (event) => {
+  const nav = event.target.closest("[data-nav]");
+  if (nav) {
+    const view = nav.dataset.nav;
     if (view === "listen") {
-      state.view = "feed";
-      state.index = 0;
-      renderDeck();
-      if (!state.playing) play();
-      return;
+      if (state.playing) return pauseListening();
+      if (state.queue.length) {
+        state.playing = true;
+        requestWakeLock();
+        return playCurrent();
+      }
+      const queue = filtered().length ? filtered() : allItems();
+      return startListening(queue);
     }
-    if (view === "about") {
-      state.view = "feed";
-      showAbout();
-      return;
-    }
-    state.view = view;
-    state.index = 0;
-    renderDeck();
-  });
+    return navigate(view);
+  }
+
+  const navTo = event.target.closest("[data-nav-to]");
+  if (navTo) return navigate(navTo.dataset.navTo);
+
+  const open = event.target.closest("[data-open]");
+  if (open) return navigate("detail", open.dataset.open);
+
+  const chip = event.target.closest("[data-chip]");
+  if (chip) {
+    state.segment = chip.dataset.chip;
+    return renderDiscover();
+  }
+
+  if (event.target.closest("[data-back]")) return navigate("home");
+
+  if (event.target.closest("[data-save]")) {
+    const item = itemById(state.detailId);
+    if (!item) return;
+    if (state.saved.has(item.link)) state.saved.delete(item.link);
+    else state.saved.add(item.link);
+    persistSaved();
+    return renderDetail();
+  }
+
+  if (event.target.closest("[data-share]")) {
+    const item = itemById(state.detailId);
+    if (!item) return;
+    if (navigator.share) navigator.share({ title: item.title, url: item.link }).catch(() => {});
+    else navigator.clipboard?.writeText(item.link).catch(() => {});
+    return;
+  }
+
+  if (event.target.closest("[data-listen]")) {
+    const item = itemById(state.detailId);
+    if (!item) return;
+    const queue = allItems();
+    return startListening(queue, queue.findIndex((i) => i.id === item.id));
+  }
+
+  if (event.target.closest("#btn-refresh")) return refresh();
 });
 
-function showAbout() {
-  const b = state.bulletin;
-  const health = (b?.health || [])
-    .map(
-      (h) =>
-        `<li class="flex justify-between gap-3 text-[13px]"><span class="text-ink-soft">${h.topic}</span>
-         <span class="${h.status === "ok" ? "text-leaf-700" : "text-red-600"} font-semibold">${h.status} · ${h.count}</span></li>`
-    )
-    .join("");
-
-  el.empty.classList.add("hidden");
-  el.deck.innerHTML = `
-    <article class="deck-card" data-state="front">
-      <div class="rounded-xl2 bg-white p-5 shadow-card">
-        <h2 class="text-[20px] font-bold tracking-tight">Bu bülten nasıl hazırlanıyor?</h2>
-        <p class="mt-3 text-[14px] leading-relaxed text-ink-soft">
-          Haberler Google Haberler RSS akışlarından (Türkiye, Bilim &amp; Teknoloji, Spor) alınıyor.
-          Bir olayı <strong class="text-ink">kaç farklı yayıncının</strong> yazdığı önem sinyali olarak
-          kullanılıyor; canlı maç anlatımı gibi kalıplar ve tıklama tuzağı başlıklar eleniyor.
-        </p>
-        <p class="mt-3 text-[14px] leading-relaxed text-ink-soft">
-          Seslendirme başlıklarla sınırlı: RSS makale gövdesi vermediği için
-          metin uydurulmuyor, yalnızca başlık ve kaynak okunuyor.
-        </p>
-        <ul class="mt-4 space-y-2 border-t border-leaf-100 pt-4">${health}</ul>
-        <p class="mt-4 text-[12px] text-ink-faint">Bülten tarihi: ${b ? formatDate(b.generated_at) : "-"}</p>
-      </div>
-    </article>`;
-}
-
-/* Kaydırma ile gezinme */
-let touchX = null;
-let touchY = null;
-el.deck.addEventListener("pointerdown", (e) => {
-  touchX = e.clientX;
-  touchY = e.clientY;
-});
-el.deck.addEventListener("pointerup", (e) => {
-  if (touchX === null) return;
-  const dx = e.clientX - touchX;
-  const dy = e.clientY - touchY;
-  touchX = touchY = null;
-  if (Math.abs(dx) < 55 || Math.abs(dy) > Math.abs(dx)) return;
-  dx < 0 ? next() : prev();
+el.miniToggle.addEventListener("click", () => {
+  if (state.playing) return pauseListening();
+  state.playing = true;
+  requestWakeLock();
+  playCurrent();
 });
 
-document.addEventListener("keydown", (e) => {
-  if (e.target.tagName === "INPUT") return;
-  if (e.code === "Space") { e.preventDefault(); toggle(); }
-  if (e.code === "ArrowRight") next();
-  if (e.code === "ArrowLeft") prev();
+el.miniNext.addEventListener("click", () => {
+  if (state.index >= state.queue.length - 1) return;
+  state.index += 1;
+  if (state.playing) playCurrent();
+  else updateMini();
 });
 
-// Sekme arka plana alınınca konuşma bozulabilir; düzgünce durdur.
+el.miniClose.addEventListener("click", () => {
+  stopListening(true);
+  state.queue = [];
+  updateMini();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.target.tagName === "INPUT") return;
+  if (event.key === "Escape" && state.view === "detail") navigate("home");
+});
+
+// Sekme arka plana alınınca konuşma bozulur; hazır ses dosyası çalmaya devam edebilir.
 document.addEventListener("visibilitychange", () => {
-  const current = state.list[state.index];
-  if (document.hidden && state.playing && !(current && current.audio)) stop();
+  const item = state.queue[state.index];
+  if (document.hidden && state.playing && !(item && item.audio)) pauseListening();
 });
 
 /* ------------------------------------------------------------- başlangıç */
 
-async function init() {
-  setNav("feed");
-  initVoices();
+async function loadBulletin() {
+  const res = await fetch(DATA_URL, { cache: "no-cache" });
+  if (!res.ok) throw new Error(`Bülten yüklenemedi (${res.status})`);
+  return res.json();
+}
 
+function showError(message) {
+  el.view.innerHTML = `<p class="py-20 text-center text-[15px] text-ink-soft">${escapeHtml(message)}</p>`;
+}
+
+async function refresh() {
+  try {
+    state.bulletin = await loadBulletin();
+    navigate("home");
+  } catch (err) {
+    showError(err.message);
+  }
+}
+
+async function init() {
+  initVoices();
   try {
     state.bulletin = await loadBulletin();
   } catch (err) {
-    el.listenSub.textContent = err.message;
-    el.empty.classList.remove("hidden");
-    el.empty.textContent = "Bülten yüklenemedi. Yenile düğmesini deneyin.";
+    showError(err.message);
     return;
   }
 
-  el.today.textContent = formatDate(state.bulletin.generated_at);
-  renderChips();
-  renderDeck();
-  el.listenSub.textContent = `${state.bulletin.total} haber · otomatik okur`;
+  // Derin bağlantı: ?v=discover|saved, ?id=<haber>, ?autoplay=1
+  const params = new URLSearchParams(location.search);
+  const wanted = params.get("v");
+  const wantedId = params.get("id");
 
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
-  }
+  if (wantedId && itemById(wantedId)) navigate("detail", wantedId);
+  else if (wanted && RENDERERS[wanted]) navigate(wanted);
+  else navigate("home");
+
+  updateMini();
+
+  if (params.get("autoplay") === "1") startListening(allItems());
+
+  if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 }
 
 init();

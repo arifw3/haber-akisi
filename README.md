@@ -5,6 +5,8 @@ Google Haberler RSS'inden her gün **30 haber** derleyip Tailwind tabanlı bir *
 
 Kategoriler: **Türkiye**, **Bilim & Teknoloji**, **Spor** (her birinden 10 haber).
 
+![Ana sayfa, Keşfet ve haber detayı](docs/arayuz.png)
+
 ## Hızlı başlangıç
 
 Python 3.10+ yeterli, **pip bağımlılığı yok** (yalnızca standart kütüphane).
@@ -17,6 +19,17 @@ python -m mynews build      # site/data/latest.json üret
 cd site && python -m http.server 8765
 # http://127.0.0.1:8765
 ```
+
+## Ekranlar
+
+- **Ana sayfa** — öne çıkanlar yatay kart akışı (kategoriler harmanlanır, tek kategori kümelenmez) + öneriler listesi
+- **Keşfet** — arama ve kategori filtreleri
+- **Detay** — olayın özeti, *aynı olayı yazan diğer kaynaklar* listesi, dinleme ve kaynağa gitme
+- **Kayıtlı** — sonra okumak için ayrılanlar (tarayıcıda saklanır)
+
+Hands-free dinleme her ekranda çalışır; alt gezinmedeki kulaklık düğmesi bülteni baştan okur,
+mini oynatıcı sırayı ve kontrolleri gösterir. `?v=discover`, `?id=<haber>` ve `?autoplay=1`
+derin bağlantıları desteklenir.
 
 ## Nasıl çalışıyor?
 
@@ -90,7 +103,7 @@ böylece tasarımdan kaldırılmış oluyor. Görsel de üretmiyoruz — kartlar
 ```bash
 git init && git add . && git commit -m "İlk sürüm"
 git branch -M main
-git remote add origin git@github.com:<kullanıcı>/<repo>.git
+git remote add origin git@github.com:arifw3/haber-akisi.git
 git push -u origin main
 ```
 
