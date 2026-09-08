@@ -151,7 +151,7 @@
     "gemini_voices": [
       "Kore"
     ],
-    "limit": 3,
+    "limit": 0,
     "google_language": "tr-TR",
     "google_voices": [
       "tr-TR-Wavenet-D",
