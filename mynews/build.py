@@ -13,6 +13,7 @@ from pathlib import Path
 from .gnews import NewsItem, check_feed
 from .images import ImageResolver
 from .rank import Ranker, Scored, load_config, similarity
+from .speech import intro_for, normalize
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "site" / "data"
@@ -30,10 +31,11 @@ def speech_text(item: NewsItem, extra: str = "") -> str:
     Sadece basliklarda gecen bilgiyi kullanir - RSS govde vermiyor,
     uydurmamak icin bilincli olarak yuzeysel tutuluyor.
     """
-    publisher = item.publisher or "Google Haberler"
-    parts = [f"{publisher}: {item.title.rstrip('.')}."]
+    publisher = intro_for(item.publisher) or "Google Haberler"
+    # Iki nokta ust uste yerine nokta: TTS iki noktada duraklamiyordu.
+    parts = [f"{publisher}. {normalize(item.title).rstrip('.')}."]
     if extra:
-        parts.append(extra.rstrip(".") + ".")
+        parts.append(normalize(extra).rstrip(".") + ".")
     if item.source_count >= 3:
         parts.append(f"Bu haberi {item.source_count} ayrı kaynak yazdı.")
     return " ".join(parts)

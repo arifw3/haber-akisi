@@ -76,6 +76,18 @@ cezası ağırlıklandırılıyor (`scoring_override`), ayrıca `min_trust` eşi
 Bülteni tek uzun MP3'te birleştirmek yerine **haber başına bir dosya** üretiliyor. Böylece ffmpeg
 bağımlılığı, zaman damgası senkronu ve uzun üretimde kalite kaybı sorunlarının üçü de ortadan kalkıyor.
 
+**Türkçe doğallık.** TTS ne verirsen onu okur; haber başlıkları yazılı dil için yazılmış.
+`mynews/speech.py` metni sese hazırlar: `AKP` → "A Ka Pe" (ama `MASAK` kelime gibi okunur),
+`Bakan Tekin:` → `Bakan Tekin,` (iki nokta duraklama yaratmıyor, cümleler birbirine giriyordu),
+tırnaklar atılır ama `Ankara'da`'daki apostrof korunur, `birgun.net` → `birgun`, `(ÖZET)` gibi
+editoryal etiketler silinir. Bilinmeyen kısaltmaya dokunulmaz — yanlış okumak, bozmaktan iyidir.
+
+Bu metin katmanıdır ve etkisi büyüktür; ama sesin **anadili** ayrı bir mesele. ElevenLabs'in Free
+planı Voice Library'yi API'ye kapatıyor, dolayısıyla yalnızca İngilizce anadilli varsayılan sesler
+(Sarah, Brian, Bill, Callum, Alice) kullanılabiliyor ve Türkçe'de hafif aksan kalıyor. Türkçe
+anadilli ses için ücretli plan gerekir; alternatif olarak Google Cloud TTS (`tr-TR-Wavenet`) ve
+Azure (`tr-TR-EmelNeural`) Türkçe'de belirgin biçimde daha doğaldır.
+
 **Karakter kotası gerçeği:** 30 haber ≈ 4.600 karakter/gün, yani ayda ~138.000. ElevenLabs'in
 Creator planı (100k) bile tamamına yetmiyor. Bu yüzden `tts.limit` ayarı var: yalnızca en yüksek
 skorlu N habere ses üretilir, kalanı arayüzde tarayıcı sesiyle okunur. Varsayılan 3 (≈26k/ay).

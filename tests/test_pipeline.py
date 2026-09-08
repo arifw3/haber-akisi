@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.images import ImageResolver, extract_image, parse_articles
 from mynews.rank import Ranker, normalize, similarity
+from mynews.speech import intro_for, normalize as speech_normalize
 
 NOW = datetime.now(timezone.utc)
 
@@ -254,6 +255,50 @@ class TestImageResolver(unittest.TestCase):
         self.assertEqual(self.resolver.stats["aranan"], 2)
         self.assertEqual(self.resolver.stats["eslesen"], 1)
         self.assertEqual(self.resolver.stats["gorselli"], 1)
+
+
+class TestSpeechNormalisation(unittest.TestCase):
+    def test_spelled_abbreviations_expanded(self):
+        text = speech_normalize("AKP ve CHP arasında gerginlik")
+        self.assertIn("A Ka Pe", text)
+        self.assertIn("Ce He Pe", text)
+
+    def test_suffix_kept_separate(self):
+        # "Ce He Peli" degil "Ce He Pe li" okunmali
+        self.assertIn("Ce He Pe li", speech_normalize("CHP'li başkan"))
+
+    def test_word_like_abbreviations_untouched(self):
+        for word in ("MASAK", "NATO", "PISA", "TÜİK"):
+            self.assertIn(word, speech_normalize(f"{word} raporu yayımlandı"))
+
+    def test_unknown_abbreviation_left_alone(self):
+        # Bilmedigimiz kisaltmayi bozmaktansa oldugu gibi birak
+        self.assertIn("XYZK", speech_normalize("XYZK kurumu açıklama yaptı"))
+
+    def test_colon_becomes_comma(self):
+        # Iki nokta TTS'te duraklama yaratmiyor
+        out = speech_normalize("Bakan Tekin: Türkiye puanını artırdı")
+        self.assertNotIn(":", out)
+        self.assertIn("Bakan Tekin, Türkiye", out)
+
+    def test_quotes_removed_but_apostrophe_kept(self):
+        out = speech_normalize("Camide 'yardım parası' kavgası Ankara'da büyüdü")
+        self.assertNotIn("'yardım", out)
+        self.assertIn("Ankara'da", out)
+
+    def test_editorial_tags_stripped(self):
+        self.assertNotIn("ÖZET", speech_normalize("Villa 3 puanla başladı (ÖZET)"))
+
+    def test_exclamation_softened(self):
+        self.assertNotIn("!", speech_normalize("Kırmızı bayrak çekildi!"))
+
+    def test_publisher_pronunciation(self):
+        self.assertEqual(intro_for("T24"), "Te yirmi dört")
+        self.assertEqual(intro_for("Bloomberght"), "Bloomberg Ha Te")
+
+    def test_domain_publisher_cleaned(self):
+        # "birgun.net" -> "birgun nokta net" diye okunmamali
+        self.assertNotIn(".", intro_for("birgun.net"))
 
 
 if __name__ == "__main__":
