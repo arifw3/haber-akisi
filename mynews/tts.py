@@ -15,6 +15,7 @@ Iki motor da opsiyoneldir. Anahtar yoksa PWA tarayicinin kendi Turkce sesini
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import os
 import struct
@@ -152,6 +153,19 @@ def available_engine(preferred: str = "auto") -> str | None:
     return None
 
 
+def cache_key(text: str, engine: str, config: dict) -> str:
+    """Metin + motor + model + ses birlesimi icin kararli bir anahtar.
+
+    Ses veya model degisirse anahtar da degisir; eski dosya yeniden
+    kullanilmaz, dogru olan uretilir.
+    """
+    voices = config.get(f"{'eleven' if engine == 'eleven' else 'gemini'}_voices") or []
+    model = config.get(f"{'eleven' if engine == 'eleven' else 'gemini'}_model", "")
+    voice = voices[hash(text) % len(voices)] if voices else ""
+    raw = "|".join([engine, model, voice, text])
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
+
+
 def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
     """Bultendeki her habere ses uretir, item['audio'] alanini doldurur.
 
@@ -163,7 +177,12 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
         return 0
 
     engine = ENGINES[engine_name]
-    audio_dir = site_dir / "audio" / bulletin["date"]
+
+    # Icerik adresli onbellek: ayni metin + ses + model bir kez faturalanir.
+    # Gundemde kalan haber ertesi gun, ayni gun ikinci build ise hic ucret
+    # yaratmaz. Ziyaretci sayisi zaten maliyeti etkilemiyor - ses gunde bir
+    # kez uretilip herkese ayni dosya sunuluyor.
+    audio_dir = site_dir / "audio" / "cache"
     audio_dir.mkdir(parents=True, exist_ok=True)
 
     # Karakter kotasi sinirli: sadece en yuksek skorlu N habere ses uretilir,
@@ -174,18 +193,28 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
         items = sorted(items, key=lambda i: i.get("score", 0), reverse=True)[:limit]
 
     produced = 0
+    reused = 0
     spent = 0
     for item in items:
-        target = audio_dir / item["id"]
+        key = cache_key(item["speech"], engine_name, config)
+        existing = next(iter(audio_dir.glob(key + ".*")), None)
+        if existing:
+            item["audio"] = f"audio/cache/{existing.name}"
+            reused += 1
+            continue
+
         try:
-            clip = engine(item["speech"], target, config)
+            clip = engine(item["speech"], audio_dir / key, config)
         except TTSError as exc:
             print(f"  ses uretilemedi ({item['id']}): {exc}")
             continue
-        item["audio"] = f"audio/{bulletin['date']}/{clip.path.name}"
+        item["audio"] = f"audio/cache/{clip.path.name}"
         produced += 1
         spent += len(item["speech"])
 
     bulletin["audio_engine"] = engine_name
     bulletin["audio_chars"] = spent
+    bulletin["audio_reused"] = reused
+    if reused:
+        print(f"  {reused} ses onbellekten geldi (ucretsiz)")
     return produced

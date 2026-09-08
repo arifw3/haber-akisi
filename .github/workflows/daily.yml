@@ -30,6 +30,13 @@ jobs:
       - name: Feed sağlığını kontrol et
         run: python -m mynews health
 
+      - name: Ses önbelleğini geri yükle
+        uses: actions/cache@v4
+        with:
+          path: site/audio/cache
+          key: tts-cache-${{ github.run_id }}
+          restore-keys: tts-cache-
+
       - name: Bülteni üret
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
