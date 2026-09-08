@@ -5,6 +5,8 @@ Google Haberler RSS'inden her gün **30 haber** derleyip Tailwind tabanlı bir *
 
 Kategoriler: **Türkiye**, **Bilim & Teknoloji**, **Spor** (her birinden 10 haber).
 
+**Canlı:** https://arifw3.github.io/haber-akisi/ · **Depo:** https://github.com/arifw3/haber-akisi
+
 ![Ana sayfa, Keşfet ve haber detayı](docs/arayuz.png)
 
 ## Hızlı başlangıç
@@ -100,14 +102,8 @@ böylece tasarımdan kaldırılmış oluyor. Görsel de üretmiyoruz — kartlar
 `.github/workflows/daily.yml` her gün 06:00'da (TR) çalışır: feed sağlığını kontrol eder, bülteni
 üretir, testleri koşar, `site/data`'yı işler ve Pages'e dağıtır.
 
-```bash
-git init && git add . && git commit -m "İlk sürüm"
-git branch -M main
-git remote add origin git@github.com:arifw3/haber-akisi.git
-git push -u origin main
-```
-
-Ardından depo ayarlarından **Settings → Pages → Source: GitHub Actions** seçin.
+Depo kuruludur; **Settings → Pages → Source** `GitHub Actions` olarak ayarlıdır.
+`main` dalına her push ve her sabahki cron çalışması yayını tazeler.
 Ses üretimi istiyorsanız `ELEVENLABS_API_KEY` veya `GEMINI_API_KEY` değerini
 **Settings → Secrets and variables → Actions** altına ekleyin ve workflow'daki build adımını
 `python -m mynews build --with-audio` yapın.
