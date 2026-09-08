@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr" class="h-full">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haber Akışı</title>
+<meta name="description" content="Google Haberler'den günlük Türkçe sesli haber bülteni">
+<meta name="theme-color" content="#dbe7dc">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Haber Akışı">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:  { DEFAULT: "#12211a", soft: "#5a6b62", faint: "#8d9c93" },
+        leaf: { 50:"#f2f7f2", 100:"#e3efe4", 200:"#cfe2d1", 300:"#a9cbad",
+                400:"#7fb085", 500:"#579462", 600:"#3f7a4c", 700:"#33603d" }
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"]
+      },
+      boxShadow: {
+        card: "0 18px 40px -18px rgba(18,33,26,.30), 0 2px 8px -2px rgba(18,33,26,.08)",
+        deck: "0 10px 24px -14px rgba(18,33,26,.28)",
+        bar:  "0 -6px 24px -12px rgba(18,33,26,.20)"
+      },
+      borderRadius: { xl2: "1.75rem" }
+    }
+  }
+}
+</script>
+<style>
+  html, body { overscroll-behavior-y: none; overflow-x: hidden; }
+  * { min-width: 0; }
+  body {
+    background: radial-gradient(120% 80% at 50% 0%, #eef5ee 0%, #e2ece3 45%, #d8e6da 100%) fixed;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Kart destesi: on kart tam boy, arkadakiler yukarida kademeli durur */
+  .deck-card {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    /* on kart akista: yukseklik icerige gore buyur */
+    transition: transform .45s cubic-bezier(.22,.9,.26,1), opacity .35s ease;
+    will-change: transform, opacity;
+  }
+  .deck-card[data-state="front"]  { position: relative; z-index: 40; }
+  .deck-card[data-state="behind"] { z-index: 30; pointer-events: none; }
+  .deck-card[data-state="gone"]   { z-index: 10; pointer-events: none; opacity: 0; }
+
+  @keyframes pulse-ring {
+    0%   { box-shadow: 0 0 0 0 rgba(87,148,98,.45); }
+    70%  { box-shadow: 0 0 0 14px rgba(87,148,98,0); }
+    100% { box-shadow: 0 0 0 0 rgba(87,148,98,0); }
+  }
+  .speaking { animation: pulse-ring 2s infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .deck-card { transition: none; }
+    .speaking { animation: none; }
+  }
+</style>
+</head>
+<body class="h-full font-sans text-ink antialiased selection:bg-leaf-200">
+
+<div class="mx-auto flex h-full w-full max-w-md flex-col px-5 pb-28 pt-[max(1rem,env(safe-area-inset-top))]">
+
+  <header class="flex shrink-0 items-start justify-between gap-3">
+    <div class="min-w-0">
+      <p id="today" class="text-[13px] font-medium text-ink-faint">&nbsp;</p>
+      <h1 class="mt-0.5 text-[27px] font-bold leading-tight tracking-tight">Haber Akışı</h1>
+    </div>
+    <div class="flex shrink-0 gap-2 pt-1">
+      <button id="btn-search" aria-label="Ara"
+        class="grid h-11 w-11 place-items-center rounded-full bg-white/80 shadow-deck backdrop-blur transition active:scale-95">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button id="btn-refresh" aria-label="Yenile"
+        class="grid h-11 w-11 place-items-center rounded-full bg-white/80 shadow-deck backdrop-blur transition active:scale-95">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M20 11a8 8 0 1 0-2.3 5.7" stroke-linecap="round"/>
+          <path d="M20 4v7h-7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="search-wrap" class="mt-3 hidden shrink-0">
+    <input id="search" type="search" placeholder="Haberlerde ara…" autocomplete="off"
+      class="w-full rounded-2xl border border-leaf-200 bg-white/90 px-4 py-3 text-[15px] outline-none placeholder:text-ink-faint focus:border-leaf-400">
+  </div>
+
+  <nav id="chips" class="no-scrollbar mt-4 flex shrink-0 gap-2 overflow-x-auto pb-1"></nav>
+
+  <section id="listen-bar" class="mt-4 shrink-0 rounded-xl2 bg-white/75 p-3 shadow-deck backdrop-blur">
+    <div class="flex items-center gap-3">
+      <button id="btn-play" aria-label="Sesli dinlemeyi başlat"
+        class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-leaf-600 text-white shadow-lg transition active:scale-95">
+        <svg id="ico-play" class="h-6 w-6 translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+        <svg id="ico-pause" class="hidden h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z"/></svg>
+      </button>
+      <div class="min-w-0 flex-1">
+        <p id="listen-title" class="truncate text-[15px] font-semibold">Sesli bülten</p>
+        <p id="listen-sub" class="truncate text-[13px] text-ink-soft">Yükleniyor…</p>
+        <div class="mt-2 h-1.5 overflow-hidden rounded-full bg-leaf-100">
+          <div id="progress" class="h-full w-0 rounded-full bg-leaf-500 transition-[width] duration-300"></div>
+        </div>
+      </div>
+      <button id="btn-next" aria-label="Sonraki haber"
+        class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-leaf-100 text-leaf-700 transition active:scale-95">
+        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5.5v13l9-6.5zM16.5 5H19v14h-2.5z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <main class="no-scrollbar relative mt-5 min-h-0 flex-1 overflow-y-auto pb-6">
+    <div id="deck" class="relative pt-8"></div>
+    <p id="empty" class="hidden pt-16 text-center text-[15px] text-ink-soft"></p>
+  </main>
+</div>
+
+<nav class="pointer-events-none fixed inset-x-0 bottom-0 z-50 pb-[max(.75rem,env(safe-area-inset-bottom))]">
+  <div class="pointer-events-auto mx-auto flex max-w-[19rem] items-center justify-between rounded-full bg-white/90 p-2 shadow-bar backdrop-blur-xl">
+    <button data-view="feed" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Akış">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+        <path d="M4 11.5 12 5l8 6.5V19a1 1 0 0 1-1 1h-4v-5h-6v5H5a1 1 0 0 1-1-1z" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button data-view="listen" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Dinle">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+        <path d="M4 14v-3a8 8 0 0 1 16 0v3" stroke-linecap="round"/>
+        <rect x="2.5" y="13" width="4.5" height="7" rx="2.2"/><rect x="17" y="13" width="4.5" height="7" rx="2.2"/>
+      </svg>
+    </button>
+    <button data-view="saved" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Kaydedilenler">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+        <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button data-view="about" class="nav-btn grid h-12 w-12 place-items-center rounded-full transition" aria-label="Hakkında">
+      <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
+        <circle cx="12" cy="8.5" r="3.5"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<audio id="player" preload="none" class="hidden"></audio>
+<script src="app.js"></script>
+</body>
+</html>

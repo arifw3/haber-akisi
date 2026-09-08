@@ -1,0 +1,155 @@
+{
+  "segments": [
+    {
+      "key": "turkiye",
+      "title": "Türkiye",
+      "topics": [
+        "NATION"
+      ],
+      "limit": 10
+    },
+    {
+      "key": "bilim-teknoloji",
+      "title": "Bilim & Teknoloji",
+      "topics": [
+        "TECHNOLOGY",
+        "SCIENCE"
+      ],
+      "limit": 10,
+      "scoring_override": {
+        "w_trust": 1.8,
+        "clickbait_penalty": 1.6
+      },
+      "min_trust": 0.4
+    },
+    {
+      "key": "spor",
+      "title": "Spor",
+      "topics": [
+        "SPORTS"
+      ],
+      "limit": 10
+    }
+  ],
+  "scoring": {
+    "w_sources": 1.0,
+    "w_freshness": 0.6,
+    "w_trust": 1.0,
+    "clickbait_penalty": 1.2,
+    "max_age_hours": 36,
+    "max_per_publisher": 3,
+    "dedup_similarity": 0.55
+  },
+  "default_trust": 0.5,
+  "publisher_trust": {
+    "Anadolu Ajansı": 1.0,
+    "AA": 1.0,
+    "TRT Haber": 0.95,
+    "BBC News Türkçe": 0.95,
+    "Hürriyet": 0.8,
+    "Milliyet": 0.75,
+    "Sabah": 0.7,
+    "Habertürk": 0.75,
+    "NTV": 0.85,
+    "CNN Türk": 0.8,
+    "Bloomberg HT": 0.85,
+    "Bloomberght": 0.85,
+    "Sözcü Gazetesi": 0.7,
+    "Cumhuriyet": 0.75,
+    "BirGün": 0.65,
+    "birgun.net": 0.65,
+    "Diken": 0.65,
+    "Odatv": 0.6,
+    "T24": 0.75,
+    "Fanatik": 0.7,
+    "NTVSpor": 0.8,
+    "beIN SPORTS": 0.8,
+    "A Spor": 0.7,
+    "Webrazzi": 0.9,
+    "ShiftDelete.Net": 0.8,
+    "DonanımHaber": 0.8,
+    "Log": 0.7,
+    "Wired Türkiye": 0.85,
+    "Evrim Ağacı": 0.9,
+    "Son Dakika": 0.25,
+    "Mynet": 0.2,
+    "Ensonhaber": 0.3,
+    "Haber 7": 0.35,
+    "Halk TV": 0.5,
+    "Onedio": 0.15,
+    "Haberler": 0.3,
+    "Internet Haber": 0.25
+  },
+  "drop_patterns": [
+    "canlı anlatım",
+    "canlı izle",
+    "canlı skor",
+    "puan durumu",
+    "özet izle",
+    "ne zaman, saat kaçta",
+    "hangi kanalda",
+    "muhtemel 11",
+    "ilk 11",
+    "maç özeti",
+    "hakem kim",
+    "kadrosu belli oldu",
+    "at yarışı",
+    "çekiliş sonuçları",
+    "burç yorumları",
+    "hava durumu",
+    "namaz vakitleri",
+    "canlı yayın",
+    "sıralaması",
+    "fiyat listesi",
+    "kaç tl",
+    "ne kadar oldu",
+    "işte fiyatlar",
+    "köşe yazısı",
+    "indirim kodu",
+    "kupon kodu",
+    "çekilişi",
+    "reklam"
+  ],
+  "clickbait_patterns": [
+    "flaş",
+    "şok",
+    "bomba",
+    "inanılmaz",
+    "sayılı gün kaldı",
+    "işte o ",
+    "meğer",
+    "herkesi şaşırttı",
+    "dikkat çeken",
+    "olay yaratacak",
+    "ağzı açık kaldı",
+    "görenler inanamadı",
+    "bakın ne oldu",
+    "kimse beklemiyordu",
+    "dünyanın sonu",
+    "son dakika |",
+    "resmen",
+    "işte detaylar",
+    "akıl almaz",
+    "hizmete sundu",
+    "iş birliğine imza",
+    "çözümleri",
+    "lansmanı",
+    "yeni dönemi:",
+    "farkıyla",
+    "ile güçleniyor",
+    "sundu",
+    "tanıttı"
+  ],
+  "tts": {
+    "engine": "auto",
+    "eleven_model": "eleven_v3",
+    "eleven_voices": [
+      "JBFqnCBsd6RMkjVDRZzb",
+      "EXAVITQu4vr4xnSDxMaL"
+    ],
+    "gemini_model": "gemini-2.5-flash-preview-tts",
+    "gemini_voices": [
+      "Kore"
+    ]
+  }
+}
