@@ -151,7 +151,14 @@
     "gemini_voices": [
       "Kore"
     ],
-    "limit": 3
+    "limit": 3,
+    "google_language": "tr-TR",
+    "google_voices": [
+      "tr-TR-Wavenet-D",
+      "tr-TR-Wavenet-E"
+    ],
+    "google_rate": 1.0,
+    "google_pitch": 0.0
   },
   "image_matching": {
     "enabled": true,

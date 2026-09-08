@@ -11,6 +11,7 @@ Iki motor da opsiyoneldir. Anahtar yoksa PWA tarayicinin kendi Turkce sesini
 
   ELEVENLABS_API_KEY  -> eleven  (POST /v1/text-to-speech/{voice_id})
   GEMINI_API_KEY      -> gemini  (gemini-2.5-flash-preview-tts, cok konusmacili)
+  GOOGLE_TTS_API_KEY  -> google  (Cloud Text-to-Speech, Turkce anadil sesleri)
 """
 from __future__ import annotations
 
@@ -29,6 +30,7 @@ GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
 )
+GOOGLE_TTS_URL = "https://texttospeech.googleapis.com/v1/text:synthesize"
 
 
 class TTSError(RuntimeError):
@@ -136,18 +138,61 @@ def synth_gemini(text: str, out: Path, config: dict) -> Clip:
     return Clip(out, "audio/wav")
 
 
-ENGINES = {"eleven": synth_eleven, "gemini": synth_gemini}
+# --------------------------------------------------- Google Cloud TTS
+
+
+def synth_google(text: str, out: Path, config: dict) -> Clip:
+    """Turkce anadil sesleri (tr-TR-Wavenet / Chirp3-HD).
+
+    Aylik 1 milyon WaveNet karakteri ucretsiz katmanda; bultenin tamami
+    (~143 bin/ay) bu sinirin altinda kaliyor.
+    """
+    key = os.environ.get("GOOGLE_TTS_API_KEY")
+    if not key:
+        raise TTSError("GOOGLE_TTS_API_KEY tanimli degil")
+
+    voices = config.get("google_voices") or ["tr-TR-Wavenet-E"]
+    voice = voices[hash(text) % len(voices)]
+
+    data = _post(
+        f"{GOOGLE_TTS_URL}?key={key}",
+        {
+            "input": {"text": text},
+            "voice": {"languageCode": config.get("google_language", "tr-TR"), "name": voice},
+            "audioConfig": {
+                "audioEncoding": "MP3",
+                "speakingRate": float(config.get("google_rate", 1.0)),
+                "pitch": float(config.get("google_pitch", 0.0)),
+            },
+        },
+        {"Content-Type": "application/json"},
+    )
+
+    try:
+        audio = base64.b64decode(json.loads(data)["audioContent"])
+    except (KeyError, ValueError, json.JSONDecodeError) as exc:
+        raise TTSError(f"Google TTS yaniti beklenmedik: {data[:200]!r}") from exc
+
+    out = out.with_suffix(".mp3")
+    out.write_bytes(audio)
+    return Clip(out, "audio/mpeg")
+
+
+ENGINES = {"eleven": synth_eleven, "gemini": synth_gemini, "google": synth_google}
 
 
 def available_engine(preferred: str = "auto") -> str | None:
     """Anahtari tanimli olan ilk motoru sec. Yoksa None (tarayici sesi kullanilir)."""
     have = {
+        "google": bool(os.environ.get("GOOGLE_TTS_API_KEY")),
         "eleven": bool(os.environ.get("ELEVENLABS_API_KEY")),
         "gemini": bool(os.environ.get("GEMINI_API_KEY")),
     }
     if preferred in ENGINES:
         return preferred if have[preferred] else None
-    for name in ("eleven", "gemini"):
+    # Turkce anadil sesleri oldugu ve ucretsiz katmani genis oldugu icin
+    # otomatik secimde once Google denenir.
+    for name in ("google", "eleven", "gemini"):
         if have[name]:
             return name
     return None
@@ -159,8 +204,8 @@ def cache_key(text: str, engine: str, config: dict) -> str:
     Ses veya model degisirse anahtar da degisir; eski dosya yeniden
     kullanilmaz, dogru olan uretilir.
     """
-    voices = config.get(f"{'eleven' if engine == 'eleven' else 'gemini'}_voices") or []
-    model = config.get(f"{'eleven' if engine == 'eleven' else 'gemini'}_model", "")
+    voices = config.get(f"{engine}_voices") or []
+    model = config.get(f"{engine}_model", "")
     voice = voices[hash(text) % len(voices)] if voices else ""
     raw = "|".join([engine, model, voice, text])
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]

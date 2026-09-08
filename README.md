@@ -68,10 +68,16 @@ cezası ağırlıklandırılıyor (`scoring_override`), ayrıca `min_trust` eşi
 
 İki TTS motoru destekleniyor, anahtarı tanımlı olan seçilir:
 
-| Motor | Ortam değişkeni | API |
+| Motor | Ortam değişkeni | Notlar |
 |---|---|---|
-| ElevenLabs | `ELEVENLABS_API_KEY` | `POST /v1/text-to-dialogue` (Eleven v3) |
+| **Google Cloud TTS** | `GOOGLE_TTS_API_KEY` | Türkçe **anadil** sesleri (`tr-TR-Wavenet`), aylık 1M karakter ücretsiz katmanda — otomatik seçimde önce bu denenir |
+| ElevenLabs | `ELEVENLABS_API_KEY` | `POST /v1/text-to-speech/{voice_id}`; Free planda yalnızca İngilizce anadilli sesler |
 | Gemini | `GEMINI_API_KEY` | `gemini-2.5-flash-preview-tts` |
+
+Aynı metin ikinci kez faturalanmasın diye **içerik adresli önbellek** var: metin + motor + model +
+ses birleşiminin hash'i dosya adı olur (`site/audio/cache/<hash>.mp3`). Gündemde kalan haber ertesi
+gün, aynı gün ikinci build ise ücret yaratmaz; workflow önbelleği `actions/cache` ile taşır.
+Ziyaretçi sayısı maliyeti zaten etkilemez — ses günde bir kez üretilip herkese aynı dosya sunulur.
 
 Bülteni tek uzun MP3'te birleştirmek yerine **haber başına bir dosya** üretiliyor. Böylece ffmpeg
 bağımlılığı, zaman damgası senkronu ve uzun üretimde kalite kaybı sorunlarının üçü de ortadan kalkıyor.
