@@ -50,11 +50,11 @@ const state = {
 
 /* Kategori paletleri — hero gradienti ve rozet rengi buradan türer. */
 const PALETTE = {
-  "turkiye":         { from: "#1d3f8f", to: "#3b74d8", chip: "bg-brand-600" },
-  "bilim-teknoloji": { from: "#4b2a86", to: "#7b53d6", chip: "bg-violet-600" },
-  "spor":            { from: "#0c5c4a", to: "#12a07f", chip: "bg-emerald-600" },
+  "turkiye":         { from: "#8f0f47", to: "#e0447f", chip: "bg-[#c2185b]" },
+  "bilim-teknoloji": { from: "#5c1478", to: "#b93bb0", chip: "bg-[#8e24aa]" },
+  "spor":            { from: "#a81742", to: "#f4715c", chip: "bg-[#e0464f]" },
 };
-const FALLBACK_PALETTE = { from: "#2b3547", to: "#5a6b80", chip: "bg-slate-600" };
+const FALLBACK_PALETTE = { from: "#4a2338", to: "#8a5570", chip: "bg-[#7b5164]" };
 
 /* ------------------------------------------------------------- yardımcılar */
 
@@ -295,7 +295,7 @@ function renderHome() {
         ${featured.map(heroCard).join("")}
       </div>
       <div id="dots" class="mt-1 flex justify-center gap-1.5">
-        ${featured.map((_, i) => `<span class="h-1.5 rounded-full transition-all ${i === 0 ? "w-5 bg-brand-600" : "w-1.5 bg-ink-faint/40"}"></span>`).join("")}
+        ${featured.map((_, i) => `<span class="h-1.5 rounded-full transition-all ${i === 0 ? "w-5 bg-[#d81b60]" : "w-1.5 bg-ink-faint/40"}"></span>`).join("")}
       </div>
 
       <div class="mt-6">
@@ -319,7 +319,7 @@ function wireCarousel() {
       const width = card.getBoundingClientRect().width + 12;
       const active = Math.round(carousel.scrollLeft / width);
       [...dots.children].forEach((dot, i) => {
-        dot.className = `h-1.5 rounded-full transition-all ${i === active ? "w-5 bg-brand-600" : "w-1.5 bg-ink-faint/40"}`;
+        dot.className = `h-1.5 rounded-full transition-all ${i === active ? "w-5 bg-[#d81b60]" : "w-1.5 bg-ink-faint/40"}`;
       });
     },
     { passive: true }
@@ -352,7 +352,7 @@ function renderDiscover() {
           .map((c) => {
             const active = c.key === state.segment;
             return `<button data-chip="${c.key}" class="shrink-0 rounded-full px-4 py-2 text-[14px] font-semibold transition active:scale-95 ${
-              active ? "bg-brand-600 text-white shadow-pill" : "bg-white text-ink-soft ring-1 ring-black/5"
+              active ? "grad text-white shadow-pill" : "bg-white text-ink-soft ring-1 ring-black/5"
             }">${escapeHtml(c.title)}</button>`;
           })
           .join("")}
@@ -407,7 +407,7 @@ function renderDetail() {
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="flex gap-2">
-            <button data-save class="grid h-11 w-11 place-items-center rounded-full ${saved ? "bg-brand-600" : "bg-black/30"} text-white backdrop-blur transition active:scale-95" aria-label="${saved ? "Kaydedilenlerden çıkar" : "Kaydet"}">
+            <button data-save class="grid h-11 w-11 place-items-center rounded-full ${saved ? "grad" : "bg-black/30"} text-white backdrop-blur transition active:scale-95" aria-label="${saved ? "Kaydedilenlerden çıkar" : "Kaydet"}">
               <svg class="h-5 w-5" fill="${saved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
                 <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
               </svg>
@@ -462,7 +462,7 @@ function renderDetail() {
         }
 
         <div class="mt-7 flex items-center gap-2">
-          <button data-listen class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-brand-600 px-5 py-3.5 text-[15px] font-semibold text-white shadow-pill transition active:scale-[.98]">
+          <button data-listen class="grad inline-flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3.5 text-[15px] font-semibold text-white shadow-pill transition active:scale-[.98]">
             <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
             Buradan dinle
           </button>
@@ -498,7 +498,7 @@ function setNav(view) {
   const active = view === "detail" ? null : view;
   document.querySelectorAll(".nav-btn").forEach((btn) => {
     const on = btn.dataset.nav === active;
-    btn.classList.toggle("bg-brand-600", on);
+    btn.classList.toggle("grad", on);
     btn.classList.toggle("text-white", on);
     btn.classList.toggle("shadow-pill", on);
     btn.classList.toggle("text-ink-faint", !on);

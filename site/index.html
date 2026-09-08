@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Haber Akışı</title>
 <meta name="description" content="Google Haberler'den günlük Türkçe haber bülteni — okuyun ya da hands-free dinleyin">
-<meta name="theme-color" content="#f4f5f7">
+<meta name="theme-color" content="#fdeef4">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Haber Akışı">
 <link rel="manifest" href="manifest.webmanifest">
@@ -17,18 +17,19 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        ink:   { DEFAULT: "#0d1220", soft: "#5b6577", faint: "#9aa3b2" },
-        brand: { 50:"#eff6ff", 100:"#dbeafe", 500:"#2f7df6", 600:"#1868e8", 700:"#1355c4" },
-        shell: "#f4f5f7"
+        /* Sıcak nötrler: gri yerine pembeye çalan koyu tonlar */
+        ink:   { DEFAULT: "#2a1020", soft: "#7b5164", faint: "#b189a0" },
+        brand: { 50:"#fff0f6", 100:"#ffe0ec", 200:"#ffc4dc", 500:"#f0508f", 600:"#d81b60", 700:"#ab134b" },
+        shell: "#fdeef4"
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"]
       },
       boxShadow: {
-        hero: "0 22px 44px -20px rgba(13,18,32,.45)",
-        card: "0 10px 30px -18px rgba(13,18,32,.28)",
-        nav:  "0 -4px 30px -12px rgba(13,18,32,.18)",
-        pill: "0 8px 20px -10px rgba(24,104,232,.65)"
+        hero: "0 22px 44px -20px rgba(120,18,60,.42)",
+        card: "0 10px 30px -18px rgba(120,18,60,.24)",
+        nav:  "0 -4px 30px -12px rgba(120,18,60,.16)",
+        pill: "0 10px 22px -10px rgba(216,27,96,.55)"
       },
       borderRadius: { xl2: "1.5rem", xl3: "2rem" }
     }
@@ -37,13 +38,20 @@ tailwind.config = {
 </script>
 <style>
   html, body { overscroll-behavior-y: none; overflow-x: hidden; }
-  body { background: #f4f5f7; }
+  body {
+    background:
+      radial-gradient(120% 70% at 50% -8%, #ffd9e8 0%, #fde7f0 38%, #fdeef4 72%, #fdf4f7 100%)
+      fixed;
+  }
   * { min-width: 0; }
 
   .no-scrollbar::-webkit-scrollbar { display: none; }
   .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
   .snap-x-mandatory { scroll-snap-type: x mandatory; }
+
+  /* Temanın imzası: pembeden fuşyaya geçen dolgu (buton, aktif sekme, chip) */
+  .grad { background-image: linear-gradient(100deg, #f4728c 0%, #e2459a 52%, #d0269c 100%); }
 
   /* Haber görseli yok (RSS vermiyor): kategoriye göre gradient + ince doku */
   .hero-tex::after {
@@ -70,13 +78,13 @@ tailwind.config = {
 <body class="min-h-full font-sans text-ink antialiased">
 
 <div class="mx-auto flex min-h-screen w-full max-w-md flex-col">
-  <header id="topbar" class="sticky top-0 z-40 bg-shell/85 px-5 pb-2 pt-[max(0.9rem,env(safe-area-inset-top))] backdrop-blur-xl"></header>
+  <header id="topbar" class="sticky top-0 z-40 bg-[#fdeef4]/80 px-5 pb-2 pt-[max(0.9rem,env(safe-area-inset-top))] backdrop-blur-xl"></header>
   <main id="view" class="flex-1 px-5 pb-44"></main>
 </div>
 
 <!-- Hands-free mini oynatıcı -->
 <div id="mini" class="pointer-events-none fixed inset-x-0 bottom-[5.6rem] z-40 hidden px-5">
-  <div class="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-xl2 bg-ink px-3 py-2.5 text-white shadow-hero">
+  <div class="pointer-events-auto mx-auto flex max-w-md items-center gap-3 rounded-xl2 bg-gradient-to-r from-[#3d0f24] to-[#6d1440] px-3 py-2.5 text-white shadow-hero">
     <button id="mini-toggle" class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white/15 transition active:scale-95" aria-label="Duraklat">
       <svg id="mini-pause" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z"/></svg>
       <svg id="mini-play" class="hidden h-5 w-5 translate-x-[1px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -85,7 +93,7 @@ tailwind.config = {
       <p id="mini-title" class="truncate text-[13.5px] font-semibold leading-tight">—</p>
       <p id="mini-sub" class="truncate text-[12px] text-white/60">—</p>
     </div>
-    <div id="mini-eq" class="eq flex shrink-0 items-end gap-[3px] text-brand-500"><span></span><span></span><span></span></div>
+    <div id="mini-eq" class="eq flex shrink-0 items-end gap-[3px] text-brand-200"><span></span><span></span><span></span></div>
     <button id="mini-next" class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/10 transition active:scale-95" aria-label="Sonraki">
       <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5.5v13l9-6.5zM16.5 5H19v14h-2.5z"/></svg>
     </button>
