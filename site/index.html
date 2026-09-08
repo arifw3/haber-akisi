@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr" class="h-full">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -37,7 +37,8 @@ tailwind.config = {
 }
 </script>
 <style>
-  html, body { overscroll-behavior-y: none; overflow-x: hidden; }
+  html { overscroll-behavior-y: none; }
+  body { overflow-x: hidden; }   /* yatay taşmayı kes, dikey kaydırma serbest kalsın */
   body {
     background:
       radial-gradient(120% 70% at 50% -8%, #ffd9e8 0%, #fde7f0 38%, #fdeef4 72%, #fdf4f7 100%)
@@ -75,7 +76,7 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce) { .view, .eq span { animation: none; } }
 </style>
 </head>
-<body class="min-h-full font-sans text-ink antialiased">
+<body class="min-h-screen font-sans text-ink antialiased">
 
 <div class="mx-auto flex min-h-screen w-full max-w-md flex-col">
   <header id="topbar" class="sticky top-0 z-40 bg-[#fdeef4]/80 px-5 pb-2 pt-[max(0.9rem,env(safe-area-inset-top))] backdrop-blur-xl"></header>

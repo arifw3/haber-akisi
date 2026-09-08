@@ -142,14 +142,80 @@
   ],
   "tts": {
     "engine": "auto",
-    "eleven_model": "eleven_v3",
+    "eleven_model": "eleven_multilingual_v2",
     "eleven_voices": [
-      "JBFqnCBsd6RMkjVDRZzb",
-      "EXAVITQu4vr4xnSDxMaL"
+      "EXAVITQu4vr4xnSDxMaL",
+      "nPczCjzI2devNBz1zQrb"
     ],
     "gemini_model": "gemini-2.5-flash-preview-tts",
     "gemini_voices": [
       "Kore"
+    ],
+    "limit": 3
+  },
+  "image_matching": {
+    "enabled": true,
+    "similarity": 0.5,
+    "_not": "Google Haberler görsel ve doğrudan link vermiyor; yayıncının kendi feed'inde başlık eşleşirse ikisi de oradan alınır. Eşleşmeyen haber kategori gradientiyle gösterilir."
+  },
+  "publisher_feeds": {
+    "hurriyet.com.tr": [
+      "https://www.hurriyet.com.tr/rss/anasayfa",
+      "https://www.hurriyet.com.tr/rss/gundem",
+      "https://www.hurriyet.com.tr/rss/spor",
+      "https://www.hurriyet.com.tr/rss/teknoloji"
+    ],
+    "cumhuriyet.com.tr": [
+      "https://www.cumhuriyet.com.tr/rss"
+    ],
+    "haberturk.com": [
+      "https://www.haberturk.com/rss"
+    ],
+    "milliyet.com.tr": [
+      "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/sporrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml"
+    ],
+    "sozcu.com.tr": [
+      "https://www.sozcu.com.tr/feed/"
+    ],
+    "donanimhaber.com": [
+      "https://www.donanimhaber.com/rss/tum/"
+    ],
+    "ntvspor.net": [
+      "https://www.ntvspor.net/rss"
+    ],
+    "ntv.com.tr": [
+      "https://www.ntv.com.tr/son-dakika.rss",
+      "https://www.ntv.com.tr/teknoloji.rss"
+    ],
+    "trthaber.com": [
+      "https://www.trthaber.com/sondakika.rss"
+    ],
+    "sabah.com.tr": [
+      "https://www.sabah.com.tr/rss/gundem.xml",
+      "https://www.sabah.com.tr/rss/spor.xml"
+    ],
+    "t24.com.tr": [
+      "https://t24.com.tr/rss"
+    ],
+    "diken.com.tr": [
+      "https://www.diken.com.tr/feed/"
+    ],
+    "birgun.net": [
+      "https://www.birgun.net/xml/rss"
+    ],
+    "bloomberght.com": [
+      "https://www.bloomberght.com/rss"
+    ],
+    "fanatik.com.tr": [
+      "https://www.fanatik.com.tr/rss/anasayfa"
+    ],
+    "webrazzi.com": [
+      "https://webrazzi.com/feed"
+    ],
+    "shiftdelete.net": [
+      "https://shiftdelete.net/feed"
     ]
   }
 }

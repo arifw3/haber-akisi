@@ -9,7 +9,7 @@ calarak ayni hands-free deneyimi veriyor, tek haber tekrar dinlenebiliyor.
 Iki motor da opsiyoneldir. Anahtar yoksa PWA tarayicinin kendi Turkce sesini
 (Web Speech API) kullanir, yani ses her halukarda calisir.
 
-  ELEVENLABS_API_KEY  -> eleven  (POST /v1/text-to-dialogue, Eleven v3)
+  ELEVENLABS_API_KEY  -> eleven  (POST /v1/text-to-speech/{voice_id})
   GEMINI_API_KEY      -> gemini  (gemini-2.5-flash-preview-tts, cok konusmacili)
 """
 from __future__ import annotations
@@ -23,7 +23,7 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
-ELEVEN_URL = "https://api.elevenlabs.io/v1/text-to-dialogue"
+ELEVEN_URL = "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
 GEMINI_URL = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
     "{model}:generateContent"
@@ -69,16 +69,16 @@ def synth_eleven(text: str, out: Path, config: dict) -> Clip:
     if not voices:
         raise TTSError("config.tts.eleven_voices bos")
 
-    # Tek haber tek sunucu tarafindan okunur; sirayla ses degistirerek
-    # bulten monotonluktan cikar.
+    # Her haberi tek bir ses okuyor. Sesler arasinda donusum yaparak
+    # bulten monotonluktan cikiyor.
     voice_id = voices[hash(text) % len(voices)]
 
     audio = _post(
-        ELEVEN_URL,
+        ELEVEN_URL.format(voice_id=voice_id),
         {
-            "inputs": [{"text": text, "voice_id": voice_id}],
-            "model_id": config.get("eleven_model", "eleven_v3"),
-            "settings": {"stability": 0.5, "similarity_boost": 0.75},
+            "text": text,
+            "model_id": config.get("eleven_model", "eleven_multilingual_v2"),
+            "voice_settings": {"stability": 0.5, "similarity_boost": 0.75, "style": 0.0},
         },
         {"xi-api-key": key, "Content-Type": "application/json", "Accept": "audio/mpeg"},
     )
@@ -166,17 +166,26 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
     audio_dir = site_dir / "audio" / bulletin["date"]
     audio_dir.mkdir(parents=True, exist_ok=True)
 
+    # Karakter kotasi sinirli: sadece en yuksek skorlu N habere ses uretilir,
+    # kalanlari PWA'da tarayici sesiyle okunur. 0 = sinirsiz.
+    items = [item for seg in bulletin["segments"] for item in seg["items"]]
+    limit = int(config.get("limit", 0))
+    if limit > 0:
+        items = sorted(items, key=lambda i: i.get("score", 0), reverse=True)[:limit]
+
     produced = 0
-    for segment in bulletin["segments"]:
-        for item in segment["items"]:
-            target = audio_dir / item["id"]
-            try:
-                clip = engine(item["speech"], target, config)
-            except TTSError as exc:
-                print(f"  ses uretilemedi ({item['id']}): {exc}")
-                continue
-            item["audio"] = f"audio/{bulletin['date']}/{clip.path.name}"
-            produced += 1
+    spent = 0
+    for item in items:
+        target = audio_dir / item["id"]
+        try:
+            clip = engine(item["speech"], target, config)
+        except TTSError as exc:
+            print(f"  ses uretilemedi ({item['id']}): {exc}")
+            continue
+        item["audio"] = f"audio/{bulletin['date']}/{clip.path.name}"
+        produced += 1
+        spent += len(item["speech"])
 
     bulletin["audio_engine"] = engine_name
+    bulletin["audio_chars"] = spent
     return produced

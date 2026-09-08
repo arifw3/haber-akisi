@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .gnews import NewsItem, check_feed
+from .images import ImageResolver
 from .rank import Ranker, Scored, load_config, similarity
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -57,8 +58,17 @@ def pick_extra(item: NewsItem) -> str:
     return best
 
 
-def item_payload(scored: Scored, index: int) -> dict:
+def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = None) -> dict:
     item = scored.item
+
+    # Yayincinin kendi feed'inde eslesme varsa gorsel ve dogrudan baglanti
+    # oradan gelir; yoksa alanlar bos kalir ve arayuz gradient gosterir.
+    image, source_url = "", ""
+    if resolver:
+        match = resolver.resolve(item.title, item.domain)
+        if match:
+            image, source_url = match.image, match.link
+
     return {
         "id": f"{item.category}-{index}",
         "title": item.title,
@@ -68,6 +78,8 @@ def item_payload(scored: Scored, index: int) -> dict:
         "published": item.published.isoformat(),
         "age_hours": round(item.age_hours, 1),
         "link": item.link,
+        "image": image,
+        "source_url": source_url,
         "source_count": item.source_count,
         "score": round(scored.score, 3),
         "speech": speech_text(item, pick_extra(item)),
@@ -81,6 +93,14 @@ def item_payload(scored: Scored, index: int) -> dict:
 
 def build(config: dict | None = None) -> dict:
     cfg = config or load_config()
+
+    matching = cfg.get("image_matching", {})
+    resolver = (
+        ImageResolver(cfg.get("publisher_feeds", {}), float(matching.get("similarity", 0.5)))
+        if matching.get("enabled")
+        else None
+    )
+
     segments: list[dict] = []
     health: list[dict] = []
 
@@ -107,7 +127,7 @@ def build(config: dict | None = None) -> dict:
             {
                 "key": seg["key"],
                 "title": seg["title"],
-                "items": [item_payload(s, i) for i, s in enumerate(chosen)],
+                "items": [item_payload(s, i, resolver) for i, s in enumerate(chosen)],
             }
         )
 
@@ -118,6 +138,7 @@ def build(config: dict | None = None) -> dict:
         "segments": segments,
         "health": health,
         "total": sum(len(s["items"]) for s in segments),
+        "image_stats": resolver.stats if resolver else {},
         "audio": None,
         "cues": [],
     }

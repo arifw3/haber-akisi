@@ -188,14 +188,29 @@ function sourceChip(count) {
 }
 
 /* Ana sayfadaki geniş kart */
+/* Yayıncı feed'inden görsel eşleştiyse gradientin üstüne bindir.
+ * Yüklenemezse img kendini siler, altındaki gradient görünür kalır. */
+function imageLayer(item, extra = "") {
+  if (!item.image) return "";
+  return `<img src="${escapeHtml(item.image)}" alt="" loading="lazy"
+      class="absolute inset-0 h-full w-full object-cover ${extra}"
+      onerror="this.remove()">`;
+}
+
+/* Doğrudan yayıncı bağlantısı varsa onu kullan; yoksa Google Haberler linki. */
+function targetUrl(item) {
+  return item.source_url || item.link;
+}
+
 function heroCard(item) {
   const p = paletteOf(item);
   return `
   <article data-open="${escapeHtml(item.id)}"
     class="hero-tex relative h-[15.5rem] w-[19.5rem] shrink-0 cursor-pointer snap-start overflow-hidden rounded-xl2 shadow-hero"
     style="${heroStyle(item)}">
-    <span class="absolute right-5 top-3 text-[5.5rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>
-    <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/70 via-black/25 to-transparent"></div>
+    ${imageLayer(item)}
+    ${item.image ? "" : `<span class="absolute right-5 top-3 text-[5.5rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>`}
+    <div class="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/80 via-black/35 to-transparent"></div>
     <span class="absolute left-4 top-4 rounded-full ${p.chip} px-3 py-1 text-[12px] font-semibold text-white shadow">${escapeHtml(item.segmentTitle)}</span>
     <div class="absolute inset-x-0 bottom-0 p-4">
       <div class="flex items-center gap-1.5 text-[12.5px] text-white/85">
@@ -215,7 +230,9 @@ function listRow(item) {
   return `
   <article data-open="${escapeHtml(item.id)}" class="flex cursor-pointer gap-3 py-3">
     <div class="hero-tex relative h-[4.6rem] w-[4.6rem] shrink-0 overflow-hidden rounded-2xl" style="${heroStyle(item)}">
-      <span class="absolute inset-0 grid place-items-center text-[26px] font-black text-white/25">${escapeHtml((item.publisher || "?").charAt(0))}</span>
+      ${item.image
+        ? imageLayer(item)
+        : `<span class="absolute inset-0 grid place-items-center text-[26px] font-black text-white/25">${escapeHtml((item.publisher || "?").charAt(0))}</span>`}
     </div>
     <div class="min-w-0 flex-1">
       <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(item.segmentTitle)}</p>
@@ -399,8 +416,9 @@ function renderDetail() {
   el.view.innerHTML = `
     <div class="view -mx-5">
       <section class="hero-tex relative h-[19rem]" style="${heroStyle(item)}">
-        <span class="absolute right-6 top-6 text-[9rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>
-        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/75 via-black/30 to-transparent"></div>
+        ${imageLayer(item)}
+        ${item.image ? "" : `<span class="absolute right-6 top-6 text-[9rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>`}
+        <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
 
         <div class="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-[max(1rem,env(safe-area-inset-top))]">
           <button data-back class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="Geri">
@@ -466,7 +484,7 @@ function renderDetail() {
             <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
             Buradan dinle
           </button>
-          <a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer"
+          <a href="${escapeHtml(targetUrl(item))}" target="_blank" rel="noopener noreferrer"
              class="grid h-[3.15rem] w-[3.15rem] shrink-0 place-items-center rounded-full bg-black/5 text-ink-soft transition active:scale-95" aria-label="Kaynağa git">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
               <path d="M14 5h5v5M19 5l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -694,8 +712,8 @@ document.addEventListener("click", (event) => {
   if (event.target.closest("[data-share]")) {
     const item = itemById(state.detailId);
     if (!item) return;
-    if (navigator.share) navigator.share({ title: item.title, url: item.link }).catch(() => {});
-    else navigator.clipboard?.writeText(item.link).catch(() => {});
+    if (navigator.share) navigator.share({ title: item.title, url: targetUrl(item) }).catch(() => {});
+    else navigator.clipboard?.writeText(targetUrl(item)).catch(() => {});
     return;
   }
 

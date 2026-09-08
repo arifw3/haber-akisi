@@ -76,6 +76,10 @@ cezası ağırlıklandırılıyor (`scoring_override`), ayrıca `min_trust` eşi
 Bülteni tek uzun MP3'te birleştirmek yerine **haber başına bir dosya** üretiliyor. Böylece ffmpeg
 bağımlılığı, zaman damgası senkronu ve uzun üretimde kalite kaybı sorunlarının üçü de ortadan kalkıyor.
 
+**Karakter kotası gerçeği:** 30 haber ≈ 4.600 karakter/gün, yani ayda ~138.000. ElevenLabs'in
+Creator planı (100k) bile tamamına yetmiyor. Bu yüzden `tts.limit` ayarı var: yalnızca en yüksek
+skorlu N habere ses üretilir, kalanı arayüzde tarayıcı sesiyle okunur. Varsayılan 3 (≈26k/ay).
+
 ## Bilinçli sınırlar
 
 Google Haberler RSS'inin verdikleri ve vermedikleri araştırmayla doğrulandı:
@@ -94,8 +98,25 @@ Google Haberler bağlantısıdır — tarayıcıda tıklanınca yayıncıya gide
 
 **Seslendirme başlıkla sınırlı.** Gövde metni olmadığı için LLM'e serbest metin yazdırmıyoruz;
 `speech` alanı yalnızca başlık, yayıncı adı ve kaç kaynağın yazdığından oluşuyor. Uydurma riski
-böylece tasarımdan kaldırılmış oluyor. Görsel de üretmiyoruz — kartlar yayıncı favicon'u ve tipografi
-üzerine kurulu.
+böylece tasarımdan kaldırılmış oluyor.
+
+### Görsel ve doğrudan bağlantı: yayıncı feed'inden
+
+Google Haberler görsel de vermiyor, yayıncıya doğrudan link de. Ama yayıncının **adı ve alan adı**
+elimizde (`<source url>`). Yayıncının kendi RSS'i çekilip başlıklar eşleştirilince ikisi de geliyor:
+
+```
+python -m mynews build
+eslestirme: {'aranan': 26, 'eslesen': 11, 'gorselli': 9}
+```
+
+Kapsam kısmidir ve öyle olması normaldir — her yayıncının feed'i yok, bazıları görsel taşımıyor,
+haber feed'den düşmüş olabilir. Eşleşme bulunamayan haber kategori gradientiyle gösterilir.
+Benzerlik eşiği (`image_matching.similarity`, varsayılan 0.5) bilinçli olarak yüksek: **yanlış
+eşleşme, habere ait olmayan bir fotoğraf göstermek demek.** Aynı sebeple stok görsel de kullanılmıyor.
+
+Yayıncı feed listesi `config/settings.json` → `publisher_feeds` altında; yeni yayıncı eklemek
+bir satırlık iş.
 
 ## Yayına alma (GitHub Pages)
 

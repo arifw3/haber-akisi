@@ -6,3 +6,6 @@ __pycache__/
 site/_probe.html
 .venv/
 .DS_Store
+
+.el_key
+site/audio/

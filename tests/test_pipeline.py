@@ -5,12 +5,14 @@ Fixture'lar gercek Google News RSS ciktisindan alinmis yapidadir.
 """
 import sys
 import unittest
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
+from mynews.images import ImageResolver, extract_image, parse_articles
 from mynews.rank import Ranker, normalize, similarity
 
 NOW = datetime.now(timezone.utc)
@@ -180,6 +182,78 @@ class TestSpeech(unittest.TestCase):
         item = make_item("Seçim tartışması büyüyor")
         item.related = [Related(title="Seçimin ucu göründü | Ali Veli Köşe Yazısı", source="X")]
         self.assertEqual(pick_extra(item), "")
+
+
+PUB_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+<item>
+  <title>Ankara'da onemli bir gelisme yasandi</title>
+  <link>https://www.hurriyet.com.tr/gundem/haber-123</link>
+  <media:content url="https://image.hurimg.com/foto.jpg"/>
+</item>
+<item>
+  <title>Bambaska bir konu hakkinda haber</title>
+  <link>https://www.hurriyet.com.tr/gundem/haber-456</link>
+  <enclosure url="https://image.hurimg.com/diger.jpg" type="image/jpeg"/>
+</item>
+</channel></rss>"""
+
+
+class TestImageExtraction(unittest.TestCase):
+    def test_parses_media_content(self):
+        articles = parse_articles(PUB_FEED)
+        self.assertEqual(len(articles), 2)
+        self.assertEqual(articles[0].image, "https://image.hurimg.com/foto.jpg")
+
+    def test_parses_enclosure(self):
+        self.assertEqual(parse_articles(PUB_FEED)[1].image, "https://image.hurimg.com/diger.jpg")
+
+    def test_parses_body_img_tag(self):
+        feed = b"""<rss><channel><item>
+          <title>Baslik</title><link>https://x.com/a</link>
+          <description>&lt;p&gt;&lt;img src="https://x.com/resim.jpg"&gt;metin&lt;/p&gt;</description>
+        </item></channel></rss>"""
+        self.assertEqual(parse_articles(feed)[0].image, "https://x.com/resim.jpg")
+
+    def test_non_image_enclosure_ignored(self):
+        item = ET.fromstring('<item><enclosure url="https://x.com/a.mp3" type="audio/mpeg"/></item>')
+        self.assertEqual(extract_image(item), "")
+
+    def test_recovers_from_malformed_xml(self):
+        # Yayinci feed'lerinde yaygin: BOM ve kacak & isareti
+        broken = "﻿<rss><channel><item><title>A & B</title>"                  "<link>https://x.com/a</link></item></channel></rss>"
+        articles = parse_articles(broken.encode("utf-8"))
+        self.assertEqual(len(articles), 1)
+
+    def test_items_without_link_skipped(self):
+        feed = b"<rss><channel><item><title>Basliksiz link</title></item></channel></rss>"
+        self.assertEqual(parse_articles(feed), [])
+
+
+class TestImageResolver(unittest.TestCase):
+    def setUp(self):
+        self.resolver = ImageResolver({"hurriyet.com.tr": []}, threshold=0.5)
+        self.resolver._cache["hurriyet.com.tr"] = parse_articles(PUB_FEED)
+
+    def test_matches_same_story(self):
+        match = self.resolver.resolve("Ankara'da onemli bir gelisme yasandi", "hurriyet.com.tr")
+        self.assertIsNotNone(match)
+        self.assertEqual(match.image, "https://image.hurimg.com/foto.jpg")
+
+    def test_rejects_unrelated_story(self):
+        # Yanlis eslesme yanlis gorsel demektir; esik altinda kalmali.
+        self.assertIsNone(self.resolver.resolve("Fenerbahce transferi bitirdi", "hurriyet.com.tr"))
+
+    def test_unknown_domain_returns_none(self):
+        self.assertIsNone(self.resolver.resolve("Herhangi bir baslik", "bilinmeyen.com"))
+
+    def test_stats_track_coverage(self):
+        self.resolver.resolve("Ankara'da onemli bir gelisme yasandi", "hurriyet.com.tr")
+        self.resolver.resolve("Alakasiz bir baslik burada", "hurriyet.com.tr")
+        self.assertEqual(self.resolver.stats["aranan"], 2)
+        self.assertEqual(self.resolver.stats["eslesen"], 1)
+        self.assertEqual(self.resolver.stats["gorselli"], 1)
 
 
 if __name__ == "__main__":
