@@ -98,6 +98,31 @@ Azure (`tr-TR-EmelNeural`) Türkçe'de belirgin biçimde daha doğaldır.
 Creator planı (100k) bile tamamına yetmiyor. Bu yüzden `tts.limit` ayarı var: yalnızca en yüksek
 skorlu N habere ses üretilir, kalanı arayüzde tarayıcı sesiyle okunur. Varsayılan 3 (≈26k/ay).
 
+## NotebookLM bağlantısı
+
+NotebookLM, Google Docs kaynaklarını **otomatik senkronluyor** (Mayıs 2026'dan beri); web
+linkleri ve PDF'ler senkronlanmıyor. Bu yüzden bülten her sabah aynı Doc'a yazılıyor —
+notebook güncel içeriği kendiliğinden görüyor.
+
+```bash
+python -m mynews build --sync-doc
+```
+
+Ayrıca tarayıcısız okuyucular için düz sürümler üretiliyor (PWA JavaScript ile çalıştığı için
+crawler'lar ana sayfada içerik göremez):
+
+- `bulten.txt` — düz metin
+- `bulten.html` — JS'siz HTML
+
+**Kurulum** (tek seferlik): Google Cloud'da servis hesabı → Google Docs API'yi etkinleştir →
+JSON anahtarı indir → hedef Doc'u servis hesabının e-postasıyla **Düzenleyen** olarak paylaş.
+Sonra iki secret: `GOOGLE_DOC_ID` (Doc URL'indeki uzun dizge) ve `GOOGLE_SERVICE_ACCOUNT_JSON`
+(anahtar dosyasının tamamı).
+
+`requirements.txt` projenin **tek** pip bağımlılığıdır ve yalnızca bu özellik için gerekir:
+servis hesabı JWT'si RS256 ile imzalanmalı, standart kütüphanede RSA imzalama yok. `--sync-doc`
+kullanılmadığında `mynews/gdocs.py` hiç içe aktarılmaz.
+
 ## Bilinçli sınırlar
 
 Google Haberler RSS'inin verdikleri ve vermedikleri araştırmayla doğrulandı:

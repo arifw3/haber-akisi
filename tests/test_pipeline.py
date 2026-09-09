@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.digest import render_html, render_text, tr_upper
+from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
 from mynews.images import ImageResolver, extract_image, parse_articles
 from mynews.rank import Ranker, normalize, similarity
 from mynews.speech import intro_for, normalize as speech_normalize
@@ -349,6 +350,35 @@ class TestDigest(unittest.TestCase):
     def test_html_needs_no_javascript(self):
         # NotebookLM ve tarayicisiz okuyucular JS calistirmaz
         self.assertNotIn("<script", render_html(BULLETIN))
+
+
+class TestDocSync(unittest.TestCase):
+    def test_missing_doc_id_raises(self):
+        with self.assertRaises(DocSyncError):
+            from mynews.gdocs import sync_document
+
+            sync_document("metin", document_id="", credentials_json="{}")
+
+    def test_invalid_credentials_json_raises(self):
+        from mynews.gdocs import sync_document
+
+        with self.assertRaises(DocSyncError):
+            sync_document("metin", document_id="abc", credentials_json="{bozuk")
+
+    def test_end_index_of_empty_document(self):
+        # Bos belgede silinemeyen tek satir sonu vardir
+        self.assertEqual(_document_end_index({"body": {"content": [{"endIndex": 2}]}}), 2)
+
+    def test_end_index_takes_maximum(self):
+        doc = {"body": {"content": [{"endIndex": 2}, {"endIndex": 480}, {"endIndex": 91}]}}
+        self.assertEqual(_document_end_index(doc), 480)
+
+    def test_service_account_email_extracted(self):
+        raw = json.dumps({"client_email": "bot@proje.iam.gserviceaccount.com"})
+        self.assertEqual(service_account_email(raw), "bot@proje.iam.gserviceaccount.com")
+
+    def test_service_account_email_handles_garbage(self):
+        self.assertEqual(service_account_email("bozuk"), "")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,4 @@
+# Yalnizca --sync-doc (Google Docs / NotebookLM senkronu) icin gerekli.
+# Bunun disinda proje standart kutuphaneyle calisir.
+google-auth>=2.28
+requests>=2.31

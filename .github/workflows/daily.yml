@@ -30,6 +30,9 @@ jobs:
       - name: Feed sağlığını kontrol et
         run: python -m mynews health
 
+      - name: Bağımlılıkları kur
+        run: pip install -q -r requirements.txt
+
       - name: Ses önbelleğini geri yükle
         uses: actions/cache@v4
         with:
@@ -42,7 +45,9 @@ jobs:
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m mynews build --with-audio
+          GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: python -m mynews build --with-audio --sync-doc
 
       - name: Testleri çalıştır
         run: python -m unittest discover -s tests -v

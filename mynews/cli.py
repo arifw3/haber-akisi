@@ -76,6 +76,20 @@ def cmd_build(args: argparse.Namespace) -> int:
             print(f"{engine} ile {count} ses dosyasi uretildi.")
 
     paths = write(bulletin) + write_digest(bulletin)
+
+    if args.sync_doc:
+        from .digest import render_text
+        from .gdocs import DocSyncError, service_account_email, sync_document
+
+        try:
+            written = sync_document(render_text(bulletin))
+            print(f"Google Doc guncellendi ({written} karakter).")
+        except DocSyncError as exc:
+            print(f"Doc senkronu basarisiz: {exc}")
+            email = service_account_email()
+            if email:
+                print(f"  servis hesabi: {email}")
+
     for seg in bulletin["segments"]:
         print(f"{seg['title']:<20} {len(seg['items']):>2} haber")
     problems = [h for h in bulletin["health"] if h["status"] != "ok"]
@@ -100,7 +114,12 @@ def main(argv: list[str] | None = None) -> int:
     p_build.add_argument(
         "--with-audio",
         action="store_true",
-        help="ELEVENLABS_API_KEY / GEMINI_API_KEY varsa haber basina ses uret",
+        help="ses anahtari tanimliysa haber basina ses uret",
+    )
+    p_build.add_argument(
+        "--sync-doc",
+        action="store_true",
+        help="bulteni GOOGLE_DOC_ID ile belirtilen Google Doc'a yaz (NotebookLM icin)",
     )
     p_build.set_defaults(fn=cmd_build)
 
