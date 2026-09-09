@@ -300,6 +300,45 @@ function renderTopbar() {
 
 /* ---------------------------------------------------------------- ekranlar */
 
+/* Podcast replikleri oynatıcının beklediği biçime çevrilir: aynı kuyruk
+ * mantığı hem haber bülteni hem podcast için kullanılıyor. */
+function podcastQueue() {
+  const episode = state.bulletin && state.bulletin.podcast;
+  if (!episode || !episode.turns || !episode.turns.length) return [];
+  return episode.turns.map((turn, i) => ({
+    id: `podcast-${i}`,
+    title: turn.text,
+    publisher: turn.speaker,
+    speech: turn.text,
+    audio: turn.audio,
+    segment: "podcast",
+    segmentTitle: "Günün bülteni",
+    source_count: 0,
+    related: [],
+    link: "",
+  }));
+}
+
+function podcastCard() {
+  const turns = podcastQueue();
+  if (!turns.length) return "";
+  const dakika = Math.max(1, Math.round(turns.reduce((n, t) => n + t.title.split(" ").length, 0) / 150));
+  return `
+  <button data-podcast class="hero-tex relative mb-5 w-full overflow-hidden rounded-xl2 p-5 text-left shadow-hero"
+    style="background-image:linear-gradient(115deg,#6d1440,#d81b60 60%,#f4728c)">
+    <div class="relative flex items-center gap-4">
+      <span class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 backdrop-blur">
+        <svg class="h-6 w-6 translate-x-[1px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
+      </span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-[12px] font-semibold uppercase tracking-wide text-white/70">Sesli bülten</span>
+        <span class="block text-[17px] font-bold leading-tight text-white">Günün bülteni</span>
+        <span class="block text-[13px] text-white/75">${turns.length} bölüm · ~${dakika} dakika · Ayşe &amp; Mert</span>
+      </span>
+    </div>
+  </button>`;
+}
+
 function renderHome() {
   const ordered = interleaved();
   const featured = ordered.slice(0, 6);
@@ -307,6 +346,7 @@ function renderHome() {
 
   el.view.innerHTML = `
     <div class="view">
+      ${podcastCard()}
       ${sectionHeader("Öne çıkanlar", { label: "Tümü", view: "discover" })}
       <div id="carousel" class="no-scrollbar snap-x-mandatory -mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-2">
         ${featured.map(heroCard).join("")}
@@ -577,7 +617,7 @@ function playCurrent() {
   updateMini();
 
   // Detay ekranındaysak dinlenen haber kendiliğinden öne gelsin.
-  if (state.view === "detail" && state.detailId !== item.id) {
+  if (state.view === "detail" && item.segment !== "podcast" && state.detailId !== item.id) {
     state.detailId = item.id;
     renderDetail();
   }
@@ -660,7 +700,8 @@ function updateMini() {
   if (!item) return;
 
   el.miniTitle.textContent = item.title;
-  el.miniSub.textContent = `${item.publisher} · ${state.index + 1}/${state.queue.length}`;
+  const etiket = item.segment === "podcast" ? `${item.publisher} konuşuyor` : item.publisher;
+  el.miniSub.textContent = `${etiket} · ${state.index + 1}/${state.queue.length}`;
   el.miniPlay.classList.toggle("hidden", state.playing);
   el.miniPause.classList.toggle("hidden", !state.playing);
   el.miniEq.style.visibility = state.playing ? "visible" : "hidden";
@@ -722,6 +763,12 @@ document.addEventListener("click", (event) => {
     if (!item) return;
     const queue = allItems();
     return startListening(queue, queue.findIndex((i) => i.id === item.id));
+  }
+
+  if (event.target.closest("[data-podcast]")) {
+    const queue = podcastQueue();
+    if (queue.length) return startListening(queue);
+    return;
   }
 
   if (event.target.closest("#btn-refresh")) return refresh();

@@ -75,8 +75,6 @@ def cmd_build(args: argparse.Namespace) -> int:
             count = synthesize_bulletin(bulletin, site, tts_cfg)
             print(f"{engine} ile {count} ses dosyasi uretildi.")
 
-    paths = write(bulletin) + write_digest(bulletin)
-
     if args.podcast:
         from pathlib import Path
 
@@ -99,6 +97,8 @@ def cmd_build(args: argparse.Namespace) -> int:
             print(f"Podcast: {len(segments)} replik seslendirildi.")
         except ScriptError as exc:
             print(f"Podcast uretilemedi: {exc}")
+
+    paths = write(bulletin) + write_digest(bulletin)
 
     if args.sync_doc:
         from .digest import render_text

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-09T00:51:29.256528+00:00",
+  "generated_at": "2026-09-09T01:02:46.380772+00:00",
   "segments": [
     {
       "key": "turkiye",
@@ -13,13 +13,13 @@
           "domain": "hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
           "published": "2026-09-08T17:30:46+00:00",
-          "age_hours": 7.3,
+          "age_hours": 7.5,
           "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPQ3huYzFEd19JLTJtbEpENXhtQ1ZPRnJ1dGFaS1ZtZkl1amZJb0h0Z1JyRmxlTXM3RXNPblpKMEhUaG0xLXBhcEFab1hNcWdEeHNXQWFLYmJRRXZ5N3lESTlJTUlfSWpuZFVuRWhNcXJidnBJODFxS1hyRGNfTHBFMy0weHZtdFVzby0wR1VveWcwcklpQVBFYmkyZ3VPZ2ZkWDlFTHgzeDNSVnBaMEE?oc=5",
           "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa04644c5716b6d6b1301b0.jpg",
           "source_url": "https://www.hurriyet.com.tr/gundem/cay-bahcesinin-erkekler-tuvaletinde-gizli-kamera-duzenegi-bulundu-43300581",
           "summary": "Manisa'nın Şehzadeler ilçesindeki bir çay bahçesinin erkekler tuvaletinde, uzaktan canlı izleme özelliğine sahip gizli kamera düzeneği bulundu. Polis, düzeneği yerleştiren şüpheli ya da şüphelilerin tespit edip yakalamak için çalışma başlattı.",
           "source_count": 5,
-          "score": 3.863,
+          "score": 3.859,
           "speech": "Hürriyet. Çay bahçesinin erkekler tuvaletinde gizli kamera düzeneği bulundu. Bir gizli kamera skandalı daha. Bu defa yer Manisa. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -38,7 +38,8 @@
               "title": "Çay bahçesinin tuvaletinde gizli kamera düzeneği bulundu",
               "source": "Halk TV"
             }
-          ]
+          ],
+          "audio": "audio/cache/3a9df8da0c39a61280c2.mp3"
         },
         {
           "id": "turkiye-1",
@@ -47,13 +48,13 @@
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T19:05:00+00:00",
-          "age_hours": 5.8,
+          "age_hours": 6.0,
           "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQdHlad0FtT0lOcjZhaHFfcXdRSEc2SXJ6ZzlFZ0dCbW9zR1ZUOVhQUVJHYmNvbjNsX0hhX0dsYk5xNDlmTEtyNG9oVnV1WGgwSm0xdXZpc3lTOVlxdWhWOV9JaldramQwS1JNR3lrRlNmR1oxekpiMExrWDdHR191TlAwdWZPUnZ4WjIyaXpNRkhyMkFLOWFMSFVvWDgzNzlMQ2lXR2hGN2p3VWhRbFlTUWdIdkdVNUJzdmlqNnJ1U3RpVkxYb2Q0QlpjN25TcEJobzZINFFGdTJmcWdTSDBLSnpZNkZhbUU?oc=5",
           "image": "https://media.cumhuriyet.com.tr/Archive/5a155e02-9b26-46b6-9233-baaebd42a411.jpg",
           "source_url": "https://www.cumhuriyet.com.tr/turkiye/eski-masak-baskani-ndan-gokcek-uyarisi-tutarlar-cok-buyuk-iddialar-cok-ciddi-mal-varliklarina-el-konulmali-2535987",
           "summary": "Eski MASAK Başkanı Ramazan Başak, Gökçek ailesine yönelik “kayıt dışı para aktarımı” soruşturmasında yer alan iddiaların ve para hareketlerinin ciddi olduğunu belirterek, şüphelilerin mal varlıklarına acilen el konulması gerektiğini savundu.",
           "source_count": 5,
-          "score": 3.839,
+          "score": 3.836,
           "speech": "Cumhuriyet. Eski MASAK Başkanı’ndan Gökçek uyarısı, ‘Tutarlar çok büyük, iddialar çok ciddi, mal varlıklarına el konulmalı. Melih Gökçek Soruşturmasında Yeni Gelişme, Ahmet Gökçek ve Hülya Gökçek'e Yurt Dışı Yasağı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -72,7 +73,8 @@
               "title": "Melih Gökçek Soruşturmasında Yeni Gelişme: Ahmet Gökçek ve Hülya Gökçek'e Yurt Dışı Yasağı",
               "source": "onedio.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/c94eb4b9e4761b115c8e.mp3"
         },
         {
           "id": "turkiye-2",
@@ -81,13 +83,13 @@
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T18:47:00+00:00",
-          "age_hours": 6.1,
+          "age_hours": 6.3,
           "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxON3ZoQTdZWFl5VG82Q2dWbXA0LXBjTUgxVTFIemVuSFVlS2ZyUjVNT2J0aVppZjFoYXVaNlpHRHVqcmpQSW9oYXZXZEoxRVBWWVpkeFNlQ2RhOGcyWS00M2kzTDVqVFVQc2lZU29WbDdEZ2p5aVQyX1FtWENLdUlXY0c3X2pvNW8wVnFGcmlOYjQ3ZzN4Nnp3cnJROVF6Y080TlZST1RDdWEwVjh0VUJKam5mRDFKMnp4aERlQzln?oc=5",
           "image": "https://media.cumhuriyet.com.tr/Archive/5f11a507-2e32-4d41-9c6b-c199a3fd7dd8.jpg",
           "source_url": "https://www.cumhuriyet.com.tr/siyaset/ekrem-imamoglu-ndan-sert-uskudar-tepkisi-secimlerin-bir-anlami-kalmadiginda-2535981",
           "summary": "Tutuklu cumhurbaşkanı adayı ve seçilmiş İBB Başkanı Ekrem İmamoğlu, sosyal medya hesabından Üsküdar seçimlerinde yaşananlara tepki gösterdi. İmamoğlu \"Türkiye’de seçimlerin bir anlamı kalmadığında rahat edeceğinizi mi zannediyorsunuz?\" ifadelerini kullandı.",
           "source_count": 5,
-          "score": 3.834,
+          "score": 3.831,
           "speech": "Cumhuriyet. Ekrem İmamoğlu'ndan sert Üsküdar tepkisi, Seçimlerin bir anlamı kalmadığında. İmamoğlu'nun Üsküdar mesajı, Millet kendinin olanı elbet geri alacaktır. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -106,7 +108,8 @@
               "title": "İmamoğlu'ndan Üsküdar'daki seçime tepki: Belediye başkanını ve meclis üyelerini tutuklayarak seçim kazanma zaferi AK Parti’ye nasip oldu",
               "source": "T24"
             }
-          ]
+          ],
+          "audio": "audio/cache/e1712435912dd1c276df.mp3"
         },
         {
           "id": "turkiye-3",
@@ -115,13 +118,13 @@
           "domain": "hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
           "published": "2026-09-08T15:19:00+00:00",
-          "age_hours": 9.5,
+          "age_hours": 9.7,
           "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNYjVFcEgxM2l0QTVPS0pWWGtwTW0zUzZBOHRRUGM2dUFHRU04d20xZVBVdnpYa1c3dTRsRzFLSlN2TXVUYkhFclhoX2tRbDRFM0oxWV8zd2lZdk0wSEhVSTBmdDhiLWd3R2pXMVozN0JrcjViSkJOMS1PaU9Hc051aUdwanN6QU5uUjFrRUJ3T0lxSmFuR2dodGd6TlRhRXlKUlJMWXRTR1Y4VnRISEwxbHVLMlN0SlhYc0QyYkxvdzBXc3NKMno0?oc=5",
           "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa021b98e1e443939c89bf8.jpg",
           "source_url": "https://www.hurriyet.com.tr/dunya/atinanin-hesaplari-carsiya-uymadi-ipler-israilin-elinde-mi-coktan-yenilmis-durumdayiz-43300432",
           "summary": "Yunanistan'ın İsrail ile imzaladığı yaklaşık 3 milyar avroluk \"Aşil Kalkanı\" anlaşması, kaynak kodu tartışmasıyla Atina'nın gündemine oturdu. İsrailli yetkilinin Yunanistan'ın kaynak koduna erişemeyeceğini açıklaması, hükümetin daha önceki söylemleriyle çelişki tartışmasını beraberinde getirdi. Yunan basını ise yaşanan gelişmeyi \"Çoktan yenilmiş durumdayız\" başlığıyla gündeme taşıdı.",
           "source_count": 5,
-          "score": 3.826,
+          "score": 3.823,
           "speech": "Hürriyet. Atina'nın hesapları çarşıya uymadı, İpler İsrail'in elinde mi? Çoktan yenilmiş durumdayız. Düşmanın düşmanı komşunun faturası. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -140,7 +143,8 @@
               "title": "Yunanistan Başbakanı Miçotakis'ten Türkiye'nin F-35 ve Mekke Anlaşması hamlelerine ilişkin mesajlar",
               "source": "Euronews.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/ec8b25c8c1a30f1f6aaf.mp3"
         },
         {
           "id": "turkiye-4",
@@ -149,13 +153,13 @@
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T18:08:00+00:00",
-          "age_hours": 6.7,
+          "age_hours": 6.9,
           "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPOUVEOVUzWWk1a1kySFlvYndVY2wyMk5Oa3BBeEhPRWtPRXNxd1dzR3VucUVkZFI3TUhVVVgwbEgyVFJtcXIyVm9uUlFzZDFQcVF6V0FmTlVUU2owcFp3UEVNRHNaVnI0VlVmbWtHT180dFE1M0Y0b3NGNmdmT1duV3RNOGJRU1lCY0lGWEVDVDNhRlRNRERDSElCNlZVbEVBcG5EQ1FkOUFSZGxzc1VjcDN0d3RHRjluNFBwcVNPVS1VaDYwX3ZiLXRNdmxVNXVLMWthdkptX2hwOEV0MERhZE9QeFkxclg1YkJKcU1OTW9vd3dCcXlJMjRYelBEeGJQNVZmMmRpZXl0UHpFYW1YdjNOYVY?oc=5",
           "image": "https://media.cumhuriyet.com.tr/Archive/4269cac8-c8f2-4e80-972d-662eaf92c079.jpg",
           "source_url": "https://www.cumhuriyet.com.tr/turkiye/korkunc-olayda-ayrintilar-ortaya-cikti-komsusunun-bogazini-kesip-altinlarini-calmisti-bilezikleri-kolundan-nasil-kesecegini-kuyumcuya-sormus-2535967",
           "summary": "Kocaeli’de 63 yaşındaki Gülbiter Duman’ı boğazından bıçaklayarak öldüren, bileziklerini ise keserek aldığı iddia edilen sanık ilk kez hakim karşısına çıktı. Suçlamaları kabul etmeyen sanık, olay günü binaya hoşlandığı kadını görmek için gittiğini, bileziklerin eşine ait olduğunu ve yaklaşık 4 milyon lira borcu bulunduğunu savundu. Kuyumcu ise sanığın bileziklerin nasıl kesileceğini kendisine sorduğunu anlattı.",
           "source_count": 5,
-          "score": 3.823,
+          "score": 3.82,
           "speech": "Cumhuriyet. Korkunç olayda ayrıntılar ortaya çıktı. Komşusunun boğazını kesip altınlarını çalmıştı, Bilezikleri kolundan nasıl keseceğini kuyumcuya sormuş. Mobile-Video Haber Detay. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -174,7 +178,8 @@
               "title": "Gülbiter Duman davasında bilezik detayı gündem oldu",
               "source": "Manşet Haber"
             }
-          ]
+          ],
+          "audio": "audio/cache/ea0a708ecc27179df81e.mp3"
         },
         {
           "id": "turkiye-5",
@@ -183,13 +188,13 @@
           "domain": "hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
           "published": "2026-09-08T13:52:04+00:00",
-          "age_hours": 11.0,
+          "age_hours": 11.2,
           "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQYkhBLV81QXpsRmJhUm53UFAwQ29UeFgxRnRxS0JHZjhtNFNmbVZVYkFnd0NoQXUweTFlTkd5OUZjVFprLVFaZzdCX2JzaEhZbjdnRHliZlBETXFNTkE5TktaUk1zY1Nsc1ZuSGNPWkQ3UFcyUDhBVlprQi0tS3BKOWRZWUFlZGYtR004bnFzanJPY0xtLVJWcTYtODRIelkxZnBrckkxSVE4ZFlvX2V3NjJjazlUMUVUTXYxT3ozbDYtQlVFdEpNRUQ0aVo2elp6N0pYS2pPaw?oc=5",
           "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa008b93c2ee1c0fb72f4e6.jpg",
           "source_url": "https://www.hurriyet.com.tr/gundem/camide-yardim-parasi-kavgasi-cuma-paralarinin-kaydini-isteyen-muezzine-imam-yumruklarla-saldirdi-43300308",
           "summary": "Küçükçekmece Hz. Ebubekir Camii'nde toplanan cuma yardımlarının usulüne uygun kaydedilmediğini ve müftülük kayıtlarıyla uyuşmadığını öne sürerek şikayette bulunan müezzin Ferdi Bıyıkoğlu (42), cami imamı İsmail A.'nın (52) yumruklu saldırısına uğradı. Güvenlik kamerasına yansıyan olayın ardından konuşan müezzinin eşi Ebru Bıyıkoğlu, \"Eşim 'Her şey usulüne göre panoya asılacak' deyince imam 'Bizim düzenimizi bozamazsın' diyerek yumrukladı; aynı gün karakolun önünde de 5 kişi eşimi yerlerde sürükledi\" dedi.",
           "source_count": 5,
-          "score": 3.802,
+          "score": 3.799,
           "speech": "Hürriyet. Camide yardım parası kavgası, Cuma paralarının kaydını isteyen müezzine imam yumruklarla saldırdı. İmam ve müezzin cami avlusunda yumruk yumruğa birbirine girdi. Bizim kurduğumuz düzeni bozamazsın. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -208,7 +213,8 @@
               "title": "İmam ve müezzin cami avlusunda yumruk yumruğa birbirine girdi! “Bizim kurduğumuz düzeni bozamazsın”",
               "source": "Halk TV"
             }
-          ]
+          ],
+          "audio": "audio/cache/3bba952c72b8a2f4c3c7.mp3"
         },
         {
           "id": "turkiye-6",
@@ -217,13 +223,13 @@
           "domain": "bloomberght.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
           "published": "2026-09-08T06:53:58+00:00",
-          "age_hours": 18.0,
+          "age_hours": 18.1,
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBsVmJUN0llbGx6aGNuWmg0WnYwX3NkQjNic1FBNVB6Z0RybWNyaGNXc05ZbGhPS0RYOFc1eUQ1TGdpa2h6OVJHREhWQ1VFYl82RkNOZjlLbVdrZmV2bHhrVHlCUU9WRzBjdGJOUmg3MkFhbmZvZ1cyd3JGcEo?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.736,
+          "score": 3.733,
           "speech": "Bloomberg Ha Te. Tarımsal üretim destekleri artırıldı. Bakan Yumaklı, Üreten Türkiye’nin gücüne güç katacak, çiftçilerimizi her şartta desteklemeye devam edeceğiz. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -242,7 +248,8 @@
               "title": "Hayvancılık desteklerinde yeni düzenleme: Destek tutarları artırıldı",
               "source": "birgun.net"
             }
-          ]
+          ],
+          "audio": "audio/cache/6131b4b2a409ebe7d8f5.mp3"
         },
         {
           "id": "turkiye-7",
@@ -251,13 +258,13 @@
           "domain": "milliyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=milliyet.com.tr&sz=128",
           "published": "2026-09-08T09:10:00+00:00",
-          "age_hours": 15.7,
+          "age_hours": 15.9,
           "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQNjNqMHliTWFjN3BXanlKbllRSC01emZuYUh4ZzhYdWxEMTVSaDRCMFd3RENFQklOdUVLaC1QT3RybzltX29ubHZyVFdUQUVaQlI2YVZfQk90d3hxY1lFNERNNFRTbGl4eGhhcnRGS0Q3d3dPLUwtYWNmM1ZrTjQySEZ0cExaMzY1UnBEQjFfZk5LRjZZT01Ea1NjbExSSTJmbkwwdEpQQVNxdkwweWhn?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.673,
+          "score": 3.67,
           "speech": "Milliyet. 3 yaşındaki Elif Mavi'nin öldüğü kazada otomobil sürücüsü tutuklandı. Minik Elif'in hayatını kaybettiği kazaya karışan sürücü tutuklandı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -276,7 +283,8 @@
               "title": "Eskişehir'de 3 yaşındaki çocuğun öldüğü kazada AKP'li yöneticinin eşi tutuklandı",
               "source": "Evrensel.net"
             }
-          ]
+          ],
+          "audio": "audio/cache/4617b323f6c8274cf19c.mp3"
         },
         {
           "id": "turkiye-8",
@@ -285,13 +293,13 @@
           "domain": "sabah.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=sabah.com.tr&sz=128",
           "published": "2026-09-08T11:57:58+00:00",
-          "age_hours": 12.9,
+          "age_hours": 13.1,
           "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPMzVlcUw0UzRfZkZ0NTFmX0FSWThTX0YzTUFmNFFNNUVTWjJIS2Zad0IzU2tmLXNiSXNvR3IzWUVSMEQ4QTM4T09iSzBtenNaWE1waXczTHdpUl9ISDRSZ1hDcHM2TTRQQldBTFBZWVR5QUZhaDRIMnFMNVpEN3M0QXB5M2VhZUZJdV9vS0NINDZjTWNlWGZVVjN1WnVlVDdEOWJybldEU25PSUZ6V3JfTkZNZEdlaWprRnFMVEZuZk9UUnJ6dktFTE9PNDUwS05kdzl1UUk3R2hfT29KcHo1YVRSdUIzNTdod0xPa0x5Y0hNdw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.67,
+          "score": 3.667,
           "speech": "Sabah. SON ANKET SONUÇLARI, Partilerin oy oranları ne kadar? İşte AK Parti, Me He Pe, Ce He Pe, Yeni Parti ve diğer partilerin oy oranları. Makas açılıyor. Son seçim anketinde büyük sürpriz. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -310,7 +318,8 @@
               "title": "Son seçim anketinde çarpıcı tablo!",
               "source": "Haber 7"
             }
-          ]
+          ],
+          "audio": "audio/cache/38099638fccd5dd25208.mp3"
         },
         {
           "id": "turkiye-9",
@@ -319,13 +328,13 @@
           "domain": "t24.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
           "published": "2026-09-08T08:19:00+00:00",
-          "age_hours": 16.5,
+          "age_hours": 16.7,
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxONDFQNjBOTmlkVzBJQ3ZJSGNocHBoYTlGSmY5UWFweVlOaU1BaFZKOXZtRXpZdVNBSVZLRHR6bkNUYkJxY3NUb0dIQWpPblE5NDc4dUZCNVZUM3g0dU5EeUswNEcwS0k2eFJ1dkNfSlR4ckw2QnlkbU9pYnNvMDFremFWSGF1UXZtSzZadFB3T21FbHg4ZFZPVVUxU0lUUWdFeXVOc3IzXzdiVHVfcTZrMHV4U0tiR0xEUlVUMjliVQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.659,
+          "score": 3.656,
           "speech": "Te yirmi dört. Atlas Çağlayan cinayeti davasında karar, Tutuklu sanık Efe Ç.ye 18 yıl 10 ay hapis cezası. İstanbul’un Güngören ilçesinde bıçaklanan 17 yaşındaki Atlas Çağlayan’ın ölümüne ilişkin davada mahkeme, adli süreçteki çocuk E.Ç.nin çocuğa karşı kasten öldürme, 6136 sayılı yasaya muhalefet etme ile zincirleme şekilde silahla tehdit İhlas Haber Ajan. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -344,7 +353,8 @@
               "title": "SON DAKİKA HABERLERİ: Atlas Çağlayan cinayeti davasında karar",
               "source": "Milliyet"
             }
-          ]
+          ],
+          "audio": "audio/cache/e1dbd58f84d28041450d.mp3"
         }
       ]
     },
@@ -359,15 +369,16 @@
           "domain": "aa.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=aa.com.tr&sz=128",
           "published": "2026-09-08T15:02:54+00:00",
-          "age_hours": 9.8,
+          "age_hours": 10.0,
           "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQZkZJVERibFlqRHZHZnZsa0h0VU9nczJWd0dkam0xOGtNdnpmQ3ppWkxlWnFZa1dxWVlkNzFkWVRZOUZWcmJFVThZUzQwX3ZGTjBLOF9vaVFFM0xpcW1xa2hvQm1sVGlRVUx1SV9Vdkh5ZmlMVlZkZW5nMWFoRXp5ZGNYNG1CcVZLMFJNQ3VETGxVLTREXzVHNkpnTjZSSlUxa3BhQ01WNzRtT0FuaUotdTFiNFJJM2E2S3BHNWgzQUVFczl1Y0dIelFKNk14QThUbXdWS2tibHJhYUxF?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 3.237,
+          "score": 3.233,
           "speech": "Anadolu Ajansı. Bakan Tekin, Türkiye, PISA 2025'te fen bilimleri, okuma becerileri ve matematikte puanını artıran tek O E Ce De üyesi.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/ed41e171a2fe714d11bc.mp3"
         },
         {
           "id": "bilim-teknoloji-1",
@@ -376,15 +387,16 @@
           "domain": "bloomberght.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
           "published": "2026-09-08T13:40:28+00:00",
-          "age_hours": 11.2,
+          "age_hours": 11.4,
           "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVzQzMlpIeXBZeV9NLUFoMk9OU0ktdHE2TnFDMkgtZ0sxeFk5QmVhUldYUEs5NE1RcGNjMGFpaEVldWtQUmhEOXV1V0ZLeDJPQjlybXVJcjQyZ3p6Yld5TTJvdWJHX0dxSzdNVUpIeU9NR1p4ZnVCNkZxRV9vOVVVazlfdWt2ZGJldGNBTGlhMjhPVnQ4OWxLX1F1T0VHblZTbWw0TkliUkM?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.944,
+          "score": 2.94,
           "speech": "Bloomberg Ha Te. Daron Acemoğlu'ndan uyarı, Yapay zekâ liberal demokrasiyi tehdit ediyor.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/c8152b4b47cf7c054889.mp3"
         },
         {
           "id": "bilim-teknoloji-2",
@@ -393,134 +405,142 @@
           "domain": "bloomberght.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
           "published": "2026-09-08T13:01:35+00:00",
-          "age_hours": 11.8,
+          "age_hours": 12.0,
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcHlIMTdoZl9hV3hCX3lVZEdhcnQ1ZEJlV1JGY3dBX2RaQjltMzRldVhxMUNOUDZiQVQ5NkhINVpsdDREaTkxUXI4Qm1vdzNXbzN4Y05RdHJGRklPX25BN0gyanRLTWgzWmFsU3p4TG1LYmViWEEzbUFVdTV1bUpER0YxME5OWFdBNkI1UU5JdmdGSnE5NVBRR0Zn?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.933,
+          "score": 2.93,
           "speech": "Bloomberg Ha Te. PISA, Yapay zeka kullanan öğrenciler daha düşük puan alıyor.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/46e4c3e85b52b3ecb4e9.mp3"
         },
         {
           "id": "bilim-teknoloji-3",
-          "title": "Meyve sineğinin beyni ve sinir sistemi ilk kez haritalandı: Yapılan ilk iş ise şaşırttı",
-          "publisher": "DonanımHaber",
-          "domain": "donanimhaber.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
-          "published": "2026-09-08T15:50:00+00:00",
-          "age_hours": 9.0,
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOaEdtU3JSb0piYWlXVWtRamJ2dTFjUnlJd1pvMFNBZjYwRkhGRFdsakZhWnphMWZZOGR1WTY3S1RYemlIYTZRd1RycTlGWk5keDFMdWpnTDVMX0JrSHBCR250NUVGSDJzRmJmNjhyc0pkMUxuQzNaZVgwNjNYYzZsMWFiNTRzRXpTYm1qVjlsdFlxeTM2V0FTejduQQ?oc=5",
-          "image": "https://www.donanimhaber.com/images/images/haber/210233/1200x675meyve-sineginin-beyni-ve-sinir-sistemi-ilk-kez-haritalandi.jpg",
-          "source_url": "https://www.donanimhaber.com/meyve-sineginin-beyni-ve-sinir-sistemi-ilk-kez-haritalandi--210233",
-          "summary": "Meyve sineğinin beyni ilk kez eksiksiz şekilde haritalandı. 166 binden fazla nöronun bağlantıları çıkarılır çıkarılmaz araştırmacılar, bu yapıyı Doom oynatmak için kullanmaya başladı.",
-          "source_count": 1,
-          "score": 2.89,
-          "speech": "DonanımHaber. Meyve sineğinin beyni ve sinir sistemi ilk kez haritalandı, Yapılan ilk iş ise şaşırttı.",
-          "related": []
-        },
-        {
-          "id": "bilim-teknoloji-4",
-          "title": "Turkcell One’a Disney+ da eklendi: 7 platform tek üyelikte",
-          "publisher": "DonanımHaber",
-          "domain": "donanimhaber.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
-          "published": "2026-09-08T14:44:00+00:00",
-          "age_hours": 10.1,
-          "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOQU4xcU41QWtFMTZlOTRLcFF2dS1CN3N5T0c1TGtzakJSSnhQV19ON2ZTd19NR2U3Mm8wcEhNTUFOcjZtNU00TTk5Y3RZUkdZN0tKZ0w3alhmTmwzalJ3R25YYzZ3YWt2c0N2a2ozc3dqdTZHd2phTGdrSGRSVE5IeVNmX3pkcXluYlRJb002N3R4aFd1LXFWbQ?oc=5",
-          "image": "https://www.donanimhaber.com/images/images/haber/210237/1200x675turkcell-one-a-disney-da-eklendi-7-platform-tek-uyelikte.jpg",
-          "source_url": "https://www.donanimhaber.com/turkcell-one-a-disney-da-eklendi-7-platform-tek-uyelikte--210237",
-          "summary": "Turkcell One’ın dijital platform kütüphanesine Disney+ da eklendi. Kullanıcılar Netflix, HBO Max, Amazon Prime ve YouTube Premium dahil 7 platforma tek üyelikle erişebiliyor.",
-          "source_count": 1,
-          "score": 2.871,
-          "speech": "DonanımHaber. Turkcell One’a Disney+ da eklendi, 7 platform tek üyelikte.",
-          "related": []
-        },
-        {
-          "id": "bilim-teknoloji-5",
           "title": "OKB ve Tourette sendromu genetik mi? Bilim insanlarından otizm ve şizofreni bağlantılı dev araştırma",
           "publisher": "Cumhuriyet",
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T14:06:00+00:00",
-          "age_hours": 10.8,
+          "age_hours": 10.9,
           "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNak1xVjFXMWhCQ0gwSTVDTnBpS0xEcHlFOHhOYkI0Q3gweFpBb3ZWZUdvNXpmZ2hPQVZCTDl6d2x3MmVVcEZheDc1WjhwbWlEVklSVFdHUHlRWWFtZzNSQks1cHllZDdBcDlLTVpvdkY2U05kc0RVandRcWJRZ2VsTzZJT0M5S1BjS1dMYWQ5aWN2bHQtNU1aSzZfcnRSN204LVQzakx3YzhIWWZ4Wi1aWDZlMHJ4TkZWa3lCcFQ1c1NDdFdZLXpQWU04OXNCdHVLSnBoRXRlUmcxYWs?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.771,
+          "score": 2.768,
           "speech": "Cumhuriyet. OKB ve Tourette sendromu genetik mi? Bilim insanlarından otizm ve şizofreni bağlantılı dev araştırma.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/0ad382865fd087c8a144.mp3"
         },
         {
-          "id": "bilim-teknoloji-6",
+          "id": "bilim-teknoloji-4",
           "title": "Bilim yanıtladı: Kendisiyle dalga geçebilenlerin gizli gücü",
           "publisher": "Cumhuriyet",
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T13:59:00+00:00",
-          "age_hours": 10.9,
+          "age_hours": 11.1,
           "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOQnFlTFhoTWo4TGg2RUZCNWZyYmU0NUI0NC1KOWo3ZThkcW5HZmhLUHdsUVp6akNQYi14RlhmRmdIcnV6LUZiektYMHI0UVBLRGh5dVBzb0g5T09YaXNVanlCSlRvZGZGbk9OaVI5dFFVY21tdVFicVo3LVhoYWh0TUxYazNlZ2drdlAyZEFOWHdUNWNzYW8xV0hla0h5bTFQcDVMeg?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.769,
+          "score": 2.766,
           "speech": "Cumhuriyet. Bilim yanıtladı, Kendisiyle dalga geçebilenlerin gizli gücü.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/51e9c67e5df9ad5c5f2c.mp3"
         },
         {
-          "id": "bilim-teknoloji-7",
-          "title": "Avrupa’dan tarihi başarı: İlk ticari yörünge roketi uzaya ulaştı",
-          "publisher": "DonanımHaber",
-          "domain": "donanimhaber.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
-          "published": "2026-09-08T07:00:00+00:00",
-          "age_hours": 17.9,
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcE9RYUxKWWlCMGtqTlFjOUhhU2x0QmxWRDZOMFBpZTdEaWE4YmtPc3EzV2UtQ2IyUFk3OThpVjZoOU5fZTAyTzJ2SjdCZkc0RHhHdklOczYtYjJKZ3h3ODZZR25tN29nc1J4angycml1QkFieGZlTTQ2b0YzWmFpMUVxZm9GZnY2NVJJbURuRi14Vk9CcUZpbFdUaFRReVdoS2c?oc=5",
-          "image": "https://www.donanimhaber.com/images/images/haber/210197/1200x675avrupa-dan-tarihi-basari-ilk-ticari-yorunge-roketi-uzaya-ulasti.jpg",
-          "source_url": "https://www.donanimhaber.com/avrupa-dan-tarihi-basari-ilk-ticari-yorunge-roketi-uzaya-ulasti--210197",
-          "summary": "Isar Aerospace, Avrupa’nın ticari uzay yarışında önemli bir eşiği aştı. Şirketin Spectrum roketi, ikinci denemesinde alçak Dünya yörüngesine ulaşmayı başararak kıtada ilke imza attı.",
-          "source_count": 1,
-          "score": 2.742,
-          "speech": "DonanımHaber. Avrupa’dan tarihi başarı, İlk ticari yörünge roketi uzaya ulaştı.",
-          "related": []
-        },
-        {
-          "id": "bilim-teknoloji-8",
+          "id": "bilim-teknoloji-5",
           "title": "Deniz tabanında geriye yürüyen balık keşfedildi",
           "publisher": "Cumhuriyet",
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-08T11:33:00+00:00",
-          "age_hours": 13.3,
+          "age_hours": 13.5,
           "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc0JqU1ppMXZyS2NWZ1VzR2FrczlPMVpNZnU5SkVWNFRxUnBZSElSZ1pSN1NQc2hVQlhrMHJ1bTFtRzRBUk9IQ3p1TG83el91R09GdG5TQzlLZ093Z1RGZ204cjdQbG43T2FqSHI0VGFHYXNzRFpnemZVaXN6eFAtclU5ajFRX3FGdmhMNDl0U0ExZEFEV1E?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.728,
+          "score": 2.725,
           "speech": "Cumhuriyet. Deniz tabanında geriye yürüyen balık keşfedildi.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/8f1d18f819e7c6432908.mp3"
         },
         {
-          "id": "bilim-teknoloji-9",
+          "id": "bilim-teknoloji-6",
           "title": "Yapay zekâyla geliştirilen ilaç biyolojik yaşı geri çevirdi: Yaşlanmayı da yavaşlatabilir mi?",
           "publisher": "T24",
           "domain": "t24.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
           "published": "2026-09-08T10:18:00+00:00",
-          "age_hours": 14.6,
+          "age_hours": 14.7,
           "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPdGdFZHBhWXFyMkhyd0NzZFlhWXdhaDNFbUVyaXctc19hV0phWFhjQmtqLUpPWlItaml1SUdhU0lVWEpQZF9aaTFGSGJ0WTg5WEI2SEZMVEFqV2hIcjdnY3RZckFqV3RwN2lFOUtkVEpwbGg5NU9SQm83aWVrTDI5TGFuRGxhYXJmUDVnZGJxclBERmF5RGx1el9JVDFhZzFFSHpMdUlJSjBFTDZRQmFWRkxLeXA0MVRGTGxBbXJoLWc?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 1,
-          "score": 2.707,
+          "score": 2.704,
           "speech": "Te yirmi dört. Yapay zekâyla geliştirilen ilaç biyolojik yaşı geri çevirdi, Yaşlanmayı da yavaşlatabilir mi?.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/11acdd9f5270d1af5bd0.mp3"
+        },
+        {
+          "id": "bilim-teknoloji-7",
+          "title": "4 bin BTC çalındı işlemler durdu",
+          "publisher": "Milliyet",
+          "domain": "milliyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=milliyet.com.tr&sz=128",
+          "published": "2026-09-08T04:00:56+00:00",
+          "age_hours": 21.0,
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNnpka0RIalJvVjBnZXk4WkhlOEhNal9SQ3d0ajNqMl9DMlQtUUhtU2pQYVhPYmtVNTZ0bXBMUkFQcEhBanJtZmhBampmOUpJXy04UDZtWFZ5NXZxS1ZBdU8yWmZXQTBmVU9qbUlsakJGejRvaVc4U2hLbVVBZXRjclVn?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 1,
+          "score": 2.599,
+          "speech": "Milliyet. 4 bin BTC çalındı işlemler durdu.",
+          "related": [],
+          "audio": "audio/cache/30a05a0ed32ff45c67fb.mp3"
+        },
+        {
+          "id": "bilim-teknoloji-8",
+          "title": "Algoritma tünellerinde ‘Kaybeden Türkiye’...",
+          "publisher": "Sabah",
+          "domain": "sabah.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sabah.com.tr&sz=128",
+          "published": "2026-09-08T04:01:52+00:00",
+          "age_hours": 21.0,
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdl83blVkYXdSN0h5U09HdldUQVp3VDF4TVhxR2EyMy1sZGFOb1FPNmdFbTdJb29JMU1jakF0TXI2TS1Kc25zaWZwa1BKWVRRQm5zMzJ3Y0ZZbWg5Si0yMVdhdkQ2NXhDYW9QQ1JPZVNKaGVscnRYRXB5RmZzTzE2MmxqQjEtX0FhTmhlbzZVaEZZTDlROWRLTW5FUENiQQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 1,
+          "score": 2.51,
+          "speech": "Sabah. Algoritma tünellerinde ‘Kaybeden Türkiye.",
+          "related": [],
+          "audio": "audio/cache/b01b73151a939106e057.mp3"
+        },
+        {
+          "id": "bilim-teknoloji-9",
+          "title": "PISA sonuçları: Türkiye, Matematik'te 23'üncü",
+          "publisher": "Diken",
+          "domain": "diken.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=diken.com.tr&sz=128",
+          "published": "2026-09-08T09:17:04+00:00",
+          "age_hours": 15.8,
+          "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE4xbG1OXzEyek5mbXpFSDBINlo1dzdSMjhZTXcxZTZRSmVWa05oRzdid3dVbmlKTmdzUElQeGxWUGYycTF2YzJRSGs4a1dIX3p1LW5qN2MwZGVXNklQM1dUNXl4UGRST0hOSWNSdXJlN2dSVmRycHc?oc=5",
+          "image": "",
+          "source_url": "https://www.diken.com.tr/pisa-sonuclari-turkiye-matematikte-23uncu/?utm_source=rss&utm_medium=rss&utm_campaign=pisa-sonuclari-turkiye-matematikte-23uncu",
+          "summary": "PISA sonuçları: Türkiye, Matematik'te 23'üncü 08.09.2026 DikenEkonomik İşbirliği ve Kalkınma Teşkilatı (OECD) tarafından uygulanan Uluslararası Öğrenci Değerlendirme Programı (PISA) 2025 sonuçları açıklandı. The post PISA sonuçları: Türkiye, Matematik'te 23'üncü appeared first on #site_linkat 08.09.2026 .",
+          "source_count": 1,
+          "score": 2.507,
+          "speech": "Diken. PISA sonuçları, Türkiye, Matematik'te 23'üncü.",
+          "related": [],
+          "audio": "audio/cache/dd263604463f71717414.mp3"
         }
       ]
     },
@@ -535,13 +555,13 @@
           "domain": "trthaber.com",
           "favicon": "https://www.google.com/s2/favicons?domain=trthaber.com&sz=128",
           "published": "2026-09-08T13:36:00+00:00",
-          "age_hours": 11.3,
+          "age_hours": 11.4,
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbjhTMDdUa1ppdzJPNmg4c3Z6XzVDS3A1Y2dJU2czclE0d1hOUU5ZSmQtRmlYQllaWGxrS0cyU1pFaTUtUnJhR0dhMVJqel9mMmxrUHE2SjV4OHFxWEdDeEE4NS1YWVJabmhQTVZORWZNWHlmdW52OTVTZ1VmZjBGNkJXUlNwclBTYU9qcGNkdk92Vkt3TXNDUWNwWGYwSFprU01xMFpB?oc=5",
           "image": "",
           "source_url": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-filenin-sultanlarini-kabul-etti-956260.html",
           "summary": "Cumhurbaşkanı Recep Tayyip Erdoğan, 2026 CEV Trendyol Avrupa Voleybol Şampiyonası'nda altın madalya kazanıp üst üste ikinci kez Avrupa Şampiyonu olan A Milli Kadın Voleybol Takımı'nı kabul etti.",
           "source_count": 5,
-          "score": 3.947,
+          "score": 3.944,
           "speech": "Te Re Te Haber. Cumhurbaşkanı Erdoğan, Filenin Sultanları'nı kabul etti. Türkiye Voleybol Milli Takımı için yapılan kutlama videosu gerçek mi?. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -560,7 +580,8 @@
               "title": "Türkiye Voleybol Milli Takımı için yapılan kutlama videosu gerçek mi?",
               "source": "Teyit"
             }
-          ]
+          ],
+          "audio": "audio/cache/a7a357827353f198bf49.mp3"
         },
         {
           "id": "spor-1",
@@ -569,13 +590,13 @@
           "domain": "hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
           "published": "2026-09-08T20:18:00+00:00",
-          "age_hours": 4.6,
+          "age_hours": 4.7,
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOGQ2MFd0bUpobVdKNGNRTlFGS3VtMnloa2xVQV9NOFA1ZERXVTQxc1FwUkJ5cU51UlVlUlhvTmRnSHE3V3VCVlNOTmtBQVlEX2d5b0kxRXNVekxDcEp4TXB3OGVCeDlvQUd3UTk1eFBOQ3dIbU1WSFBoeWNoekZNQmJka0NjOGZMOTlPWlZVLTh6alVU?oc=5",
           "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa06d418e1e443939c89d51.jpg",
           "source_url": "https://www.hurriyet.com.tr/sporarena/arda-gulere-sampiyonlar-liginden-buyuk-onur-43300685",
           "summary": "A Milli Futbol Takımı'mızın ve Real Madrid'in yıldızı Arda Güler, Inter maçı öncesi UEFA Şampiyonlar Ligi'nde \"en iyi çıkış yapan oyuncu\" ödülü aldı.",
           "source_count": 5,
-          "score": 3.909,
+          "score": 3.906,
           "speech": "Hürriyet. Arda Güler'e Şampiyonlar Ligi'nden büyük onur. Mourinho'nun Real Madrid'i Devler Ligi'ne 3 puanla başladı. Real Madrid, Inter maç sonucu 2-1. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -594,7 +615,8 @@
               "title": "Arda Güler, Şampiyonlar Ligi’nde ’en iyi çıkış yapan oyuncu’ ödülünü aldı İhlas Haber Ajansı",
               "source": "İhlas Haber Ajansı"
             }
-          ]
+          ],
+          "audio": "audio/cache/3dfe83a9fda9f7dcc045.mp3"
         },
         {
           "id": "spor-2",
@@ -603,13 +625,13 @@
           "domain": "ntvspor.net",
           "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
           "published": "2026-09-08T17:32:57+00:00",
-          "age_hours": 7.3,
+          "age_hours": 7.5,
           "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVJQMVhKODFMdFJBajFSS3E2YUtzRjdKM2padWxEejlkbWg3YldpZVpLNUc1SFZLbm9WSW1ZUnNWaWktNkxkNUFKZGFKSlRSOVV0R0NGMEppLUNSM0ZRbGRHb1VEUno2QWc4R3JvTm9yN0xybE9kRzVRbGNPWERESVpFNF9NdWh0cWd3R0ZPeVpJR2twTjNSQnJodzM0YzZ4SHQ3amp3MHpaSF9qZndqdG1RbmIyWFlHWGR4QkpwSWNJWC1odzJpRVVB0gHPAUFVX3lxTE5yVWh1YzZlY3hlN0VuZ3dRNlhpa0lEenZ5QXJzanNqV29ibU8wcTF3eHJZRVlrVjdvRnl2VEdyd3lIbjBGZUMyQ1kxU2tOMDdBYmFUR1Nzbll2dlZoSDVTU2xqSV9ab1owXy0zYkgzVWtjLTY2SHI3OWFPb01rdXA4bUMtYTg3ZmdDbWZLVVVaQy1EemlYSElVTC1UUUNNWGxIUndSMzNCLTVqWW05MlMteUxQR0JiVktUc2RuQ25fdUtTWUlXc0VsOElHRFI0bw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.863,
+          "score": 3.86,
           "speech": "En Te Ve Spor. Gaziantep maçında taraftarın tepkisiyle karşılaşmıştı, Göztepe'den Gugeshashvili kararı. Stanimir Stoilov, Tehlikeli bir sürecin içerisindeyiz. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -628,7 +650,8 @@
               "title": "Adnan Süvari Sezonu, Göztepe'ye kahır oldu",
               "source": "Habertürk"
             }
-          ]
+          ],
+          "audio": "audio/cache/cf3fe3eb1ec341eacc35.mp3"
         },
         {
           "id": "spor-3",
@@ -637,13 +660,13 @@
           "domain": "ntvspor.net",
           "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
           "published": "2026-09-08T13:23:15+00:00",
-          "age_hours": 11.5,
+          "age_hours": 11.7,
           "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWEtNX25Bejh2QWpsYlVScXJoY2tSbTNEaFp1SkNxeFEtOG1VdDY5VVBIZXNIelYtM2RPdkY0S3dUSm9udENWUWZGeEVudGVmeHU3VDNCYVpNZVY1aldlQ1pqOS02eGk0eENLZHRrQ282UFdVOWZSdml5V1NtcS1FNzY3MzVQVEpjaUhYekZQa2pEcXZUdUxLby1ybUNxV1FxaTFiQUhlRS12UEHSAbABQVVfeXFMUEQweC1VZ0ppbVFYTE9tMi1PazYxcnFzZVo4NDIyVkVNLVNHZk54ZEh0TVhyMDlaWGg1SW41OFRJck1fT1FUQUk2QWVqUUQxYUFVekdpeXdmX1dSaGczQmNOZUpTSDRYNm45NTRZa0x2c01KMXJaTkx6Ykw3emtVRFFldVlNRmxjNm55MFlhaEN6T2hPQmRZWTJYZWFXckYwMjdOVTdPd25wNThWakhfQ08?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.794,
+          "score": 3.791,
           "speech": "En Te Ve Spor. Beşiktaş'tan ayrılan Amir Hadziahmetovic yeni takımıyla anlaştı. Al-Musrati'nin yeni adresini gören dönüp bir daha bakıyor. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -662,7 +685,8 @@
               "title": "Amir Hadziahmetovic'in yeni adresi resmen belli oldu!",
               "source": "Cumhuriyet"
             }
-          ]
+          ],
+          "audio": "audio/cache/399f4167db533178145d.mp3"
         },
         {
           "id": "spor-4",
@@ -671,13 +695,13 @@
           "domain": "fanatik.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=fanatik.com.tr&sz=128",
           "published": "2026-09-08T19:06:00+00:00",
-          "age_hours": 5.8,
+          "age_hours": 5.9,
           "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQd3M1SHJYaFg4NHEtYlhBY1dxWXFEN1hQLWN1UUZvUUU3c0Z3TjN3a2lwQ25EU0t2MlEzQWc1OHNyczZHaVVaR19uX1RTZWEzUVBKYmRKMTRhVzBWU3ZfTjJSV3lkZklfSVZDZXoxLTJIcjhlSW5nWmlVZThqSVR0bk9RWXY3V0U5RC1yRGRLeGtEYTFYSjNtZy1wUkpUX1FodFpLS1RvTUpzOFNnckhNWU9iWlNSM0RNUFFZYzZnSQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.789,
+          "score": 3.786,
           "speech": "Fanatik. Villa, Belçika'da 3 puanla başladı. Club Brugge, Aston Villa maç sonucu 2-3. Şampiyonlar Ligi'ne gollü başlangıç, Fenerbahçe ve Galatasaray'ın rakibi kazandı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -696,7 +720,8 @@
               "title": "Aston Villa, Sommer’in hatasını en iyi şekilde değerlendirdi ve yeniden kazanmayı hatırladı",
               "source": "Goal.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/fbfe706f156ac52388e5.mp3"
         },
         {
           "id": "spor-5",
@@ -705,13 +730,13 @@
           "domain": "fanatik.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=fanatik.com.tr&sz=128",
           "published": "2026-09-08T16:50:55+00:00",
-          "age_hours": 8.0,
+          "age_hours": 8.2,
           "link": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNQ0oybFFmYkRGeW1SU090VVJlaWlfb2ktWDY2WUhuOWdOcF8yWURXRU1QM1poWTlWNEd6Zl91MmNSR2RUaWRTVDNtY2hHRHNCS2VDMWlCY1RVbVlaaXNLbXROckVPV25KVTFRRS1SanhTMXdNcDZDSTd6MW5iWUIzOERVaFNkOVI2eXdZeEdGTkZjLTdINlYxdVhuRk9ZMm12WDhjZlA0S0JTMnU1WW5KZF9zQnNWVU5GMXNJT0k4bUxwRW1mbVVXV3gwZko4aFgyM2xlWmlqMkduN0o0MDlMbTh3?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.751,
+          "score": 3.748,
           "speech": "Fanatik. ÖZEL | Osimhen'in sakatlığı Portekiz'de haber oldu Sporting, Galatasaray maçı öncesi çarpıcı tahmin, Karşılaşacağı en güçlü rakip. Leao ve Okan Buruk konuştu, Abdülkerim haberi nereden çıktı bilmiyorum. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -730,7 +755,8 @@
               "title": "Galatasaray'da Okan Buruk müjdeyi verdi! \"Oynayabilecek durumda\"",
               "source": "Fotomaç"
             }
-          ]
+          ],
+          "audio": "audio/cache/d9f88fac5a00acfce083.mp3"
         },
         {
           "id": "spor-6",
@@ -739,13 +765,13 @@
           "domain": "sporx.com",
           "favicon": "https://www.google.com/s2/favicons?domain=sporx.com&sz=128",
           "published": "2026-09-08T21:45:00+00:00",
-          "age_hours": 3.1,
+          "age_hours": 3.3,
           "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE0xaHJzbmZLbkZJbDhtVGhMVS1VLWM4SzVIczZNWDltSHR0N1JKVExqb3ktTHBPaTBKTk4xLWFnZHlaY2pEZ2hDakE0NmFSVWQ2SFBoVnktSkNwdXlWTkVheXg1ZVNNaVBpUGhrc1ZueWxiZGJlVEc0V3FmUDAtM1nSAYIBQVVfeXFMUE0wOS03aFpmMy12RktXcnBjaTd4THhZVXpYZEVFMmt1ck1SUjM4YkFOU2RCTURkVENjdUFPckxQUlFCRGY3M3piTkRKbFl3VXZMVmNFSUstM1pmdk5lUXZ1ZGY1NktLLW9GV2lTZVFZR01rX214aXJ5UkN3cFZtMmdyUQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.633,
+          "score": 3.63,
           "speech": "Sporx. Galatasaray'a karşı yok, Ethan Mbappe. Lille 2-3 Real Betis maç özeti (Şampiyonlar Ligi). Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -753,18 +779,19 @@
               "source": "Hürriyet"
             },
             {
-              "title": "Lille'in futbolcusu Ethan Mbappe, Galatasaray maçında yok!",
-              "source": "Cumhuriyet"
-            },
-            {
               "title": "'Hak ettiği takdiri görmeli' - Davide Ancelotti, Şampiyonlar Ligi karşılaşması öncesinde 'inanılmaz' Manuel Pellegrini'yi övdü",
               "source": "Goal.com"
+            },
+            {
+              "title": "Lille'in futbolcusu Ethan Mbappe, Galatasaray maçında yok!",
+              "source": "Cumhuriyet"
             },
             {
               "title": "Galatasaray'ın rakiplerinden Lille, UEFA Şampiyonlar Ligi'ne kötü başladı",
               "source": "NTVSpor"
             }
-          ]
+          ],
+          "audio": "audio/cache/5f9a320d4a566a4485b1.mp3"
         },
         {
           "id": "spor-7",
@@ -773,13 +800,13 @@
           "domain": "odatv.com",
           "favicon": "https://www.google.com/s2/favicons?domain=odatv.com&sz=128",
           "published": "2026-09-08T14:00:54+00:00",
-          "age_hours": 10.8,
+          "age_hours": 11.0,
           "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOazVOeldEeXdCMzBJNXNTLWM2T2dMWFlaWWdJV0hCTmp2Q0liMnBhRzV0ZVVRZGxyRGZtWHVhLTZnUG05ZzZrVDFQMmNHQ3BmTFE5Sk9UUWlQUUdvOXBqNVUxRU5nSUJnYXFicjVuWlJCbXlFS1ByaDhUTGdRakM1YzloSQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.604,
+          "score": 3.601,
           "speech": "Odatv. Victor Osimhen'in kasığı neyi ele veriyor. Acıbadem Sağlık Raporu. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -798,7 +825,8 @@
               "title": "Galatasaray'da flaş Osimhen gelişmesi! Trabzonspor maçında...",
               "source": "A Spor"
             }
-          ]
+          ],
+          "audio": "audio/cache/da95fb88cca75f3b4dd5.mp3"
         },
         {
           "id": "spor-8",
@@ -807,13 +835,13 @@
           "domain": "trtspor.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=trtspor.com.tr&sz=128",
           "published": "2026-09-08T17:24:47+00:00",
-          "age_hours": 7.4,
+          "age_hours": 7.6,
           "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYXgtejZxQ19USmd3Y2pQb1dRLXBsT3ozVTNrbV9iaEhaQVNnVkx1UE9QNXhPRE9xdjluZklzYzJMc3pMWXpkeGR3V0R0TVZMTDk2Q0x4WTZsQ3RCeXJpeDA3T1NTamFDY0Z4ZEJWeTBYMGRsMWpjR05iOU9RTWRJeDRTVmxhb0pNaGNmUUk3YkpDNFpDYmJaaQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.561,
+          "score": 3.558,
           "speech": "trtspor. Trabzonspor'dan Fatih Tekke iddialarına yanıt. Kara bulutlar dağıldı, maç sonu başkan aradı. Yabancı hoca derken bambaşka senaryo. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -822,7 +850,7 @@
             },
             {
               "title": "Kara bulutlar dağıldı, maç sonu başkan aradı. Yabancı hoca derken bambaşka senaryo",
-              "source": "NTV Haber"
+              "source": "ntv.com.tr"
             },
             {
               "title": "Trabzonspor'dan Fatih Tekke'nin ayrılığı ve sözleşme için açıklama",
@@ -832,7 +860,8 @@
               "title": "Arda Turan ve Fatih Terim derken Trabzonspor'da 3 dünya yıldızı öne çıktı",
               "source": "Haberler"
             }
-          ]
+          ],
+          "audio": "audio/cache/5141f8d31173b876c6ff.mp3"
         },
         {
           "id": "spor-9",
@@ -841,13 +870,13 @@
           "domain": "transfermarkt.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=transfermarkt.com.tr&sz=128",
           "published": "2026-09-08T14:30:06+00:00",
-          "age_hours": 10.4,
+          "age_hours": 10.5,
           "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPRms3SHctODE1eGZ3czU3WExtdTl5ekc1ZDl1aGtvSVl1bFpLYkNNQTVBZUJsRkRiem0tRkxaNnp6RWFvbDNDaUlIVjNrbUM1cFZyUE9haFpkX1NBd2xHTnlNR3FwRjZYRXZRa1l4OXBIaHRCb2RRV21kVXREY2pHM0lWSHQwY3pTQ2ZxRWUwQS02TnM4YUhpbU94TlFscWloQ29wRnVWOV93ckxSOXMwOFRPSUZwNjVteEdfLXVqdUJOUDA?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.512,
+          "score": 3.509,
           "speech": "Transfermarkt. Fenerbahçe derbisinde oyundan çıkmıştı, Rıdvan Yılmaz’ın sakatlığı belli oldu. Beşiktaş'a Fenerbahçe galibiyetinden sonra kötü haber geldi. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -866,7 +895,8 @@
               "title": "Fenerbahçe derbisinde gol atmıştı! Yıldız isim için Beşiktaş'tan sakatlık açıklaması",
               "source": "Haber 7"
             }
-          ]
+          ],
+          "audio": "audio/cache/b1ac80ff3f07cd0c4568.mp3"
         }
       ]
     }
@@ -877,7 +907,7 @@
       "segment": "turkiye",
       "status": "ok",
       "count": 70,
-      "newest_age_hours": 3.1,
+      "newest_age_hours": 3.3,
       "error": ""
     },
     {
@@ -885,7 +915,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 53,
-      "newest_age_hours": 3.6,
+      "newest_age_hours": 3.8,
       "error": ""
     },
     {
@@ -893,25 +923,99 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 70,
-      "newest_age_hours": 3.4,
+      "newest_age_hours": 3.6,
       "error": ""
     },
     {
       "topic": "SPORTS",
       "segment": "spor",
       "status": "ok",
-      "count": 62,
-      "newest_age_hours": 3.1,
+      "count": 61,
+      "newest_age_hours": 3.3,
       "error": ""
     }
   ],
   "total": 30,
   "image_stats": {
     "aranan": 25,
-    "eslesen": 11,
-    "gorselli": 10,
-    "ozetli": 11
+    "eslesen": 9,
+    "gorselli": 7,
+    "ozetli": 9
   },
   "audio": null,
-  "cues": []
+  "cues": [],
+  "audio_engine": "google",
+  "audio_chars": 1665,
+  "audio_reused": 19,
+  "podcast": {
+    "date": "2026-09-09",
+    "turns": [
+      {
+        "speaker": "AYŞE",
+        "text": "Merhaba, podcast yayınımıza hoş geldiniz. Günün haberleriyle karşınızdayız.",
+        "audio": "audio/cache/de07ec6af0d86dc13829.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Merhaba. Hürriyet'in haberine göre Manisa'nın Şehzadeler ilçesindeki bir çay bahçesinin erkekler tuvaletinde, uzaktan canlı izleme özelliğine sahip gizli kamera düzeneği bulundu.",
+        "audio": "audio/cache/07ee720382d019bbe809.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Polis, düzeneği yerleştiren şüpheli ya da şüphelileri yakalamak için çalışma başlattı.",
+        "audio": "audio/cache/db03e040069caed16643.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Cumhuriyet'in aktardığına göre eski MASAK Başkanı Ramazan Başak, Gökçek ailesine yönelik soruşturmadaki iddiaların ciddi olduğunu söyledi. Başak, şüphelilerin mal varlıklarına acilen el konulması gerektiğini savundu.",
+        "audio": "audio/cache/f217578714408835fc0e.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Yine Cumhuriyet'in haberine göre Ekrem İmamoğlu, Üsküdar seçimlerinde yaşananlara sosyal medyadan tepki gösterdi. İmamoğlu, 'Türkiye’de seçimlerin bir anlamı kalmadığında rahat edeceğinizi mi zannediyorsunuz?' ifadelerini kullandı.",
+        "audio": "audio/cache/80f324ccd68e0ba7c27e.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Hürriyet'in haberine göre Yunanistan'ın İsrail ile imzaladığı yaklaşık 3 milyar avroluk anlaşma kaynak kodu tartışması yarattı. İsrailli yetkilinin Yunanistan'ın kaynak koduna erişemeyeceğini açıklaması üzerine Yunan basını 'Çoktan yenilmiş durumdayız' başlığını attı.",
+        "audio": "audio/cache/713926c3d966823d6634.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Cumhuriyet'in aktardığına göre Kocaeli'de 63 yaşındaki Gülbiter Duman'ı öldürüp bileziklerini aldığı iddia edilen sanık hakim karşısına çıktı. Suçlamayı reddeden sanığa karşılık bir kuyumcu, sanığın bileziklerin nasıl kesileceğini kendisine sorduğunu söyledi.",
+        "audio": "audio/cache/815a3c03fda13b3e73df.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Hürriyet'in haberine göre Küçükçekmece'de cuma yardımlarının usulüne uygun kaydedilmediğini öne süren müezzin Ferdi Bıyıkoğlu, imam İsmail A.'nın yumruklu saldırısına uğradı. Müezzinin eşi, eşinin aynı gün karakol önünde de 5 kişi tarafından sürüklendiğini açıkladı.",
+        "audio": "audio/cache/99d8f45cb3ea26c98b21.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Bilim ve teknoloji alanında Diken'in haberine göre PISA 2025 sonuçları açıklandı. Türkiye, Matematik alanında 23'üncü sırada yer aldı.",
+        "audio": "audio/cache/e3cb107c8551ad0d60a9.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Spor dünyasında ise TRT Haber'in aktardığına göre Cumhurbaşkanı Erdoğan, Avrupa Şampiyonu olan A Milli Kadın Voleybol Takımı'nı kabul etti. Takım, 2026 CEV Trendyol Avrupa Voleybol Şampiyonası'nda altın madalya kazanmıştı.",
+        "audio": "audio/cache/4c0b7228d076f2b014e7.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Hürriyet'in aktardığı son habere göre Arda Güler, Inter maçı öncesi UEFA Şampiyonlar Ligi'nde 'en iyi çıkış yapan oyuncu' ödülünü aldı.",
+        "audio": "audio/cache/583f7a89c08fddacc076.mp3"
+      },
+      {
+        "speaker": "MERT",
+        "text": "Bugünlük aktaracaklarımız bu kadar.",
+        "audio": "audio/cache/71c8a06302df694b696f.mp3"
+      },
+      {
+        "speaker": "AYŞE",
+        "text": "Bizi dinlediğiniz için teşekkür ederiz. Hoşça kalın.",
+        "audio": "audio/cache/ca6fa9d49843d3f345d4.mp3"
+      }
+    ],
+    "dropped": 0
+  }
 }
