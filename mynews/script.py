@@ -27,7 +27,7 @@ import urllib.request
 from dataclasses import dataclass
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-DEFAULT_MODEL = "gemini-2.5-flash"
+DEFAULT_MODEL = "gemini-3.6-flash"
 
 SYSTEM_RULES = """Sen bir Türkçe haber podcast'i için senaryo yazıyorsun.
 İki sunucu var: AYŞE ve MERT. Doğal, akıcı, sohbet havasında konuşuyorlar.
