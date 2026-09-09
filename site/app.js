@@ -348,6 +348,51 @@ function podcastQueue() {
   }));
 }
 
+/* Bültendeki tüm sesleri (haberler + podcast) service worker'a indirtir.
+ * Sabah wifi'dayken kaydet, yolda çevrimdışı dinle. */
+function audioUrls() {
+  const urls = new Set();
+  allItems().forEach((i) => i.audio && urls.add(i.audio));
+  const episode = state.bulletin && state.bulletin.podcast;
+  (episode?.turns || []).forEach((t) => t.audio && urls.add(t.audio));
+  return [...urls];
+}
+
+function saveOffline(button) {
+  const urls = audioUrls();
+  if (!urls.length || !navigator.serviceWorker?.controller) {
+    if (button) button.textContent = "Çevrimdışı kayıt bu tarayıcıda desteklenmiyor";
+    return;
+  }
+  state.offlineTotal = urls.length;
+  if (button) button.textContent = `İndiriliyor… 0/${urls.length}`;
+  navigator.serviceWorker.controller.postMessage({ type: "cache-audio", urls });
+}
+
+navigator.serviceWorker?.addEventListener("message", (event) => {
+  const data = event.data || {};
+  if (data.type !== "cache-audio-progress") return;
+  const button = $("#offline-btn");
+  if (!button) return;
+  button.textContent =
+    data.done + data.failed >= data.total
+      ? `Çevrimdışı hazır · ${data.done} ses`
+      : `İndiriliyor… ${data.done}/${data.total}`;
+});
+
+/* Veri bayatladıysa görünür uyarı: sessiz bozulmayı kullanıcı da fark etsin. */
+function freshnessNotice() {
+  const generated = state.bulletin && state.bulletin.generated_at;
+  if (!generated) return "";
+  const hours = (Date.now() - new Date(generated).getTime()) / 36e5;
+  if (hours < 36) return "";
+  const gun = Math.round(hours / 24);
+  return `<p class="mb-4 rounded-2xl bg-amber-100 px-4 py-3 text-[13px] font-medium text-amber-900">
+    Bülten ${gun < 1 ? Math.round(hours) + " saattir" : gun + " gündür"} güncellenmedi.
+    Bağlantını kontrol et ya da yenile.
+  </p>`;
+}
+
 function podcastCard() {
   const turns = podcastQueue();
   if (!turns.length) return "";
@@ -372,7 +417,15 @@ function podcastCard() {
       <path d="M6.2 17.8a1.5 1.5 0 1 1-2.1 2.1 1.5 1.5 0 0 1 2.1-2.1zM4 11.5a8.5 8.5 0 0 1 8.5 8.5h-2.6A5.9 5.9 0 0 0 4 14.1zM4 5a15 15 0 0 1 15 15h-2.6A12.4 12.4 0 0 0 4 7.6z"/>
     </svg>
     Podcast uygulamanda dinle
-  </a>`;
+  </a>
+  <button id="offline-btn" data-offline
+    class="mb-5 -mt-3 flex w-full items-center justify-center gap-1.5 text-[12.5px] font-medium text-ink-soft">
+    <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M12 4v11m0 0 4-4m-4 4-4-4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5 19h14" stroke-linecap="round"/>
+    </svg>
+    Çevrimdışı dinlemek için kaydet
+  </button>`;
 }
 
 function renderHome() {
@@ -382,6 +435,7 @@ function renderHome() {
 
   el.view.innerHTML = `
     <div class="view">
+      ${freshnessNotice()}
       ${podcastCard()}
       ${sectionHeader("Öne çıkanlar", { label: "Tümü", view: "discover" })}
       <div id="carousel" class="no-scrollbar snap-x-mandatory -mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-2">
@@ -804,6 +858,9 @@ document.addEventListener("click", (event) => {
     const queue = allItems();
     return startListening(queue, queue.findIndex((i) => i.id === item.id));
   }
+
+  const offline = event.target.closest("[data-offline]");
+  if (offline) return saveOffline(offline);
 
   if (event.target.closest("[data-podcast]")) {
     const queue = podcastQueue();

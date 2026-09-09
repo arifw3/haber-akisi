@@ -53,6 +53,12 @@ jobs:
       - name: Testleri çalıştır
         run: python -m unittest discover -s tests -v
 
+      - name: Bülteni denetle (rapor)
+        # Rapor amaçlı: burada durursa site hiç yayınlanmaz.
+        # Asıl uyarı, dağıtımdan sonraki health işinden gelir.
+        continue-on-error: true
+        run: python -m mynews doctor
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -67,3 +73,22 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Yayınlanan sonucu denetler. Ayrı iş ve if:always() olmasının sebebi:
+  # denetim başarısız olsa bile site yayınlanmış olmalı. Podcast üretilemedi
+  # diye sitenin hiç güncellenmemesi, eksik podcast'ten daha kötü olurdu.
+  health:
+    needs: [build, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pages dağıtımının yayılmasını bekle
+        run: sleep 60
+
+      - name: Yayınlanan bülteni denetle
+        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi

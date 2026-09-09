@@ -286,5 +286,12 @@
     "enabled": true,
     "days": 7,
     "similarity": 0.6
+  },
+  "thresholds": {
+    "min_items": 20,
+    "max_age_hours": 36,
+    "min_audio_ratio": 0.5,
+    "min_podcast_turns": 4,
+    "min_match_ratio": 0.15
   }
 }

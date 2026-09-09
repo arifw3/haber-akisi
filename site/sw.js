@@ -3,9 +3,11 @@
  * Kabuk (HTML/JS/ikon) cache-first: uygulama çevrimdışı da açılır.
  * Bülten verisi network-first: internet varsa hep taze, yoksa son bülten.
  */
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL_CACHE = `mynews-shell-${VERSION}`;
 const DATA_CACHE = `mynews-data-${VERSION}`;
+// Ses ayrı ve sürümsüz: bülten güncellense de indirilmiş sesler durmalı.
+const AUDIO_CACHE = "mynews-audio";
 
 const SHELL = [
   "./",
@@ -34,7 +36,7 @@ self.addEventListener("activate", (event) => {
       .then((keys) =>
         Promise.all(
           keys
-            .filter((key) => key !== SHELL_CACHE && key !== DATA_CACHE)
+            .filter((key) => ![SHELL_CACHE, DATA_CACHE, AUDIO_CACHE].includes(key))
             .map((key) => caches.delete(key))
         )
       )
@@ -47,6 +49,24 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
 
   const url = new URL(request.url);
+
+  // Ses: önce cache. Bir kez indirilen ses çevrimdışı da çalar; dosya
+  // adları içerik hash'i olduğu için tazeleme derdi yok.
+  if (url.pathname.includes("/audio/")) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(AUDIO_CACHE).then((cache) => cache.put(request, copy));
+          }
+          return response;
+        });
+      })
+    );
+    return;
+  }
 
   // Bülten verisi: önce ağ, olmazsa cache.
   if (url.pathname.endsWith(".json")) {
@@ -90,5 +110,32 @@ self.addEventListener("fetch", (event) => {
           return Response.error();
         })
     )
+  );
+});
+
+/* Uygulama "çevrimdışı kaydet" dediğinde sesleri toplu indirir ve
+ * ilerlemeyi sayfaya bildirir. */
+self.addEventListener("message", (event) => {
+  const data = event.data || {};
+  if (data.type !== "cache-audio" || !Array.isArray(data.urls)) return;
+
+  event.waitUntil(
+    caches.open(AUDIO_CACHE).then(async (cache) => {
+      let done = 0;
+      let failed = 0;
+      for (const url of data.urls) {
+        try {
+          const hit = await cache.match(url);
+          if (!hit) await cache.add(url);
+          done += 1;
+        } catch {
+          failed += 1;
+        }
+        const clients = await self.clients.matchAll();
+        clients.forEach((client) =>
+          client.postMessage({ type: "cache-audio-progress", done, failed, total: data.urls.length })
+        );
+      }
+    })
   );
 });

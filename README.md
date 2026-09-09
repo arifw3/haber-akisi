@@ -150,6 +150,32 @@ benzerlik düşeceği için haber tekrar geçer — istenen davranış budur.
 Bugünün kayıtları "görülmüş" sayılmaz; aksi halde aynı gün ikinci kez üretim yapıldığında
 bülten boşalırdı. Geçmiş, iş akışında `actions/cache` ile taşınır.
 
+## Sağlık denetimi
+
+Sistem sessizce bozulabilir: Google bir feed'i değiştirse, Gemini kotası dolsa, TTS anahtarı
+sussa — her adım hatayı zarifçe yutar ve iş akışı yeşil kalır. `doctor` bunu engeller:
+
+```bash
+python -m mynews doctor                                      # yerel bülten
+python -m mynews doctor --url https://arifw3.github.io/haber-akisi   # yayındaki
+```
+
+Haber sayısı, bülten tazeliği, feed durumu, seslendirme oranı, yayıncı eşleşme oranı ve podcast
+bölümü kontrol edilir; eşikler `config/settings.json` → `thresholds` altında.
+
+**Denetim dağıtımdan sonra ve ayrı bir işte çalışır.** Podcast üretilemedi diye sitenin hiç
+güncellenmemesi, eksik podcast'ten daha kötü olurdu — önce yayınla, sonra uyar. Build içindeki
+denetim yalnızca rapor amaçlıdır (`continue-on-error`).
+
+Kullanıcı tarafında da bir güvenlik ağı var: bülten 36 saatten eskiyse arayüzde uyarı görünür.
+
+## Çevrimdışı dinleme
+
+Service worker sesleri ayrı ve sürümsüz bir önbellekte tutar (`mynews-audio`) — bülten
+güncellense de indirilmiş sesler durur; dosya adları içerik hash'i olduğu için tazeleme derdi yok.
+Ana sayfadaki **"Çevrimdışı dinlemek için kaydet"** düğmesi günün tüm seslerini (haberler +
+podcast) tek seferde indirir, ilerlemeyi gösterir. Sabah wifi'dayken kaydet, yolda dinle.
+
 ## Bilinçli sınırlar
 
 Google Haberler RSS'inin verdikleri ve vermedikleri araştırmayla doğrulandı:

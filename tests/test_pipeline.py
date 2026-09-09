@@ -16,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.digest import render_html, render_text, tr_upper
 from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
+from mynews.doctor import age_hours, inspect
 from mynews.podcast import format_duration, render_feed
 from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
 from mynews.script import Turn, build_context, verify_turns
@@ -537,6 +538,68 @@ class TestPodcastFeed(unittest.TestCase):
     def test_trailing_slash_in_base_url_normalised(self):
         xml = render_feed(EPISODES, "https://x.com/")
         self.assertNotIn("https://x.com//audio", xml)
+
+
+def saglikli_bulten(**degisiklik):
+    bulletin = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "segments": [{"title": "Türkiye", "items": [
+            {"title": f"Haber {i}", "audio": f"audio/cache/{i}.mp3"} for i in range(25)
+        ]}],
+        "health": [{"topic": "NATION", "status": "ok", "count": 70}],
+        "image_stats": {"aranan": 40, "eslesen": 18, "gorselli": 16, "ozetli": 17},
+        "podcast": {"turns": [{"speaker": "AYŞE", "text": "x"} for _ in range(20)]},
+    }
+    bulletin.update(degisiklik)
+    return bulletin
+
+
+class TestDoctor(unittest.TestCase):
+    def test_healthy_bulletin_passes(self):
+        self.assertTrue(inspect(saglikli_bulten()).ok)
+
+    def test_too_few_items_fails(self):
+        az = saglikli_bulten(segments=[{"title": "T", "items": [{"title": "tek", "audio": "a"}]}])
+        report = inspect(az)
+        self.assertFalse(report.ok)
+        self.assertIn("haber sayisi", [c[0] for c in report.failed])
+
+    def test_stale_bulletin_fails(self):
+        eski = saglikli_bulten(
+            generated_at=(datetime.now(timezone.utc) - timedelta(days=3)).isoformat()
+        )
+        self.assertIn("bulten tazeligi", [c[0] for c in inspect(eski).failed])
+
+    def test_broken_feed_fails(self):
+        bozuk = saglikli_bulten(health=[{"topic": "NATION", "status": "broken", "count": 0}])
+        self.assertIn("kaynak feed'leri", [c[0] for c in inspect(bozuk).failed])
+
+    def test_missing_audio_fails(self):
+        sessiz = saglikli_bulten(segments=[{"title": "T", "items": [
+            {"title": f"Haber {i}"} for i in range(25)
+        ]}])
+        self.assertIn("seslendirme", [c[0] for c in inspect(sessiz).failed])
+
+    def test_empty_podcast_fails(self):
+        self.assertIn("podcast bolumu", [c[0] for c in inspect(saglikli_bulten(podcast={"turns": []})).failed])
+
+    def test_low_match_ratio_fails(self):
+        zayif = saglikli_bulten(image_stats={"aranan": 40, "eslesen": 2})
+        self.assertIn("yayinci eslestirmesi", [c[0] for c in inspect(zayif).failed])
+
+    def test_thresholds_are_configurable(self):
+        az = saglikli_bulten(segments=[{"title": "T", "items": [
+            {"title": f"H{i}", "audio": "a"} for i in range(5)
+        ]}])
+        self.assertTrue(inspect(az, {"min_items": 3}).ok)
+
+    def test_unparsable_date_is_infinite_age(self):
+        self.assertEqual(age_hours("bozuk-tarih"), float("inf"))
+
+    def test_report_renders_failures(self):
+        text = inspect(saglikli_bulten(podcast={"turns": []})).render()
+        self.assertIn("HATA", text)
+        self.assertIn("basarisiz", text)
 
 
 if __name__ == "__main__":

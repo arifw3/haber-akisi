@@ -142,6 +142,27 @@ def cmd_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_doctor(args: argparse.Namespace) -> int:
+    """Yayinlanan (veya yereldeki) bulteni denetle."""
+    import io as _io
+    from pathlib import Path
+
+    from .doctor import fetch_bulletin, inspect
+
+    cfg = load_config()
+    if args.url:
+        print(f"Denetlenen: {args.url}")
+        bulletin = fetch_bulletin(args.url)
+    else:
+        path = Path(__file__).resolve().parent.parent / "site" / "data" / "latest.json"
+        print(f"Denetlenen: {path}")
+        bulletin = json.loads(_io.open(path, encoding="utf-8").read())
+
+    report = inspect(bulletin, cfg.get("thresholds", {}))
+    print(report.render())
+    return 0 if report.ok else 1
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="mynews")
     sub = parser.add_subparsers(dest="cmd", required=True)
@@ -166,6 +187,10 @@ def main(argv: list[str] | None = None) -> int:
         help="bulteni GOOGLE_DOC_ID ile belirtilen Google Doc'a yaz (NotebookLM icin)",
     )
     p_build.set_defaults(fn=cmd_build)
+
+    p_doctor = sub.add_parser("doctor", help="bulteni esiklere gore denetle")
+    p_doctor.add_argument("--url", default="", help="canli site adresi (bos ise yerel dosya)")
+    p_doctor.set_defaults(fn=cmd_doctor)
 
     args = parser.parse_args(argv)
     return args.fn(args)
