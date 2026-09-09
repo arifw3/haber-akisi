@@ -23,6 +23,7 @@ import struct
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 ELEVEN_URL = "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
@@ -211,6 +212,58 @@ def cache_key(text: str, engine: str, config: dict) -> str:
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
 
 
+def _manifest_path(audio_dir: Path) -> Path:
+    return audio_dir / "index.json"
+
+
+def _load_manifest(audio_dir: Path) -> dict:
+    path = _manifest_path(audio_dir)
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def prune_cache(audio_dir: Path, manifest: dict, retention_days: int) -> int:
+    """Son N gundur kullanilmayan sesleri sil.
+
+    Haber akisi her gun yenileniyor; dunun sesleri birikmeye devam ederse
+    onbellek suresiz buyur. Ama hemen silmek de onbellegi anlamsiz kilar:
+    gundemde kalan haber tekrar faturalanir. Bu yuzden "son kullanim"
+    tarihine gore tutuyoruz.
+    """
+    if retention_days <= 0:
+        return 0
+
+    cutoff = (date.today() - timedelta(days=retention_days)).isoformat()
+    stale = [key for key, last_used in manifest.items() if last_used < cutoff]
+
+    removed = 0
+    for key in stale:
+        for path in audio_dir.glob(key + ".*"):
+            try:
+                path.unlink()
+                removed += 1
+            except OSError:
+                continue
+        manifest.pop(key, None)
+
+    # Manifest'te izi kalmamis dosyalar (elle kopyalanmis, yarim kalmis)
+    for path in audio_dir.iterdir():
+        if path.name == "index.json" or not path.is_file():
+            continue
+        if path.stem not in manifest:
+            try:
+                path.unlink()
+                removed += 1
+            except OSError:
+                continue
+
+    return removed
+
+
 def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
     """Bultendeki her habere ses uretir, item['audio'] alanini doldurur.
 
@@ -237,11 +290,15 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
     if limit > 0:
         items = sorted(items, key=lambda i: i.get("score", 0), reverse=True)[:limit]
 
+    manifest = _load_manifest(audio_dir)
+    today = date.today().isoformat()
+
     produced = 0
     reused = 0
     spent = 0
     for item in items:
         key = cache_key(item["speech"], engine_name, config)
+        manifest[key] = today
         existing = next(iter(audio_dir.glob(key + ".*")), None)
         if existing:
             item["audio"] = f"audio/cache/{existing.name}"
@@ -257,9 +314,16 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
         produced += 1
         spent += len(item["speech"])
 
+    removed = prune_cache(audio_dir, manifest, int(config.get("cache_days", 7)))
+    _manifest_path(audio_dir).write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
     bulletin["audio_engine"] = engine_name
     bulletin["audio_chars"] = spent
     bulletin["audio_reused"] = reused
     if reused:
         print(f"  {reused} ses onbellekten geldi (ucretsiz)")
+    if removed:
+        print(f"  {removed} eski ses dosyasi silindi")
     return produced

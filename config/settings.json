@@ -158,7 +158,8 @@
       "tr-TR-Wavenet-E"
     ],
     "google_rate": 1.0,
-    "google_pitch": 0.0
+    "google_pitch": 0.0,
+    "cache_days": 7
   },
   "image_matching": {
     "enabled": true,

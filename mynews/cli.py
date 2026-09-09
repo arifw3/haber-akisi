@@ -12,6 +12,7 @@ import json
 import sys
 
 from .build import build, write
+from .digest import write as write_digest
 from .gnews import check_feed
 from .rank import Ranker, load_config
 from .tts import available_engine, synthesize_bulletin
@@ -74,7 +75,7 @@ def cmd_build(args: argparse.Namespace) -> int:
             count = synthesize_bulletin(bulletin, site, tts_cfg)
             print(f"{engine} ile {count} ses dosyasi uretildi.")
 
-    paths = write(bulletin)
+    paths = write(bulletin) + write_digest(bulletin)
     for seg in bulletin["segments"]:
         print(f"{seg['title']:<20} {len(seg['items']):>2} haber")
     problems = [h for h in bulletin["health"] if h["status"] != "ok"]

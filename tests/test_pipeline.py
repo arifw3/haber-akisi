@@ -3,6 +3,7 @@
 
 Fixture'lar gercek Google News RSS ciktisindan alinmis yapidadir.
 """
+import json
 import sys
 import unittest
 import xml.etree.ElementTree as ET
@@ -12,6 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
+from mynews.digest import render_html, render_text, tr_upper
 from mynews.images import ImageResolver, extract_image, parse_articles
 from mynews.rank import Ranker, normalize, similarity
 from mynews.speech import intro_for, normalize as speech_normalize
@@ -299,6 +301,54 @@ class TestSpeechNormalisation(unittest.TestCase):
     def test_domain_publisher_cleaned(self):
         # "birgun.net" -> "birgun nokta net" diye okunmamali
         self.assertNotIn(".", intro_for("birgun.net"))
+
+
+BULLETIN = {
+    "generated_at": "2026-09-09T06:00:00+00:00",
+    "total": 1,
+    "segments": [{
+        "key": "turkiye", "title": "Türkiye",
+        "items": [{
+            "title": "Ankara'da gelişme", "publisher": "Hürriyet", "source_count": 5,
+            "speech": "Hürriyet. Ankara'da gelişme.", "link": "https://news.google.com/x",
+            "source_url": "https://www.hurriyet.com.tr/haber-1",
+            "related": [{"source": "TRT Haber", "title": "Başkentte hareketlilik"}],
+        }],
+    }],
+}
+
+
+class TestDigest(unittest.TestCase):
+    def test_turkish_uppercase(self):
+        # Varsayilan upper() "Türkiye" -> "TÜRKIYE" yapar; dogrusu "TÜRKİYE"
+        self.assertEqual(tr_upper("Türkiye"), "TÜRKİYE")
+        self.assertEqual(tr_upper("Bilim"), "BİLİM")
+
+    def test_text_contains_headline_and_publisher(self):
+        out = render_text(BULLETIN)
+        self.assertIn("Ankara'da gelişme", out)
+        self.assertIn("Hürriyet", out)
+        self.assertIn("TÜRKİYE", out)
+
+    def test_text_prefers_direct_link(self):
+        # Yayinci baglantisi varsa Google Haberler linki yerine o kullanilmali
+        out = render_text(BULLETIN)
+        self.assertIn("hurriyet.com.tr/haber-1", out)
+        self.assertNotIn("news.google.com", out)
+
+    def test_text_mentions_source_count(self):
+        self.assertIn("5 yayıncı yazdı", render_text(BULLETIN))
+
+    def test_html_escapes_content(self):
+        risky = json.loads(json.dumps(BULLETIN))
+        risky["segments"][0]["items"][0]["title"] = "<script>alert(1)</script>"
+        out = render_html(risky)
+        self.assertNotIn("<script>alert", out)
+        self.assertIn("&lt;script&gt;", out)
+
+    def test_html_needs_no_javascript(self):
+        # NotebookLM ve tarayicisiz okuyucular JS calistirmaz
+        self.assertNotIn("<script", render_html(BULLETIN))
 
 
 if __name__ == "__main__":
