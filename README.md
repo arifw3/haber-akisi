@@ -114,6 +114,9 @@ crawler'lar ana sayfada içerik göremez):
 - `bulten.txt` — düz metin
 - `bulten.html` — JS'siz HTML
 
+Bu adım **günlük çalışmanın parçası değildir** — NotebookLM'i kullanmak istediğinde elle
+çalıştırılır. Böylece projenin geri kalanı bağımlılıksız kalır.
+
 **Kurulum** (tek seferlik): Google Cloud'da servis hesabı → Google Docs API'yi etkinleştir →
 JSON anahtarı indir → hedef Doc'u servis hesabının e-postasıyla **Düzenleyen** olarak paylaş.
 Sonra iki secret: `GOOGLE_DOC_ID` (Doc URL'indeki uzun dizge) ve `GOOGLE_SERVICE_ACCOUNT_JSON`
