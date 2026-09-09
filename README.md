@@ -3,7 +3,7 @@
 Google Haberler RSS'inden her gün **30 haber** derleyip Tailwind tabanlı bir **PWA**'da sunan bülten.
 İki kullanım biçimi var: kartlar arasında elle gezinme, ya da **hands-free** dinleme — okunan haber öne gelir, bitince sıradaki gelir.
 
-Kategoriler: **Türkiye**, **Dünya**, **Ekonomi**, **Bilim & Teknoloji**, **Sağlık**, **Spor** — günde ~46 haber.
+Kategoriler: **Türkiye**, **Dünya**, **Ekonomi**, **Bilim & Teknoloji**, **Bilim**, **Sağlık**, **Spor**, **Yazılım** — günde ~60 haber.
 
 **Canlı:** https://arifw3.github.io/haber-akisi/ · **Depo:** https://github.com/arifw3/haber-akisi
 
@@ -149,6 +149,32 @@ benzerlik düşeceği için haber tekrar geçer — istenen davranış budur.
 
 Bugünün kayıtları "görülmüş" sayılmaz; aksi halde aynı gün ikinci kez üretim yapıldığında
 bülten boşalırdı. Geçmiş, iş akışında `actions/cache` ile taşınır.
+
+## Doğrudan kaynaklar ve çeviri
+
+Google Haberler'in Türkçe akışlarında çıkmayan yayınlar (Laravel News, The Verge, ScienceDaily,
+Evrim Ağacı…) doğrudan RSS/Atom olarak çekilir. Bu kaynaklarda görsel, özet ve gerçek bağlantı
+tek istekte gelir — Google tarafındaki eşleştirmeye gerek kalmaz. Buna karşılık "kaç yayıncı
+yazdı" sinyali yoktur; o segmentlerde sıralama tazelik ve kaynak güvenine dayanır.
+
+Arşiv akışları yüzlerce eski yazıyı birden döndürebildiği için tarih filtresi zorunludur
+(`max_age_days`).
+
+**Çeviri kaynak bazlıdır** (`"translate": true`): aynı segmentte Türkçe ve İngilizce yayın bir
+arada bulunabilir. Gemini teknik terimleri koruyarak çevirir (`queue`, `middleware`, ürün adları),
+orijinal `title_en` / `summary_en` olarak saklanır. Çeviriler metin hash'ine göre önbelleklenir;
+aynı yazı ertesi gün ücretsiz gelir. Çeviri başarısız olursa haber İngilizce yayınlanır —
+bülteni kaybetmektense çevirisiz sunmak yeğdir.
+
+Bir kaynak `"insecure": true` işaretlenebilir: bazı kurumsal sunucular (TÜBİTAK Bilim Genç) ara
+sertifikayı eksik gönderiyor. Yalnızca herkese açık içerik okunduğu ve hiçbir kimlik bilgisi
+gönderilmediği için kabul ediliyor; ayarda açıkça belirtilmesi gerekir.
+
+## İlgi alanları
+
+Keşfet ekranından anahtar kelime eklenir ("Laravel", "deprem"). Eşleşen haberler ana sayfada
+**"Senin için"** bölümünde öne çıkar ve kartta rozet görünür. Liste tarayıcıda saklanır
+(`localStorage`), sunucu tarafını etkilemez — bülten herkes için aynı üretilir.
 
 ## Sağlık denetimi
 

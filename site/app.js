@@ -16,6 +16,7 @@
 const DATA_URL = "data/latest.json";
 const SAVED_KEY = "mynews:saved";
 const READ_KEY = "mynews:read";
+const INTEREST_KEY = "mynews:interests";
 const RATE_KEY = "mynews:rate";
 const RATES = [1, 1.25, 1.5, 2];
 
@@ -50,6 +51,7 @@ const state = {
   voice: null,
   saved: new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")),
   read: new Set(JSON.parse(localStorage.getItem(READ_KEY) || "[]")),
+  interests: JSON.parse(localStorage.getItem(INTEREST_KEY) || "[]"),
   wakeLock: null,
 };
 
@@ -59,8 +61,10 @@ const PALETTE = {
   "dunya":           { from: "#2d1b6b", to: "#6b4fc4", chip: "bg-[#4a35a0]" },
   "ekonomi":         { from: "#8a2a12", to: "#e0834f", chip: "bg-[#c25418]" },
   "bilim-teknoloji": { from: "#5c1478", to: "#b93bb0", chip: "bg-[#8e24aa]" },
+  "bilim":           { from: "#0d4a38", to: "#2aa87f", chip: "bg-[#17795e]" },
   "saglik":          { from: "#0f4f5c", to: "#3aa8b0", chip: "bg-[#15788a]" },
   "spor":            { from: "#a81742", to: "#f4715c", chip: "bg-[#e0464f]" },
+  "yazilim":         { from: "#26243f", to: "#6b5b9e", chip: "bg-[#464170]" },
 };
 const FALLBACK_PALETTE = { from: "#4a2338", to: "#8a5570", chip: "bg-[#7b5164]" };
 
@@ -266,7 +270,10 @@ function listRow(item) {
         : `<span class="absolute inset-0 grid place-items-center text-[26px] font-black text-white/25">${escapeHtml((item.publisher || "?").charAt(0))}</span>`}
     </div>
     <div class="min-w-0 flex-1">
-      <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(item.segmentTitle)}</p>
+      <p class="flex items-center gap-1.5 text-[12.5px] font-medium text-ink-faint">
+        ${escapeHtml(item.segmentTitle)}
+        ${matchedInterests(item).slice(0, 1).map((w) => `<span class="rounded-full bg-brand-100 px-1.5 py-px text-[11px] font-semibold text-brand-700">${escapeHtml(w)}</span>`).join("")}
+      </p>
       <h3 class="mt-0.5 line-clamp-2 text-[15.5px] font-semibold leading-snug">${escapeHtml(item.title)}</h3>
       ${state.read.has(item.link) ? '<span class="mt-1 inline-block text-[11px] font-medium text-ink-faint">okundu</span>' : ""}
       <div class="mt-1.5 flex items-center gap-2">
@@ -396,6 +403,53 @@ function freshnessNotice() {
   </p>`;
 }
 
+/* İlgi alanları: kullanıcının yazdığı anahtar kelimeler tarayıcıda saklanır.
+ * Eşleşen haberler ana sayfada "Senin için" bölümünde öne çıkar. Sunucu
+ * tarafını değiştirmez — herkes kendi listesini tutar. */
+function persistInterests() {
+  localStorage.setItem(INTEREST_KEY, JSON.stringify(state.interests));
+}
+
+function matchedInterests(item) {
+  if (!state.interests.length) return [];
+  const haystack = [item.title, item.summary, item.publisher, item.segmentTitle]
+    .filter(Boolean)
+    .join(" ")
+    .toLocaleLowerCase("tr");
+  return state.interests.filter((word) => haystack.includes(word.toLocaleLowerCase("tr")));
+}
+
+function interestItems() {
+  if (!state.interests.length) return [];
+  return allItems()
+    .filter((i) => matchedInterests(i).length)
+    .sort((a, b) => b.score - a.score);
+}
+
+function interestEditor() {
+  const chips = state.interests
+    .map(
+      (word) => `<button data-remove-interest="${escapeHtml(word)}"
+        class="inline-flex items-center gap-1 rounded-full bg-brand-100 px-3 py-1.5 text-[13px] font-semibold text-brand-700">
+        ${escapeHtml(word)}
+        <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" stroke-linecap="round"/></svg>
+      </button>`
+    )
+    .join("");
+
+  return `
+  <section class="mb-5 rounded-xl2 bg-white p-4 shadow-card">
+    <h2 class="text-[15px] font-bold">İlgi alanların</h2>
+    <p class="mt-0.5 text-[12.5px] text-ink-soft">Eşleşen haberler ana sayfada öne çıkar. Yalnızca bu cihazda saklanır.</p>
+    <div class="mt-3 flex flex-wrap gap-2">${chips || '<span class="text-[13px] text-ink-faint">Henüz eklemedin.</span>'}</div>
+    <form data-interest-form class="mt-3 flex gap-2">
+      <input name="word" type="text" placeholder="örn. Laravel, deprem, Fenerbahçe" autocomplete="off"
+        class="min-w-0 flex-1 rounded-xl border-0 bg-black/[.04] px-3 py-2.5 text-[14px] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand-500">
+      <button type="submit" class="grad shrink-0 rounded-xl px-4 py-2.5 text-[14px] font-semibold text-white">Ekle</button>
+    </form>
+  </section>`;
+}
+
 function podcastCard() {
   const turns = podcastQueue();
   if (!turns.length) return "";
@@ -434,7 +488,9 @@ function podcastCard() {
 function renderHome() {
   const ordered = interleaved();
   const featured = ordered.slice(0, 6);
-  const rest = ordered.slice(6, 21);
+  const mine = interestItems().slice(0, 6);
+  const mineIds = new Set(mine.map((i) => i.id));
+  const rest = ordered.slice(6, 21).filter((i) => !mineIds.has(i.id));
 
   el.view.innerHTML = `
     <div class="view">
@@ -447,6 +503,15 @@ function renderHome() {
       <div id="dots" class="mt-1 flex justify-center gap-1.5">
         ${featured.map((_, i) => `<span class="h-1.5 rounded-full transition-all ${i === 0 ? "w-5 bg-[#d81b60]" : "w-1.5 bg-ink-faint/40"}"></span>`).join("")}
       </div>
+
+      ${
+        mine.length
+          ? `<div class="mt-6">
+               ${sectionHeader("Senin için", { label: "Düzenle", view: "discover" })}
+               <div class="mt-1 divide-y divide-black/5">${mine.map(listRow).join("")}</div>
+             </div>`
+          : ""
+      }
 
       <div class="mt-6">
         ${sectionHeader("Öneriler", { label: "Tümü", view: "discover" })}
@@ -489,6 +554,7 @@ function renderDiscover() {
 
   el.view.innerHTML = `
     <div class="view">
+      ${interestEditor()}
       <div class="relative mt-1">
         <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/>
@@ -862,6 +928,13 @@ document.addEventListener("click", (event) => {
     return startListening(queue, queue.findIndex((i) => i.id === item.id));
   }
 
+  const removeInterest = event.target.closest("[data-remove-interest]");
+  if (removeInterest) {
+    state.interests = state.interests.filter((w) => w !== removeInterest.dataset.removeInterest);
+    persistInterests();
+    return renderDiscover();
+  }
+
   const offline = event.target.closest("[data-offline]");
   if (offline) return saveOffline(offline);
 
@@ -894,6 +967,19 @@ el.miniClose.addEventListener("click", () => {
   stopListening(true);
   state.queue = [];
   updateMini();
+});
+
+document.addEventListener("submit", (event) => {
+  const form = event.target.closest("[data-interest-form]");
+  if (!form) return;
+  event.preventDefault();
+  const word = form.word.value.trim();
+  if (word && !state.interests.includes(word)) {
+    state.interests.push(word);
+    persistInterests();
+  }
+  form.reset();
+  renderDiscover();
 });
 
 document.addEventListener("keydown", (event) => {

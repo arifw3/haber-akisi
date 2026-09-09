@@ -17,3 +17,4 @@ site/data/episodes.json
 
 # Günlük arşiv yerel üretimden birikiyor; yayın Pages çıktısından gelir.
 site/data/20*.json
+data/translations.json

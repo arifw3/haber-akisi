@@ -10,6 +10,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+from .feeds import collect as collect_direct
 from .gnews import NewsItem, check_feed
 from .history import History
 from .images import ImageResolver
@@ -67,7 +68,13 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
     # Yayincinin kendi feed'inde eslesme varsa gorsel ve dogrudan baglanti
     # oradan gelir; yoksa alanlar bos kalir ve arayuz gradient gosterir.
     image, source_url, summary = "", "", ""
-    if resolver:
+
+    # Dogrudan kaynak: gorsel, ozet ve baglanti zaten feed'den geldi.
+    if item.direct:
+        image = item.direct.get("image", "")
+        summary = item.direct.get("summary", "")
+        source_url = item.direct.get("source_url", "")
+    elif resolver:
         match = resolver.resolve(item.title, item.domain)
         if match:
             image, source_url, summary = match.image, match.link, match.summary
@@ -84,6 +91,7 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
         "image": image,
         "source_url": source_url,
         "summary": summary,
+        "needs_translation": bool(item.direct.get("translate")),
         "source_count": item.source_count,
         "score": round(scored.score, 3),
         "speech": speech_text(item, pick_extra(item)),
@@ -117,7 +125,16 @@ def build(config: dict | None = None) -> dict:
 
     for seg in cfg["segments"]:
         pool: list[NewsItem] = []
-        for topic in seg["topics"]:
+
+        # Dogrudan RSS/Atom kaynaklari (Google Haberler disi)
+        if seg.get("sources"):
+            direct_items, direct_health = collect_direct(
+                seg["sources"], seg["key"], int(seg.get("max_age_days", 7))
+            )
+            pool.extend(direct_items)
+            health.extend(direct_health)
+
+        for topic in seg.get("topics", []):
             report, items = check_feed(topic, seg["key"])
             health.append(
                 {
@@ -142,11 +159,28 @@ def build(config: dict | None = None) -> dict:
         if history:
             for scored in chosen:
                 history.remember(scored.item.title, scored.item.link)
+        payloads = [item_payload(s, i, resolver) for i, s in enumerate(chosen)]
+
+        # Ingilizce kaynaklar Turkce'ye cevrilir; ceviri basarisiz olursa
+        # haberler Ingilizce kalir - bulteni kaybetmektense oyle yayinlanir.
+        to_translate = [p for p in payloads if p.get("needs_translation")]
+        for p in payloads:
+            p.pop("needs_translation", None)
+        if to_translate and cfg.get("translation", {}).get("enabled", True):
+            try:
+                from .translate import translate_items
+
+                count = translate_items(to_translate, cfg.get("translation", {}))
+                if count:
+                    print(f"  {seg['title']}: {count} baslik Turkce'ye cevrildi")
+            except Exception as exc:  # ceviri hicbir zaman bulteni dusurmemeli
+                print(f"  {seg['title']}: ceviri atlandi ({str(exc)[:70]})")
+
         segments.append(
             {
                 "key": seg["key"],
                 "title": seg["title"],
-                "items": [item_payload(s, i, resolver) for i, s in enumerate(chosen)],
+                "items": payloads,
             }
         )
 

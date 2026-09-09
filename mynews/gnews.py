@@ -71,6 +71,9 @@ class NewsItem:
     link: str
     category: str
     related: list[Related] = field(default_factory=list)
+    # Dogrudan kaynaklarda gorsel/ozet/baglanti feed'den gelir; Google
+    # tarafindaki eslestirmeye gerek kalmaz (bkz. feeds.py).
+    direct: dict = field(default_factory=dict)
 
     @property
     def domain(self) -> str:

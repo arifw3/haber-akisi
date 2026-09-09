@@ -15,16 +15,38 @@ from __future__ import annotations
 import html
 import re
 import xml.etree.ElementTree as ET
+from datetime import datetime
 from dataclasses import dataclass
+
+from email.utils import parsedate_to_datetime
 
 from .gnews import FeedError, fetch
 from .rank import similarity
 
+ATOM = "{http://www.w3.org/2005/Atom}"
 MRSS = "{http://search.yahoo.com/mrss/}"
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}encoded"
 _IMG_RE = re.compile(r"""<img[^>]+src=["']([^"']+)""", re.I)
 _TAG_RE = re.compile(r"<[^>]+>")
 _SUMMARY_MAX = 1800
+
+
+def extract_date(item: ET.Element, atom: bool = False) -> str:
+    """Yayin zamanini ISO olarak dondur. Bulunamazsa bos."""
+    fields = (f"{ATOM}published", f"{ATOM}updated") if atom else ("pubDate", "date")
+    for field in fields:
+        raw = (item.findtext(field) or "").strip()
+        if not raw:
+            continue
+        try:
+            return parsedate_to_datetime(raw).isoformat()
+        except (TypeError, ValueError):
+            pass
+        try:
+            return datetime.fromisoformat(raw.replace("Z", "+00:00")).isoformat()
+        except ValueError:
+            continue
+    return ""
 
 
 @dataclass
@@ -33,6 +55,7 @@ class Article:
     link: str
     image: str
     summary: str = ""
+    published: str = ""   # ISO 8601; bos ise tarih bulunamamistir
 
 
 def _clean(text: str) -> str:
@@ -93,8 +116,30 @@ def parse_articles(raw: bytes) -> list[Article]:
         link = (item.findtext("link") or "").strip()
         if title and link.startswith("http"):
             articles.append(
-                Article(title, link, extract_image(item), extract_summary(item))
+                Article(title, link, extract_image(item), extract_summary(item), extract_date(item))
             )
+
+    # Atom akislari <entry> kullanir; bircok gelistirici blogu bu bicimde.
+    for entry in root.findall(f".//{ATOM}entry"):
+        title = _clean(entry.findtext(f"{ATOM}title"))
+        link = ""
+        for node in entry.findall(f"{ATOM}link"):
+            rel = node.get("rel") or "alternate"
+            if rel == "alternate" and node.get("href"):
+                link = node.get("href").strip()
+                break
+        if not (title and link.startswith("http")):
+            continue
+
+        summary = ""
+        for field in (f"{ATOM}summary", f"{ATOM}content"):
+            candidate = _clean(entry.findtext(field) or "")
+            if len(candidate) > len(summary):
+                summary = candidate
+        articles.append(
+            Article(title, link, extract_image(entry), summary[:_SUMMARY_MAX], extract_date(entry, atom=True))
+        )
+
     return articles
 
 

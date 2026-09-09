@@ -31,12 +31,78 @@
         "TECHNOLOGY",
         "SCIENCE"
       ],
-      "limit": 8,
+      "limit": 12,
       "scoring_override": {
         "w_trust": 1.8,
         "clickbait_penalty": 1.6
       },
-      "min_trust": 0.4
+      "min_trust": 0.4,
+      "max_age_days": 5,
+      "sources": [
+        {
+          "name": "Webtekno",
+          "url": "https://www.webtekno.com/rss.xml",
+          "site": "https://webtekno.com"
+        },
+        {
+          "name": "DonanımHaber",
+          "url": "https://www.donanimhaber.com/rss/tum/",
+          "site": "https://donanimhaber.com"
+        },
+        {
+          "name": "ShiftDelete",
+          "url": "https://shiftdelete.net/feed",
+          "site": "https://shiftdelete.net"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "site": "https://theverge.com",
+          "translate": true
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/feed/",
+          "site": "https://techcrunch.com",
+          "translate": true
+        }
+      ]
+    },
+    {
+      "key": "bilim",
+      "title": "Bilim",
+      "topics": [],
+      "limit": 8,
+      "max_age_days": 7,
+      "scoring_override": {
+        "w_sources": 0.0,
+        "w_freshness": 1.4,
+        "w_trust": 1.2
+      },
+      "sources": [
+        {
+          "name": "Evrim Ağacı",
+          "url": "https://evrimagaci.org/rss.xml",
+          "site": "https://evrimagaci.org"
+        },
+        {
+          "name": "Arkeofili",
+          "url": "https://arkeofili.com/feed/",
+          "site": "https://arkeofili.com"
+        },
+        {
+          "name": "Bilim Genç",
+          "url": "https://bilimgenc.tubitak.gov.tr/rss.xml",
+          "site": "https://bilimgenc.tubitak.gov.tr",
+          "insecure": true
+        },
+        {
+          "name": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/rss/all.xml",
+          "site": "https://sciencedaily.com",
+          "translate": true
+        }
+      ]
     },
     {
       "key": "saglik",
@@ -53,6 +119,50 @@
         "SPORTS"
       ],
       "limit": 8
+    },
+    {
+      "key": "yazilim",
+      "title": "Yazılım",
+      "topics": [],
+      "limit": 8,
+      "max_age_days": 7,
+      "scoring_override": {
+        "w_sources": 0.0,
+        "w_freshness": 1.6,
+        "w_trust": 1.0
+      },
+      "sources": [
+        {
+          "name": "Laravel News",
+          "url": "https://laravel-news.com/feed",
+          "site": "https://laravel-news.com",
+          "translate": true
+        },
+        {
+          "name": "Laravel Blog",
+          "url": "https://blog.laravel.com/feed",
+          "site": "https://blog.laravel.com",
+          "translate": true
+        },
+        {
+          "name": "Laravel Daily",
+          "url": "https://laraveldaily.com/feed",
+          "site": "https://laraveldaily.com",
+          "translate": true
+        },
+        {
+          "name": "DEV Laravel",
+          "url": "https://dev.to/feed/tag/laravel",
+          "site": "https://dev.to",
+          "translate": true
+        },
+        {
+          "name": "GitHub Blog",
+          "url": "https://github.blog/feed/",
+          "site": "https://github.blog",
+          "translate": true
+        }
+      ]
     }
   ],
   "scoring": {
@@ -91,7 +201,7 @@
     "A Spor": 0.7,
     "Webrazzi": 0.9,
     "ShiftDelete.Net": 0.8,
-    "DonanımHaber": 0.8,
+    "DonanımHaber": 0.9,
     "Log": 0.7,
     "Wired Türkiye": 0.85,
     "Evrim Ağacı": 0.9,
@@ -102,7 +212,19 @@
     "Halk TV": 0.5,
     "Onedio": 0.15,
     "Haberler": 0.3,
-    "Internet Haber": 0.25
+    "Internet Haber": 0.25,
+    "Laravel News": 0.9,
+    "Laravel Blog": 0.9,
+    "Laravel Daily": 0.9,
+    "DEV Laravel": 0.9,
+    "GitHub Blog": 0.9,
+    "Webtekno": 0.9,
+    "ShiftDelete": 0.9,
+    "The Verge": 0.9,
+    "TechCrunch": 0.9,
+    "Arkeofili": 0.9,
+    "Bilim Genç": 0.9,
+    "ScienceDaily": 0.9
   },
   "drop_patterns": [
     "canlı anlatım",
@@ -293,5 +415,10 @@
     "min_audio_ratio": 0.5,
     "min_podcast_turns": 4,
     "min_match_ratio": 0.15
+  },
+  "translation": {
+    "enabled": true,
+    "model": "gemini-3.6-flash",
+    "batch_size": 25
   }
 }

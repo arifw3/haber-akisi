@@ -17,6 +17,7 @@ from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_tit
 from mynews.digest import render_html, render_text, tr_upper
 from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
 from mynews.doctor import age_hours, inspect
+from mynews.feeds import _parse_date
 from mynews.podcast import format_duration, render_feed
 from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
 from mynews.script import Turn, build_context, verify_turns
@@ -600,6 +601,60 @@ class TestDoctor(unittest.TestCase):
         text = inspect(saglikli_bulten(podcast={"turns": []})).render()
         self.assertIn("HATA", text)
         self.assertIn("basarisiz", text)
+
+
+ATOM_FEED = b"""<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <title>Laravel AI SDK v0.10</title>
+    <link rel="alternate" href="https://laraveldaily.com/post/ai-sdk"/>
+    <published>2026-09-08T10:00:00Z</published>
+    <summary>Four new features landed this week.</summary>
+  </entry>
+</feed>"""
+
+
+class TestAtomParsing(unittest.TestCase):
+    def test_atom_entries_parsed(self):
+        articles = parse_articles(ATOM_FEED)
+        self.assertEqual(len(articles), 1)
+        self.assertEqual(articles[0].title, "Laravel AI SDK v0.10")
+        self.assertEqual(articles[0].link, "https://laraveldaily.com/post/ai-sdk")
+
+    def test_atom_summary_and_date(self):
+        article = parse_articles(ATOM_FEED)[0]
+        self.assertIn("Four new features", article.summary)
+        self.assertTrue(article.published.startswith("2026-09-08"))
+
+    def test_rss_pubdate_parsed(self):
+        feed = b"""<rss><channel><item><title>A</title>
+          <link>https://x.com/a</link>
+          <pubDate>Mon, 08 Sep 2026 12:00:00 GMT</pubDate></item></channel></rss>"""
+        self.assertTrue(parse_articles(feed)[0].published.startswith("2026-09-08"))
+
+    def test_date_helper_handles_naive_and_bad(self):
+        self.assertIsNotNone(_parse_date("2026-09-08T10:00:00"))
+        self.assertIsNone(_parse_date("bozuk"))
+        self.assertIsNone(_parse_date(""))
+
+
+class TestTranslationCache(unittest.TestCase):
+    def test_cache_roundtrip_and_trim(self):
+        from mynews.translate import _key, load_cache, save_cache
+
+        tmp = Path(tempfile.mkdtemp()) / "tr.json"
+        save_cache({_key("Hello"): "Merhaba"}, tmp)
+        self.assertEqual(load_cache(tmp)[_key("Hello")], "Merhaba")
+
+        save_cache({str(i): str(i) for i in range(50)}, tmp, keep=10)
+        self.assertEqual(len(load_cache(tmp)), 10)
+
+    def test_broken_cache_file_returns_empty(self):
+        from mynews.translate import load_cache
+
+        tmp = Path(tempfile.mkdtemp()) / "tr.json"
+        tmp.write_text("{bozuk", encoding="utf-8")
+        self.assertEqual(load_cache(tmp), {})
 
 
 if __name__ == "__main__":
