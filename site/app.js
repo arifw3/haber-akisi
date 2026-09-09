@@ -231,8 +231,9 @@ function targetUrl(item) {
 function heroCard(item) {
   const p = paletteOf(item);
   return `
-  <article data-open="${escapeHtml(item.id)}"
-    class="hero-tex relative h-[15.5rem] w-[19.5rem] shrink-0 cursor-pointer snap-start overflow-hidden rounded-xl2 shadow-hero"
+  <article data-open="${escapeHtml(item.id)}" tabindex="0" role="link"
+    aria-label="${escapeHtml(item.title)}"
+    class="hero-tex relative focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 h-[15.5rem] w-[19.5rem] shrink-0 cursor-pointer snap-start overflow-hidden rounded-xl2 shadow-hero"
     style="${heroStyle(item)}">
     ${imageLayer(item)}
     ${item.image ? "" : `<span class="absolute right-5 top-3 text-[5.5rem] font-black leading-none text-white/[.07]">${escapeHtml((item.publisher || "?").charAt(0))}</span>`}
@@ -254,7 +255,9 @@ function heroCard(item) {
 /* Liste satırı */
 function listRow(item) {
   return `
-  <article data-open="${escapeHtml(item.id)}" class="flex cursor-pointer gap-3 py-3${
+  <article data-open="${escapeHtml(item.id)}" tabindex="0" role="link"
+    aria-label="${escapeHtml(item.title)}"
+    class="flex cursor-pointer gap-3 rounded-2xl py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600${
     state.read.has(item.link) ? " opacity-55" : ""
   }">
     <div class="hero-tex relative h-[4.6rem] w-[4.6rem] shrink-0 overflow-hidden rounded-2xl" style="${heroStyle(item)}">
@@ -895,7 +898,16 @@ el.miniClose.addEventListener("click", () => {
 
 document.addEventListener("keydown", (event) => {
   if (event.target.tagName === "INPUT") return;
-  if (event.key === "Escape" && state.view === "detail") navigate("home");
+  if (event.key === "Escape" && state.view === "detail") return navigate("home");
+
+  // Klavyeyle gezinme: odaktaki kart Enter veya boşlukla açılır.
+  if (event.key === "Enter" || event.key === " ") {
+    const card = event.target.closest?.("[data-open]");
+    if (card) {
+      event.preventDefault();
+      navigate("detail", card.dataset.open);
+    }
+  }
 });
 
 // Sekme arka plana alınınca konuşma bozulur; hazır ses dosyası çalmaya devam edebilir.
