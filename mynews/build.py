@@ -65,11 +65,11 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
 
     # Yayincinin kendi feed'inde eslesme varsa gorsel ve dogrudan baglanti
     # oradan gelir; yoksa alanlar bos kalir ve arayuz gradient gosterir.
-    image, source_url = "", ""
+    image, source_url, summary = "", "", ""
     if resolver:
         match = resolver.resolve(item.title, item.domain)
         if match:
-            image, source_url = match.image, match.link
+            image, source_url, summary = match.image, match.link, match.summary
 
     return {
         "id": f"{item.category}-{index}",
@@ -82,6 +82,7 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
         "link": item.link,
         "image": image,
         "source_url": source_url,
+        "summary": summary,
         "source_count": item.source_count,
         "score": round(scored.score, 3),
         "speech": speech_text(item, pick_extra(item)),

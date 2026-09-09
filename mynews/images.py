@@ -24,6 +24,7 @@ MRSS = "{http://search.yahoo.com/mrss/}"
 CONTENT = "{http://purl.org/rss/1.0/modules/content/}encoded"
 _IMG_RE = re.compile(r"""<img[^>]+src=["']([^"']+)""", re.I)
 _TAG_RE = re.compile(r"<[^>]+>")
+_SUMMARY_MAX = 1800
 
 
 @dataclass
@@ -31,6 +32,7 @@ class Article:
     title: str
     link: str
     image: str
+    summary: str = ""
 
 
 def _clean(text: str) -> str:
@@ -62,6 +64,17 @@ def extract_image(item: ET.Element) -> str:
     return ""
 
 
+def extract_summary(item: ET.Element) -> str:
+    """Feed'deki ozet metni. content:encoded genelde description'dan uzun.
+
+    Bu metin haberin gercek govdesinden geliyor; senaryo yazarken LLM'in
+    uydurmadan baglam kurabilmesini saglayan sey bu.
+    """
+    candidates = [_clean(item.findtext(field) or "") for field in ("description", CONTENT)]
+    best = max(candidates, key=len) if candidates else ""
+    return best[:_SUMMARY_MAX]
+
+
 def parse_articles(raw: bytes) -> list[Article]:
     """Bozuk XML yaygin: once dogrudan, sonra temizlenmis halini dene."""
     root = None
@@ -79,7 +92,9 @@ def parse_articles(raw: bytes) -> list[Article]:
         title = _clean(item.findtext("title"))
         link = (item.findtext("link") or "").strip()
         if title and link.startswith("http"):
-            articles.append(Article(title, link, extract_image(item)))
+            articles.append(
+                Article(title, link, extract_image(item), extract_summary(item))
+            )
     return articles
 
 
@@ -99,7 +114,7 @@ class ImageResolver:
         self.feeds = feeds
         self.threshold = threshold
         self._cache: dict[str, list[Article]] = {}
-        self.stats = {"aranan": 0, "eslesen": 0, "gorselli": 0}
+        self.stats = {"aranan": 0, "eslesen": 0, "gorselli": 0, "ozetli": 0}
 
     def _articles_for(self, domain: str) -> list[Article]:
         if domain in self._cache:
@@ -132,4 +147,6 @@ class ImageResolver:
         self.stats["eslesen"] += 1
         if best.image:
             self.stats["gorselli"] += 1
+        if best.summary:
+            self.stats["ozetli"] += 1
         return best

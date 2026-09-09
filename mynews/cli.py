@@ -77,6 +77,29 @@ def cmd_build(args: argparse.Namespace) -> int:
 
     paths = write(bulletin) + write_digest(bulletin)
 
+    if args.podcast:
+        from pathlib import Path
+
+        from .script import ScriptError, generate
+        from .tts import synthesize_script
+
+        try:
+            turns, dropped = generate(bulletin, cfg.get("podcast", {}))
+            print(f"Senaryo: {len(turns)} replik.")
+            for line in dropped:
+                print(f"  ayiklandi -> {line}")
+
+            site = Path(__file__).resolve().parent.parent / "site"
+            segments = synthesize_script(turns, site, cfg.get("tts", {}), bulletin["date"])
+            bulletin["podcast"] = {
+                "date": bulletin["date"],
+                "turns": segments,
+                "dropped": len(dropped),
+            }
+            print(f"Podcast: {len(segments)} replik seslendirildi.")
+        except ScriptError as exc:
+            print(f"Podcast uretilemedi: {exc}")
+
     if args.sync_doc:
         from .digest import render_text
         from .gdocs import DocSyncError, service_account_email, sync_document
@@ -115,6 +138,11 @@ def main(argv: list[str] | None = None) -> int:
         "--with-audio",
         action="store_true",
         help="ses anahtari tanimliysa haber basina ses uret",
+    )
+    p_build.add_argument(
+        "--podcast",
+        action="store_true",
+        help="GEMINI_API_KEY varsa iki sunuculu podcast senaryosu uret ve seslendir",
     )
     p_build.add_argument(
         "--sync-doc",

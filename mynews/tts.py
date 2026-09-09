@@ -327,3 +327,55 @@ def synthesize_bulletin(bulletin: dict, site_dir: Path, config: dict) -> int:
     if removed:
         print(f"  {removed} eski ses dosyasi silindi")
     return produced
+
+def synthesize_script(turns, site_dir: Path, config: dict, date: str) -> list[dict]:
+    """Podcast repliklerini seslendirir; her sunucu kendi sesiyle konusur.
+
+    Replikler ayri dosyalar halinde uretilir ve arayuz sirayla calar -
+    boylece ffmpeg ile birlestirmeye gerek kalmaz, tek replik tekrar
+    dinlenebilir ve onbellek replik bazinda calisir.
+    """
+    engine_name = available_engine(config.get("engine", "auto"))
+    if not engine_name:
+        return []
+
+    engine = ENGINES[engine_name]
+    audio_dir = site_dir / "audio" / "cache"
+    audio_dir.mkdir(parents=True, exist_ok=True)
+    manifest = _load_manifest(audio_dir)
+    today = date
+
+    voices = config.get("podcast_voices", {})
+    out: list[dict] = []
+
+    for turn in turns:
+        # Konusmaciya gore ses secimi: cache_key ile tutarli olmasi icin
+        # ayni ses listesi tek elemanli olarak veriliyor.
+        voice = voices.get(turn.speaker)
+        turn_config = dict(config)
+        if voice:
+            turn_config[f"{engine_name}_voices"] = [voice]
+
+        key = cache_key(turn.text, engine_name, turn_config)
+        manifest[key] = today
+        existing = next(iter(audio_dir.glob(key + ".*")), None)
+
+        if existing:
+            path = existing
+        else:
+            try:
+                path = engine(turn.text, audio_dir / key, turn_config).path
+            except TTSError as exc:
+                print(f"  replik seslendirilemedi: {exc}")
+                continue
+
+        out.append({
+            "speaker": turn.speaker,
+            "text": turn.text,
+            "audio": f"audio/cache/{path.name}",
+        })
+
+    _manifest_path(audio_dir).write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+    return out

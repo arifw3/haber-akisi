@@ -1,0 +1,189 @@
+# coding=utf-8
+"""Bultenden iki sunuculu Turkce podcast senaryosu uretir.
+
+NotebookLM'in Audio Overview'una benzer bir format: iki sunucu haberleri
+sirayla ele alir, aralarinda gecis yapar. Fark, kaynak disiplininde.
+
+Uydurmayi engelleyen uc onlem:
+
+1. Modele yalnizca elimizdeki metin veriliyor: baslik, yayincinin kendi
+   ozeti ve ayni olayi yazan diger kaynaklarin basliklari. Baska hicbir
+   sey yok.
+2. Prompt, verilmeyen hicbir bilgiyi (sayi, tarih, isim, sebep-sonuc)
+   eklememeyi acikca yasakliyor.
+3. Uretim sonrasi dogrulayici, metinde gecen sayilarin kaynak metinde
+   olup olmadigini kontrol ediyor; uyduruk sayi iceren replikler
+   ayiklaniyor (bkz. verify_turns).
+
+Ozeti olmayan haberler senaryoya girmiyor - baslikla yorum yapilmaz.
+"""
+from __future__ import annotations
+
+import json
+import os
+import re
+import urllib.error
+import urllib.request
+from dataclasses import dataclass
+
+GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+DEFAULT_MODEL = "gemini-2.5-flash"
+
+SYSTEM_RULES = """Sen bir Türkçe haber podcast'i için senaryo yazıyorsun.
+İki sunucu var: AYŞE ve MERT. Doğal, akıcı, sohbet havasında konuşuyorlar.
+
+MUTLAK KURALLAR:
+1. SADECE sana verilen haber metinlerindeki bilgiyi kullan. Hiçbir sayı,
+   tarih, isim, yer veya sebep-sonuç ilişkisi EKLEME.
+2. Kendi yorumunu, tahminini veya genel kültür bilgini KATMA.
+3. Bir haberde detay azsa kısa geç; doldurma yapma.
+4. Her haberde kaynağı an ("Hürriyet'in aktardığına göre" gibi).
+5. Emin olmadığın hiçbir şeyi söyleme.
+
+ÜSLUP:
+- Kısa cümleler. Her replik en fazla 2-3 cümle.
+- Sunucular birbirine soru sorabilir, ama cevap yalnızca verilen metinden gelir.
+- Abartı, clickbait, duygusal yorum yok. Sakin ve bilgilendirici.
+- Bölüm kısa bir selamlamayla başlar, kısa bir kapanışla biter."""
+
+
+class ScriptError(RuntimeError):
+    pass
+
+
+@dataclass
+class Turn:
+    speaker: str
+    text: str
+
+
+def _post(url: str, payload: dict, headers: dict, timeout: int = 120) -> bytes:
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST"
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read()
+    except urllib.error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", "replace")[:300]
+        raise ScriptError(f"Gemini API {exc.code}: {detail}") from exc
+    except urllib.error.URLError as exc:
+        raise ScriptError(f"Gemini API'ye ulasilamadi: {exc}") from exc
+
+
+def build_context(bulletin: dict, max_items: int = 12) -> tuple[str, list[str]]:
+    """Modele verilecek kaynak metni ve dogrulama icin ham metin listesi.
+
+    Yalnizca ozeti olan haberler alinir: baslikla yorum yapilmaz.
+    """
+    lines: list[str] = []
+    raw: list[str] = []
+    count = 0
+
+    for segment in bulletin.get("segments", []):
+        segment_items = [i for i in segment.get("items", []) if i.get("summary")]
+        if not segment_items:
+            continue
+
+        lines.append(f"\n## BÖLÜM: {segment['title']}")
+        for item in segment_items:
+            if count >= max_items:
+                break
+            count += 1
+            lines.append(f"\nHABER {count}")
+            lines.append(f"Başlık: {item['title']}")
+            lines.append(f"Kaynak: {item['publisher']}")
+            lines.append(f"Özet: {item['summary']}")
+            others = [f"{r['source']}: {r['title']}" for r in item.get("related", [])[:3]]
+            if others:
+                lines.append("Diğer kaynaklar: " + " | ".join(others))
+
+            raw.append(" ".join([item["title"], item["summary"], " ".join(others)]))
+
+    return "\n".join(lines), raw
+
+
+_NUMBER_RE = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def verify_turns(turns: list[Turn], raw_sources: list[str]) -> tuple[list[Turn], list[str]]:
+    """Kaynak metinde gecmeyen sayi iceren replikleri ayikla.
+
+    Uydurma en cok sayilarda goruluyor ("3 kisi", "yuzde 40"). Model
+    bir sayiyi kendi eklediyse o replik guvenilmez sayilir.
+    """
+    haystack = " ".join(raw_sources)
+    source_numbers = set(_NUMBER_RE.findall(haystack))
+
+    kept: list[Turn] = []
+    dropped: list[str] = []
+    for turn in turns:
+        invented = [n for n in _NUMBER_RE.findall(turn.text) if n not in source_numbers]
+        # Tek haneli sayilar siralama/gunluk dil olabilir ("iki haber", "3."),
+        # asil risk kaynakta hic gecmeyen buyuk sayilarda.
+        invented = [n for n in invented if len(n) > 1]
+        if invented:
+            dropped.append(f"{turn.speaker}: {turn.text[:60]}… (uydurma sayı: {', '.join(invented)})")
+            continue
+        kept.append(turn)
+    return kept, dropped
+
+
+def generate(bulletin: dict, config: dict | None = None) -> tuple[list[Turn], list[str]]:
+    """Senaryoyu uret. (replikler, ayiklananlar) dondurur."""
+    config = config or {}
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key:
+        raise ScriptError("GEMINI_API_KEY tanimli degil")
+
+    context, raw_sources = build_context(bulletin, int(config.get("max_items", 12)))
+    if not raw_sources:
+        raise ScriptError("Ozeti olan haber yok; senaryo uretilemez")
+
+    prompt = (
+        f"{SYSTEM_RULES}\n\n"
+        f"Bugünün haberleri aşağıda. Bunlardan bir podcast bölümü senaryosu yaz.\n"
+        f"{context}\n\n"
+        "Çıktıyı JSON olarak ver: her öğe {\"speaker\": \"AYŞE\" veya \"MERT\", "
+        "\"text\": \"replik\"} biçiminde bir dizi."
+    )
+
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": float(config.get("temperature", 0.4)),
+            "responseMimeType": "application/json",
+            "responseSchema": {
+                "type": "ARRAY",
+                "items": {
+                    "type": "OBJECT",
+                    "properties": {
+                        "speaker": {"type": "STRING", "enum": ["AYŞE", "MERT"]},
+                        "text": {"type": "STRING"},
+                    },
+                    "required": ["speaker", "text"],
+                },
+            },
+        },
+    }
+
+    model = config.get("model", DEFAULT_MODEL)
+    data = _post(
+        GEMINI_URL.format(model=model),
+        payload,
+        {"x-goog-api-key": key, "Content-Type": "application/json"},
+    )
+
+    try:
+        parsed = json.loads(data)
+        text = parsed["candidates"][0]["content"]["parts"][0]["text"]
+        items = json.loads(text)
+    except (KeyError, IndexError, json.JSONDecodeError) as exc:
+        raise ScriptError(f"Senaryo ayristirilamadi: {data[:200]!r}") from exc
+
+    turns = [
+        Turn(speaker=i.get("speaker", "AYŞE"), text=(i.get("text") or "").strip())
+        for i in items
+        if (i.get("text") or "").strip()
+    ]
+    return verify_turns(turns, raw_sources)

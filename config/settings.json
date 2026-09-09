@@ -159,7 +159,11 @@
     ],
     "google_rate": 1.0,
     "google_pitch": 0.0,
-    "cache_days": 7
+    "cache_days": 7,
+    "podcast_voices": {
+      "AYŞE": "tr-TR-Chirp3-HD-Aoede",
+      "MERT": "tr-TR-Chirp3-HD-Charon"
+    }
   },
   "image_matching": {
     "enabled": true,
@@ -225,5 +229,11 @@
     "shiftdelete.net": [
       "https://shiftdelete.net/feed"
     ]
+  },
+  "podcast": {
+    "enabled": true,
+    "model": "gemini-2.5-flash",
+    "max_items": 12,
+    "temperature": 0.4
   }
 }

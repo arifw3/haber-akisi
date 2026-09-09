@@ -15,7 +15,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.digest import render_html, render_text, tr_upper
 from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
-from mynews.images import ImageResolver, extract_image, parse_articles
+from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
+from mynews.script import Turn, build_context, verify_turns
 from mynews.rank import Ranker, normalize, similarity
 from mynews.speech import intro_for, normalize as speech_normalize
 
@@ -379,6 +380,88 @@ class TestDocSync(unittest.TestCase):
 
     def test_service_account_email_handles_garbage(self):
         self.assertEqual(service_account_email("bozuk"), "")
+
+
+SUMMARY_BULLETIN = {
+    "segments": [{
+        "title": "Türkiye",
+        "items": [
+            {
+                "title": "Manisa'da gizli kamera bulundu",
+                "publisher": "Hürriyet",
+                "summary": "Şehzadeler ilçesinde 21 şüpheli hakkında işlem başlatıldı.",
+                "related": [{"source": "Cumhuriyet", "title": "Manisa'da skandal"}],
+            },
+            {
+                "title": "Özeti olmayan haber",
+                "publisher": "X",
+                "summary": "",
+                "related": [],
+            },
+        ],
+    }],
+}
+
+
+class TestScriptContext(unittest.TestCase):
+    def test_only_items_with_summary_included(self):
+        # Baslikla yorum yapilmaz: ozeti olmayan haber senaryoya girmemeli
+        context, raw = build_context(SUMMARY_BULLETIN)
+        self.assertIn("Manisa", context)
+        self.assertNotIn("Özeti olmayan haber", context)
+        self.assertEqual(len(raw), 1)
+
+    def test_context_carries_other_sources(self):
+        context, _ = build_context(SUMMARY_BULLETIN)
+        self.assertIn("Cumhuriyet", context)
+
+    def test_max_items_respected(self):
+        big = {"segments": [{"title": "T", "items": [
+            {"title": f"Haber {i}", "publisher": "P", "summary": "Metin", "related": []}
+            for i in range(20)
+        ]}]}
+        _, raw = build_context(big, max_items=5)
+        self.assertEqual(len(raw), 5)
+
+
+class TestScriptVerification(unittest.TestCase):
+    def test_invented_number_dropped(self):
+        # Kaynakta 21 var, 450 yok -> ikinci replik ayiklanmali
+        sources = ["Şehzadeler ilçesinde 21 şüpheli hakkında işlem başlatıldı."]
+        turns = [
+            Turn("AYŞE", "Manisa'da 21 şüpheli hakkında işlem başlatılmış."),
+            Turn("MERT", "Toplam 450 kişi gözaltına alındı."),
+        ]
+        kept, dropped = verify_turns(turns, sources)
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(len(dropped), 1)
+        self.assertIn("450", dropped[0])
+
+    def test_numberless_turns_kept(self):
+        kept, dropped = verify_turns(
+            [Turn("AYŞE", "Merhaba, bugünkü haberlere geçiyoruz.")], ["herhangi bir metin"]
+        )
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(dropped, [])
+
+    def test_single_digit_tolerated(self):
+        # "2 haber", "3." gibi gunluk dil ayiklanmamali
+        kept, _ = verify_turns([Turn("MERT", "Sırada 2 konu var.")], ["kaynak metni"])
+        self.assertEqual(len(kept), 1)
+
+
+class TestSummaryExtraction(unittest.TestCase):
+    def test_prefers_longer_field(self):
+        item = ET.fromstring(
+            "<item><description>Kısa</description>"
+            "<content:encoded xmlns:content='http://purl.org/rss/1.0/modules/content/'>"
+            "Bu çok daha uzun bir gövde metnidir.</content:encoded></item>"
+        )
+        self.assertIn("gövde metnidir", extract_summary(item))
+
+    def test_strips_html(self):
+        item = ET.fromstring("<item><description>&lt;p&gt;Metin&lt;/p&gt;</description></item>")
+        self.assertEqual(extract_summary(item), "Metin")
 
 
 if __name__ == "__main__":

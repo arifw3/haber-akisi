@@ -9,3 +9,6 @@ site/_probe.html
 
 .el_key
 site/audio/
+
+.gcp_sa.json
+.gcp_doc_id
