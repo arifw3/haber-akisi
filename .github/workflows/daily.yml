@@ -30,12 +30,18 @@ jobs:
       - name: Feed sağlığını kontrol et
         run: python -m mynews health
 
-      - name: Ses önbelleğini geri yükle
+      - name: Önbelleği ve geçmişi geri yükle
         uses: actions/cache@v4
         with:
-          path: site/audio/cache
-          key: tts-cache-${{ github.run_id }}
-          restore-keys: tts-cache-
+          # Ses önbelleği, yayınlanmış bölümler, podcast arşivi ve
+          # günler arası tekrar elemesi için görülen haber geçmişi.
+          path: |
+            site/audio/cache
+            site/audio/episodes
+            site/data/episodes.json
+            data/history.json
+          key: mynews-state-${{ github.run_id }}
+          restore-keys: mynews-state-
 
       - name: Bülteni üret
         env:

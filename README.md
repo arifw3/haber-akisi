@@ -3,7 +3,7 @@
 Google Haberler RSS'inden her gün **30 haber** derleyip Tailwind tabanlı bir **PWA**'da sunan bülten.
 İki kullanım biçimi var: kartlar arasında elle gezinme, ya da **hands-free** dinleme — okunan haber öne gelir, bitince sıradaki gelir.
 
-Kategoriler: **Türkiye**, **Bilim & Teknoloji**, **Spor** (her birinden 10 haber).
+Kategoriler: **Türkiye**, **Dünya**, **Ekonomi**, **Bilim & Teknoloji**, **Sağlık**, **Spor** — günde ~46 haber.
 
 **Canlı:** https://arifw3.github.io/haber-akisi/ · **Depo:** https://github.com/arifw3/haber-akisi
 
@@ -125,6 +125,30 @@ Sonra iki secret: `GOOGLE_DOC_ID` (Doc URL'indeki uzun dizge) ve `GOOGLE_SERVICE
 `requirements.txt` projenin **tek** pip bağımlılığıdır ve yalnızca bu özellik için gerekir:
 servis hesabı JWT'si RS256 ile imzalanmalı, standart kütüphanede RSA imzalama yok. `--sync-doc`
 kullanılmadığında `mynews/gdocs.py` hiç içe aktarılmaz.
+
+## Podcast
+
+Her sabah iki sunuculu (Ayşe & Mert) bir bölüm üretilir:
+
+1. `script.py` Gemini ile senaryoyu yazar — yalnızca yayıncı özetlerinden, uydurma denetimiyle
+2. Replikler ayrı ayrı seslendirilir (arayüz sırayla çalar, önbellek replik bazında çalışır)
+3. `podcast.py` replikleri tek dosyada birleştirir ve iTunes uyumlu RSS yazar
+
+**https://arifw3.github.io/haber-akisi/podcast.xml** — Spotify, Apple Podcasts veya herhangi bir
+uygulamaya eklenebilir. Birleştirme için ffmpeg gerekmez: aynı kodekle üretilmiş MP3 çerçeveleri
+arka arkaya eklenince geçerli dosya oluşur, süre MP3 başlığındaki bit hızından hesaplanır.
+
+Gemini zaman zaman 503 döndüğü için istekler artan beklemeyle yeniden denenir; tek denemede
+vazgeçmek günlük bölümün hiç üretilmemesi demek olurdu.
+
+## Günler arası tekrar elemesi
+
+Gündemde birkaç gün kalan haber her sabah yeniden sunuluyordu. `history.py` son 7 günde
+gösterilen haberleri hatırlar ve benzerlerini eler. Başlık belirgin değiştiyse (yeni gelişme)
+benzerlik düşeceği için haber tekrar geçer — istenen davranış budur.
+
+Bugünün kayıtları "görülmüş" sayılmaz; aksi halde aynı gün ikinci kez üretim yapıldığında
+bülten boşalırdı. Geçmiş, iş akışında `actions/cache` ile taşınır.
 
 ## Bilinçli sınırlar
 

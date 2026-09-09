@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>Haber Akışı</title>
+<link>https://arifw3.github.io/haber-akisi/</link>
+<description>Google Haberler'den derlenen günlük Türkçe haber bülteni. İki sunucu, günün öne çıkan haberleri, her sabah yeni bölüm.</description>
+<language>tr</language>
+<itunes:author>Haber Akışı</itunes:author>
+<itunes:summary>Google Haberler'den derlenen günlük Türkçe haber bülteni. İki sunucu, günün öne çıkan haberleri, her sabah yeni bölüm.</itunes:summary>
+<itunes:category text="News"/>
+<itunes:explicit>false</itunes:explicit>
+<itunes:image href="https://arifw3.github.io/haber-akisi/icons/icon-512.png"/>
+<atom:link xmlns:atom='http://www.w3.org/2005/Atom' href='https://arifw3.github.io/haber-akisi/podcast.xml' rel='self' type='application/rss+xml'/>
+<item>
+<title>Haber Akışı — 2026-09-09</title>
+<description>Bugünün öne çıkan haberleri: Çay bahçesinin erkekler tuvaletinde gizli kamera düzeneği bulundu; Eski MASAK Başkanı’ndan Gökçek uyarısı: ‘Tutarlar çok büyük, iddialar çok ciddi, mal varlıklarına el konulmalı’; 12 ülke katil İsrail'e karşı harekete geçti: Ortak yaptırım kararı; İran medyası duyurdu: Hark ve Cask'ta patlama sesleri; SPK'dan MSCI eleştirilerini ortadan kaldıracak düzenleme; İngiltere'de tahvil ihracında tarihi faiz seviyesi</description>
+<pubDate>Wed, 09 Sep 2026 01:31:56 +0000</pubDate>
+<guid isPermaLink="false">2026-09-09</guid>
+<enclosure url="https://arifw3.github.io/haber-akisi/audio/episodes/2026-09-09.mp3" length="817344" type="audio/mpeg"/>
+<itunes:duration>1:56</itunes:duration>
+<itunes:episodeType>full</itunes:episodeType>
+</item>
+</channel>
+</rss>

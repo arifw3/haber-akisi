@@ -22,6 +22,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from dataclasses import dataclass
@@ -57,18 +58,39 @@ class Turn:
     text: str
 
 
-def _post(url: str, payload: dict, headers: dict, timeout: int = 120) -> bytes:
-    req = urllib.request.Request(
-        url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST"
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read()
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", "replace")[:300]
-        raise ScriptError(f"Gemini API {exc.code}: {detail}") from exc
-    except urllib.error.URLError as exc:
-        raise ScriptError(f"Gemini API'ye ulasilamadi: {exc}") from exc
+# Gecici hatalar: model asiri yuklu (503), hiz siniri (429), sunucu hatasi.
+_RETRYABLE = {429, 500, 502, 503, 504}
+
+
+def _post(url: str, payload: dict, headers: dict, timeout: int = 120, attempts: int = 4) -> bytes:
+    """Gecici hatalarda artan bekleme ile yeniden dener.
+
+    Gemini zaman zaman 503 donuyor; tek denemede vazgecmek gunluk bolumun
+    hic uretilmemesi demek olurdu.
+    """
+    body = json.dumps(payload).encode("utf-8")
+    last = ""
+
+    for attempt in range(attempts):
+        req = urllib.request.Request(url, data=body, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read()
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "replace")[:200]
+            last = f"HTTP {exc.code}: {detail}"
+            if exc.code not in _RETRYABLE or attempt == attempts - 1:
+                raise ScriptError(f"Gemini API {last}") from exc
+        except urllib.error.URLError as exc:
+            last = str(exc)
+            if attempt == attempts - 1:
+                raise ScriptError(f"Gemini API'ye ulasilamadi: {exc}") from exc
+
+        wait = 2 ** attempt * 3
+        print(f"  Gemini gecici hata ({last[:60]}), {wait} sn sonra yeniden deneniyor…")
+        time.sleep(wait)
+
+    raise ScriptError(f"Gemini API: {last}")
 
 
 def build_context(bulletin: dict, max_items: int = 12) -> tuple[str, list[str]]:

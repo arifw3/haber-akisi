@@ -95,6 +95,22 @@ def cmd_build(args: argparse.Namespace) -> int:
                 "dropped": len(dropped),
             }
             print(f"Podcast: {len(segments)} replik seslendirildi.")
+
+            # Podcast uygulamalari tek dosya bekler: replikleri birlestirip
+            # bolumu arsive ekle ve RSS'i yenile.
+            from .podcast import build_episode, load_episodes, write_feed
+
+            pod_cfg = cfg.get("podcast", {})
+            episode = build_episode(bulletin, site, int(pod_cfg.get("keep", 30)))
+            if episode:
+                base = pod_cfg.get("base_url", "")
+                feed = write_feed(load_episodes(site / "data" / "episodes.json"), site, base, pod_cfg)
+                bulletin["episode"] = episode
+                print(
+                    f"Bolum: {episode['audio']} "
+                    f"({episode['bytes'] // 1024} KB, {episode['duration'] // 60}:{episode['duration'] % 60:02d}) "
+                    f"-> {feed.name}"
+                )
         except ScriptError as exc:
             print(f"Podcast uretilemedi: {exc}")
 

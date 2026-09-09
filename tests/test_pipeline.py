@@ -5,6 +5,7 @@ Fixture'lar gercek Google News RSS ciktisindan alinmis yapidadir.
 """
 import json
 import sys
+import tempfile
 import unittest
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -15,6 +16,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.digest import render_html, render_text, tr_upper
 from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
+from mynews.podcast import format_duration, render_feed
 from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
 from mynews.script import Turn, build_context, verify_turns
 from mynews.rank import Ranker, normalize, similarity
@@ -462,6 +464,79 @@ class TestSummaryExtraction(unittest.TestCase):
     def test_strips_html(self):
         item = ET.fromstring("<item><description>&lt;p&gt;Metin&lt;/p&gt;</description></item>")
         self.assertEqual(extract_summary(item), "Metin")
+
+
+EPISODES = [{
+    "date": "2026-09-09",
+    "title": "Haber Akışı — 2026-09-09",
+    "audio": "audio/episodes/2026-09-09.mp3",
+    "bytes": 743232,
+    "duration": 106,
+    "summary": "Bugünün haberleri: A & B <test>",
+    "published": "2026-09-09T06:00:00+00:00",
+}]
+
+
+class TestHistory(unittest.TestCase):
+    def _history(self, entries):
+        from mynews.history import History
+
+        tmp = Path(tempfile.mkdtemp()) / "history.json"
+        tmp.write_text(json.dumps(entries), encoding="utf-8")
+        return History(tmp, days=7, threshold=0.6)
+
+    def test_yesterday_entry_is_seen(self):
+        dun = (datetime.now(timezone.utc) - timedelta(days=1)).date().isoformat()
+        h = self._history([{"title": "Ankara'da trafik kazası oldu", "url": "", "date": dun}])
+        self.assertTrue(h.seen("Ankara'da trafik kazası oldu"))
+
+    def test_today_entry_not_seen(self):
+        # Ayni gun yeniden uretimde bulten bosalmamali
+        bugun = datetime.now(timezone.utc).date().isoformat()
+        h = self._history([{"title": "Ankara'da trafik kazası oldu", "url": "", "date": bugun}])
+        self.assertFalse(h.seen("Ankara'da trafik kazası oldu"))
+
+    def test_old_entry_expired(self):
+        eski = (datetime.now(timezone.utc) - timedelta(days=30)).date().isoformat()
+        h = self._history([{"title": "Ankara'da trafik kazası oldu", "url": "", "date": eski}])
+        self.assertFalse(h.seen("Ankara'da trafik kazası oldu"))
+
+    def test_url_match_is_exact(self):
+        dun = (datetime.now(timezone.utc) - timedelta(days=1)).date().isoformat()
+        h = self._history([{"title": "Bambaşka", "url": "https://x.com/a", "date": dun}])
+        self.assertTrue(h.seen("Alakasız başlık", "https://x.com/a"))
+
+    def test_unrelated_story_passes(self):
+        dun = (datetime.now(timezone.utc) - timedelta(days=1)).date().isoformat()
+        h = self._history([{"title": "Ankara'da trafik kazası oldu", "url": "", "date": dun}])
+        self.assertFalse(h.seen("Fenerbahçe transferi bitirdi"))
+
+
+class TestPodcastFeed(unittest.TestCase):
+    def test_duration_formatting(self):
+        self.assertEqual(format_duration(106), "1:46")
+        self.assertEqual(format_duration(3725), "1:02:05")
+        self.assertEqual(format_duration(0), "0:00")
+
+    def test_feed_has_enclosure_with_absolute_url(self):
+        xml = render_feed(EPISODES, "https://arifw3.github.io/haber-akisi")
+        self.assertIn('url="https://arifw3.github.io/haber-akisi/audio/episodes/2026-09-09.mp3"', xml)
+        self.assertIn('length="743232"', xml)
+        self.assertIn('type="audio/mpeg"', xml)
+
+    def test_feed_escapes_summary(self):
+        xml = render_feed(EPISODES, "https://x.com")
+        self.assertIn("&amp;", xml)
+        self.assertNotIn("<test>", xml)
+
+    def test_feed_has_itunes_fields(self):
+        xml = render_feed(EPISODES, "https://x.com")
+        for needle in ("<itunes:duration>1:46</itunes:duration>", "itunes:category", "<language>tr</language>"):
+            self.assertIn(needle, xml)
+
+    def test_trailing_slash_in_base_url_normalised(self):
+        xml = render_feed(EPISODES, "https://x.com/")
+        self.assertNotIn("https://x.com//audio", xml)
 
 
 if __name__ == "__main__":

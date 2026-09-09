@@ -15,6 +15,9 @@
 
 const DATA_URL = "data/latest.json";
 const SAVED_KEY = "mynews:saved";
+const READ_KEY = "mynews:read";
+const RATE_KEY = "mynews:rate";
+const RATES = [1, 1.25, 1.5, 2];
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -30,6 +33,7 @@ const el = {
   miniPause: $("#mini-pause"),
   miniEq: $("#mini-eq"),
   miniNext: $("#mini-next"),
+  miniRate: $("#mini-rate"),
   miniClose: $("#mini-close"),
 };
 
@@ -42,16 +46,20 @@ const state = {
   queue: [],
   index: 0,
   playing: false,
-  rate: 1,
+  rate: Number(localStorage.getItem(RATE_KEY)) || 1,
   voice: null,
   saved: new Set(JSON.parse(localStorage.getItem(SAVED_KEY) || "[]")),
+  read: new Set(JSON.parse(localStorage.getItem(READ_KEY) || "[]")),
   wakeLock: null,
 };
 
 /* Kategori paletleri — hero gradienti ve rozet rengi buradan türer. */
 const PALETTE = {
   "turkiye":         { from: "#8f0f47", to: "#e0447f", chip: "bg-[#c2185b]" },
+  "dunya":           { from: "#2d1b6b", to: "#6b4fc4", chip: "bg-[#4a35a0]" },
+  "ekonomi":         { from: "#8a2a12", to: "#e0834f", chip: "bg-[#c25418]" },
   "bilim-teknoloji": { from: "#5c1478", to: "#b93bb0", chip: "bg-[#8e24aa]" },
+  "saglik":          { from: "#0f4f5c", to: "#3aa8b0", chip: "bg-[#15788a]" },
   "spor":            { from: "#a81742", to: "#f4715c", chip: "bg-[#e0464f]" },
 };
 const FALLBACK_PALETTE = { from: "#4a2338", to: "#8a5570", chip: "bg-[#7b5164]" };
@@ -98,6 +106,24 @@ function heroStyle(item) {
 
 function persistSaved() {
   localStorage.setItem(SAVED_KEY, JSON.stringify([...state.saved]));
+}
+
+/* Okunan haberler: son 300 kayıt yeter, liste sınırsız büyümesin. */
+function markRead(item) {
+  if (!item || !item.link || state.read.has(item.link)) return;
+  state.read.add(item.link);
+  const trimmed = [...state.read].slice(-300);
+  state.read = new Set(trimmed);
+  localStorage.setItem(READ_KEY, JSON.stringify(trimmed));
+}
+
+function cycleRate() {
+  const next = RATES[(RATES.indexOf(state.rate) + 1) % RATES.length];
+  state.rate = next;
+  localStorage.setItem(RATE_KEY, String(next));
+  el.player.playbackRate = next;
+  if (state.playing && !state.queue[state.index]?.audio) playCurrent();
+  updateMini();
 }
 
 function allItems() {
@@ -228,7 +254,9 @@ function heroCard(item) {
 /* Liste satırı */
 function listRow(item) {
   return `
-  <article data-open="${escapeHtml(item.id)}" class="flex cursor-pointer gap-3 py-3">
+  <article data-open="${escapeHtml(item.id)}" class="flex cursor-pointer gap-3 py-3${
+    state.read.has(item.link) ? " opacity-55" : ""
+  }">
     <div class="hero-tex relative h-[4.6rem] w-[4.6rem] shrink-0 overflow-hidden rounded-2xl" style="${heroStyle(item)}">
       ${item.image
         ? imageLayer(item)
@@ -237,6 +265,7 @@ function listRow(item) {
     <div class="min-w-0 flex-1">
       <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(item.segmentTitle)}</p>
       <h3 class="mt-0.5 line-clamp-2 text-[15.5px] font-semibold leading-snug">${escapeHtml(item.title)}</h3>
+      ${state.read.has(item.link) ? '<span class="mt-1 inline-block text-[11px] font-medium text-ink-faint">okundu</span>' : ""}
       <div class="mt-1.5 flex items-center gap-2">
         ${logoMarkup(item, "h-5 w-5", "text-[10px]")}
         <span class="truncate text-[12.5px] text-ink-soft">${escapeHtml(item.publisher)}</span>
@@ -324,7 +353,7 @@ function podcastCard() {
   if (!turns.length) return "";
   const dakika = Math.max(1, Math.round(turns.reduce((n, t) => n + t.title.split(" ").length, 0) / 150));
   return `
-  <button data-podcast class="hero-tex relative mb-5 w-full overflow-hidden rounded-xl2 p-5 text-left shadow-hero"
+  <button data-podcast class="hero-tex relative mb-3 w-full overflow-hidden rounded-xl2 p-5 text-left shadow-hero"
     style="background-image:linear-gradient(115deg,#6d1440,#d81b60 60%,#f4728c)">
     <div class="relative flex items-center gap-4">
       <span class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/20 backdrop-blur">
@@ -336,7 +365,14 @@ function podcastCard() {
         <span class="block text-[13px] text-white/75">${turns.length} bölüm · ~${dakika} dakika · Ayşe &amp; Mert</span>
       </span>
     </div>
-  </button>`;
+  </button>
+  <a href="podcast.xml" target="_blank" rel="noopener"
+     class="mb-5 -mt-3 flex items-center justify-center gap-1.5 text-[12.5px] font-medium text-ink-soft">
+    <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M6.2 17.8a1.5 1.5 0 1 1-2.1 2.1 1.5 1.5 0 0 1 2.1-2.1zM4 11.5a8.5 8.5 0 0 1 8.5 8.5h-2.6A5.9 5.9 0 0 0 4 14.1zM4 5a15 15 0 0 1 15 15h-2.6A12.4 12.4 0 0 0 4 7.6z"/>
+    </svg>
+    Podcast uygulamanda dinle
+  </a>`;
 }
 
 function renderHome() {
@@ -448,6 +484,7 @@ function renderSaved() {
 function renderDetail() {
   const item = itemById(state.detailId);
   if (!item) return navigate("home");
+  markRead(item);
 
   const p = paletteOf(item);
   const saved = state.saved.has(item.link);
@@ -622,6 +659,8 @@ function playCurrent() {
     renderDetail();
   }
 
+  if (item.segment !== "podcast") markRead(item);
+
   if (item.audio) {
     el.player.src = item.audio;
     el.player.playbackRate = state.rate;
@@ -705,6 +744,7 @@ function updateMini() {
   el.miniPlay.classList.toggle("hidden", state.playing);
   el.miniPause.classList.toggle("hidden", !state.playing);
   el.miniEq.style.visibility = state.playing ? "visible" : "hidden";
+  if (el.miniRate) el.miniRate.textContent = `${state.rate}×`;
   el.miniToggle.setAttribute("aria-label", state.playing ? "Duraklat" : "Devam et");
 }
 
@@ -780,6 +820,8 @@ el.miniToggle.addEventListener("click", () => {
   requestWakeLock();
   playCurrent();
 });
+
+el.miniRate?.addEventListener("click", cycleRate);
 
 el.miniNext.addEventListener("click", () => {
   if (state.index >= state.queue.length - 1) return;

@@ -6,7 +6,23 @@
       "topics": [
         "NATION"
       ],
-      "limit": 10
+      "limit": 8
+    },
+    {
+      "key": "dunya",
+      "title": "Dünya",
+      "topics": [
+        "WORLD"
+      ],
+      "limit": 8
+    },
+    {
+      "key": "ekonomi",
+      "title": "Ekonomi",
+      "topics": [
+        "BUSINESS"
+      ],
+      "limit": 8
     },
     {
       "key": "bilim-teknoloji",
@@ -15,7 +31,7 @@
         "TECHNOLOGY",
         "SCIENCE"
       ],
-      "limit": 10,
+      "limit": 8,
       "scoring_override": {
         "w_trust": 1.8,
         "clickbait_penalty": 1.6
@@ -23,12 +39,20 @@
       "min_trust": 0.4
     },
     {
+      "key": "saglik",
+      "title": "Sağlık",
+      "topics": [
+        "HEALTH"
+      ],
+      "limit": 6
+    },
+    {
       "key": "spor",
       "title": "Spor",
       "topics": [
         "SPORTS"
       ],
-      "limit": 10
+      "limit": 8
     }
   ],
   "scoring": {
@@ -173,11 +197,18 @@
     "hurriyet.com.tr": [
       "https://www.hurriyet.com.tr/rss/anasayfa",
       "https://www.hurriyet.com.tr/rss/gundem",
+      "https://www.hurriyet.com.tr/rss/dunya",
+      "https://www.hurriyet.com.tr/rss/ekonomi",
       "https://www.hurriyet.com.tr/rss/spor",
       "https://www.hurriyet.com.tr/rss/teknoloji"
     ],
     "cumhuriyet.com.tr": [
-      "https://www.cumhuriyet.com.tr/rss"
+      "https://www.cumhuriyet.com.tr/rss",
+      "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
+      "https://www.cumhuriyet.com.tr/rss/ekonomi",
+      "https://www.cumhuriyet.com.tr/rss/dunya",
+      "https://www.cumhuriyet.com.tr/rss/bilim-teknoloji",
+      "https://www.cumhuriyet.com.tr/rss/saglik"
     ],
     "haberturk.com": [
       "https://www.haberturk.com/rss"
@@ -227,12 +258,33 @@
     ],
     "shiftdelete.net": [
       "https://shiftdelete.net/feed"
+    ],
+    "aa.com.tr": [
+      "https://www.aa.com.tr/tr/rss/default?cat=guncel",
+      "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "https://www.aa.com.tr/tr/rss/default?cat=dunya"
+    ],
+    "odatv.com": [
+      "https://www.odatv.com/rss"
+    ],
+    "ekonomim.com": [
+      "https://www.ekonomim.com/rss"
     ]
   },
   "podcast": {
     "enabled": true,
     "model": "gemini-3.6-flash",
     "max_items": 12,
-    "temperature": 0.4
+    "temperature": 0.4,
+    "keep": 30,
+    "base_url": "https://arifw3.github.io/haber-akisi",
+    "title": "Haber Akışı",
+    "author": "Haber Akışı",
+    "description": "Google Haberler'den derlenen günlük Türkçe haber bülteni. İki sunucu, günün öne çıkan haberleri, her sabah yeni bölüm."
+  },
+  "history": {
+    "enabled": true,
+    "days": 7,
+    "similarity": 0.6
   }
 }

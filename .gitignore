@@ -12,3 +12,5 @@ site/audio/
 
 .gcp_sa.json
 .gcp_doc_id
+data/history.json
+site/data/episodes.json

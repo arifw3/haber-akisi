@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .gnews import NewsItem, check_feed
+from .history import History
 from .images import ImageResolver
 from .rank import Ranker, Scored, load_config, similarity
 from .speech import intro_for, normalize
@@ -97,6 +98,13 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
 def build(config: dict | None = None) -> dict:
     cfg = config or load_config()
 
+    hist_cfg = cfg.get("history", {})
+    history = (
+        History(days=int(hist_cfg.get("days", 7)), threshold=float(hist_cfg.get("similarity", 0.6)))
+        if hist_cfg.get("enabled", True)
+        else None
+    )
+
     matching = cfg.get("image_matching", {})
     resolver = (
         ImageResolver(cfg.get("publisher_feeds", {}), float(matching.get("similarity", 0.5)))
@@ -125,7 +133,15 @@ def build(config: dict | None = None) -> dict:
             )
             pool.extend(items)
 
+        if history:
+            before = len(pool)
+            pool = [i for i in pool if not history.seen(i.title, i.link)]
+            history.skipped += before - len(pool)
+
         chosen = Ranker(cfg, seg).select(pool, int(seg["limit"]))
+        if history:
+            for scored in chosen:
+                history.remember(scored.item.title, scored.item.link)
         segments.append(
             {
                 "key": seg["key"],
@@ -133,6 +149,9 @@ def build(config: dict | None = None) -> dict:
                 "items": [item_payload(s, i, resolver) for i, s in enumerate(chosen)],
             }
         )
+
+    if history:
+        history.save()
 
     now = datetime.now(timezone.utc)
     return {
@@ -142,6 +161,7 @@ def build(config: dict | None = None) -> dict:
         "health": health,
         "total": sum(len(s["items"]) for s in segments),
         "image_stats": resolver.stats if resolver else {},
+        "history_skipped": history.skipped if history else 0,
         "audio": None,
         "cues": [],
     }
