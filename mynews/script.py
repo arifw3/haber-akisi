@@ -30,8 +30,8 @@ from dataclasses import dataclass
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 DEFAULT_MODEL = "gemini-3.6-flash"
 
-SYSTEM_RULES = """Sen bir Türkçe haber podcast'i için senaryo yazıyorsun.
-İki sunucu var: AYŞE ve MERT. Doğal, akıcı, sohbet havasında konuşuyorlar.
+RULES_TR = """Sen bir Türkçe haber podcast'i için senaryo yazıyorsun.
+İki sunucu var: {a} ve {b}. Doğal, akıcı, sohbet havasında konuşuyorlar.
 
 MUTLAK KURALLAR:
 1. SADECE sana verilen haber metinlerindeki bilgiyi kullan. Hiçbir sayı,
@@ -45,7 +45,28 @@ MUTLAK KURALLAR:
 - Kısa cümleler. Her replik en fazla 2-3 cümle.
 - Sunucular birbirine soru sorabilir, ama cevap yalnızca verilen metinden gelir.
 - Abartı, clickbait, duygusal yorum yok. Sakin ve bilgilendirici.
-- Bölüm kısa bir selamlamayla başlar, kısa bir kapanışla biter."""
+- Bölüm kısa bir selamlamayla başlar, kısa bir kapanışla biter.
+- TÜM REPLİKLER TÜRKÇE OLMALI."""
+
+RULES_EN = """You are writing the script for an English-language news podcast.
+Two hosts: {a} and {b}. They speak naturally, like a real conversation.
+
+ABSOLUTE RULES:
+1. Use ONLY the information in the story texts given to you. Do NOT add any
+   number, date, name, place or causal claim that is not there.
+2. Do NOT add your own commentary, speculation or background knowledge.
+3. If a story has little detail, keep it short. Never pad.
+4. Attribute every story to its source ("according to BBC" and so on).
+5. Never say anything you are not certain of.
+
+STYLE:
+- Short sentences. At most 2-3 sentences per turn.
+- Hosts may ask each other questions, but answers come only from the given text.
+- No hype, no clickbait, no emotional commentary. Calm and informative.
+- Open with a brief greeting, close with a brief sign-off.
+- ALL TURNS MUST BE IN ENGLISH."""
+
+RULE_SETS = {"tr": RULES_TR, "en": RULES_EN}
 
 
 class ScriptError(RuntimeError):
@@ -162,13 +183,28 @@ def generate(bulletin: dict, config: dict | None = None) -> tuple[list[Turn], li
     if not raw_sources:
         raise ScriptError("Ozeti olan haber yok; senaryo uretilemez")
 
-    prompt = (
-        f"{SYSTEM_RULES}\n\n"
-        f"Bugünün haberleri aşağıda. Bunlardan bir podcast bölümü senaryosu yaz.\n"
-        f"{context}\n\n"
-        "Çıktıyı JSON olarak ver: her öğe {\"speaker\": \"AYŞE\" veya \"MERT\", "
-        "\"text\": \"replik\"} biçiminde bir dizi."
-    )
+    # Sunucu adlari ve prompt dili ayardan gelir; aksi halde Ingilizce
+    # bulten Turkce sunucularla ve Turkce metinle uretiliyordu.
+    hosts = list(config.get("hosts") or ["AYŞE", "MERT"])
+    language = config.get("language", "tr")
+    rules = RULE_SETS.get(language, RULES_TR).format(a=hosts[0], b=hosts[1])
+
+    if language == "en":
+        task = (
+            "Today's stories are below. Write one podcast episode script from them.\n"
+            f"{context}\n\n"
+            "Return JSON: an array of objects with \"speaker\" (either "
+            f"\"{hosts[0]}\" or \"{hosts[1]}\") and \"text\"."
+        )
+    else:
+        task = (
+            "Bugünün haberleri aşağıda. Bunlardan bir podcast bölümü senaryosu yaz.\n"
+            f"{context}\n\n"
+            "Çıktıyı JSON olarak ver: her öğe {\"speaker\": "
+            f"\"{hosts[0]}\" veya \"{hosts[1]}\", \"text\": \"replik\"}} biçiminde bir dizi."
+        )
+
+    prompt = f"{rules}\n\n{task}"
 
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
@@ -180,7 +216,7 @@ def generate(bulletin: dict, config: dict | None = None) -> tuple[list[Turn], li
                 "items": {
                     "type": "OBJECT",
                     "properties": {
-                        "speaker": {"type": "STRING", "enum": ["AYŞE", "MERT"]},
+                        "speaker": {"type": "STRING", "enum": hosts},
                         "text": {"type": "STRING"},
                     },
                     "required": ["speaker", "text"],
@@ -204,7 +240,7 @@ def generate(bulletin: dict, config: dict | None = None) -> tuple[list[Turn], li
         raise ScriptError(f"Senaryo ayristirilamadi: {data[:200]!r}") from exc
 
     turns = [
-        Turn(speaker=i.get("speaker", "AYŞE"), text=(i.get("text") or "").strip())
+        Turn(speaker=i.get("speaker", hosts[0]), text=(i.get("text") or "").strip())
         for i in items
         if (i.get("text") or "").strip()
     ]

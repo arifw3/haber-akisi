@@ -767,5 +767,33 @@ class TestLocaleConfig(unittest.TestCase):
         self.assertIn("history-en", str(path_for("en")))
 
 
+class TestPodcastLanguage(unittest.TestCase):
+    """Ingilizce bulten Turkce sunucularla ve Turkce metinle uretiliyordu."""
+
+    def test_rule_sets_cover_both_languages(self):
+        from mynews.script import RULE_SETS
+
+        self.assertIn("tr", RULE_SETS)
+        self.assertIn("en", RULE_SETS)
+        self.assertIn("ENGLISH", RULE_SETS["en"])
+        self.assertIn("TÜRKÇE", RULE_SETS["tr"])
+
+    def test_hosts_are_injected_into_rules(self):
+        from mynews.script import RULE_SETS
+
+        text = RULE_SETS["en"].format(a="SARAH", b="MARK")
+        self.assertIn("SARAH", text)
+        self.assertIn("MARK", text)
+
+    def test_locale_config_declares_own_hosts(self):
+        from mynews.rank import load_config
+
+        tr_hosts = list(load_config("tr")["voices"]["podcast"])
+        en_hosts = list(load_config("en")["voices"]["podcast"])
+        self.assertEqual(tr_hosts, ["AYŞE", "MERT"])
+        self.assertEqual(en_hosts, ["SARAH", "MARK"])
+        self.assertNotEqual(tr_hosts, en_hosts)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

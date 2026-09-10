@@ -83,7 +83,10 @@ def cmd_build(args: argparse.Namespace) -> int:
         from .tts import synthesize_script
 
         try:
-            turns, dropped = generate(bulletin, cfg.get("podcast", {}))
+            pod_cfg = dict(cfg.get("podcast", {}))
+            pod_cfg.setdefault("language", cfg.get("language", "tr"))
+            pod_cfg.setdefault("hosts", list(cfg.get("voices", {}).get("podcast", {}).keys()) or None)
+            turns, dropped = generate(bulletin, pod_cfg)
             print(f"Senaryo: {len(turns)} replik.")
             for line in dropped:
                 print(f"  ayiklandi -> {line}")
@@ -101,7 +104,6 @@ def cmd_build(args: argparse.Namespace) -> int:
             # bolumu arsive ekle ve RSS'i yenile.
             from .podcast import build_episode, load_episodes, write_feed
 
-            pod_cfg = cfg.get("podcast", {})
             episode = build_episode(bulletin, site, int(pod_cfg.get("keep", 30)))
             if episode:
                 base = pod_cfg.get("base_url", "")

@@ -3,7 +3,7 @@
   "language": "en",
   "title": "News Flow",
   "date": "2026-09-10",
-  "generated_at": "2026-09-10T18:51:14.287255+00:00",
+  "generated_at": "2026-09-10T19:07:01.818350+00:00",
   "segments": [
     {
       "key": "us",
@@ -16,32 +16,33 @@
           "domain": "reuters.com",
           "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
           "published": "2026-09-10T15:48:24+00:00",
-          "age_hours": 3.0,
+          "age_hours": 3.3,
           "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdFExZGJsaERnTExDODNaTmptMEF4VkRlMXRjOUItcHkzOFhULXBxZ1pJOS01YWZyQXI4aHJDb0I5NG9PRkVEUXJlUkswZXJRakJSb1BRRlc2aEF5aWliaEpFNGN2akwzakR4R19yUWkxeDYyT2tkc09rVTJvZTBSSHYtcTk5bHYyYlExUFhSYXVIYnBGNUM0eTBpc1NBY05sZ1ZXVXJOVzZyTTJaWVQ4dzJENVZwdVpxcGpYNDRfTE9HeXFkQzRQSFdocw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.084,
-          "speech": "Reuters. Trump administration proposes waiving grace period for H-1B holders after job loss. This story was covered by 5 separate outlets.",
+          "score": 4.08,
+          "speech": "Reuters. Trump administration proposes waiving grace period for H-1B holders after job loss. New rule would require some visa holders to leave U.S. immediately after losing job. This story was covered by 5 separate outlets.",
           "related": [
+            {
+              "title": "New rule would require some visa holders to leave U.S. immediately after losing job",
+              "source": "The Washington Post"
+            },
+            {
+              "title": "H-1B Workers’ Grace Period After Layoff Nixed in DHS Proposal",
+              "source": "Bloomberg Law News"
+            },
+            {
+              "title": "Trump admin proposes ending 60-day grace period after job loss for H-1B, other visa holders",
+              "source": "Fox News"
+            },
             {
               "title": "DHS proposes scrapping 60-day grace period for foreign workers after job loss",
               "source": "The Times of India"
-            },
-            {
-              "title": "Trump proposes to scrap 60-day H-1B visa grace period, Indians could be hit",
-              "source": "The Indian Express"
-            },
-            {
-              "title": "US considering 'leave if you lose jobs' proposal for H-1B workers; Indians to be affected | The grace period has been in place since 2017 | Inshorts",
-              "source": "Inshorts"
-            },
-            {
-              "title": "DHS Reveals Details of Axing H-1B Visa Holders’ Grace Period",
-              "source": "newsweek.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/8f6ccfc128e50df44222.mp3"
         },
         {
           "id": "us-1",
@@ -50,32 +51,33 @@
           "domain": "apnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
           "published": "2026-09-10T15:30:00+00:00",
-          "age_hours": 3.3,
+          "age_hours": 3.6,
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTjliNWJoUkhsQlNUbUV4aDVMbU91OVJydnJnUkNudDkzM0MtOThhN21CVklBcHdDc01ZY3JpV0J4bngtakxMMThqTzlFSm1qNE9kM2hoV0hoZ3FndndYNmZTNDRzbFZWR0theF8xSGpTLTBqOFlIS19WdWV4a2cxYnlsRmc4Y25VYUdXcUVTRi1PTi1ldjJJ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.079,
+          "score": 4.075,
           "speech": "AP News. Sept. 11 ranks among the most historic events in many Americans lifetimes, polling shows. 25 years after 9/11, The evolving terror threat. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "CBS News poll: 25 years after 9/11, most see a changed country and some success fighting terrorism",
-              "source": "CBS News"
-            },
-            {
               "title": "25 years after 9/11, Americans fear domestic extremists more than foreign attacks, Reuters/Ipsos poll finds",
               "source": "Reuters"
+            },
+            {
+              "title": "CBS News poll: 25 years after 9/11, most see a changed country and some success fighting terrorism",
+              "source": "CBS News"
             },
             {
               "title": "25 years after 9/11: The evolving terror threat",
               "source": "FOX 5 DC"
             },
             {
-              "title": "More see domestic terrorism as bigger threat than foreign terrorism: Survey",
-              "source": "The Hill"
+              "title": "Poll: How are you honoring the victims of 9/11?",
+              "source": "WPBN"
             }
-          ]
+          ],
+          "audio": "audio/cache/9fcf0c3daca257affedf.mp3"
         },
         {
           "id": "us-2",
@@ -84,13 +86,13 @@
           "domain": "washingtonpost.com",
           "favicon": "https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=128",
           "published": "2026-09-10T18:26:28+00:00",
-          "age_hours": 0.4,
+          "age_hours": 0.7,
           "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxORkJUcHVBZ2tkeXI4OXhINkp4eTJ1bW9ucFhSVUoyRmFDZEFYMVZQdWZzeGllcVFNLVZGRUZveWRvWVEwdXQtVy1UeTd0QU01Tk5WS2pkNXhvNWhjU3gyb3lwNmZwTUQ5UnU4RW9teWZsOFp0WVBRQi1uX0xjVWNxTUxxb3hDOHVpR0VTUnY5S0Rqb0tYUkl0Z2xRUWJob1ZaNmt2RjBqdXNqcUxVT21QWTBWaTJWZzFmSFVhaXFjRGVabEpzLUc5WHVTVQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.078,
+          "score": 4.074,
           "speech": "The Washington Post. Democratic socialist wins primary for mayor of Providence, Rhode Island. Can the Mamdani model travel?. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -99,7 +101,7 @@
             },
             {
               "title": "David Morales ends Providence Mayor Brett Smiley's reelection bid in Democratic primary",
-              "source": "turnto10.com"
+              "source": "WJAR"
             },
             {
               "title": "Can the Mamdani model travel?",
@@ -109,56 +111,23 @@
               "title": "Who is David Morales? The 27-year-old poised to become Providence’s youngest mayor",
               "source": "WPRI.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/e2482170f2c7251dc81d.mp3"
         },
         {
           "id": "us-3",
-          "title": "Supreme Court again blocks new Missouri congressional map favoring GOP",
-          "publisher": "The Washington Post",
-          "domain": "washingtonpost.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=128",
-          "published": "2026-09-10T18:00:34+00:00",
-          "age_hours": 0.8,
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQd2dfZEEwUktYR0JSUkJicG9LS3RyaUdhS0N2clVNT1pHX3p5MGVQUEZzN2toOVdDMGF2R2UzNlJHLWR3cTFPLS0yYkp4VTJoUmQyLWNZc1RPaGpRNjN3QTE0YjdBeU9XcE5VazZPaTU5ZUp6S3VEbUVPUnRocFZidmo5Sko4VUJ4dHhvZ1Utd0Jib3VlU2N1WG4wd3VtNmtVdzFaMDAwTmlIeWFOLVBENzFadzRPUldOQkVpaF9IUQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 4.071,
-          "speech": "The Washington Post. Supreme Court again blocks new Missouri congressional map favoring GOP. Hoskins says he will tell clerks to use 2022 maps for November election. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Supreme Court Again Blocks Republican-Backed Missouri Voting Map",
-              "source": "The New York Times"
-            },
-            {
-              "title": "Hoskins says he will tell clerks to use 2022 maps for November election",
-              "source": "stltoday.com"
-            },
-            {
-              "title": "Missouri judges press state on map plans after Supreme Court ruling",
-              "source": "The Hill"
-            },
-            {
-              "title": "Missouri Sec. of State orders old congressional map to be used instead of Trump-backed",
-              "source": "KRCG"
-            }
-          ]
-        },
-        {
-          "id": "us-4",
           "title": "San Francisco Mayor Declares Rent Emergency Amid A.I. Housing Frenzy",
           "publisher": "The New York Times",
           "domain": "nytimes.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
           "published": "2026-09-10T18:00:27+00:00",
-          "age_hours": 0.8,
+          "age_hours": 1.1,
           "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPd1JsSDlFR05EVGJ4WXlzT1V1SFNaQ2t0ZllubWZsUzJDaXMzZW8tLVRqZXM4dDhPX1pSUWNEcm5Bbl9leGg3a05HdG5tQUZsQXdmcmIzQS0tN0pWNW9XRGVjb1hIVXRVMVNRdGp5VEw0dFJUWWo2SlpROVFwaWFiemNVT2dVMHhjRnl6dw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.071,
+          "score": 4.067,
           "speech": "The New York Times. San Francisco Mayor Declares Rent Emergency Amid A.I. Housing Frenzy. Fielder Proposes Minimum Unpaid-Rent Threshold for Evictions. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -177,7 +146,43 @@
               "title": "Fielder Proposes Minimum Unpaid-Rent Threshold for Evictions",
               "source": "GrowSF"
             }
-          ]
+          ],
+          "audio": "audio/cache/b9b97667449dde7de1bd.mp3"
+        },
+        {
+          "id": "us-4",
+          "title": "Democrats play up Trump investigations, Epstein files during GOP convention in Dallas",
+          "publisher": "The Washington Post",
+          "domain": "washingtonpost.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=128",
+          "published": "2026-09-10T17:32:14+00:00",
+          "age_hours": 1.6,
+          "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTFlFV2t3LUtPNFZUS1VCdy16YjVMclhTdUZIZks4UzN5VnEzQ1JwYzkxR1lZU3h5ZFlaaDBOYVZRM0w0UFB5UDRzVzVhaE0zM1Utd0t0MWVaTFpXMGViOEdXNXk5djk2Y3FwSHYxbnp3SVdTeEtETFVSOUFtUVY2ODFGRkg2TUdkbV9ySTl6TllrelVRMjJtMjBya1dncXMtanZQT0FMQ2JfenBuYnRielVZWFFYSWdzVVRIVklVdUJCUTdqdUxJLWh0ZURsZw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.059,
+          "speech": "The Washington Post. Democrats play up Trump investigations, Epstein files during GOP convention in Dallas. Election 2026 live updates, Vance to speak at Day 2 of GOP’s first midterm convention. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Vance to Headline Day 2 of Trump's Republican Midterm Convention: Live Updates",
+              "source": "The New York Times"
+            },
+            {
+              "title": "Democrats gather in Dallas to protest GOP midterm convention",
+              "source": "fox4news.com"
+            },
+            {
+              "title": "If Trump Can’t Fill a Dallas Arena, Can He Turn Out a November Vote?",
+              "source": "WSJ"
+            },
+            {
+              "title": "Election 2026 live updates: Vance to speak at Day 2 of GOP’s first midterm convention",
+              "source": "NBC News"
+            }
+          ],
+          "audio": "audio/cache/60d6b0eee0cd197b986b.mp3"
         },
         {
           "id": "us-5",
@@ -186,18 +191,22 @@
           "domain": "bbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
           "published": "2026-09-10T14:19:26+00:00",
-          "age_hours": 4.5,
+          "age_hours": 4.8,
           "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5fZUJGR0ZmbnJtcEhiWFlVVnM1UkZmZXcwNTFHOE96eGNUUG95d1RsWHAwOWg2QkdFY3FKOXpDeUhfZnFNbVVXaVhNaUswNzh6UWlXT2hLTQ?oc=5",
           "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/5786/live/ab35c5b0-ad21-11f1-a540-61c3f7fc4e6c.jpg",
           "source_url": "https://www.bbc.co.uk/news/videos/cx2z7x57gjeo?at_medium=RSS&at_campaign=rss",
           "summary": "Organisers say each of the 2,977 drones in the display represents a victim of the 9/11 attacks.",
           "source_count": 5,
-          "score": 4.06,
+          "score": 4.055,
           "speech": "BBC. Drone display recreates the Twin Towers over New York City. 2,977 LIGHTS RISE OVER NEW YORK HARBOR AND REBUILD THE TWIN TOWERS IN LIGHT. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "Drone show recreates Twin Towers, honors 2,977 victims ahead of 25th anniversary of 9/11 attacks in New York",
               "source": "ABC7 New York"
+            },
+            {
+              "title": "Drones recreate Twin Towers in New York City to mark 25th anniversary of 9/11",
+              "source": "Yahoo"
             },
             {
               "title": "VIDEO: Drone show recreates Twin Towers in New York skyline for 9/11 commemoration",
@@ -206,61 +215,24 @@
             {
               "title": "2,977 LIGHTS RISE OVER NEW YORK HARBOR AND REBUILD THE TWIN TOWERS IN LIGHT",
               "source": "PR Newswire"
-            },
-            {
-              "title": "2,977 lights recreate twin towers over new york harbor 25 years after 9/11",
-              "source": "Designboom"
             }
-          ]
+          ],
+          "audio": "audio/cache/7e4acc276ad7b7492f7f.mp3"
         },
         {
           "id": "us-6",
-          "title": "Trump says every adult American will get $5,000 if Republicans win midterms",
-          "publisher": "BBC",
-          "domain": "bbc.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
-          "published": "2026-09-10T13:23:37+00:00",
-          "age_hours": 5.5,
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE16LW5ZZHNBWW40b3BGeGRQLXdaX2xmeWhWdTE5VTFTZ1VLS2M1aDZMdTB4WlQ0NHAwMzhza29uVzV2RzJxb3czMjdMTXFVd0dLYldtRjBfTFVYdw?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 4.044,
-          "speech": "BBC. Trump says every adult American will get $5,000 if Republicans win midterms. Trump's $1 trillion-plus dividend plan meets immediate bipartisan pushback. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Trump's $1 trillion-plus 'dividend' plan meets immediate bipartisan pushback",
-              "source": "CNBC"
-            },
-            {
-              "title": "Trump, hoping to salvage midterms, makes a dubious pledge to give every US adult $5,000 if GOP wins",
-              "source": "AP News"
-            },
-            {
-              "title": "Trump Floats $5,000 ‘Trump Dividend’ Checks if Republicans Win the Midterms",
-              "source": "The New York Times"
-            },
-            {
-              "title": "Many Republicans skeptical about Trump plan to tie $5,000 dividends to GOP wins",
-              "source": "The Washington Post"
-            }
-          ]
-        },
-        {
-          "id": "us-7",
           "title": "George W. Bush says Americans \"don't pay attention to the lesson of 9/11\"",
           "publisher": "CBS News",
           "domain": "cbsnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cbsnews.com&sz=128",
           "published": "2026-09-10T18:34:37+00:00",
-          "age_hours": 0.3,
+          "age_hours": 0.5,
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE51SGdSWlUzbmUtTXFlWlQ5VjJ5UHdCejhCUEdDS1JCcGxlSUZ6azJMdEtpLUo1NVVxT0JqWnJHSzBOUDNWSWdSMnVwdTRnWERsakVFNFh3bGM5MVNQdm5zRFhWeXBXVDlqZUV6R2k4SnppeHF0STZ5blNZUTk?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.98,
+          "score": 3.976,
           "speech": "CBS News. George W. Bush says Americans don't pay attention to the lesson of 9/11. For horrible moment, Bush White House thought US military shot down Flight 93. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -279,7 +251,43 @@
               "title": "'This was a war:' How 9/11 changed George W. Bush's presidency and legacy",
               "source": "USA Today"
             }
-          ]
+          ],
+          "audio": "audio/cache/4090418a192ed758b642.mp3"
+        },
+        {
+          "id": "us-7",
+          "title": "Supreme Court blocks Missouri’s attempt to use newly drawn Republican congressional map",
+          "publisher": "NBC News",
+          "domain": "nbcnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=nbcnews.com&sz=128",
+          "published": "2026-09-10T18:15:29+00:00",
+          "age_hours": 0.9,
+          "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQN1NtZ01wa1hvRVEweEpfcm9mQUhPSUNEQmdFaEJLM0MxdFN4SUdWNkFCV1RaNVFyWTZXalV5czRFOGNwbWlIMDV3Z3ZncENManB3aVpQZkZ2eFRCTDRMY3FFZndXaThGdEFERDk0Z1ZSZHdaM3hLSC1qYzQ2aE81cmhKQUZJRS1WMEp0ajdtb0pIU3g4dVB2WVdvSHZob3JDSExzaVhUbl9iOWNoWWg1UzI3MlQ4cnpBUU1INVd2TlFZSGFlcVVv?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.971,
+          "speech": "NBC News. Supreme Court blocks Missouri’s attempt to use newly drawn Republican congressional map. Missouri Sec. of State orders old congressional map to be used instead of Trump-backed. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Supreme Court Again Blocks Republican-Backed Missouri Voting Map",
+              "source": "The New York Times"
+            },
+            {
+              "title": "Missouri Sec. of State orders old congressional map to be used instead of Trump-backed",
+              "source": "KRCG"
+            },
+            {
+              "title": "Supreme Court deals another blow to GOP hopes to capture extra congressional seat",
+              "source": "CNN"
+            },
+            {
+              "title": "Supreme Court appears to kill GOP redistricting hopes in Missouri",
+              "source": "Politico"
+            }
+          ],
+          "audio": "audio/cache/903b45d52c5517811caa.mp3"
         }
       ]
     },
@@ -289,125 +297,163 @@
       "items": [
         {
           "id": "world-0",
-          "title": "Israel's Netanyahu to sue newspaper over claim UAE warned him of 7 October attack",
+          "title": "Yemen's Houthis reportedly seize strategic Red Sea port of Mokha",
           "publisher": "BBC",
           "domain": "bbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
-          "published": "2026-09-10T15:54:17+00:00",
-          "age_hours": 2.9,
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hRVA1eWRiY2tZUi02aXo0aVNHYUgxX0N0YUxvbkRDQlV5QXY4VGhPeGNUd0c3aXZXd3BLUXJtTVczTEVlLWNMMmMtbDBVOWhQUzFKLWZzOWUxdw?oc=5",
-          "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/02b9/live/ab737020-ad0f-11f1-bc1f-3f186ca4140c.jpg",
-          "source_url": "https://www.bbc.co.uk/news/articles/c1kxwm870g1o?at_medium=RSS&at_campaign=rss",
-          "summary": "The paper said it stood by its reporting, after publishing extracts from a book where the claim appears.",
+          "published": "2026-09-10T18:15:47+00:00",
+          "age_hours": 0.9,
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtUTBldk5ZbDBRTF9rN0o3bHNMWGtaRUp1R2xlSDJWSThBc1VSc2NGc2hLMDZMZVFnUE1FTTJSNzM4VG01WFlKMnRWaGlIdGVfeW1aZHNGRi1yZw?oc=5",
+          "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/af67/live/bf0ec050-ad2b-11f1-bc1f-3f186ca4140c.jpg",
+          "source_url": "https://www.bbc.co.uk/news/articles/c4g7vr0lngwo?at_medium=RSS&at_campaign=rss",
+          "summary": "Mokha's capture would bring the Iran-backed group closer to controlling the Bab al-Mandab Strait waterway, a key shipping route.",
           "source_count": 5,
-          "score": 4.086,
-          "speech": "BBC. Israel's Netanyahu to sue newspaper over claim UAE warned him of 7 October attack. Arab warnings to Netanyahu ahead of Oct. 7 massacre shatter his core political defense. This story was covered by 5 separate outlets.",
+          "score": 4.121,
+          "speech": "BBC. Yemen's Houthis reportedly seize strategic Red Sea port of Mokha. Yemen risks a return to civil war as Iran-backed rebels target a vital oil shipping route. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Before Oct. 7 Attack, Netanyahu Was Warned, Report Says. He Denies It.",
+              "title": "Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally",
               "source": "The New York Times"
             },
             {
-              "title": "Benjamin Netanyahu has overseen a genocide: In his telling, he’s a victim",
-              "source": "Al Jazeera"
+              "title": "Iran-Backed Houthi Rebels Take Strategic Port City in Yemen, Raising Threat to Red Sea Shipping",
+              "source": "military.com"
             },
             {
-              "title": "Arab warnings to Netanyahu ahead of Oct. 7 massacre shatter his core political defense",
-              "source": "timesofisrael.com"
+              "title": "Houthis advance along Yemeni coast, threaten Saudi oil exports in the Red Sea",
+              "source": "Reuters"
             },
             {
-              "title": "UAE warned Netanyahu of major Hamas operation days before Oct. 7 attack, news report says",
-              "source": "apnews.com"
+              "title": "Yemen risks a return to civil war as Iran-backed rebels target a vital oil shipping route",
+              "source": "AP News"
             }
-          ]
+          ],
+          "audio": "audio/cache/348274540ac27c1178c9.mp3"
         },
         {
           "id": "world-1",
-          "title": "Algeria to sever diplomatic ties with UAE after years of tension",
-          "publisher": "BBC",
-          "domain": "bbc.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
-          "published": "2026-09-10T15:47:43+00:00",
-          "age_hours": 3.1,
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1FOUstR2RxcHF5MWxsZDk4YVdvTFE4YjBGcXJwTlVQVU1MUmhDTGJRZkVTREdGVWhaV1dTUk9GR1hXTzFxWDhaVTVoMTBFNDAxUzVpaDkxQkNuQQ?oc=5",
+          "title": "Zelenskyy visits Canada to seek further military support for Ukraine",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T17:58:00+00:00",
+          "age_hours": 1.1,
+          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaHJoci1DWE1jNkFQTUprejJCTGR1cWxtMjB0TVprVnN4VmRqZHpOZGV2LTlzUjI2dzVOaGxIOHY4enEzVV96QWc3aUliYnB4TkNLWW9FMXpORGwySmlJMnlZZWtWMmpYeFk0QzZXNXEweXRDVUNxTGw1bzB0MW5DX3N1d3VJaG1yYl9JRC1Sc0ZBd2Q0UWpqblpNbw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.084,
-          "speech": "BBC. Algeria to sever diplomatic ties with UAE after years of tension. Algeria cuts diplomatic ties with United Arab Emirates over provocative and hostile actions. This story was covered by 5 separate outlets.",
+          "score": 4.116,
+          "speech": "AP News. Zelenskyy visits Canada to seek further military support for Ukraine. Canada Targets Millions of Drones, With a Third Going to Ukraine. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Algeria says cutting diplomatic ties with UAE",
-              "source": "Al Jazeera"
-            },
-            {
-              "title": "Algeria cuts diplomatic ties with United Arab Emirates over 'provocative and hostile actions'",
-              "source": "France 24"
-            },
-            {
-              "title": "Algeria suspends diplomatic relations with UAE after months of tensions",
-              "source": "Middle East Eye"
-            },
-            {
-              "title": "Algeria cuts diplomatic ties with the UAE",
+              "title": "Zelenskiy says Canada has agreed to a big air defense package for Ukraine",
               "source": "Reuters"
+            },
+            {
+              "title": "Ukrainian President Volodymyr Zelenskyy arrives in Canada",
+              "source": "CBC"
+            },
+            {
+              "title": "Canada, Ukraine pledge 100-year partnership",
+              "source": "dw.com"
+            },
+            {
+              "title": "Canada Targets Millions of Drones, With a Third Going to Ukraine",
+              "source": "Bloomberg.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/62a209fcedaa335bf3e2.mp3"
         },
         {
           "id": "world-2",
-          "title": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
-          "publisher": "The New York Times",
-          "domain": "nytimes.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
-          "published": "2026-09-10T17:00:05+00:00",
-          "age_hours": 1.8,
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOb3RxODh4LWhOS0o0UFBGNUhHODA0Z2dqbTcyTlFmYVRwRzJVVnhKMFl4U2dqQUQwZXV6d0c1c0gwRHZXeF9wOFRTN2xCengtRnRuR0tJLUNDTlI3VjAyekRzRngwMWY4M01hSUVwWURFUFAxdkRjRC1HZUM3cG9YTnZ4UVFNcVlnT200?oc=5",
-          "image": "https://static01.nyt.com/images/2026/09/10/multimedia/Dc-anthropic-zgkh/Dc-anthropic-zgkh-mediumSquareAt3X.jpg",
-          "source_url": "https://www.nytimes.com/2026/09/10/us/politics/anthropic-ai-biological-weapons.html",
-          "summary": "In a new report, the A.I. start-up added that it could not determine if the research was legitimate or nefarious, leading the company to shut down the work.",
+          "title": "Trump administration silence has 200,000 Salvadoran immigrants hoping they’re protected",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T16:24:00+00:00",
+          "age_hours": 2.7,
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQZW5iMVdUY2k3QldGeFFOM3hnbWg4NnVlbFcxMml2aWZuUDZ0ZmY2clJlR2tEdHZybmhib3l4Qkt3dENZMGUwamxpSEVTVlhlZF92WXNvNUEwNDlFU2xlVDRhQW40YTM5QnlLUjRuQ1JzUHNzWjlNVGNzejI2dGdsM0ZuaTRCc29pYlFVci16MnRlQU1RSUtNNl9zbTJkZzBxMFBPVG9vZHlGcDAtNnc?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
           "source_count": 5,
-          "score": 4.054,
-          "speech": "The New York Times. Anthropic Says It Blocked Possible Efforts to Build Biological Weapons. Detecting and countering misuse of AI, September 2026. This story was covered by 5 separate outlets.",
+          "score": 4.09,
+          "speech": "AP News. Trump administration silence has 200,000 Salvadoran immigrants hoping they’re protected. Salvadorans with TPS remain authorized to work until further notice, USCIS says. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Detecting and countering misuse of AI: September 2026",
-              "source": "Anthropic"
+              "title": "These immigrants who’ve spent decades in the US fear their deportation protections are on the verge of ending",
+              "source": "CNN"
             },
             {
-              "title": "Governments are turning to Claude to automate spying",
-              "source": "Axios"
+              "title": "Salvadorans with TPS remain authorized to work until further notice, USCIS says",
+              "source": "NBC4 Washington"
             },
             {
-              "title": "Bad actors in China and Russia are already weaponizing Anthropic’s AI",
+              "title": "Protected status expires for Salvadorans shielded from deportation for decades",
+              "source": "The Washington Post"
+            },
+            {
+              "title": "Trump’s TPS crusade hits home",
               "source": "Politico"
-            },
-            {
-              "title": "Anthropic Says It Intercepted Potential Biological Weapons Effort Involving Claude",
-              "source": "Forbes"
             }
-          ]
+          ],
+          "audio": "audio/cache/33ed17b35f14ad5d3aa9.mp3"
         },
         {
           "id": "world-3",
+          "title": "Bayeux Tapestry Exhibition Opens at British Museum",
+          "publisher": "The New York Times",
+          "domain": "nytimes.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
+          "published": "2026-09-10T17:51:16+00:00",
+          "age_hours": 1.3,
+          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNR296RmY1VW5penA3MjdpblYta1ZCWW1Ib3NUWnFCMW5aVzRqOEdiTDNRc3lvRDFkaXBuR3BMdTNaNWVGaUpmQVJCbkhuWDlZbEJvWkVXeGZIaUxrOEJBSmNaYmppc2ZXRUJpenVyNFFvQlFEeENBeWZkWmsxSGJleGhuLWkwSVhjMWVGS3FGbkZ4NUta?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.064,
+          "speech": "The New York Times. Bayeux Tapestry Exhibition Opens at British Museum. Francophiles, Norman outfits and broken threads, visitors see Bayeux tapestry in UK for first time. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "‘Once-in-a-millennium moment’: Medieval masterpiece Bayeux Tapestry finally goes on show in London",
+              "source": "NBC News"
+            },
+            {
+              "title": "Bayeux Tapestry replica goes on display in Aberdeenshire",
+              "source": "BBC"
+            },
+            {
+              "title": "Francophiles, Norman outfits and broken threads: visitors see Bayeux tapestry in UK for first time",
+              "source": "The Guardian"
+            },
+            {
+              "title": "After 900 years, the Bayeux Tapestry returns to England and goes on display in London",
+              "source": "NPR"
+            }
+          ],
+          "audio": "audio/cache/f755103a3d9111f60aec.mp3"
+        },
+        {
+          "id": "world-4",
           "title": "Israeli strike kills parents and two children in Gaza, medics say",
           "publisher": "Reuters",
           "domain": "reuters.com",
           "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
           "published": "2026-09-10T13:29:09+00:00",
-          "age_hours": 5.4,
+          "age_hours": 5.6,
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQS1BVbUJWZ3BnTEl4XzBYMjByVm0zb3dncFFidmQ4TWlrRVVOTkZYUGpzQllwVzQyUWZKUjBjQk12ZUxTM2FJTFRlb292d1JRZHZXMWREZ2Y4bVdMUGVXczRJa0NuYjZXQXd3dDJrajZFazAtcXNlQld6c0RjekV0N09RSU51Z3Fld1EwdFI5dm5tLU5aMERvTEVtcWlsOE5pS3BGQnRrZUt1U1FVSUZ1Xw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.046,
+          "score": 4.041,
           "speech": "Reuters. Israeli strike kills parents and two children in Gaza, medics say. Israel massacres family of 4 in ramped up strikes on Gaza homes. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "An Israeli strike in Gaza kills at least 4, including children, and other Mideast developments",
-              "source": "apnews.com"
+              "source": "AP News"
             },
             {
               "title": "Israel strikes Gaza refugee camp",
@@ -419,145 +465,115 @@
             },
             {
               "title": "Israeli Airstrike Flattens Home in Gaza, Killing Family of Four, Including Two Children",
-              "source": "Democracy Now!"
+              "source": "democracynow.org"
             }
-          ]
-        },
-        {
-          "id": "world-4",
-          "title": "Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally",
-          "publisher": "The New York Times",
-          "domain": "nytimes.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
-          "published": "2026-09-10T16:20:47+00:00",
-          "age_hours": 2.5,
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNNWdzb1JYOGV3bkxIQ0FoWUpXcHFiTWVmMEQxaW9IeDUya2E0UVVvS1J6V3NESXZhYnpOVlNRNTRCN0ZtcEZDS1dJb3VFOGlJTkFwOFJyLVFpN1pxSEdNbWV6WENVMVYtRVBsaGFJcjlwWWFqaXBtT01CdG5GeUNIY2ZIR00weWE2QldKY1dQYU00UEplMzVyc1lGbEJyUGNRcFAyek9QRDdIMjVtbmtPS1FMMXo?oc=5",
-          "image": "https://static01.nyt.com/images/2026/09/10/multimedia/10int-yemen-mokha-hztm/10int-yemen-mokha-hztm-mediumSquareAt3X.jpg",
-          "source_url": "https://www.nytimes.com/2026/09/10/world/middleeast/yemens-houthis-seize-strategic-red-sea-port-officials-say.html",
-          "summary": "The Iran-backed militia routed Yemeni government forces in Mokha, putting the group in a stronger position to attack ships in a crucial waterway for global trade.",
-          "source_count": 5,
-          "score": 4.043,
-          "speech": "The New York Times. Houthis Seize Strategic Red Sea Port, a Major Victory for Iranian Ally. Exclusive, This small island off Yemen is now a strategic prize in the widening Iran war. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Exclusive: This small island off Yemen is now a strategic prize in the widening Iran war",
-              "source": "CNN"
-            },
-            {
-              "title": "Iran war live: Houthis advance near Red Sea coast threatening Bab al-Mandeb",
-              "source": "Al Jazeera"
-            },
-            {
-              "title": "Houthis advance along Yemeni coast, threaten Saudi oil exports in the Red Sea",
-              "source": "Reuters"
-            },
-            {
-              "title": "Houthis seize key Yemeni port of Mocha in drive to take control of Red Sea coast",
-              "source": "The Guardian"
-            }
-          ]
+          ],
+          "audio": "audio/cache/8beea1436be2b29212e4.mp3"
         },
         {
           "id": "world-5",
-          "title": "Twenty-five dead after fire erupts on cargo ship in Qingdao, eastern China - state media",
-          "publisher": "BBC",
-          "domain": "bbc.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
-          "published": "2026-09-10T12:24:54+00:00",
-          "age_hours": 6.4,
-          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE42VW9fc0o3TXhuVnB6Nm9TZlI1VGJkS2pQMWc2cVZ5OEZxU3RmNGVVcFdBQU5NeU96ck1vYzNXTXNsbFU4Wi1qR1BQVUxaTGRTUVRIX09wY2Ezdw?oc=5",
+          "title": "25 dead after cargo ship catches fire in China’s port, state media says",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T12:58:00+00:00",
+          "age_hours": 6.1,
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORjdldnRvUmNNb3RqaEtnYWVMazltaHFkaTBrMTNROE4za3ZFOTVMQVV4Ry1WN1dueldhcXVMMG91amd4LVhjYXhmZE1sX3ZRdnFOZFJPZkdqMTk1VUhsQnNjU3NEMEZnYVFDTlYyYjZfVHNvNTEtNmxfMUh6V2pQeE1PVkVqdjJu?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.028,
-          "speech": "BBC. Twenty-five dead after fire erupts on cargo ship in Qingdao, eastern China, state media. At Least 20 Dead and 5 Missing After Cargo Ship Catches Fire While Being Docked for Repairs. This story was covered by 5 separate outlets.",
+          "score": 4.033,
+          "speech": "AP News. 25 dead after cargo ship catches fire in China’s port, state media says. Cargo vessel fire at east China shipyard kills 25. This story was covered by 5 separate outlets.",
           "related": [
+            {
+              "title": "Twenty-five dead after fire erupts on cargo ship in Qingdao, eastern China - state media",
+              "source": "BBC"
+            },
             {
               "title": "At least 25 dead after cargo ship catches fire in Chinese port, state media says",
               "source": "CNN"
-            },
-            {
-              "title": "Cargo Ship Fire in Eastern China Kills 25",
-              "source": "The New York Times"
             },
             {
               "title": "25 people killed in fire on cargo ship docked in China, state media reports",
               "source": "CBS News"
             },
             {
-              "title": "At Least 20 Dead and 5 Missing After Cargo Ship Catches Fire While Being Docked for Repairs",
-              "source": "People.com"
+              "title": "Cargo vessel fire at east China shipyard kills 25",
+              "source": "Reuters"
             }
-          ]
+          ],
+          "audio": "audio/cache/d47f7023bde7973eaccd.mp3"
         },
         {
           "id": "world-6",
-          "title": "Spain’s spy agency warned of mass crossings into Ceuta before border crisis",
+          "title": "Algeria cuts diplomatic ties with UAE",
           "publisher": "Al Jazeera",
           "domain": "aljazeera.com",
           "favicon": "https://www.google.com/s2/favicons?domain=aljazeera.com&sz=128",
-          "published": "2026-09-10T17:00:27+00:00",
-          "age_hours": 1.8,
-          "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVFo5SEY5aEFkOUE1cm5HcGw2Z3NVN0w4NGNfT21HSnhyaDdvdWk0cDRKejN0ZjdpMXdaalJEYjEyZ2VfT2tzWjhyc0Y5WmtsOUxXNEVIMzZKSUhPWno4SHlKM3gwa25vcXVKUjZHVFN6ODdnMEYydlBpSEpDVXM2TG14TWlCamk4Sk5TOEVheHNPcS1QVTJLZlhlOXNDcTdlVG5CR1p0VnpkamtxeERjRGp5a9IBuAFBVV95cUxNRHVJS3I4Vy1lX0RpWjNHdzNNVzFIRkZqWGRfZWc1d29xSGpYQl9ZelQ3LUYwU3BQQmQzeUVvWFYtQUkwd202Q3MwZHQxZm5veTNNVnYyUW5PbFpDSVJLUVNNX253MFgteVYzcEtrZkxRWEVtclhVV0U1WGtpZ2pEUl9yQ2ZwbnVXWjFDdmZIeE9mVzI5dzFKVTl5NjRGY3Y1VFl2TmhCSXdweFFJUGJweWxPS1pXQ3Ba?oc=5",
+          "published": "2026-09-10T18:44:45+00:00",
+          "age_hours": 0.4,
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQWS15SU1Yem5NRUlMcXYxSUZxZVNZa25CbXhOVVV5Tk50WEpGRTlOY3VYQlhJMHBoaTVKYmJaRHh3emdNMHVyYkFUNktFZ05FcUN5aFloQmozOTJQSUlrbnVNbWRhcE5NRGN4ZUU4VFVHem8yOG9NRWVwaTJLbHFOZEJBSzhHbXdNeE9iODUzONIBlAFBVV95cUxPOE1jaXBKYkR4R1NnOURkY1BmNTFVNXpyOVRPVnhlVFJkaVI0TUlkRTJ5OGJHQ3B3bE9UeTZEa0NyRmJ1MTV5cXFTY3JWdVMwYllTUWpFZkZaeEZUb2FTR1UxMi1UTU9NOVQwYlp6M0VxUDUySURhQlNHSXNHa242Y1NsS2RsZVNURUk0TGtYOVVpZlJV?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.004,
-          "speech": "Al Jazeera. Spain’s spy agency warned of mass crossings into Ceuta before border crisis. Spain Declassifies Warning to Morocco About Migrant Crossing Plans. This story was covered by 5 separate outlets.",
+          "score": 4.029,
+          "speech": "Al Jazeera. Algeria cuts diplomatic ties with UAE. Algeria cuts diplomatic ties with United Arab Emirates over provocative and hostile actions. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Spain's spy agency warned of plans to storm Ceuta before mass migrant crossing, documents show",
+              "title": "Algeria cuts diplomatic ties with United Arab Emirates over 'provocative and hostile actions'",
+              "source": "France 24"
+            },
+            {
+              "title": "Algeria suspends diplomatic relations with UAE after months of tensions",
+              "source": "Middle East Eye"
+            },
+            {
+              "title": "Algeria to sever diplomatic ties with UAE after years of tension",
+              "source": "BBC"
+            },
+            {
+              "title": "Algeria cuts diplomatic ties with the UAE",
               "source": "Reuters"
-            },
-            {
-              "title": "Scrutiny of Spain’s Pedro Sánchez Grows With Release of Ceuta Papers",
-              "source": "Bloomberg.com"
-            },
-            {
-              "title": "Spain Declassifies Warning to Morocco About Migrant Crossing Plans",
-              "source": "The New York Times"
-            },
-            {
-              "title": "Spain's spy agency warned of Ceuta border breach before crisis, declassified files show",
-              "source": "CBS News"
             }
-          ]
+          ],
+          "audio": "audio/cache/012a5bfc2a26af51a3c4.mp3"
         },
         {
           "id": "world-7",
-          "title": "9/11 Led Them to Enlist. Here’s What They’re Saying Now.",
-          "publisher": "The New York Times",
-          "domain": "nytimes.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
-          "published": "2026-09-10T09:06:58+00:00",
-          "age_hours": 9.7,
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPTUdiSlc3VjNSV0NpY0pnaURxdEJ5LVR6Y3gwd2JoR2I3R1d0MjJDcWdCWU9yV3Jld2oxX2d4R0g2WWxxZjBDdzJIcTMxbkRRRUpCXzZTX0RKTms1cnZHRWhIa2pMdVBHVENsanFiVV9xLWVFWTBtWEstS2p1TW90MENKd0Yzc0lYQ0M4SUVGUWJ1bW5SVlkwVTdTX055VTB2a21ZOGlMOXVod1dTYzNZ?oc=5",
+          "title": "Drug use may have begun 25,000 years ago, new research finds",
+          "publisher": "BBC",
+          "domain": "bbc.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
+          "published": "2026-09-10T12:15:55+00:00",
+          "age_hours": 6.8,
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE45YzhFYklFSXFRNlRzazMxVW84WEFWTTJxLTVpQjRTdElXUVNEWndNX1BjTHJ3dUtpQWM0SXFqS3MzTG80bmQ1emJtaVRWa0RpbVRLbUM4d2Nkdw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.923,
-          "speech": "The New York Times. 9/11 Led Them to Enlist. Here’s What They’re Saying Now. Kansas Marine veteran inspired to serve after 9/11 attacks almost 25 years ago. This story was covered by 5 separate outlets.",
+          "score": 4.021,
+          "speech": "BBC. Drug use may have begun 25,000 years ago, new research finds. Ice Age origins of one of humanity's oldest drug habits discovered. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "After 9/11, these Pennsylvanians went to war. Here’s how their lives changed.",
-              "source": "Inquirer.com"
+              "title": "Scientists Discover the Earliest Evidence of Drug Use in Really Old Teeth",
+              "source": "The New York Times"
             },
             {
-              "title": "They served through America’s post-9/11 wars. 25 years later, what did that service mean?",
-              "source": "Military Times"
+              "title": "Humans experimented with drugs 23,000 years earlier than we thought",
+              "source": "Popular Science"
             },
             {
-              "title": "Kansas Marine veteran inspired to serve after 9/11 attacks almost 25 years ago",
-              "source": "kake.com"
+              "title": "Indonesian foragers may have sucked on mind-altering nuts 25,000 years ago, research finds",
+              "source": "The Guardian"
             },
             {
-              "title": "I guarded Ground Zero and served in Middle East. Then I saw a pattern.",
-              "source": "USA Today"
+              "title": "Ice Age origins of one of humanity's oldest drug habits discovered",
+              "source": "Phys.org"
             }
-          ]
+          ],
+          "audio": "audio/cache/4e93a0f38e4a740623a8.mp3"
         }
       ]
     },
@@ -567,120 +583,88 @@
       "items": [
         {
           "id": "business-0",
-          "title": "US lawmakers call for new AI rules after Anthropic researchers' safety warnings",
-          "publisher": "Reuters",
-          "domain": "reuters.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
-          "published": "2026-09-10T17:23:24+00:00",
-          "age_hours": 1.5,
-          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMWp5NmlTNEIxeThhRTdwR0VjTy1RYkFpUjh4LS05Y3l1UVhHa0tUOWhGM0s4emNhc20wR213OEZYY0JNTlhFY1lqRDRPMHlWdFF0Nm01UWt4YUpkR2ZvYnRVVXRNS19BSkt0dVdGc0hpZDFMWDQwLVU4elp1WGdlano1VFdQOTEyazN2UzJ1STBhcFBUd1JjQS1mSzdJdmhSYjVVOTI1TVdDb1ZnVXJwbQ?oc=5",
+          "title": "US wholesale prices rise in latest sign of stubborn inflation as oil prices continue to climb",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T17:21:00+00:00",
+          "age_hours": 1.8,
+          "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQRVp0ZDkzdlBaS01sZUJ0VXA2SFVaNkpkc3RKQ1hjdGZ0SzdkYl95c19qSVExX2VNWE1SMzFiZmMzaXl1UW5GUVd4el9LRHMtT1Nhd3ZEOGlVVFBQTUtuS2RzeWJ6ZVRSanV0Y2VpZXpUVk5GM3I2Wkt3ckEycWhIY1lJcWFxa002V2RFb3BYN1NkNWFPR0R1NWJLRU9vVEU?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.111,
-          "speech": "Reuters. US lawmakers call for new AI rules after Anthropic researchers safety warnings. How Would AI Actually Kill Us All? What to Know About the AI Doomsday Debate. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "How Would AI Actually Kill Us All? What to Know About the AI Doomsday Debate",
-              "source": "WSJ"
-            },
-            {
-              "title": "Anthropic staffers sound the alarm—again—on AI catatrophe",
-              "source": "Mother Jones"
-            },
-            {
-              "title": "For years, they warned AI could kill all humans. Now people are listening.",
-              "source": "The Washington Post"
-            },
-            {
-              "title": "'Extinction' warnings ramp up as more OpenAI, Anthropic researchers join calls for an AI slowdown",
-              "source": "CNBC"
-            }
-          ]
-        },
-        {
-          "id": "business-1",
-          "title": "US producer prices increase as expected in August; but key details firmer",
-          "publisher": "Reuters",
-          "domain": "reuters.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
-          "published": "2026-09-10T17:13:00+00:00",
-          "age_hours": 1.6,
-          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQSllzbWpfQ2xZcDA5eExQYUxKdVRwdEdUdFFpMzJPWW1ib29Ocm85Z3ZDaVFpMkZGQnpUQ1Z2Zy1pelQ5Tk5TY0lKSUJ5RlZiUDhoeU5jWHpRX3dZQzFqcWtfT3J2UTM3Q2doaTdRUHEtczI1TDVkOE5jN2V1b2h1S01fYktSLV9yTERENnpxeHVLdw?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 4.108,
-          "speech": "Reuters. US producer prices increase as expected in August. but key details firmer. US wholesale prices rise in latest sign of stubborn inflation as oil prices continue to climb. This story was covered by 5 separate outlets.",
+          "score": 4.106,
+          "speech": "AP News. US wholesale prices rise in latest sign of stubborn inflation as oil prices continue to climb. US producer prices increase as expected in August. but key details firmer. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "Wholesale prices rose 0.4% in August, as expected",
               "source": "CNBC"
             },
             {
-              "title": "US wholesale prices rise in latest sign of stubborn inflation as oil prices continue to climb",
-              "source": "AP News"
-            },
-            {
-              "title": "Spot gold price slides to $4,340/oz after August PPI rises 0.4%, core PPI rises 0.2%",
-              "source": "KITCO"
-            },
-            {
               "title": "US Producer Prices Rise Most in Three Months on Energy Surge",
               "source": "Bloomberg.com"
-            }
-          ]
-        },
-        {
-          "id": "business-2",
-          "title": "White House copper tariff plan stalls amid affordability concerns, sources say",
-          "publisher": "Reuters",
-          "domain": "reuters.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
-          "published": "2026-09-10T16:31:39+00:00",
-          "age_hours": 2.3,
-          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNURGbmRQdjJaanFqS0VBQUVyTjZCNkZyeTBrV2NVcWtGLVRQdk5jaG9pYU5FejR3REpqdHJSQWM0NlRUSVdnclJOR0RiWEpUNlV1ZXRUU1RPSTFlNF90elZIZWFxbFhDYm1nUlFjQ3l0UjRMbGstTmItU3BiOVZDYi0tRUxPelM0V1J6TmhVTnJJQkdxdUFBemtkdWxTdUNScndiZlNiQm1rQXRsMlh6ZFhxNnRmemFLN2ZfMnk2UQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 4.096,
-          "speech": "Reuters. White House copper tariff plan stalls amid affordability concerns, sources say. AI is fueling copper demand. Kevin Simpson thinks this volatile miner is worth the risk. This story was covered by 5 separate outlets.",
-          "related": [
+            },
             {
-              "title": "The AI boom and tariff uncertainty are pushing copper prices to record highs",
+              "title": "Wholesale inflation picked up in August, as energy costs kept rising",
               "source": "CNN"
             },
             {
-              "title": "Copper Stocks Tumble as Tariff Doubt Reverses Record Rally: Freeport-McMoRan Sinks 8%, Teck Resources and Southern Copper Drop 7%",
-              "source": "Yahoo Finance"
-            },
-            {
-              "title": "Copper, FCX Stock Plunge On Tariff Report, Surging Yields; Silver, Gold Also Fall",
-              "source": "Investor's Business Daily"
-            },
-            {
-              "title": "AI is fueling copper demand. Kevin Simpson thinks this volatile miner is worth the risk",
-              "source": "CNBC"
+              "title": "US producer prices increase as expected in August; but key details firmer",
+              "source": "Reuters"
             }
-          ]
+          ],
+          "audio": "audio/cache/73ed33e803413adca1f7.mp3"
         },
         {
-          "id": "business-3",
+          "id": "business-1",
+          "title": "Pilot warned Amazon cargo plane going too fast before deadly crash, data shows",
+          "publisher": "BBC",
+          "domain": "bbc.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
+          "published": "2026-09-10T16:31:30+00:00",
+          "age_hours": 2.6,
+          "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBVQnJ1YXpVZi10Mlh2WlhJNnBneXQ1VmNPSEc2SFhrYkI1Mi11SGVRVnNtcHEzN0FyZnEzMWVPWnV0MUw3SWpWN3d6RlNqcDU5QVp1dVFpV1owZw?oc=5",
+          "image": "https://ichef.bbci.co.uk/ace/standard/240/cpsprodpb/da5e/live/e1bc0040-ad1c-11f1-826f-933990eae6f0.jpg",
+          "source_url": "https://www.bbc.co.uk/news/articles/cj4jynv59ddo?at_medium=RSS&at_campaign=rss",
+          "summary": "One pilot told the other about the aircraft's \"excessive speed\" but received an uneven response even as alarms sounded.",
+          "source_count": 5,
+          "score": 4.092,
+          "speech": "BBC. Pilot warned Amazon cargo plane going too fast before deadly crash, data shows. After media dust-up, Miami-Dade sheriff tells mayor, That can’t happen again. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Cockpit voice recorder indicates pilot tried to abort landing before Amazon cargo plane crash: NTSB",
+              "source": "ABC News - Breaking News, Latest News and Videos"
+            },
+            {
+              "title": "Amazon Cargo Plane Crash Was Result of Several ‘Failures,’ Widow’s Lawyers Claim in Wrongful Death Suit",
+              "source": "People.com"
+            },
+            {
+              "title": "After media dust-up, Miami-Dade sheriff tells mayor: That can’t happen again",
+              "source": "Miami Herald"
+            },
+            {
+              "title": "Miami Crash Puts Focus on Houston Astros Owner’s Cargo-Jet Business",
+              "source": "WSJ"
+            }
+          ],
+          "audio": "audio/cache/17eff42732f87d96c314.mp3"
+        },
+        {
+          "id": "business-2",
           "title": "Federal officials poised to declare end of U.S.’s largest known cyclosporiasis outbreak",
           "publisher": "The Washington Post",
           "domain": "washingtonpost.com",
           "favicon": "https://www.google.com/s2/favicons?domain=washingtonpost.com&sz=128",
           "published": "2026-09-10T17:51:59+00:00",
-          "age_hours": 1.0,
+          "age_hours": 1.2,
           "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPOW5Ca2RET2Y2cnV0N3UwUEcxemtBS1BkMldtNmk4UGpsR09NaS1pR3dxTkhYdlNWc0lKcnNFc01qTFlielYxVjdEWDVMT2puRUxuVzNQc2tSZWF1cE9JaFNQX3Z0MlJPdEViLUFOc1BZXzVxMk5ETVIxRjlUNWF1T2ItT3FXVFJtdFhkU2RMRkxYRHVFeEdPUTNiM0hsVDZnS042YlAwR3ZOQTJWOTVfRi1oR3Fyb2kwZ0tweEJZajFzeEJZN2lV?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.069,
+          "score": 4.064,
           "speech": "The Washington Post. Federal officials poised to declare end of U.S.s largest known cyclosporiasis outbreak. Boyslop Is in Danger. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -699,31 +683,32 @@
               "title": "“You’re out right away”: Lettuce sells fast at farmers' markets amid cyclospora outbreak",
               "source": "marketplace.org"
             }
-          ]
+          ],
+          "audio": "audio/cache/b53fdf44ba942fbe0333.mp3"
         },
         {
-          "id": "business-4",
+          "id": "business-3",
           "title": "The Mathematician Crushed Between OpenAI and Anthropic Over a Math Problem",
           "publisher": "The New York Times",
           "domain": "nytimes.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
           "published": "2026-09-10T17:18:48+00:00",
-          "age_hours": 1.5,
+          "age_hours": 1.8,
           "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPV0dsVjMyTGpNX2ZBSWhDSlVUSHczOXF0eURmakkyNlpFMFNBV2R4TE5PSk1nc0tqSHJvVUlmb3ZiM1J2clNJblQzb3VYRDB5TjlvZjhnNjBuY1lhQWlaNTRhaXE3cEFqNkc3THQ0aDJ2X0Faalc1ajlXbFphanlWLVBZM1RPSk8wREZoQl82cEFCMUw5THZN?oc=5",
           "image": "https://static01.nyt.com/images/2026/09/09/multimedia/09sci-openai-buckmaster-hlqc/09sci-openai-buckmaster-hlqc-mediumSquareAt3X.jpg",
           "source_url": "https://www.nytimes.com/2026/09/10/science/tristan-buckmaster-openai-math-navier-stokes.html",
           "summary": "Tristan Buckmaster was on the path toward an important proof when one of the A.I. giants used its staggering resources to get there first.",
           "source_count": 5,
-          "score": 4.059,
+          "score": 4.055,
           "speech": "The New York Times. The Mathematician Crushed Between OpenAI and Anthropic Over a Math Problem. OpenAI's apparent maths breakthrough raises profound questions. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "A second mathematician is accusing OpenAI of being dishonest about its AI training data",
+              "title": "Second mathematician accuses OpenAI of dishonesty over training data",
               "source": "qz.com"
             },
             {
               "title": "OpenAI's apparent maths breakthrough raises profound questions",
-              "source": "economist.com"
+              "source": "The Economist"
             },
             {
               "title": "On the Navier–Stokes Millennium Prize Problem",
@@ -733,24 +718,64 @@
               "title": "The summer AI ate math",
               "source": "Scientific American"
             }
-          ]
+          ],
+          "audio": "audio/cache/6e3bfc63b8a6232b1ea1.mp3"
         },
         {
-          "id": "business-5",
-          "title": "European Central Bank Raises Rates in Bid to Quell Inflation",
-          "publisher": "The New York Times",
-          "domain": "nytimes.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
-          "published": "2026-09-10T12:26:33+00:00",
-          "age_hours": 6.4,
-          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMGlxa0FOS0lsVkNiRERaRE1FRjF2M092VmxtRG9GMGo5VG1paktWRFJ5Q1hRVkNfX0kwXzNnemV1NEJ4UHZmcFNSelRmdjRnbkQ5YmJtLW5LTTE2b1NFQmczbE1RdXV3VkRKUDJlRjFzeFhVTXplVjhfMC10SWVCWV9oZnRhQUtadm9naE1R?oc=5",
+          "id": "business-4",
+          "title": "Edgy bond investors unconsoled by Bessent's big buyback",
+          "publisher": "Reuters",
+          "domain": "reuters.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
+          "published": "2026-09-10T14:16:19+00:00",
+          "age_hours": 4.8,
+          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPa2N3dTlTV3YtRHd0WmhTRE4tTDh6TzBNZW1MWHdaUHhPUzRnakxadDdCWUgwRjM1X3o0S3lmVFR4dV9JSl9uR2hEbzFFWG9rcGx4WDdwMFlNSU8wR25QWjBEUUpBd3F0Z2VlemZ0ODVQbWZxVktsYjRUd3QyOE82M1VDN0tTRU92OGdySlFUalVST1hldjVSNVMwMjJrVlJTd2RlZ1NVb1BkT1psQnow?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.978,
-          "speech": "The New York Times. European Central Bank Raises Rates in Bid to Quell Inflation. Euro slips as dollar rises after ECB rate hike. This story was covered by 5 separate outlets.",
+          "score": 4.054,
+          "speech": "Reuters. Edgy bond investors unconsoled by Bessent's big buyback. This story was covered by 5 separate outlets.",
           "related": [
+            {
+              "title": "Bond Market Rebuffs Treasury’s $6 Billion Plan to Reduce Borrowing Costs",
+              "source": "The New York Times"
+            },
+            {
+              "title": "Opinion | Government bonds are safe assets, right?",
+              "source": "The Washington Post"
+            },
+            {
+              "title": "10-year Treasury yield touches highest since 2023 despite Bessent's $6 billion bond buyback plan",
+              "source": "CNBC"
+            },
+            {
+              "title": "Bessent fails to shock and awe the bond market",
+              "source": "Axios"
+            }
+          ],
+          "audio": "audio/cache/c853883e97fd9a958e35.mp3"
+        },
+        {
+          "id": "business-5",
+          "title": "ECB prepares for ‘longer-lasting’ inflation as it lifts interest rates to 2.5%",
+          "publisher": "Financial Times",
+          "domain": "ft.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=128",
+          "published": "2026-09-10T15:18:20+00:00",
+          "age_hours": 3.8,
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUzFQdWp5RC10azlQOVlQeS1OMnNKQ0ZsZ0FmeWF0Ml9rUlZudkNpUVNzaUl3RDRxNzBfQ1BRYzVpVlIyZ0h3ZHFzT0F0anlDenZkclJPaUtUOVQxWjZTc1hkdThPRkhRZmltWm5LeVNBcm5YZ0RZTm5YZkpwYXVuQTU3d2Q?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.021,
+          "speech": "Financial Times. ECB prepares for ‘longer-lasting inflation as it lifts interest rates to 2.5%. Euro slips as dollar rises after ECB rate hike. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "European Central Bank Raises Rates in Bid to Quell Inflation",
+              "source": "The New York Times"
+            },
             {
               "title": "Euro slips as dollar rises after ECB rate hike",
               "source": "Reuters"
@@ -762,46 +787,44 @@
             {
               "title": "European Central Bank hikes interest rates to 2.5% as policymakers see risk of higher inflation, weaker growth",
               "source": "CNBC"
-            },
-            {
-              "title": "ECB Officials Expect Further Rate Hikes with October in Play",
-              "source": "Bloomberg.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/26e180f8bbd9f9585fe6.mp3"
         },
         {
           "id": "business-6",
-          "title": "The Boring Company raises $3B in round led by UAE",
-          "publisher": "TechCrunch",
-          "domain": "techcrunch.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
-          "published": "2026-09-10T15:07:27+00:00",
-          "age_hours": 3.7,
-          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQTW1DS2MzOW9uRDF3REY4aVFMR1A1Q3Y1QmozTjgzUmprc1I5MkJ5dVVDRWRBeURHRGM0VVRyUFJ1Qlk4N2dnTkZzZlo2LTdFZkFwSVQyUjdyMUMyNnhuLVlYalFEYUo1MWpWcUcybTd1bmlIVGQ3WVVFMDYzMXBBRF9LdVB0T1lkV1pN?oc=5",
+          "title": "Global bond sell-off reignites as oil jumps to $107",
+          "publisher": "Financial Times",
+          "domain": "ft.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=ft.com&sz=128",
+          "published": "2026-09-10T13:23:46+00:00",
+          "age_hours": 5.7,
+          "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPNkJRTDQ0bmVZbzZoNlNuc3M3djNhSllYZnJrVm5PME9BVEZfSmJDWDJyTlZRMFk1QXJ2WFczOE5YQlVGcV9fWW5BOEpnczF2c1Fuc0NuQXV6cl9LN1BBR1RWczd2ZkJEWW1fbjRMUi1SSGFWWTVOLTVfSWJLZ21BZWMzSk8?oc=5",
           "image": "",
-          "source_url": "https://techcrunch.com/2026/09/10/the-boring-company-raises-3b-in-round-led-by-uae/",
-          "summary": "The company said it plans to dig more than 150 kilometers of tunnels in the Middle Eastern country.",
+          "source_url": "",
+          "summary": "",
           "source_count": 5,
-          "score": 3.973,
-          "speech": "TechCrunch. The Boring Company raises $3B in round led by UAE. Elon Musk's Boring Co. turns to Middle East for expansion in reaching $23 billion valuation. This story was covered by 5 separate outlets.",
+          "score": 3.99,
+          "speech": "Financial Times. Global bond sell-off reignites as oil jumps to $107. Nervy markets await US inflation data after ECB hikes rate again. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Elon Musk's Boring Co. turns to Middle East for expansion in reaching $23 billion valuation",
-              "source": "CNBC"
+              "title": "Stock Market Today: Dow, Nasdaq Open Lower; Bond Yields Jump as Oil Prices Climb — Live Updates",
+              "source": "WSJ"
             },
             {
-              "title": "Little-Known UAE Investor Adds to Over $40 Billion Bet on Musk",
-              "source": "Bloomberg.com"
+              "title": "Global bond selloff resumes as surging oil prices stokes fears about inflation",
+              "source": "The Guardian"
             },
             {
-              "title": "Musk's tunnel startup The Boring Company raises $3 billion at $23 billion valuation",
-              "source": "Reuters"
+              "title": "Nervy markets await US inflation data after ECB hikes rate again",
+              "source": "Yahoo Finance"
             },
             {
-              "title": "Elon Musk's Boring Co. raises $3B billion, pumped into Music City Loop project",
-              "source": "The Business Journals"
+              "title": "Inflation pressures build",
+              "source": "Axios"
             }
-          ]
+          ],
+          "audio": "audio/cache/38b8cf1ab190d1762ec0.mp3"
         },
         {
           "id": "business-7",
@@ -810,32 +833,33 @@
           "domain": "theverge.com",
           "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
           "published": "2026-09-10T15:00:00+00:00",
-          "age_hours": 3.9,
+          "age_hours": 4.1,
           "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9XMGROQ3VuellBTzM3QWd0ZjczMERnSDRyV0stQ1lsUWMwdFNkU3NyNFBrRzk0emQ3YUgzVDlTR201ZEx6UHBHY2ZXaXVyRWZTQlN0VmxNNFVwZHN3Y3ZBTEUxLXpSMEhRT1E?oc=5",
           "image": "",
           "source_url": "https://www.theverge.com/tech/993391/meta-muse-ai-hands-on",
           "summary": "I turned my Muse assistant into a purple cat. | Screenshot: The Verge Meta has launched its new Muse assistant, marking the company's first real foray into AI-powered productivity tools. The company says its AI agent can \"take the busywork off your plate\" by helping you with online shopping, emails, trip-planning, and more. I decided to try out the new tool and see how well it performed - especially from a company that previously prioritized entertainment over productivity. Though the AI assistant generally worked as I expected it to, the unnerving amount of information it autonomously gleaned about me largely overshadowed my experience. One of the first tasks I assigned Muse, which carries out actions using … Read the full story at The Verge.",
           "source_count": 5,
-          "score": 3.971,
-          "speech": "The Verge. Meta’s Muse AI works and creeps me out. Introducing Muse, The World’s First Personal AI Agent Built for Everyone. This story was covered by 5 separate outlets.",
+          "score": 3.966,
+          "speech": "The Verge. Meta’s Muse AI works and creeps me out. Why Meta’s Consumer AI Agent Is Good News for Shopify Stock. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
-              "source": "meta.com"
+              "title": "Why Meta’s Consumer AI Agent Is Good News for Shopify Stock",
+              "source": "Barron's"
             },
             {
-              "title": "Meta stock surges with Wall Street bullish on new AI agent",
-              "source": "Yahoo Finance"
+              "title": "META Stock Rises After Muse AI Launch, But Oppenheimer Says It’s No ‘Game Changer’",
+              "source": "Stocktwits"
             },
             {
-              "title": "Meta launches AI agent with travel booking capabilities",
-              "source": "PhocusWire"
+              "title": "Why Meta Platforms (NASDAQ:META) Bucked The Broader Tape This Session?",
+              "source": "Kalkine Media"
             },
             {
-              "title": "Meta’s New AI Agent Can Shop For You",
-              "source": "Vogue"
+              "title": "Black Holes and Revel-AI-tions - Meta's new personal AI agent accused of stealing social media handles from top British band Muse",
+              "source": "Yahoo Tech"
             }
-          ]
+          ],
+          "audio": "audio/cache/5aa01d61e1bf33128294.mp3"
         }
       ]
     },
@@ -845,57 +869,58 @@
       "items": [
         {
           "id": "technology-0",
-          "title": "India gets one of world's steepest iPhone price hikes",
-          "publisher": "Reuters",
-          "domain": "reuters.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
-          "published": "2026-09-10T12:47:45+00:00",
-          "age_hours": 6.1,
-          "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObnhfQVE1WmxxZnVYMkpLX0F6RnhGM2Y1RVVMa0EzR1ZaMWNGLWdVT0pHTS1iaEpnUU9uQUxmYkdUM2UtVDVpQlZjV3k0cjdPQkdLaHJUWE9tV0FYVlhtVlFOQXV0YjRvcURvSWpKRXRXb19vd1BTWXZCdnREejdNdm1FbjZ4RHhraHJHNmpDTGcxNXotVTFFRlpoVmZVd2xySXdQam44QWdXWnNPOUhj?oc=5",
+          "title": "Google is making it easier to switch between password managers on Android",
+          "publisher": "TechCrunch",
+          "domain": "techcrunch.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
+          "published": "2026-09-10T16:00:00+00:00",
+          "age_hours": 3.1,
+          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNSnBDY0RHdGVPZkdEdmFpZlV5OFdlaFZJTjM3amJTOTdXc3I0MHpOZExfVVRLbjZWaWFUSEF1ajl5TDQwVEV0cXpZTmViaHlCeEpEc1lPYmFkTWVzREZhalhWdTlQUnBkcEVpUnNFQ3NsWHVzZTFaQXo1NjVTYWx1cm0tU3M5M1MwaGpaMllYZWtZb0tpM25aQ214dTk3YnhHTVZpY1prdzl2d1Rs?oc=5",
           "image": "",
-          "source_url": "",
-          "summary": "",
+          "source_url": "https://techcrunch.com/2026/09/10/google-is-making-it-easier-to-switch-between-password-managers-on-android/",
+          "summary": "Google's new feature will transfer your passkeys as well.",
           "source_count": 5,
-          "score": 4.034,
-          "speech": "Reuters. India gets one of world's steepest iPhone price hikes. Apple just raised prices on new and older iPhones. Here’s what they cost now. This story was covered by 5 separate outlets.",
+          "score": 3.983,
+          "speech": "TechCrunch. Google is making it easier to switch between password managers on Android. Android just quietly took away your password manager's biggest advantage. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Apple just raised prices on new and older iPhones. Here’s what they cost now.",
-              "source": "The Washington Post"
+              "title": "Switching password managers is easy and safe on Android",
+              "source": "blog.google"
             },
             {
-              "title": "It’s the year of smartphone price hikes",
-              "source": "The Verge"
+              "title": "Android can now securely migrate your logins between password managers",
+              "source": "Ars Technica"
             },
             {
-              "title": "All iPhones — Not Just the Pro Models — Now Cost $100 More",
-              "source": "CNET"
+              "title": "Android rolling out passkey transfers between password managers",
+              "source": "9to5google.com"
             },
             {
-              "title": "It's as if Steve Jobs himself priced the new iPhone 18 Pro Max and the iPhone Duo",
+              "title": "Android just quietly took away your password manager's biggest advantage",
               "source": "PhoneArena"
             }
-          ]
+          ],
+          "audio": "audio/cache/4685fa4637331d959665.mp3"
         },
         {
           "id": "technology-1",
-          "title": "Why is Apple’s New Foldable iPhone Duo $1,999?",
+          "title": "Foldable Phones Are Unpopular. Why Is Apple Selling One?",
           "publisher": "The New York Times",
           "domain": "nytimes.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nytimes.com&sz=128",
           "published": "2026-09-10T09:04:42+00:00",
-          "age_hours": 9.8,
+          "age_hours": 10.0,
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNY180bTJ0WldVcktJRE05R1BNUUJGdWJEaGl2NEVhMUpCMjVqSWxRaVpoU0ZndFJuQTk1Mk9peW5xdDNrOFhIYjdyc3NHdUExdjZuZTQ5VnZobFIyZFpyeW5wa1BDSzlMNGRYREs0NTMxUnVOVU1jaElZNWJvMWNKUUVSaTZNZWtRTm5QN3MxcklpMklm?oc=5",
-          "image": "https://static01.nyt.com/images/2026/09/10/multimedia/10biz-techfix-1-cmvg/10biz-techfix-1-cmvg-mediumSquareAt3X.jpg",
-          "source_url": "https://www.nytimes.com/2026/09/10/technology/personaltech/iphone-duo-foldable-phones.html",
-          "summary": "The company unveiled a new iPhone that costs $1,999. Here are the economics behind that price tag.",
+          "image": "",
+          "source_url": "",
+          "summary": "",
           "source_count": 5,
-          "score": 3.922,
-          "speech": "The New York Times. Why is Apple’s New Foldable iPhone Duo $1,999?. TrendForce, Apple to capture a quarter of the folding phone market in 2026, GSMArena news. This story was covered by 5 separate outlets.",
+          "score": 3.918,
+          "speech": "The New York Times. Foldable Phones Are Unpopular. Why Is Apple Selling One?. TrendForce, Apple to capture a quarter of the folding phone market in 2026, GSMArena news. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "Global Foldable Shipments to Hit 100-million Cumulative Milestone by End of 2026",
-              "source": "counterpointresearch.com"
+              "source": "Counterpoint Research"
             },
             {
               "title": "TrendForce: Apple to capture a quarter of the folding phone market in 2026 - GSMArena.com news",
@@ -909,7 +934,8 @@
               "title": "Apple's iPhone Ultra will help the foldable market hit a big milestone this year",
               "source": "PhoneArena"
             }
-          ]
+          ],
+          "audio": "audio/cache/78b71510752f42c7a1fd.mp3"
         },
         {
           "id": "technology-2",
@@ -918,13 +944,13 @@
           "domain": "cnbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cnbc.com&sz=128",
           "published": "2026-09-10T13:13:45+00:00",
-          "age_hours": 5.6,
+          "age_hours": 5.9,
           "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNX2tzcVJBT2FJdTRhYTlJd0l2a3pqZGVTTXVmQTlBQm00MS1FbGZZUE1Mb2pISGRoZUlQTzFhX2lpWXZYYzgxOEpTNHJUSDV5SkZnT0hkRUVFSkJ6Nm55UFZrblphSm1YQkswYlB6dHp2UlUtQmluREoxdzM4aF9oQ0JWc2VCVzd6OHpSYm51ZmxxcEkzaHRydUp1Nm5PVU9oSlHSAacBQVVfeXFMTnVQaGJuRTFtUlFoNWQ4ZnNsU01QZGxyekc2RS1QRng3cm5RZXc0RVJTRGxpZ1ZQaWZsczI2RGxpWkw3UzdJc1AzdGVPMk5UMWlnOWpNcFdKeHZURHBGMGVfQW1OR2xLeFR6dUdXZWNENV95a0VyZnU1dDJWZ2Voa2xJaG5aSmUzTzlycGxRTVpsUktaZ2lVNWFyNks1RkJTeG9KN29WZk0?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.891,
+          "score": 3.887,
           "speech": "CNBC. Apple makes biggest change to iPhone release cadence in 7 years in Ternus first showcase as CEO. The variable aperture isn’t the cool part of the iPhone 18 Pro’s camera. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -943,7 +969,8 @@
               "title": "iPhone 18 Pro Debuts C2 Modem As Apple Keeps Weaning Off Qualcomm — Pro Max Isn't Ready to Let Go",
               "source": "Yahoo Finance"
             }
-          ]
+          ],
+          "audio": "audio/cache/de8bf5ae2ac1d83fb40f.mp3"
         },
         {
           "id": "technology-3",
@@ -952,32 +979,33 @@
           "domain": "theverge.com",
           "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
           "published": "2026-09-10T08:22:40+00:00",
-          "age_hours": 10.5,
+          "age_hours": 10.7,
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQLUJOeHlLelpscHpNQzEwZHg3N3lRZ21NakVnM0xKbjBhN2VLOEowdlBoMGNXd3ZqdTdsWVFKNUNITWdnbVFzaGJGMjdIS2UzSWkwX2FtN3VjalMxTlBQLW1EejhCeDlDRkJkbEJPUFlWOVZiRFNmXzk0YlM3U1B1bkZya0FzTFdTV3YzR19jZmIxbmFM?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.86,
-          "speech": "The Verge. Xbox picks up Kojima’s Physint after PlayStation dropped it. Why Did PlayStation Ditch Kojima? Analysts Suggest Sony May Have Been Spooked by Death Stranding 2 Sales. This story was covered by 5 separate outlets.",
+          "score": 3.856,
+          "speech": "The Verge. Xbox picks up Kojima’s Physint after PlayStation dropped it. Sony Loses Hideo Kojima To Xbox In Its Latest Disaster. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "XBOX and KOJIMA PRODUCTIONS Expand Partnership to Publish PHYSINT",
               "source": "XBOX Wire"
             },
             {
-              "title": "Why Did PlayStation Ditch Kojima? Analysts Suggest Sony May Have Been 'Spooked' by Death Stranding 2 Sales",
-              "source": "IGN"
+              "title": "PlayStation Shockingly Loses Anticipated Exclusive Game to Xbox",
+              "source": "Yahoo"
             },
             {
               "title": "Hideo Kojima's Physint Game Moves to Xbox From PlayStation",
-              "source": "variety.com"
+              "source": "Variety"
             },
             {
-              "title": "PlayStation Cancels Deal With Hideo Kojima, Burns the Last of Its Gamer Good Will",
-              "source": "Gizmodo"
+              "title": "Sony Loses Hideo Kojima To Xbox In Its Latest Disaster",
+              "source": "Forbes"
             }
-          ]
+          ],
+          "audio": "audio/cache/18a25d7cc0b2bbbd25af.mp3"
         },
         {
           "id": "technology-4",
@@ -986,13 +1014,13 @@
           "domain": "pcmag.com",
           "favicon": "https://www.google.com/s2/favicons?domain=pcmag.com&sz=128",
           "published": "2026-09-10T17:32:45+00:00",
-          "age_hours": 1.3,
+          "age_hours": 1.6,
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQY0ZKeDFoZG9ZR3E2WG94UEQ3dkF2U2oybFN5RHdmM1V3MFVTcXFqamRrcjFQcHNINVpwa0d6a1FTTUF4amdvbkZJamdNTFdyR1IwS01nbXNXbFBzcGQ2RER2NkFLZXYzeFFtaFJqSjZHcHhoTTFpUzgxZXRySTlzUjJQS3NQMmRiN0RmX2RDWDdMU25ab0pCTGRR?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.663,
+          "score": 3.659,
           "speech": "PCMag. Hands-On With Apple's First Foldable Phone, The iPhone Duo Redefines the Formula. Okay, Sure, a Folding iPhone. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1011,22 +1039,58 @@
               "title": "Apple's foldable phone, Macy's earnings, Treasury buybacks and more in Morning Squawk",
               "source": "CNBC"
             }
-          ]
+          ],
+          "audio": "audio/cache/5d5cce0940808467bf57.mp3"
         },
         {
           "id": "technology-5",
+          "title": "Metroid Dread studio MercurySteam appears to confirm it's making Metroid Ravenous, addressing a lingering question from yesterday's Nintendo Direct",
+          "publisher": "Eurogamer.net",
+          "domain": "eurogamer.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=eurogamer.net&sz=128",
+          "published": "2026-09-10T16:27:10+00:00",
+          "age_hours": 2.7,
+          "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE54NkxyaEU3aFAwYmNsWlJuS05wdVFvaXk1TGhxZmx0OEFTSHNrMm9RWEdNVTE1Y09OU3JlNFI1Rmg1ZnpjUTB6dUc4bTI0OHJVdml5LS1RVnJHQ0QySlZkY2pXRWhfSWVFRWlhNUJoaWJZVHN1?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.641,
+          "speech": "Eurogamer. Metroid Dread studio MercurySteam appears to confirm it's making Metroid Ravenous, addressing a lingering question from yesterday's Nintendo Direct. Metroid Ravenous Is Up for Preorder, Here’s What Comes in Each Edition, Plus Where to Buy the Amiibos. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Nintendo Direct reveals Metroid Ravenous, Kirby and the World Beyond, and more games for Nintendo Switch 2 and Nintendo Switch - News - Nintendo Official Site",
+              "source": "nintendo.com"
+            },
+            {
+              "title": "New Kirby and Metroid Games Revealed, Tokyo Revengers Joins Fatal Fury and More from Today's Nintendo Direct",
+              "source": "Crunchyroll"
+            },
+            {
+              "title": "Every New Announcement At The September 2026 Nintendo Direct",
+              "source": "Game Informer"
+            },
+            {
+              "title": "Metroid Ravenous Is Up for Preorder: Here’s What Comes in Each Edition, Plus Where to Buy the Amiibos",
+              "source": "IGN"
+            }
+          ],
+          "audio": "audio/cache/7d22ae58df3c82d21234.mp3"
+        },
+        {
+          "id": "technology-6",
           "title": "Apple Watch Series 12 Has Smaller Screens and Bigger Cases",
           "publisher": "MacRumors",
           "domain": "macrumors.com",
           "favicon": "https://www.google.com/s2/favicons?domain=macrumors.com&sz=128",
           "published": "2026-09-10T15:52:09+00:00",
-          "age_hours": 3.0,
+          "age_hours": 3.2,
           "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOaVJ1OEZFdEFOTHBnRnRpT3VZOWhSMFRFSTlMTDhRYld1ZWY2eFdxSmFhQkZFMWE4QWMyRE01aVNDQzlkcUZuTm5NZVNxNEZZNWRGZlk5bklWUGY1Q3c4aHVxRjFzdUVJeF9IbDB5bTNvQlZoODRnRW84Qm5QMXhTVl9WRGYtdw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.635,
+          "score": 3.631,
           "speech": "MacRumors. Apple Watch Series 12 Has Smaller Screens and Bigger Cases. Apple Takes on AI Wearables With Always-Listening Watch Features. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1045,22 +1109,23 @@
               "title": "Apple Takes on AI Wearables With Always-Listening Watch Features",
               "source": "Bloomberg.com"
             }
-          ]
+          ],
+          "audio": "audio/cache/37c1b0133c6c964c0f7c.mp3"
         },
         {
-          "id": "technology-6",
+          "id": "technology-7",
           "title": "Nintendo of America thanks fans for dealing with tariff-related price hikes by encouraging them to spend more money in a new sale",
           "publisher": "Eurogamer.net",
           "domain": "eurogamer.net",
           "favicon": "https://www.google.com/s2/favicons?domain=eurogamer.net&sz=128",
           "published": "2026-09-10T15:18:43+00:00",
-          "age_hours": 3.5,
+          "age_hours": 3.8,
           "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE10U1dVeWV3eGdfWUhOZmF3dmdsT0YyQ21fQVhXUmZjNDlXSmo5WlU3TXFiWm1LS05oQ0xYbTROcGVaXzFSQmxnUThsX3hVMlc0TmNEWU9GM2tHNGxMYUxWVmtwUUhGRmtUUC1PU3AwOA?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.626,
+          "score": 3.622,
           "speech": "Eurogamer. Nintendo of America thanks fans for dealing with tariff-related price hikes by encouraging them to spend more money in a new sale. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1079,22 +1144,23 @@
               "title": "Nintendo's Latest Sale Is 'Made Possible' By The Tariff Refunds It's Hoarding",
               "source": "Engadget"
             }
-          ]
+          ],
+          "audio": "audio/cache/97c8062a859daea59675.mp3"
         },
         {
-          "id": "technology-7",
+          "id": "technology-8",
           "title": "Professor Layton and the Curious Village Remake announced for PS5, Switch 2, Switch, and PC",
           "publisher": "Gematsu",
           "domain": "gematsu.com",
           "favicon": "https://www.google.com/s2/favicons?domain=gematsu.com&sz=128",
           "published": "2026-09-10T13:44:46+00:00",
-          "age_hours": 5.1,
+          "age_hours": 5.4,
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNzQwZFFrVy1ST21rVS1zNm5kMU9TMzRhbUJ6ZnRIVHpQQzJneWJFUFBDcDRMaW8wMjlsU0dfWFV3RWJCNWYtdXhaa19Dem5wRkhWTnRWQjljd1VkLUdjQ2pjR2R6aHdUVGRTYk5xVEZ2YWFPVFNyYVVNVjJYeVE1RFZ5ZWFYNWxfTTVVeGJpNmhRVTl0Smk4eHh3cUJJaEI3TldfRy10YlJrSDJsTFNGRGsteEpPYk1aUnRydQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.6,
+          "score": 3.595,
           "speech": "Gematsu. Professor Layton and the Curious Village Remake announced for PS5, Switch 2, Switch, and PC. Iconic Nintendo Franchise Makes PlayStation 5 Debut This Year, Watch Trailer. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1103,7 +1169,7 @@
             },
             {
               "title": "Iconic Nintendo Franchise Makes PlayStation 5 Debut This Year, Watch Trailer",
-              "source": "tech.yahoo.com"
+              "source": "Yahoo Tech"
             },
             {
               "title": "Professor Layton and the Curious Village Game Gets Remake",
@@ -1113,22 +1179,23 @@
               "title": "Professor Layton and the Curious Village Remake revealed for Nintendo Switch 2, Switch",
               "source": "Nintendo Everything"
             }
-          ]
+          ],
+          "audio": "audio/cache/e7c439c3c31f22ac6adc.mp3"
         },
         {
-          "id": "technology-8",
+          "id": "technology-9",
           "title": "Insta360 Luna Pro Review: Your Instagram Reels Are About To Get An Upgrade",
           "publisher": "Engadget",
           "domain": "engadget.com",
           "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=128",
           "published": "2026-09-10T13:00:00+00:00",
-          "age_hours": 5.9,
+          "age_hours": 6.1,
           "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9PRmppMk5aX3RCZmNsaXYwTC02SExUNi1NcDQ3c0pkQkxZc20xeXNiUG1POGV2djhKNEhmdGs2bEtUMWtmLXI0c2tDRkMyQmNzQW9pbG1iS0REaUlpMUxBY2ZnaHdJTW9sQ1E?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.587,
+          "score": 3.583,
           "speech": "Engadget. Insta360 Luna Pro Review, Your Instagram Reels Are About To Get An Upgrade. Insta360 Now Has a Smaller, Cheaper Luna Gimbal Camera. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1141,47 +1208,14 @@
             },
             {
               "title": "Insta360 Luna Pro",
-              "source": "Newsshooter"
+              "source": "newsshooter.com"
             },
             {
               "title": "Insta360 Luna Pro launches worldwide at $599.99, official in the US",
-              "source": "redsharknews.com"
+              "source": "Red Shark News"
             }
-          ]
-        },
-        {
-          "id": "technology-9",
-          "title": "'Final Fantasy 7 Revelation' Interview: Hands-On Preview",
-          "publisher": "Deadline",
-          "domain": "deadline.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=deadline.com&sz=128",
-          "published": "2026-09-10T12:00:00+00:00",
-          "age_hours": 6.9,
-          "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaHphbV80T0kxUlpweEx2ZVh3cUJwN1FtUGRQOFUtTW83UWRJQmxFNnpucFBDYUJwQW5hbTA3eXJnNklxdjVNODNnTzNobWRYVWxjY0N3dFNmWFRWSGkxTVp0RnJSZjN3OUVSTjhDMjRLTHRzTkVwa1hxc0Q0VkVENWQwVGh4X1ZlX0FmTUdodEY4NXpGNkVOZVBETQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.571,
-          "speech": "Deadline. Final Fantasy 7 Revelation Interview, Hands-On Preview. How Final Fantasy 7 Revelation Is Going All Out For The Big Finale, Having Less Content Was Never Part Of The Conversation. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Final Fantasy 7 Revelation is approximately 500,000 times the size of FF7 Rebirth",
-              "source": "Polygon.com"
-            },
-            {
-              "title": "Final Fantasy VII Revelation Hands-on Preview – First Look At The Final Arc",
-              "source": "The Outerhaven"
-            },
-            {
-              "title": "How Final Fantasy 7 Revelation Is Going All Out For The Big Finale: Having Less Content Was 'Never Part Of The Conversation'",
-              "source": "Kotaku"
-            },
-            {
-              "title": "Final Fantasy 7 Revelation is getting a physical version, but it will require an internet connection to download",
-              "source": "Eurogamer.net"
-            }
-          ]
+          ],
+          "audio": "audio/cache/14f81fd85e9de42186b3.mp3"
         }
       ]
     },
@@ -1191,18 +1225,53 @@
       "items": [
         {
           "id": "science-0",
+          "title": "IBM, NASA launch AI model to help map ice, craters on Moon",
+          "publisher": "Reuters",
+          "domain": "reuters.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=reuters.com&sz=128",
+          "published": "2026-09-10T13:50:51+00:00",
+          "age_hours": 5.3,
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPaHVoaUpvT3dtcTlFZHJyUWV2TWUtSU5xcmpMTVNkTzN2dHF6ZGpzMzZrbThHUmNXU3hRV2IxNk5XQVFFMFVJMDBTZUpsWThDdXNscnFyTW5IREtyYi1vSEFGQ2hOdFJSbTBPUXBUMURiSnRvbzFmTlRCTXpFY3B0cXR3UXVGclJWa1JyenNJYjRPZGNUd0JvQldR?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.047,
+          "speech": "Reuters. IBM, NASA launch AI model to help map ice, craters on Moon. NASA wants humans back on the Moon in 2028. IBM’s new AI could help get them there. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "NASA, IBM Launch AI Foundation Model for Lunar Science",
+              "source": "NASA Science (.gov)"
+            },
+            {
+              "title": "Introducing IBM and NASA’s new foundation model for the Moon",
+              "source": "IBM Research"
+            },
+            {
+              "title": "NASA wants humans back on the Moon in 2028. IBM’s new AI could help get them there",
+              "source": "Fast Company"
+            },
+            {
+              "title": "NASA And IBM Made An AI Model For Exploring The Moon",
+              "source": "Engadget"
+            }
+          ],
+          "audio": "audio/cache/e652df92fda15c912bfd.mp3"
+        },
+        {
+          "id": "science-1",
           "title": "First-ever adult Tyrannosaurus rex trackway discovered in North Dakota badlands",
           "publisher": "CBS News",
           "domain": "cbsnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cbsnews.com&sz=128",
           "published": "2026-09-10T14:30:00+00:00",
-          "age_hours": 4.4,
+          "age_hours": 4.6,
           "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPYWQ4WEhUeUdDQ2ZxY2M5eUdUVHlyVlFQWExpSTBWbjZvQ3ZtSUJPbkRyb2pYMkUtYnp5NzczVlVxOTNoSUVNU0pkSTlHU09WaGRjczI3c01PM2x4ZzVnWkc3ZnZoa2N6aG4zZVEzNDNsVDBaTnBPS2E3V1pRRWhRclI3aW9EUTlMQTNtWlhn?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.912,
+          "score": 3.908,
           "speech": "CBS News. First-ever adult Tyrannosaurus rex trackway discovered in North Dakota badlands. Colorado scientists make Tyrannosaurus rex discovery. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1221,22 +1290,23 @@
               "title": "A 66.5-million-year-old trackway captures adult T. rex at walking pace",
               "source": "Phys.org"
             }
-          ]
+          ],
+          "audio": "audio/cache/7ca8c2fc7acb6b32f81c.mp3"
         },
         {
-          "id": "science-1",
+          "id": "science-2",
           "title": "Artemis II moonshot commander and pilot are hanging up their astronaut suits at NASA",
           "publisher": "NBC News",
           "domain": "nbcnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nbcnews.com&sz=128",
           "published": "2026-09-09T23:26:36+00:00",
-          "age_hours": 19.4,
+          "age_hours": 19.7,
           "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNazd6cklWdG9EYzR4SUVfcTJib1FEQU5xTElOVHhWTlhaX0ZROEk1SmJsQzR1QjF3WFdvZk85clJXVHgwLTF5SnZqY0toaW9CcGlkVE8xV21oZzNRRFBmeEtBSWNZMTJjOERNUUkyaGE4R19yck1ONThXWi03Vlp0WV9JM1ozUDB1M3o2TTdhd2pmSVVqZHpNS0g0UFJ5amdnVVFDZHQtcDFSajluZ21UQ0JfbzdLLXJf?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.661,
+          "score": 3.657,
           "speech": "NBC News. Artemis II moonshot commander and pilot are hanging up their astronaut suits at NASA. Reid Wiseman, Maryland native who led Artemis II mission, retires to NASA emeritus status. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1255,75 +1325,43 @@
               "title": "What comes after the moon? Artemis II commander and pilot shift to 'emeritus' status at NASA",
               "source": "Space"
             }
-          ]
+          ],
+          "audio": "audio/cache/2670f147442bdca09784.mp3"
         },
         {
-          "id": "science-2",
+          "id": "science-3",
           "title": "SpaceX launches classified mission for the US Space Force from California (video)",
           "publisher": "Space",
           "domain": "space.com",
           "favicon": "https://www.google.com/s2/favicons?domain=space.com&sz=128",
           "published": "2026-09-10T16:00:22+00:00",
-          "age_hours": 2.8,
+          "age_hours": 3.1,
           "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSDRsbC1ibVk5VmZselJCUkV6a05GeTZSeTRJYTg0QVNNa3NmeXg4YVlkdUhLZm9aN2d3elJNRHlyd0JmdFhNa2J4QXY3Sm9lSHc2LU9abjZ3ZFpPVURTcV9ITzQtbE1iTGVMazlBZm43Q2hqMGdzZUFnWHNRaVYxQUxkZGpyR19wbGhQekljUGRFZWMzeG9ON3pjT0FnaVM2WFJ4eU1OUDUyczc4cnl1SW43TQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.638,
-          "speech": "Space. SpaceX launches classified mission for the US Space Force from California. SpaceX Launches Space Force Payload Today. It Has Lost Some Market Share This Year. This story was covered by 5 separate outlets.",
+          "score": 3.633,
+          "speech": "Space. SpaceX launches classified mission for the US Space Force from California. SpaceX to Launch Falcon 9 Carrying Classified Space Force Mission From Vandenberg, Sonic Boom Expected. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "SpaceX launches classified payload for the U.S. Space Force",
               "source": "Spaceflight Now"
             },
             {
-              "title": "SpaceX to Launch Falcon 9 Carrying Classified Space Force Mission From Vandenberg, Sonic Boom Expected",
-              "source": "edhat"
+              "title": "SpaceX Stock Rises After Classified Launch for Space Force",
+              "source": "Barron's"
             },
             {
-              "title": "SpaceX Launches Space Force Payload Today. It Has Lost Some Market Share This Year.",
-              "source": "Barron's"
+              "title": "SpaceX to Launch Falcon 9 Carrying Classified Space Force Mission From Vandenberg, Sonic Boom Expected",
+              "source": "edhat"
             },
             {
               "title": "SpaceX to launch Space Force mission in California. Follow live updates",
               "source": "yahoo.com"
             }
-          ]
-        },
-        {
-          "id": "science-3",
-          "title": "NASA And IBM Made An AI Model For Exploring The Moon",
-          "publisher": "Engadget",
-          "domain": "engadget.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=engadget.com&sz=128",
-          "published": "2026-09-10T12:00:00+00:00",
-          "age_hours": 6.9,
-          "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9wcTJFeUd2M01GU19fWFVLUm45aXY3RGVtQ1k1VUMzZGZDNEZvTFNRTzRYUG5Ebkp2RzN6d29fVUpnTUt4c3JtSjJGd2M0NzJhWFRzODJBbFZPS2FtWnhvVW5jaXJBeFE?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.571,
-          "speech": "Engadget. NASA And IBM Made An AI Model For Exploring The Moon. NASA wants humans back on the Moon in 2028. IBM’s new AI could help get them there. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "NASA, IBM Launch AI Foundation Model for Lunar Science",
-              "source": "NASA Science (.gov)"
-            },
-            {
-              "title": "Introducing IBM and NASA’s new foundation model for the Moon",
-              "source": "IBM Research"
-            },
-            {
-              "title": "IBM, NASA launch AI model to help map ice, craters on Moon",
-              "source": "Reuters"
-            },
-            {
-              "title": "NASA wants humans back on the Moon in 2028. IBM’s new AI could help get them there",
-              "source": "Fast Company"
-            }
-          ]
+          ],
+          "audio": "audio/cache/855775a561576c458231.mp3"
         },
         {
           "id": "science-4",
@@ -1332,18 +1370,18 @@
           "domain": "space.com",
           "favicon": "https://www.google.com/s2/favicons?domain=space.com&sz=128",
           "published": "2026-09-10T10:00:00+00:00",
-          "age_hours": 8.9,
+          "age_hours": 9.1,
           "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQblBFNjFXYVBQNVc0MHFMb1ZBY0YxTEg4TEJ5MDVhNUtsNE5BYmF0bEF2UDUzZGtXX3M4MjJpTmRoVUdtSjI5UFlLMGZjWlJCQlR4dDA0N2FBdnZuUVRqQkFjanNBOGpfdTRKZEVjUWJPUE1OdEx2eGMxY2hYc3pLS0pIQ0twZkdtYjNsOF9WdFVDSmViZ2d0dGdHLUstVzBpN0NQUTNEaWFwRUw1RXA2MGhHUU9uSGp3U2gzQnpQQVlORXZ0azB5S0V1SzFQR1VtSkgxLTJfZXZwVjZGX1lzWU5LbS1mbkE?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.537,
+          "score": 3.533,
           "speech": "Space. Strange fast radio bursts across the universe could help solve major cosmic mysteries, It's only the beginning. Radio Flashes from Deep Space Provide Caltech Scientists a New Way to Map the Universe. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "Mysterious Fast Radio Bursts Could Be The Crucial Tool For Studying Undetected Matter In The Universe",
-              "source": "iflscience.com"
+              "source": "IFLScience"
             },
             {
               "title": "Signatures of suppressed matter clustering revealed by fast radio bursts",
@@ -1357,90 +1395,58 @@
               "title": "Fast radio bursts could help disentangle galactic feedback from dark matter effects",
               "source": "Phys.org"
             }
-          ]
+          ],
+          "audio": "audio/cache/91c28bb8750f5b6548eb.mp3"
         },
         {
           "id": "science-5",
-          "title": "Who were the Denisovans? Rich trove of fossils and tools paints new picture",
-          "publisher": "Nature",
-          "domain": "nature.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=nature.com&sz=128",
-          "published": "2026-09-09T19:02:48+00:00",
-          "age_hours": 23.8,
-          "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94eTBUX1BGWlVMaHhNblQtU0JWZGx6UlV2ZGxwTDFjeVQ5dF9RZldwX3ctLUVMdFdRMUZ3eWc1Zy15TEduWVM3WmwtVGVQR3NtRFVOYWtzeXo3THBheHNN?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 4,
-          "score": 3.475,
-          "speech": "Nature. Who were the Denisovans? Rich trove of fossils and tools paints new picture. Researchers Discover Rare Denisovan Bones in a Cave in China. This story was covered by 4 separate outlets.",
-          "related": [
-            {
-              "title": "Denisovans from southwestern China and their subsistence strategies",
-              "source": "Nature"
-            },
-            {
-              "title": "Fossil remains unearthed in China offer new clues about how Denisovans lived",
-              "source": "CNN"
-            },
-            {
-              "title": "Researchers Discover Rare Denisovan Bones in a Cave in China",
-              "source": "National Geographic"
-            },
-            {
-              "title": "Scientists unlock new clues to what Denisovans, a mysterious ancient human ancestor, looked like",
-              "source": "Scientific American"
-            }
-          ]
-        },
-        {
-          "id": "science-6",
           "title": "Massive Ice Age-era mastodon tooth found in California creek",
-          "publisher": "KTLA",
+          "publisher": "ktla.com",
           "domain": "ktla.com",
           "favicon": "https://www.google.com/s2/favicons?domain=ktla.com&sz=128",
           "published": "2026-09-10T05:39:09+00:00",
-          "age_hours": 13.2,
+          "age_hours": 13.5,
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUWhCRDNmT3ljdVpkS0wwb3I1MS1RLVIzbWxRTHQxRVYxSDdmQm4xZ2g1cTl4QzJSTF9vTzFKZWJxN0xFdDROakZIUloxU1hETXZsVUpCRWtPRDkyZEVHQmJuQ0JMRm1ZYlR0aExMYnpEWWlLWjhvS0RySGdrZFh2eDlFRjA5MmllQ3ppQUV6S2ZWUlo5VV84d0RB0gGfAUFVX3lxTE9FOFNXalhCQUlFemlpYlM3RVl4bEROZEh3VkQxMHlWLWVUWV90aE44SlJUQmdERWtHX01SSXdoR09mVGItbjNPbzNENVgyeHAxbEp1MHFDUUZ0Zy12THgtZFZSWnVGUEpNbUZLZlM2Zzd2dlJXdVFWWUR4cXhZMGxLM1RWbHZ1MS1KbjFFd0EzNmFfSHFscHByN0p6VkZ6VQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.465,
-          "speech": "KTLA. Massive Ice Age-era mastodon tooth found in California creek. She was looking for frogs in the San Mateo hills. Then she stumbled upon an Ice Age mystery. This story was covered by 5 separate outlets.",
+          "score": 3.461,
+          "speech": "ktla. Massive Ice Age-era mastodon tooth found in California creek. She was looking for frogs in the San Mateo hills. Then she stumbled upon an Ice Age mystery. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "'Oddly shaped rock' found in San Mateo County turns out to be huge ice age tooth",
-              "source": "sfgate.com"
+              "source": "SFGATE"
             },
             {
               "title": "She was looking for frogs in the San Mateo hills. Then she stumbled upon an Ice Age mystery",
               "source": "San Francisco Chronicle"
             },
             {
-              "title": "‘Immaculate condition:’ Rare mastodon fossil found in San Mateo County creek",
+              "title": "‘Immaculate condition’: Rare mastodon fossil found in San Mateo County creek",
               "source": "The Mercury News"
             },
             {
               "title": "An ‘immaculate’ molar: Fossilized mastodon tooth found in San Mateo County creek bed",
               "source": "Local News Matters"
             }
-          ]
+          ],
+          "audio": "audio/cache/72dbb32d96ad80f3e5bb.mp3"
         },
         {
-          "id": "science-7",
+          "id": "science-6",
           "title": "Highly efficient base editing at PCSK9 and normal human embryo development",
           "publisher": "Nature",
           "domain": "nature.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nature.com&sz=128",
           "published": "2026-09-09T17:37:25+00:00",
-          "age_hours": 25.2,
+          "age_hours": 25.5,
           "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBkMmhHRGVDR0tnckhONkt4TGFaY2lDZnVsdGlTNTRlajU1aTF2MVJzSzYtMW95R1Jpb2QxUmxuNDVQcm1abmdEQ2ZaQ3hqb1BaMEZLSWpwcXplaFJhZ3pz?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 4,
-          "score": 3.451,
+          "score": 3.447,
           "speech": "Nature. Highly efficient base editing at PCSK9 and normal human embryo development. One more step towards genetically modified humans. This story was covered by 4 separate outlets.",
           "related": [
             {
@@ -1455,7 +1461,43 @@
               "title": "One more step towards genetically modified humans",
               "source": "en.ara.cat"
             }
-          ]
+          ],
+          "audio": "audio/cache/2b74066f76a2aa893c81.mp3"
+        },
+        {
+          "id": "science-7",
+          "title": "New Revelations About the Origin of Interstellar Comet 3I/ATLAS",
+          "publisher": "universetoday.com",
+          "domain": "universetoday.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=universetoday.com&sz=128",
+          "published": "2026-09-10T02:24:00+00:00",
+          "age_hours": 16.7,
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZUQyUWdZOVhDcTh0cjdwV0VvLV9pbW16NUI1RldmaWVSN1AxYmdLOFRlbTMxY0lDaFJxWUt6VFRSRnFpQlhrTUo0cmFIQnZCRjJxbkNqOU5mNHhoaFcxVWhza05vQ0hVVjRTTnlOVXpaam5rS3FKbnI1ajFNQjVkR0FTbDdSRnU1WF9iMlRCOGpnMWU1QWw5THh4Q1lIV2Rla3lV?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.406,
+          "speech": "universetoday. New Revelations About the Origin of Interstellar Comet 3I/ATLAS. 3I/ATLAS was born in the deep freeze. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Interstellar comet 3I/ATLAS is bursting with methanol",
+              "source": "Science Daily"
+            },
+            {
+              "title": "\"We had a visitor from a distant corner of our Galaxy\" Scientist reveals why interstellar comet 3I/ATLAS was so special – and why we'll find many more very soon",
+              "source": "BBC Sky at Night Magazine"
+            },
+            {
+              "title": "3I/ATLAS was born in the deep freeze",
+              "source": "Astronomy Now"
+            },
+            {
+              "title": "Interstellar visitor 3I/ATLAS carries clues from the frozen outskirts of another star system",
+              "source": "Phys.org"
+            }
+          ],
+          "audio": "audio/cache/0de83dfce374f16a13c3.mp3"
         }
       ]
     },
@@ -1470,13 +1512,13 @@
           "domain": "cnn.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cnn.com&sz=128",
           "published": "2026-09-10T10:00:31+00:00",
-          "age_hours": 8.8,
+          "age_hours": 9.1,
           "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOX25kbXVBVFpTSnk5ME55aHBzeVNCSnA0dEVfbnBlUTNVZ1hXMlFnRXUxQXoyY0w0azdNSHA1V3BsMkZLcGptYzRhenpkdHEwTGh2REFHcUJVUjk3V01rTEdodWtybUpXYWliMkVtVGxieExYT0I3Q2R2Zi13RS1vZg?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.838,
+          "score": 3.833,
           "speech": "CNN. Ectopic pregnancy deaths have nearly doubled. It’s worse in states with abortion bans. Nearly 200 Women Died After Ectopic Pregnancies Since 2020 and No Federal Agency Has Publicly Responded. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1488,34 +1530,70 @@
               "source": "Medical Daily"
             },
             {
-              "title": "Ectopic Pregnancy Deaths Have Nearly Doubled as Abortion Bans Continue to Cause Delays in Care: Report",
-              "source": "People.com"
+              "title": "U.S. Ectopic Pregnancy Deaths Nearly Double as Experts Examine Treatment Delays",
+              "source": "Межа. Новини України."
             },
             {
               "title": "Report finds sharp increase in ectopic pregnancy deaths across the US",
               "source": "Scripps News"
             }
-          ]
+          ],
+          "audio": "audio/cache/cb904f9d4d9538a2a065.mp3"
         },
         {
           "id": "health-1",
+          "title": "Drinking very hot beverages could triple cancer risk, large study finds",
+          "publisher": "CNN",
+          "domain": "cnn.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=cnn.com&sz=128",
+          "published": "2026-09-10T09:49:57+00:00",
+          "age_hours": 9.3,
+          "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9KTHFSdGN3MEZuVllEOWE3UkR5cTROOTlQNDkyX2FvUGtFV25yRG1QUFdPMnVNT2hhdjk5aXUtZHBOWVFiamZ6S3lULWMwQTZoV2tRYWFBanRac1psdTFVbFNDYmw4VG5GTXg4dFBQNnJkQWsxbVdkck1lcWVTeTQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.83,
+          "speech": "CNN. Drinking very hot beverages could triple cancer risk, large study finds. Daily Dose, Hot drinks, child drug exposures and memory warning signs. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Drinking very hot drinks could triple risk of oesophageal cancer, study finds",
+              "source": "The Guardian"
+            },
+            {
+              "title": "New UK study links hot drink consumption to one type of oesophageal cancer",
+              "source": "Cancer Research UK - Cancer News"
+            },
+            {
+              "title": "Daily Dose: Hot drinks, child drug exposures and memory warning signs",
+              "source": "10tv.com"
+            },
+            {
+              "title": "Very hot drinks may damage the food pipe and increase cancer risk",
+              "source": "BBC"
+            }
+          ],
+          "audio": "audio/cache/3f325d93c10fdd029450.mp3"
+        },
+        {
+          "id": "health-2",
           "title": "Suspected measles cases kill nearly 1,000 as Bangladesh struggles to contain outbreak",
           "publisher": "NBC News",
           "domain": "nbcnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nbcnews.com&sz=128",
           "published": "2026-09-10T03:59:00+00:00",
-          "age_hours": 14.9,
+          "age_hours": 15.1,
           "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOTTdzSFlwRlVCeW1OSmdud280YldUTHZKUnd0Rk5MS0N3Ml96RDZRREs0bXpET2VueTVOTVZxaUNLWVhjOUxkOUVpTmVCSTl1TDM5djdBSDVBM0JpWDRPaFZLRHpWaTZTYU9EZGktWHNFdl9LSmpLeks3MlJxX09NaWVQeXRqOGlFNHRSY2tRMTMzLVJId2c?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.737,
+          "score": 3.733,
           "speech": "NBC News. Suspected measles cases kill nearly 1,000 as Bangladesh struggles to contain outbreak. Whatever happened to the measles outbreak that shocked a country this year?. This story was covered by 5 separate outlets.",
           "related": [
             {
               "title": "Whatever happened to the measles outbreak that shocked a country this year?",
-              "source": "npr.org"
+              "source": "NPR"
             },
             {
               "title": "Bangladesh measles deaths surpass 1,000 after vaccination drive falls short",
@@ -1527,60 +1605,31 @@
             },
             {
               "title": "In Pictures: Inside Bangladesh's Worst Measles Outbreak In Years",
-              "source": "outlookindia.com"
+              "source": "Outlook India"
             }
-          ]
-        },
-        {
-          "id": "health-2",
-          "title": "Unpaid Ebola Workers Let Families Touch the Dead",
-          "publisher": "WSJ",
-          "domain": "wsj.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=wsj.com&sz=128",
-          "published": "2026-09-10T18:39:49+00:00",
-          "age_hours": 0.2,
-          "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNcVB6Z3hSOEVoenV6SWFJa1hOWkxwQVBTdk5kS2VTQnlWUHZuUGdZU0cxU09ndDlMcnF6YjRtUndLRHpza09ETlhTbElNQ2RuQVNVZGtYUlRrQUQ3WmFPcHF4ZEhneW5XQnE3c3lwU2I2X0xJSm9UYktFeDFnWktPcHhDNlI2R2NmWXJpcXdXbi1oaGlr?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.682,
-          "speech": "WSJ. Unpaid Ebola Workers Let Families Touch the Dead. DRC’s Ebola outbreak has the potential to become a global pandemic. How to make sure it doesn’t. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Ebola burial teams endure exhaustion, hostility from communities",
-              "source": "Daily Sabah"
-            },
-            {
-              "title": "WHO says staff shortage, funding challenges hamper Congo Ebola response",
-              "source": "Reuters"
-            },
-            {
-              "title": "Ebola epidemic outpaces containment despite influx of money and supplies",
-              "source": "NBC News"
-            },
-            {
-              "title": "DRC’s Ebola outbreak has the potential to become a global pandemic. How to make sure it doesn’t",
-              "source": "The Conversation"
-            }
-          ]
+          ],
+          "audio": "audio/cache/3660c5cc1a4aba3a83ba.mp3"
         },
         {
           "id": "health-3",
-          "title": "Walking briskly may lower risk of death in some adults: Study",
-          "publisher": "abcnews.com",
+          "title": "Walking briskly may lower risk of death in some adults: Study - ABC News",
+          "publisher": "ABC News - Breaking News, Latest News and Videos",
           "domain": "abcnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=abcnews.com&sz=128",
           "published": "2026-09-10T16:27:15+00:00",
-          "age_hours": 2.4,
+          "age_hours": 2.7,
           "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQQWp4YmFwSFRueDZFM21wQzY2WVpLWGNGaEw1T0lGczc2TEQtVC1uNG9aUFNaVWFIWWYzNnpRVy1OaHpycTNtOUNmcVZFQlBHMEZuMjFpSWpocldpMnVkVHB3eEh6N0s1NEg1a1I2eTV6Z2FRN0gzVndYbmE4b0VVN0lGR1dVQ2tqZ0YxOWxYMUpfN2JIeGfSAZsBQVVfeXFMTWlucEVVTlZmUmxZYWRSaEtGU0ljNnhtaWVUOG14VWRUMGVCM21jV0pmeVdHa1FXV0hOdWZkRUMxQ29XSnRvdFdTeWw5aEVfLUo3MG9saXlaUlBnRUVEM2pmT3hDSmpPWVowc3FjSWl4VDhJZ3Z3SGwteWU3UERaMzBzdzBpa29xcE5WaXpqM29Za3FGdjRsSlNoT2M?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.645,
-          "speech": "abcnews. Walking briskly may lower risk of death in some adults, Study. How Fast You Walk May Determine How Long You Live. This story was covered by 5 separate outlets.",
+          "score": 3.641,
+          "speech": "ABC News, Breaking News, Latest News and Videos. Walking briskly may lower risk of death in some adults, Study, ABC News. How Fast You Walk May Determine How Long You Live. This story was covered by 5 separate outlets.",
           "related": [
+            {
+              "title": "Walking briskly may lower risk of death in some adults: Study",
+              "source": "ABC News - Breaking News, Latest News and Videos"
+            },
             {
               "title": "Walking an extra 1,000 steps a day may help your heart, study finds",
               "source": "The Washington Post"
@@ -1592,12 +1641,9 @@
             {
               "title": "How Fast You Walk May Determine How Long You Live",
               "source": "nautil.us"
-            },
-            {
-              "title": "Is Your Step Count Too Low? Try Walking Faster",
-              "source": "Time Magazine"
             }
-          ]
+          ],
+          "audio": "audio/cache/d1ee106c15a21df6b2c1.mp3"
         },
         {
           "id": "health-4",
@@ -1606,13 +1652,13 @@
           "domain": "foxnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=foxnews.com&sz=128",
           "published": "2026-09-10T16:14:12+00:00",
-          "age_hours": 2.6,
+          "age_hours": 2.9,
           "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPMDR3R09pNk1nZ1lGZC1zX3NlU3VkXzlFcXBSQjctRGJrWlBnakIxSW8wNzFadVZXUl81dV9GdEY4WEMtV0lfaUtKY1JTRHFmWi1XMWNiZlhzZ1RVUE9kWndBakMzZWFabnBRd3lhdXQ4Uk1LU0JuLVFFY1NCbkpQMjFTM2o2ZHR2Q3d6b1R0VDdiS2VkSjltRjliSldyeXhHd0hQZmktQm1uUldv0gGyAUFVX3lxTE5sX2dVLXlEcF9RdnZNX2ZWSDFNbGd5YWE4U0V1ODh2RVR3R0NyYWJ3ekZmN0dQc1BjUzlpZndlTFgzMHowcFdjZDdsWHBKZ3g2eHZaT2lVMkFlTENieVRyT0NCM1d2QXlrVFZTcGs3ankwQ3ZaSUt2blIyTHE5X3RuYUR3VDREX1liUlpUekpWTWt0OEdTNzdIWG9XSUk0V1h3dGRybXJmZTFFWUpkYmNOUWc?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.641,
+          "score": 3.637,
           "speech": "Fox News. Alcohol tied to surprising cancer death pattern in adults under 55, researchers find. How much alcohol it takes to increase your risk of dying of 9 cancers, study. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1621,7 +1667,7 @@
             },
             {
               "title": "How much alcohol it takes to increase your risk of dying of 9 cancers: study",
-              "source": "New York Post"
+              "source": "nypost.com"
             },
             {
               "title": "Even Light Drinking Can Raise Cancer Risk After 50",
@@ -1631,7 +1677,8 @@
               "title": "Alcohol-Linked Cancer Deaths in the U.S. Doubled Since 1990",
               "source": "Cure Today"
             }
-          ]
+          ],
+          "audio": "audio/cache/175e1003478501ef3d0c.mp3"
         },
         {
           "id": "health-5",
@@ -1640,13 +1687,13 @@
           "domain": "nature.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nature.com&sz=128",
           "published": "2026-09-09T12:26:55+00:00",
-          "age_hours": 30.4,
+          "age_hours": 30.7,
           "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9SYkxtTmtGSjZuN3lqOUIyQUNsdXpKR3lISXhtbFQwMy1nRW9zTkpNRTJzY19jUU1BVWkxQnp4dE9KYm1CQVBfT3hndF9saDJVR1dpSXAzSFl3ckh1MXJj?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.628,
+          "score": 3.624,
           "speech": "Nature. Novel insight into the effects of the metabolites from gut microbiota in both unmedicated depressive adolescents and mice, key roles of indole derivatives-aryl hydrocarbon receptor signaling in neurogenesis and microglial homeostasis. Two microbes have been reliably accused of causing depression. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1665,7 +1712,8 @@
               "title": "What your gut microbes may have to do with how your brain ages",
               "source": "News-Medical"
             }
-          ]
+          ],
+          "audio": "audio/cache/d649b3b16e9c0b8647f0.mp3"
         }
       ]
     },
@@ -1680,47 +1728,83 @@
           "domain": "bbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
           "published": "2026-09-10T16:45:49+00:00",
-          "age_hours": 2.1,
+          "age_hours": 2.4,
           "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0zTTZtTVBrYjFnd0oyQzBSYWYzbWdkSE0yenhMY2ROWTRyZmU1VlRZVm5GSXhzMEtkejliX0E2VWtuSHNZbWhIQ3lpWG45WDAyS1JsMncxSnF5dEdEZDFmT2k5SHc0QQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.1,
-          "speech": "BBC. Vuelta a Espana, Primoz Roglic closes gap on leader Enrico Mas with in the stage 18 time trial. La Vuelta Standings After Stage 18, See Who's Leading. This story was covered by 5 separate outlets.",
+          "score": 4.096,
+          "speech": "BBC. Vuelta a Espana, Primoz Roglic closes gap on leader Enrico Mas with in the stage 18 time trial. King Küng rules, Mas resists. This story was covered by 5 separate outlets.",
           "related": [
             {
+              "title": "King Küng rules, Mas resists",
+              "source": "La Vuelta"
+            },
+            {
+              "title": "'We cannot touch him' – Primož Roglič unfazed as he fails to make major gains on Enric Mas in Vuelta a España TT, but team insist 'it's not over'",
+              "source": "Cyclingnews"
+            },
+            {
               "title": "'You have to win, it doesn't matter by how big of a margin' –Stefan Küng takes a 2-second victory in individual time trial on stage 18 of Vuelta a España",
-              "source": "Yahoo Sports"
+              "source": "sports.yahoo.com"
             },
             {
               "title": "Vuelta: Küng wins the stage 18 time trial as Roglič moves into second overall",
               "source": "Escape Collective"
-            },
-            {
-              "title": "Vuelta a España Stage 18: Küng Wins as Mas Fends Off Roglič",
-              "source": "Outside Magazine"
-            },
-            {
-              "title": "La Vuelta Standings After Stage 18: See Who's Leading",
-              "source": "FloBikes"
             }
-          ]
+          ],
+          "audio": "audio/cache/09beba62a5eecc1ec827.mp3"
         },
         {
           "id": "sports-1",
+          "title": "England vs Pakistan: Brook, Smith, Lawrence and Robinson push hosts towards third Test win",
+          "publisher": "BBC",
+          "domain": "bbc.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
+          "published": "2026-09-10T16:37:21+00:00",
+          "age_hours": 2.5,
+          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBwQWRQRVhyUUtqbjVJWHlGSWx2bElwdnE1Z0hMVm5MSERqMkpUZjhHMVJ1VUNKc0gyc0k3MDFRSjJ2UkNCenh4SUtRMkdSU1kxaEtPa1c3aFRZWFJCN2VZRkEwWGNQUQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.093,
+          "speech": "BBC. England vs Pakistan, Brook, Smith, Lawrence and Robinson push hosts towards third Test win. It's depressing, Shakeel laments Pakistan's batting woes. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "England close in on Pakistan whitewash in third Test as Robinson shines",
+              "source": "Al Jazeera"
+            },
+            {
+              "title": "'It's depressing' - Shakeel laments Pakistan's batting woes",
+              "source": "Cricinfo"
+            },
+            {
+              "title": "England close on series sweep against Pakistan: third men’s cricket Test, day two – as it happened",
+              "source": "The Guardian"
+            },
+            {
+              "title": "Joe Root's struggles and England century drought against Pakistan the only concerns from improved post-Bazball batting, says Nasser Hussain",
+              "source": "Sky Sports"
+            }
+          ],
+          "audio": "audio/cache/09d4c0266004451f5ee8.mp3"
+        },
+        {
+          "id": "sports-2",
           "title": "Solheim Cup 2026: Charley Hull to face Nelly Korda in opening foursomes match",
           "publisher": "BBC",
           "domain": "bbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
           "published": "2026-09-10T15:41:14+00:00",
-          "age_hours": 3.2,
+          "age_hours": 3.4,
           "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE10RnA2eEJPRGYyY1hSX0tDLWQyQXR0NnVMZ2JsUUhqUDJNNkkyanVJMHJYVkVfdDhzc3d2dndyUTR5bTlNSGkxaFMwVnAxcTkxVF8xSHdLcmJjRmdudkdNdmtR?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 4.082,
+          "score": 4.078,
           "speech": "BBC. Solheim Cup 2026, Charley Hull to face Nelly Korda in opening foursomes match. Behind the scenes at the Solheim Cup gala, where Team USA glammed it up. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1728,67 +1812,104 @@
               "source": "LPGA"
             },
             {
+              "title": "‘She’s buzzing’: Charley Hull to face world No 1 Nelly Korda in Solheim Cup opener",
+              "source": "The Guardian"
+            },
+            {
               "title": "Solheim Cup 2026: Anna Nordqvist and Angela Stanford offer powerful messages ahead of Team Europe's bid to beat Team USA",
               "source": "Sky Sports"
             },
             {
               "title": "Behind the scenes at the Solheim Cup gala, where Team USA glammed it up",
-              "source": "golfweek.usatoday.com"
-            },
-            {
-              "title": "Why the Netherlands hosting the Solheim Cup could mark the beginning of a boom",
-              "source": "The New York Times"
+              "source": "Golfweek"
             }
-          ]
-        },
-        {
-          "id": "sports-2",
-          "title": "England vs Pakistan: Brook, Smith, Lawrence and Robinson push hosts towards third Test win",
-          "publisher": "BBC",
-          "domain": "bbc.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
-          "published": "2026-09-10T16:37:21+00:00",
-          "age_hours": 2.2,
-          "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBwQWRQRVhyUUtqbjVJWHlGSWx2bElwdnE1Z0hMVm5MSERqMkpUZjhHMVJ1VUNKc0gyc0k3MDFRSjJ2UkNCenh4SUtRMkdSU1kxaEtPa1c3aFRZWFJCN2VZRkEwWGNQUQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 4,
-          "score": 3.835,
-          "speech": "BBC. England vs Pakistan, Brook, Smith, Lawrence and Robinson push hosts towards third Test win. England pile on the pain by stretching lead over Pakistan to 166 runs on Day 2. This story was covered by 4 separate outlets.",
-          "related": [
-            {
-              "title": "Ollie Robinson’s feats against Pakistan have yet to convince England’s old guard",
-              "source": "The Guardian"
-            },
-            {
-              "title": "New faces, same old problems: Pakistan all out for 133 in 3rd England Test",
-              "source": "Al Jazeera"
-            },
-            {
-              "title": "England bat Pakistan out of third Test before Robinson moves in for the kill",
-              "source": "The Guardian"
-            },
-            {
-              "title": "England pile on the pain by stretching lead over Pakistan to 166 runs on Day 2",
-              "source": "San Francisco Chronicle"
-            }
-          ]
+          ],
+          "audio": "audio/cache/bcfee4cd0fd2d0eba595.mp3"
         },
         {
           "id": "sports-3",
+          "title": "Russian figure skater Kamila Valieva again refused neutral status to compete",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T12:07:00+00:00",
+          "age_hours": 7.0,
+          "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUEtHaC1sRE1rRktxLXF1SUdobHlCaVlLektKdm40UTFDQzMtemZnZFZHYVpyUjJmU3hSNXFfRFh1cTREaUxjRldmRnU0QTJhbTNKcnRZTW92aTFQVWlyT0hZUF9OUjgxTEhrNTBoQW1lM09LN2JzSkRKakxlTWk3UjNiN3ZuQ2NmSkllajhkaDZxeFRKMnFNTUMwa0VjTG5fMU5RcC0yelo?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.018,
+          "speech": "AP News. Russian figure skater Kamila Valieva again refused neutral status to compete. Kamila Valiyeva denied neutral eligibility for international figure skating events. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Russian figure skater Kamila Valieva stripped of neutral athlete status",
+              "source": "BBC"
+            },
+            {
+              "title": "Kamila Valiyeva denied neutral eligibility for international figure skating events",
+              "source": "sports.yahoo.com"
+            },
+            {
+              "title": "Russian skater Valieva has neutral status revoked, report says",
+              "source": "ESPN"
+            },
+            {
+              "title": "Skater Kamila Valieva Loses Neutral Status",
+              "source": "The Moscow Times"
+            }
+          ],
+          "audio": "audio/cache/72b271588e6ece51a3ab.mp3"
+        },
+        {
+          "id": "sports-4",
+          "title": "Seahawks pick off Drake Maye 3 times to beat Patriots 13-10 in Super Bowl rematch",
+          "publisher": "AP News",
+          "domain": "apnews.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=apnews.com&sz=128",
+          "published": "2026-09-10T11:04:00+00:00",
+          "age_hours": 8.0,
+          "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQcmpkOGJ4Y203VmctbUV1d0xuV2FweC0xVjJRRDRJNTFVMkpLdkVWVThGNmxieFlTZEFtdjY0MTlYZm1MVF9HYXFFMmJ4dnlhV0wwQXZISlpaUFRlaVdzQnJQdFFsRFphOUFyQWhjRzhQRVQwUjBDcEY4NlhySFNXelhnSVNRblpnRjlB?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 4.001,
+          "speech": "AP News. Seahawks pick off Drake Maye 3 times to beat Patriots 13-10 in Super Bowl rematch. Drew Lock ‘Did A Phenomenal Job Leading Seahawks Offense In Week 1 Win. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Mike Vrabel: Drake Maye will learn from it, hopefully we’ll be better for it in the end",
+              "source": "NBC Sports"
+            },
+            {
+              "title": "3 key stats highlight Seahawks’ 13-10 win over Patriots in Week 1",
+              "source": "sports.yahoo.com"
+            },
+            {
+              "title": "Drew Lock ‘Did A Phenomenal Job’ Leading Seahawks Offense In Week 1 Win",
+              "source": "Seattle Seahawks"
+            },
+            {
+              "title": "Patriots’ loss to Seahawks was ugly because of how quickly it fell apart, and other observations",
+              "source": "The Boston Globe"
+            }
+          ],
+          "audio": "audio/cache/cd8ab7ed43f18f5fe71c.mp3"
+        },
+        {
+          "id": "sports-5",
           "title": "Trump jokes about trying to \"redo\" huge Luka Dončić trade in Dallas speech: \"I must tell you, I don't understand the trade\"",
           "publisher": "CBS News",
           "domain": "cbsnews.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cbsnews.com&sz=128",
           "published": "2026-09-10T05:36:21+00:00",
-          "age_hours": 13.2,
+          "age_hours": 13.5,
           "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE04QlFaZU4wUWxBZWZMQlpqckd5ZFVMeXpvaWhURWpwc19TUFEwLUJia2pYQ2VWWmptODJsaEFMZXZEYUQzRXhSQ1BJMlQ1REotbmg3Yi10TVRXcmlJeXlKUXB6Rjk2aXJjSkNZNVZfM3d6R3BmMVdJNTRqUXU?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.764,
+          "score": 3.76,
           "speech": "CBS News. Trump jokes about trying to redo huge Luka Dončić trade in Dallas speech, I must tell you, I don't understand the trade. Donald Trump on Mavs infamous Luka Doncic trade, Worst trade in the history of sports. This story was covered by 5 separate outlets.",
           "related": [
             {
@@ -1796,154 +1917,89 @@
               "source": "The New York Times"
             },
             {
-              "title": "Trump says Dallas Mavericks’ Luka Doncic trade may be ‘worst of all time’",
-              "source": "The Washington Post"
+              "title": "‘There’s No Way This Is Real,’ ‘I’m Cryin’ — NBA World Stunned as President Donald Trump Brings Up Notorious Luka Dončić Trade at Dallas Convention",
+              "source": "sports.yahoo.com"
             },
             {
-              "title": "‘There’s No Way This Is Real,’ ‘I’m Cryin’ — NBA World Stunned as President Donald Trump Brings Up Notorious Luka Dončić Trade at Dallas Convention",
-              "source": "Yahoo Sports"
+              "title": "Trump says Dallas Mavericks’ Luka Doncic trade may be ‘worst of all time’",
+              "source": "The Washington Post"
             },
             {
               "title": "Donald Trump on Mavs' infamous Luka Doncic trade: 'Worst trade in the history of sports'",
               "source": "Dallas News"
             }
-          ]
-        },
-        {
-          "id": "sports-4",
-          "title": "With Jazz placed on IL, Yanks call on Volpe, who 'became Barry Bonds all of a sudden'",
-          "publisher": "MLB.com",
-          "domain": "mlb.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=mlb.com&sz=128",
-          "published": "2026-09-10T17:58:35+00:00",
-          "age_hours": 0.9,
-          "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9CRGdfT19OQ2g2ZlpIQVZELUtMaGV4d0NTTjFaeGdvTDg0SlVtWTdMYnFGRnpaNi1GdWxFWkpaeVcwbDV6dm40cjBRV0pTSjF4VVNpa2haRHFGc01XQzdsdGtEdG5YWEV4T28xRkNSQlBKQQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.67,
-          "speech": "MLB. With Jazz placed on IL, Yanks call on Volpe, who became Barry Bonds all of a sudden. Yankees Place Jazz Chisholm Jr. On Injured List. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Volpe rejoins Yankees after Chisholm hits IL with sprained thumb",
-              "source": "ESPN"
-            },
-            {
-              "title": "Yankees make Anthony Volpe decision amid Jazz Chisholm Jr. news",
-              "source": "Yahoo Sports"
-            },
-            {
-              "title": "Yankees call up Anthony Volpe, put Jazz Chisholm Jr. on injured list",
-              "source": "The New York Times"
-            },
-            {
-              "title": "Yankees Place Jazz Chisholm Jr. On Injured List",
-              "source": "MLB Trade Rumors"
-            }
-          ]
-        },
-        {
-          "id": "sports-5",
-          "title": "The latest on Seahawks QB Sam Darnold’s hip injury",
-          "publisher": "sports.mynorthwest.com",
-          "domain": "sports.mynorthwest.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=sports.mynorthwest.com&sz=128",
-          "published": "2026-09-10T17:10:20+00:00",
-          "age_hours": 1.7,
-          "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPdmZPbEtOb0tDSk9SM1NadkJBYzREc2xJZUtJRFVMdFpWRkFsdzEwZkhvSG9Wd1BVX2Zsb2wyeU5LalU4WENkOUdyMkM3em03djkwRWF2ZEc5WlptRHpTcW84Vlh3Yi1NZDJUbzlXaUMxaXQ3MVh3Wk9JVDBFRG92NnJ2dmphQmhNY045N0EzYTdENHh1VGpZSG9MeFRzZVJCZndjNQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.657,
-          "speech": "sports.mynorthwest. The latest on Seahawks QB Sam Darnold’s hip injury. A.J. Brown, Sam Darnold suffer potentially significant injuries in NFL opener. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "Sources: Seahawks' Sam Darnold expected to miss Week 2",
-              "source": "ESPN"
-            },
-            {
-              "title": "Seahawks Get ‘Great News’ On Sam Darnold’s Hip Injury",
-              "source": "Seattle Seahawks"
-            },
-            {
-              "title": "A.J. Brown, Sam Darnold suffer potentially significant injuries in NFL opener",
-              "source": "PhillyVoice"
-            },
-            {
-              "title": "Report: Sam Darnold is expected to miss time, MRI under review",
-              "source": "NBC Sports"
-            }
-          ]
+          ],
+          "audio": "audio/cache/f2464c3781f7e3742118.mp3"
         },
         {
           "id": "sports-6",
-          "title": "What drivers expect from F1's new hardest track",
-          "publisher": "The Race",
-          "domain": "the-race.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=the-race.com&sz=128",
-          "published": "2026-09-10T16:53:41+00:00",
-          "age_hours": 2.0,
-          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPTzBjdVdPTGJFNmJnNEdYTlZoNElyRHFJUUZNaDhOT3dWeWFBeEFkaGdEby1GTjNFVDM4akNpVXpSbUExV3lNWllZX2Y3cEtlR0NpcHREU2IxNzNyWU1oNFcxaXFVN3UxWFRHcm82dy1iRW9memt6N2FQQUJERUoxQ0NLZngwaDN2UFE?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.652,
-          "speech": "The Race. What drivers expect from F1's new hardest track. Why Max Verstappen isn’t buying the hype over a Red Bull surprise in Madrid. This story was covered by 5 separate outlets.",
-          "related": [
-            {
-              "title": "'Insane' – What the F1 drivers make of the new Madring",
-              "source": "Formula 1"
-            },
-            {
-              "title": "Why Max Verstappen isn’t buying the hype over a Red Bull surprise in Madrid",
-              "source": "Yahoo Sports"
-            },
-            {
-              "title": "Spanish GP: What to expect from new Madring track in Madrid with Carlos Sainz predicting safety cars and red flags",
-              "source": "Sky Sports"
-            },
-            {
-              "title": "Why Ferrari won’t have to worry about another manhole cover incident at the Madring",
-              "source": "Motorsport.com"
-            }
-          ]
-        },
-        {
-          "id": "sports-7",
-          "title": "Josh Jacobs pleads no contest to two misdemeanor charges",
+          "title": "Tua Tagovailoa appears to suffer back discomfort during individual drills",
           "publisher": "NBC Sports",
           "domain": "nbcsports.com",
           "favicon": "https://www.google.com/s2/favicons?domain=nbcsports.com&sz=128",
-          "published": "2026-09-10T16:27:29+00:00",
-          "age_hours": 2.4,
-          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS2tONzdGOGhtUE04NmJ1RDJydEw5R0tCODV6NklwVWQ1c096VmpiT3RVNmsxV2VGcXh5Qkl1VWlST2s4MFV0cWNDcnFFV2xvVDI2YkZUSk51VjBqSWJBWjlOVFdUOFNwUGktLW54UFNDT3ZMNFNPM0pGeXAwcFF2NURoeEZfMWc3c1FtNEx1Mm9mSjBqS19JOU5Va0dvclZmS05neHI4Qk5ZN1dvejlDWFgwd1ZmODBDZXc?oc=5",
+          "published": "2026-09-10T18:34:28+00:00",
+          "age_hours": 0.5,
+          "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNRHVsSHhhLWQyb1locUx5OEN5MFFZQTc2cHlEQk0xN1dVbVN3OWJfSGxHYVJOejZpYTBURmw4THVLTHd3RjVjc1p4SE16YUgxQjNtRFowNzdLN2kxamNDWUlFZmJoMFlhM25wOEZUbW5mc0tsZzB5Rm9QRjNYdTRtM0FyQXNOUDVpajh2M0pnSkJ4N2pWMU0zNmdGbElYNW9VeDlXNGRyZHo4T09YaklocXZYQ0xkeXdyR0xDN1BUZGdkcll6UUcwQWs3elhxWEZu?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.645,
-          "speech": "NBC Sports. Josh Jacobs pleads no contest to two misdemeanor charges. Packers RB Josh Jacobs due in court Thursday. This story was covered by 5 separate outlets.",
+          "score": 3.676,
+          "speech": "NBC Sports. Tua Tagovailoa appears to suffer back discomfort during individual drills. Atlanta Falcons Week 1 depth chart vs. Pittsburgh Steelers. This story was covered by 5 separate outlets.",
           "related": [
             {
-              "title": "Packers RB Josh Jacobs pleads no contest to misdemeanor charges",
+              "title": "Falcons name Tua Tagovailoa Week 1 starting QB vs. Steelers",
               "source": "ESPN"
             },
             {
-              "title": "Packers RB Josh Jacobs pleads no contest to domestic charges setting him up for an NFL suspension",
-              "source": "Fox News"
+              "title": "Atlanta Falcons' Week 1 depth chart vs. Pittsburgh Steelers",
+              "source": "Atlanta Falcons"
             },
             {
-              "title": "Packers' Josh Jacobs pleads no contest to misdemeanor battery with NFL suspension looming",
-              "source": "CBS Sports"
+              "title": "Falcons depth chart: Rookies Kendal Daniels, Avieon Terrell listed as starters for Week 1",
+              "source": "The Falcoholic"
             },
             {
-              "title": "Packers RB Josh Jacobs due in court Thursday",
-              "source": "WBAY"
+              "title": "Tua Tagovailoa sees Falcons’ starting QB job as a chance to change perceptions - The Athletic",
+              "source": "The New York Times"
             }
-          ]
+          ],
+          "audio": "audio/cache/7357bc90849ccfd34b06.mp3"
+        },
+        {
+          "id": "sports-7",
+          "title": "Mike Vrabel: A.J. Brown still undergoing tests, unsure of Week 2 availability",
+          "publisher": "NBC Sports",
+          "domain": "nbcsports.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=nbcsports.com&sz=128",
+          "published": "2026-09-10T18:11:15+00:00",
+          "age_hours": 0.9,
+          "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOUFdIMG1PaGpCeV9ZcVlyOU8zSm9ZbGlrNUlZMUxDTHkzNmtpTVdhWUp1Vkhmckg3LWxIQ2hvbDloMXNUOWR5bDlpQWZNQjBnaW9WZGR4RE5yQlJxbkV0TFFmeVBDQlluNUt1VTh2alBxQVdCMGdvMmdTU2NOSkZjbC1SOUJMZVQ3R2dMOWJIWFJ0REkzSjRjUExqeWthOUNfeEZCRmhZRVliNGJJVnBGZGJYN29xUWE4WFZ5TlJjNVNJcFJLeGpDMk96NkUyM2lsamc?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.669,
+          "speech": "NBC Sports. Mike Vrabel, A.J. Brown still undergoing tests, unsure of Week 2 availability. Sources, A.J. Brown believed to have high ankle sprain, set for MRI. This story was covered by 5 separate outlets.",
+          "related": [
+            {
+              "title": "Sources: A.J. Brown believed to have high ankle sprain, set for MRI",
+              "source": "ESPN"
+            },
+            {
+              "title": "Patriots coach Mike Vrabel says A.J. Brown's Week 2 availability is uncertain after ankle injury",
+              "source": "sports.yahoo.com"
+            },
+            {
+              "title": "A.J. Brown Injured, Latest Updates on Patriots WR's Status After Exiting vs. Seahawks in Opener",
+              "source": "Bleacher Report"
+            },
+            {
+              "title": "How long is A.J. Brown out? Injury update, return date for Patriots WR",
+              "source": "USA Today"
+            }
+          ],
+          "audio": "audio/cache/c524aab99ebf89c03f5d.mp3"
         }
       ]
     },
@@ -1958,15 +2014,16 @@
           "domain": "laravel-news.com",
           "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
           "published": "2026-09-10T17:06:47+00:00",
-          "age_hours": 1.7,
+          "age_hours": 2.0,
           "link": "https://laravel-news.com/bifrost-first-anniversary?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/Bifrost-Option-2-LN.png",
           "source_url": "https://laravel-news.com/bifrost-first-anniversary?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "summary": "Bifrost marks its first year and 10,000 successful builds with an MCP server, automated workflows, managed credentials, and AI build diagnoses. The post Bifrost Turns One With AI Builds and New Workflows appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
           "source_count": 1,
-          "score": 2.423,
+          "score": 2.411,
           "speech": "Laravel News. Bifrost Turns One With AI Builds and New Workflows.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/a81d2c655ec91925f8f4.mp3"
         },
         {
           "id": "software-1",
@@ -1975,15 +2032,16 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-10T16:00:00+00:00",
-          "age_hours": 2.9,
+          "age_hours": 3.1,
           "link": "https://dev.to/demianbuilderdev/laravel-design-patterns-practice-series-builder-1p27",
           "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fywxod30rp99vewujrah5.png",
           "source_url": "https://dev.to/demianbuilderdev/laravel-design-patterns-practice-series-builder-1p27",
           "summary": "I was tired of seeing how many articles repeat, again and again, basic examples of using design patterns in development; examples based on shape figures/real-life objects are good for understanding when you are just starting to learn this concept of design patterns. But what about real practice? What about real examples with real code and frameworks to get a much better practical understanding and use? And this is the reason why I decided to start writing a series of articles about full practice in the Laravel framework. Even if you’re not a PHP developer and you have some medium-level experience in web development, you can still understand what we are going to do and use it in your own development. Builder pattern: Introduction It was a good decision to start this series with one of the simplest patterns, named “builder,” from the creational patterns. Let’s begin with some graphical examples to remember how it works, and after that, let’s move on to writing some code for generating reports in different file formats. Let’s begin with a definition: The Builder design pattern is a creational pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations. It is especially useful when an object needs to be created with many optional parts or configurations. Real-life example A simple real-life example of the Builder Pattern is how you order a burger at a fast-food restaurant: Instead of giving you only fixed menu items, the restaurant lets you customize your burger. You can add a patty, cheese, lettuce, tomato, sauces, bacon, etc., in the order you like. The builder (the person assembling) constructs the burger step by step. At the end, you get a fully built burger according to ",
           "source_count": 1,
-          "score": 2.223,
+          "score": 2.211,
           "speech": "DEV Laravel. Laravel & Design Patterns — Practice Series, Builder.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/190cfee1ace49c87d7d0.mp3"
         },
         {
           "id": "software-2",
@@ -1992,15 +2050,16 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-10T15:47:32+00:00",
-          "age_hours": 3.1,
+          "age_hours": 3.3,
           "link": "https://dev.to/oussamamater/a-series-of-unfortunate-jobs-33bk",
           "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpg5t242pdyukj2mtxgx0.png",
           "source_url": "https://dev.to/oussamamater/a-series-of-unfortunate-jobs-33bk",
           "summary": "You can't tell me Laravel queues haven't bitten you at least once. It's great that we get them out of the box, but man, they can be confusing as hell sometimes. Over the years, I've screwed up, more than once, and collected quite a few lessons along the way. Claude is currently Pondering.., I'm waiting, and bored, so shall we? Gotcha #1 I want you to look at the code below and tell me if you can spot anything wrong: namespace App\\Jobs; use DateTime; use Illuminate\\Foundation\\Queue\\Queueable; use Illuminate\\Contracts\\Queue\\ShouldQueue; class SendAbandonedCartReminder implements ShouldQueue { use Queueable; public function retryUntil(): DateTime { return now()->addMinutes(10); } public function handle(): void { // business logic } } SendAbandonedCartReminder::dispatch($cart)->delay(now()->addDay()); Nothing sus, right? The customer left their cart, so we nudge them a day later. And if the mail provider is having a bad day, we keep retrying for 10 minutes, then give up. Except that reminder will never be sent. Not once. If you spotted it, you probably learned this one during a fun debugging session 😅. If not, the misconception here is assuming that retryUntil() starts counting from the moment the job starts processing. Well, kind sir, that's where you're wrong. retryUntil() is evaluated when the job is pushed onto the queue, and the expiration timestamp is baked into the job payload. By the time the job becomes available to the workers, a day later, that timestamp is long gone. The worker fails it with the one and only MaxAttemptsExceededException, and handle() never runs. Gotcha #2 Same drill, take a look at the code below: namespace App\\Jobs; use Illuminate\\Foundation\\Queue\\Queueable; use Illuminate\\Contracts\\Queue\\ShouldQueue; class SyncOrderToCrm implements ShouldQueue",
           "source_count": 1,
-          "score": 2.214,
+          "score": 2.202,
           "speech": "DEV Laravel. A Series of Unfortunate Jobs.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/53b9e614f8973f082163.mp3"
         },
         {
           "id": "software-3",
@@ -2009,15 +2068,16 @@
           "domain": "blog.laravel.com",
           "favicon": "https://www.google.com/s2/favicons?domain=blog.laravel.com&sz=128",
           "published": "2026-09-10T12:15:00+00:00",
-          "age_hours": 6.6,
+          "age_hours": 6.9,
           "link": "https://laravel.com/blog/why-i-think-we-should-write-our-own-pr-descriptions",
           "image": "",
           "source_url": "https://laravel.com/blog/why-i-think-we-should-write-our-own-pr-descriptions",
           "summary": "Agents can write your PR descriptions, but they shouldn't. Here's why writing them yourself makes you a better engineer and a better teammate.",
           "source_count": 1,
-          "score": 2.206,
+          "score": 2.195,
           "speech": "Laravel Blog. Why I think we should write our own PR descriptions.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/b69ac5a68afe4e9121d8.mp3"
         },
         {
           "id": "software-4",
@@ -2026,15 +2086,16 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-10T06:51:53+00:00",
-          "age_hours": 12.0,
+          "age_hours": 12.3,
           "link": "https://dev.to/nurmantg/building-an-ultra-fast-link-in-bio-platform-with-laravel-11-livewire-3-real-time-phone-preview-m32",
           "image": "",
           "source_url": "https://dev.to/nurmantg/building-an-ultra-fast-link-in-bio-platform-with-laravel-11-livewire-3-real-time-phone-preview-m32",
           "summary": "Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview Most link-in-bio tools on the web today share the same common frustrations: sluggish page load times, full-page reloads when editing links, and long, clunky URLs. I wanted to build a modern, minimalist, and ultra-fast link-in-bio platform that solves these problems with a clean 6-character domain: GAS.PM. In this article, I want to break down the architectural choices, tech stack, and techniques used to build GAS.PM from scratch. ⚡ The Tech Stack Backend: Laravel 11 (PHP 8.3) Frontend / Interactivity: Livewire 3 + Alpine.js Styling: Tailwind CSS (Modern Glassmorphism & Custom Themes) Database: MySQL Production Server: Nginx + PHP-FPM on Linux 🎯 1. Real-Time Split-Screen Live Preview with Livewire 3 The core UX challenge of a bio link builder is giving creators immediate visual feedback. Instead of saving, reloading, and opening a new tab, GAS.PM utilizes a split-screen dashboard: Left Side: The configuration panel (adding links, reordering, tweaking avatars, backdrop filters, and button styles). Right Side: An interactive simulated smartphone frame rendering the live public profile. With Livewire 3, updates happen seamlessly: When a user changes a color picker or adjusts the glassmorphism blur slider, Livewire dynamically morphs only the modified DOM nodes inside the phone frame without full-page reloads. Drag-and-drop link reordering updates the database order instantly in the background. 🎨 2. Deep Aesthetic Customization (Glassmorphism & Frosted Glass) Creators care deeply about their aesthetic identity. Rather than offering just 3 static templates, GAS.PM gives users granular control over: Backdrop Filters: Frosted glass overlay opacity and dynamic values. Button Shapes:",
           "source_count": 1,
-          "score": 1.817,
+          "score": 1.805,
           "speech": "DEV Laravel. Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/21c5a9143f8de9ebf844.mp3"
         },
         {
           "id": "software-5",
@@ -2043,15 +2104,16 @@
           "domain": "github.blog",
           "favicon": "https://www.google.com/s2/favicons?domain=github.blog&sz=128",
           "published": "2026-09-10T02:05:17+00:00",
-          "age_hours": 16.8,
+          "age_hours": 17.0,
           "link": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
           "image": "https://github.blog/wp-content/uploads/2026/09/Actions-Run-Start_delay.png?resize=1024%2C509",
           "source_url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
           "summary": "While we continue to make progress, August proved to be a challenging month for availability. You can read more about these incidents in a blog post we published last month. We are aggressively investing in both architectural improvements and moving to Azure, which will give us more capacity. Meanwhile, we continue to see significant growth on our platform. We are prioritizing the most impactful work while minimizing risk, but as these incidents in August show, we cannot completely eliminate risk. Ultimately, all the work needs to be done, and incidents give us an opportunity to adjust our priorities. As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. We’ve also continued to make great progress across many durable work streams. On August 11, GitHub ran a production MySQL primary from Azure for the first time. Client-observed write impact was minimal, and no customer impact occurred in the transition. We repeated the pattern with two more primaries on August 27. We have further primaries scheduled over the coming weeks, increasing in complexity as we learn from each failover. Read traffic also reached new highs. Reads from migrated services peaked at 60.4%, while reads from GitHub’s monolith peaked at 64.3% in Azure. Git reads reached 54%. Away from the regional migration, the 24-table authentication-core cohort moved off GitHub’s oldest shared database, mysql1, removing approximately one million queries per second from its replicas. Separate query-hygiene changes removed another 120,000 queries per second and eliminated approximately 59,000 seconds of wasted database work per hour. GitHub Actions gained additional capa",
           "source_count": 1,
-          "score": 1.755,
+          "score": 1.743,
           "speech": "GitHub Blog. GitHub availability report, August 2026.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/1b5ea1a0973089c14c37.mp3"
         },
         {
           "id": "software-6",
@@ -2060,15 +2122,16 @@
           "domain": "laravel-news.com",
           "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
           "published": "2026-09-09T22:24:09+00:00",
-          "age_hours": 20.5,
+          "age_hours": 20.7,
           "link": "https://laravel-news.com/quick-blade?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/laravel-quick-blade-featured.png",
           "source_url": "https://laravel-news.com/quick-blade?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "summary": "Quick Blade is a free macOS Quick Look extension that renders .blade.php files in Finder with your layout, compiled CSS, and stand-in data. The post Preview Blade Templates in macOS Finder with Quick Blade appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
           "source_count": 1,
-          "score": 1.591,
+          "score": 1.579,
           "speech": "Laravel News. Preview Blade Templates in macOS Finder with Quick Blade.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/783491327a1e40e82983.mp3"
         },
         {
           "id": "software-7",
@@ -2077,15 +2140,16 @@
           "domain": "laravel-news.com",
           "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
           "published": "2026-09-09T21:33:11+00:00",
-          "age_hours": 21.3,
+          "age_hours": 21.6,
           "link": "https://laravel-news.com/laravel-telescope-5-24-0?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/Laravel-Telescope-LN.png",
           "source_url": "https://laravel-news.com/laravel-telescope-5-24-0?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
           "summary": "Laravel Telescope 5.24.0 adds two Artisan commands for inspecting recorded entries from the terminal and cancels stale dashboard requests during navigation. The post Artisan Debugging Commands in Laravel Telescope 5.24.0 appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
           "source_count": 1,
-          "score": 1.553,
+          "score": 1.542,
           "speech": "Laravel News. Artisan Debugging Commands in Laravel Telescope 5.24.0.",
-          "related": []
+          "related": [],
+          "audio": "audio/cache/44baf81387b216afe511.mp3"
         }
       ]
     }
@@ -2095,24 +2159,24 @@
       "topic": "NATION",
       "segment": "us",
       "status": "ok",
-      "count": 70,
-      "newest_age_hours": 0.3,
+      "count": 66,
+      "newest_age_hours": 0.5,
       "error": ""
     },
     {
       "topic": "WORLD",
       "segment": "world",
       "status": "ok",
-      "count": 59,
-      "newest_age_hours": 0.9,
+      "count": 58,
+      "newest_age_hours": 0.4,
       "error": ""
     },
     {
       "topic": "BUSINESS",
       "segment": "business",
       "status": "ok",
-      "count": 61,
-      "newest_age_hours": 0.4,
+      "count": 62,
+      "newest_age_hours": 0.7,
       "error": ""
     },
     {
@@ -2120,7 +2184,7 @@
       "segment": "technology",
       "status": "ok",
       "count": 20,
-      "newest_age_hours": 7.3,
+      "newest_age_hours": 7.6,
       "error": ""
     },
     {
@@ -2128,7 +2192,7 @@
       "segment": "technology",
       "status": "ok",
       "count": 10,
-      "newest_age_hours": 1.9,
+      "newest_age_hours": 2.1,
       "error": ""
     },
     {
@@ -2136,7 +2200,7 @@
       "segment": "technology",
       "status": "ok",
       "count": 20,
-      "newest_age_hours": 0.2,
+      "newest_age_hours": 0.5,
       "error": ""
     },
     {
@@ -2144,15 +2208,15 @@
       "segment": "technology",
       "status": "ok",
       "count": 50,
-      "newest_age_hours": 2.4,
+      "newest_age_hours": 2.6,
       "error": ""
     },
     {
       "topic": "TECHNOLOGY",
       "segment": "technology",
       "status": "ok",
-      "count": 35,
-      "newest_age_hours": 1.3,
+      "count": 36,
+      "newest_age_hours": 1.6,
       "error": ""
     },
     {
@@ -2160,7 +2224,7 @@
       "segment": "science",
       "status": "ok",
       "count": 53,
-      "newest_age_hours": 29.0,
+      "newest_age_hours": 29.2,
       "error": ""
     },
     {
@@ -2168,7 +2232,7 @@
       "segment": "science",
       "status": "ok",
       "count": 70,
-      "newest_age_hours": 0.9,
+      "newest_age_hours": 1.2,
       "error": ""
     },
     {
@@ -2176,15 +2240,15 @@
       "segment": "health",
       "status": "ok",
       "count": 70,
-      "newest_age_hours": 0.2,
+      "newest_age_hours": 0.5,
       "error": ""
     },
     {
       "topic": "SPORTS",
       "segment": "sports",
       "status": "ok",
-      "count": 70,
-      "newest_age_hours": 0.9,
+      "count": 68,
+      "newest_age_hours": 0.5,
       "error": ""
     },
     {
@@ -2192,7 +2256,7 @@
       "segment": "software",
       "status": "ok",
       "count": 5,
-      "newest_age_hours": 1.7,
+      "newest_age_hours": 2.0,
       "error": ""
     },
     {
@@ -2200,7 +2264,7 @@
       "segment": "software",
       "status": "ok",
       "count": 2,
-      "newest_age_hours": 6.6,
+      "newest_age_hours": 6.9,
       "error": ""
     },
     {
@@ -2208,7 +2272,7 @@
       "segment": "software",
       "status": "ok",
       "count": 12,
-      "newest_age_hours": 2.9,
+      "newest_age_hours": 3.1,
       "error": ""
     },
     {
@@ -2216,18 +2280,118 @@
       "segment": "software",
       "status": "ok",
       "count": 2,
-      "newest_age_hours": 16.8,
+      "newest_age_hours": 17.0,
       "error": ""
     }
   ],
   "total": 64,
   "image_stats": {
-    "aranan": 19,
-    "eslesen": 8,
-    "gorselli": 6,
-    "ozetli": 8
+    "aranan": 15,
+    "eslesen": 6,
+    "gorselli": 4,
+    "ozetli": 6
   },
-  "history_skipped": 6,
+  "history_skipped": 1,
   "audio": null,
-  "cues": []
+  "cues": [],
+  "audio_engine": "google",
+  "audio_chars": 1989,
+  "audio_reused": 55,
+  "podcast": {
+    "date": "2026-09-10",
+    "turns": [
+      {
+        "speaker": "SARAH",
+        "text": "Hello and welcome to today's news podcast. I'm Sarah.",
+        "audio": "audio/cache/3f5e8346d7f0ec286d37.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "And I'm Mark. Let's get straight into the stories.",
+        "audio": "audio/cache/f2cc3f72b566b675a88a.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "According to the BBC, a drone display recreated the Twin Towers over New York City. Organisers say each of the 2,977 drones represented a victim of the 9/11 attacks.",
+        "audio": "audio/cache/a918c60059278572a91f.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "In world news, Yemen's Houthis have reportedly seized the strategic Red Sea port of Mokha, according to the BBC. Capturing Mokha brings the group closer to controlling the Bab al-Mandab Strait.",
+        "audio": "audio/cache/1b9f92bb406cea878cc2.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "According to the BBC, data shows a pilot warned that an Amazon cargo plane was going too fast before a deadly crash. One pilot reported excessive speed, but received an uneven response as alarms sounded.",
+        "audio": "audio/cache/9ff0af62e67f9d9dcbb0.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "In other business news, The New York Times reports that mathematician Tristan Buckmaster was on the path toward an important proof. However, an AI giant used its massive resources to reach the proof first.",
+        "audio": "audio/cache/4c67c72f532c0019adeb.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "Meta has launched its new Muse AI assistant for productivity tools, according to The Verge. A review noted that while it worked as expected, the amount of information it autonomously gathered was unnerving.",
+        "audio": "audio/cache/c9df593942a300919a7b.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "Moving to technology, Google is making it easier to switch between password managers on Android, according to TechCrunch. The new feature will also transfer passkeys.",
+        "audio": "audio/cache/d59272921ec1ebb9f2bf.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "According to Laravel News, Bifrost is celebrating its first year and 10,000 successful builds. It now includes an MCP server, automated workflows, managed credentials, and AI build diagnoses.",
+        "audio": "audio/cache/7516368a1182981207c8.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "DEV Laravel published an article introducing a practical series on design patterns in Laravel. The first piece explains the Builder pattern using a burger ordering example and report generation code.",
+        "audio": "audio/cache/d2260d9962f7a862ff20.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "Another article from DEV Laravel highlighted common issues with Laravel queues. It noted that the retryUntil function is evaluated when a job is pushed to the queue, not when it starts processing.",
+        "audio": "audio/cache/01cc2152a7a17af0f0f8.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "According to the Laravel Blog, an article argues developers should write their own PR descriptions instead of using AI agents. The author states this practice helps developers become better engineers.",
+        "audio": "audio/cache/c4fe7034dac5d437e2fb.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "DEV Laravel also shared details on building GAS.PM, a link-in-bio platform built with Laravel 11 and Livewire 3. It features a split-screen dashboard with a real-time phone preview.",
+        "audio": "audio/cache/e5a7c4343e13559d9869.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "Finally, according to the GitHub Blog, August 2026 was a challenging month for service availability. GitHub is moving services to Azure and making architectural changes to increase capacity.",
+        "audio": "audio/cache/7e09d640b38c8e6f0cf3.mp3"
+      },
+      {
+        "speaker": "SARAH",
+        "text": "That covers all our stories for today. Thank you for listening.",
+        "audio": "audio/cache/2c0c2715d44f1d169c8f.mp3"
+      },
+      {
+        "speaker": "MARK",
+        "text": "Goodbye, everyone.",
+        "audio": "audio/cache/5723371b9bd5d312b59d.mp3"
+      }
+    ],
+    "dropped": 0
+  },
+  "episode": {
+    "date": "2026-09-10",
+    "locale": "en",
+    "title": "News Flow — 2026-09-10",
+    "audio": "audio/episodes/en-2026-09-10.mp3",
+    "bytes": 732960,
+    "duration": 104,
+    "turns": 16,
+    "summary": "Bugünün öne çıkan haberleri: Trump administration proposes waiving grace period for H-1B holders after job loss; Sept. 11 ranks among the most historic events in many Americans’ lifetimes, polling shows; Yemen's Houthis reportedly seize strategic Red Sea port of Mokha; Zelenskyy visits Canada to seek further military support for Ukraine; US wholesale prices rise in latest sign of stubborn inflation as oil prices continue to climb; Pilot warned Amazon cargo plane going too fast before deadly crash, data shows",
+    "published": "2026-09-10T19:08:05.981451+00:00"
+  }
 }
