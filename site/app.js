@@ -42,9 +42,13 @@ const STRINGS = {
     discoverSub: "Tüm kategorilerden haberler", savedSub: "Sonra okumak için ayırdıklarınız",
     search: "Haberlerde ara…", noMatch: "Eşleşen haber yok.", count: (n) => `${n} haber`,
     audioBriefing: "SESLİ BÜLTEN", dailyBriefing: "Günün bülteni",
-    episodes: (n, m) => `${n} bölüm · ~${m} dakika`,
+    episodeMeta: (m) => `İki sunucu · ~${m} dakika`,
     podcastApp: "Podcast uygulamanda dinle", saveOffline: "Çevrimdışı dinlemek için kaydet",
     podcastMissing: "Bugünün sesli bülteni üretilemedi.",
+    noSummary: "Bu haberin özeti alınamadı — yayıncının sayfasında okuyabilirsin.",
+    a11yBack: "Geri", a11ySave: "Kaydet", a11yUnsave: "Kaydedilenlerden çıkar",
+    a11yShare: "Paylaş", a11ySource: "Kaynağa git", a11ySearch: "Ara",
+    a11yRefresh: "Yenile", a11yVerified: "doğrulanmış kaynak",
     audioMissing: "Bazı haberlerin seslendirmesi eksik.",
     bulletinIncomplete: "Bu bülten eksik derlendi.",
     downloading: (a, b) => `İndiriliyor… ${a}/${b}`, offlineReady: (n) => `Çevrimdışı hazır · ${n} ses`,
@@ -55,7 +59,8 @@ const STRINGS = {
     add: "Ekle", edit: "Düzenle", read: "okundu",
     sources: (n) => `${n} kaynak`, singleSource: "tek kaynak",
     listenHere: "Buradan dinle", otherSources: "Aynı olayı yazan diğer kaynaklar",
-    sourceNote: "Google Haberler makale gövdesi vermediği için özet başlıkla sınırlıdır; tam metin için kaynağa gidin.",
+    sourceNote: "Özet yayıncının kendi akışından alındı; tam metin için kaynağa gidin.",
+    sourceNoteBare: "Google Haberler makale gövdesi vermiyor; bu haber için elimizde yalnızca başlık var.",
     savedEmpty: "Henüz haber kaydetmediniz.", savedHint: "Bir haberi açıp yer imi düğmesine dokunun.",
     stale: (t) => `Bülten ${t} güncellenmedi. Bağlantını kontrol et ya da yenile.`,
     hours: (n) => `${n} saattir`, days: (n) => `${n} gündür`,
@@ -67,9 +72,13 @@ const STRINGS = {
     discoverSub: "Stories from every category", savedSub: "Kept for later",
     search: "Search news…", noMatch: "No matching stories.", count: (n) => `${n} stories`,
     audioBriefing: "AUDIO BRIEFING", dailyBriefing: "Today's briefing",
-    episodes: (n, m) => `${n} segments · ~${m} min`,
+    episodeMeta: (m) => `Two hosts · ~${m} min`,
     podcastApp: "Listen in your podcast app", saveOffline: "Save for offline listening",
     podcastMissing: "Today's audio briefing could not be produced.",
+    noSummary: "No summary was available for this story — read it on the publisher's site.",
+    a11yBack: "Back", a11ySave: "Save", a11yUnsave: "Remove from saved",
+    a11yShare: "Share", a11ySource: "Go to source", a11ySearch: "Search",
+    a11yRefresh: "Refresh", a11yVerified: "verified source",
     audioMissing: "Some stories are missing narration.",
     bulletinIncomplete: "This bulletin was compiled with gaps.",
     downloading: (a, b) => `Downloading… ${a}/${b}`, offlineReady: (n) => `Ready offline · ${n} clips`,
@@ -80,7 +89,8 @@ const STRINGS = {
     add: "Add", edit: "Edit", read: "read",
     sources: (n) => `${n} sources`, singleSource: "single source",
     listenHere: "Listen from here", otherSources: "Other outlets covering this",
-    sourceNote: "Google News doesn't provide article bodies, so summaries stop at the headline; open the source for the full story.",
+    sourceNote: "The summary comes from the publisher's own feed; open the source for the full story.",
+    sourceNoteBare: "Google News doesn't provide article bodies, so all we have for this story is the headline.",
     savedEmpty: "You haven't saved any stories yet.", savedHint: "Open a story and tap the bookmark.",
     stale: (t) => `The briefing hasn't updated for ${t}. Check your connection or refresh.`,
     hours: (n) => `${n} hours`, days: (n) => `${n} days`,
@@ -278,7 +288,7 @@ function logoMarkup(item, size = "h-7 w-7", textSize = "text-[11px]") {
 }
 
 function verifiedBadge() {
-  return `<svg class="h-[15px] w-[15px] shrink-0 text-brand-500" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="doğrulanmış kaynak">
+  return `<svg class="h-[15px] w-[15px] shrink-0 text-brand-500" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="${escapeHtml(t("a11yVerified"))}">
     <path d="M12 2.2 14.3 4l2.9-.2.9 2.7 2.4 1.6-1 2.7 1 2.7-2.4 1.6-.9 2.7-2.9-.2L12 21.8 9.7 20l-2.9.2-.9-2.7L3.5 16l1-2.7-1-2.7 2.4-1.6.9-2.7 2.9.2z"/>
     <path d="m8.6 12.2 2.2 2.2 4.4-4.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
@@ -396,10 +406,10 @@ function renderTopbar() {
         <div class="flex shrink-0 items-center gap-2">
           <button data-lang class="h-11 rounded-full bg-white px-3 text-[13px] font-bold uppercase shadow-card transition active:scale-95"
             aria-label="Language">${escapeHtml(state.lang)}</button>
-          <button data-nav-to="discover" class="grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Ara">
+          <button data-nav-to="discover" class="grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="${escapeHtml(t("a11ySearch"))}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
           </button>
-          <button id="btn-refresh" class="relative grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Yenile">
+          <button id="btn-refresh" class="relative grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="${escapeHtml(t("a11yRefresh"))}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M20 11a8 8 0 1 0-2.3 5.7" stroke-linecap="round"/><path d="M20 4v7h-7" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -415,7 +425,7 @@ function renderTopbar() {
   };
   const [title, sub] = titles[state.view] || ["", ""];
   el.topbar.innerHTML = `
-    <button data-nav-to="home" class="mb-2 grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Geri">
+    <button data-nav-to="home" class="mb-2 grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="${escapeHtml(t("a11yBack"))}">
       <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <h1 class="text-[30px] font-bold leading-tight tracking-tight">${escapeHtml(title)}</h1>
@@ -572,7 +582,7 @@ function podcastCard() {
       <span class="min-w-0 flex-1">
         <span class="block text-[12px] font-semibold uppercase tracking-wide text-white/70">${escapeHtml(t("audioBriefing"))}</span>
         <span class="block text-[17px] font-bold leading-tight text-white">${escapeHtml(t("dailyBriefing"))}</span>
-        <span class="block text-[13px] text-white/75">${escapeHtml(t("episodes", turns.length, dakika))}</span>
+        <span class="block text-[13px] text-white/75">${escapeHtml(t("episodeMeta", dakika))}</span>
       </span>
     </div>
   </button>
@@ -713,6 +723,24 @@ function renderSaved() {
     </div>`;
 }
 
+/* Detay sayfasının gövde metni.
+ *
+ * Burada uzun süre item.speech gösterildi ve bu yanlıştı: speech, metni
+ * okunabilir kılmak için değil SESLENDİRİLEBİLİR kılmak için üretiliyor.
+ * Yayıncı adı telaffuza açılıyor (BloombergHT -> "Bloomberg Ha Te"),
+ * başlık gövdenin başında tekrar ediyor, noktalama düzleşiyor ve sonuna
+ * "Bu haberi 5 ayrı kaynak yazdı." gibi konuşma cümleleri ekleniyor.
+ * Okuyucu, başlığın hemen altında başlığın bozulmuş halini görüyordu.
+ *
+ * Doğrusu yayıncının kendi özeti. Özet yoksa uydurma yapılmıyor: haberin
+ * yalnızca başlığı elimizde olduğu dürüstçe söyleniyor. */
+function bodyText(item) {
+  if (item.summary) {
+    return `<p class="mt-5 text-[16px] leading-relaxed text-ink-soft">${escapeHtml(item.summary)}</p>`;
+  }
+  return `<p class="mt-5 text-[14.5px] leading-relaxed text-ink-faint">${escapeHtml(t("noSummary"))}</p>`;
+}
+
 function renderDetail() {
   const item = itemById(state.detailId);
   if (!item) return navigate("home");
@@ -730,16 +758,16 @@ function renderDetail() {
         <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/40 to-transparent"></div>
 
         <div class="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-[max(1rem,env(safe-area-inset-top))]">
-          <button data-back class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="Geri">
+          <button data-back class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="${escapeHtml(t("a11yBack"))}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m14 6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="flex gap-2">
-            <button data-save class="grid h-11 w-11 place-items-center rounded-full ${saved ? "grad" : "bg-black/30"} text-white backdrop-blur transition active:scale-95" aria-label="${saved ? "Kaydedilenlerden çıkar" : "Kaydet"}">
+            <button data-save class="grid h-11 w-11 place-items-center rounded-full ${saved ? "grad" : "bg-black/30"} text-white backdrop-blur transition active:scale-95" aria-label="${escapeHtml(saved ? t("a11yUnsave") : t("a11ySave"))}">
               <svg class="h-5 w-5" fill="${saved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
                 <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
               </svg>
             </button>
-            <button data-share class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="Paylaş">
+            <button data-share class="grid h-11 w-11 place-items-center rounded-full bg-black/30 text-white backdrop-blur transition active:scale-95" aria-label="${escapeHtml(t("a11yShare"))}">
               <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
                 <circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/>
                 <path d="m8.2 10.8 7.6-4M8.2 13.2l7.6 4" stroke-linecap="round"/>
@@ -768,7 +796,7 @@ function renderDetail() {
           ${sourceChip(item.source_count)}
         </div>
 
-        <p class="mt-5 text-[16px] leading-relaxed text-ink-soft">${escapeHtml(item.speech)}</p>
+        ${bodyText(item)}
 
         ${
           related.length
@@ -794,7 +822,7 @@ function renderDetail() {
             ${escapeHtml(t("listenHere"))}
           </button>
           <a href="${escapeHtml(targetUrl(item))}" target="_blank" rel="noopener noreferrer"
-             class="grid h-[3.15rem] w-[3.15rem] shrink-0 place-items-center rounded-full bg-black/5 text-ink-soft transition active:scale-95" aria-label="Kaynağa git">
+             class="grid h-[3.15rem] w-[3.15rem] shrink-0 place-items-center rounded-full bg-black/5 text-ink-soft transition active:scale-95" aria-label="${escapeHtml(t("a11ySource"))}">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24">
               <path d="M14 5h5v5M19 5l-8.5 8.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" stroke-linecap="round"/>
@@ -803,7 +831,7 @@ function renderDetail() {
         </div>
 
         <p class="mt-4 text-[12px] leading-relaxed text-ink-faint">
-          ${escapeHtml(t("sourceNote"))}
+          ${escapeHtml(item.summary ? t("sourceNote") : t("sourceNoteBare"))}
         </p>
       </section>
     </div>`;
