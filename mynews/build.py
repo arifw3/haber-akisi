@@ -7,6 +7,7 @@ yoksa PWA tarayicinin kendi Turkce sesiyle (Web Speech API) okur.
 from __future__ import annotations
 
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -135,6 +136,9 @@ def build(config: dict | None = None) -> dict:
             health.extend(direct_health)
 
         for topic in seg.get("topics", []):
+            # Feed'ler arasinda kisa aralik: pes pese istek 503 tetikliyordu.
+            if pool:
+                time.sleep(1.2)
             report, items = check_feed(topic, seg["key"])
             health.append(
                 {

@@ -20,6 +20,8 @@ from __future__ import annotations
 
 import gzip
 import html
+import random
+import time
 import re
 import urllib.error
 import urllib.parse
@@ -111,19 +113,42 @@ def search_url(query: str) -> str:
     return SEARCH_BASE + "?" + urllib.parse.urlencode(params)
 
 
-def fetch(url: str, timeout: int = 25) -> bytes:
-    """URL'yi cek. Google gzip donebilir, acmayi biz halledelim."""
-    req = urllib.request.Request(
-        url, headers={"User-Agent": UA, "Accept-Encoding": "gzip", "Accept": "*/*"}
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            raw = resp.read()
-            if resp.headers.get("Content-Encoding") == "gzip":
-                raw = gzip.decompress(raw)
-            return raw
-    except urllib.error.URLError as exc:
-        raise FeedError(f"{url} cekilemedi: {exc}") from exc
+# Gecici sunucu hatalari. Google Haberler, bulut saglayici IP'lerinden
+# gelen yogun istekleri 503 ile geri cevirebiliyor; is akisinda butun
+# feed'lerin ayni anda dusmesinin sebebi buydu.
+_RETRYABLE = {429, 500, 502, 503, 504}
+
+
+def fetch(url: str, timeout: int = 25, attempts: int = 4) -> bytes:
+    """URL'yi cek. Gecici hatalarda artan beklemeyle yeniden dener.
+
+    Google gzip donebilir, acmayi biz halledelim.
+    """
+    headers = {"User-Agent": UA, "Accept-Encoding": "gzip", "Accept": "*/*"}
+    last = ""
+
+    for attempt in range(attempts):
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                raw = resp.read()
+                if resp.headers.get("Content-Encoding") == "gzip":
+                    raw = gzip.decompress(raw)
+                return raw
+        except urllib.error.HTTPError as exc:
+            last = f"HTTP {exc.code}"
+            if exc.code not in _RETRYABLE or attempt == attempts - 1:
+                raise FeedError(f"{url} cekilemedi: {exc}") from exc
+        except urllib.error.URLError as exc:
+            last = str(exc)
+            if attempt == attempts - 1:
+                raise FeedError(f"{url} cekilemedi: {exc}") from exc
+
+        # Jitter: tum feed'lerin ayni anda yeniden denemesini onler.
+        wait = 2 ** attempt * 2 + random.uniform(0, 1.5)
+        time.sleep(wait)
+
+    raise FeedError(f"{url} cekilemedi: {last}")
 
 
 def split_title(raw: str) -> tuple[str, str]:

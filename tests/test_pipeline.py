@@ -657,5 +657,63 @@ class TestTranslationCache(unittest.TestCase):
         self.assertEqual(load_cache(tmp), {})
 
 
+class TestFetchRetry(unittest.TestCase):
+    """Google Haberler bulut IP'lerinden 503 dondurebiliyor; tek denemede
+    vazgecmek butun segmentlerin bosalmasi demekti."""
+
+    def _patch(self, responses):
+        import urllib.error
+        import urllib.request
+
+        from mynews import gnews
+
+        calls = {"n": 0}
+
+        def fake_urlopen(req, timeout=None):
+            i = calls["n"]
+            calls["n"] += 1
+            outcome = responses[min(i, len(responses) - 1)]
+            if isinstance(outcome, int):
+                raise urllib.error.HTTPError(req.full_url, outcome, "err", {}, None)
+
+            class Resp:
+                headers = {}
+                def read(self): return outcome
+                def __enter__(self): return self
+                def __exit__(self, *a): return False
+
+            return Resp()
+
+        original_open = urllib.request.urlopen
+        original_sleep = gnews.time.sleep
+        urllib.request.urlopen = fake_urlopen
+        gnews.time.sleep = lambda *_: None
+        self.addCleanup(lambda: setattr(urllib.request, "urlopen", original_open))
+        self.addCleanup(lambda: setattr(gnews.time, "sleep", original_sleep))
+        return calls
+
+    def test_recovers_after_transient_503(self):
+        from mynews.gnews import fetch
+
+        calls = self._patch([503, 503, b"<rss/>"])
+        self.assertEqual(fetch("https://x.com/feed"), b"<rss/>")
+        self.assertEqual(calls["n"], 3)
+
+    def test_gives_up_after_attempts(self):
+        from mynews.gnews import FeedError, fetch
+
+        self._patch([503])
+        with self.assertRaises(FeedError):
+            fetch("https://x.com/feed", attempts=2)
+
+    def test_permanent_error_not_retried(self):
+        from mynews.gnews import FeedError, fetch
+
+        calls = self._patch([404])
+        with self.assertRaises(FeedError):
+            fetch("https://x.com/feed")
+        self.assertEqual(calls["n"], 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
