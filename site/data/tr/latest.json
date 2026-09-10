@@ -1,0 +1,1988 @@
+{
+  "locale": "tr",
+  "language": "tr",
+  "title": "Haber Akışı",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T18:52:46.961844+00:00",
+  "segments": [
+    {
+      "key": "turkiye",
+      "title": "Türkiye",
+      "items": [
+        {
+          "id": "turkiye-0",
+          "title": "Kiralar 10 bin liradan başlıyor; sosyal konutta detaylar belli oldu",
+          "publisher": "T24",
+          "domain": "t24.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
+          "published": "2026-09-10T18:23:06+00:00",
+          "age_hours": 0.5,
+          "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNUHNzU2luekZsR0RaYklORkVyelB0UGVTcmtCZnlkeEM3TWxUUkxaeFo1UjI3NkxDV0hDeWZuaTJPZ0VpbzFZN05OdFVZSDRHb2hzTmFWRnp2QURYMFhDUnIyMGFDVmVHRXZpSFByanJocmpxTm5MbF9yb2RCWDRkMVAxQQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.927,
+          "speech": "Te yirmi dört. Kiralar 10 bin liradan başlıyor. sosyal konutta detaylar belli oldu. TOKİ İSTANBUL KİRALIK KONUT 2026 📌 TOKİ İstanbul kiralık konut fiyatları ne kadar? TOKİ İstanbul kiralık konut başvuru şartları neler? Kiralık evler nerede olacak?. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Kiralık Sosyal Konut Projesi'nin ayrıntıları belli oldu",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "TOKİ İSTANBUL KİRALIK KONUT 2026 📌 TOKİ İstanbul kiralık konut fiyatları ne kadar? TOKİ İstanbul kiralık konut başvuru şartları neler? Kiralık evler nerede olacak?",
+              "source": "Uzmanpara"
+            },
+            {
+              "title": "Kiralık sosyal konutlarda detaylar ve fiyatlar açıklandı",
+              "source": "birgun.net"
+            },
+            {
+              "title": "Bakan Kurum açıkladı: İstanbul'da sosyal kiralık konut dönemi",
+              "source": "Haber 7"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-1",
+          "title": "Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı",
+          "publisher": "Bloomberght",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-10T08:48:14+00:00",
+          "age_hours": 10.1,
+          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNWkhER3NrbC1OME9aMWdIcW1rNGJ3XzNBWXU0N0tuWmh0STdndFltRzlDUmRfSldCNldJMlhlQUtaTjJUME5HSnlrdHlIRDJWdjZldDctMjViNndVYkhuRWRxcUFvRmJMTkZpNnFLY3hVdFhsRVhZcVAtaHBNWnJIWjZjZGduZ0tYMHMwd2lOY2p6SmRtVXhiUVhycXBBUUo5?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.867,
+          "speech": "Bloomberg Ha Te. Gürlek, Borsadaki manipülatif işlemler karşılıksız bırakılmamalı. Borsa'da manipülasyona operasyon, 4 gözaltı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Bakan Gürlek: Borsada takip ettiğimiz süreçler var",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "Borsa'da manipülasyona operasyon: 4 gözaltı",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Borsa İstanbul'da manipülasyon gözaltısı: Operasyonlar neden artıyor?",
+              "source": "Bianet"
+            },
+            {
+              "title": "Borsa İstanbul'da manipülasyon iddiasıyla 4 şüpheli gözaltına alındı",
+              "source": "cumhuriyet.com.tr"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-2",
+          "title": "Seçim yenilendi; AKP'den istifa eden isim başkan oldu",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T16:16:00+00:00",
+          "age_hours": 2.6,
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOMU11QVdLTVNWSEtUaEUySnZUa29mOExTcngwUGhYWVJLTjVoWDRrbk5pQ2lLQmFRNnNacVZYZ0d0V2FCUmREUTlMRVpYSE1DaGlENGVQYk9iN2VqOU55OEFVV0F5SkR5YVdRaE80TTNYX0FmXzByaEhkWVBqZkkzTGdJZzZrSTc5YzNSWDZHaUgxM2tCSmNLRDgzbUptajRtRHc?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.842,
+          "speech": "Sözcü Gazetesi. Seçim yenilendi. A Ka Pe den istifa eden isim başkan oldu. Mahkeme İptal Etti, Başkanlık El Değiştirdi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "AKP'den istifa eden isim Osmaniye'de yenilenen seçimi kazandı",
+              "source": "Halk TV"
+            },
+            {
+              "title": "Mahkeme İptal Etti, Başkanlık El Değiştirdi",
+              "source": "Akdeniz Gazetesi"
+            },
+            {
+              "title": "Osmaniye’de İl Genel Meclisi Başkanı Belli Oldu",
+              "source": "medyagazete.com"
+            },
+            {
+              "title": "İptal Edilen İl Genel Meclisi Seçimlerini Ahmet Cavit Kazandı",
+              "source": "Başak Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-3",
+          "title": "Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T14:57:00+00:00",
+          "age_hours": 3.9,
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQblJhSlJSdGxBVERGbGhiMjhCam16aG5uMU1yU2V0NkxPNDBpOFl4SWpPQjU3TVdPbS1TeTZoTkROMVpuZzBWZjlHQ2FpUnFCU2ZpX01BU2FVUVRFeEdKOVUtSXpIMWtvZ3hPSHluZk5ldUxjRzdKdnVYbmpoZGg4RHVCQ3BlOFRNbWZSatIBkgFBVV95cUxPTmNabFpwR3JULVpJU29DbnVELU9Qc2habmRDeXpPenF3QmJBOWtqNFIzZVlVcWg2ckRtWUZrdFVCWnktZ3lCUksxeDlKeXJzbGZmQWM5QXU0T0N3OGJVYkdzVmQta3VUelBxclUyTHcxRWYzQ1NKTVdsWlp6NUhxRV9IaVZFeEtjTEwya2kzMUctdw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.82,
+          "speech": "Sözcü Gazetesi. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit. Trafikte Dehşeti Yaşadı, Melisa Döngel Yol Verme Tartışmasında Silahla Tehdit Edildi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Oyuncu Melisa Döngel’i silahla tehdit etti: Tabancaya el konuldu, tutuklandı",
+              "source": "cumhuriyet.com.tr"
+            },
+            {
+              "title": "Melisa Döngel’e trafikte kabus yaşattı! Silahla tehdit eden sürücü tutuklandı",
+              "source": "Milliyet"
+            },
+            {
+              "title": "Melisa Döngel’e trafikte silahlı tehdit",
+              "source": "haberturk.com"
+            },
+            {
+              "title": "Trafikte Dehşeti Yaşadı: Melisa Döngel Yol Verme Tartışmasında Silahla Tehdit Edildi!",
+              "source": "Onedio"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-4",
+          "title": "Kilolarca altınlı 'mizansen' düğünün perde arkası ortaya çıktı",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T14:47:00+00:00",
+          "age_hours": 4.1,
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOTjJ4OTBNSlpodS01QVNhLXNYanJIMUVLME9nelRoMWFQdDk4RExhRWM5U3BUTXpLXzFtNjY0UXNfRUNHNE9yOFZhN2hiYXJpRUc0enlNTjlnUWxTRC1RMW43dGI2cVpXY0FIYzI1Wm41dU1pRjRKb1E3X2VMTVlmQm9kWDFjbk5xOUxtTVNn?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.817,
+          "speech": "Sözcü Gazetesi. Kilolarca altınlı mizansen düğünün perde arkası ortaya çıktı. Vanlı Kara Haydar’ın eşi Çağla Öz gözaltına alındı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Vanlı Kara Haydar'ın MASAK Raporu Ortaya Çıktı: 115 Milyon Liralık Trafikte 74 Bin Kar Etmişler",
+              "source": "Onedio"
+            },
+            {
+              "title": "‘Vanlı Kara Haydar’ın MASAK raporunun ayrıntıları ortaya çıktı",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "Vanlı Kara Haydar’ın eşi Çağla Öz gözaltına alındı",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Kilolarca altınlı düğünün perde arkası! Vanlı Kara Haydar ve eşinin 222 milyon TL’lik para trafiği ortaya çıktı",
+              "source": "A Haber"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-5",
+          "title": "Şimşek: Serbest dalgalı kura geçiş için belli şartlar var",
+          "publisher": "Bloomberght",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-10T05:27:09+00:00",
+          "age_hours": 13.4,
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEszTVBBdDVzSFBYaXFVREY2R0M1UjVhNmNuNHNTRVBQSVJhOEo4UkJRR21QbnlTbXZBN010VjRNbGJ2aU91T1JEaG5YcElJa0Jqc0swVEp5SmV5Ml8yYkJvVTluUkljZFJOcUk2NkdZVUxyZEQ4ZzF6TGtXYmF2UDhpOUdvU0cwNFB6MmxPZVVnUklaajlB?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.811,
+          "speech": "Bloomberg Ha Te. Şimşek, Serbest dalgalı kura geçiş için belli şartlar var. Hazine ve Maliye Bakanı Şimşek, Gini katsayısına bakıldığında, gelir dağılımında anlamlı bir iyileşme var. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Şimşek: Dalgalı kur rejimine geçiş için enflasyon hala görece yüksek",
+              "source": "Diken"
+            },
+            {
+              "title": "Hazine ve Maliye Bakanı Şimşek: Gini katsayısına bakıldığında, gelir dağılımında anlamlı bir iyileşme var",
+              "source": "birgun.net"
+            },
+            {
+              "title": "Bakan Şimşek: Fiyat istikrarına olan bağlılığımız tamdır",
+              "source": "TRT Haber"
+            },
+            {
+              "title": "Bakan Şimşek: “Hayat pahalılığı baskısını son derece ciddiye alıyoruz”",
+              "source": "haberturk.com"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-6",
+          "title": "Orta Doğu'da KAAN ve TOLGA rüzgarı: Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-10T07:05:09+00:00",
+          "age_hours": 11.8,
+          "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNWWRWZG8yZS1vaGpad0h4YmxKZmpHN3dOTWt3VDJndFR3a0pZazNmbFcydjBvNURJbkNadjVxVmVKelJMUEdhMHlWaTVhYnNVRVY1ZlVaZURWZmxDMTY0OWc2VHl6Y2VWd2Z1V2NVVE1xNm5FX0I1TXJsQjlzQjZPU1BDeEJxRGtBMDNIVFg4UmN4SWx3VjBCZXdEZTJsRDdQMVc2dng3N2VZWjhVSjRVN2Z0V3p0bG5FYURBQ3ZjOVRUMXBpU25iQ2JZazdDRnc?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa240d3c5716b6d6b13091e.jpg",
+          "source_url": "https://www.hurriyet.com.tr/dunya/orta-doguda-kaan-ve-tolga-ruzgari-turkiyeden-dogu-akdenizde-dengeleri-degistirecek-hamleler-43301962",
+          "summary": "Türkiye'nin önde gelen üç savunma sanayi şirketi, Mısır'ın ev sahipliğinde düzenlenen El Alamein Uluslararası Havacılık Fuarı'nda en yeni sistemlerini sergiledi. MKE, fuar kapsamında Mısır'da \"Zafer\" adıyla ilk şirketini kurduğunu duyururken, TUSAŞ'ın KAAN savaş uçağı ve TOLGA hava savunma sistemi Kahire'de büyük ilgi gördü. Türkiye ve Mısır'ın işbirliğini derinleştirmesinin, Doğu Akdeniz'de Yunanistan, İsrail ve Güney Kıbrıs Rum Yönetimi (GKRY) arasındaki ittifaka karşı dengeleyici bir unsur olabileceği belirtildi.",
+          "source_count": 5,
+          "score": 3.789,
+          "speech": "Hürriyet. Orta Doğu'da KAAN ve TOLGA rüzgarı, Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler. Türk devi HAVELSAN'dan bölgede tarihi hamle, HAMZA-1 için imzalar atıldı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Türk devi HAVELSAN'dan bölgede tarihi hamle: HAMZA-1 için imzalar atıldı!",
+              "source": "Haber 7"
+            },
+            {
+              "title": "Türk ve Mısır ortaklığından doğan İHA'nın satışı başlıyor",
+              "source": "Uzmanpara"
+            },
+            {
+              "title": "Makine ve Kimya Endüstrisinden Mısır'da \"Zafer\" adımı",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "MKE Afrika'ya Mısır'dan açılacak",
+              "source": "Yeni Şafak"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-7",
+          "title": "Maltepe'de kiracı, ev sahibine saldırdı: İki ölü, bir avukat ağır yaralı",
+          "publisher": "Diken",
+          "domain": "diken.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=diken.com.tr&sz=128",
+          "published": "2026-09-10T13:05:50+00:00",
+          "age_hours": 5.8,
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPd1pGYklUY2ktYzhlYmw4c094bElIV2NwRWZ0eGpkektycnRVZk1UVU1Zd2JCblNjVW1zTFZtYXY4SktXdUNwLTJST2hwSXJKdTl2aHVaZnh2S2UwVDRtd19CM0hwMnlyUU9IM2ZzYlMwOGI0aVV6VjNkZm9Ya0t4WC1NdmlvcHZwTHpoQlVWQXQ4cnNWNDd2SWlB?oc=5",
+          "image": "",
+          "source_url": "https://www.diken.com.tr/maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali/?utm_source=rss&utm_medium=rss&utm_campaign=maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali",
+          "summary": "Maltepe'de kiracı, ev sahibine saldırdı: İki ölü, bir avukat ağır yaralı 10.09.2026 Dikenİstanbul'un Maltepe ilçesinde bir kiracı ev sahibi ve eşine silahla ateş açtı. İki kişi öldü, bir avukat ağır yaralandı. The post Maltepe'de kiracı, ev sahibine saldırdı: İki ölü, bir avukat ağır yaralı appeared first on #site_linkat 10.09.2026 .",
+          "source_count": 5,
+          "score": 3.739,
+          "speech": "Diken. Maltepe'de kiracı, ev sahibine saldırdı, İki ölü, bir avukat ağır yaralı. Ev sahibi çifti öldüren kiracının evinden çok sayıda silah çıktı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Maltepe'de kiracı dehşeti: Ev sahibinin eşini öldürdüğü anlar kamerada",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Ev sahibi çifti öldüren kiracının evinden çok sayıda silah çıktı",
+              "source": "Haberler"
+            },
+            {
+              "title": "Maltepe'de ev sahibi ile işletmeci kapıştı: Silahlı olayda özel harekât devrede: 2 ölü, 1 yaralı",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Maltepe'de kiracı dehşeti... Can kayıpları ve yaralı var: Özel harekat polisi sevk edildi",
+              "source": "cumhuriyet.com.tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "dunya",
+      "title": "Dünya",
+      "items": [
+        {
+          "id": "dunya-0",
+          "title": "Rusya: Pandora'nın kutusunu açtılar",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-10T13:38:15+00:00",
+          "age_hours": 5.2,
+          "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQWFlXaWpDZEZtM2VKOFZ1Q3g2UDdZVGU0eERTSERLZ19iRkQtMktYZ01WUjNmUUVpV1hjZnVFeEVOVEJZbWtmYUt2SlZBa3Nmb29BR05vampsQlM0M2ZsNXlxaE9TdGxWMFB6cXF3UVpjbWFkR0w5d0xnRWZyei0tZGJn?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa2b1f1242e1cf6f86a0f76.jpg",
+          "source_url": "https://www.hurriyet.com.tr/dunya/rusya-pandoranin-kutusunu-actilar-43302677",
+          "summary": "Kremlin Sözcüsü Dmitriy Peskov, Karadeniz'deki gemilere yönelik saldırılarla ilgili Ukrayna'yı suçladı ve \"Pandora'nın kutusunu açtılar\" ifadesini kullandı. Peskov, Karadeniz'deki gemilere yönelik saldırıların devam edeceğini ancak bu durumun Rusya ve Türkiye arasındaki ilişkilere olumsuz bir etkisi olmayacağını savundu.",
+          "source_count": 5,
+          "score": 3.898,
+          "speech": "Hürriyet. Rusya, Pandora'nın kutusunu açtılar. Kremlin’den dünyayı tedirgin eden mesaj, Yok edilmeye devam edilecek. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Kremlin’den dünyayı tedirgin eden mesaj: Yok edilmeye devam edilecek",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Rusya'nın Ukrayna saldırılarında en az 3 kişi öldü; Zelenskiy Kanada'da",
+              "source": "Euronews.com"
+            },
+            {
+              "title": "Rusya: Ukrayna'nın liman, gemi, askeri sanayi ve lojistik tesislerine saldırıları sürdürüyoruz",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Rusya'nın tatil cennetinde alevler yükseldi! İnsansız deniz araçlarıyla vurdular",
+              "source": "Haberler"
+            }
+          ]
+        },
+        {
+          "id": "dunya-1",
+          "title": "Kısa hayatında 7 kez ameliyat olmuştu: Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T09:58:00+00:00",
+          "age_hours": 8.9,
+          "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNandIeTdpVFhuZld4eUZDSHFzRUpJU0NGcGJwbTJJX1E2OWh4OHVRUnpSd1hudFBIWUZmREFVVl9PT21tWGVxbDJCUV96R21CYXhGYWoyYXRQa3d2X09uLW9wMkJDSnpSamxWaHJkVHk1N1d6YjMxSXREeGxKRU5tM0xxeEtKSG1RZW4zbUJxeHhzSkV0Rkw5andtRDd5Z0Z6S2hPRzdtUDNEWUZ5MjZ2YzhXMDhYbDhzdlVMcDVRT2ZjQQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.737,
+          "speech": "Sözcü Gazetesi. Kısa hayatında 7 kez ameliyat olmuştu, Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti. Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Güzellik kraliçesinin yürek yakan sonu... Daha 22 yaşında kelebek gibi uçup gitti... Kısacık hayatında 7 kez ameliyat olmuştu",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti.",
+              "source": "Vietnam.vn"
+            },
+            {
+              "title": "Ülkenin en güzel kadını hayatını kaybetti: Henüz 22 yaşındaydı",
+              "source": "Nefes Gazetesi"
+            },
+            {
+              "title": "Ani ölümü ülkeyi yasa boğdu: Güzellik Kraliçesi 22 yaşında hayatını kaybetti",
+              "source": "yasemin.com"
+            }
+          ]
+        },
+        {
+          "id": "dunya-2",
+          "title": "Bebek mamalarında sakinleştirici ilaç çıktı: Market raflarında şırıngayla enjekte etmişler",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T08:52:00+00:00",
+          "age_hours": 10.0,
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNak5IaEIwcHF4X3pSRlItX1NNWHEtUC1JNzdMR2pUdXJqTlN3aVNjcWFYVmFUNHFOUVZxRWFfeE9lazQ4ZUxGQ24xSTRwdjRKaEM4dnBVaEVfNjh0ZUNqWEo1ZWZoc0c3cnJlZU0tdEE1NXY2Y005Z1d3ZEpYU3JLUkJSTW1USzVVUU5lYW56ekFDR1VwTmVwQkQxcWpqcEpvNGNsa2doeTNWSXlLbHo4Xzc5RHN0UGFtVWJHaWs5SQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.718,
+          "speech": "Sözcü Gazetesi. Bebek mamalarında sakinleştirici ilaç çıktı, Market raflarında şırıngayla enjekte etmişler. Kudüs’te bebek mamalarına anestezik madde enjekte eden İsrailli gözaltına alındı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Kudüs'te bebek mamalarında korkunç tuzak! 5 çocuk hastanelik oldu",
+              "source": "Haberler"
+            },
+            {
+              "title": "İsrailli cani Shemla çocukları zehirledi! Elinde şırıngayla market market dolaşmış",
+              "source": "Takvim"
+            },
+            {
+              "title": "İsrailli cani bebek mamalarına zehir enjekte etmiş! Kudüs'te yaşandı",
+              "source": "Halk TV"
+            },
+            {
+              "title": "Kudüs’te bebek mamalarına anestezik madde enjekte eden İsrailli gözaltına alındı",
+              "source": "Ensonhaber"
+            }
+          ]
+        },
+        {
+          "id": "dunya-3",
+          "title": "Gizli silahlarını ateşleyeceklerdi: NATO'yu kilitleyecek Rus planı son anda durduruldu",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T07:30:00+00:00",
+          "age_hours": 11.4,
+          "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOSklyV2lVNDlIOVpqc1c2VDh5VE5UMkEwNGVfbUhBRnhQbWhTUGhaeTYwWkJMN0p0bldZTEUtZTlfVGxfWDcxYlBfMi1KNUlwNmxGMXJiRjlDemZ5VVl0dDRod0g5VE55UktlV3RWWWY4Y0ZORURQX3pJWm5FMUVUajRtWVY5YmREWU1pZVNYZEdsY3pBbGdEZkF5ZmF0MkhyemhkRTc2MjZyNDN2ZXdZVnpLVUtBb1Bvcnc?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.695,
+          "speech": "Sözcü Gazetesi. Gizli silahlarını ateşleyeceklerdi, NATO'yu kilitleyecek Rus planı son anda durduruldu. İzlanda açıklarındaki Northern Viking tatbikatına A Be De ilk kez gemi ve uçak göndermedi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "İzlanda açıklarındaki Northern Viking tatbikatına ABD ilk kez gemi ve uçak göndermedi",
+              "source": "Son Dakika"
+            },
+            {
+              "title": "Zaharova: NATO, Arktik bölgeyi Rusya ile jeopolitik çatışma alanına dönüştürdü",
+              "source": "hibya.com"
+            },
+            {
+              "title": "NATO, Arktik'te Rusya'nın denizaltı kablosu sabotaj tatbikatını engelledi",
+              "source": "QHA - Kırım Haber Ajansı"
+            },
+            {
+              "title": "Denizin 2.700 metre altında gizemli operasyon: ABD, İngiltere ve Norveç, Rusya'ya karşı harekete geçti",
+              "source": "Gazete Oksijen"
+            }
+          ]
+        },
+        {
+          "id": "dunya-4",
+          "title": "Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı",
+          "publisher": "TRT Haber",
+          "domain": "trthaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=trthaber.com&sz=128",
+          "published": "2026-09-09T16:21:00+00:00",
+          "age_hours": 26.5,
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOajZ1Y1ZzVmpsNHdrOW02QXp2YnhlT0t6VmVHZ1lYcjhnN1dadzhtTjZyaDhFVDgtZ1FnTHRPT3JOYUNOc0F0bnNaSmI3VFBqbzRsU0ROXzZvT3NndVBZZkZPUzFQdWRIQTdtVVY4d21TT25YcnN1cVB2cTFkRWNhSEZHcnlCTlVOT201LUxHNDlGcmZENjYteWFKV3pQbjUxLTZzUllqa1JaeU5iRDFla25EWnhURFJubmpzanhB?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.693,
+          "speech": "Te Re Te Haber. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı. Sermayeyi nasıl da tüketiyorlar. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Trump’tan 12 ülkenin İsrail kararına ilk tepki: Neden birdenbire şimdi?",
+              "source": "Haber 7"
+            },
+            {
+              "title": "Sermayeyi nasıl da tüketiyorlar",
+              "source": "Sabah"
+            },
+            {
+              "title": "İsrail'in en büyük krizi",
+              "source": "Yeni Şafak"
+            },
+            {
+              "title": "Türkiye ve 7 ülkeden İngiltere'nin yasa dışı İsrail yerleşimleriyle ilgili kararına memnuniyet mesajı",
+              "source": "Milliyet"
+            }
+          ]
+        },
+        {
+          "id": "dunya-5",
+          "title": "Zelenskiy’nin uçağı Moldova’da İHA saldırısından kıl payı kurtuldu",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-09T22:46:00+00:00",
+          "age_hours": 20.1,
+          "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPWU1VOGwxTE85VFFRRXlOa00zdU5wNEFSekQzTjJPOUkzWkR2aDJGc1JjY0J4OTQ2R2Z6NTQwTEtGNWNObmlZdmhYOUwtTHVHeVUtRE1Dbml6WDRIcVpnNC1lNVNQUjBydnozVjVhQVdkbDJ1d2lMMi1FNjVUWFZDMWk1ZnFkZ3hWeHBSek9RVGNpek5VTVEtVVJBSEpZZjlTTnFRWFVCTi1VSHc?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6a4692967c43e629aa25304c.jpg",
+          "source_url": "https://www.hurriyet.com.tr/dunya/zelenskiynin-ucagi-moldovada-iha-saldirisindan-kil-payi-kurtuldu-43301938",
+          "summary": "Norveç Başbakanı Jonas Gahr Store, Ukrayna Devlet Başkanı Vladimir Zelenskiy’nin uçağının dün Moldova’dan kalkış yaptığı sırada neredeyse bir İHA tarafından vurulmaktan kıl payı kurtulduğunu ifade etti.",
+          "source_count": 5,
+          "score": 3.65,
+          "speech": "Hürriyet. Zelenskiy’nin uçağı Moldova’da İHA saldırısından kıl payı kurtuldu. Zelenskiy az kalsın vuruluyordu. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Zelenskiy ölümden döndü: Saldırıdan kıl payı kurtuldu",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Zelenski’nin uçağı saldırıdan kıl payı kurtuldu",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "Zelenskiy az kalsın vuruluyordu",
+              "source": "Odatv"
+            },
+            {
+              "title": "Norveç Başbakanı Store: Zelenskiy'i taşıyan uçak İHA tarafından neredeyse vuruluyordu",
+              "source": "Anadolu Ajansı"
+            }
+          ]
+        },
+        {
+          "id": "dunya-6",
+          "title": "Siyonist korku duvarları yıkılıyor",
+          "publisher": "Sabah",
+          "domain": "sabah.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sabah.com.tr&sz=128",
+          "published": "2026-09-10T04:04:26+00:00",
+          "age_hours": 14.8,
+          "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUmZlMy1oRlpkbVhrT3Z1cHI3YlpRMWZzbGNrQmZTaXVSQ3lzZDNRMEJIdm10aXg5NFhYb1EyTGdTbXhBUzN2NndBa05vQV9vcTU2Zm9OZklobEZTUEdVcHJDU0FYTF9pRW9UZXFZZFVYZTBWTFoxaVo1bjZwQVp4dmxYUmMwb2VSZ0tHaHhhM2JGeXhfbGxZ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.638,
+          "speech": "Sabah. Siyonist korku duvarları yıkılıyor. Filistin, Batı’nın ‘uygarlık iddiasını nasıl sarstı?. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Filistin, Batı’nın ‘uygarlık’ iddiasını nasıl sarstı?",
+              "source": "Yeni Şafak"
+            },
+            {
+              "title": "Karanlıklar aydınlanmaya başlayınca",
+              "source": "Gazete Oku"
+            },
+            {
+              "title": "Siyonistlerin çocuk katliamları sürüyor",
+              "source": "Filistin Enformasyon Merkezi"
+            },
+            {
+              "title": "SİİRT'TE GAZZE İÇİN SES YENİDEN YÜKSELMELİ: 'UNUTMADIK, UNUTTURMAYALIM'",
+              "source": "Siirt haber"
+            }
+          ]
+        },
+        {
+          "id": "dunya-7",
+          "title": "Wall Street Journal 8 soruda özetledi: Yapay zeka insanları nasıl ve neden öldürebilir?",
+          "publisher": "Gazete Oksijen",
+          "domain": "gazeteoksijen.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=gazeteoksijen.com&sz=128",
+          "published": "2026-09-10T14:25:00+00:00",
+          "age_hours": 4.5,
+          "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbHQtVmkxbWkySDJkMXhpOGY2OWExWDdXemZPdmVsOHhGa2h2Z0c5SWlOVjJmdlNWWUNDeE9IUUVkUlgtOGZiVHduN1FjTjl1S1VMUENCMVVkOXhnbjZ4NWUwakwzZ2txbXllMmJoWVY2Vl9CcjJ1SXE2S0FXbnZXSWRSVDNjaUNXLUQxckNxMUU3LU00ODlkQ3YtRXktQzZFcG9TVEpRYnoxZGpqc1Q3b1RhMUppYmF6Z2NmazFKUUZMcmFDc1VDMlUtcm5wdG14d3Zn?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.611,
+          "speech": "Gazete Oksijen. Wall Street Journal 8 soruda özetledi, Yapay zeka insanları nasıl ve neden öldürebilir?. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Yapay zeka uzmanı uyardı: Hayatımızla kumar oynanıyor",
+              "source": "DW.com"
+            },
+            {
+              "title": "Uzmanlar, yapay zeka teknolojisinin potansiyeline ilişkin uyarılarda bulunuyor",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Ertuğrul Özkök | 1 günde 134 milyon görüntülenme alan bir istifa",
+              "source": "T24"
+            },
+            {
+              "title": "Anthropic’te deprem etkisi yaratan istifadan sonra gelen itiraf: Hayatlarımızla kumar oynuyorlar",
+              "source": "Milliyet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ekonomi",
+      "title": "Ekonomi",
+      "items": [
+        {
+          "id": "ekonomi-0",
+          "title": "Merkez Bankası faiz kararını açıkladı",
+          "publisher": "TRT Haber",
+          "domain": "trthaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=trthaber.com&sz=128",
+          "published": "2026-09-10T11:00:00+00:00",
+          "age_hours": 7.9,
+          "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNcnBjQzdINFVWV0tYeGJrUDhSd2gxaUVHQ3ZCM0xlcllaMHpTNUlGckpYTWJ2OFZhSy1fTk9KVmRmZTNnTkFlazNSNGhnX1B4d1NZdVg2bmRsVjJtNkFyaElFSWFGMUppcWFXQnowSU1hejRiSm1VVHVsTGtrd2JMdnFuY2w4UERhUEtpNjluN1QxQQ?oc=5",
+          "image": "",
+          "source_url": "https://www.trthaber.com/haber/ekonomi/merkez-bankasi-faiz-kararini-acikladi-956464.html",
+          "summary": "Türkiye Cumhuriyet Merkez Bankası TCMB Para Politikası Kurulu PPK, politika faizi olan bir hafta vadeli repo ihale faiz oranını yüzde 37'de sabit tuttu.",
+          "source_count": 5,
+          "score": 4.004,
+          "speech": "Te Re Te Haber. Merkez Bankası faiz kararını açıkladı. Çelik, (Rusya-Ukrayna) Kısır döngünün sona ermesi, İstanbul'da bir masa kurularak sonuca varılması gerekmektedir. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Merkez Bankası faizi sabit tuttu",
+              "source": "Diken"
+            },
+            {
+              "title": "Çelik: (Rusya-Ukrayna) Kısır döngünün sona ermesi, İstanbul'da bir masa kurularak sonuca varılması gerekmektedir",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Türkiye Cumhuriyet Merkez Bankası eylül ayı faiz kararını açıkladı",
+              "source": "cumhuriyet.com.tr"
+            },
+            {
+              "title": "SON DAKİKA: Merkez Bankası faiz kararını açıkladı! TCMB 2026 Eylül ayı faiz kararı ne oldu?",
+              "source": "haberturk.com"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-1",
+          "title": "Fed'den faiz artışı beklentisi güçlendi",
+          "publisher": "Bloomberght",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-10T16:21:18+00:00",
+          "age_hours": 2.5,
+          "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQNVJkZUlRVGR1ZG5mbG1wZnlZdldTeHFnVUcxNEZSWVpPYzl3SklfdzJ4RTdDN056WG1jTkYwekJjbHBEekQ1SkNiOU9PTU9GcEoyVWZZZFVaVmhSTDNzQmo0alBhWld5UjV2WV8wYl9jLUlUT1JzOU9ibUtmSmczUQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.993,
+          "speech": "Bloomberg Ha Te. Fed'den faiz artışı beklentisi güçlendi. Altında A Be De istihdam verisi bekleyişi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "FED faiz kararı 2026 Eylül Toplantısı | FED faiz kararı ne zaman açıklanacak, faiz indirimi olacak mı? ABD Merkez Bankası (FED) toplantısı ne zaman, saat kaçta? Küresel piyasalar ABD'de açıklanacak verilere odaklandı!",
+              "source": "Bigpara"
+            },
+            {
+              "title": "FED FAİZ KARARI 2026 EYLÜL! ABD Merkez Bankası FED faiz kararı ne zaman, saat kaçta açıklanacak?",
+              "source": "Uzmanpara"
+            },
+            {
+              "title": "Altında ABD istihdam verisi bekleyişi",
+              "source": "Doviz.com"
+            },
+            {
+              "title": "FED FAİZ KARARI SON DURUM: FED faiz kararı ne oldu son dakika? FED faiz kararı ne zaman, saat kaçta açıklanacak?",
+              "source": "Yeni Şafak"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-2",
+          "title": "Faiz artıran Avrupa Merkez Bankası, enflasyon projeksiyonunu yükseltti",
+          "publisher": "Bloomberght",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-10T13:31:49+00:00",
+          "age_hours": 5.3,
+          "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORTNzYU1pMkZ6el9IZFJvU29hZ1llZVVOTXRJZE1ySW5NeUpjNkhEaV81bVhfTnFKU2tKQ0ZMMF9WRlhhbXBTbXpMREc2YW5BSXpacGRtN292cFN1WG9RdGFPa3NKclR4YVBFaFZoVmNLWWNINEwyWWpQbm41RTRBLUtzd2Z0UQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.946,
+          "speech": "Bloomberg Ha Te. Faiz artıran Avrupa Merkez Bankası, enflasyon projeksiyonunu yükseltti. ECB Başkanı Lagarde, enflasyonun uzun süre hedefin oldukça üzerinde kalacağı uyarısında bulundu. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "ECB Başkanı Lagarde, enflasyonun uzun süre hedefin oldukça üzerinde kalacağı uyarısında bulundu",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "ECB faizi yüzde 2,5’e yükseltti: Enerji şoku enflasyonu artırıyor",
+              "source": "Euronews.com"
+            },
+            {
+              "title": "Avrupa borsaları pozitif seyrediyor",
+              "source": "Uzmanpara"
+            },
+            {
+              "title": "ECB yetkilileri faiz artırımı bekliyor, gelecek ay olası",
+              "source": "Investing.com Türkiye"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-3",
+          "title": "Yabancıdan Haziran'dan bu yana en güçlü hisse satışı",
+          "publisher": "Bloomberght",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-10T11:57:39+00:00",
+          "age_hours": 6.9,
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1WcmNaZEVDZ2gza05vVjlQaTZkbzQwVnVvR2M2ZUlBenVkcGRkMlIyVkwzQjJMZ0RCa3ZMTFNXdTNodXVJa0dMd2w5QWNaUG1JbThod0liSjl5NG8wenVSU1Y4aEwwVkNWSDhoVzEtbU5vMEE?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.92,
+          "speech": "Bloomberg Ha Te. Yabancıdan Haziran'dan bu yana en güçlü hisse satışı. Yabancılar borsada satıcı, tahvilde alıcı oldu. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Yabancılar borsada satıcı, tahvilde alıcı oldu",
+              "source": "Ekonomim"
+            },
+            {
+              "title": "***TUPRS* *ASELS* *TRALT* *OZATD* *THYAO* *MGROS* *ISCTR* *AKBNK* *YKBNK*** (ANALİZ- Yabancı İşlemleri (Vakıf Yatırım))",
+              "source": "Bigpara"
+            },
+            {
+              "title": "Yabancı yatırımcı borsayı sevdi ama her hisseyi değil: Ağustosta en çok aldıkları ve sattıkları hisseler hangileri oldu?",
+              "source": "T24"
+            },
+            {
+              "title": "Yabancı yatırımcıdan Borsa İstanbul’da güçlü satış dalgası haberi",
+              "source": "Borsanın Gündemi"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-4",
+          "title": "Altın ağır adımlarla ilerlerken gümüş kanatlandı: 55 günde getirisi iki katını aştı",
+          "publisher": "T24",
+          "domain": "t24.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
+          "published": "2026-09-10T08:52:00+00:00",
+          "age_hours": 10.0,
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVlc0WWRRZ3Vqd09WbF9JSzI5Y3c0QmtZZWZsU2tvYUJXNGQ0dERGTnlhOWRMS3RSRkVtY3VtdDRmUXZqVkdHY2FmS0ZvbW14ZTc1cWtHOTZVZm9KajUtY3QtY1pOTVZleHRBUVF2MTF2MWUwY3IxQ1FtT0Y4UHNWMGhJWEpTTzdLQndycmd6dzdlcVFKYXNWTGJ1YUNGZUNrZHZVbGw3R0RSLVJ2cmptSXVEX05iWjc2?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.768,
+          "speech": "Te yirmi dört. Altın ağır adımlarla ilerlerken gümüş kanatlandı, 55 günde getirisi iki katını aştı. Küresel bankalar gümüşte ikiye bölündü, Gözler enflasyon verileri ve Fed kararında. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Gümüş gaza bastı: Yüzde 3'ten fazla yükseldi",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Altın-gümüş oranı neden düşüyor?",
+              "source": "Investing.com Türkiye"
+            },
+            {
+              "title": "Gümüş, altından iki kat daha fazla kazandırdı",
+              "source": "Gazete Oksijen"
+            },
+            {
+              "title": "Küresel bankalar gümüşte ikiye bölündü: Gözler enflasyon verileri ve Fed kararında",
+              "source": "Haber 7"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-5",
+          "title": "Petrol fırladı: Akaryakıta zam kapıda",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T09:52:00+00:00",
+          "age_hours": 9.0,
+          "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5pc2xMUjMzeEptcVFaWFc0bGpPUXR6bTdtWFdkVGlMRWlSSjhSc09JZHlvTDhqLWlza2xEck1QTlh0VTBvRGt4ZF9BVzJuUVpuOXpGb1piaGQtSXpIQk1fVlhxU0hPS3BEa05FSEhCQUZzUlYzaHF2Yg?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.735,
+          "speech": "Sözcü Gazetesi. Petrol fırladı, Akaryakıta zam kapıda. Küresel piyasalarda kayıplar derinleşiyor. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Küresel piyasalarda kayıplar derinleşiyor",
+              "source": "Bloomberght"
+            },
+            {
+              "title": "Brent petrolün varili 100 doları geçti",
+              "source": "Uzmanpara"
+            },
+            {
+              "title": "Dünya petrolünün \"Gözyaşı Kapısı\" tehlikede",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "ABD, Orta Doğu'daki arz kesintileri nedeniyle petrol fiyatı tahminlerini yükseltti",
+              "source": "Anadolu Ajansı"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-6",
+          "title": "Ünlü bilet firmasından dev satış: Yemek kartı firması yüzde 51'ini satın alıyor",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T06:00:00+00:00",
+          "age_hours": 12.9,
+          "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOSkxHOWh3ektDY3UzT09nYXVSRjI4emgxbk11by1ZaVltaWJ4bUFkLU02V2xrUnhWTGhLYnlxeFJQeWwyVndTRGtrSkF3QkU1VTZabV9OZzNjc0JfUVRkUXRWT2c3QjFlaVdMNXVyQXhBa09Ja1p5MFpYc0xzbF9fVVBfUWR1MlEzalYyT2JzUm9MWnNuZDR4dWc0bzVGSnBzNHc3RkVqaDFBRWtMeGtLVQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.67,
+          "speech": "Sözcü Gazetesi. Ünlü bilet firmasından dev satış, Yemek kartı firması yüzde 51'ini satın alıyor. Türkiye'nin meşhur otobüs bileti platformu resmen satılıyor. İşte yeni sahibi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "MetropolCard, Bilet.com’un yüzde 51’ini satın alıyor",
+              "source": "Webrazzi"
+            },
+            {
+              "title": "Ünlü bilet platformunun yeni sahibi belli oldu: Çoğunluk hissesi için anlaşma imzalandı",
+              "source": "cumhuriyet.com.tr"
+            },
+            {
+              "title": "Türkiye'nin meşhur otobüs bileti platformu resmen satılıyor! İşte yeni sahibi",
+              "source": "Merhaba Gazetesi"
+            },
+            {
+              "title": "Ünlü bilet platformunun büyük kısmı satıldı",
+              "source": "Halk TV"
+            }
+          ]
+        },
+        {
+          "id": "ekonomi-7",
+          "title": "Okula dönüşte öğrencilere özel akıllı cihaz fırsatları",
+          "publisher": "Sabah",
+          "domain": "sabah.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sabah.com.tr&sz=128",
+          "published": "2026-09-10T04:04:26+00:00",
+          "age_hours": 14.8,
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNd0lxOFByWjkzemo5dno5QmFzU0prcmtwN01rSy1zX09Pb0loSVQ3TXR1bjgwUXgxVkhUSFRqM2h1elNrYTR0ZDBkUjRMaWUwMnNRUDdUckk0UE1vX0NhWTdnaDlnQTAtNlVwZ2xWVGtqNnZPVkZZSk01SnEzQ2VnbHMxLVdfaHpac2lGbVNaVjZxZUxCV2tUMTY3allUWTBjQkFsT1dGUQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.638,
+          "speech": "Sabah. Okula dönüşte öğrencilere özel akıllı cihaz fırsatları. Pozitif Teknoloji’den öğrenci ve ailelere teknoloji alışverişi önerileri. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Türk Telekom'dan okula dönüşte öğrencilere özel cihaz fırsatları",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Pozitif Teknoloji’den öğrenci ve ailelere teknoloji alışverişi önerileri",
+              "source": "DHA | Demirören Haber Ajansı"
+            },
+            {
+              "title": "Türk Telekom’dan okula dönüşte öğrencilere özel cihaz imkanları İhlas Haber Ajansı",
+              "source": "İhlas Haber Ajansı"
+            },
+            {
+              "title": "Okula Dönüşte TCL’den Öğrencilere Teknolojik Destek",
+              "source": "TeknoTalk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "bilim-teknoloji",
+      "title": "Bilim & Teknoloji",
+      "items": [
+        {
+          "id": "bilim-teknoloji-0",
+          "title": "Güneş'e en yakın gezegen Merkür küçülüyor",
+          "publisher": "TRT Haber",
+          "domain": "trthaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=trthaber.com&sz=128",
+          "published": "2026-09-10T14:49:00+00:00",
+          "age_hours": 4.1,
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPYkFmd292b0djLXdMODZjbzBLSTZBMGJUOXd1VzNLa2dtMy1aU0JuSXBuQkkwOXVaazNxbURKQ3NwR29TU3k1ZTVuVDN0c0ozNmZfaGs0dHg1ZW90bUtncmhjZmhYUnh0M1NGQ3pwUGgzZm41NlBwQTU1VlYxYk5FN09hc2t6a2J2OUFzcFVYZV9xSDA?oc=5",
+          "image": "",
+          "source_url": "https://www.trthaber.com/haber/dunya/gunese-en-yakin-gezegen-merkur-kuculuyor-956482.html",
+          "summary": "Güneş sistemimizin en küçük ve merkeze en yakın gezegeni olan Merkür'ün zamanla büzüştüğü ve sanılandan çok daha fazla küçülmüş olabileceği ortaya çıktı.",
+          "source_count": 1,
+          "score": 3.242,
+          "speech": "Te Re Te Haber. Güneş'e en yakın gezegen Merkür küçülüyor.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-1",
+          "title": "Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers",
+          "publisher": "TechCrunch",
+          "domain": "techcrunch.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
+          "published": "2026-09-10T18:38:00+00:00",
+          "age_hours": 0.2,
+          "link": "https://techcrunch.com/2026/09/10/proxima-fusion-bets-e140m-on-a-critical-fusion-ingredient-dominated-by-asian-suppliers/",
+          "image": "",
+          "source_url": "https://techcrunch.com/2026/09/10/proxima-fusion-bets-e140m-on-a-critical-fusion-ingredient-dominated-by-asian-suppliers/",
+          "summary": "Proxima Fusion's new high-temperature superconducting magnet factory will help supply its commercial power plant.",
+          "source_count": 1,
+          "score": 3.216,
+          "speech": "TechCrunch. Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-2",
+          "title": "watchOS 27, yeni Siri modüler kadran ile geliyor",
+          "publisher": "DonanımHaber",
+          "domain": "donanimhaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
+          "published": "2026-09-10T21:35:00+03:00",
+          "age_hours": 0.3,
+          "link": "https://www.donanimhaber.com/watchos-27-yeni-siri-moduler-kadran-ile-geliyor--210316",
+          "image": "https://www.donanimhaber.com/images/images/haber/210316/1200x675watchos-27-yeni-siri-moduler-kadran-ile-geliyor.jpg",
+          "source_url": "https://www.donanimhaber.com/watchos-27-yeni-siri-moduler-kadran-ile-geliyor--210316",
+          "summary": "Apple, watchOS 27 güncellemesiyle \"Siri Modular\" adında yeni saat kadranı sunacak. Bu yeni kadran hem Apple Watch Series hem de Ultra modellerinde kullanılabilecek.",
+          "source_count": 1,
+          "score": 3.215,
+          "speech": "DonanımHaber. watchOS 27, yeni Siri modüler kadran ile geliyor.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-3",
+          "title": "KAAN İçin Türkiye-Mısır Teması: Ortak Üretim Masada",
+          "publisher": "ShiftDelete",
+          "domain": "shiftdelete.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=shiftdelete.net&sz=128",
+          "published": "2026-09-10T18:30:04+00:00",
+          "age_hours": 0.4,
+          "link": "https://shiftdelete.net/kaan-icin-turkiye-misir-temasi-ortak-uretim-masada",
+          "image": "",
+          "source_url": "https://shiftdelete.net/kaan-icin-turkiye-misir-temasi-ortak-uretim-masada",
+          "summary": "Türkiye’nin beşinci nesil savaş uçağı KAAN, uluslararası ortaklıklar açısından yeni bir döneme giriyor. Al-Monitor’un 9 Eylül 2026 tarihli haberine göre Türkiye ve Mısır, Kahire’nin KAAN programına katılım ihtimalini değerlendiriyor. Bu ihtimalin yalnızca uçak tedarikiyle sınırlı kalmayabileceği, Mısır’ın ortak üretim sürecine dahil edilmesinin de seçenekler arasında bulunduğu aktarılıyor. Ancak şu aşamada iki ülke tarafından KAAN konusunda […]",
+          "source_count": 1,
+          "score": 3.214,
+          "speech": "ShiftDelete. KAAN İçin Türkiye-Mısır Teması, Ortak Üretim Masada.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-4",
+          "title": "Windows 11'e beklenen özellik geliyor: Otomatik Karanlık Mod",
+          "publisher": "DonanımHaber",
+          "domain": "donanimhaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
+          "published": "2026-09-10T21:15:00+03:00",
+          "age_hours": 0.6,
+          "link": "https://www.donanimhaber.com/windows-11-e-beklenen-ozellik-nihayet-geliyor--210326",
+          "image": "https://www.donanimhaber.com/images/images/haber/210326/1200x675windows-11-e-beklenen-ozellik-nihayet-geliyor.jpg",
+          "source_url": "https://www.donanimhaber.com/windows-11-e-beklenen-ozellik-nihayet-geliyor--210326",
+          "summary": "Windows 11, macOS ve mobil işletim sistemlerinde uzun süredir bulunan otomatik tema değişimi özelliğini sonunda kullanıcılara sunmaya hazırlanıyor. İşte detaylar...",
+          "source_count": 1,
+          "score": 3.21,
+          "speech": "DonanımHaber. Windows 11'e beklenen özellik geliyor, Otomatik Karanlık Mod.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-5",
+          "title": "Amazon makes it easier to buy what you see on Prime Video",
+          "publisher": "TechCrunch",
+          "domain": "techcrunch.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
+          "published": "2026-09-10T18:10:36+00:00",
+          "age_hours": 0.7,
+          "link": "https://techcrunch.com/2026/09/10/amazon-makes-it-easier-to-buy-what-you-see-on-prime-video/",
+          "image": "",
+          "source_url": "https://techcrunch.com/2026/09/10/amazon-makes-it-easier-to-buy-what-you-see-on-prime-video/",
+          "summary": "Amazon is expanding shopping integrations across Prime Video, letting viewers discover products tied to thousands of shows, movies, and live sports through X-Ray, its shopping app, and a new Lens-powered “Shop the Scene” feature.",
+          "source_count": 1,
+          "score": 3.208,
+          "speech": "TechCrunch. Amazon makes it easier to buy what you see on Prime Video.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-6",
+          "title": "Anthropic reveals rogue AI agents hate CAPTCHAs, just like you",
+          "publisher": "TechCrunch",
+          "domain": "techcrunch.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
+          "published": "2026-09-10T17:54:44+00:00",
+          "age_hours": 1.0,
+          "link": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
+          "image": "",
+          "source_url": "https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/",
+          "summary": "Come inside the mind of a bot trying to convince the internet it's human.",
+          "source_count": 1,
+          "score": 3.204,
+          "speech": "TechCrunch. Anthropic reveals rogue AI agents hate CAPTCHAs, just like you.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-7",
+          "title": "Yeni Renault Niagara tanıtıldı: Adeta Boreal'in pickup versiyonu",
+          "publisher": "DonanımHaber",
+          "domain": "donanimhaber.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
+          "published": "2026-09-10T20:54:00+03:00",
+          "age_hours": 1.0,
+          "link": "https://www.donanimhaber.com/yeni-renault-niagara-pickup-tanitildi-iste-tasarimi--210345",
+          "image": "https://www.donanimhaber.com/images/images/haber/210345/1200x675yeni-renault-niagara-pickup-tanitildi-iste-tasarimi.jpg",
+          "source_url": "https://www.donanimhaber.com/yeni-renault-niagara-pickup-tanitildi-iste-tasarimi--210345",
+          "summary": "Renault, Avrupa dışı pazarlara yönelik küresel atılımı futuREady kapsamında yeni pickup modeli Niagara’yı tanıttı. RGMP platformlu araç, SUV konforunu pickup dayanıklılığıyla harmanlıyor.",
+          "source_count": 1,
+          "score": 3.204,
+          "speech": "DonanımHaber. Yeni Renault Niagara tanıtıldı, Adeta Boreal'in pickup versiyonu.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-8",
+          "title": "Google Gemini Windows Masaüstü Uygulaması Yayınlandı",
+          "publisher": "ShiftDelete",
+          "domain": "shiftdelete.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=shiftdelete.net&sz=128",
+          "published": "2026-09-10T17:50:33+00:00",
+          "age_hours": 1.0,
+          "link": "https://shiftdelete.net/google-gemini-windows-uygulamasi-yayinlandi",
+          "image": "",
+          "source_url": "https://shiftdelete.net/google-gemini-windows-uygulamasi-yayinlandi",
+          "summary": "Google, Gemini deneyimini masaüstüne taşıyan Windows uygulamasını kullanıma sundu. Yeni uygulama sayesinde kullanıcılar, çalıştıkları pencereden ayrılmadan Gemini’a erişebiliyor. Google’ın masaüstü için hazırladığı Gemini uygulaması, Windows 10 ve üzeri işletim sistemlerinde kullanılabiliyor. Uygulamayı açmak için Alt + Space klavye kısayoluna basmak yeterli. Gemini böylece aktif çalışma ekranının üzerinde hızlıca açılarak soru sorma, bilgi doğrulama veya metin […]",
+          "source_count": 1,
+          "score": 3.203,
+          "speech": "ShiftDelete. Google Gemini Windows Masaüstü Uygulaması Yayınlandı.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-9",
+          "title": "iPhone 18 Pro: f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir",
+          "publisher": "ShiftDelete",
+          "domain": "shiftdelete.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=shiftdelete.net&sz=128",
+          "published": "2026-09-10T17:28:48+00:00",
+          "age_hours": 1.4,
+          "link": "https://shiftdelete.net/iphone-18-pro-f-1-48-kamerasiyla-fotograf-deneyimi-degisebilir",
+          "image": "",
+          "source_url": "https://shiftdelete.net/iphone-18-pro-f-1-48-kamerasiyla-fotograf-deneyimi-degisebilir",
+          "summary": "Yeni iPhone 18 Pro'nun f/1.48 diyafram açıklığına sahip ana kamerası, düşük ışık performansını ve doğal bokeh etkisini artırarak ortalama kullanıcıların fotoğraf deneyimini nasıl değiştireceğini keşfedin.",
+          "source_count": 1,
+          "score": 3.197,
+          "speech": "ShiftDelete. iPhone 18 Pro, f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-10",
+          "title": "Amazon’s Fire TV Stick 4K is over half off at under $20",
+          "publisher": "The Verge",
+          "domain": "theverge.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
+          "published": "2026-09-10T12:58:44-04:00",
+          "age_hours": 1.9,
+          "link": "https://www.theverge.com/gadgets/993455/fire-tv-stick-4k-resident-evil-requiem-deal-sale",
+          "image": "",
+          "source_url": "https://www.theverge.com/gadgets/993455/fire-tv-stick-4k-resident-evil-requiem-deal-sale",
+          "summary": "Amazon’s Fire TV Stick 4K is fast and capable. | Image: The Verge Looking to take full advantage of your 4K television, but your current streaming stick doesn’t have the right features? Through September 13th, you can grab an Amazon Fire TV Stick 4K from Woot for just $16.09 when you use the coupon code FIRE30 at checkout. With support for Wi-Fi 6 and 2GB of memory, it’s fast enough for streaming movies or playing games with Xbox Cloud Gaming or Nvidia GeForce Now. While this is the 2023 model, it’s functionally identical (and also has the same specs) to the current Fire TV Stick 4K Plus that costs considerably more. It received a name change in late 2025 to differentiate it from the more basic 4K Select model. Amazon Fire TV Stick 4K Where to Buy: $49.99 $16.09 at Woot (with coupon code FIRE30) Like the other 4K Fire TV sticks, the 2023 model supports a huge variety of streaming services and apps, and the Alexa Plus voice assistant feature lets you quickly find a show or movie without having to scroll through each one. With support for Dolby Vision, HDR10 Plus, and Dolby Atmos, you won’t have to compromise on video or audio quality during your next movie night. Other deals to consider Green Man Gaming has the Steam version of Resident Evil Requiem on sale for $41.64, with the full discount showing up once you add it to your cart. This iteration of the game tasks players with investigating a series of murders related to the 1998 Raccoon City incident, a core piece of lore for the series, and it alternates between perspectives. Read our review. You can grab a two-pack of Ring Alarm Contact Sensors at Amazon for $20, a $10 discount compared to what they usually cost (but half off their original price). These sensors easily install onto window or door frames with either ad",
+          "source_count": 1,
+          "score": 3.188,
+          "speech": "The Verge. Amazon’s Fire TV Stick 4K is over half off at under $20.",
+          "related": []
+        },
+        {
+          "id": "bilim-teknoloji-11",
+          "title": "Electric air taxis get the green light for test flights in Texas",
+          "publisher": "The Verge",
+          "domain": "theverge.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
+          "published": "2026-09-10T12:00:00-04:00",
+          "age_hours": 2.9,
+          "link": "https://www.theverge.com/transportation/993341/evtol-air-taxi-aviation-eipp-texas",
+          "image": "",
+          "source_url": "https://www.theverge.com/transportation/993341/evtol-air-taxi-aviation-eipp-texas",
+          "summary": "A new federal program to test the feasibility of electric, hybrid-electric, and autonomous aircraft kicks off today in Texas - before the rules governing this new technology have even been finalized. Earlier this year, the Federal Aviation Administration's Advanced Air Mobility and Electric Vertical Takeoff and Landing (eVTOL) Integration Pilot Program (eIPP) selected eight state-led projects to serve as some of the first public tests of these new aircraft. The first one kicks off today in Texas, featuring three eVTOL companies: Joby, Beta, and Wisk. For the next week, these companies will conduct test flights demonstrating future routes … Read the full story at The Verge.",
+          "source_count": 1,
+          "score": 3.172,
+          "speech": "The Verge. Electric air taxis get the green light for test flights in Texas.",
+          "related": []
+        }
+      ]
+    },
+    {
+      "key": "bilim",
+      "title": "Bilim",
+      "items": [
+        {
+          "id": "bilim-0",
+          "title": "Antik Tohumlar Kavunun Nereden Geldiğini Anlatıyor",
+          "publisher": "Arkeofili",
+          "domain": "arkeofili.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=arkeofili.com&sz=128",
+          "published": "2026-09-10T14:16:33+00:00",
+          "age_hours": 4.6,
+          "link": "https://arkeofili.com/antik-tohumlar-kavunun-nereden-geldigini-anlatiyor/",
+          "image": "https://arkeofili.com/wp-content/uploads/2026/09/melonseed1-300x194.jpg",
+          "source_url": "https://arkeofili.com/antik-tohumlar-kavunun-nereden-geldigini-anlatiyor/",
+          "summary": "Çin'deki bir Song hanedanı limanında bulunan tohumların DNA'sı, antik kavunların Güney Asya'dan geldiğini ve tatlı olmadığını ortaya koyuyor. Devamı burada: Antik Tohumlar Kavunun Nereden Geldiğini Anlatıyor Arkeofili.",
+          "source_count": 1,
+          "score": 2.301,
+          "speech": "Arkeofili. Antik Tohumlar Kavunun Nereden Geldiğini Anlatıyor.",
+          "related": []
+        },
+        {
+          "id": "bilim-1",
+          "title": "En Eski Uyuşturucu Kullanımı 25.000 Yıl Öncesine Uzandı",
+          "publisher": "Arkeofili",
+          "domain": "arkeofili.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=arkeofili.com&sz=128",
+          "published": "2026-09-10T13:16:44+00:00",
+          "age_hours": 5.6,
+          "link": "https://arkeofili.com/en-eski-uyusturucu-kullanimi-25-000-yil-oncesine-uzandi/",
+          "image": "https://arkeofili.com/wp-content/uploads/2026/09/catechu1-300x194.jpeg",
+          "source_url": "https://arkeofili.com/en-eski-uyusturucu-kullanimi-25-000-yil-oncesine-uzandi/",
+          "summary": "Endonezya'da iki avcı-toplayıcının dişlerindeki oyuklar, buzul çağında diş ağrısı için betel cevizi çiğnediklerini gösteriyor. Devamı burada: En Eski Uyuşturucu Kullanımı 25.000 Yıl Öncesine Uzandı Arkeofili.",
+          "source_count": 1,
+          "score": 2.262,
+          "speech": "Arkeofili. En Eski Uyuşturucu Kullanımı 25.000 Yıl Öncesine Uzandı.",
+          "related": []
+        },
+        {
+          "id": "bilim-2",
+          "title": "Kara Delikler Gizli Saçlara Sahip Olabilir mi?",
+          "publisher": "Evrim Ağacı",
+          "domain": "evrimagaci.org",
+          "favicon": "https://www.google.com/s2/favicons?domain=evrimagaci.org&sz=128",
+          "published": "2026-09-10T10:55:27+03:00",
+          "age_hours": 11.0,
+          "link": "https://evrimagaci.org/kara-delikler-gizli-saclara-sahip-olabilir-mi-23776",
+          "image": "https://storage.evrimagaci.org/content/30b33e69-1d49-40a8-8328-126274590fa5.jpeg",
+          "source_url": "https://evrimagaci.org/kara-delikler-gizli-saclara-sahip-olabilir-mi-23776",
+          "summary": "İki kara delik çarpışıp birleştiğinde yeni oluşan kara delik tıpkı bir çan gibi çınlar ve zamanla sönümlenen, belirli frekanslara sahip kütleçekimsel dalgalar yayar. Çınlama olarak adlandırdığımız bu kısa süreli ve sönümlenen dalga deseni, kara deliklerin etrafında nelerin saklandığına dair sırlar barındırıyor…",
+          "source_count": 1,
+          "score": 2.054,
+          "speech": "Evrim Ağacı. Kara Delikler Gizli Saçlara Sahip Olabilir mi?.",
+          "related": []
+        },
+        {
+          "id": "bilim-3",
+          "title": "Bulanık Sular Dikence Balıklarını Daha Koordineli Hale Getiriyor!",
+          "publisher": "Evrim Ağacı",
+          "domain": "evrimagaci.org",
+          "favicon": "https://www.google.com/s2/favicons?domain=evrimagaci.org&sz=128",
+          "published": "2026-09-10T10:58:00+03:00",
+          "age_hours": 10.9,
+          "link": "https://evrimagaci.org/bulanik-sular-dikence-baliklarini-daha-koordineli-hale-getiriyor-23743",
+          "image": "https://storage.evrimagaci.org/content/d3a8a44d-544f-4a45-9c7a-64bccd087a9d.jpeg",
+          "source_url": "https://evrimagaci.org/bulanik-sular-dikence-baliklarini-daha-koordineli-hale-getiriyor-23743",
+          "summary": "Proceedings of the Royal Society B dergisinde yayımlanan yeni bir Bristol Üniversitesi çalışmasına göre dikence balıkları, bulanık sularda yiyecek bulmalarına yardımcı olmak için sosyal davranışlarını değiştirebiliyorlar.Biliyoruz ki nehirlerdeki ve denizlerdeki sular, kristal berraklığından yoğun bir…",
+          "source_count": 1,
+          "score": 1.656,
+          "speech": "Evrim Ağacı. Bulanık Sular Dikence Balıklarını Daha Koordineli Hale Getiriyor.",
+          "related": []
+        },
+        {
+          "id": "bilim-4",
+          "title": "Denisovalılara Ait İlk Kol Kemiği Çin’de Bulundu!",
+          "publisher": "Arkeofili",
+          "domain": "arkeofili.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=arkeofili.com&sz=128",
+          "published": "2026-09-10T02:22:21+00:00",
+          "age_hours": 16.5,
+          "link": "https://arkeofili.com/denisovalilara-ait-ilk-kol-kemigi-cinde-bulundu/",
+          "image": "https://arkeofili.com/wp-content/uploads/2026/09/bianfu1-300x194.jpeg",
+          "source_url": "https://arkeofili.com/denisovalilara-ait-ilk-kol-kemigi-cinde-bulundu/",
+          "summary": "Çin'deki mağarada Denisovalılara ait ilk doğrulanmış kol kemiği bulundu. Burası, Sibirya dışındaki en zengin Denisovalı fosilini barındırıyor. Devamı burada: Denisovalılara Ait İlk Kol Kemiği Çin’de Bulundu! Arkeofili.",
+          "source_count": 1,
+          "score": 1.438,
+          "speech": "Arkeofili. Denisovalılara Ait İlk Kol Kemiği Çin’de Bulundu.",
+          "related": []
+        },
+        {
+          "id": "bilim-5",
+          "title": "Interstellar comet 3I/ATLAS is bursting with methanol",
+          "publisher": "ScienceDaily",
+          "domain": "sciencedaily.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=sciencedaily.com&sz=128",
+          "published": "2026-09-09T04:47:39-04:00",
+          "age_hours": 34.1,
+          "link": "https://www.sciencedaily.com/releases/2026/09/260909005217.htm",
+          "image": "",
+          "source_url": "https://www.sciencedaily.com/releases/2026/09/260909005217.htm",
+          "summary": "Interstellar comet 3I/ATLAS contains exceptionally high levels of methanol, suggesting it formed under conditions very different from those that shaped most comets in our solar system. ALMA also revealed that tiny icy grains around the comet are releasing methanol like miniature comets, giving astronomers an unusually detailed look at an object from another star system.",
+          "source_count": 1,
+          "score": 1.155,
+          "speech": "ScienceDaily. Interstellar comet 3I/ATLAS is bursting with methanol.",
+          "related": []
+        },
+        {
+          "id": "bilim-6",
+          "title": "Devil’s Arrows: Ancient builders hauled 55,000-pound stones 11 miles for Britain’s tallest stone row",
+          "publisher": "ScienceDaily",
+          "domain": "sciencedaily.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=sciencedaily.com&sz=128",
+          "published": "2026-09-09T03:41:21-04:00",
+          "age_hours": 35.2,
+          "link": "https://www.sciencedaily.com/releases/2026/09/260909005152.htm",
+          "image": "",
+          "source_url": "https://www.sciencedaily.com/releases/2026/09/260909005152.htm",
+          "summary": "Britain’s towering Devil’s Arrows were built from 25-tonne stones hauled at least 18 kilometers from Brimham Rocks around 4,000 years ago. The discovery reveals an astonishing feat of prehistoric engineering and suggests the stones’ distant source may have been chosen for cultural or spiritual reasons.",
+          "source_count": 1,
+          "score": 1.112,
+          "speech": "ScienceDaily. Devil’s Arrows, Ancient builders hauled 55,000-pound stones 11 miles for Britain’s tallest stone row.",
+          "related": []
+        }
+      ]
+    },
+    {
+      "key": "saglik",
+      "title": "Sağlık",
+      "items": [
+        {
+          "id": "saglik-0",
+          "title": "Kene ısırığı sonrası ortaya çıktı! Çin'de yeni virüs alarmı: 7 ölü",
+          "publisher": "Milliyet",
+          "domain": "milliyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=milliyet.com.tr&sz=128",
+          "published": "2026-09-10T08:54:00+00:00",
+          "age_hours": 10.0,
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQNm9ka2JnV0pDVU5RWnR4a1M5TW9QanZ5d1Z6YkxTTnoyMEMzd2huV0JRaGJJeGhTS0VyNm9UV0laYUVIbWpsX1VYNkFtZ0wtcllQNlFFaVNPMnRzZDBqR0JocDJ5X09NUmZVc2piamlpeDUwU19SZGcyM04zVkgxVFdBSWxFb0RzVFRvdlhYWUdpRU1kMVp0N2ZuNk8yUF9VbjV5ZG5pekRkaElnU0kxd1hJbWdxZw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.369,
+          "speech": "Milliyet. Kene ısırığı sonrası ortaya çıktı. Çin'de yeni virüs alarmı, 7 ölü. ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Çin'de yeni kene virüsü tespit edildi: Halsizlik ve mide sorunlarına yol açıyor, ABD için de alarm verildi | Asya Haberleri",
+              "source": "GZT"
+            },
+            {
+              "title": "Çin'de yeni virüs alarmı! Kenelerden bulaşıyor",
+              "source": "Haberler"
+            },
+            {
+              "title": "Kene Kaynaklı YENİ BİR VİRÜS KEŞFEDİLDİ! Binlerce Hasta İncelendi, Sonuçlar Dikkat Çekti... Hangi Belirtilere Yol Açıyor?",
+              "source": "CNN Türk"
+            },
+            {
+              "title": "ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?",
+              "source": "Antalya Körfez Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "saglik-1",
+          "title": "Genç dansçının Ankara'da estetik kabusu!",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T07:03:35+00:00",
+          "age_hours": 11.8,
+          "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcE02RWNFXy1FS2tXVVJqYUx3Y1lGQnpaanNXRnRsSGFYQzZkYm5uR1c1OWFmTkgzZENXZWgxZ2hVT0hwOWY4emlFYWljZGRYS3pKUXFRN2pYaWFHOS1YaFNwci1DQ1g0ak1UbWhFazJsUmNfdzczY3dpVm0?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.288,
+          "speech": "Sözcü Gazetesi. Genç dansçının Ankara'da estetik kabusu. Göğüs büyütme ameliyatı sonrası deri kopması iddiası. Profesyonel dansçı soluğu savcılıkta aldı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Dansçının hayatını karartan göğüs ameliyatı: Derisi koptu, his kaybı yaşıyor",
+              "source": "Odatv"
+            },
+            {
+              "title": "Göğüs büyütme ameliyatı sonrası “deri kopması” iddiası! Profesyonel dansçı soluğu savcılıkta aldı",
+              "source": "Mynet"
+            },
+            {
+              "title": "Göğüs büyütme ameliyatı sonrası hayatı değişti: Profesyonel dansçı suç duyurusunda bulundu | Yerel Haberler",
+              "source": "GZT"
+            },
+            {
+              "title": "Göğüs ameliyatından mahkemeye! Dansçı kadın hayatının şokunu yaşadı",
+              "source": "Takvim"
+            }
+          ]
+        },
+        {
+          "id": "saglik-2",
+          "title": "Araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi",
+          "publisher": "haberturk.com",
+          "domain": "haberturk.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=haberturk.com&sz=128",
+          "published": "2026-09-09T14:33:38+00:00",
+          "age_hours": 28.3,
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOOFpDNXg0MTE0djJhMm1kTnRybXZ1aDF1bHpqbndQdzR6Y2cyRFhKTnNSZld4OUJkUVNQNk80VS00dk5FNGEwc2t4bVJVVGN0TXRoczgtaGtKdU9BbkpjV2paUGhXOG9RX2dtNER6SVJWUWtZQk4zSWF5MWtfczBYcS1SMC16R0VMZzMwLURkZ0tkOUJ4UTlMM3ZwLWw4d3JkN0ow?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.213,
+          "speech": "haberturk. Araştırma, En ölümcül beyin kanserinde zayıf nokta keşfedildi. Glioblastomun tedavi direncinde yeni hedef, SET proteininin baskılanması tümör oluşumunu engelledi. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Yeni araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi",
+              "source": "cumhuriyet.com.tr"
+            },
+            {
+              "title": "Glioblastomun tedavi direncinde yeni hedef: SET proteininin baskılanması tümör oluşumunu engelledi",
+              "source": "Medimagazin"
+            },
+            {
+              "title": "Glioblastom Tedavisinde Yeni Biyolojik Hedef: SET Proteininin Baskılanması Tümör Büyümesini Durdurdu",
+              "source": "Sağlık Aktüel"
+            },
+            {
+              "title": "Beyin tümörü araştırması: ‘SET’ proteininin engellenmesi kanser hücrelerinin direncini kırıyor",
+              "source": "T24"
+            }
+          ]
+        },
+        {
+          "id": "saglik-3",
+          "title": "Kolesterol sorununu tek dozda çözen iğne geliştirildi",
+          "publisher": "Independent Türkçe",
+          "domain": "indyturk.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=indyturk.com&sz=128",
+          "published": "2026-09-09T13:41:37+00:00",
+          "age_hours": 29.2,
+          "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWS1lZDBEX3lLdE10UzYzaFNTbzZlRmtnQ2FZM2NzdG9BX3M2Tk5iTWtrTGI4UmNBUllwdzZfMTdtYlI0V2tNZWRTcHI5U1g0UlBWcmpuNkVTY3ljeW15M1RxUVNiNGpMa3JkamJMZGlSdGVxZGxMQTltQUtKX2xDeTJPamdjSDhzSTJQQ1BXSGc4aGRkajk3VGIzY1hmUHRTOGV2OV9TM212WTkySDJzZUVrZWlRYjU1WnA2d2RiZw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.199,
+          "speech": "Independent Türkçe. Kolesterol sorununu tek dozda çözen iğne geliştirildi. Tek Doz In Vivo CRISPR-Cas9 Gen Düzenleme Tedavisiyle Lipit Düzeylerinde 1 Yıllık Kalıcı ve Güvenli Düşüş. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Tek Dozluk Gen Tedavisi Kötü Kolesterolü Yüzde 52 Azalttı",
+              "source": "Onedio"
+            },
+            {
+              "title": "Tek Doz In Vivo CRISPR-Cas9 Gen Düzenleme Tedavisiyle Lipit Düzeylerinde 1 Yıllık Kalıcı ve Güvenli Düşüş",
+              "source": "WinAlly"
+            },
+            {
+              "title": "Yüksek kolesterol için tek seferlik gen tedavisi umut veriyor",
+              "source": "Kütahya Ekspres"
+            },
+            {
+              "title": "Tek Dozluk Yeni Gen Terapisi, Yüksek Kolesterolü Kalıcı Olarak Düşürebilir!",
+              "source": "Evrim Ağacı"
+            }
+          ]
+        },
+        {
+          "id": "saglik-4",
+          "title": "Batı Nil Virüsü vakalarında sayı 4’e yükseldi",
+          "publisher": "Haber Kıbrıs",
+          "domain": "haberkibris.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=haberkibris.com&sz=128",
+          "published": "2026-09-09T13:34:37+00:00",
+          "age_hours": 29.3,
+          "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNTFNPRF9UN0JGckNxTlpXUVlTNWgxMXRQdVFnWHNtTExxeFhHWHpRVFV2T2syUmt2cmxTd3hGTWtOSHQ3WU8tLXpMSXlzSmJ3N25aZThLM3FxM2k3TUhuMXRFUXRIUWdpNnJUZEx5QVFlTDRUQ3pRSWhnem90ZS0tYnFQMjZ4RkFXVmNBamFmcVNoT0RLX3BIbFlyRHQyNnBrYzBVZkdtUmVQcUxsV3c?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.197,
+          "speech": "Haber Kıbrıs. Batı Nil Virüsü vakalarında sayı 4’e yükseldi. Sivrisinek ısırığıyla bulaşıyor, Korkutan virüs Ka Ka Te Ce de görüldü. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Yunanistan'da bir haftada 34 yeni Batı Nil virüsü vakası",
+              "source": "Diken"
+            },
+            {
+              "title": "Hollanda'da Batı Nil virüsünden ölenlerin sayısı 3'e yükseldi",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "KKTC'de Batı Nil virüsü alarmı: Biri rutin kontrolde 3 vaka çıktı! 'Özel ilacı yok' uyarısı",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Sivrisinek ısırığıyla bulaşıyor: Korkutan virüs KKTC'de görüldü",
+              "source": "Sözcü Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "saglik-5",
+          "title": "Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi",
+          "publisher": "Nefes Gazetesi",
+          "domain": "nefes.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=nefes.com.tr&sz=128",
+          "published": "2026-09-09T12:40:00+00:00",
+          "age_hours": 30.2,
+          "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPdlhWT05uVkQ1WnkyVk5iWk1QRi0xbndUUmRTVHFtTEtCUExvQVpESXR5eTNPdmt4bjdLR2g5UjdRVkxuOUVta19ScU1xcEJRSTg3dmQyY3lvbzgzSUF3Zy15LUREM2JYZXU0M2syRjRyQ3BJdHFyQl9Gd3JUbW1Mbk0zd0hReUdGMlFRVUNNWnI3Z2kxdGVNUkhFQmtJUQ?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.181,
+          "speech": "Nefes Gazetesi. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi. Yılda bir defa kontrol şart, Diyabetten korunmak için rakamlarınızı bilin. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Sessiz salgın! Avrupa'da ilk sıradayız... 12 milyon hasta var",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Yılda bir defa kontrol şart: Diyabetten korunmak için rakamlarınızı bilin",
+              "source": "Türkiye Gazetesi"
+            },
+            {
+              "title": "\"Sinsi İlerleyen Diyabete Karşı 'Rakamlarınızı Öğrenin' Çağrısı: 35 Yaş Üstüne Yıllık Kontrol Uyarısı\"",
+              "source": "Sağlık Aktüel"
+            },
+            {
+              "title": "Diyabet riskini azaltmanın yolu ortaya çıktı",
+              "source": "Kütahya Ekspres"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "spor",
+      "title": "Spor",
+      "items": [
+        {
+          "id": "spor-0",
+          "title": "Can Bozdoğan'dan Eyüpspor maçı yorumu: \"Daha iyi takımız\"",
+          "publisher": "NTVSpor",
+          "domain": "ntvspor.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
+          "published": "2026-09-10T15:40:56+00:00",
+          "age_hours": 3.2,
+          "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNN29od1dvMkQwTnJVcDZQeHJzNkpvTTJoVy00Q0xWNW1vVjhrdXR3NWEzOHFFMXR2eFJadWtuNkl2aVR5M0wtZ3dSV1JBQVB6NmY2OTlKa3FvbllZZE9MWHJtTE03Tk00bWcyTzRMeXRIRDNPd1FxQ0ExbEwtT2hycXFyTFJlbjVZNTJfSEZBZUZCdjFxSlHSAZsBQVVfeXFMUHlQeGlaaXAyN3ctNzdUTjFXRTRlTHZtamt6UDVlVUQ1aUZOMTZtSU9XY2JYMGVKR3l3Uld1MVRkZjhNRnVoN2Nlb1hUWFNKemdpVU81ZkZrcDlTY2pCODMwdTlud2ZFaENFcFRxTG02eVAzeDk5cFF0SVZobVFHZWVJRnZpV0t5VHJRLU5VaHFlMk1IN3F0S3hqLVk?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.932,
+          "speech": "En Te Ve Spor. Can Bozdoğan'dan Eyüpspor maçı yorumu, Daha iyi takımız. Çaykur Rizespor'da transfer raporu, 20 ayrılık, 9 transfer. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Can Bozdoğan: İyi bir takımız ve birlikte iyi şeyler yapacağımıza inanıyorum",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Recep Uçar’dan kritik toplantı",
+              "source": "Fotomaç"
+            },
+            {
+              "title": "﻿Çaykur Rizespor, Eyüpspor için hazırlıklara başladı",
+              "source": "STAR - Haberler"
+            },
+            {
+              "title": "Çaykur Rizespor'da transfer raporu: 20 ayrılık, 9 transfer",
+              "source": "Habertürk"
+            }
+          ]
+        },
+        {
+          "id": "spor-1",
+          "title": "Fenerbahçe'nin gençleri Roma karşısında 2-0'ı koruyamadı",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-10T14:06:59+00:00",
+          "age_hours": 4.8,
+          "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbTI2b3A5SWg3VEhKYlRmTGd4TzVtaWZsQXdCb0JHMW5oV2pFUV9MTi1OeE5MLWtVZFI4ZmtETzJpQkpTQlVDSTFsNUFrWWhPUWdoaGVJNklFMThQTExGMHB0WXp1UzJjXy1DYmExb3RlTzd0bVpOX05kOGNKNGZpaFFiYkVobm9DdEhoUzRacWtNM2ZBU0JTUVlyQ3JvZ0dsczE4?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa2b91f3443bc75302afa3b.jpg",
+          "source_url": "https://www.hurriyet.com.tr/sporarena/fenerbahcenin-gencleri-roma-karsisinda-2-0i-koruyamadi-43302718",
+          "summary": "UEFA Gençlik Ligi'nde Roma'yı konuk eden Fenerbahçe U19 takımı, 2-0 öne geçtiği karşılaşmada sahadan 4-2 mağlup ayrıldı.",
+          "source_count": 5,
+          "score": 3.906,
+          "speech": "Hürriyet. Fenerbahçe'nin gençleri Roma karşısında 2-0'ı koruyamadı. Fenerbahçe U19 Takımımızın Teknik Sorumlusu Mustafa Ertem, Avrupa’da iz bırakmak istiyoruz. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Fenerbahçe, Gençlik Ligi'nde şoku yaşadı! 2 farktan döndü",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Fenerbahçe U19 Takımımızın Teknik Sorumlusu Mustafa Ertem: Avrupa’da iz bırakmak istiyoruz",
+              "source": "Fenerbahce.org"
+            },
+            {
+              "title": "Fenerbahçe - Roma U19 maçında kırmızı kart: Sporting - Galatasaray maçında verilmemişti",
+              "source": "GZT"
+            },
+            {
+              "title": "10 kişi Fenerbahçe, Roma karşısında üstünlüğü koruyamadı",
+              "source": "NTVSpor"
+            }
+          ]
+        },
+        {
+          "id": "spor-2",
+          "title": "Iğdır FK'dan ayrılan Hikmet Karaman'ın yeni takımı anında duyuruldu",
+          "publisher": "NTVSpor",
+          "domain": "ntvspor.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
+          "published": "2026-09-10T14:03:04+00:00",
+          "age_hours": 4.8,
+          "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOUHRJOEVxWERYenNIVFJhclNXa3VpVklrS2ZFYnB5TDI1VkJtNXhQNFp1MkNHcFRqdjNrT1NBbnVydnJ5N0JFSm9idlJ5OUViTmFTWnp2STZ0MDdNUTh3UU1nM0VKTUpPWnBOQnhFRGlkb2Y2STNJSWFITmFPXzNzUnZNZDNrRm9LbWR2TU1TWDE1Ujg2d3VaZWxhZ293WGdRTmRFOVVXNHcwUE5ib2c1dUo4ZjRjZ9IBuwFBVV95cUxQOU8wbm13ZWs5SU9kcnhPZFZJbkFxZzNNam9CQXpJTW5sSjg5Q2MzeVlsTVVRNGE3ZDJkRzdmcGVkQWZhV3JrajhDMTVMUTZwcHN2Y05MM0VFQTVzMUNGTG9UTkJJNzhBWFVzQk52Wlg0aU92aktSdlJDQXVqMllJQVlhN0dreXlRVlJPcXNjOUx0R1FBcG4yMTR2eTlBTlNteDZnZ1dvNHJ1V2dWR1RWRU9ybWdMSEdmczhz?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.905,
+          "speech": "En Te Ve Spor. Iğdır FK'dan ayrılan Hikmet Karaman'ın yeni takımı anında duyuruldu. Ya Üzülmez ya Çetin. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Hikmet Karaman'ın yeni adresi belli oldu",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Turka Esenler Erokspor da Hikmet Karaman dönemi",
+              "source": "beinsports.com.tr"
+            },
+            {
+              "title": "Iğdır FK, Hikmet Karaman ile yollarını ayırdı",
+              "source": "Habertürk"
+            },
+            {
+              "title": "Ya Üzülmez ya Çetin",
+              "source": "Fotomaç"
+            }
+          ]
+        },
+        {
+          "id": "spor-3",
+          "title": "Fenerbahçe'den Aziz Yıldırım açıklaması: İddia jet hızında yalanlandı",
+          "publisher": "NTVSpor",
+          "domain": "ntvspor.net",
+          "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
+          "published": "2026-09-10T13:20:51+00:00",
+          "age_hours": 5.5,
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPSGc4MmlnTG9NU0NpYlZQbEdvczZGRUtVdnk3RDlBaUhFMm5TcVYzMFRwZlFtVlRjSzNRMHNrdU14S1BuNy1YN3A2YTRhWXhRQnVRdzJLelhFTEcyU2h6M1BUeTZmWXdJSVZKSUV1dGlLUDdiMlc5bUczU0pndlc1VHo5YWpCWUlnS2pVUF9GSlI3Mk3SAZgBQVVfeXFMTmtQNEdXZGltWGpzSVZaUnVJNUdzNFRRNG1QY1hRbzAzaGljLUNLZnJwcm9hWjRXcUxDREZqT1dLMWhMNVBuQ19mWWxGckxLQ0F5NE52bHpFNTNScDVOV28zem1ETWpnLU1idVowb3VMb0RsR21uN251c09tRGg5MWZ1TGtacVFhemVlbGdHNllMNWoyaF9DMks?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.893,
+          "speech": "En Te Ve Spor. Fenerbahçe'den Aziz Yıldırım açıklaması, İddia jet hızında yalanlandı. Fenerbahçe'den açıklama. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Fenerbahçe'den resmi Aziz Yıldırım açıklaması! İddialara jet yalanlama - Fenerbahçe",
+              "source": "Mynet"
+            },
+            {
+              "title": "Fenerbahçe'den açıklama",
+              "source": "A Spor"
+            },
+            {
+              "title": "Son Dakika | Fenerbahçe'den Aziz Yıldırım açıklaması: Toplantı iddiası reddedildi",
+              "source": "Halk TV"
+            },
+            {
+              "title": "Fenerbahçe'den Aziz Yıldırım iddialarına yanıt",
+              "source": "cumhuriyet.com.tr"
+            }
+          ]
+        },
+        {
+          "id": "spor-4",
+          "title": "Süper Lig'de 5. haftanın hakemleri açıklandı",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-10T09:14:03+00:00",
+          "age_hours": 9.6,
+          "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWHEwVC1xRHhxTktzYUFHQll6em1MRHB0Q2NWb29ad3JBVTlrRVlPMjVYMU9sR05kMEUwb2luMGRHVkZMTkpMLXZlTGg3TjhFM2g3M25aZ3NVbktjc1lEQ1pSbHVDMkYxeGlEcE1BV3ZhRXFsbkI0dnh4V0hQeWRwc1JwRjY0cXNOZF9RTkh4LTN5anM?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa274873c2ee1c0fb730116.jpg",
+          "source_url": "https://www.hurriyet.com.tr/sporarena/super-ligde-5-haftanin-hakemleri-aciklandi-43302297",
+          "summary": "Türkiye Futbol Federasyonu Merkez Hakem Kurulu, Süper Lig'in 5. haftasında görev yapacak hakemleri duyurdu.",
+          "source_count": 5,
+          "score": 3.824,
+          "speech": "Hürriyet. Süper Lig'de 5. haftanın hakemleri açıklandı. Gaziantep FK maçının hakemi. Mehmet Türkmen. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Gaziantep FK maçının hakemi; Mehmet Türkmen",
+              "source": "Fenerbahce.org"
+            },
+            {
+              "title": "Trendyol Süper Lig'de 5. haftanın perdesi açılıyor",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Derbinin en çok konuşulan ismiydi! MHK'den Halil Umut Meler kararı",
+              "source": "Son Dakika"
+            },
+            {
+              "title": "Süper Lig'de 5. hafta hakemleri açıklandı",
+              "source": "Sözcü Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "spor-5",
+          "title": "Eski takım arkadaşıydı, yardımcısı oldu",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T12:20:00+00:00",
+          "age_hours": 6.5,
+          "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE0yakxyWjRjNEVGZ0hBQ21meEcyNGxFT1hJRnZCaDZFakdtWGxGS2J0ZU9MaVo2akJDclotRmE0N2NHSDh4b2pCV3dZQjFVWlNiVFFjNGlEN1lxUy1LblQ1MzRfM3lQSWhTbEtvZW5nQmR2REUyQlg2SmRUcw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.776,
+          "speech": "Sözcü Gazetesi. Eski takım arkadaşıydı, yardımcısı oldu. Umut Bulut, Kocaelispor'un teknik ekibine katıldı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "3 eski arkadaş yıllar sonra buluştu! İlk sınav Galatasaray'a karşı",
+              "source": "Son Dakika"
+            },
+            {
+              "title": "Umut Bulut, Kocaelispor'un teknik ekibine katıldı",
+              "source": "haberturk.com"
+            },
+            {
+              "title": "Selçuk İnan istedi, Galatasaray'ın eski golcüsü Kocaelispor'a transfer oldu",
+              "source": "Gazete Vatan"
+            },
+            {
+              "title": "UMUT BULUT’UN KOCAELİSPOR’A UZANAN İLGİNÇ HİKÂYESİ: 2022’DE SAHADA, BUGÜN KENARDA",
+              "source": "Bugün Kocaeli Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "spor-6",
+          "title": "Sporting tribünleri, Leao'yu protesto etti",
+          "publisher": "CNN Türk",
+          "domain": "cnnturk.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=cnnturk.com&sz=128",
+          "published": "2026-09-10T05:31:55+00:00",
+          "age_hours": 13.3,
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPNk5LZWNlVDZGbUM1SEZUZU1jQnFTeU5SeGhwVEVPakdNS2ZHZnFKYTFfR0RrMGlTOGE0allTU1Zpb29RWUk4TElpNWlGeGlQRXFYNFBWNWJpaXI4R3E1XzRwcFdnX2kyS0x1ZHRnc3pPbC1XeU9lUWEyZmR1UVVIMGZWaHJMS3FBczRFaA?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.763,
+          "speech": "Si En En Türk. Sporting tribünleri, Leao'yu protesto etti. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Sporting taraftarından Leao'ya protesto!",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Rafael Leao: 'Başlangıç değil, bitiş önemli'",
+              "source": "Sporx.com"
+            },
+            {
+              "title": "GALATASARAY HABERİ: Rafael Leao'dan flaş transfer sözleri!",
+              "source": "A Spor"
+            },
+            {
+              "title": "Galatasaray'da Rafael Leao: Başlangıç değil, bitiş önemli - Galatasaray - Spor Haberleri",
+              "source": "Milliyet"
+            }
+          ]
+        },
+        {
+          "id": "spor-7",
+          "title": "Trabzonspor'da gözler Onuachu'da",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-10T08:12:52+00:00",
+          "age_hours": 10.7,
+          "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBLQWU1R3NrUlQtX0pLd1ZJcDEwTDFiQnVSRWw2VkdQZmhMRHB3b01DZnFkU1ZMYllzcjlQa2xWa2lXanR5WnFoOU9VTERucFBhS3JEeU9mazNhdDBfOTFlTTJCR29DYnVQTDFGdVMzeVZhcEE?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 3.707,
+          "speech": "Sözcü Gazetesi. Trabzonspor'da gözler Onuachu'da. Carlo Ancelotti'den Ederson ve Gabriel Sara kararı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Trabzonspor, Konyaspor maçı hazırlıklarını sürdürdü",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Carlo Ancelotti'den Ederson ve Gabriel Sara kararı",
+              "source": "NTVSpor"
+            },
+            {
+              "title": "Konyaspor, Trabzonspor maçı hazırlıklarını sürdürdü",
+              "source": "Habertürk"
+            },
+            {
+              "title": "Tümosan Konyaspor maçı hazırlıklarımız devam ediyor",
+              "source": "Trabzonspor Kulübü Resmi Web Sitesi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "yazilim",
+      "title": "Yazılım",
+      "items": [
+        {
+          "id": "yazilim-0",
+          "title": "Bifrost Turns One With AI Builds and New Workflows",
+          "publisher": "Laravel News",
+          "domain": "laravel-news.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
+          "published": "2026-09-10T17:06:47+00:00",
+          "age_hours": 1.8,
+          "link": "https://laravel-news.com/bifrost-first-anniversary?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/Bifrost-Option-2-LN.png",
+          "source_url": "https://laravel-news.com/bifrost-first-anniversary?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "summary": "Bifrost marks its first year and 10,000 successful builds with an MCP server, automated workflows, managed credentials, and AI build diagnoses. The post Bifrost Turns One With AI Builds and New Workflows appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
+          "source_count": 1,
+          "score": 2.421,
+          "speech": "Laravel News. Bifrost Turns One With AI Builds and New Workflows.",
+          "related": []
+        },
+        {
+          "id": "yazilim-1",
+          "title": "Laravel & Design Patterns — Practice Series: Builder",
+          "publisher": "DEV Laravel",
+          "domain": "dev.to",
+          "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
+          "published": "2026-09-10T16:00:00+00:00",
+          "age_hours": 2.9,
+          "link": "https://dev.to/demianbuilderdev/laravel-design-patterns-practice-series-builder-1p27",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fywxod30rp99vewujrah5.png",
+          "source_url": "https://dev.to/demianbuilderdev/laravel-design-patterns-practice-series-builder-1p27",
+          "summary": "I was tired of seeing how many articles repeat, again and again, basic examples of using design patterns in development; examples based on shape figures/real-life objects are good for understanding when you are just starting to learn this concept of design patterns. But what about real practice? What about real examples with real code and frameworks to get a much better practical understanding and use? And this is the reason why I decided to start writing a series of articles about full practice in the Laravel framework. Even if you’re not a PHP developer and you have some medium-level experience in web development, you can still understand what we are going to do and use it in your own development. Builder pattern: Introduction It was a good decision to start this series with one of the simplest patterns, named “builder,” from the creational patterns. Let’s begin with some graphical examples to remember how it works, and after that, let’s move on to writing some code for generating reports in different file formats. Let’s begin with a definition: The Builder design pattern is a creational pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations. It is especially useful when an object needs to be created with many optional parts or configurations. Real-life example A simple real-life example of the Builder Pattern is how you order a burger at a fast-food restaurant: Instead of giving you only fixed menu items, the restaurant lets you customize your burger. You can add a patty, cheese, lettuce, tomato, sauces, bacon, etc., in the order you like. The builder (the person assembling) constructs the burger step by step. At the end, you get a fully built burger according to ",
+          "source_count": 1,
+          "score": 2.372,
+          "speech": "DEV Laravel. Laravel & Design Patterns — Practice Series, Builder.",
+          "related": []
+        },
+        {
+          "id": "yazilim-2",
+          "title": "A Series of Unfortunate Jobs",
+          "publisher": "DEV Laravel",
+          "domain": "dev.to",
+          "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
+          "published": "2026-09-10T15:47:32+00:00",
+          "age_hours": 3.1,
+          "link": "https://dev.to/oussamamater/a-series-of-unfortunate-jobs-33bk",
+          "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpg5t242pdyukj2mtxgx0.png",
+          "source_url": "https://dev.to/oussamamater/a-series-of-unfortunate-jobs-33bk",
+          "summary": "You can't tell me Laravel queues haven't bitten you at least once. It's great that we get them out of the box, but man, they can be confusing as hell sometimes. Over the years, I've screwed up, more than once, and collected quite a few lessons along the way. Claude is currently Pondering.., I'm waiting, and bored, so shall we? Gotcha #1 I want you to look at the code below and tell me if you can spot anything wrong: namespace App\\Jobs; use DateTime; use Illuminate\\Foundation\\Queue\\Queueable; use Illuminate\\Contracts\\Queue\\ShouldQueue; class SendAbandonedCartReminder implements ShouldQueue { use Queueable; public function retryUntil(): DateTime { return now()->addMinutes(10); } public function handle(): void { // business logic } } SendAbandonedCartReminder::dispatch($cart)->delay(now()->addDay()); Nothing sus, right? The customer left their cart, so we nudge them a day later. And if the mail provider is having a bad day, we keep retrying for 10 minutes, then give up. Except that reminder will never be sent. Not once. If you spotted it, you probably learned this one during a fun debugging session 😅. If not, the misconception here is assuming that retryUntil() starts counting from the moment the job starts processing. Well, kind sir, that's where you're wrong. retryUntil() is evaluated when the job is pushed onto the queue, and the expiration timestamp is baked into the job payload. By the time the job becomes available to the workers, a day later, that timestamp is long gone. The worker fails it with the one and only MaxAttemptsExceededException, and handle() never runs. Gotcha #2 Same drill, take a look at the code below: namespace App\\Jobs; use Illuminate\\Foundation\\Queue\\Queueable; use Illuminate\\Contracts\\Queue\\ShouldQueue; class SyncOrderToCrm implements ShouldQueue",
+          "source_count": 1,
+          "score": 2.363,
+          "speech": "DEV Laravel. A Series of Unfortunate Jobs.",
+          "related": []
+        },
+        {
+          "id": "yazilim-3",
+          "title": "Why I think we should write our own PR descriptions",
+          "publisher": "Laravel Blog",
+          "domain": "blog.laravel.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=blog.laravel.com&sz=128",
+          "published": "2026-09-10T12:15:00+00:00",
+          "age_hours": 6.6,
+          "link": "https://laravel.com/blog/why-i-think-we-should-write-our-own-pr-descriptions",
+          "image": "",
+          "source_url": "https://laravel.com/blog/why-i-think-we-should-write-our-own-pr-descriptions",
+          "summary": "Agents can write your PR descriptions, but they shouldn't. Here's why writing them yourself makes you a better engineer and a better teammate.",
+          "source_count": 1,
+          "score": 2.205,
+          "speech": "Laravel Blog. Why I think we should write our own PR descriptions.",
+          "related": []
+        },
+        {
+          "id": "yazilim-4",
+          "title": "Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview",
+          "publisher": "DEV Laravel",
+          "domain": "dev.to",
+          "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
+          "published": "2026-09-10T06:51:53+00:00",
+          "age_hours": 12.0,
+          "link": "https://dev.to/nurmantg/building-an-ultra-fast-link-in-bio-platform-with-laravel-11-livewire-3-real-time-phone-preview-m32",
+          "image": "",
+          "source_url": "https://dev.to/nurmantg/building-an-ultra-fast-link-in-bio-platform-with-laravel-11-livewire-3-real-time-phone-preview-m32",
+          "summary": "Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview Most link-in-bio tools on the web today share the same common frustrations: sluggish page load times, full-page reloads when editing links, and long, clunky URLs. I wanted to build a modern, minimalist, and ultra-fast link-in-bio platform that solves these problems with a clean 6-character domain: GAS.PM. In this article, I want to break down the architectural choices, tech stack, and techniques used to build GAS.PM from scratch. ⚡ The Tech Stack Backend: Laravel 11 (PHP 8.3) Frontend / Interactivity: Livewire 3 + Alpine.js Styling: Tailwind CSS (Modern Glassmorphism & Custom Themes) Database: MySQL Production Server: Nginx + PHP-FPM on Linux 🎯 1. Real-Time Split-Screen Live Preview with Livewire 3 The core UX challenge of a bio link builder is giving creators immediate visual feedback. Instead of saving, reloading, and opening a new tab, GAS.PM utilizes a split-screen dashboard: Left Side: The configuration panel (adding links, reordering, tweaking avatars, backdrop filters, and button styles). Right Side: An interactive simulated smartphone frame rendering the live public profile. With Livewire 3, updates happen seamlessly: When a user changes a color picker or adjusts the glassmorphism blur slider, Livewire dynamically morphs only the modified DOM nodes inside the phone frame without full-page reloads. Drag-and-drop link reordering updates the database order instantly in the background. 🎨 2. Deep Aesthetic Customization (Glassmorphism & Frosted Glass) Creators care deeply about their aesthetic identity. Rather than offering just 3 static templates, GAS.PM gives users granular control over: Backdrop Filters: Frosted glass overlay opacity and dynamic values. Button Shapes:",
+          "source_count": 1,
+          "score": 1.966,
+          "speech": "DEV Laravel. Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview.",
+          "related": []
+        },
+        {
+          "id": "yazilim-5",
+          "title": "GitHub availability report: August 2026",
+          "publisher": "GitHub Blog",
+          "domain": "github.blog",
+          "favicon": "https://www.google.com/s2/favicons?domain=github.blog&sz=128",
+          "published": "2026-09-10T02:05:17+00:00",
+          "age_hours": 16.8,
+          "link": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
+          "image": "https://github.blog/wp-content/uploads/2026/09/Actions-Run-Start_delay.png?resize=1024%2C509",
+          "source_url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
+          "summary": "While we continue to make progress, August proved to be a challenging month for availability. You can read more about these incidents in a blog post we published last month. We are aggressively investing in both architectural improvements and moving to Azure, which will give us more capacity. Meanwhile, we continue to see significant growth on our platform. We are prioritizing the most impactful work while minimizing risk, but as these incidents in August show, we cannot completely eliminate risk. Ultimately, all the work needs to be done, and incidents give us an opportunity to adjust our priorities. As repair items from these incidents, we’ve made significant improvements to our capacity monitoring and management, retry policies that led to bigger impact, and resiliency improvements to core services. We’ve also continued to make great progress across many durable work streams. On August 11, GitHub ran a production MySQL primary from Azure for the first time. Client-observed write impact was minimal, and no customer impact occurred in the transition. We repeated the pattern with two more primaries on August 27. We have further primaries scheduled over the coming weeks, increasing in complexity as we learn from each failover. Read traffic also reached new highs. Reads from migrated services peaked at 60.4%, while reads from GitHub’s monolith peaked at 64.3% in Azure. Git reads reached 54%. Away from the regional migration, the 24-table authentication-core cohort moved off GitHub’s oldest shared database, mysql1, removing approximately one million queries per second from its replicas. Separate query-hygiene changes removed another 120,000 queries per second and eliminated approximately 59,000 seconds of wasted database work per hour. GitHub Actions gained additional capa",
+          "source_count": 1,
+          "score": 1.754,
+          "speech": "GitHub Blog. GitHub availability report, August 2026.",
+          "related": []
+        },
+        {
+          "id": "yazilim-6",
+          "title": "Preview Blade Templates in macOS Finder with Quick Blade",
+          "publisher": "Laravel News",
+          "domain": "laravel-news.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
+          "published": "2026-09-09T22:24:09+00:00",
+          "age_hours": 20.5,
+          "link": "https://laravel-news.com/quick-blade?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/laravel-quick-blade-featured.png",
+          "source_url": "https://laravel-news.com/quick-blade?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "summary": "Quick Blade is a free macOS Quick Look extension that renders .blade.php files in Finder with your layout, compiled CSS, and stand-in data. The post Preview Blade Templates in macOS Finder with Quick Blade appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
+          "source_count": 1,
+          "score": 1.59,
+          "speech": "Laravel News. Preview Blade Templates in macOS Finder with Quick Blade.",
+          "related": []
+        },
+        {
+          "id": "yazilim-7",
+          "title": "Artisan Debugging Commands in Laravel Telescope 5.24.0",
+          "publisher": "Laravel News",
+          "domain": "laravel-news.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=laravel-news.com&sz=128",
+          "published": "2026-09-09T21:33:11+00:00",
+          "age_hours": 21.3,
+          "link": "https://laravel-news.com/laravel-telescope-5-24-0?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "image": "https://picperf.io/https://laravelnews.s3.amazonaws.com/featured-images/Laravel-Telescope-LN.png",
+          "source_url": "https://laravel-news.com/laravel-telescope-5-24-0?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews",
+          "summary": "Laravel Telescope 5.24.0 adds two Artisan commands for inspecting recorded entries from the terminal and cancels stale dashboard requests during navigation. The post Artisan Debugging Commands in Laravel Telescope 5.24.0 appeared first on Laravel News. Join the Laravel Newsletter to get all the latest Laravel articles like this directly in your inbox.",
+          "source_count": 1,
+          "score": 1.552,
+          "speech": "Laravel News. Artisan Debugging Commands in Laravel Telescope 5.24.0.",
+          "related": []
+        }
+      ]
+    }
+  ],
+  "health": [
+    {
+      "topic": "NATION",
+      "segment": "turkiye",
+      "status": "ok",
+      "count": 70,
+      "newest_age_hours": 0.5,
+      "error": ""
+    },
+    {
+      "topic": "WORLD",
+      "segment": "dunya",
+      "status": "ok",
+      "count": 46,
+      "newest_age_hours": 0.8,
+      "error": ""
+    },
+    {
+      "topic": "BUSINESS",
+      "segment": "ekonomi",
+      "status": "ok",
+      "count": 54,
+      "newest_age_hours": 2.5,
+      "error": ""
+    },
+    {
+      "topic": "Webtekno",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 50,
+      "newest_age_hours": 4.4,
+      "error": ""
+    },
+    {
+      "topic": "DonanımHaber",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 50,
+      "newest_age_hours": 0.3,
+      "error": ""
+    },
+    {
+      "topic": "ShiftDelete",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 20,
+      "newest_age_hours": 0.4,
+      "error": ""
+    },
+    {
+      "topic": "The Verge",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 10,
+      "newest_age_hours": 1.9,
+      "error": ""
+    },
+    {
+      "topic": "TechCrunch",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 20,
+      "newest_age_hours": 0.2,
+      "error": ""
+    },
+    {
+      "topic": "TECHNOLOGY",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 38,
+      "newest_age_hours": 2.4,
+      "error": ""
+    },
+    {
+      "topic": "SCIENCE",
+      "segment": "bilim-teknoloji",
+      "status": "ok",
+      "count": 52,
+      "newest_age_hours": 2.0,
+      "error": ""
+    },
+    {
+      "topic": "Evrim Ağacı",
+      "segment": "bilim",
+      "status": "ok",
+      "count": 9,
+      "newest_age_hours": 10.9,
+      "error": ""
+    },
+    {
+      "topic": "Arkeofili",
+      "segment": "bilim",
+      "status": "ok",
+      "count": 10,
+      "newest_age_hours": 4.6,
+      "error": ""
+    },
+    {
+      "topic": "Bilim Genç",
+      "segment": "bilim",
+      "status": "ok",
+      "count": 3,
+      "newest_age_hours": 155.0,
+      "error": ""
+    },
+    {
+      "topic": "ScienceDaily",
+      "segment": "bilim",
+      "status": "ok",
+      "count": 53,
+      "newest_age_hours": 29.0,
+      "error": ""
+    },
+    {
+      "topic": "HEALTH",
+      "segment": "saglik",
+      "status": "ok",
+      "count": 27,
+      "newest_age_hours": 7.1,
+      "error": ""
+    },
+    {
+      "topic": "SPORTS",
+      "segment": "spor",
+      "status": "ok",
+      "count": 70,
+      "newest_age_hours": 0.7,
+      "error": ""
+    },
+    {
+      "topic": "Laravel News",
+      "segment": "yazilim",
+      "status": "ok",
+      "count": 5,
+      "newest_age_hours": 1.8,
+      "error": ""
+    },
+    {
+      "topic": "Laravel Blog",
+      "segment": "yazilim",
+      "status": "ok",
+      "count": 2,
+      "newest_age_hours": 6.6,
+      "error": ""
+    },
+    {
+      "topic": "Laravel Daily",
+      "segment": "yazilim",
+      "status": "empty",
+      "count": 0,
+      "newest_age_hours": null,
+      "error": ""
+    },
+    {
+      "topic": "DEV Laravel",
+      "segment": "yazilim",
+      "status": "ok",
+      "count": 12,
+      "newest_age_hours": 2.9,
+      "error": ""
+    },
+    {
+      "topic": "GitHub Blog",
+      "segment": "yazilim",
+      "status": "ok",
+      "count": 2,
+      "newest_age_hours": 16.8,
+      "error": ""
+    }
+  ],
+  "total": 65,
+  "image_stats": {
+    "aranan": 34,
+    "eslesen": 8,
+    "gorselli": 5,
+    "ozetli": 8
+  },
+  "history_skipped": 17,
+  "audio": null,
+  "cues": []
+}

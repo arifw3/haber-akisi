@@ -90,7 +90,8 @@ def build_episode(bulletin: dict, site_dir: Path = SITE_DIR, keep: int = 30) -> 
         return None
 
     date = bulletin["date"]
-    path = merge_turns(turns, site_dir, site_dir / "audio" / "episodes" / f"{date}.mp3")
+    locale = bulletin.get("locale", "tr")
+    path = merge_turns(turns, site_dir, site_dir / "audio" / "episodes" / f"{locale}-{date}.mp3")
 
     headlines = [
         item["title"]
@@ -100,8 +101,9 @@ def build_episode(bulletin: dict, site_dir: Path = SITE_DIR, keep: int = 30) -> 
 
     episode = {
         "date": date,
-        "title": f"Haber Akışı — {date}",
-        "audio": f"audio/episodes/{date}.mp3",
+        "locale": locale,
+        "title": f"{bulletin.get('title', 'Haber Akışı')} — {date}",
+        "audio": f"audio/episodes/{locale}-{date}.mp3",
         "bytes": path.stat().st_size,
         "duration": duration_seconds(path),
         "turns": len(turns),
@@ -109,15 +111,16 @@ def build_episode(bulletin: dict, site_dir: Path = SITE_DIR, keep: int = 30) -> 
         "published": datetime.now(timezone.utc).isoformat(),
     }
 
-    episodes = [e for e in load_episodes(site_dir / "data" / "episodes.json") if e.get("date") != date]
+    store = site_dir / "data" / locale / "episodes.json"
+    episodes = [e for e in load_episodes(store) if e.get("date") != date]
     episodes.insert(0, episode)
     episodes = episodes[:keep]
-    save_episodes(episodes, site_dir / "data" / "episodes.json")
+    save_episodes(episodes, store)
 
     # Arsivden dusen bolumlerin ses dosyalarini sil.
-    kept = {e["date"] for e in episodes}
+    kept = {f"{locale}-{e['date']}" for e in episodes}
     episode_dir = site_dir / "audio" / "episodes"
-    for old in episode_dir.glob("*.mp3"):
+    for old in episode_dir.glob(f"{locale}-*.mp3"):
         if old.stem not in kept:
             old.unlink(missing_ok=True)
 
@@ -147,6 +150,7 @@ def render_feed(episodes: list[dict], base_url: str, config: dict | None = None)
     base = base_url.rstrip("/")
     image = f"{base}/icons/icon-512.png"
 
+    language = (config or {}).get("language", "tr")
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"'
@@ -155,13 +159,13 @@ def render_feed(episodes: list[dict], base_url: str, config: dict | None = None)
         f"<title>{_esc(title)}</title>",
         f"<link>{_esc(base)}/</link>",
         f"<description>{_esc(description)}</description>",
-        "<language>tr</language>",
+        f"<language>{_esc(language)}</language>",
         f"<itunes:author>{_esc(author)}</itunes:author>",
         f"<itunes:summary>{_esc(description)}</itunes:summary>",
         '<itunes:category text="News"/>',
         "<itunes:explicit>false</itunes:explicit>",
         f'<itunes:image href="{_esc(image)}"/>',
-        f"<atom:link xmlns:atom='http://www.w3.org/2005/Atom' href='{_esc(base)}/podcast.xml'"
+        f"<atom:link xmlns:atom='http://www.w3.org/2005/Atom' href='{_esc(base)}/podcast-{_esc(language)}.xml'"
         " rel='self' type='application/rss+xml'/>",
     ]
 
@@ -188,7 +192,7 @@ def render_feed(episodes: list[dict], base_url: str, config: dict | None = None)
     return "\n".join(lines)
 
 
-def write_feed(episodes: list[dict], site_dir: Path = SITE_DIR, base_url: str = "", config: dict | None = None) -> Path:
-    path = site_dir / "podcast.xml"
+def write_feed(episodes: list[dict], site_dir: Path = SITE_DIR, base_url: str = "", config: dict | None = None, locale: str = "tr") -> Path:
+    path = site_dir / f"podcast-{locale}.xml"
     path.write_text(render_feed(episodes, base_url, config), encoding="utf-8")
     return path

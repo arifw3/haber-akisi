@@ -173,17 +173,38 @@ class TestRanking(unittest.TestCase):
 
 
 class TestSpeech(unittest.TestCase):
+    TAIL_TR = "Bu haberi {n} ayrı kaynak yazdı."
+
     def test_speech_mentions_publisher_and_source_count(self):
         from mynews.build import speech_text
 
-        text = speech_text(make_item("Önemli bir gelişme", related=4))
+        text = speech_text(make_item("Önemli bir gelişme", related=4), tail=self.TAIL_TR)
         self.assertIn("Hürriyet", text)
         self.assertIn("5 ayrı kaynak", text)
 
     def test_speech_skips_count_for_single_source(self):
         from mynews.build import speech_text
 
-        self.assertNotIn("ayrı kaynak", speech_text(make_item("Tek kaynaklı haber")))
+        text = speech_text(make_item("Tek kaynaklı haber"), tail=self.TAIL_TR)
+        self.assertNotIn("ayrı kaynak", text)
+
+    def test_speech_uses_locale_tail(self):
+        from mynews.build import speech_text
+
+        text = speech_text(
+            make_item("Big development", related=4),
+            rules="en",
+            tail="This story was covered by {n} separate outlets.",
+        )
+        self.assertIn("covered by 5 separate outlets", text)
+
+    def test_turkish_abbreviations_skipped_for_english(self):
+        from mynews.speech import normalize
+
+        # "AKP" acilimi Turkce'ye ozgudur; Ingilizce metinde uygulanmamali
+        self.assertIn("A Ka Pe", normalize("AKP açıklama yaptı", "tr"))
+        self.assertIn("AKP", normalize("AKP made a statement", "en"))
+        self.assertNotIn("A Ka Pe", normalize("AKP made a statement", "en"))
 
     def test_columnist_headline_not_used_as_context(self):
         from mynews.build import pick_extra
@@ -713,6 +734,37 @@ class TestFetchRetry(unittest.TestCase):
         with self.assertRaises(FeedError):
             fetch("https://x.com/feed")
         self.assertEqual(calls["n"], 1)
+
+
+class TestLocaleConfig(unittest.TestCase):
+    def test_shared_settings_merged_with_locale(self):
+        from mynews.rank import load_config
+
+        tr = load_config("tr")
+        en = load_config("en")
+        # Skorlama ortak, segmentler dile ozel
+        self.assertEqual(tr["scoring"], en["scoring"])
+        self.assertNotEqual(tr["segments"], en["segments"])
+        self.assertEqual(tr["current_locale"], "tr")
+        self.assertEqual(en["current_locale"], "en")
+
+    def test_locale_sets_google_news_params(self):
+        from mynews.rank import load_config
+
+        self.assertEqual(load_config("en")["locale"]["gl"], "US")
+        self.assertEqual(load_config("tr")["locale"]["gl"], "TR")
+
+    def test_unknown_locale_raises(self):
+        from mynews.rank import load_config
+
+        with self.assertRaises(FileNotFoundError):
+            load_config("xx")
+
+    def test_history_path_is_per_locale(self):
+        from mynews.history import path_for
+
+        self.assertNotEqual(path_for("tr"), path_for("en"))
+        self.assertIn("history-en", str(path_for("en")))
 
 
 if __name__ == "__main__":

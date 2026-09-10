@@ -12,9 +12,9 @@ site/audio/
 
 .gcp_sa.json
 .gcp_doc_id
-data/history.json
-site/data/episodes.json
+site/data/*/episodes.json
 
 # Günlük arşiv yerel üretimden birikiyor; yayın Pages çıktısından gelir.
-site/data/20*.json
+site/data/*/20*.json
 data/translations.json
+data/history-*.json

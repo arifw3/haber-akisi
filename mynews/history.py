@@ -26,6 +26,11 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_PATH = ROOT / "data" / "history.json"
 
 
+def path_for(locale: str) -> Path:
+    """Her dil kendi gecmisini tutar."""
+    return ROOT / "data" / f"history-{locale}.json"
+
+
 class History:
     def __init__(self, path: Path | None = None, days: int = 7, threshold: float = 0.6):
         self.path = Path(path) if path else DEFAULT_PATH

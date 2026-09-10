@@ -1,9 +1,10 @@
 # Haber Akışı
 
-Google Haberler RSS'inden her gün **30 haber** derleyip Tailwind tabanlı bir **PWA**'da sunan bülten.
+Google Haberler RSS'inden her gün haber derleyip Tailwind tabanlı bir **PWA**'da sunan **çok dilli** bülten.
 İki kullanım biçimi var: kartlar arasında elle gezinme, ya da **hands-free** dinleme — okunan haber öne gelir, bitince sıradaki gelir.
 
-Kategoriler: **Türkiye**, **Dünya**, **Ekonomi**, **Bilim & Teknoloji**, **Bilim**, **Sağlık**, **Spor**, **Yazılım** — günde ~60 haber.
+**Türkçe** (8 kategori, ~60 haber) ve **İngilizce** (8 kategori, ~64 haber) yayınlanır;
+arayüzdeki TR/EN düğmesiyle geçilir.
 
 **Canlı:** https://arifw3.github.io/haber-akisi/ · **Depo:** https://github.com/arifw3/haber-akisi
 
@@ -175,6 +176,42 @@ gönderilmediği için kabul ediliyor; ayarda açıkça belirtilmesi gerekir.
 Keşfet ekranından anahtar kelime eklenir ("Laravel", "deprem"). Eşleşen haberler ana sayfada
 **"Senin için"** bölümünde öne çıkar ve kartta rozet görünür. Liste tarayıcıda saklanır
 (`localStorage`), sunucu tarafını etkilemez — bülten herkes için aynı üretilir.
+
+## Çok dillilik
+
+Ayarlar ikiye bölünür:
+
+- `config/settings.json` — dilden bağımsız olan: skorlama ağırlıkları, eşikler, TTS, önbellek
+- `config/locales/<dil>.json` — dile özel olan: segmentler, yayıncılar, güven puanları,
+  eleme kalıpları, sesler, Google Haberler bölge parametreleri (`hl`/`gl`/`ceid`)
+
+```bash
+python -m mynews --locale en build --with-audio --podcast
+python -m mynews --locale tr doctor
+```
+
+Çıktılar dile göre ayrışır: `site/data/<dil>/latest.json`, `bulten-<dil>.txt`,
+`podcast-<dil>.xml`, `audio/episodes/<dil>-<tarih>.mp3`. Geçmiş de dil başına ayrıdır
+(`data/history-<dil>.json`) — yoksa iki dil birbirinin haberini elerdi.
+
+Ses **önbelleği ortaktır** ve olması gereken de budur: anahtar metnin hash'i olduğu için
+diller doğal olarak ayrışır, aynı metin iki kez faturalanmaz.
+
+**İş akışı dilleri tek işte sırayla üretir.** Paralel matris denenmişti ama GitHub Pages tek
+artifact aldığı için ikinci dil birincisini eziyordu.
+
+Arayüz metinleri `site/app.js` içindeki `STRINGS` sözlüğünde; bülten içeriği zaten sunucuda
+o dilde üretiliyor. Dil seçimi `localStorage`'da saklanır, `?lang=en` ile de açılır, hiçbiri
+yoksa tarayıcı diline bakılır.
+
+**Not:** Kısaltma açılımları (`AKP` → "A Ka Pe") Türkçe'ye özgüdür ve yalnızca `speech_rules: "tr"`
+olan dillerde uygulanır; noktalama sadeleştirmesi dilden bağımsızdır.
+
+### İngilizce tarafta beklenmedik avantaj
+
+Türkçe akışlarda Google, Bilim ve Teknoloji feed'lerinde kümeleme yapmıyor — orada her haber tek
+kaynak görünüyor ve ana sinyalimiz çalışmıyor. İngilizce'de TECHNOLOGY feed'inin 35 haberinden
+32'si çok kaynaklı; yani "kaç yayıncı yazdı" ölçüsü **her segmentte** çalışıyor.
 
 ## Sağlık denetimi
 

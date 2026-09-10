@@ -110,12 +110,19 @@ def clean_for_speech(text: str) -> str:
     return text.strip()
 
 
-def normalize(text: str) -> str:
-    """Metni seslendirmeye hazir hale getir."""
-    return clean_for_speech(expand_abbreviations(text))
+def normalize(text: str, rules: str = "tr") -> str:
+    """Metni seslendirmeye hazir hale getir.
+
+    Kisaltma acilimlari Turkce'ye ozgudur ("AKP" -> "A Ka Pe"); baska
+    dillerde uygulanmaz, cunku o dillerin TTS'i kendi kurallariyla okur.
+    Noktalama sadelestirmesi ise dilden bagimsizdir.
+    """
+    if rules == "tr":
+        text = expand_abbreviations(text)
+    return clean_for_speech(text)
 
 
-def intro_for(publisher: str) -> str:
+def intro_for(publisher: str, rules: str = "tr") -> str:
     """Yayinci adini cumle basi olarak dogal bicimde ver.
 
     Iki nokta ust uste yerine nokta kullaniyoruz: TTS iki noktada
@@ -125,4 +132,4 @@ def intro_for(publisher: str) -> str:
     if name in PUBLISHER_SPEECH:
         return PUBLISHER_SPEECH[name]
     name = _DOMAIN_RE.sub(lambda m: m.group(1), name)
-    return normalize(name).rstrip(".:")
+    return normalize(name, rules).rstrip(".:")

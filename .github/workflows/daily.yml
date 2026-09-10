@@ -28,7 +28,7 @@ jobs:
           python-version: "3.12"
 
       - name: Feed sağlığını kontrol et
-        run: python -m mynews health
+        run: python -m mynews --locale tr health
 
       - name: Önbelleği ve geçmişi geri yükle
         uses: actions/cache@v4
@@ -39,7 +39,8 @@ jobs:
             site/audio/cache
             site/audio/episodes
             site/data/episodes.json
-            data/history.json
+            data/history-tr.json
+            data/history-en.json
           key: mynews-state-${{ github.run_id }}
           restore-keys: mynews-state-
 
@@ -48,7 +49,14 @@ jobs:
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m mynews build --with-audio --podcast
+        run: |
+          # Diller sırayla üretilir: Pages tek artifact aldığı için ayrı
+          # işlere bölünemez, ikincisi birincisini ezerdi.
+          for locale in tr en; do
+            echo "::group::$locale"
+            python -m mynews --locale "$locale" build --with-audio --podcast
+            echo "::endgroup::"
+          done
 
       - name: Testleri çalıştır
         run: python -m unittest discover -s tests -v
@@ -57,7 +65,7 @@ jobs:
         # Rapor amaçlı: burada durursa site hiç yayınlanmaz.
         # Asıl uyarı, dağıtımdan sonraki health işinden gelir.
         continue-on-error: true
-        run: python -m mynews doctor
+        run: python -m mynews --locale tr doctor
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

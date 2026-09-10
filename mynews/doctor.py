@@ -116,6 +116,6 @@ def inspect(bulletin: dict, thresholds: dict | None = None) -> Report:
     return report
 
 
-def fetch_bulletin(base_url: str) -> dict:
-    url = base_url.rstrip("/") + "/data/latest.json"
+def fetch_bulletin(base_url: str, locale: str = "tr") -> dict:
+    url = f"{base_url.rstrip('/')}/data/{locale}/latest.json"
     return json.loads(fetch(url, timeout=30).decode("utf-8"))

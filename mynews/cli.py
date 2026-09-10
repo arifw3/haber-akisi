@@ -18,12 +18,12 @@ from .rank import Ranker, load_config
 from .tts import available_engine, synthesize_bulletin
 
 
-def cmd_health(_: argparse.Namespace) -> int:
-    cfg = load_config()
+def cmd_health(args: argparse.Namespace) -> int:
+    cfg = load_config(args.locale)
     bad = 0
     for seg in cfg["segments"]:
         for topic in seg["topics"]:
-            report, _items = check_feed(topic, seg["key"])
+            report, _items = check_feed(topic, seg["key"], cfg.get("locale"))
             age = (
                 f"{report.newest_age_hours:.1f}s"
                 if report.newest_age_hours is not None
@@ -40,12 +40,12 @@ def cmd_health(_: argparse.Namespace) -> int:
 
 
 def cmd_rank(args: argparse.Namespace) -> int:
-    cfg = load_config()
+    cfg = load_config(args.locale)
     ranker = Ranker(cfg)
     for seg in cfg["segments"]:
         pool = []
         for topic in seg["topics"]:
-            _report, items = check_feed(topic, seg["key"])
+            _report, items = check_feed(topic, seg["key"], cfg.get("locale"))
             pool.extend(items)
         chosen = ranker.select(pool, int(seg["limit"]))
         print(f"\n=== {seg['title']} ({len(chosen)}/{len(pool)}) ===")
@@ -60,7 +60,8 @@ def cmd_rank(args: argparse.Namespace) -> int:
 
 
 def cmd_build(args: argparse.Namespace) -> int:
-    cfg = load_config()
+    cfg = load_config(args.locale)
+    print(f"Dil: {cfg['current_locale']} ({cfg.get('title')})")
     bulletin = build(cfg)
 
     if args.with_audio:
@@ -104,7 +105,12 @@ def cmd_build(args: argparse.Namespace) -> int:
             episode = build_episode(bulletin, site, int(pod_cfg.get("keep", 30)))
             if episode:
                 base = pod_cfg.get("base_url", "")
-                feed = write_feed(load_episodes(site / "data" / "episodes.json"), site, base, pod_cfg)
+                locale = bulletin["locale"]
+                pod_cfg = dict(pod_cfg, language=cfg.get("language", locale))
+                feed = write_feed(
+                    load_episodes(site / "data" / locale / "episodes.json"),
+                    site, base, pod_cfg, locale,
+                )
                 bulletin["episode"] = episode
                 print(
                     f"Bolum: {episode['audio']} "
@@ -149,12 +155,15 @@ def cmd_doctor(args: argparse.Namespace) -> int:
 
     from .doctor import fetch_bulletin, inspect
 
-    cfg = load_config()
+    cfg = load_config(args.locale)
     if args.url:
-        print(f"Denetlenen: {args.url}")
-        bulletin = fetch_bulletin(args.url)
+        print(f"Denetlenen: {args.url} [{cfg['current_locale']}]")
+        bulletin = fetch_bulletin(args.url, cfg["current_locale"])
     else:
-        path = Path(__file__).resolve().parent.parent / "site" / "data" / "latest.json"
+        path = (
+            Path(__file__).resolve().parent.parent
+            / "site" / "data" / cfg["current_locale"] / "latest.json"
+        )
         print(f"Denetlenen: {path}")
         bulletin = json.loads(_io.open(path, encoding="utf-8").read())
 
@@ -165,6 +174,10 @@ def cmd_doctor(args: argparse.Namespace) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="mynews")
+    parser.add_argument(
+        "--locale", default=None,
+        help="dil kodu (config/locales/<kod>.json); varsayilan settings.json'daki",
+    )
     sub = parser.add_subparsers(dest="cmd", required=True)
     sub.add_parser("health", help="feed sagligini kontrol et").set_defaults(fn=cmd_health)
     p_rank = sub.add_parser("rank", help="secimi ve skorlari goster")

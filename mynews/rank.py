@@ -31,9 +31,28 @@ _STOPWORDS = {
 }
 
 
-def load_config(path: Path | str | None = None) -> dict:
+LOCALE_DIR = CONFIG_PATH.parent / "locales"
+
+
+def load_config(locale: str | None = None, path: Path | str | None = None) -> dict:
+    """Ortak ayarlari dile ozel ayarlarla birlestirir.
+
+    settings.json dilden bagimsiz olani tutar (skorlama, esikler, TTS);
+    locales/<dil>.json ise segmentleri, yayincilari, kaliplari ve sesleri.
+    """
     with open(path or CONFIG_PATH, encoding="utf-8") as fh:
-        return json.load(fh)
+        config = json.load(fh)
+
+    locale = locale or config.get("default_locale", "tr")
+    locale_path = LOCALE_DIR / f"{locale}.json"
+    if not locale_path.exists():
+        raise FileNotFoundError(f"Dil ayari bulunamadi: {locale_path}")
+
+    with open(locale_path, encoding="utf-8") as fh:
+        config.update(json.load(fh))
+
+    config["current_locale"] = locale
+    return config
 
 
 def normalize(text: str) -> str:

@@ -138,7 +138,8 @@ def _esc(text: str) -> str:
 
 def write(bulletin: dict, site_dir: Path = SITE_DIR) -> list[Path]:
     site_dir.mkdir(parents=True, exist_ok=True)
-    paths = [site_dir / "bulten.txt", site_dir / "bulten.html"]
+    locale = bulletin.get("locale", "tr")
+    paths = [site_dir / f"bulten-{locale}.txt", site_dir / f"bulten-{locale}.html"]
     paths[0].write_text(render_text(bulletin), encoding="utf-8")
     paths[1].write_text(render_html(bulletin), encoding="utf-8")
     return paths

@@ -13,7 +13,7 @@ from pathlib import Path
 
 from .feeds import collect as collect_direct
 from .gnews import NewsItem, check_feed
-from .history import History
+from .history import History, path_for
 from .images import ImageResolver
 from .rank import Ranker, Scored, load_config, similarity
 from .speech import intro_for, normalize
@@ -28,20 +28,20 @@ def favicon_for(domain: str) -> str:
     return FAVICON.format(domain=domain) if domain else ""
 
 
-def speech_text(item: NewsItem, extra: str = "") -> str:
+def speech_text(item: NewsItem, extra: str = "", rules: str = "tr", tail: str = "") -> str:
     """Hands-free modda seslendirilecek metin.
 
     Sadece basliklarda gecen bilgiyi kullanir - RSS govde vermiyor,
     uydurmamak icin bilincli olarak yuzeysel tutuluyor.
     """
-    publisher = intro_for(item.publisher) or "Google Haberler"
+    publisher = intro_for(item.publisher, rules) or ("Google Haberler" if rules == "tr" else "Google News")
     # Iki nokta ust uste yerine nokta: TTS iki noktada duraklamiyordu.
-    parts = [f"{publisher}. {normalize(item.title).rstrip('.')}."]
+    parts = [f"{publisher}. {normalize(item.title, rules).rstrip('.')}."]
     if extra:
-        parts.append(normalize(extra).rstrip(".") + ".")
+        parts.append(normalize(extra, rules).rstrip(".") + ".")
     if item.source_count >= 3:
-        parts.append(f"Bu haberi {item.source_count} ayrı kaynak yazdı.")
-    return " ".join(parts)
+        parts.append(tail.format(n=item.source_count) if tail else "")
+    return " ".join(p for p in parts if p)
 
 
 def pick_extra(item: NewsItem) -> str:
@@ -63,7 +63,7 @@ def pick_extra(item: NewsItem) -> str:
     return best
 
 
-def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = None) -> dict:
+def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = None, rules: str = "tr", tail: str = "") -> str | dict:
     item = scored.item
 
     # Yayincinin kendi feed'inde eslesme varsa gorsel ve dogrudan baglanti
@@ -95,7 +95,7 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
         "needs_translation": bool(item.direct.get("translate")),
         "source_count": item.source_count,
         "score": round(scored.score, 3),
-        "speech": speech_text(item, pick_extra(item)),
+        "speech": speech_text(item, pick_extra(item), rules, tail),
         "related": [
             {"title": r.title, "source": r.source}
             for r in item.related
@@ -109,10 +109,22 @@ def build(config: dict | None = None) -> dict:
 
     hist_cfg = cfg.get("history", {})
     history = (
-        History(days=int(hist_cfg.get("days", 7)), threshold=float(hist_cfg.get("similarity", 0.6)))
+        History(
+            path_for(cfg.get("current_locale", "tr")),
+            days=int(hist_cfg.get("days", 7)),
+            threshold=float(hist_cfg.get("similarity", 0.6)),
+        )
         if hist_cfg.get("enabled", True)
         else None
     )
+
+    rules = cfg.get("speech_rules", "tr")
+    source_tail = (
+        "Bu haberi {n} ayrı kaynak yazdı."
+        if rules == "tr"
+        else "This story was covered by {n} separate outlets."
+    )
+    locale_params = cfg.get("locale")
 
     matching = cfg.get("image_matching", {})
     resolver = (
@@ -139,7 +151,7 @@ def build(config: dict | None = None) -> dict:
             # Feed'ler arasinda kisa aralik: pes pese istek 503 tetikliyordu.
             if pool:
                 time.sleep(1.2)
-            report, items = check_feed(topic, seg["key"])
+            report, items = check_feed(topic, seg["key"], locale_params)
             health.append(
                 {
                     "topic": topic,
@@ -163,7 +175,7 @@ def build(config: dict | None = None) -> dict:
         if history:
             for scored in chosen:
                 history.remember(scored.item.title, scored.item.link)
-        payloads = [item_payload(s, i, resolver) for i, s in enumerate(chosen)]
+        payloads = [item_payload(s, i, resolver, rules, source_tail) for i, s in enumerate(chosen)]
 
         # Ingilizce kaynaklar Turkce'ye cevrilir; ceviri basarisiz olursa
         # haberler Ingilizce kalir - bulteni kaybetmektense oyle yayinlanir.
@@ -193,6 +205,9 @@ def build(config: dict | None = None) -> dict:
 
     now = datetime.now(timezone.utc)
     return {
+        "locale": cfg.get("current_locale", "tr"),
+        "language": cfg.get("language", "tr"),
+        "title": cfg.get("title", "Haber Akışı"),
         "date": now.date().isoformat(),
         "generated_at": now.isoformat(),
         "segments": segments,
@@ -206,8 +221,11 @@ def build(config: dict | None = None) -> dict:
 
 
 def write(bulletin: dict, data_dir: Path = DATA_DIR) -> list[Path]:
-    data_dir.mkdir(parents=True, exist_ok=True)
-    paths = [data_dir / "latest.json", data_dir / f"{bulletin['date']}.json"]
+    """Dile gore ayri klasore yazar: data/<dil>/latest.json"""
+    locale = bulletin.get("locale", "tr")
+    target = data_dir / locale
+    target.mkdir(parents=True, exist_ok=True)
+    paths = [target / "latest.json", target / f"{bulletin['date']}.json"]
     for path in paths:
         path.write_text(
             json.dumps(bulletin, ensure_ascii=False, indent=2), encoding="utf-8"

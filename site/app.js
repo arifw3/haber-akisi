@@ -13,12 +13,80 @@
  */
 "use strict";
 
-const DATA_URL = "data/latest.json";
+const LANG_KEY = "mynews:lang";
+const SUPPORTED = ["tr", "en"];
+
+function initialLang() {
+  const fromUrl = new URLSearchParams(location.search).get("lang");
+  if (SUPPORTED.includes(fromUrl)) return fromUrl;
+  const stored = localStorage.getItem(LANG_KEY);
+  if (SUPPORTED.includes(stored)) return stored;
+  // Tarayıcı dili destekleniyorsa onu kullan, yoksa Türkçe.
+  const nav = (navigator.language || "tr").slice(0, 2);
+  return SUPPORTED.includes(nav) ? nav : "tr";
+}
+
+const dataUrl = (lang) => `data/${lang}/latest.json`;
 const SAVED_KEY = "mynews:saved";
 const READ_KEY = "mynews:read";
 const INTEREST_KEY = "mynews:interests";
 const RATE_KEY = "mynews:rate";
 const RATES = [1, 1.25, 1.5, 2];
+
+/* Arayüz metinleri. Bülten içeriği sunucuda çevriliyor; buradakiler
+ * yalnızca uygulamanın kendi etiketleri. */
+const STRINGS = {
+  tr: {
+    featured: "Öne çıkanlar", more: "Öneriler", forYou: "Senin için", all: "Tümü",
+    home: "Ana sayfa", discover: "Keşfet", listen: "Dinle", saved: "Kayıtlı",
+    discoverSub: "Tüm kategorilerden haberler", savedSub: "Sonra okumak için ayırdıklarınız",
+    search: "Haberlerde ara…", noMatch: "Eşleşen haber yok.", count: (n) => `${n} haber`,
+    audioBriefing: "SESLİ BÜLTEN", dailyBriefing: "Günün bülteni",
+    episodes: (n, m) => `${n} bölüm · ~${m} dakika`,
+    podcastApp: "Podcast uygulamanda dinle", saveOffline: "Çevrimdışı dinlemek için kaydet",
+    downloading: (a, b) => `İndiriliyor… ${a}/${b}`, offlineReady: (n) => `Çevrimdışı hazır · ${n} ses`,
+    offlineUnsupported: "Çevrimdışı kayıt bu tarayıcıda desteklenmiyor",
+    interests: "İlgi alanların",
+    interestsHelp: "Eşleşen haberler ana sayfada öne çıkar. Yalnızca bu cihazda saklanır.",
+    interestsEmpty: "Henüz eklemedin.", interestPlaceholder: "örn. Laravel, deprem, Fenerbahçe",
+    add: "Ekle", edit: "Düzenle", read: "okundu",
+    sources: (n) => `${n} kaynak`, singleSource: "tek kaynak",
+    listenHere: "Buradan dinle", otherSources: "Aynı olayı yazan diğer kaynaklar",
+    sourceNote: "Google Haberler makale gövdesi vermediği için özet başlıkla sınırlıdır; tam metin için kaynağa gidin.",
+    savedEmpty: "Henüz haber kaydetmediniz.", savedHint: "Bir haberi açıp yer imi düğmesine dokunun.",
+    stale: (t) => `Bülten ${t} güncellenmedi. Bağlantını kontrol et ya da yenile.`,
+    hours: (n) => `${n} saattir`, days: (n) => `${n} gündür`,
+    speaking: (s) => `${s} konuşuyor`, loadFailed: "Bülten yüklenemedi.",
+  },
+  en: {
+    featured: "Featured", more: "More stories", forYou: "For you", all: "All",
+    home: "Home", discover: "Discover", listen: "Listen", saved: "Saved",
+    discoverSub: "Stories from every category", savedSub: "Kept for later",
+    search: "Search news…", noMatch: "No matching stories.", count: (n) => `${n} stories`,
+    audioBriefing: "AUDIO BRIEFING", dailyBriefing: "Today's briefing",
+    episodes: (n, m) => `${n} segments · ~${m} min`,
+    podcastApp: "Listen in your podcast app", saveOffline: "Save for offline listening",
+    downloading: (a, b) => `Downloading… ${a}/${b}`, offlineReady: (n) => `Ready offline · ${n} clips`,
+    offlineUnsupported: "Offline saving isn't supported in this browser",
+    interests: "Your interests",
+    interestsHelp: "Matching stories move to the top. Stored on this device only.",
+    interestsEmpty: "Nothing added yet.", interestPlaceholder: "e.g. Laravel, climate, Arsenal",
+    add: "Add", edit: "Edit", read: "read",
+    sources: (n) => `${n} sources`, singleSource: "single source",
+    listenHere: "Listen from here", otherSources: "Other outlets covering this",
+    sourceNote: "Google News doesn't provide article bodies, so summaries stop at the headline; open the source for the full story.",
+    savedEmpty: "You haven't saved any stories yet.", savedHint: "Open a story and tap the bookmark.",
+    stale: (t) => `The briefing hasn't updated for ${t}. Check your connection or refresh.`,
+    hours: (n) => `${n} hours`, days: (n) => `${n} days`,
+    speaking: (s) => `${s} speaking`, loadFailed: "Couldn't load the briefing.",
+  },
+};
+
+function t(key, ...args) {
+  const table = STRINGS[state.lang] || STRINGS.tr;
+  const value = table[key] ?? STRINGS.tr[key] ?? key;
+  return typeof value === "function" ? value(...args) : value;
+}
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -40,6 +108,7 @@ const el = {
 
 const state = {
   bulletin: null,
+  lang: initialLang(),
   view: "home",
   detailId: null,
   segment: "all",
@@ -76,17 +145,25 @@ function escapeHtml(text) {
   return div.innerHTML;
 }
 
+/* Göreli zaman ve tarih, arayüz diline göre biçimlenir. */
+const TIME_LABELS = {
+  tr: { now: "az önce", hours: (n) => `${n} saat önce`, yesterday: "dün", days: (n) => `${n} gün önce` },
+  en: { now: "just now", hours: (n) => `${n}h ago`, yesterday: "yesterday", days: (n) => `${n}d ago` },
+};
+
 function relativeTime(hours) {
   if (hours == null) return "";
-  if (hours < 1) return "az önce";
-  if (hours < 24) return `${Math.round(hours)} saat önce`;
+  const l = TIME_LABELS[state.lang] || TIME_LABELS.tr;
+  if (hours < 1) return l.now;
+  if (hours < 24) return l.hours(Math.round(hours));
   const days = Math.round(hours / 24);
-  return days === 1 ? "dün" : `${days} gün önce`;
+  return days === 1 ? l.yesterday : l.days(days);
 }
 
 function formatDate(iso) {
   try {
-    return new Date(iso).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" });
+    const tag = state.lang === "en" ? "en-US" : "tr-TR";
+    return new Date(iso).toLocaleDateString(tag, { day: "numeric", month: "long", year: "numeric" });
   } catch {
     return String(iso);
   }
@@ -203,10 +280,10 @@ function verifiedBadge() {
 
 function sourceBadge(count) {
   if (count < 3) {
-    return `<span class="rounded-full bg-black/25 px-2 py-[3px] text-[11px] font-medium text-white/80 backdrop-blur">tek kaynak</span>`;
+    return `<span class="rounded-full bg-black/25 px-2 py-[3px] text-[11px] font-medium text-white/80 backdrop-blur">${escapeHtml(t("singleSource"))}</span>`;
   }
   return `<span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur">
-    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${count} kaynak
+    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${escapeHtml(t("sources", count))}
   </span>`;
 }
 
@@ -275,7 +352,7 @@ function listRow(item) {
         ${matchedInterests(item).slice(0, 1).map((w) => `<span class="rounded-full bg-brand-100 px-1.5 py-px text-[11px] font-semibold text-brand-700">${escapeHtml(w)}</span>`).join("")}
       </p>
       <h3 class="mt-0.5 line-clamp-2 text-[15.5px] font-semibold leading-snug">${escapeHtml(item.title)}</h3>
-      ${state.read.has(item.link) ? '<span class="mt-1 inline-block text-[11px] font-medium text-ink-faint">okundu</span>' : ""}
+      ${state.read.has(item.link) ? '<span class="mt-1 inline-block text-[11px] font-medium text-ink-faint">${escapeHtml(t("read"))}</span>' : ""}
       <div class="mt-1.5 flex items-center gap-2">
         ${logoMarkup(item, "h-5 w-5", "text-[10px]")}
         <span class="truncate text-[12.5px] text-ink-soft">${escapeHtml(item.publisher)}</span>
@@ -308,9 +385,11 @@ function renderTopbar() {
       <div class="flex items-center justify-between">
         <div class="min-w-0">
           <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(formatDate(state.bulletin?.generated_at))}</p>
-          <h1 class="text-[24px] font-bold leading-tight tracking-tight">Haber Akışı</h1>
+          <h1 class="text-[24px] font-bold leading-tight tracking-tight">${escapeHtml(state.bulletin?.title || "Haber Akışı")}</h1>
         </div>
-        <div class="flex shrink-0 gap-2">
+        <div class="flex shrink-0 items-center gap-2">
+          <button data-lang class="h-11 rounded-full bg-white px-3 text-[13px] font-bold uppercase shadow-card transition active:scale-95"
+            aria-label="Language">${escapeHtml(state.lang)}</button>
           <button data-nav-to="discover" class="grid h-11 w-11 place-items-center rounded-full bg-white shadow-card transition active:scale-95" aria-label="Ara">
             <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/></svg>
           </button>
@@ -325,8 +404,8 @@ function renderTopbar() {
   }
 
   const titles = {
-    discover: ["Keşfet", "Tüm kategorilerden haberler"],
-    saved: ["Kayıtlı", "Sonra okumak için ayırdıklarınız"],
+    discover: [t("discover"), t("discoverSub")],
+    saved: [t("saved"), t("savedSub")],
   };
   const [title, sub] = titles[state.view] || ["", ""];
   el.topbar.innerHTML = `
@@ -371,11 +450,11 @@ function audioUrls() {
 function saveOffline(button) {
   const urls = audioUrls();
   if (!urls.length || !navigator.serviceWorker?.controller) {
-    if (button) button.textContent = "Çevrimdışı kayıt bu tarayıcıda desteklenmiyor";
+    if (button) button.textContent = t("offlineUnsupported");
     return;
   }
   state.offlineTotal = urls.length;
-  if (button) button.textContent = `İndiriliyor… 0/${urls.length}`;
+  if (button) button.textContent = t("downloading", 0, urls.length);
   navigator.serviceWorker.controller.postMessage({ type: "cache-audio", urls });
 }
 
@@ -386,8 +465,8 @@ navigator.serviceWorker?.addEventListener("message", (event) => {
   if (!button) return;
   button.textContent =
     data.done + data.failed >= data.total
-      ? `Çevrimdışı hazır · ${data.done} ses`
-      : `İndiriliyor… ${data.done}/${data.total}`;
+      ? t("offlineReady", data.done)
+      : t("downloading", data.done, data.total);
 });
 
 /* Veri bayatladıysa görünür uyarı: sessiz bozulmayı kullanıcı da fark etsin. */
@@ -398,8 +477,7 @@ function freshnessNotice() {
   if (hours < 36) return "";
   const gun = Math.round(hours / 24);
   return `<p class="mb-4 rounded-2xl bg-amber-100 px-4 py-3 text-[13px] font-medium text-amber-900">
-    Bülten ${gun < 1 ? Math.round(hours) + " saattir" : gun + " gündür"} güncellenmedi.
-    Bağlantını kontrol et ya da yenile.
+    ${escapeHtml(t("stale", gun < 1 ? t("hours", Math.round(hours)) : t("days", gun)))}
   </p>`;
 }
 
@@ -439,13 +517,13 @@ function interestEditor() {
 
   return `
   <section class="mb-5 rounded-xl2 bg-white p-4 shadow-card">
-    <h2 class="text-[15px] font-bold">İlgi alanların</h2>
-    <p class="mt-0.5 text-[12.5px] text-ink-soft">Eşleşen haberler ana sayfada öne çıkar. Yalnızca bu cihazda saklanır.</p>
-    <div class="mt-3 flex flex-wrap gap-2">${chips || '<span class="text-[13px] text-ink-faint">Henüz eklemedin.</span>'}</div>
+    <h2 class="text-[15px] font-bold">${escapeHtml(t("interests"))}</h2>
+    <p class="mt-0.5 text-[12.5px] text-ink-soft">${escapeHtml(t("interestsHelp"))}</p>
+    <div class="mt-3 flex flex-wrap gap-2">${chips || `<span class="text-[13px] text-ink-faint">${escapeHtml(t("interestsEmpty"))}</span>`}</div>
     <form data-interest-form class="mt-3 flex gap-2">
-      <input name="word" type="text" placeholder="örn. Laravel, deprem, Fenerbahçe" autocomplete="off"
+      <input name="word" type="text" placeholder="${escapeHtml(t("interestPlaceholder"))}" autocomplete="off"
         class="min-w-0 flex-1 rounded-xl border-0 bg-black/[.04] px-3 py-2.5 text-[14px] outline-none placeholder:text-ink-faint focus:ring-2 focus:ring-brand-500">
-      <button type="submit" class="grad shrink-0 rounded-xl px-4 py-2.5 text-[14px] font-semibold text-white">Ekle</button>
+      <button type="submit" class="grad shrink-0 rounded-xl px-4 py-2.5 text-[14px] font-semibold text-white">${escapeHtml(t("add"))}</button>
     </form>
   </section>`;
 }
@@ -462,9 +540,9 @@ function podcastCard() {
         <svg class="h-6 w-6 translate-x-[1px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
       </span>
       <span class="min-w-0 flex-1">
-        <span class="block text-[12px] font-semibold uppercase tracking-wide text-white/70">Sesli bülten</span>
-        <span class="block text-[17px] font-bold leading-tight text-white">Günün bülteni</span>
-        <span class="block text-[13px] text-white/75">${turns.length} bölüm · ~${dakika} dakika · Ayşe &amp; Mert</span>
+        <span class="block text-[12px] font-semibold uppercase tracking-wide text-white/70">${escapeHtml(t("audioBriefing"))}</span>
+        <span class="block text-[17px] font-bold leading-tight text-white">${escapeHtml(t("dailyBriefing"))}</span>
+        <span class="block text-[13px] text-white/75">${escapeHtml(t("episodes", turns.length, dakika))}</span>
       </span>
     </div>
   </button>
@@ -473,7 +551,7 @@ function podcastCard() {
     <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M6.2 17.8a1.5 1.5 0 1 1-2.1 2.1 1.5 1.5 0 0 1 2.1-2.1zM4 11.5a8.5 8.5 0 0 1 8.5 8.5h-2.6A5.9 5.9 0 0 0 4 14.1zM4 5a15 15 0 0 1 15 15h-2.6A12.4 12.4 0 0 0 4 7.6z"/>
     </svg>
-    Podcast uygulamanda dinle
+    ${escapeHtml(t("podcastApp"))}
   </a>
   <button id="offline-btn" data-offline
     class="mb-5 -mt-3 flex w-full items-center justify-center gap-1.5 text-[12.5px] font-medium text-ink-soft">
@@ -481,7 +559,7 @@ function podcastCard() {
       <path d="M12 4v11m0 0 4-4m-4 4-4-4" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M5 19h14" stroke-linecap="round"/>
     </svg>
-    Çevrimdışı dinlemek için kaydet
+    ${escapeHtml(t("saveOffline"))}
   </button>`;
 }
 
@@ -496,7 +574,7 @@ function renderHome() {
     <div class="view">
       ${freshnessNotice()}
       ${podcastCard()}
-      ${sectionHeader("Öne çıkanlar", { label: "Tümü", view: "discover" })}
+      ${sectionHeader(t("featured"), { label: t("all"), view: "discover" })}
       <div id="carousel" class="no-scrollbar snap-x-mandatory -mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-2">
         ${featured.map(heroCard).join("")}
       </div>
@@ -507,14 +585,14 @@ function renderHome() {
       ${
         mine.length
           ? `<div class="mt-6">
-               ${sectionHeader("Senin için", { label: "Düzenle", view: "discover" })}
+               ${sectionHeader(t("forYou"), { label: t("edit"), view: "discover" })}
                <div class="mt-1 divide-y divide-black/5">${mine.map(listRow).join("")}</div>
              </div>`
           : ""
       }
 
       <div class="mt-6">
-        ${sectionHeader("Öneriler", { label: "Tümü", view: "discover" })}
+        ${sectionHeader(t("more"), { label: t("all"), view: "discover" })}
         <div class="mt-1 divide-y divide-black/5">${rest.map(listRow).join("")}</div>
       </div>
     </div>`;
@@ -544,12 +622,12 @@ function wireCarousel() {
 function discoverList(items) {
   return items.length
     ? items.map(listRow).join("")
-    : `<p class="py-16 text-center text-[15px] text-ink-soft">Eşleşen haber yok.</p>`;
+    : `<p class="py-16 text-center text-[15px] text-ink-soft">${escapeHtml(t("noMatch"))}</p>`;
 }
 
 function renderDiscover() {
   const segments = state.bulletin ? state.bulletin.segments : [];
-  const chips = [{ key: "all", title: "Tümü" }, ...segments.map((s) => ({ key: s.key, title: s.title }))];
+  const chips = [{ key: "all", title: t("all") }, ...segments.map((s) => ({ key: s.key, title: s.title }))];
   const items = filtered();
 
   el.view.innerHTML = `
@@ -559,7 +637,7 @@ function renderDiscover() {
         <svg class="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2" stroke-linecap="round"/>
         </svg>
-        <input id="search" type="search" value="${escapeHtml(state.query)}" placeholder="Haberlerde ara…" autocomplete="off"
+        <input id="search" type="search" value="${escapeHtml(state.query)}" placeholder="${escapeHtml(t("search"))}" autocomplete="off"
           class="w-full rounded-2xl border-0 bg-white py-3.5 pl-12 pr-4 text-[15px] shadow-card outline-none ring-1 ring-black/5 placeholder:text-ink-faint focus:ring-2 focus:ring-brand-500">
       </div>
 
@@ -574,14 +652,14 @@ function renderDiscover() {
           .join("")}
       </div>
 
-      <p id="count" class="mt-4 text-[13px] text-ink-faint">${items.length} haber</p>
+      <p id="count" class="mt-4 text-[13px] text-ink-faint">${escapeHtml(t("count", items.length))}</p>
       <div id="results" class="divide-y divide-black/5">${discoverList(items)}</div>
     </div>`;
 
   $("#search")?.addEventListener("input", (event) => {
     state.query = event.target.value.trim();
     const list = filtered();
-    $("#count").textContent = `${list.length} haber`;
+    $("#count").textContent = t("count", list.length);
     $("#results").innerHTML = discoverList(list);
   });
 }
@@ -597,8 +675,8 @@ function renderSaved() {
                <svg class="h-12 w-12 text-ink-faint/50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                  <path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z" stroke-linejoin="round"/>
                </svg>
-               <p class="mt-3 text-[15px] text-ink-soft">Henüz haber kaydetmediniz.</p>
-               <p class="mt-1 text-[13.5px] text-ink-faint">Bir haberi açıp yer imi düğmesine dokunun.</p>
+               <p class="mt-3 text-[15px] text-ink-soft">${escapeHtml(t("savedEmpty"))}</p>
+               <p class="mt-1 text-[13.5px] text-ink-faint">${escapeHtml(t("savedHint"))}</p>
              </div>`
       }
     </div>`;
@@ -663,7 +741,7 @@ function renderDetail() {
 
         ${
           related.length
-            ? `<h2 class="mt-7 text-[15px] font-bold">Aynı olayı yazan diğer kaynaklar</h2>
+            ? `<h2 class="mt-7 text-[15px] font-bold">${escapeHtml(t("otherSources"))}</h2>
                <ul class="mt-3 space-y-3">
                  ${related
                    .map(
@@ -682,7 +760,7 @@ function renderDetail() {
         <div class="mt-7 flex items-center gap-2">
           <button data-listen class="grad inline-flex flex-1 items-center justify-center gap-2 rounded-full px-5 py-3.5 text-[15px] font-semibold text-white shadow-pill transition active:scale-[.98]">
             <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z"/></svg>
-            Buradan dinle
+            ${escapeHtml(t("listenHere"))}
           </button>
           <a href="${escapeHtml(targetUrl(item))}" target="_blank" rel="noopener noreferrer"
              class="grid h-[3.15rem] w-[3.15rem] shrink-0 place-items-center rounded-full bg-black/5 text-ink-soft transition active:scale-95" aria-label="Kaynağa git">
@@ -694,7 +772,7 @@ function renderDetail() {
         </div>
 
         <p class="mt-4 text-[12px] leading-relaxed text-ink-faint">
-          Google Haberler makale gövdesi vermediği için özet başlıkla sınırlıdır; tam metin için kaynağa gidin.
+          ${escapeHtml(t("sourceNote"))}
         </p>
       </section>
     </div>`;
@@ -720,7 +798,9 @@ function setNav(view) {
     btn.classList.toggle("text-white", on);
     btn.classList.toggle("shadow-pill", on);
     btn.classList.toggle("text-ink-faint", !on);
-    btn.querySelector(".nav-label").classList.toggle("hidden", !on);
+    const label = btn.querySelector(".nav-label");
+    label.textContent = t(btn.dataset.nav);
+    label.classList.toggle("hidden", !on);
   });
 }
 
@@ -728,9 +808,11 @@ function setNav(view) {
 
 function pickVoice() {
   const voices = speechSynthesis.getVoices();
+  const prefix = state.lang === "en" ? "en" : "tr";
+  const exact = state.lang === "en" ? "en-US" : "tr-TR";
   return (
-    voices.find((v) => v.lang === "tr-TR") ||
-    voices.find((v) => (v.lang || "").toLowerCase().startsWith("tr")) ||
+    voices.find((v) => v.lang === exact) ||
+    voices.find((v) => (v.lang || "").toLowerCase().startsWith(prefix)) ||
     null
   );
 }
@@ -802,7 +884,7 @@ function speakItem(item) {
   }
   speechSynthesis.cancel();
   const utter = new SpeechSynthesisUtterance(item.speech || item.title);
-  utter.lang = "tr-TR";
+  utter.lang = state.lang === "en" ? "en-US" : "tr-TR";
   utter.rate = state.rate;
   if (state.voice) utter.voice = state.voice;
   utter.onend = advance;
@@ -862,7 +944,7 @@ function updateMini() {
   if (!item) return;
 
   el.miniTitle.textContent = item.title;
-  const etiket = item.segment === "podcast" ? `${item.publisher} konuşuyor` : item.publisher;
+  const etiket = item.segment === "podcast" ? t("speaking", item.publisher) : item.publisher;
   el.miniSub.textContent = `${etiket} · ${state.index + 1}/${state.queue.length}`;
   el.miniPlay.classList.toggle("hidden", state.playing);
   el.miniPause.classList.toggle("hidden", !state.playing);
@@ -927,6 +1009,8 @@ document.addEventListener("click", (event) => {
     const queue = allItems();
     return startListening(queue, queue.findIndex((i) => i.id === item.id));
   }
+
+  if (event.target.closest("[data-lang]")) return switchLang();
 
   const removeInterest = event.target.closest("[data-remove-interest]");
   if (removeInterest) {
@@ -1005,13 +1089,24 @@ document.addEventListener("visibilitychange", () => {
 /* ------------------------------------------------------------- başlangıç */
 
 async function loadBulletin() {
-  const res = await fetch(DATA_URL, { cache: "no-cache" });
+  const res = await fetch(dataUrl(state.lang), { cache: "no-cache" });
   if (!res.ok) throw new Error(`Bülten yüklenemedi (${res.status})`);
   return res.json();
 }
 
 function showError(message) {
   el.view.innerHTML = `<p class="py-20 text-center text-[15px] text-ink-soft">${escapeHtml(message)}</p>`;
+}
+
+/* Dil değiştir: bülten yeniden yüklenir, tercih hatırlanır. */
+async function switchLang() {
+  const next = SUPPORTED[(SUPPORTED.indexOf(state.lang) + 1) % SUPPORTED.length];
+  state.lang = next;
+  localStorage.setItem(LANG_KEY, next);
+  document.documentElement.lang = next;
+  stopListening(true);
+  state.queue = [];
+  await refresh();
 }
 
 async function refresh() {
@@ -1024,11 +1119,12 @@ async function refresh() {
 }
 
 async function init() {
+  document.documentElement.lang = state.lang;
   initVoices();
   try {
     state.bulletin = await loadBulletin();
   } catch (err) {
-    showError(err.message);
+    showError(t("loadFailed") + " " + err.message);
     return;
   }
 

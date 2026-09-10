@@ -103,8 +103,8 @@ def _clean(raw: str) -> str:
     return _WS_RE.sub(" ", _TAG_RE.sub("", html.unescape(raw or ""))).strip()
 
 
-def _topic_url(topic: str) -> str:
-    return TOPIC_BASE.format(topic=topic) + "?" + urllib.parse.urlencode(LOCALE)
+def _topic_url(topic: str, locale: dict | None = None) -> str:
+    return TOPIC_BASE.format(topic=topic) + "?" + urllib.parse.urlencode(locale or LOCALE)
 
 
 def search_url(query: str) -> str:
@@ -226,9 +226,9 @@ def _parse_date(value: str | None) -> datetime:
     return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
 
 
-def fetch_topic(topic: str, category: str) -> list[NewsItem]:
+def fetch_topic(topic: str, category: str, locale: dict | None = None) -> list[NewsItem]:
     """Bir Google News konu feed'ini cek ve ayristir."""
-    return parse_feed(fetch(_topic_url(topic)), category)
+    return parse_feed(fetch(_topic_url(topic, locale)), category)
 
 
 @dataclass
@@ -250,10 +250,10 @@ class FeedHealth:
         return "ok"
 
 
-def check_feed(topic: str, category: str) -> tuple[FeedHealth, list[NewsItem]]:
+def check_feed(topic: str, category: str, locale: dict | None = None) -> tuple[FeedHealth, list[NewsItem]]:
     """Feed'i cek ve sagligini raporla. Bozuk feed sessizce bos donmemeli."""
     try:
-        items = fetch_topic(topic, category)
+        items = fetch_topic(topic, category, locale)
     except FeedError as exc:
         return FeedHealth(topic=topic, ok=False, error=str(exc)), []
     newest = min((i.age_hours for i in items), default=None)
