@@ -112,8 +112,9 @@ jobs:
         run: sleep 60
 
       - name: Yayınlanan bülteni denetle
-        env:
-          # Push çalışmalarında podcast yeniden üretilmez; günün bölümü
-          # taşınamadıysa bunu arıza saymak yanlış alarm olurdu.
-          SKIP: ${{ github.event_name == 'push' && '--no-podcast-check' || ' ' }}
-        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi $SKIP
+        # Podcast denetimi push çalışmalarında da açık. Günün bölümü sabahki
+        # zamanlanmış çalışmada üretiliyor; push'ta yeniden üretilmese de
+        # taşınıyor olmalı. Burada kırmızı yanması "taşıma bozuldu" demek —
+        # tam da bilmek istediğimiz şey. Denetimi susturarak yeşile boyamak,
+        # sistemin kendi başarısını yanlış ölçmesine geri dönmek olurdu.
+        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi

@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import os
+import random
 import re
 import time
 import urllib.error
@@ -83,23 +84,56 @@ class Turn:
 _RETRYABLE = {429, 500, 502, 503, 504}
 
 
-def _post(url: str, payload: dict, headers: dict, timeout: int = 120, attempts: int = 4) -> bytes:
+# Gemini 429'da hangi limitin dolduguna ve ne kadar beklenmesi
+# gerektigine dair ayrinti donuyor; ikisi de govdenin derinlerinde.
+def _quota_detail(body: str) -> tuple[str, float]:
+    """(limit adi, onerilen bekleme sn) — okunamazsa ("", 0)."""
+    try:
+        details = json.loads(body)["error"].get("details", [])
+    except (json.JSONDecodeError, KeyError, TypeError):
+        return "", 0.0
+
+    limit, delay = "", 0.0
+    for detail in details:
+        kind = detail.get("@type", "")
+        if kind.endswith("QuotaFailure"):
+            violations = detail.get("violations") or [{}]
+            limit = violations[0].get("quotaId") or violations[0].get("quotaMetric", "")
+        elif kind.endswith("RetryInfo"):
+            raw = str(detail.get("retryDelay", "")).rstrip("s")
+            try:
+                delay = float(raw)
+            except ValueError:
+                delay = 0.0
+    return limit, delay
+
+
+def _post(url: str, payload: dict, headers: dict, timeout: int = 120, attempts: int = 5) -> bytes:
     """Gecici hatalarda artan bekleme ile yeniden dener.
 
-    Gemini zaman zaman 503 donuyor; tek denemede vazgecmek gunluk bolumun
-    hic uretilmemesi demek olurdu.
+    Gemini hem 503 donuyor hem de dakikalik limitte 429. Beklemeler
+    baslangicta cok kisaydi (toplam 21 sn): ceviri adimi tesadufen
+    kurtuluyor, hemen ardindan gelen podcast adimi ayni limite carpip
+    vazgeciyordu. Gunde bir kez calisan bir is icin birkac dakika
+    beklemek, bolumun hic uretilmemesinden iyidir.
+
+    Sunucu kendi bekleme suresini (RetryInfo) soyluyorsa ona uyulur.
     """
     body = json.dumps(payload).encode("utf-8")
     last = ""
 
     for attempt in range(attempts):
         req = urllib.request.Request(url, data=body, headers=headers, method="POST")
+        suggested = 0.0
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 return resp.read()
         except urllib.error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", "replace")[:200]
-            last = f"HTTP {exc.code}: {detail}"
+            raw = exc.read().decode("utf-8", "replace")
+            limit, suggested = _quota_detail(raw)
+            # Hangi kotanin doldugu teshis icin sart; mesajin ilk 200
+            # karakteri bu bilgiyi hic icermiyor.
+            last = f"HTTP {exc.code}" + (f" [{limit}]" if limit else f": {raw[:120]}")
             if exc.code not in _RETRYABLE or attempt == attempts - 1:
                 raise ScriptError(f"Gemini API {last}") from exc
         except urllib.error.URLError as exc:
@@ -107,8 +141,9 @@ def _post(url: str, payload: dict, headers: dict, timeout: int = 120, attempts: 
             if attempt == attempts - 1:
                 raise ScriptError(f"Gemini API'ye ulasilamadi: {exc}") from exc
 
-        wait = 2 ** attempt * 3
-        print(f"  Gemini gecici hata ({last[:60]}), {wait} sn sonra yeniden deneniyor…")
+        wait = suggested if suggested else min(15 * 2 ** attempt, 90)
+        wait = min(wait, 90) + random.uniform(0, 2)
+        print(f"  Gemini gecici hata ({last[:80]}), {wait:.0f} sn sonra yeniden deneniyor…")
         time.sleep(wait)
 
     raise ScriptError(f"Gemini API: {last}")

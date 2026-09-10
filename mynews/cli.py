@@ -225,13 +225,7 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         print(f"Denetlenen: {path}")
         bulletin = json.loads(_io.open(path, encoding="utf-8").read())
 
-    thresholds = dict(cfg.get("thresholds", {}))
-    if args.no_podcast_check:
-        # Kod push'larinda podcast yeniden uretilmiyor (Gemini kotasi);
-        # yoklugunu ariza saymak yanlis alarm olur.
-        thresholds["min_podcast_turns"] = 0
-
-    report = inspect(bulletin, thresholds)
+    report = inspect(bulletin, cfg.get("thresholds", {}))
     print(report.render())
     return 0 if report.ok else 1
 
@@ -267,11 +261,6 @@ def main(argv: list[str] | None = None) -> int:
 
     p_doctor = sub.add_parser("doctor", help="bulteni esiklere gore denetle")
     p_doctor.add_argument("--url", default="", help="canli site adresi (bos ise yerel dosya)")
-    p_doctor.add_argument(
-        "--no-podcast-check",
-        action="store_true",
-        help="podcast bolumu beklenmiyorsa denetimden cikar",
-    )
     p_doctor.set_defaults(fn=cmd_doctor)
 
     args = parser.parse_args(argv)

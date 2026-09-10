@@ -21,7 +21,7 @@ from mynews.doctor import age_hours, inspect
 from mynews.feeds import _parse_date
 from mynews.podcast import format_duration, render_feed
 from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
-from mynews.script import Turn, build_context, verify_turns
+from mynews.script import Turn, _quota_detail, build_context, verify_turns
 from mynews.rank import Ranker, normalize, similarity
 from mynews.speech import intro_for, normalize as speech_normalize
 
@@ -766,6 +766,61 @@ class TestLocaleConfig(unittest.TestCase):
 
         self.assertNotEqual(path_for("tr"), path_for("en"))
         self.assertIn("history-en", str(path_for("en")))
+
+
+class TestGeminiQuotaDetail(unittest.TestCase):
+    """429 govdesinden hangi limitin doldugu ve ne kadar beklenecegi okunmali.
+
+    Mesajin ilk 200 karakteri bu bilgiyi icermiyordu; teshis edilemeyen
+    bir 429 yuzunden podcast iki gun ust uste uretilemedi.
+    """
+
+    GOVDE = json.dumps(
+        {
+            "error": {
+                "code": 429,
+                "message": "You exceeded your current quota",
+                "details": [
+                    {
+                        "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+                        "violations": [
+                            {"quotaId": "GenerateRequestsPerMinutePerProjectPerModel-FreeTier"}
+                        ],
+                    },
+                    {
+                        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+                        "retryDelay": "37s",
+                    },
+                ],
+            }
+        }
+    )
+
+    def test_reads_quota_id_and_delay(self):
+        limit, delay = _quota_detail(self.GOVDE)
+        self.assertIn("PerMinute", limit)
+        self.assertEqual(delay, 37.0)
+
+    def test_falls_back_to_quota_metric(self):
+        govde = json.dumps(
+            {
+                "error": {
+                    "details": [
+                        {
+                            "@type": "type.googleapis.com/google.rpc.QuotaFailure",
+                            "violations": [{"quotaMetric": "generate_requests"}],
+                        }
+                    ]
+                }
+            }
+        )
+        self.assertEqual(_quota_detail(govde)[0], "generate_requests")
+
+    def test_survives_unparseable_body(self):
+        self.assertEqual(_quota_detail("<html>502</html>"), ("", 0.0))
+
+    def test_survives_missing_details(self):
+        self.assertEqual(_quota_detail(json.dumps({"error": {"code": 429}})), ("", 0.0))
 
 
 class TestQuietSources(unittest.TestCase):
