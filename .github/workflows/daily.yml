@@ -33,12 +33,20 @@ jobs:
       - name: Önbelleği ve geçmişi geri yükle
         uses: actions/cache@v4
         with:
-          # Ses önbelleği, yayınlanmış bölümler, podcast arşivi ve
-          # günler arası tekrar elemesi için görülen haber geçmişi.
+          # Ses önbelleği, yayınlanmış bölümler, podcast arşivi, çeviri
+          # önbelleği ve günler arası tekrar elemesi için haber geçmişi.
+          #
+          # Çeviri önbelleği burada olmazsa her çalışma aynı başlıkları
+          # yeniden çevirir; bu Gemini'nin günlük kotasını boşa yakar ve
+          # sıradaki podcast adımı 429 alır (10 Eylül'de tam olarak bu oldu).
           path: |
             site/audio/cache
             site/audio/episodes
-            site/data/episodes.json
+            site/data/tr/episodes.json
+            site/data/en/episodes.json
+            site/data/tr/podcast-*.json
+            site/data/en/podcast-*.json
+            data/translations.json
             data/history-tr.json
             data/history-en.json
           key: mynews-state-${{ github.run_id }}
@@ -49,12 +57,17 @@ jobs:
           GOOGLE_TTS_API_KEY: ${{ secrets.GOOGLE_TTS_API_KEY }}
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Podcast senaryosu Gemini kotası harcar. Her push'ta yeni bölüm
+          # üretmek hem gereksiz (haberler değişmedi) hem de günlük kotayı
+          # bitirip asıl sabah çalışmasını podcastsiz bırakıyor. Kod
+          # değişikliğinde site yine güncellenir, podcast bir öncekinden kalır.
+          PODCAST: ${{ github.event_name == 'push' && ' ' || '--podcast' }}
         run: |
           # Diller sırayla üretilir: Pages tek artifact aldığı için ayrı
           # işlere bölünemez, ikincisi birincisini ezerdi.
           for locale in tr en; do
             echo "::group::$locale"
-            python -m mynews --locale "$locale" build --with-audio --podcast
+            python -m mynews --locale "$locale" build --with-audio $PODCAST
             echo "::endgroup::"
           done
 
@@ -99,4 +112,8 @@ jobs:
         run: sleep 60
 
       - name: Yayınlanan bülteni denetle
-        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi
+        env:
+          # Push çalışmalarında podcast yeniden üretilmez; günün bölümü
+          # taşınamadıysa bunu arıza saymak yanlış alarm olurdu.
+          SKIP: ${{ github.event_name == 'push' && '--no-podcast-check' || ' ' }}
+        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi $SKIP

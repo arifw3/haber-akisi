@@ -99,6 +99,7 @@ def cmd_build(args: argparse.Namespace) -> int:
                 "dropped": len(dropped),
             }
             print(f"Podcast: {len(segments)} replik seslendirildi.")
+            _save_podcast(bulletin)
 
             # Podcast uygulamalari tek dosya bekler: replikleri birlestirip
             # bolumu arsive ekle ve RSS'i yenile.
@@ -122,6 +123,16 @@ def cmd_build(args: argparse.Namespace) -> int:
         except ScriptError as exc:
             print(f"Podcast uretilemedi: {exc}")
 
+    # Podcast uretilmediyse (kod push'u, kota, gecici hata) ayni gune ait
+    # onceki calismanin bolumunu geri yukle. Aksi halde site gun ortasinda
+    # podcast'ini kaybediyor: ses dosyalari duruyor ama JSON onlari isaret
+    # etmiyor.
+    if not bulletin.get("podcast"):
+        restored = _load_podcast(bulletin)
+        if restored:
+            bulletin["podcast"] = restored
+            print(f"Podcast onceki calismadan alindi: {len(restored['turns'])} replik.")
+
     paths = write(bulletin) + write_digest(bulletin)
 
     if args.sync_doc:
@@ -139,15 +150,60 @@ def cmd_build(args: argparse.Namespace) -> int:
 
     for seg in bulletin["segments"]:
         print(f"{seg['title']:<20} {len(seg['items']):>2} haber")
-    problems = [h for h in bulletin["health"] if h["status"] != "ok"]
+    problems = [h for h in bulletin["health"] if h["status"] not in ("ok", "quiet")]
+    quiet = [h for h in bulletin["health"] if h["status"] == "quiet"]
     if problems:
         print("\nUYARI - sorunlu feed:")
         for p in problems:
             print(f"  {p['topic']}: {p['status']} {p['error']}")
+    if quiet:
+        print("Sessiz kaynak (yeni yazi yok): " + ", ".join(h["topic"] for h in quiet))
     print(f"\nToplam {bulletin['total']} haber ->")
     for p in paths:
         print(f"  {p}")
     return 0
+
+
+def _site_dir():
+    from pathlib import Path
+
+    return Path(__file__).resolve().parent.parent / "site"
+
+
+def _podcast_path(bulletin: dict, site=None):
+    site = site or _site_dir()
+    locale = bulletin.get("locale", "tr")
+    return site / "data" / locale / f"podcast-{bulletin['date']}.json"
+
+
+def _save_podcast(bulletin: dict, site=None) -> None:
+    path = _podcast_path(bulletin, site)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        json.dumps(bulletin["podcast"], ensure_ascii=False), encoding="utf-8"
+    )
+
+
+def _load_podcast(bulletin: dict, site=None) -> dict | None:
+    """Ayni tarihe ait daha once uretilmis podcast blogu (varsa).
+
+    Replik seslerinin hala yerinde oldugunu dogrular: onbellek dustuyse
+    JSON'da var olmayan dosyalari isaret etmek sessiz bir kiriklik olurdu.
+    """
+    site = site or _site_dir()
+    path = _podcast_path(bulletin, site)
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+    turns = [t for t in data.get("turns", []) if (site / t.get("audio", "")).exists()]
+    if not turns:
+        return None
+    data["turns"] = turns
+    return data
 
 
 def cmd_doctor(args: argparse.Namespace) -> int:
@@ -169,7 +225,13 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         print(f"Denetlenen: {path}")
         bulletin = json.loads(_io.open(path, encoding="utf-8").read())
 
-    report = inspect(bulletin, cfg.get("thresholds", {}))
+    thresholds = dict(cfg.get("thresholds", {}))
+    if args.no_podcast_check:
+        # Kod push'larinda podcast yeniden uretilmiyor (Gemini kotasi);
+        # yoklugunu ariza saymak yanlis alarm olur.
+        thresholds["min_podcast_turns"] = 0
+
+    report = inspect(bulletin, thresholds)
     print(report.render())
     return 0 if report.ok else 1
 
@@ -205,6 +267,11 @@ def main(argv: list[str] | None = None) -> int:
 
     p_doctor = sub.add_parser("doctor", help="bulteni esiklere gore denetle")
     p_doctor.add_argument("--url", default="", help="canli site adresi (bos ise yerel dosya)")
+    p_doctor.add_argument(
+        "--no-podcast-check",
+        action="store_true",
+        help="podcast bolumu beklenmiyorsa denetimden cikar",
+    )
     p_doctor.set_defaults(fn=cmd_doctor)
 
     args = parser.parse_args(argv)

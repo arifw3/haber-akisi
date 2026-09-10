@@ -546,7 +546,7 @@ function podcastCard() {
       </span>
     </div>
   </button>
-  <a href="podcast.xml" target="_blank" rel="noopener"
+  <a href="podcast-${state.lang}.xml" target="_blank" rel="noopener"
      class="mb-5 -mt-3 flex items-center justify-center gap-1.5 text-[12.5px] font-medium text-ink-soft">
     <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24">
       <path d="M6.2 17.8a1.5 1.5 0 1 1-2.1 2.1 1.5 1.5 0 0 1 2.1-2.1zM4 11.5a8.5 8.5 0 0 1 8.5 8.5h-2.6A5.9 5.9 0 0 0 4 14.1zM4 5a15 15 0 0 1 15 15h-2.6A12.4 12.4 0 0 0 4 7.6z"/>

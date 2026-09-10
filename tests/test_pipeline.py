@@ -13,6 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from mynews import cli
 from mynews.gnews import NewsItem, Related, parse_feed, parse_related, split_title
 from mynews.digest import render_html, render_text, tr_upper
 from mynews.gdocs import DocSyncError, _document_end_index, service_account_email
@@ -765,6 +766,83 @@ class TestLocaleConfig(unittest.TestCase):
 
         self.assertNotEqual(path_for("tr"), path_for("en"))
         self.assertIn("history-en", str(path_for("en")))
+
+
+class TestQuietSources(unittest.TestCase):
+    """Yeni yazi yapmayan kaynak ariza degildir.
+
+    Laravel Daily haftalarca sessiz kalabiliyor; bunu hata saymak denetimi
+    her gun kirmizi yakip guvenilmez kilmisti.
+    """
+
+    def test_quiet_source_is_not_a_failure(self):
+        bulten = saglikli_bulten(
+            health=[{"topic": "Laravel Daily", "status": "quiet", "count": 0}]
+        )
+        self.assertTrue(inspect(bulten).ok)
+
+    def test_quiet_source_is_still_reported(self):
+        bulten = saglikli_bulten(
+            health=[{"topic": "Laravel Daily", "status": "quiet", "count": 0}]
+        )
+        names = [c[0] for c in inspect(bulten).checks]
+        self.assertIn("sessiz kaynaklar", names)
+
+    def test_error_source_still_fails(self):
+        bulten = saglikli_bulten(
+            health=[{"topic": "Arkeofili", "status": "error", "count": 0}]
+        )
+        self.assertIn("kaynak feed'leri", [c[0] for c in inspect(bulten).failed])
+
+
+class TestPodcastCarryForward(unittest.TestCase):
+    """Podcast uretilemeyen calismada gunun bolumu kaybolmamali.
+
+    Kod push'unda podcast yeniden uretilmiyor (Gemini kotasi). Ses dosyalari
+    yerinde duruyor; JSON'un onlari isaret etmeye devam etmesi gerek.
+    """
+
+    def _kur(self, tmp, turns, seslar=("a.mp3",)):
+        site = Path(tmp) / "site"
+        (site / "data" / "tr").mkdir(parents=True)
+        (site / "audio").mkdir(parents=True)
+        for ad in seslar:
+            (site / "audio" / ad).write_bytes(b"x")
+        bulten = {"date": "2026-09-10", "locale": "tr", "podcast": {"turns": turns}}
+        cli._save_podcast(bulten, site)
+        return site, bulten
+
+    def test_saved_block_is_restored(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site, bulten = self._kur(tmp, [{"audio": "audio/a.mp3", "text": "merhaba"}])
+            geri = cli._load_podcast({"date": "2026-09-10", "locale": "tr"}, site)
+            self.assertEqual(len(geri["turns"]), 1)
+            self.assertEqual(geri["turns"][0]["text"], "merhaba")
+
+    def test_turns_without_audio_are_dropped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site, _ = self._kur(
+                tmp,
+                [{"audio": "audio/a.mp3"}, {"audio": "audio/yok.mp3"}],
+            )
+            geri = cli._load_podcast({"date": "2026-09-10", "locale": "tr"}, site)
+            self.assertEqual([t["audio"] for t in geri["turns"]], ["audio/a.mp3"])
+
+    def test_returns_none_when_no_audio_survives(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site, _ = self._kur(tmp, [{"audio": "audio/yok.mp3"}])
+            self.assertIsNone(cli._load_podcast({"date": "2026-09-10", "locale": "tr"}, site))
+
+    def test_other_day_is_not_reused(self):
+        """Dunun bolumu bugunun bulteninde gorunmemeli."""
+        with tempfile.TemporaryDirectory() as tmp:
+            site, _ = self._kur(tmp, [{"audio": "audio/a.mp3"}])
+            self.assertIsNone(cli._load_podcast({"date": "2026-09-11", "locale": "tr"}, site))
+
+    def test_locales_are_separate(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            site, _ = self._kur(tmp, [{"audio": "audio/a.mp3"}])
+            self.assertIsNone(cli._load_podcast({"date": "2026-09-10", "locale": "en"}, site))
 
 
 class TestPodcastLanguage(unittest.TestCase):

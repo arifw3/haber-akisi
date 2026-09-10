@@ -53,11 +53,16 @@ def _parse_date(raw: str) -> datetime | None:
     return stamp if stamp.tzinfo else stamp.replace(tzinfo=timezone.utc)
 
 
-def fetch_source(source: dict, category: str, max_age_days: int = 7) -> list[NewsItem]:
+def fetch_source(source: dict, category: str, max_age_days: int = 7) -> tuple[list[NewsItem], str]:
     """Tek bir dogrudan kaynagi cek ve NewsItem listesine cevir.
 
     Arsiv akislari yuzlerce eski yaziyi birden dondurebiliyor; bu yuzden
     tarih filtresi burada zorunlu. Tarihi olmayan ogeler atlanir.
+
+    (ogeler, hata) dondurur. Bos liste iki farkli sey demek olabilir:
+    kaynak cekilemedi (hata dolu) ya da kaynak calisiyor ama son gunlerde
+    hic yayin yapmamis (hata bos). Ikisini ayirmak onemli; ikincisi
+    denetimde alarm degil.
     """
     url = source["url"]
     name = source.get("name") or urllib.parse.urlparse(url).netloc
@@ -68,8 +73,8 @@ def fetch_source(source: dict, category: str, max_age_days: int = 7) -> list[New
     try:
         raw = _fetch_insecure(url) if source.get("insecure") else fetch(url, timeout=25)
         articles = parse_articles(raw)
-    except (FeedError, OSError):
-        return []
+    except (FeedError, OSError) as exc:
+        return [], str(exc)[:120]
 
     cutoff = datetime.now(timezone.utc) - timedelta(days=max_age_days)
     items: list[NewsItem] = []
@@ -101,7 +106,7 @@ def fetch_source(source: dict, category: str, max_age_days: int = 7) -> list[New
         }
         items.append(item)
 
-    return items
+    return items, ""
 
 
 def collect(sources: list[dict], category: str, max_age_days: int = 7) -> tuple[list[NewsItem], list[dict]]:
@@ -110,18 +115,27 @@ def collect(sources: list[dict], category: str, max_age_days: int = 7) -> tuple[
     health: list[dict] = []
 
     for source in sources:
-        fetched = fetch_source(source, category, max_age_days)
+        fetched, error = fetch_source(source, category, max_age_days)
         items.extend(fetched)
+        # "quiet": kaynak saglikli ama son max_age_days icinde yazi yok.
+        # Duzensiz yayin yapan blog'lar (Laravel Daily gibi) haftalarca
+        # sessiz kalabiliyor; bunu hata saymak denetimi guvenilmez kilar.
+        if fetched:
+            status = "ok"
+        elif error:
+            status = "error"
+        else:
+            status = "quiet"
         health.append(
             {
                 "topic": source.get("name") or source["url"],
                 "segment": category,
-                "status": "ok" if fetched else "empty",
+                "status": status,
                 "count": len(fetched),
                 "newest_age_hours": (
                     round(min(i.age_hours for i in fetched), 1) if fetched else None
                 ),
-                "error": "",
+                "error": error,
             }
         )
 

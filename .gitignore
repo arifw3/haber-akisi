@@ -18,3 +18,4 @@ site/data/*/episodes.json
 site/data/*/20*.json
 data/translations.json
 data/history-*.json
+site/data/*/podcast-*.json

@@ -13,11 +13,11 @@
 <atom:link xmlns:atom='http://www.w3.org/2005/Atom' href='https://arifw3.github.io/haber-akisi/podcast-tr.xml' rel='self' type='application/rss+xml'/>
 <item>
 <title>Haber Akışı — 2026-09-10</title>
-<description>Bugünün öne çıkan haberleri: Kiralar 10 bin liradan başlıyor; sosyal konutta detaylar belli oldu; Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı; Rusya: Pandora'nın kutusunu açtılar; Odessa açıklarında Türk denizcilerin bulunduğu römorköre İHA saldırısı: 2 ölü; Merkez Bankası faiz kararını açıkladı; Fed'den faiz artışı beklentisi güçlendi</description>
-<pubDate>Thu, 10 Sep 2026 18:59:44 +0000</pubDate>
+<description>Bugünün öne çıkan haberleri: Sosyal konutta detaylar belli oldu; kiralar 10 bin liradan başlıyor, başvuru için evli olma şartı aranıyor; Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı; Trump: Savaş seçimlerden önce de bitebilir; İstersen dünyanın hakimi ol... Baba acısı insanı ağlatır; Merkez Bankası faiz kararını açıkladı; Fed'den faiz artışı beklentisi güçlendi</description>
+<pubDate>Thu, 10 Sep 2026 19:25:11 +0000</pubDate>
 <guid isPermaLink="false">2026-09-10</guid>
-<enclosure url="https://arifw3.github.io/haber-akisi/audio/episodes/tr-2026-09-10.mp3" length="641088" type="audio/mpeg"/>
-<itunes:duration>1:31</itunes:duration>
+<enclosure url="https://arifw3.github.io/haber-akisi/audio/episodes/tr-2026-09-10.mp3" length="564288" type="audio/mpeg"/>
+<itunes:duration>1:20</itunes:duration>
 <itunes:episodeType>full</itunes:episodeType>
 </item>
 </channel>

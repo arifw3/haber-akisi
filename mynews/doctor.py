@@ -81,12 +81,23 @@ def inspect(bulletin: dict, thresholds: dict | None = None) -> Report:
         f"{age:.1f} saat once uretildi" if age != float("inf") else "tarih okunamadi",
     )
 
-    problems = [h for h in bulletin.get("health", []) if h.get("status") != "ok"]
+    # "quiet" bir arizadan cok bir gozlem: kaynak calisiyor ama yeni yazi
+    # yok. Alarm listesine alinirsa denetim her gun kirmizi yanar ve
+    # bakilmaz olur; ayri satirda bilgi olarak gosteriliyor.
+    health = bulletin.get("health", [])
+    problems = [h for h in health if h.get("status") not in ("ok", "quiet")]
+    quiet = [h for h in health if h.get("status") == "quiet"]
     report.add(
         "kaynak feed'leri",
         not problems,
         ", ".join(f"{h['topic']}:{h['status']}" for h in problems) or "hepsi calisiyor",
     )
+    if quiet:
+        report.add(
+            "sessiz kaynaklar",
+            True,
+            ", ".join(h["topic"] for h in quiet) + " (yeni yazi yok)",
+        )
 
     if items:
         with_audio = [i for i in items if i.get("audio")]
