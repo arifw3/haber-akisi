@@ -44,6 +44,9 @@ const STRINGS = {
     audioBriefing: "SESLİ BÜLTEN", dailyBriefing: "Günün bülteni",
     episodes: (n, m) => `${n} bölüm · ~${m} dakika`,
     podcastApp: "Podcast uygulamanda dinle", saveOffline: "Çevrimdışı dinlemek için kaydet",
+    podcastMissing: "Bugünün sesli bülteni üretilemedi.",
+    audioMissing: "Bazı haberlerin seslendirmesi eksik.",
+    bulletinIncomplete: "Bu bülten eksik derlendi.",
     downloading: (a, b) => `İndiriliyor… ${a}/${b}`, offlineReady: (n) => `Çevrimdışı hazır · ${n} ses`,
     offlineUnsupported: "Çevrimdışı kayıt bu tarayıcıda desteklenmiyor",
     interests: "İlgi alanların",
@@ -66,6 +69,9 @@ const STRINGS = {
     audioBriefing: "AUDIO BRIEFING", dailyBriefing: "Today's briefing",
     episodes: (n, m) => `${n} segments · ~${m} min`,
     podcastApp: "Listen in your podcast app", saveOffline: "Save for offline listening",
+    podcastMissing: "Today's audio briefing could not be produced.",
+    audioMissing: "Some stories are missing narration.",
+    bulletinIncomplete: "This bulletin was compiled with gaps.",
     downloading: (a, b) => `Downloading… ${a}/${b}`, offlineReady: (n) => `Ready offline · ${n} clips`,
     offlineUnsupported: "Offline saving isn't supported in this browser",
     interests: "Your interests",
@@ -481,6 +487,30 @@ function freshnessNotice() {
   </p>`;
 }
 
+/* Bültenin kendi eksiğini söylemesi. Denetim şimdiye kadar yalnızca
+ * GitHub Actions sekmesinde duruyordu; oraya kimse bakmadığı için beş gün
+ * üst üste kırmızı yandı ve fark edilmedi. Okuyucunun umursayacağı iki
+ * eksik (podcast ve seslendirme) burada adıyla söyleniyor; geri kalanı
+ * bakım tarafını ilgilendirdiği için tek bir genel satıra iniyor. */
+const CHECK_LABELS = {
+  "podcast bolumu": "podcastMissing",
+  seslendirme: "audioMissing",
+};
+
+function checkNotice() {
+  const check = state.bulletin && state.bulletin.check;
+  if (!check || check.ok) return "";
+  const failed = check.failed || [];
+  if (!failed.length) return "";
+
+  const known = failed.map((f) => CHECK_LABELS[f.name]).filter(Boolean);
+  const mesaj = known.length ? known.map((k) => t(k)).join(" · ") : t("bulletinIncomplete");
+
+  return `<p class="mb-4 rounded-2xl bg-black/5 px-4 py-3 text-[13px] text-ink-soft">
+    ${escapeHtml(mesaj)}
+  </p>`;
+}
+
 /* İlgi alanları: kullanıcının yazdığı anahtar kelimeler tarayıcıda saklanır.
  * Eşleşen haberler ana sayfada "Senin için" bölümünde öne çıkar. Sunucu
  * tarafını değiştirmez — herkes kendi listesini tutar. */
@@ -573,6 +603,7 @@ function renderHome() {
   el.view.innerHTML = `
     <div class="view">
       ${freshnessNotice()}
+      ${checkNotice()}
       ${podcastCard()}
       ${sectionHeader(t("featured"), { label: t("all"), view: "discover" })}
       <div id="carousel" class="no-scrollbar snap-x-mandatory -mx-5 mt-3 flex gap-3 overflow-x-auto px-5 pb-2">

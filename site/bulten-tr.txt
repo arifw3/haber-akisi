@@ -6,39 +6,23 @@ Google Haberler RSS akışlarından derlenmiştir. Bir olayı kaç farklı yayı
 TÜRKİYE
 ============================================================
 
-1. Sosyal konutta detaylar belli oldu; kiralar 10 bin liradan başlıyor, başvuru için evli olma şartı aranıyor
-   Kaynak: T24 (bu olayı 5 yayıncı yazdı)
-   Özet: Te yirmi dört. Sosyal konutta detaylar belli oldu. kiralar 10 bin liradan başlıyor, başvuru için evli olma şartı aranıyor. Kiralık konut kampanyası koşulları açıklandı. Bu haberi 5 ayrı kaynak yazdı.
-   - NTV Haber: Kiralık Sosyal Konut Projesi'nin ayrıntıları belli oldu
-   - Uzmanpara: TOKİ İSTANBUL KİRALIK KONUT 2026 📌 TOKİ İstanbul kiralık konut fiyatları ne kadar? TOKİ İstanbul kiralık konut başvuru şartları neler? Kiralık evler nerede olacak?
-   - Haber 7: Bakan Kurum açıkladı: İstanbul'da sosyal kiralık konut dönemi
-   Bağlantı: https://news.google.com/rss/articles/CBMigwFBVV95cUxNUHNzU2luekZsR0RaYklORkVyelB0UGVTcmtCZnlkeEM3TWxUUkxaeFo1UjI3NkxDV0hDeWZuaTJPZ0VpbzFZN05OdFVZSDRHb2hzTmFWRnp2QURYMFhDUnIyMGFDVmVHRXZpSFByanJocmpxTm5MbF9yb2RCWDRkMVAxQQ?oc=5
-
-2. Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı
+1. Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
    Özet: Bloomberg Ha Te. Gürlek, Borsadaki manipülatif işlemler karşılıksız bırakılmamalı. Borsa'da manipülasyona operasyon, 4 gözaltı. Bu haberi 5 ayrı kaynak yazdı.
    - NTV Haber: Bakan Gürlek: Borsada takip ettiğimiz süreçler var
    - Hürriyet: Borsa'da manipülasyona operasyon: 4 gözaltı
-   - bianet.org: Borsa İstanbul'da manipülasyon gözaltısı: Operasyonlar neden artıyor?
+   - Bianet: Borsa İstanbul'da manipülasyon gözaltısı: Operasyonlar neden artıyor?
    Bağlantı: https://news.google.com/rss/articles/CBMioAFBVV95cUxNWkhER3NrbC1OME9aMWdIcW1rNGJ3XzNBWXU0N0tuWmh0STdndFltRzlDUmRfSldCNldJMlhlQUtaTjJUME5HSnlrdHlIRDJWdjZldDctMjViNndVYkhuRWRxcUFvRmJMTkZpNnFLY3hVdFhsRVhZcVAtaHBNWnJIWjZjZGduZ0tYMHMwd2lOY2p6SmRtVXhiUVhycXBBUUo5?oc=5
 
-3. Seçim yenilendi; AKP'den istifa eden isim başkan oldu
+2. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Seçim yenilendi. A Ka Pe den istifa eden isim başkan oldu. Mahkeme İptal Etti, Başkanlık El Değiştirdi. Bu haberi 5 ayrı kaynak yazdı.
-   - Halk TV: AKP'den istifa eden isim Osmaniye'de yenilenen seçimi kazandı
-   - Akdeniz Gazetesi: Mahkeme İptal Etti, Başkanlık El Değiştirdi
-   - medyagazete.com: Osmaniye’de İl Genel Meclisi Başkanı Belli Oldu
-   Bağlantı: https://news.google.com/rss/articles/CBMiogFBVV95cUxOMU11QVdLTVNWSEtUaEUySnZUa29mOExTcngwUGhYWVJLTjVoWDRrbk5pQ2lLQmFRNnNacVZYZ0d0V2FCUmREUTlMRVpYSE1DaGlENGVQYk9iN2VqOU55OEFVV0F5SkR5YVdRaE80TTNYX0FmXzByaEhkWVBqZkkzTGdJZzZrSTc5YzNSWDZHaUgxM2tCSmNLRDgzbUptajRtRHc?oc=5
-
-4. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit
-   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit. Melisa Döngel trafikte kabusu yaşadı, Önünü kesip silahla tehdit etti, Magazin Haberleri. Bu haberi 5 ayrı kaynak yazdı.
+   Özet: Sözcü Gazetesi. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit. Silahını çekip oyuncunun aracına doğrulttu. Bu haberi 5 ayrı kaynak yazdı.
    - Mynet: Melisa Döngel trafikte kabusu yaşadı: Önünü kesip silahla tehdit etti - Magazin Haberleri
-   - Cumhuriyet: Oyuncu Melisa Döngel’i silahla tehdit etti: Tabancaya el konuldu, tutuklandı
-   - Milliyet: Melisa Döngel’e trafikte kabus yaşatmıştı! Silahla tehdit eden sürücü tutuklandı
+   - cumhuriyet.com.tr: Oyuncu Melisa Döngel’i silahla tehdit etti: Tabancaya el konuldu, tutuklandı
+   - Odatv: Silahını çekip oyuncunun aracına doğrulttu
    Bağlantı: https://news.google.com/rss/articles/CBMijAFBVV95cUxQblJhSlJSdGxBVERGbGhiMjhCam16aG5uMU1yU2V0NkxPNDBpOFl4SWpPQjU3TVdPbS1TeTZoTkROMVpuZzBWZjlHQ2FpUnFCU2ZpX01BU2FVUVRFeEdKOVUtSXpIMWtvZ3hPSHluZk5ldUxjRzdKdnVYbmpoZGg4RHVCQ3BlOFRNbWZSatIBkgFBVV95cUxPTmNabFpwR3JULVpJU29DbnVELU9Qc2habmRDeXpPenF3QmJBOWtqNFIzZVlVcWg2ckRtWUZrdFVCWnktZ3lCUksxeDlKeXJzbGZmQWM5QXU0T0N3OGJVYkdzVmQta3VUelBxclUyTHcxRWYzQ1NKTVdsWlp6NUhxRV9IaVZFeEtjTEwya2kzMUctdw?oc=5
 
-5. Şimşek: Serbest dalgalı kura geçiş için belli şartlar var
+3. Şimşek: Serbest dalgalı kura geçiş için belli şartlar var
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
    Özet: Bloomberg Ha Te. Şimşek, Serbest dalgalı kura geçiş için belli şartlar var. Hazine ve Maliye Bakanı Şimşek, Gini katsayısına bakıldığında, gelir dağılımında anlamlı bir iyileşme var. Bu haberi 5 ayrı kaynak yazdı.
    - Diken: Şimşek: Dalgalı kur rejimine geçiş için enflasyon hala görece yüksek
@@ -46,29 +30,45 @@ TÜRKİYE
    - TRT Haber: Bakan Şimşek: Fiyat istikrarına olan bağlılığımız tamdır
    Bağlantı: https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEszTVBBdDVzSFBYaXFVREY2R0M1UjVhNmNuNHNTRVBQSVJhOEo4UkJRR21QbnlTbXZBN010VjRNbGJ2aU91T1JEaG5YcElJa0Jqc0swVEp5SmV5Ml8yYkJvVTluUkljZFJOcUk2NkdZVUxyZEQ4ZzF6TGtXYmF2UDhpOUdvU0cwNFB6MmxPZVVnUklaajlB?oc=5
 
-6. Boşanma aşamasındaki öğretmen eşini vurup intihar etti
+4. Tom Barrack'tan 'bize Türk derlerdi' çıkışı
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Boşanma aşamasındaki öğretmen eşini vurup intihar etti. Isparta'da kadın cinayeti girişimi, Boşanma aşamasında olduğu erkek tarafından ağır yaralandı. Bu haberi 5 ayrı kaynak yazdı.
-   - NTV Haber: Boşanma aşamasındaki eşini vurdu, yaşamına son verdi
-   - Hürriyet: Isparta’da korkunç olay! Boşanma aşamasındaki eşini silahla ağır yaralayıp intihar etti
-   - Evrensel.net: Isparta'da kadın cinayeti girişimi: Boşanma aşamasında olduğu erkek tarafından ağır yaralandı
-   Bağlantı: https://news.google.com/rss/articles/CBMikAFBVV95cUxQSzUzeTh2anBld1QzU1ltS29Tak5pS2VSMU1WWTJpYXpVS2cxZVJHTUdsVDlHMEVNY3lnR1Vpa2VPQ0hOTVhhVkRWYnZnNDRqT1E0M1JMNFFMbWhrY2V6eEFGZ0NPVTd2aUF4WmJnaFRiZjJFSGZmNThiZzF3MmxVS2Z4djVUYzVrWml0YnZhYmY?oc=5
+   Özet: Sözcü Gazetesi. Tom Barrack'tan bize Türk derlerdi çıkışı. Çok renkli resepsiyon. Bu haberi 5 ayrı kaynak yazdı.
+   - TRT Haber: Cumhurbaşkanı Erdoğan, ABD Ankara Büyükelçisi Barrack'ı kabul etti
+   - Sabah: “Çok renkli” resepsiyon
+   - Odatv: Tom Barrack: 'Büyükbabama Türk derlerdi’
+   Bağlantı: https://news.google.com/rss/articles/CBMif0FVX3lxTE5nSFA1dDJicVZXT3NwWlhJVlQ0ZU9rTnVqYzVLSlhSWngySmFlQ3RNcTNqTll1dkNqdHI0dHFFeWdXclM2cjN4dTdvRmhGSGsyYm9HTTdWN0FpVU9KSnROSlJhWTlXV3FGekhNMVdPbzdjQXMyTlVkbkRxcnFqcVE?oc=5
 
-7. Orta Doğu'da KAAN ve TOLGA rüzgarı: Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler
+5. Orta Doğu'da KAAN ve TOLGA rüzgarı: Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler
    Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
    Özet: Hürriyet. Orta Doğu'da KAAN ve TOLGA rüzgarı, Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler. Türk devi HAVELSAN'dan bölgede tarihi hamle, HAMZA-1 için imzalar atıldı. Bu haberi 5 ayrı kaynak yazdı.
-   - Haber 7: Türk devi HAVELSAN'dan bölgede tarihi hamle: HAMZA-1 için imzalar atıldı!
+   - haber7.com: Türk devi HAVELSAN'dan bölgede tarihi hamle: HAMZA-1 için imzalar atıldı!
    - NTV Haber: Türk savunma sanayinde tarihi imza. Hamza-1 satışa çıkıyor
    - Anadolu Ajansı: Makine ve Kimya Endüstrisinden Mısır'da "Zafer" adımı
    Bağlantı: https://www.hurriyet.com.tr/dunya/orta-doguda-kaan-ve-tolga-ruzgari-turkiyeden-dogu-akdenizde-dengeleri-degistirecek-hamleler-43301962
 
-8. İzmir'de neler oluyor? İki belediye başkanı AKP'ye geçecek iddiası... Onur Emrah Yıldız'dan açıklama geldi
-   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Cumhuriyet. İzmir'de neler oluyor? İki belediye başkanı A Ka Pe ye geçecek iddiası. Onur Emrah Yıldız'dan açıklama geldi. Cumhurbaşkanı Erdoğan, AK Parti'ye katılan belediye başkanlarına rozetlerini taktı. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Cumhurbaşkanı Erdoğan, AK Parti'ye katılan belediye başkanlarına rozetlerini taktı
-   - Sözcü Gazetesi: 4 belediye başkanı daha AKP'ye katıldı! 3'ü CHP'den...
-   - Habertürk: CHP'li Felahiye ve Akkışla Belediye Başkanları AK Parti'ye katıldı
-   Bağlantı: https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUDVEUWRCSEhRR3MwRHE4eXNlT19PbGNqRFVma3Q1X2hXOV9xMGZlMmRkVmVRd2NNWjk2Q2VaNi1PMHNsSER1bUZsRXBaV1Q4WDdFdnZ4STZGM2xUcE1ra0FYTmxkLS0wT183S1MxVkZ5NkZuVXk4V1JwTlNZNnhDRVZHZkRoQXBBWTE4Z1Y0REpIdWM1ZHRQSk5KTjMzY0xCNF9xRWFKVUQwY3JfRGtMQ09TS1NTTnVQU2V1QUNuUFFSX2pPRjEyb1VGd0wybWt0OEdWTmlpaVp1MDBlN09YT19n?oc=5
+6. Nihat abi Çanakkale'yi aldı, gözünü İstanbul'a dikti
+   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Sözcü Gazetesi. Nihat abi Çanakkale'yi aldı, gözünü İstanbul'a dikti. Köprü ve otoyol özelleştirilmesi, Yabancı ve yerli tekeller ihaleye hazırlanıyor. Bu haberi 5 ayrı kaynak yazdı.
+   - birgun.net: Köprü ve otoyol özelleştirilmesi: Yabancı ve yerli tekeller ihaleye hazırlanıyor
+   - T24: Yeni Partili Yavuzyılmaz'dan köprü ve otoyolların özelleştirilmesine ilişkin iktidara soru: Bayramlarda ücretsiz geçişler ücretli hale mi gelecek?
+   - Halk TV: Yavuzyılmaz’dan özelleştirmelere sert tepki: Vatandaşları yandaş şirketlerin müşterisine dönüştürmek istiyor
+   Bağlantı: https://news.google.com/rss/articles/CBMijAFBVV95cUxQSmJGNDFUb2xwZXNZenJTMl9CQ013cU5XU18zeDBWakx2QWxlX0Z6NXVLaDlTQk5zUXFnTDgzbHp0ZU1KQWoyUldEYlhLbkkxZkYwVkx6WVVWbGRjSWExYlZTTklvRzJrUjg2WUZ0R2pLTElqQzZwckYyTmIzSUhSbk5sY3U2RW9jS0w1VA?oc=5
+
+7. Maltepe'de kiracı, ev sahibine saldırdı: İki ölü, bir avukat ağır yaralı
+   Kaynak: Diken (bu olayı 5 yayıncı yazdı)
+   Özet: Diken. Maltepe'de kiracı, ev sahibine saldırdı, İki ölü, bir avukat ağır yaralı. Maltepe’de 2 kişinin hayatını kaybettiği silahlı saldırı, Merkez Bankası’nın faiz kararı, Mansur Yavaş’tan gereğini yapmaktan çekinmem mesajı. İşte günün özeti. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: Maltepe'de kiracı dehşeti: Ev sahibinin eşini öldürdüğü anlar kamerada
+   - Hürriyet: Maltepe'de ev sahibi ile işletmeci kapıştı: Silahlı olayda özel harekât devrede: 2 ölü, 1 yaralı
+   - Mynet: Maltepe’de 2 kişinin hayatını kaybettiği silahlı saldırı, Merkez Bankası’nın faiz kararı, Mansur Yavaş’tan “gereğini yapmaktan çekinmem” mesajı... İşte günün özeti!
+   Bağlantı: https://www.diken.com.tr/maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali/?utm_source=rss&utm_medium=rss&utm_campaign=maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali
+
+8. Caniye en ağır ceza
+   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Hürriyet. Caniye en ağır ceza. Ayşe Tokyaz cinayeti, Cemil Koç'a ağırlaştırılmış müebbet hapis cezası. Bu haberi 5 ayrı kaynak yazdı.
+   - Diken: Ayşe Tokyaz cinayeti: Cemil Koç'a ağırlaştırılmış müebbet hapis cezası
+   - birgun.net: Sanığın şiddet görüntüleri ortaya çıktı
+   - Milliyet: Ayşe Tokyaz cinayeti davası: Eski polis Cemil Koç'a ağırlaştırılmış müebbet
+   Bağlantı: https://www.hurriyet.com.tr/gundem/caniye-en-agir-ceza-43301895
 
 ============================================================
 DÜNYA
@@ -77,36 +77,44 @@ DÜNYA
 1. Trump: Savaş seçimlerden önce de bitebilir
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
    Özet: Bloomberg Ha Te. Trump, Savaş seçimlerden önce de bitebilir. Wall Street Journal, Danışmanları Trump'a İran ile savaşın yıllarca sürebileceği uyarısını yaptı. Bu haberi 5 ayrı kaynak yazdı.
-   - Haber 7: Trump ABD-İran savaşın biteceği tarihi açıkladı: Ara seçimlerden sonra diye söz verdi
+   - haber7.com: Trump ABD-İran savaşın biteceği tarihi açıkladı: Ara seçimlerden sonra diye söz verdi
    - Investing.com Türkiye: Trump İran savaşı hakkında konuştu; Oracle, Adobe rapor açıklayacak
    - NTV Haber: ABD'den İran'a tehdit. "Savaş gemilerimizi vurmaya devam ederlerse..."
    Bağlantı: https://news.google.com/rss/articles/CBMigwFBVV95cUxQVWtLNHQ3djJvUFZNbHI3VW16UjZMY1J5XzIwZnNtdzZDcUc2eHRPaV9zYUh4SkNwLV9hZFdLZmNERmVHeXR0NnRFdFljUkw3VmI5MnMzZ2NvTkpnbXFReFBhMVFZNS1VY21kUVJNTnlUcGpCdlg1VlJkSEloVUozRWhaZw?oc=5
 
-2. İstersen dünyanın hakimi ol... Baba acısı insanı ağlatır
+2. Dışişleri'nden Suriye'nin nükleer dosyasının kapanması yönünde alınan karara ilişkin açıklama
    Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. İstersen dünyanın hakimi ol. Baba acısı insanı ağlatır. Norveç Kralı'na firavunvari cenaze. Milyonlarca dolarlık tabut devlet bütçesinden karşılandı. Bu haberi 5 ayrı kaynak yazdı.
-   - Cumhuriyet: Norveç Kralı'na 'firavunvari' cenaze... Milyonlarca dolarlık tabut devlet bütçesinden karşılandı
-   - İnternet Haber: Norveç Kralı hayatını kaybetmişti! Resmen servetle gömüldü tabutun özelikleri hayret verici...
-   - haberturk.com: Cinsel saldırıdan hapis cezası alan Kraliçe Mette-Marit'in oğluna cenaze izni
-   Bağlantı: https://www.hurriyet.com.tr/kelebek/televizyon/istersen-dunyanin-hakimi-ol-baba-acisi-insani-aglatir-43302159
+   Özet: Hürriyet. Dışişleri'nden Suriye'nin nükleer dosyasının kapanması yönünde alınan karara ilişkin açıklama. Esad’ın kimyasal silahları imha ediliyor. Bu haberi 5 ayrı kaynak yazdı.
+   - haber7.com: Türkiye'den son dakika Suriye duyurusu! Tam destek ilan edildi!
+   - evrensel.net: UAEA Suriye hakkındaki 'uyumsuzluk' kararını kaldırdı
+   - Defence Turk: Esad’ın kimyasal silahları imha ediliyor
+   Bağlantı: https://www.hurriyet.com.tr/gundem/disislerinden-suriyenin-nukleer-dosyasinin-kapanmasi-yonunde-alinan-karara-iliskin-aciklama-43302834
 
-3. Trump’ın AfD'ye destek paylaşımı kriz yarattı: Merz, Trump ile yapacağı görüşmeyi iptal etti
+3. Rusya: Pandora'nın kutusunu açtılar
    Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Trump’ın AfD'ye destek paylaşımı kriz yarattı, Merz, Trump ile yapacağı görüşmeyi iptal etti. Avrupa'da aşırı sağa kayış Türkiye'de kimi güçlendirir?. Bu haberi 5 ayrı kaynak yazdı.
-   - dw.com: Avrupa'da aşırı sağa kayış Türkiye'de kimi güçlendirir?
-   - T24: Vatan Partisi Genel Başkan Yardımcısı Ethem Sancak: AfD ırkçı değil, Türk - İslam düşmanı değil, bazı arkadaşlarımız AfD'ye üye oldu
-   - Bloomberght: Almanya'da paranın şahini siyasetin şahininden rahatsız
-   Bağlantı: https://news.google.com/rss/articles/CBMizAFBVV95cUxNazNKaHc3emRDVUJTRDRtZUMybkJEcU1iT3VGbnRfOWRZYUJKaElVbTRINDRHdGNiWGpRZERqc3BicG9qSDktVUMxcWtCazhYS3pxUkdlZy1VYmFSZmtyWldsd0pBT05NUDJFaHV5bVU4SWsxbWJpby1HOVVKdm9sUE9Lc2NSNHo5RnZfS3NZaEwwaHlFRng4SDlLS2xqUnBTYzFmRjJqbWhIdDBtVjMyUmhHb182RFc3X0NHNnhCLTJlQ1BIQVo3aklyTEo?oc=5
+   Özet: Hürriyet. Rusya, Pandora'nın kutusunu açtılar. Kremlin’den dünyayı tedirgin eden mesaj, Yok edilmeye devam edilecek. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: Kremlin’den dünyayı tedirgin eden mesaj: Yok edilmeye devam edilecek
+   - Euronews.com: Rusya'nın Ukrayna saldırılarında en az 3 kişi öldü; Zelenskiy Kanada'da
+   - Anadolu Ajansı: Rusya: Ukrayna'nın liman, gemi, askeri sanayi ve lojistik tesislerine saldırıları sürdürüyoruz
+   Bağlantı: https://www.hurriyet.com.tr/dunya/rusya-pandoranin-kutusunu-actilar-43302677
 
 4. Kısa hayatında 7 kez ameliyat olmuştu: Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Kısa hayatında 7 kez ameliyat olmuştu, Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti. Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti. Bu haberi 5 ayrı kaynak yazdı.
    - Hürriyet: Güzellik kraliçesinin yürek yakan sonu... Daha 22 yaşında kelebek gibi uçup gitti... Kısacık hayatında 7 kez ameliyat olmuştu
    - Vietnam.vn: Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti.
-   - nefes.com.tr: Ülkenin en güzel kadını hayatını kaybetti: Henüz 22 yaşındaydı
+   - Nefes Gazetesi: Ülkenin en güzel kadını hayatını kaybetti: Henüz 22 yaşındaydı
    Bağlantı: https://news.google.com/rss/articles/CBMiwgFBVV95cUxNandIeTdpVFhuZld4eUZDSHFzRUpJU0NGcGJwbTJJX1E2OWh4OHVRUnpSd1hudFBIWUZmREFVVl9PT21tWGVxbDJCUV96R21CYXhGYWoyYXRQa3d2X09uLW9wMkJDSnpSamxWaHJkVHk1N1d6YjMxSXREeGxKRU5tM0xxeEtKSG1RZW4zbUJxeHhzSkV0Rkw5andtRDd5Z0Z6S2hPRzdtUDNEWUZ5MjZ2YzhXMDhYbDhzdlVMcDVRT2ZjQQ?oc=5
 
-5. Bebek mamalarında sakinleştirici ilaç çıktı: Market raflarında şırıngayla enjekte etmişler
+5. Gazze'deki ampute futbolcular Adidas'ı protesto ederek ürünlerini boykot çağrısı yaptı
+   Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
+   Özet: Te Re Te Haber. Gazze'deki ampute futbolcular Adidas'ı protesto ederek ürünlerini boykot çağrısı yaptı. Skandal reklam için özür diledi. Bu haberi 5 ayrı kaynak yazdı.
+   - NTV Haber: Adidas reklamında İsrail askeri krizi. Boykot çağrısı yapıldı, şirket özür diledi
+   - medyascope.tv: Javier Bardem’den Adidas’a eski İsrailli asker tepkisi: "Ellerinde kan olan bir adamı seçti"
+   - Hürriyet: Skandal reklam için özür diledi
+   Bağlantı: https://news.google.com/rss/articles/CBMizgFBVV95cUxQX3pSNGtWRkd4d0hmQ2xBbHJvVnAtZTROeWFkVHpQU0haU0w0d21rcHM1cmFiaElEUm5ucDhsd3hOakNHVG56eU1OamFHNk12NFVnTFljQ2twVVZnamJ3RHZTbXdXRTdDMXFkS0E5clh0M3FoaGhqN3J2U0JXZkt1RGFJaFJ0R2VycDAxOVJZV0lBOUYzYnRBTXVRU0JoVTh1NGdyMk00RDZyMWpQTXJnTDNQZm1IcThOcEZVbmQybG1SdlVLdGVKb2o5LUd3QQ?oc=5
+
+6. Bebek mamalarında sakinleştirici ilaç çıktı: Market raflarında şırıngayla enjekte etmişler
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Bebek mamalarında sakinleştirici ilaç çıktı, Market raflarında şırıngayla enjekte etmişler. Kudüs’te bebek mamalarına anestezik madde enjekte eden İsrailli gözaltına alındı. Bu haberi 5 ayrı kaynak yazdı.
    - Haberler: Kudüs'te bebek mamalarında korkunç tuzak! 5 çocuk hastanelik oldu
@@ -114,7 +122,7 @@ DÜNYA
    - Halk TV: İsrailli cani bebek mamalarına zehir enjekte etmiş! Kudüs'te yaşandı
    Bağlantı: https://news.google.com/rss/articles/CBMivwFBVV95cUxNak5IaEIwcHF4X3pSRlItX1NNWHEtUC1JNzdMR2pUdXJqTlN3aVNjcWFYVmFUNHFOUVZxRWFfeE9lazQ4ZUxGQ24xSTRwdjRKaEM4dnBVaEVfNjh0ZUNqWEo1ZWZoc0c3cnJlZU0tdEE1NXY2Y005Z1d3ZEpYU3JLUkJSTW1USzVVUU5lYW56ekFDR1VwTmVwQkQxcWpqcEpvNGNsa2doeTNWSXlLbHo4Xzc5RHN0UGFtVWJHaWs5SQ?oc=5
 
-6. Gizli silahlarını ateşleyeceklerdi: NATO'yu kilitleyecek Rus planı son anda durduruldu
+7. Gizli silahlarını ateşleyeceklerdi: NATO'yu kilitleyecek Rus planı son anda durduruldu
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Gizli silahlarını ateşleyeceklerdi, NATO'yu kilitleyecek Rus planı son anda durduruldu. İzlanda açıklarındaki Northern Viking tatbikatına A Be De ilk kez gemi ve uçak göndermedi. Bu haberi 5 ayrı kaynak yazdı.
    - Son Dakika: İzlanda açıklarındaki Northern Viking tatbikatına ABD ilk kez gemi ve uçak göndermedi
@@ -122,21 +130,13 @@ DÜNYA
    - QHA - Kırım Haber Ajansı: NATO, Arktik'te Rusya'nın denizaltı kablosu sabotaj tatbikatını engelledi
    Bağlantı: https://news.google.com/rss/articles/CBMiugFBVV95cUxOSklyV2lVNDlIOVpqc1c2VDh5VE5UMkEwNGVfbUhBRnhQbWhTUGhaeTYwWkJMN0p0bldZTEUtZTlfVGxfWDcxYlBfMi1KNUlwNmxGMXJiRjlDemZ5VVl0dDRod0g5VE55UktlV3RWWWY4Y0ZORURQX3pJWm5FMUVUajRtWVY5YmREWU1pZVNYZEdsY3pBbGdEZkF5ZmF0MkhyemhkRTc2MjZyNDN2ZXdZVnpLVUtBb1Bvcnc?oc=5
 
-7. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı
+8. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı
    Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
    Özet: Te Re Te Haber. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı. Sermayeyi nasıl da tüketiyorlar. Bu haberi 5 ayrı kaynak yazdı.
-   - Haber 7: Trump’tan 12 ülkenin İsrail kararına ilk tepki: Neden birdenbire şimdi?
+   - haber7.com: Trump’tan 12 ülkenin İsrail kararına ilk tepki: Neden birdenbire şimdi?
    - Sabah: Sermayeyi nasıl da tüketiyorlar
    - Yeni Şafak: İsrail'in en büyük krizi
    Bağlantı: https://news.google.com/rss/articles/CBMivgFBVV95cUxOajZ1Y1ZzVmpsNHdrOW02QXp2YnhlT0t6VmVHZ1lYcjhnN1dadzhtTjZyaDhFVDgtZ1FnTHRPT3JOYUNOc0F0bnNaSmI3VFBqbzRsU0ROXzZvT3NndVBZZkZPUzFQdWRIQTdtVVY4d21TT25YcnN1cVB2cTFkRWNhSEZHcnlCTlVOT201LUxHNDlGcmZENjYteWFKV3pQbjUxLTZzUllqa1JaeU5iRDFla25EWnhURFJubmpzanhB?oc=5
-
-8. Zelenskiy’nin uçağı Moldova’da İHA saldırısından kıl payı kurtuldu
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Zelenskiy’nin uçağı Moldova’da İHA saldırısından kıl payı kurtuldu. Zelenskiy, Norveç Başbakanı Støre ile hava savunmasını ve kış hazırlıklarını görüştü. Bu haberi 5 ayrı kaynak yazdı.
-   - Sözcü Gazetesi: Zelenskiy ölümden döndü: Saldırıdan kıl payı kurtuldu
-   - NTV Haber: Zelenski’nin uçağı saldırıdan kıl payı kurtuldu
-   - Anadolu Ajansı: Norveç Başbakanı Store: Zelenskiy'i taşıyan uçak İHA tarafından neredeyse vuruluyordu
-   Bağlantı: https://www.hurriyet.com.tr/dunya/zelenskiynin-ucagi-moldovada-iha-saldirisindan-kil-payi-kurtuldu-43301938
 
 ============================================================
 EKONOMİ
@@ -147,7 +147,7 @@ EKONOMİ
    Özet: Te Re Te Haber. Merkez Bankası faiz kararını açıkladı. A Be De de ÜFE yıllık bazda yüzde 5,4 ile tahminlerin üzerinde arttı. Bu haberi 5 ayrı kaynak yazdı.
    - Diken: Merkez Bankası faizi sabit tuttu
    - haberturk.com: SON DAKİKA: Merkez Bankası faiz kararını açıkladı! TCMB 2026 Eylül ayı faiz kararı ne oldu?
-   - Cumhuriyet: Türkiye Cumhuriyet Merkez Bankası eylül ayı faiz kararını açıkladı
+   - cumhuriyet.com.tr: Türkiye Cumhuriyet Merkez Bankası eylül ayı faiz kararını açıkladı
    Bağlantı: https://www.trthaber.com/haber/ekonomi/merkez-bankasi-faiz-kararini-acikladi-956464.html
 
 2. Fed'den faiz artışı beklentisi güçlendi
@@ -162,11 +162,19 @@ EKONOMİ
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
    Özet: Bloomberg Ha Te. Yabancıdan Haziran'dan bu yana en güçlü hisse satışı. Yabancılar borsada satıcı, tahvilde alıcı oldu. Bu haberi 5 ayrı kaynak yazdı.
    - Ekonomim: Yabancılar borsada satıcı, tahvilde alıcı oldu
-   - Bigpara: ***TUPRS* *ASELS* *TRALT* *OZATD* *THYAO* *MGROS* *ISCTR* *AKBNK* *YKBNK*** (ANALİZ- Yabancı İşlemleri (Vakıf Yatırım))
    - T24: Yabancı yatırımcı borsayı sevdi ama her hisseyi değil: Ağustosta en çok aldıkları ve sattıkları hisseler hangileri oldu?
+   - Borsanın Gündemi: Yabancı yatırımcıdan Borsa İstanbul’da güçlü satış dalgası haberi
    Bağlantı: https://news.google.com/rss/articles/CBMic0FVX3lxTE1WcmNaZEVDZ2gza05vVjlQaTZkbzQwVnVvR2M2ZUlBenVkcGRkMlIyVkwzQjJMZ0RCa3ZMTFNXdTNodXVJa0dMd2w5QWNaUG1JbThod0liSjl5NG8wenVSU1Y4aEwwVkNWSDhoVzEtbU5vMEE?oc=5
 
-4. Bakır 15 bin dolara yaklaşırken ‘balon’ uyarısı
+4. AKP'ye geçen Özlem Çerçioğlu'nun ailesine ait Jantsa, TOGG'un tedarikçisi oldu
+   Kaynak: T24 (bu olayı 5 yayıncı yazdı)
+   Özet: Te yirmi dört. A Ka Pe ye geçen Özlem Çerçioğlu'nun ailesine ait Jantsa, TOGG'un tedarikçisi oldu. Jantsa’nın bağlı ortaklığı JMW Jant, Togg’a tedarikçi seçildi. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: Özlem Çerçioğlu ailesine TOGG kıyağı
+   - Investing.com Türkiye: Jantsa’nın bağlı ortaklığı JMW Jant, Togg’a tedarikçi seçildi
+   - birgun.net: CHP’den AKP’ye geçmişti: Özlem Çerçioğlu’nun eşinin şirketine TOGG kıyağı
+   Bağlantı: https://news.google.com/rss/articles/CBMiygFBVV95cUxPRmhBM25nTElfai11bVU2WWZ5VkVrV0l0X2JXUGtiR2NmMEJvVnFmSlFZWEl1M1B0R0tkVTRjZHhiWXNDZ0VJa1hZNXRrWFZVSkhmLUtwMDdZQl9FWWM4amJMdGlEdF9qN09YeERLUDRJSHk3MURXLVM3MWVmZjlWM2wydFdpenNpQVFUeW5LMV95NDZjSjdfOVNGOWNvRmpBSDl0RktmclZzNUJhM1ZmcnFZR3lQMGMyWDl5MzlSZl96cVI3S3VwQVVR?oc=5
+
+5. Bakır 15 bin dolara yaklaşırken ‘balon’ uyarısı
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
    Özet: Bloomberg Ha Te. Bakır 15 bin dolara yaklaşırken ‘balon uyarısı. Altını tahtından etti yüzde 47 kazandırdı, Rekor üstüne rekor kıran madende yeni hedef belli oldu. Bu haberi 5 ayrı kaynak yazdı.
    - Investing.com Türkiye: Bakır rekor kırdı ama Kanadalı bakır hisseleri neden düşüyor?
@@ -174,15 +182,15 @@ EKONOMİ
    - Para Analiz: Bakır altının getirisini ikiye katladı: Fiyatlar tarihi rekora çıktı
    Bağlantı: https://news.google.com/rss/articles/CBMiiAFBVV95cUxORjFIZjJvQXJlbTQ4cVFQOThWaXI0b2lLZ0JYR2RKeU9OYUJmY25JcGxKalFfY05UanJmSjE3VVBKUHliZUx0ZlE5TmRxclZkVE9SYmxOV0t0b1ZpRmI3OGUxSGlSM1B3dkVQcWo4UFZqdF9TZzJfRXpfUEg2VjlEcnc5MGZ4anV5?oc=5
 
-5. Altın ağır adımlarla ilerlerken gümüş kanatlandı: 55 günde getirisi iki katını aştı
+6. Altın ağır adımlarla ilerlerken gümüş kanatlandı: 55 günde getirisi iki katını aştı
    Kaynak: T24 (bu olayı 5 yayıncı yazdı)
-   Özet: Te yirmi dört. Altın ağır adımlarla ilerlerken gümüş kanatlandı, 55 günde getirisi iki katını aştı. Küresel bankalar gümüşte ikiye bölündü, Gözler enflasyon verileri ve Fed kararında. Bu haberi 5 ayrı kaynak yazdı.
+   Özet: Te yirmi dört. Altın ağır adımlarla ilerlerken gümüş kanatlandı, 55 günde getirisi iki katını aştı. Gümüşte dikkat çeken yükseliş, Neden yükseldi?. Bu haberi 5 ayrı kaynak yazdı.
    - Sözcü Gazetesi: Gümüş gaza bastı: Yüzde 3'ten fazla yükseldi
    - Investing.com Türkiye: Altın-gümüş oranı neden düşüyor?
    - Gazete Oksijen: Gümüş, altından iki kat daha fazla kazandırdı
    Bağlantı: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVlc0WWRRZ3Vqd09WbF9JSzI5Y3c0QmtZZWZsU2tvYUJXNGQ0dERGTnlhOWRMS3RSRkVtY3VtdDRmUXZqVkdHY2FmS0ZvbW14ZTc1cWtHOTZVZm9KajUtY3QtY1pOTVZleHRBUVF2MTF2MWUwY3IxQ1FtT0Y4UHNWMGhJWEpTTzdLQndycmd6dzdlcVFKYXNWTGJ1YUNGZUNrZHZVbGw3R0RSLVJ2cmptSXVEX05iWjc2?oc=5
 
-6. Petrol fırladı: Akaryakıta zam kapıda
+7. Petrol fırladı: Akaryakıta zam kapıda
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Petrol fırladı, Akaryakıta zam kapıda. Küresel piyasalarda kayıplar derinleşiyor. Bu haberi 5 ayrı kaynak yazdı.
    - Bloomberght: Küresel piyasalarda kayıplar derinleşiyor
@@ -190,21 +198,13 @@ EKONOMİ
    - NTV Haber: Dünya petrolünün "Gözyaşı Kapısı" tehlikede
    Bağlantı: https://news.google.com/rss/articles/CBMieEFVX3lxTE5pc2xMUjMzeEptcVFaWFc0bGpPUXR6bTdtWFdkVGlMRWlSSjhSc09JZHlvTDhqLWlza2xEck1QTlh0VTBvRGt4ZF9BVzJuUVpuOXpGb1piaGQtSXpIQk1fVlhxU0hPS3BEa05FSEhCQUZzUlYzaHF2Yg?oc=5
 
-7. Kredi kartıyla taksiye, markete ödeme yapanlara çağrı: Başvuran ödediği parayı faiziyle geri alacak
+8. Kredi kartıyla taksiye, markete ödeme yapanlara çağrı: Başvuran ödediği parayı faiziyle geri alacak
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Kredi kartıyla taksiye, markete ödeme yapanlara çağrı, Başvuran ödediği parayı faiziyle geri alacak. Vatandaşa komisyon tuzağı. Yasal faizle geri alınabilir. Bu haberi 5 ayrı kaynak yazdı.
-   - Cumhuriyet: Uzman isimden kredi kartı kullananlara uyarı: Ödemelerde alınan komisyon geri ödeniyor
+   - cumhuriyet.com.tr: Uzman isimden kredi kartı kullananlara uyarı: Ödemelerde alınan komisyon geri ödeniyor
    - Onedio: Kartla Ödeme Yapanlara Kritik Uyarı: Ödediğiniz Parayı Faiziyle Geri Alabilirsiniz
-   - odatv.com: Vatandaşa komisyon tuzağı... Yasal faizle geri alınabilir
+   - Odatv: Vatandaşa komisyon tuzağı... Yasal faizle geri alınabilir
    Bağlantı: https://news.google.com/rss/articles/CBMiygFBVV95cUxQR3Y2eV9OSG5aTGNDVTFaTmZ1R1RzYnI5ZFo0X2k4RDdjLXNoZHJOdnFYcFh0ZTVocHgtYmVvWmdhRVRlQW9qVk54ZmpyZHhEdW5uaUwwbGphRzl3Z254aVJQbURJVk91bTJPV3lYaFBjX3puVUoyOWdXeXVZQ1VhdDFYV0M0YXc3akNiRVRyZlNJTk9jZmJqQXdqT0Uza1EtaUp4R2ZsMEFFa1NqQy03b1lxUXNPdHZOMUhkRmpvR3dvYWZrQUl0V3l3?oc=5
-
-8. Ünlü bilet firmasından dev satış: Yemek kartı firması yüzde 51'ini satın alıyor
-   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Ünlü bilet firmasından dev satış, Yemek kartı firması yüzde 51'ini satın alıyor. Türkiye'nin meşhur otobüs bileti platformu resmen satılıyor. İşte yeni sahibi. Bu haberi 5 ayrı kaynak yazdı.
-   - Webrazzi: MetropolCard, Bilet.com’un yüzde 51’ini satın alıyor
-   - Cumhuriyet: Ünlü bilet platformunun yeni sahibi belli oldu: Çoğunluk hissesi için anlaşma imzalandı
-   - Merhaba Gazetesi: Türkiye'nin meşhur otobüs bileti platformu resmen satılıyor! İşte yeni sahibi
-   Bağlantı: https://news.google.com/rss/articles/CBMisAFBVV95cUxOSkxHOWh3ektDY3UzT09nYXVSRjI4emgxbk11by1ZaVltaWJ4bUFkLU02V2xrUnhWTGhLYnlxeFJQeWwyVndTRGtrSkF3QkU1VTZabV9OZzNjc0JfUVRkUXRWT2c3QjFlaVdMNXVyQXhBa09Ja1p5MFpYc0xzbF9fVVBfUWR1MlEzalYyT2JzUm9MWnNuZDR4dWc0bzVGSnBzNHc3RkVqaDFBRWtMeGtLVQ?oc=5
 
 ============================================================
 BİLİM & TEKNOLOJİ
@@ -215,60 +215,60 @@ BİLİM & TEKNOLOJİ
    Özet: Te Re Te Haber. Güneş'e en yakın gezegen Merkür küçülüyor.
    Bağlantı: https://www.trthaber.com/haber/dunya/gunese-en-yakin-gezegen-merkur-kuculuyor-956482.html
 
-2. Yeni Hızlı ve Öfkeli filmi Paul Walker'ı yapay zekâ ile geri getirebilir
+2. Meta’s AI agent Muse is now the No. 2 app in the US
+   Kaynak: TechCrunch
+   Özet: TechCrunch. Meta’s AI agent Muse is now the No. 2 app in the US.
+   Bağlantı: https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/
+
+3. Marvel, One Last Kill sonrası yeni bir Punisher projesi hazırlıyor
+   Kaynak: DonanımHaber
+   Özet: DonanımHaber. Marvel, One Last Kill sonrası yeni bir Punisher projesi hazırlıyor.
+   Bağlantı: https://www.donanimhaber.com/marvel-yeni-bir-punisher-projesi-hazirliyor--210333
+
+4. Schools are catching on to Big Tech’s playbook
+   Kaynak: The Verge
+   Özet: The Verge. Schools are catching on to Big Tech’s playbook.
+   Bağlantı: https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids
+
+5. Yeni Hızlı ve Öfkeli filmi Paul Walker'ı yapay zekâ ile geri getirebilir
    Kaynak: DonanımHaber
    Özet: DonanımHaber. Yeni Hızlı ve Öfkeli filmi Paul Walker'ı yapay zekâ ile geri getirebilir.
    Bağlantı: https://www.donanimhaber.com/yeni-hizli-ve-ofkeli-filmi-paul-walker-i-ai-ile-geri-getirebilir--210330
 
-3. OpenAI, yapay zeka çipi üretimi için Samsung’a göz kırpıyor
+6. OpenAI, yapay zeka çipi üretimi için Samsung’a göz kırpıyor
    Kaynak: DonanımHaber
    Özet: DonanımHaber. OpenAI, yapay zeka çipi üretimi için Samsung’a göz kırpıyor.
    Bağlantı: https://www.donanimhaber.com/openai-yapay-zeka-cipi-uretimi-icin-samsung-a-goz-kirpiyor--210329
 
-4. Proxima Fusion, Asyalı tedarikçilerin hakimiyetindeki kritik bir füzyon bileşenine 140 milyon euro yatırıyor
+7. Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers
    Kaynak: TechCrunch
    Özet: TechCrunch. Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers.
    Bağlantı: https://techcrunch.com/2026/09/10/proxima-fusion-bets-e140m-on-a-critical-fusion-ingredient-dominated-by-asian-suppliers/
 
-5. watchOS 27, yeni Siri modüler kadran ile geliyor
-   Kaynak: DonanımHaber
-   Özet: DonanımHaber. watchOS 27, yeni Siri modüler kadran ile geliyor.
-   Bağlantı: https://www.donanimhaber.com/watchos-27-yeni-siri-moduler-kadran-ile-geliyor--210316
-
-6. KAAN İçin Türkiye-Mısır Teması: Ortak Üretim Masada
+8. KAAN İçin Türkiye-Mısır Teması: Ortak Üretim Masada
    Kaynak: ShiftDelete
    Özet: ShiftDelete. KAAN İçin Türkiye-Mısır Teması, Ortak Üretim Masada.
    Bağlantı: https://shiftdelete.net/kaan-icin-turkiye-misir-temasi-ortak-uretim-masada
 
-7. Amazon, Prime Video'da gördüğünüz ürünleri satın almayı kolaylaştırıyor
+9. Amazon makes it easier to buy what you see on Prime Video
    Kaynak: TechCrunch
    Özet: TechCrunch. Amazon makes it easier to buy what you see on Prime Video.
    Bağlantı: https://techcrunch.com/2026/09/10/amazon-makes-it-easier-to-buy-what-you-see-on-prime-video/
 
-8. Anthropic, kural tanımaz yapay zeka ajanlarının da tıpkı sizin gibi CAPTCHA'lardan nefret ettiğini ortaya koyuyor
-   Kaynak: TechCrunch
-   Özet: TechCrunch. Anthropic reveals rogue AI agents hate CAPTCHAs, just like you.
-   Bağlantı: https://techcrunch.com/2026/09/10/anthropic-reveals-rogue-ai-agents-hate-captchas-just-like-you/
-
-9. Google Gemini Windows Masaüstü Uygulaması Yayınlandı
+10. Google Gemini Windows Masaüstü Uygulaması Yayınlandı
    Kaynak: ShiftDelete
    Özet: ShiftDelete. Google Gemini Windows Masaüstü Uygulaması Yayınlandı.
    Bağlantı: https://shiftdelete.net/google-gemini-windows-uygulamasi-yayinlandi
 
-10. iPhone 18 Pro: f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir
+11. iPhone 18 Pro: f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir
    Kaynak: ShiftDelete
    Özet: ShiftDelete. iPhone 18 Pro, f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir.
    Bağlantı: https://shiftdelete.net/iphone-18-pro-f-1-48-kamerasiyla-fotograf-deneyimi-degisebilir
 
-11. Amazon Fire TV Stick 4K, 20 doların altında yarı fiyatından daha ucuza satılıyor
+12. Amazon’s Fire TV Stick 4K is over half off at under $20
    Kaynak: The Verge
    Özet: The Verge. Amazon’s Fire TV Stick 4K is over half off at under $20.
    Bağlantı: https://www.theverge.com/gadgets/993455/fire-tv-stick-4k-resident-evil-requiem-deal-sale
-
-12. Elektrikli hava taksileri Teksas'taki test uçuşları için yeşil ışık aldı
-   Kaynak: The Verge
-   Özet: The Verge. Electric air taxis get the green light for test flights in Texas.
-   Bağlantı: https://www.theverge.com/transportation/993341/evtol-air-taxi-aviation-eipp-texas
 
 ============================================================
 BİLİM
@@ -322,14 +322,14 @@ SAĞLIK
    Kaynak: Milliyet (bu olayı 5 yayıncı yazdı)
    Özet: Milliyet. Kene ısırığı sonrası ortaya çıktı. Çin'de yeni virüs alarmı, 7 ölü. ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?. Bu haberi 5 ayrı kaynak yazdı.
    - GZT: Çin'de yeni kene virüsü tespit edildi: Halsizlik ve mide sorunlarına yol açıyor, ABD için de alarm verildi | Asya Haberleri
-   - Haberler: Çin'de yeni virüs alarmı! Kenelerden bulaşıyor
-   - cnnturk.com: Kene Kaynaklı YENİ BİR VİRÜS KEŞFEDİLDİ! Binlerce Hasta İncelendi, Sonuçlar Dikkat Çekti... Hangi Belirtilere Yol Açıyor?
+   - CNN Türk: Kene Kaynaklı YENİ BİR VİRÜS KEŞFEDİLDİ! Binlerce Hasta İncelendi, Sonuçlar Dikkat Çekti... Hangi Belirtilere Yol Açıyor?
+   - Antalya Körfez Gazetesi: ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?
    Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxQNm9ka2JnV0pDVU5RWnR4a1M5TW9QanZ5d1Z6YkxTTnoyMEMzd2huV0JRaGJJeGhTS0VyNm9UV0laYUVIbWpsX1VYNkFtZ0wtcllQNlFFaVNPMnRzZDBqR0JocDJ5X09NUmZVc2piamlpeDUwU19SZGcyM04zVkgxVFdBSWxFb0RzVFRvdlhYWUdpRU1kMVp0N2ZuNk8yUF9VbjV5ZG5pekRkaElnU0kxd1hJbWdxZw?oc=5
 
 2. Genç dansçının Ankara'da estetik kabusu!
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Genç dansçının Ankara'da estetik kabusu. Göğüs büyütme ameliyatı sonrası deri kopması iddiası. Profesyonel dansçı soluğu savcılıkta aldı. Bu haberi 5 ayrı kaynak yazdı.
-   - odatv.com: Dansçının hayatını karartan göğüs ameliyatı: Derisi koptu, his kaybı yaşıyor
+   - Odatv: Dansçının hayatını karartan göğüs ameliyatı: Derisi koptu, his kaybı yaşıyor
    - Mynet: Göğüs büyütme ameliyatı sonrası “deri kopması” iddiası! Profesyonel dansçı soluğu savcılıkta aldı
    - GZT: Göğüs büyütme ameliyatı sonrası hayatı değişti: Profesyonel dansçı suç duyurusunda bulundu | Yerel Haberler
    Bağlantı: https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcE02RWNFXy1FS2tXVVJqYUx3Y1lGQnpaanNXRnRsSGFYQzZkYm5uR1c1OWFmTkgzZENXZWgxZ2hVT0hwOWY4emlFYWljZGRYS3pKUXFRN2pYaWFHOS1YaFNwci1DQ1g0ak1UbWhFazJsUmNfdzczY3dpVm0?oc=5
@@ -337,7 +337,7 @@ SAĞLIK
 3. Araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi
    Kaynak: haberturk.com (bu olayı 5 yayıncı yazdı)
    Özet: haberturk. Araştırma, En ölümcül beyin kanserinde zayıf nokta keşfedildi. Glioblastomun tedavi direncinde yeni hedef, SET proteininin baskılanması tümör oluşumunu engelledi. Bu haberi 5 ayrı kaynak yazdı.
-   - Cumhuriyet: Yeni araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi
+   - cumhuriyet.com.tr: Yeni araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi
    - Medimagazin: Glioblastomun tedavi direncinde yeni hedef: SET proteininin baskılanması tümör oluşumunu engelledi
    - Sağlık Aktüel: Glioblastom Tedavisinde Yeni Biyolojik Hedef: SET Proteininin Baskılanması Tümör Büyümesini Durdurdu
    Bağlantı: https://news.google.com/rss/articles/CBMiowFBVV95cUxOOFpDNXg0MTE0djJhMm1kTnRybXZ1aDF1bHpqbndQdzR6Y2cyRFhKTnNSZld4OUJkUVNQNk80VS00dk5FNGEwc2t4bVJVVGN0TXRoczgtaGtKdU9BbkpjV2paUGhXOG9RX2dtNER6SVJWUWtZQk4zSWF5MWtfczBYcS1SMC16R0VMZzMwLURkZ0tkOUJ4UTlMM3ZwLWw4d3JkN0ow?oc=5
@@ -351,16 +351,16 @@ SAĞLIK
    Bağlantı: https://news.google.com/rss/articles/CBMivwFBVV95cUxPWS1lZDBEX3lLdE10UzYzaFNTbzZlRmtnQ2FZM2NzdG9BX3M2Tk5iTWtrTGI4UmNBUllwdzZfMTdtYlI0V2tNZWRTcHI5U1g0UlBWcmpuNkVTY3ljeW15M1RxUVNiNGpMa3JkamJMZGlSdGVxZGxMQTltQUtKX2xDeTJPamdjSDhzSTJQQ1BXSGc4aGRkajk3VGIzY1hmUHRTOGV2OV9TM212WTkySDJzZUVrZWlRYjU1WnA2d2RiZw?oc=5
 
 5. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi
-   Kaynak: nefes.com.tr (bu olayı 5 yayıncı yazdı)
-   Özet: nefes. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi. Yılda bir defa kontrol şart, Diyabetten korunmak için rakamlarınızı bilin. Bu haberi 5 ayrı kaynak yazdı.
+   Kaynak: Nefes Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Nefes Gazetesi. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi. Yılda bir defa kontrol şart, Diyabetten korunmak için rakamlarınızı bilin. Bu haberi 5 ayrı kaynak yazdı.
    - Hürriyet: Sessiz salgın! Avrupa'da ilk sıradayız... 12 milyon hasta var
    - Türkiye Gazetesi: Yılda bir defa kontrol şart: Diyabetten korunmak için rakamlarınızı bilin
    - Sağlık Aktüel: "Sinsi İlerleyen Diyabete Karşı 'Rakamlarınızı Öğrenin' Çağrısı: 35 Yaş Üstüne Yıllık Kontrol Uyarısı"
    Bağlantı: https://news.google.com/rss/articles/CBMingFBVV95cUxPdlhWT05uVkQ1WnkyVk5iWk1QRi0xbndUUmRTVHFtTEtCUExvQVpESXR5eTNPdmt4bjdLR2g5UjdRVkxuOUVta19ScU1xcEJRSTg3dmQyY3lvbzgzSUF3Zy15LUREM2JYZXU0M2syRjRyQ3BJdHFyQl9Gd3JUbW1Mbk0zd0hReUdGMlFRVUNNWnI3Z2kxdGVNUkhFQmtJUQ?oc=5
 
 6. Çok sıcak içecekler neden kanser riskini artırabilir?
-   Kaynak: BBC (bu olayı 5 yayıncı yazdı)
-   Özet: BBC. Çok sıcak içecekler neden kanser riskini artırabilir?. İçmeden biraz bekletin. Bu haberi 5 ayrı kaynak yazdı.
+   Kaynak: bbc.com (bu olayı 5 yayıncı yazdı)
+   Özet: bbc. Çok sıcak içecekler neden kanser riskini artırabilir?. İçmeden biraz bekletin. Bu haberi 5 ayrı kaynak yazdı.
    - Milliyet: İçmeden biraz bekletin
    - Diken: Araştırma: Çok sıcak içecekler kanser riskini artırıyor
    - Onedio: 980 Bin Kişilik Araştırmada Ortaya Çıktı: Çayı Bu Sıcaklıkta İçmek Kanser Riskini 3 Kat Artırıyor
@@ -372,10 +372,10 @@ SPOR
 
 1. Mauro Icardi'den sürpriz rota: 2 yıllık sözleşme için görüşmeler başladı
    Kaynak: NTVSpor (bu olayı 5 yayıncı yazdı)
-   Özet: En Te Ve Spor. Mauro Icardi'den sürpriz rota, 2 yıllık sözleşme için görüşmeler başladı. Icardi'nin Brezilyalı aşkı. Atlético Mineiro'nun yarışa katılmasıyla Arjantinli için sansasyonel bir Samba hamlesi gündemde. Bu haberi 5 ayrı kaynak yazdı.
-   - fanatik.com.tr: Arjantinliler duyurdu! İşte Mauro Icardi'nin yeni durağı
+   Özet: En Te Ve Spor. Mauro Icardi'den sürpriz rota, 2 yıllık sözleşme için görüşmeler başladı. Boşta kalan Icardi'ye sürpriz talip. Fenerbahçe'nin yıldızını da almıştı. Bu haberi 5 ayrı kaynak yazdı.
+   - Fanatik: Arjantinliler duyurdu! İşte Mauro Icardi'nin yeni durağı
    - Son Dakika: Icardi'ye çok sürpriz bir talip
-   - Goal.com: Icardi'nin Brezilyalı aşkı! Atlético Mineiro'nun yarışa katılmasıyla Arjantinli için sansasyonel bir Samba hamlesi gündemde
+   - A Spor: Mauro Icardi'ye sürpriz talip! Transferde yeni adresi...
    Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxPcEVlLUpId0NvVzBjOWRCVTlxaVlIVFRCOHJWZ19uN1J6VVFuaVB3RUkzUlVYM2hZejUtOENwME5yUDRTUjFYdFBqaC01M1JlMXlVODd2eF9EQzJocnFScXNrUDFoUE1TeVFEaVdqT19JUXQyanRnV085SGpZVmVqMzBCVGlpbFhYWTF1YmowNjlqenFST0FVNERuMWtxbDQ1dXJJSGpXMzRNZTFLQmRNUkIteUNhd9IBuwFBVV95cUxNMVM3RzdybDUwbmVwRFdEQlpYUXNlQThSNE5GemZRZmJ2ZF9iOVRudWJRdkhGb245U3VpRmhNZ3lPajIxVjVwcUJnN3huNXhQRmlSc3ZWOVRiQnBNSWVEM1k1Q3lULUZ6SXpYRHJiaEJhNFpzd1pxMjdtek9DREZkV1V0cTdQNVFjc09Vbkh0WFFSNTE3Z201RVdiR2FxaXJwN25udWMtdHpaVy1mc2xNYnhoNXk0TWluR1JR?oc=5
 
 2. Can Bozdoğan'dan Eyüpspor maçı yorumu: "Daha iyi takımız"
@@ -394,15 +394,23 @@ SPOR
    - Fotomaç: Ya Üzülmez ya Çetin
    Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxOUHRJOEVxWERYenNIVFJhclNXa3VpVklrS2ZFYnB5TDI1VkJtNXhQNFp1MkNHcFRqdjNrT1NBbnVydnJ5N0JFSm9idlJ5OUViTmFTWnp2STZ0MDdNUTh3UU1nM0VKTUpPWnBOQnhFRGlkb2Y2STNJSWFITmFPXzNzUnZNZDNrRm9LbWR2TU1TWDE1Ujg2d3VaZWxhZ293WGdRTmRFOVVXNHcwUE5ib2c1dUo4ZjRjZ9IBuwFBVV95cUxQOU8wbm13ZWs5SU9kcnhPZFZJbkFxZzNNam9CQXpJTW5sSjg5Q2MzeVlsTVVRNGE3ZDJkRzdmcGVkQWZhV3JrajhDMTVMUTZwcHN2Y05MM0VFQTVzMUNGTG9UTkJJNzhBWFVzQk52Wlg0aU92aktSdlJDQXVqMllJQVlhN0dreXlRVlJPcXNjOUx0R1FBcG4yMTR2eTlBTlNteDZnZ1dvNHJ1V2dWR1RWRU9ybWdMSEdmczhz?oc=5
 
-4. Süper Lig'de 5. haftanın hakemleri açıklandı
+4. Gaziantep FK Teknik Direktörü Orhan Ak: Fenerbahçe maçını kazanmak istiyoruz
+   Kaynak: Fanatik (bu olayı 5 yayıncı yazdı)
+   Özet: Fanatik. Gaziantep FK Teknik Direktörü Orhan Ak, Fenerbahçe maçını kazanmak istiyoruz. Gaziantep FK, Fenerbahçe maçı biletleri satışa çıktı En düşük bilet fiyatı 2 bin 227 TL, misafir tribün bilet fiyatı 2 bin 850 TL olarak belirlendi. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Orhan Ak: 'Fenerbahçe'yi yenmek istiyoruz!'
+   - Habertürk: Gaziantep FK - Fenerbahçe maçı biletleri satışa çıktı En düşük bilet fiyatı 2 bin 227 TL, misafir tribün bilet fiyatı 2 bin 850 TL olarak belirlendi
+   - DHA | Demirören Haber Ajansı: Gaziantep FK Teknik Direktörü Orhan Ak: Çok iyi bir başlangıç yaptık
+   Bağlantı: https://news.google.com/rss/articles/CBMiwAFBVV95cUxOV05kcW1GR0xfV2p1SjRQSmVNV1BHT0tqRXFEQlNCRkNaWHcwTGs3Mm9Ha2RuX3NpRU12X0xITG1ITElFQWJsekdiV0NaTVhFbGZPa0pGZ2dpTjdMRFh4UXB4VFhqZ09qQnh4T05WUGlUR3V1X0FFa25sTFVGNHZlaDREaW52VkhOQVBTNUNDQU1jTWRvY2sxY0JubDBGd3o5NjJyS3EzMi1OTUYwWW9JZzhwYWw0V0tvQnF1TllIbUY?oc=5
+
+5. Süper Lig'de 5. haftanın hakemleri açıklandı
    Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
    Özet: Hürriyet. Süper Lig'de 5. haftanın hakemleri açıklandı. Gaziantep FK maçının hakemi. Mehmet Türkmen. Bu haberi 5 ayrı kaynak yazdı.
    - Fenerbahce.org: Gaziantep FK maçının hakemi; Mehmet Türkmen
    - Anadolu Ajansı: Trendyol Süper Lig'de 5. haftanın perdesi açılıyor
-   - Son Dakika: Derbinin en çok konuşulan ismiydi! MHK'den Halil Umut Meler kararı
+   - GZT: Süper Lig'de 5. hafta fikstürü: Galatasaray ve Fenerbahçe'nin maç tarihi netleşti
    Bağlantı: https://www.hurriyet.com.tr/sporarena/super-ligde-5-haftanin-hakemleri-aciklandi-43302297
 
-5. Eski takım arkadaşıydı, yardımcısı oldu
+6. Eski takım arkadaşıydı, yardımcısı oldu
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Eski takım arkadaşıydı, yardımcısı oldu. Umut Bulut, Kocaelispor'un teknik ekibine katıldı. Bu haberi 5 ayrı kaynak yazdı.
    - Son Dakika: 3 eski arkadaş yıllar sonra buluştu! İlk sınav Galatasaray'a karşı
@@ -410,29 +418,21 @@ SPOR
    - Gazete Vatan: Selçuk İnan istedi, Galatasaray'ın eski golcüsü Kocaelispor'a transfer oldu
    Bağlantı: https://news.google.com/rss/articles/CBMie0FVX3lxTE0yakxyWjRjNEVGZ0hBQ21meEcyNGxFT1hJRnZCaDZFakdtWGxGS2J0ZU9MaVo2akJDclotRmE0N2NHSDh4b2pCV3dZQjFVWlNiVFFjNGlEN1lxUy1LblQ1MzRfM3lQSWhTbEtvZW5nQmR2REUyQlg2SmRUcw?oc=5
 
-6. İmamoğlu ve İBB tutuklularına yönelik kısıtlamalara yenileri eklendi: Silivri’ye çay yasağı da geldi
-   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Cumhuriyet. İmamoğlu ve İ Be Be tutuklularına yönelik kısıtlamalara yenileri eklendi, Silivri’ye çay yasağı da geldi. Başsavcılıktan Marmara Cezaevi'nde maç izleme engeli iddialarına açıklama. Bu haberi 5 ayrı kaynak yazdı.
-   - NTV Haber: İBB davasında Ekrem İmamoğlu'na çay yasağı iddiasına açıklama
-   - Hürriyet: Başsavcılıktan "Marmara Cezaevi'nde maç izleme engeli" iddialarına açıklama
-   - Milliyet: Marmara Ceza İnfaz Kurumu'nda futbol maçlarının izlenmesinin engellendiği iddiasına başsavcılıktan açıklama
-   Bağlantı: https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQ2Q1ZHpiLXVmS1diM2E0ODhkTk9CMFNRLUVlaFJmNmVJUndWLS1OclRYMDhVbkRXclNhdjVXUWZhZ2xfcTZUZURROFJZXzQwYXotLW9qQ1MyUTVUa3ZwTnYwTTA4NEs2LThaTmRkYXpQZjV5ZE1FcFFUeWRUM2pkSTdiLVAwRHRIZU0wTFNGR2dXSDJqSmhXemhLcUdkRk1vTDFXOWp6d3YxMXdYLUxISDMzTjU2MHFlM1U0QkZSQU9uWms1U195bHdsU3NKQldwUXd1ejdIT2Q0ZnRGakE?oc=5
+7. Konya'da gözler Onuachu'da
+   Kaynak: Fanatik (bu olayı 5 yayıncı yazdı)
+   Özet: Fanatik. Konya'da gözler Onuachu'da. Trabzonspor, Konyaspor maçı hazırlıklarını sürdürdü. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Trabzonspor, Konyaspor maçı hazırlıklarını sürdürdü
+   - NTVSpor: Carlo Ancelotti'den Ederson ve Gabriel Sara kararı
+   - Sözcü Gazetesi: Trabzonspor'da gözler Onuachu'da
+   Bağlantı: https://news.google.com/rss/articles/CBMie0FVX3lxTE1qaTREQmFKbWFodUN3UUszTTJDd1Q3dXpkSkFpUTNSaGctTnB3TjBGTFR6N2RoTzlBbDBwVGh4RUVwd0xlNTZNc3prQ25RVWRZLWFKVUlyZGJEalR2OFdpVGt4ZGNXTlN6QUZMREx4d0F4Q0taWk1Wd1Npaw?oc=5
 
-7. Şampiyonlar Ligi performansıyla Süper Lig devlerini pişman etti
+8. Şampiyonlar Ligi performansıyla Süper Lig devlerini pişman etti
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
    Özet: Sözcü Gazetesi. Şampiyonlar Ligi performansıyla Süper Lig devlerini pişman etti. Hat-trick kahramanı. ama hâlâ şikâyet mi ediyor?. Ermedin Demirovic, 12 dakikalık fırtınanın ardından neden düzgün şekilde kutlama yapmayı reddetti?. Bu haberi 5 ayrı kaynak yazdı.
    - NTVSpor: Dünya, Galatasaray'ın istediği ismin Şampiyonlar Ligi'nde yaptığını konuşuyor! 12 dakika sürdü
    - Goal.com: 'Hat-trick kahramanı... ama hâlâ şikâyet mi ediyor?!' Ermedin Demirovic, 12 dakikalık fırtınanın ardından neden düzgün şekilde kutlama yapmayı reddetti?
-   - Cumhuriyet: Ermedin Demirovic'ten hat-trick: Stuttgart evinde Viking'e geçit vermedi!
+   - cumhuriyet.com.tr: Ermedin Demirovic'ten hat-trick: Stuttgart evinde Viking'e geçit vermedi!
    Bağlantı: https://news.google.com/rss/articles/CBMinAFBVV95cUxOM0tJVXZEVzdiUnpYYXlmTXBNM1V5VzQwN0lRWGw2cm9iLXlTMmpYMWRsRGJtQy1rN1piUHVLRVRXeHQ2ckI5aGd1M2Y2VVNhSzI4eHpLWVlITUgzZS1LenhMQU1lWlpqZk1DNGw1Z0lvb1k4X0hLeHJ0bzBod2Y5c0Y3eHVVQjVjX2NJd0t0dlB1cjYtTjdRbS1ONW0?oc=5
-
-8. Türkiye-Almanya | CANLI (2026 CEV Erkekler Avrupa Voleybol Şampiyonası)
-   Kaynak: Fotomaç (bu olayı 5 yayıncı yazdı)
-   Özet: Fotomaç. Türkiye-Almanya | CANLI (2026 CEV Erkekler Avrupa Voleybol Şampiyonası). sahibinden'dan Filenin Efelerine sponsor desteği. Bu haberi 5 ayrı kaynak yazdı.
-   - Türkiye Voleybol Federasyonu: Filenin Efeleri CEV Enel 2026 Avrupa Şampiyonası'nda Sahaya Çıkıyor
-   - Anadolu Ajansı: sahibinden.com'dan "Filenin Efeleri"ne sponsor desteği
-   - Sporx.com: Filenin Efeleri'nin rakibi Almanya!
-   Bağlantı: https://news.google.com/rss/articles/CBMitAFBVV95cUxPdnhzcjNEcXpyT2dSMG9QaXdFVi0yazM0ckFMZFZ3ZkJqSlVCc2JQMVQwT0VoRlA5eDFuRWdvMXpNbnc1RmcyLW5XMUpjelZCNUpGbGlMdkVST0I1UjZkQ3NKVnV5N3U5ZEQ5V3VHQXpRQXYtc1ZBRDNaZ2VMUVVDMm9jVWV3V0lOVU5INlNaMEhfTjBrdlNXLV92bG9rbXNBRWdvbVVYb3JEN2VjdWdOU3EtSDY?oc=5
 
 ============================================================
 YAZILIM

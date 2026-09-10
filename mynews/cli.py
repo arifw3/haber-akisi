@@ -133,6 +133,24 @@ def cmd_build(args: argparse.Namespace) -> int:
             bulletin["podcast"] = restored
             print(f"Podcast onceki calismadan alindi: {len(restored['turns'])} replik.")
 
+    # Bulten kendi durumunu tasisin. Denetim su ana kadar yalnizca Actions
+    # sekmesinde duruyordu; oraya kimse bakmadigi icin bes gun ust uste
+    # kirmizi yandi ve fark edilmedi. Sonucu bultenin icine koymak,
+    # eksigi kullanicinin ve bir sonraki calismanin gozune sokuyor.
+    from .doctor import inspect as _inspect
+
+    rapor = _inspect(bulletin, cfg.get("thresholds", {}))
+    bulletin["check"] = {
+        "ok": rapor.ok,
+        "failed": [
+            {"name": ad, "detail": ayrinti} for ad, _, ayrinti in rapor.failed
+        ],
+    }
+    if not rapor.ok:
+        print("\nBULTEN EKSIK:")
+        for ad, _, ayrinti in rapor.failed:
+            print(f"  {ad}: {ayrinti}")
+
     paths = write(bulletin) + write_digest(bulletin)
 
     if args.sync_doc:

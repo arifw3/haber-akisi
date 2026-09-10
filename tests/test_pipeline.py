@@ -823,6 +823,27 @@ class TestGeminiQuotaDetail(unittest.TestCase):
         self.assertEqual(_quota_detail(json.dumps({"error": {"code": 429}})), ("", 0.0))
 
 
+class TestBulletinSelfCheck(unittest.TestCase):
+    """Bulten kendi eksigini tasimali.
+
+    Denetim yalnizca Actions sekmesinde durdugu surece kimse gormuyor;
+    sonucun bultene islenmesi onu kullanicinin oldugu yere getiriyor.
+    """
+
+    def test_failed_entries_unpack_to_name_and_detail(self):
+        """cli, rapor.failed'i (ad, _, ayrinti) olarak aciyor."""
+        az = saglikli_bulten(segments=[{"title": "T", "items": [{"title": "tek", "audio": "a"}]}])
+        for entry in inspect(az).failed:
+            self.assertEqual(len(entry), 3)
+            ad, ok, ayrinti = entry
+            self.assertIsInstance(ad, str)
+            self.assertFalse(ok)
+            self.assertIsInstance(ayrinti, str)
+
+    def test_healthy_bulletin_has_no_failures(self):
+        self.assertEqual(inspect(saglikli_bulten()).failed, [])
+
+
 class TestQuietSources(unittest.TestCase):
     """Yeni yazi yapmayan kaynak ariza degildir.
 
