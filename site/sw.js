@@ -3,7 +3,7 @@
  * Kabuk (HTML/JS/ikon) cache-first: uygulama çevrimdışı da açılır.
  * Bülten verisi network-first: internet varsa hep taze, yoksa son bülten.
  */
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL_CACHE = `mynews-shell-${VERSION}`;
 const DATA_CACHE = `mynews-data-${VERSION}`;
 // Ses ayrı ve sürümsüz: bülten güncellense de indirilmiş sesler durmalı.
@@ -100,16 +100,35 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Kabuk: önce cache, yoksa ağ. Gezinti isteklerinde index.html'e düş.
+  // Kabuk: cache'i hemen ver, arka planda ağdan tazele (stale-while-revalidate).
+  //
+  // Burası düz cache-first'tü ve sessiz bir hataydı: index.html ile app.js
+  // kurulumda cache'e giriyor, VERSION elle değiştirilmedikçe bir daha asla
+  // yenilenmiyordu. Yani uygulamayı ana ekranına ekleyen biri, yayınlanan
+  // her düzeltmeyi kaçırıyordu — kod deposunda düzelmiş, kullanıcıda
+  // düzelmemiş. Sürüm numarasını her yayında elle artırmayı hatırlamak
+  // güvenilir bir plan değil; bugün iki kez unuttum.
+  //
+  // Artık açılış yine anında (cache'ten), ama aynı anda ağdan yeni sürüm
+  // çekilip cache'e yazılıyor: bir sonraki açılışta yeni kod çalışıyor.
   event.respondWith(
-    caches.match(request).then(
-      (cached) =>
-        cached ||
-        fetch(request).catch(() => {
+    caches.match(request).then((cached) => {
+      const fresh = fetch(request)
+        .then((response) => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(SHELL_CACHE).then((cache) => cache.put(request, copy));
+          }
+          return response;
+        })
+        .catch(() => {
+          if (cached) return cached;
           if (request.mode === "navigate") return caches.match("./index.html");
           return Response.error();
-        })
-    )
+        });
+
+      return cached || fresh;
+    })
   );
 });
 

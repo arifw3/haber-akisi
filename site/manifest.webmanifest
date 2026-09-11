@@ -1,26 +1,48 @@
 {
-  "name": "Haber Akışı — Günlük Sesli Bülten",
+  "name": "Haber Akışı — Daily Audio News",
   "short_name": "Haber Akışı",
-  "description": "Google Haberler'den derlenen günlük Türkçe haber bülteni. Elle gezin ya da hands-free dinle.",
+  "description": "Google Haberler'den derlenen günlük bülten: okuyun ya da hands-free dinleyin. A daily news briefing from Google News — read it or listen hands-free.",
   "id": "/",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#e2ece3",
-  "theme_color": "#dbe7dc",
+  "background_color": "#fdeef4",
+  "theme_color": "#fdeef4",
   "lang": "tr",
   "dir": "ltr",
-  "categories": ["news", "magazines"],
+  "categories": [
+    "news",
+    "magazines"
+  ],
   "icons": [
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
     {
-      "name": "Sesli dinle",
+      "name": "Sesli dinle / Listen",
       "short_name": "Dinle",
       "description": "Bülteni hands-free dinlemeye başla",
       "url": "./?autoplay=1"
