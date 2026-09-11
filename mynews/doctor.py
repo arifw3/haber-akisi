@@ -117,6 +117,12 @@ def inspect(bulletin: dict, thresholds: dict | None = None) -> Report:
             f"%{ratio * 100:.0f} eslesme ({stats.get('eslesen')}/{stats['aranan']})",
         )
 
+    # Yayinci beslemesi bosalirsa haberler gorselsiz ve ozetsiz kalir ama
+    # hicbir sey hata vermez. Bu sessiz bozulma uzun sure fark edilmedi.
+    olu = bulletin.get("empty_publisher_feeds") or []
+    if olu:
+        report.add("yayinci beslemeleri", False, "makale vermiyor: " + ", ".join(olu))
+
     turns = (bulletin.get("podcast") or {}).get("turns") or []
     report.add(
         "podcast bolumu",

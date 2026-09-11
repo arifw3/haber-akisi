@@ -98,6 +98,26 @@ def extract_summary(item: ET.Element) -> str:
     return best[:_SUMMARY_MAX]
 
 
+def _item_link(item: ET.Element) -> str:
+    """RSS ogesinin baglantisi.
+
+    Duz <link> beklenir ama herkes oyle yazmiyor: Milliyet RSS ogesinin
+    icinde <atom:link href="..."> kullaniyor. Duz <link> arayan parser
+    bu feed'in 20 ogesinin tamamini sessizce atiyordu — feed saglikli,
+    haberler oradaydi, biz goremiyorduk.
+    """
+    link = (item.findtext("link") or "").strip()
+    if link.startswith("http"):
+        return link
+
+    for node in item.findall(f"{ATOM}link"):
+        rel = node.get("rel") or "alternate"
+        href = (node.get("href") or "").strip()
+        if rel == "alternate" and href.startswith("http"):
+            return href
+    return ""
+
+
 def parse_articles(raw: bytes) -> list[Article]:
     """Bozuk XML yaygin: once dogrudan, sonra temizlenmis halini dene."""
     root = None
@@ -113,7 +133,7 @@ def parse_articles(raw: bytes) -> list[Article]:
     articles = []
     for item in root.findall(".//item"):
         title = _clean(item.findtext("title"))
-        link = (item.findtext("link") or "").strip()
+        link = _item_link(item)
         if title and link.startswith("http"):
             articles.append(
                 Article(title, link, extract_image(item), extract_summary(item), extract_date(item))
@@ -160,6 +180,11 @@ class ImageResolver:
         self.threshold = threshold
         self._cache: dict[str, list[Article]] = {}
         self.stats = {"aranan": 0, "eslesen": 0, "gorselli": 0, "ozetli": 0}
+        # Hic makale vermeyen yayinci beslemeleri. Bunlar sessizce
+        # bosaliyordu: URL olmus ya da bicim degismis, kod hatayi yutuyor,
+        # haber gorselsiz kaliyor ve kimse sebebini bilmiyor. 2026-09-11'de
+        # 14 beslemenin 5'i bu durumdaydi.
+        self.empty_feeds: list[str] = []
 
     def _articles_for(self, domain: str) -> list[Article]:
         if domain in self._cache:
@@ -171,6 +196,10 @@ class ImageResolver:
                 articles.extend(parse_articles(fetch(url, timeout=20)))
             except (FeedError, OSError):
                 continue
+
+        if not articles and domain not in self.empty_feeds:
+            self.empty_feeds.append(domain)
+
         self._cache[domain] = articles
         return articles
 

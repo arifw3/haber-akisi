@@ -176,48 +176,53 @@
     ],
     "cumhuriyet.com.tr": [
       "https://www.cumhuriyet.com.tr/rss",
-      "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
-      "https://www.cumhuriyet.com.tr/rss/ekonomi",
-      "https://www.cumhuriyet.com.tr/rss/dunya",
       "https://www.cumhuriyet.com.tr/rss/bilim-teknoloji",
-      "https://www.cumhuriyet.com.tr/rss/saglik"
+      "https://www.cumhuriyet.com.tr/rss/dunya",
+      "https://www.cumhuriyet.com.tr/rss/ekonomi",
+      "https://www.cumhuriyet.com.tr/rss/gundem",
+      "https://www.cumhuriyet.com.tr/rss/saglik",
+      "https://www.cumhuriyet.com.tr/rss/siyaset",
+      "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
+      "https://www.cumhuriyet.com.tr/rss/spor",
+      "https://www.cumhuriyet.com.tr/rss/turkiye"
     ],
     "haberturk.com": [
-      "https://www.haberturk.com/rss"
+      "https://www.haberturk.com/rss",
+      "https://www.haberturk.com/rss/manset.xml",
+      "https://www.haberturk.com/rss/gundem.xml",
+      "https://www.haberturk.com/rss/ekonomi.xml",
+      "https://www.haberturk.com/rss/dunya.xml",
+      "https://www.haberturk.com/rss/spor.xml"
     ],
     "milliyet.com.tr": [
       "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml",
-      "https://www.milliyet.com.tr/rss/rssnew/sporrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/spor.xml",
       "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml"
     ],
     "sozcu.com.tr": [
-      "https://www.sozcu.com.tr/feed/"
+      "https://www.sozcu.com.tr/rss/tum-haberler.xml",
+      "https://www.sozcu.com.tr/rss/gundem.xml",
+      "https://www.sozcu.com.tr/rss/ekonomi.xml",
+      "https://www.sozcu.com.tr/rss/dunya.xml",
+      "https://www.sozcu.com.tr/rss/spor.xml"
     ],
     "donanimhaber.com": [
       "https://www.donanimhaber.com/rss/tum/"
-    ],
-    "ntvspor.net": [
-      "https://www.ntvspor.net/rss"
     ],
     "ntv.com.tr": [
       "https://www.ntv.com.tr/son-dakika.rss",
       "https://www.ntv.com.tr/teknoloji.rss"
     ],
     "trthaber.com": [
-      "https://www.trthaber.com/sondakika.rss"
+      "https://www.trthaber.com/sondakika.rss",
+      "https://www.trthaber.com/manset.rss"
     ],
     "sabah.com.tr": [
       "https://www.sabah.com.tr/rss/gundem.xml",
       "https://www.sabah.com.tr/rss/spor.xml"
     ],
-    "t24.com.tr": [
-      "https://t24.com.tr/rss"
-    ],
     "diken.com.tr": [
       "https://www.diken.com.tr/feed/"
-    ],
-    "birgun.net": [
-      "https://www.birgun.net/xml/rss"
     ],
     "bloomberght.com": [
       "https://www.bloomberght.com/rss"

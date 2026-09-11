@@ -214,6 +214,8 @@ def build(config: dict | None = None) -> dict:
         "health": health,
         "total": sum(len(s["items"]) for s in segments),
         "image_stats": resolver.stats if resolver else {},
+        # Hic makale vermeyen yayinci beslemeleri denetime tasinsin.
+        "empty_publisher_feeds": resolver.empty_feeds if resolver else [],
         "history_skipped": history.skipped if history else 0,
         "audio": None,
         "cues": [],

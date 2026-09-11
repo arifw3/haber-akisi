@@ -1,4 +1,4 @@
-HABER AKIŞI — 10 Eylül 2026
+HABER AKIŞI — 11 Eylül 2026
 
 Google Haberler RSS akışlarından derlenmiştir. Bir olayı kaç farklı yayıncının yazdığı önem sinyali olarak kullanılır. Özetler haber başlıklarıyla sınırlıdır; makale gövdesi kaynakta yer alır.
 
@@ -6,478 +6,458 @@ Google Haberler RSS akışlarından derlenmiştir. Bir olayı kaç farklı yayı
 TÜRKİYE
 ============================================================
 
-1. Gürlek: Borsadaki manipülatif işlemler karşılıksız bırakılmamalı
+1. Levi's ve Mavi'ye kumaş veren 73 yıllık şirket fabrika kapattı
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Gürlek, Borsadaki manipülatif işlemler karşılıksız bırakılmamalı. Borsa'da manipülasyona operasyon, 4 gözaltı. Bu haberi 5 ayrı kaynak yazdı.
-   - NTV Haber: Bakan Gürlek: Borsada takip ettiğimiz süreçler var
-   - Hürriyet: Borsa'da manipülasyona operasyon: 4 gözaltı
-   - Bianet: Borsa İstanbul'da manipülasyon gözaltısı: Operasyonlar neden artıyor?
-   Bağlantı: https://news.google.com/rss/articles/CBMioAFBVV95cUxNWkhER3NrbC1OME9aMWdIcW1rNGJ3XzNBWXU0N0tuWmh0STdndFltRzlDUmRfSldCNldJMlhlQUtaTjJUME5HSnlrdHlIRDJWdjZldDctMjViNndVYkhuRWRxcUFvRmJMTkZpNnFLY3hVdFhsRVhZcVAtaHBNWnJIWjZjZGduZ0tYMHMwd2lOY2p6SmRtVXhiUVhycXBBUUo5?oc=5
+   Özet: Bloomberg Ha Te. Levi's ve Mavi'ye kumaş veren 73 yıllık şirket fabrika kapattı. Kayseri'de 73 yıllık tarih böyle son buldu, İşte Orta Anadolu'nun çalışanlara gönderdiği resmi yazı. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: 73 yıllık tekstil devi kepenk indirdi: Dünyaca ünlü markalara üretim yapıyordu
+   - Kayseri Olay Haber: 73 yıllık sanayi devinin ardından Finans Profesörü Boztosun'dan dikkat çeken uyarı!
+   - Nefes Gazetesi: 73 yıllık tekstil devinden veda. Kepenk indirdi, tesisler kapanıyor
+   Bağlantı: https://news.google.com/rss/articles/CBMinwFBVV95cUxPaHR3WDFvXzNucXJ5SkFjTVdZZjFrVHBpSFBrTkVXY0Q3R2RmN3ExbzRDZ1RkNmZCVFNUZnc4LXkzZU5TOHd3SW5hU25BbVZLbXhNdjVmUHhFNHd4aVRfLTBQWlhIMDdsSU1LaVI0RVNuYUVRZnAzT1o2T0pubXdhY0Z0T1VyUVZ2QVRWNmsyajM4SGNBVXdFUldCMTVwYVE?oc=5
 
-2. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit
+2. FETÖ'nün emniyet gizli yapılanmasına operasyon: 20 gözaltı
+   Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
+   Özet: Te Re Te Haber. FETÖ'nün emniyet gizli yapılanmasına operasyon, 20 gözaltı. İtirafçı Garson'un hafıza kartı harekete geçirdi, 20 şüpheli gözaltında. Bu haberi 5 ayrı kaynak yazdı.
+   - NTV Haber: İtirafçı Garson'un hafıza kartı harekete geçirdi: 20 şüpheli gözaltında
+   - Haber 7: 6 ilde FETÖ mahrem yapılanmasına operasyon: 20 gözaltı
+   - Yeni Akit Gazetesi: Türkiye güne dev operasyonla uyandı! Gözaltına alınanlar arasında kamu görevlileri de var
+   Bağlantı: https://news.google.com/rss/articles/CBMiqwFBVV95cUxOaUlpYmxVek40RkVKeUkzZWR4T056LTlmXzFxRUtqMHdaRGpsVjNKS0JqN2s4T3owdUhMME0xSVFkWHdGbGlyTEZlSVRLRklTX1libHd4QTc0blIwbWVodk1lY3AwSmNMcDJzbGpaM01zNDl1ZjV5dEhOZGwzb2dndUFER2dsZ2VNQWM4Vm9Ib1QzY09xZFZ5NHc0amhJSkV3VmE1d1JNYnNVNWM?oc=5
+
+3. Manisa'daki cinayetin şüphelisiydi: İzmir'de saklandığı çiftlik evinde yakalandı
+   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Cumhuriyet. Manisa'daki cinayetin şüphelisiydi, İzmir'de saklandığı çiftlik evinde yakalandı. Çocukluk arkadaşını öldüren cinayet zanlısı İzmir'de yakalandı. Bu haberi 5 ayrı kaynak yazdı.
+   - Habertürk: Çocukluk arkadaşını öldüren cinayet zanlısı İzmir'de yakalandı
+   - Ege'de Sonsöz: Manisa'daki cinayet zanlısı İzmir’de yakalandı
+   - yeniasir.com.tr: Çiftlik evinde saklanıyordu! Manisa’daki cinayetin şüphelisi İzmir’de yakalandı
+   Bağlantı: https://www.cumhuriyet.com.tr/turkiye/manisa-daki-cinayetin-suphelisiydi-izmir-de-saklandigi-ciftlik-evinde-yakalandi-2536780
+
+4. CHP'li Faik Öztrak'tan Mansur Yavaş açıklaması: "Hayal kırıklığı"
+   Kaynak: CNN Türk (bu olayı 5 yayıncı yazdı)
+   Özet: Si En En Türk. Ce He Pe li Faik Öztrak'tan Mansur Yavaş açıklaması, Hayal kırıklığı. Ce He Pe nin 103. yıl kutlamasında dikkat çeken tablo, Anıtkabir’de var, resepsiyonda yok. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: CHP ile Mansur Yavaş arasında çatlak büyüyor: Yavaş’ın o sözlerini tehdit saydı
+   - Haber 7: İpler koptu! CHP'den Mansur Yavaş'a ağır sözler! 'CHP kapatılsın' diyen Balbay'a cevap!
+   - T24: CHP’nin 103. yıl kutlamasında dikkat çeken tablo: Anıtkabir’de var, resepsiyonda yok
+   Bağlantı: https://news.google.com/rss/articles/CBMiogFBVV95cUxQMXBSaGVjUlNTd3hac2QxZU02M0tackxqaU9rdUtRMVYxZHdpQ2F5cDhGcW9QYWNOeTVsa0NQQnhwZ2ZyMmVYYkZVM21vdWRKS2NKcTh4ZUtsSGp4NFFvX05zT3FJSE5uVUl6bFQ3bkVaLXQ0RGwwaDh6LWxhOFN2NEFKZnNOaTc4TnNmMGdtVS1lT01mTFkyTUpmRFZ3OW5MSkE?oc=5
+
+5. Kilosu servet değerinde: Hasadı başladı
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Ünlü oyuncu Melisa Döngel’e trafikte silahlı tehdit. Silahını çekip oyuncunun aracına doğrulttu. Bu haberi 5 ayrı kaynak yazdı.
-   - Mynet: Melisa Döngel trafikte kabusu yaşadı: Önünü kesip silahla tehdit etti - Magazin Haberleri
-   - cumhuriyet.com.tr: Oyuncu Melisa Döngel’i silahla tehdit etti: Tabancaya el konuldu, tutuklandı
-   - Odatv: Silahını çekip oyuncunun aracına doğrulttu
-   Bağlantı: https://news.google.com/rss/articles/CBMijAFBVV95cUxQblJhSlJSdGxBVERGbGhiMjhCam16aG5uMU1yU2V0NkxPNDBpOFl4SWpPQjU3TVdPbS1TeTZoTkROMVpuZzBWZjlHQ2FpUnFCU2ZpX01BU2FVUVRFeEdKOVUtSXpIMWtvZ3hPSHluZk5ldUxjRzdKdnVYbmpoZGg4RHVCQ3BlOFRNbWZSatIBkgFBVV95cUxPTmNabFpwR3JULVpJU29DbnVELU9Qc2habmRDeXpPenF3QmJBOWtqNFIzZVlVcWg2ckRtWUZrdFVCWnktZ3lCUksxeDlKeXJzbGZmQWM5QXU0T0N3OGJVYkdzVmQta3VUelBxclUyTHcxRWYzQ1NKTVdsWlp6NUhxRV9IaVZFeEtjTEwya2kzMUctdw?oc=5
+   Özet: Sözcü Gazetesi. Kilosu servet değerinde, Hasadı başladı. Bursa'nın zeytin mirası Gemlik ve Orhangazi'de yaşatılıyor. Bu haberi 5 ayrı kaynak yazdı.
+   - Habertürk: Gemlik zeytinin hasadı şenlikle başladı
+   - BURSA BÜYÜKŞEHİR BELEDİYESİ: Bursa'nın zeytin mirası Gemlik ve Orhangazi'de yaşatılıyor
+   - Bursada Bugün: Uluslararası heyetler Zeytin Festivali için Gemlik'e geldi
+   Bağlantı: https://www.sozcu.com.tr/kilosu-servet-degerinde-hasadi-basladi-p357402
 
-3. Şimşek: Serbest dalgalı kura geçiş için belli şartlar var
-   Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Şimşek, Serbest dalgalı kura geçiş için belli şartlar var. Hazine ve Maliye Bakanı Şimşek, Gini katsayısına bakıldığında, gelir dağılımında anlamlı bir iyileşme var. Bu haberi 5 ayrı kaynak yazdı.
-   - Diken: Şimşek: Dalgalı kur rejimine geçiş için enflasyon hala görece yüksek
-   - birgun.net: Hazine ve Maliye Bakanı Şimşek: Gini katsayısına bakıldığında, gelir dağılımında anlamlı bir iyileşme var
-   - TRT Haber: Bakan Şimşek: Fiyat istikrarına olan bağlılığımız tamdır
-   Bağlantı: https://news.google.com/rss/articles/CBMilwFBVV95cUxQNEszTVBBdDVzSFBYaXFVREY2R0M1UjVhNmNuNHNTRVBQSVJhOEo4UkJRR21QbnlTbXZBN010VjRNbGJ2aU91T1JEaG5YcElJa0Jqc0swVEp5SmV5Ml8yYkJvVTluUkljZFJOcUk2NkdZVUxyZEQ4ZzF6TGtXYmF2UDhpOUdvU0cwNFB6MmxPZVVnUklaajlB?oc=5
+6. Özel'den Erdoğan'ın o çıkışına yanıt: 'Milletin umudu olan seçimler atlatılmaz'
+   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Cumhuriyet. Özel'den Erdoğan'ın o çıkışına yanıt, Milletin umudu olan seçimler atlatılmaz. Özgür Özel Kars'tan seslendi, Bugünden seçime hazırız, dünden razıyız. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: Özgür Özel'den Erdoğan'ın 'yaklaşan seçim' sözlerine yanıt: Emekli açlığı atlatamıyor ki sen seçimi atlatasın
+   - Habertürk: Özgür Özel Kars'tan seslendi: "Bugünden seçime hazırız, dünden razıyız"
+   - Odatv: Özgür Özel Kars'ta: Erdoğan'a 'seçim yanıtı
+   Bağlantı: https://www.cumhuriyet.com.tr/siyaset/ozel-den-erdogan-in-o-cikisina-yanit-milletin-umudu-olan-secimler-atlatilmaz-2536709
 
-4. Tom Barrack'tan 'bize Türk derlerdi' çıkışı
+7. Gelin arabasına asılan yazıyı gören kayınpeder damadı hastanelik etti
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Tom Barrack'tan bize Türk derlerdi çıkışı. Çok renkli resepsiyon. Bu haberi 5 ayrı kaynak yazdı.
-   - TRT Haber: Cumhurbaşkanı Erdoğan, ABD Ankara Büyükelçisi Barrack'ı kabul etti
-   - Sabah: “Çok renkli” resepsiyon
-   - Odatv: Tom Barrack: 'Büyükbabama Türk derlerdi’
-   Bağlantı: https://news.google.com/rss/articles/CBMif0FVX3lxTE5nSFA1dDJicVZXT3NwWlhJVlQ0ZU9rTnVqYzVLSlhSWngySmFlQ3RNcTNqTll1dkNqdHI0dHFFeWdXclM2cjN4dTdvRmhGSGsyYm9HTTdWN0FpVU9KSnROSlJhWTlXV3FGekhNMVdPbzdjQXMyTlVkbkRxcnFqcVE?oc=5
+   Özet: Sözcü Gazetesi. Gelin arabasına asılan yazıyı gören kayınpeder damadı hastanelik etti. Ankara'da gelin arabasındaki yazı kavgaya dönüştü, damat hastanelik oldu. Bu haberi 5 ayrı kaynak yazdı.
+   - Korkusuz Gazetesi: Gelin arabasına asılan yazı Kayınpederi deliye döndürdü: Damadını hastanelik etti
+   - Yeni Alanya: Düğünde arabasına yazdırdığı yazı hastanelik etti!
+   - Haberler: Gelin arabasına asılan yazıya bakın! Kayınpeder görüp damadı hastanelik etti
+   Bağlantı: https://news.google.com/rss/articles/CBMipAFBVV95cUxOLXQ0QUZQUFAzeGZEaWR5WFpHemdZaHdPdFpCOG5NNmIyMkhjS3hnSjNmblJubWZSTEZpWDZJbHRRNlJtenZobi1TeWpIenFvbEtTREQ0UDJXVC00UGRXNWlXUmhXZVhxMXYzaW1fbVhwZmY1clJQZDh5S0M5YlN0eEE4WENmOENEQ2VFTnk0VE5FR0xBMmZYTm1QM3lGWHRRU0JSWg?oc=5
 
-5. Orta Doğu'da KAAN ve TOLGA rüzgarı: Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Orta Doğu'da KAAN ve TOLGA rüzgarı, Türkiye'den Doğu Akdeniz'de dengeleri değiştirecek hamleler. Türk devi HAVELSAN'dan bölgede tarihi hamle, HAMZA-1 için imzalar atıldı. Bu haberi 5 ayrı kaynak yazdı.
-   - haber7.com: Türk devi HAVELSAN'dan bölgede tarihi hamle: HAMZA-1 için imzalar atıldı!
-   - NTV Haber: Türk savunma sanayinde tarihi imza. Hamza-1 satışa çıkıyor
-   - Anadolu Ajansı: Makine ve Kimya Endüstrisinden Mısır'da "Zafer" adımı
-   Bağlantı: https://www.hurriyet.com.tr/dunya/orta-doguda-kaan-ve-tolga-ruzgari-turkiyeden-dogu-akdenizde-dengeleri-degistirecek-hamleler-43301962
-
-6. Nihat abi Çanakkale'yi aldı, gözünü İstanbul'a dikti
+8. Trabzonlulara hakaret eden fenomen hakkında gözaltı kararı: 'Ulan Trabzonlu y...'
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Nihat abi Çanakkale'yi aldı, gözünü İstanbul'a dikti. Köprü ve otoyol özelleştirilmesi, Yabancı ve yerli tekeller ihaleye hazırlanıyor. Bu haberi 5 ayrı kaynak yazdı.
-   - birgun.net: Köprü ve otoyol özelleştirilmesi: Yabancı ve yerli tekeller ihaleye hazırlanıyor
-   - T24: Yeni Partili Yavuzyılmaz'dan köprü ve otoyolların özelleştirilmesine ilişkin iktidara soru: Bayramlarda ücretsiz geçişler ücretli hale mi gelecek?
-   - Halk TV: Yavuzyılmaz’dan özelleştirmelere sert tepki: Vatandaşları yandaş şirketlerin müşterisine dönüştürmek istiyor
-   Bağlantı: https://news.google.com/rss/articles/CBMijAFBVV95cUxQSmJGNDFUb2xwZXNZenJTMl9CQ013cU5XU18zeDBWakx2QWxlX0Z6NXVLaDlTQk5zUXFnTDgzbHp0ZU1KQWoyUldEYlhLbkkxZkYwVkx6WVVWbGRjSWExYlZTTklvRzJrUjg2WUZ0R2pLTElqQzZwckYyTmIzSUhSbk5sY3U2RW9jS0w1VA?oc=5
-
-7. Maltepe'de kiracı, ev sahibine saldırdı: İki ölü, bir avukat ağır yaralı
-   Kaynak: Diken (bu olayı 5 yayıncı yazdı)
-   Özet: Diken. Maltepe'de kiracı, ev sahibine saldırdı, İki ölü, bir avukat ağır yaralı. Maltepe’de 2 kişinin hayatını kaybettiği silahlı saldırı, Merkez Bankası’nın faiz kararı, Mansur Yavaş’tan gereğini yapmaktan çekinmem mesajı. İşte günün özeti. Bu haberi 5 ayrı kaynak yazdı.
-   - Sözcü Gazetesi: Maltepe'de kiracı dehşeti: Ev sahibinin eşini öldürdüğü anlar kamerada
-   - Hürriyet: Maltepe'de ev sahibi ile işletmeci kapıştı: Silahlı olayda özel harekât devrede: 2 ölü, 1 yaralı
-   - Mynet: Maltepe’de 2 kişinin hayatını kaybettiği silahlı saldırı, Merkez Bankası’nın faiz kararı, Mansur Yavaş’tan “gereğini yapmaktan çekinmem” mesajı... İşte günün özeti!
-   Bağlantı: https://www.diken.com.tr/maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali/?utm_source=rss&utm_medium=rss&utm_campaign=maltepede-kiraci-ev-sahibine-saldirdi-iki-olu-bir-avukat-agir-yarali
-
-8. Caniye en ağır ceza
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Caniye en ağır ceza. Ayşe Tokyaz cinayeti, Cemil Koç'a ağırlaştırılmış müebbet hapis cezası. Bu haberi 5 ayrı kaynak yazdı.
-   - Diken: Ayşe Tokyaz cinayeti: Cemil Koç'a ağırlaştırılmış müebbet hapis cezası
-   - birgun.net: Sanığın şiddet görüntüleri ortaya çıktı
-   - Milliyet: Ayşe Tokyaz cinayeti davası: Eski polis Cemil Koç'a ağırlaştırılmış müebbet
-   Bağlantı: https://www.hurriyet.com.tr/gundem/caniye-en-agir-ceza-43301895
+   Özet: Sözcü Gazetesi. Trabzonlulara hakaret eden fenomen hakkında gözaltı kararı, Ulan Trabzonlu y. Trabzonluları hedef alan sosyal medya ünlüsüne soruşturma. Bu haberi 5 ayrı kaynak yazdı.
+   - NTV Haber: Trabzonluları hedef alan sosyal medya ünlüsüne soruşturma
+   - Cumhuriyet: Sosyal medya ünlüsü Ertuğrul Kaya hakkında soruşturma başlatıldı
+   - Haber 7: Trabzonluları hedef almıştı! Sözde fenomene kötü haber...
+   Bağlantı: https://news.google.com/rss/articles/CBMivwFBVV95cUxNVXlHdzNpSlAwOHNKM1VMeWFQcTRMNGpGMFdoajRjVzB3Y2w0MFBxVlRPTjVOV08wWkQzYUdISFpXRjVfdFBDWGhTcDl6cXJremtqMWVYRVZ5VjhGT2FNN19WV3lLS3V3YURpWHZPNEp5QnNnZzRzaTZWWWptNnBMd1V5NzcyVFJ5S0FlZEJOZTlWQ3RGZmxuQXMzQ04wSUxzR2xtY1lvZ0YyZmhwbjlBNEZwU2VJckJ3bFhSX2Nqcw?oc=5
 
 ============================================================
 DÜNYA
 ============================================================
 
-1. Trump: Savaş seçimlerden önce de bitebilir
+1. "Husilerin Babülmendep'teki kontrolü enerji piyasaları için risk"
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Trump, Savaş seçimlerden önce de bitebilir. Wall Street Journal, Danışmanları Trump'a İran ile savaşın yıllarca sürebileceği uyarısını yaptı. Bu haberi 5 ayrı kaynak yazdı.
-   - haber7.com: Trump ABD-İran savaşın biteceği tarihi açıkladı: Ara seçimlerden sonra diye söz verdi
-   - Investing.com Türkiye: Trump İran savaşı hakkında konuştu; Oracle, Adobe rapor açıklayacak
-   - NTV Haber: ABD'den İran'a tehdit. "Savaş gemilerimizi vurmaya devam ederlerse..."
-   Bağlantı: https://news.google.com/rss/articles/CBMigwFBVV95cUxQVWtLNHQ3djJvUFZNbHI3VW16UjZMY1J5XzIwZnNtdzZDcUc2eHRPaV9zYUh4SkNwLV9hZFdLZmNERmVHeXR0NnRFdFljUkw3VmI5MnMzZ2NvTkpnbXFReFBhMVFZNS1VY21kUVJNTnlUcGpCdlg1VlJkSEloVUozRWhaZw?oc=5
+   Özet: Bloomberg Ha Te. Husilerin Babülmendep'teki kontrolü enerji piyasaları için risk. Suudi Arabistan saldırılar sonrası Doğu-Batı Boru Hattını kapattı. Bu haberi 5 ayrı kaynak yazdı.
+   - Sözcü Gazetesi: Kızıldeniz’de alarm: Stratejik ada artık Husilerin kontrolünde
+   - Investing.com Türkiye: Suudi Arabistan saldırılar sonrası Doğu-Batı Boru Hattını kapattı
+   - Haber 7: Suudi Arabistan'ın stratejik petrol hattı bombalandı: ABD'li ajanlar sahada
+   Bağlantı: https://news.google.com/rss/articles/CBMioAFBVV95cUxQdDVsYmF5OWowTjRYbS14aThJY3lVaURJMV9fb09LaHd3LS1fWllGYWVUcmNsNzRXYURQMnY5Y0h4QTNrNUZzRTUteFNZRmFsMXRWeC1CMGcxUDVBWm9TQ09SSnAtdzI4Q01BcWhFM0xRYURUVWRDcVdZNnNOTmlTR3V6SlhKOU9WaGt2SVRHYTFMczNxUGd1SzBFamlIcFV5?oc=5
 
-2. Dışişleri'nden Suriye'nin nükleer dosyasının kapanması yönünde alınan karara ilişkin açıklama
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Dışişleri'nden Suriye'nin nükleer dosyasının kapanması yönünde alınan karara ilişkin açıklama. Esad’ın kimyasal silahları imha ediliyor. Bu haberi 5 ayrı kaynak yazdı.
-   - haber7.com: Türkiye'den son dakika Suriye duyurusu! Tam destek ilan edildi!
-   - evrensel.net: UAEA Suriye hakkındaki 'uyumsuzluk' kararını kaldırdı
-   - Defence Turk: Esad’ın kimyasal silahları imha ediliyor
-   Bağlantı: https://www.hurriyet.com.tr/gundem/disislerinden-suriyenin-nukleer-dosyasinin-kapanmasi-yonunde-alinan-karara-iliskin-aciklama-43302834
-
-3. Rusya: Pandora'nın kutusunu açtılar
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Rusya, Pandora'nın kutusunu açtılar. Kremlin’den dünyayı tedirgin eden mesaj, Yok edilmeye devam edilecek. Bu haberi 5 ayrı kaynak yazdı.
-   - Sözcü Gazetesi: Kremlin’den dünyayı tedirgin eden mesaj: Yok edilmeye devam edilecek
-   - Euronews.com: Rusya'nın Ukrayna saldırılarında en az 3 kişi öldü; Zelenskiy Kanada'da
-   - Anadolu Ajansı: Rusya: Ukrayna'nın liman, gemi, askeri sanayi ve lojistik tesislerine saldırıları sürdürüyoruz
-   Bağlantı: https://www.hurriyet.com.tr/dunya/rusya-pandoranin-kutusunu-actilar-43302677
-
-4. Kısa hayatında 7 kez ameliyat olmuştu: Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti
-   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Kısa hayatında 7 kez ameliyat olmuştu, Tacını taktıktan sadece 2 yıl sonra hayatını kaybetti. Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Güzellik kraliçesinin yürek yakan sonu... Daha 22 yaşında kelebek gibi uçup gitti... Kısacık hayatında 7 kez ameliyat olmuştu
-   - Vietnam.vn: Avusturya Güzeli, Miss Universe 2026 yarışmasına katılmasına iki ay kala, 22 yaşında hayatını kaybetti.
-   - Nefes Gazetesi: Ülkenin en güzel kadını hayatını kaybetti: Henüz 22 yaşındaydı
-   Bağlantı: https://news.google.com/rss/articles/CBMiwgFBVV95cUxNandIeTdpVFhuZld4eUZDSHFzRUpJU0NGcGJwbTJJX1E2OWh4OHVRUnpSd1hudFBIWUZmREFVVl9PT21tWGVxbDJCUV96R21CYXhGYWoyYXRQa3d2X09uLW9wMkJDSnpSamxWaHJkVHk1N1d6YjMxSXREeGxKRU5tM0xxeEtKSG1RZW4zbUJxeHhzSkV0Rkw5andtRDd5Z0Z6S2hPRzdtUDNEWUZ5MjZ2YzhXMDhYbDhzdlVMcDVRT2ZjQQ?oc=5
-
-5. Gazze'deki ampute futbolcular Adidas'ı protesto ederek ürünlerini boykot çağrısı yaptı
+2. İsviçre Alpleri'nde otobüs kazası: Çok sayıda ölü var
    Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
-   Özet: Te Re Te Haber. Gazze'deki ampute futbolcular Adidas'ı protesto ederek ürünlerini boykot çağrısı yaptı. Skandal reklam için özür diledi. Bu haberi 5 ayrı kaynak yazdı.
-   - NTV Haber: Adidas reklamında İsrail askeri krizi. Boykot çağrısı yapıldı, şirket özür diledi
-   - medyascope.tv: Javier Bardem’den Adidas’a eski İsrailli asker tepkisi: "Ellerinde kan olan bir adamı seçti"
-   - Hürriyet: Skandal reklam için özür diledi
-   Bağlantı: https://news.google.com/rss/articles/CBMizgFBVV95cUxQX3pSNGtWRkd4d0hmQ2xBbHJvVnAtZTROeWFkVHpQU0haU0w0d21rcHM1cmFiaElEUm5ucDhsd3hOakNHVG56eU1OamFHNk12NFVnTFljQ2twVVZnamJ3RHZTbXdXRTdDMXFkS0E5clh0M3FoaGhqN3J2U0JXZkt1RGFJaFJ0R2VycDAxOVJZV0lBOUYzYnRBTXVRU0JoVTh1NGdyMk00RDZyMWpQTXJnTDNQZm1IcThOcEZVbmQybG1SdlVLdGVKb2o5LUd3QQ?oc=5
+   Özet: Te Re Te Haber. İsviçre Alpleri'nde otobüs kazası, Çok sayıda ölü var. İsviçre'de feci kaza. Tur otobüsü devrildi, 5 kişi hayatını kaybetti. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: İsviçre'de korkunç kaza: 5 ölü, 40 yaralı
+   - Euronews.com: İsviçre'nin doğusunda tur otobüsü devrildi: Ölü ve yaralılar var
+   - CNN Türk: İsviçre'de feci kaza! Tur otobüsü devrildi: 5 kişi hayatını kaybetti
+   Bağlantı: https://news.google.com/rss/articles/CBMiogFBVV95cUxQMHNBMHc5QW92X3NuQUlOTmhpRUhkODE1ejJoQktHY014QlZCeUp2YWVfeFhxVG1JczVXU0pkM041LWtCVlphaF92UFNJdk9WbTVFSE95LVUwMTNWdm13YkRkYkQwcEdjdVE2UDZOT0FleXExc1VtcTA4LUJCM2ZKYUd3dzBjZEIxRkVpVWtLcWVYUllwQWRCMUNqQVlHZkYtZGc?oc=5
 
-6. Bebek mamalarında sakinleştirici ilaç çıktı: Market raflarında şırıngayla enjekte etmişler
+3. Bitkisel içecek faciası: Can kaybı 30’a yükseldi
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Bebek mamalarında sakinleştirici ilaç çıktı, Market raflarında şırıngayla enjekte etmişler. Kudüs’te bebek mamalarına anestezik madde enjekte eden İsrailli gözaltına alındı. Bu haberi 5 ayrı kaynak yazdı.
-   - Haberler: Kudüs'te bebek mamalarında korkunç tuzak! 5 çocuk hastanelik oldu
-   - takvim.com.tr: İsrailli cani Shemla çocukları zehirledi! Elinde şırıngayla market market dolaşmış
-   - Halk TV: İsrailli cani bebek mamalarına zehir enjekte etmiş! Kudüs'te yaşandı
-   Bağlantı: https://news.google.com/rss/articles/CBMivwFBVV95cUxNak5IaEIwcHF4X3pSRlItX1NNWHEtUC1JNzdMR2pUdXJqTlN3aVNjcWFYVmFUNHFOUVZxRWFfeE9lazQ4ZUxGQ24xSTRwdjRKaEM4dnBVaEVfNjh0ZUNqWEo1ZWZoc0c3cnJlZU0tdEE1NXY2Y005Z1d3ZEpYU3JLUkJSTW1USzVVUU5lYW56ekFDR1VwTmVwQkQxcWpqcEpvNGNsa2doeTNWSXlLbHo4Xzc5RHN0UGFtVWJHaWs5SQ?oc=5
+   Özet: Sözcü Gazetesi. Bitkisel içecek faciası, Can kaybı 30’a yükseldi. Nijerya’da ölüm zinciri, Bitkisel içecek sonları oldu. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Nijerya’da ölüm zinciri: Bitkisel içecek sonları oldu
+   - Cumhuriyet: 'Bitkisel içecek' faciasında can kaybı artıyor: 30 kişi hayatını kaybetti
+   - Haberler: Nijerya'da "bitkisel içecek" tüketimi nedeniyle ölenlerin sayısı 30'a yükseldi
+   Bağlantı: https://www.sozcu.com.tr/bitkisel-icecek-faciasi-can-kaybi-30-a-yukseldi-p357421
 
-7. Gizli silahlarını ateşleyeceklerdi: NATO'yu kilitleyecek Rus planı son anda durduruldu
+4. Norveç Kraliyeti'nde peş peşe ölüm: Prenses Astrid hayatını kaybetti
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Gizli silahlarını ateşleyeceklerdi, NATO'yu kilitleyecek Rus planı son anda durduruldu. İzlanda açıklarındaki Northern Viking tatbikatına A Be De ilk kez gemi ve uçak göndermedi. Bu haberi 5 ayrı kaynak yazdı.
-   - Son Dakika: İzlanda açıklarındaki Northern Viking tatbikatına ABD ilk kez gemi ve uçak göndermedi
-   - hibya.com: Zaharova: NATO, Arktik bölgeyi Rusya ile jeopolitik çatışma alanına dönüştürdü
-   - QHA - Kırım Haber Ajansı: NATO, Arktik'te Rusya'nın denizaltı kablosu sabotaj tatbikatını engelledi
-   Bağlantı: https://news.google.com/rss/articles/CBMiugFBVV95cUxOSklyV2lVNDlIOVpqc1c2VDh5VE5UMkEwNGVfbUhBRnhQbWhTUGhaeTYwWkJMN0p0bldZTEUtZTlfVGxfWDcxYlBfMi1KNUlwNmxGMXJiRjlDemZ5VVl0dDRod0g5VE55UktlV3RWWWY4Y0ZORURQX3pJWm5FMUVUajRtWVY5YmREWU1pZVNYZEdsY3pBbGdEZkF5ZmF0MkhyemhkRTc2MjZyNDN2ZXdZVnpLVUtBb1Bvcnc?oc=5
+   Özet: Sözcü Gazetesi. Norveç Kraliyeti'nde peş peşe ölüm, Prenses Astrid hayatını kaybetti. İstersen dünyanın hakimi ol. Baba acısı insanı ağlatır. Bu haberi 5 ayrı kaynak yazdı.
+   - TRT Haber: Norveç Prensesi Astrid 94 yaşında hayatını kaybetti
+   - Hürriyet: İstersen dünyanın hakimi ol... Baba acısı insanı ağlatır
+   - Cumhuriyet: Norveç Kralı'na 'firavunvari' cenaze... Milyonlarca dolarlık tabut devlet bütçesinden karşılandı
+   Bağlantı: https://news.google.com/rss/articles/CBMic0FVX3lxTE1ST1VDeF9IWGZVWk44N1NnTnZ6UV9BWlNMT3kxLWRwM2ZxbEI2NXpvQTByNmhTbHI5cDdiLVRpTXRna04zMG5PUWdwcHhQUl9CREFfcjlKYUlfdHdRT1FFaG1EWjN4SHBMcGRHTThJdjJVMGs?oc=5
 
-8. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı
-   Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
-   Özet: Te Re Te Haber. Türkiye ve 7 ülkeden İngiltere'nin Batı Şeria kararına memnuniyet mesajı. Sermayeyi nasıl da tüketiyorlar. Bu haberi 5 ayrı kaynak yazdı.
-   - haber7.com: Trump’tan 12 ülkenin İsrail kararına ilk tepki: Neden birdenbire şimdi?
-   - Sabah: Sermayeyi nasıl da tüketiyorlar
-   - Yeni Şafak: İsrail'in en büyük krizi
-   Bağlantı: https://news.google.com/rss/articles/CBMivgFBVV95cUxOajZ1Y1ZzVmpsNHdrOW02QXp2YnhlT0t6VmVHZ1lYcjhnN1dadzhtTjZyaDhFVDgtZ1FnTHRPT3JOYUNOc0F0bnNaSmI3VFBqbzRsU0ROXzZvT3NndVBZZkZPUzFQdWRIQTdtVVY4d21TT25YcnN1cVB2cTFkRWNhSEZHcnlCTlVOT201LUxHNDlGcmZENjYteWFKV3pQbjUxLTZzUllqa1JaeU5iRDFla25EWnhURFJubmpzanhB?oc=5
+5. Kundaklama, eziyet, hırsızlık: Mülteciler İspanyol şehrini talan etti
+   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Sözcü Gazetesi. Kundaklama, eziyet, hırsızlık, Mülteciler İspanyol şehrini talan etti. Sebte'deki göçmen krizi, A Be den İspanya'ya 114 milyon avroluk yardım. Bu haberi 5 ayrı kaynak yazdı.
+   - Euronews.com: Ceuta'daki göçmen akını öncesi istihbarat uyarıları tartışması: İspanyol yetkili istifa etti
+   - diken.com.tr: Sebte'deki göçmen krizi: AB'den İspanya'ya 114 milyon avroluk yardım
+   - Bloomberght: AB'den İspanya'ya göçmen finansmanı
+   Bağlantı: https://news.google.com/rss/articles/CBMioAFBVV95cUxOa2lHQjEyS1VFV1Fnb0VVQkhDelo5enppcmpONTBBRmhQaXoxQWpFQ3d5Tkk5ZHBqdktDZHotMldQZmNmYWNYV0FYUTVxT3I1bTQ4dUZKbFJXdWQzWHp5c0NEbXp0ZjlzQXMtRUZCd1lGVk9LQ0paRTVPWlFTZTE2dUc4ODUwa1I3bWY4QnNoblJUcU1jNi1mTlEyQnBNR0lZ0gGmAUFVX3lxTE9pSVk5NG15N0YwdGp3N3dnZDBDVGIzVHBxckVjc1Z6LTV4TW1NSnpGeml6WjJLaGkyUzZUUUU4YlNHZ2NTOHVhelh4RHRPTlQzVHhQNlgxZ1NNbTBCaVhhM09pWm9WS09Fdm40OS0wRDI2VnM0eUxTaFg5N18tNV9IbGxiMVZlekxIU2FqNnFaQ192RXNaOU1CTE44dzZfRXhzdERxMnc?oc=5
+
+6. Tüm ilişkileri kesti, hava sahasını kapattı: Cezayir ile BAE arasında ipler neden koptu?
+   Kaynak: CNN Türk (bu olayı 5 yayıncı yazdı)
+   Özet: Si En En Türk. Tüm ilişkileri kesti, hava sahasını kapattı, Cezayir ile BAE arasında ipler neden koptu?. Cezayir-BAE, Çalkantılı ilişkide yeni düzlem. Bu haberi 5 ayrı kaynak yazdı.
+   - Anadolu Ajansı: Cezayir-BAE: Çalkantılı ilişkide yeni düzlem
+   - Haber 7: İki Arap ülkesi arasında büyük kriz! Tüm ilişkileri kestiler! Hava sahası kapatıldı
+   - Hürriyet: Cezayir ile BAE arasında ipler koptu
+   Bağlantı: https://news.google.com/rss/articles/CBMiwAFBVV95cUxOVkkyYk1qaktJc0xuVVlkdWtlXzkxZFI3M0VicVljZlhQZmtwOGRkdVhEcmhHSG5wcVFpc0lORWxOS3VuN2hBZjBKcTBvZFIxek9TOFJKVDF2Q28wMGVJQUdfNUtFYzBqWTZDV01vVmkwYlZPME5hTXhsYVBENV9LSVFUWFEwZ2lkei1FcEhCeGl2aHp2XzFSTTlUWHN0UUlfSWV4UlV6RFZ2OTRyM3NjQTg0WlRFSGRJUHpXMWp3UTI?oc=5
+
+7. Prens Selman'dan Trump'a telefon: Husileri vurun
+   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Hürriyet. Prens Selman'dan Trump'a telefon, Husileri vurun. CNN, 100'den fazla A Be De li askeri danışman, Husilere karşı Suudi Arabistan'a istihbarat sağlıyor. Bu haberi 5 ayrı kaynak yazdı.
+   - Habertürk: Axios yazdı: Suudi Arabistan ABD Başkanı Trump'tan Husilere saldırmasını istedi
+   - NTV Haber: Prens Selman "Husiler'e saldır" dedi, Trump reddetti
+   - T24: ABD basını: Suudi Arabistan Veliaht Prensi Selman Trump’ı iki kez aradı, "Husilere saldırılsın" talebi reddedildi
+   Bağlantı: https://www.hurriyet.com.tr/dunya/prens-selmandan-trumpa-telefon-husileri-vurun-43303150
+
+8. ABD'den İran'ın küresel gölge finansman ağına yaptırım
+   Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
+   Özet: Bloomberg Ha Te. A Be De den İran'ın küresel gölge finansman ağına yaptırım. A Be De yeni İran yaptırımını duyurdu, Türkiye'de faaliyeti olan şirketler de var. Bu haberi 5 ayrı kaynak yazdı.
+   - DW.com: ABD'den İran'a yeni yaptırımlar: Türkiye de listede
+   - Kurdistan24: ABD Hazine Bakanlığından 9 Iraklı iş insanına yaptırım
+   - Halk TV: ABD yeni İran yaptırımını duyurdu: Türkiye'de faaliyeti olan şirketler de var
+   Bağlantı: https://news.google.com/rss/articles/CBMilAFBVV95cUxPNlJ1Tmc3WTZTVUhXcjZ6QzBoRUV3dXJDZmMzQ1VocTlOYXBiTmUwZmVQQTFFdU5oeGQyY0EtLXdmaU1fSzNXNnZNVEx4cktrbkVkWjI3OWhXVE0tTEhjT3FBMlhhTUdMb1E4enljdmdkSklua0llTk9FS2djZ3Z5RjlDeEZfVEc4SVJKeld3OHc3eEVp?oc=5
 
 ============================================================
 EKONOMİ
 ============================================================
 
-1. Merkez Bankası faiz kararını açıkladı
-   Kaynak: TRT Haber (bu olayı 5 yayıncı yazdı)
-   Özet: Te Re Te Haber. Merkez Bankası faiz kararını açıkladı. A Be De de ÜFE yıllık bazda yüzde 5,4 ile tahminlerin üzerinde arttı. Bu haberi 5 ayrı kaynak yazdı.
-   - Diken: Merkez Bankası faizi sabit tuttu
-   - haberturk.com: SON DAKİKA: Merkez Bankası faiz kararını açıkladı! TCMB 2026 Eylül ayı faiz kararı ne oldu?
-   - cumhuriyet.com.tr: Türkiye Cumhuriyet Merkez Bankası eylül ayı faiz kararını açıkladı
-   Bağlantı: https://www.trthaber.com/haber/ekonomi/merkez-bankasi-faiz-kararini-acikladi-956464.html
-
-2. Fed'den faiz artışı beklentisi güçlendi
+1. Yeni fiili dolaşım oranlarının ilanında tarih belli oldu
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Fed'den faiz artışı beklentisi güçlendi. Altında A Be De istihdam verisi bekleyişi. Bu haberi 5 ayrı kaynak yazdı.
-   - Bigpara: FED faiz kararı 2026 Eylül Toplantısı | FED faiz kararı ne zaman açıklanacak, faiz indirimi olacak mı? ABD Merkez Bankası (FED) toplantısı ne zaman, saat kaçta? Küresel piyasalar ABD'de açıklanacak verilere odaklandı!
-   - Uzmanpara: FED FAİZ KARARI 2026 EYLÜL! ABD Merkez Bankası FED faiz kararı ne zaman, saat kaçta açıklanacak?
-   - haber.doviz.com: Altında ABD istihdam verisi bekleyişi
-   Bağlantı: https://news.google.com/rss/articles/CBMigAFBVV95cUxQNVJkZUlRVGR1ZG5mbG1wZnlZdldTeHFnVUcxNEZSWVpPYzl3SklfdzJ4RTdDN056WG1jTkYwekJjbHBEekQ1SkNiOU9PTU9GcEoyVWZZZFVaVmhSTDNzQmo0alBhWld5UjV2WV8wYl9jLUlUT1JzOU9ibUtmSmczUQ?oc=5
+   Özet: Bloomberg Ha Te. Yeni fiili dolaşım oranlarının ilanında tarih belli oldu. 128,8 milyar lira fonları terk etti. Bu haberi 5 ayrı kaynak yazdı.
+   - Ekonomim: 128,8 milyar lira fonları terk etti!
+   - Memurlar.Net: Yeni fiili dolaşım oranları 14 Eylül itibarıyla MKK tarafından yayımlanacak
+   - Para Analiz: Sermaye Piyasalarında Yeni Dönem: Fiili Dolaşım Verilerinde Hesaplama Metodu Değişti
+   Bağlantı: https://news.google.com/rss/articles/CBMilwFBVV95cUxPS1Vsa3dSY0xzUW93Sl9JZ3MzdHJxNGJuV0JnLTZFWHNuUUpoZXpoZHRpdGVaemNXUF9KWmM0M3djZ21yc0pFTEtJdllGZmw3WGI2Wk9vM0FMcEdOUnk5TzBkVEQ0MktzQXAxUkZoVDJPakNaUGNfVF8wbTNueHhSUXRJSzc4YWVJZlcyWUdXcUtwdG43Xzdn?oc=5
 
-3. Yabancıdan Haziran'dan bu yana en güçlü hisse satışı
+2. Nagel'den yeni faiz artışı sinyali
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Yabancıdan Haziran'dan bu yana en güçlü hisse satışı. Yabancılar borsada satıcı, tahvilde alıcı oldu. Bu haberi 5 ayrı kaynak yazdı.
-   - Ekonomim: Yabancılar borsada satıcı, tahvilde alıcı oldu
-   - T24: Yabancı yatırımcı borsayı sevdi ama her hisseyi değil: Ağustosta en çok aldıkları ve sattıkları hisseler hangileri oldu?
-   - Borsanın Gündemi: Yabancı yatırımcıdan Borsa İstanbul’da güçlü satış dalgası haberi
-   Bağlantı: https://news.google.com/rss/articles/CBMic0FVX3lxTE1WcmNaZEVDZ2gza05vVjlQaTZkbzQwVnVvR2M2ZUlBenVkcGRkMlIyVkwzQjJMZ0RCa3ZMTFNXdTNodXVJa0dMd2w5QWNaUG1JbThod0liSjl5NG8wenVSU1Y4aEwwVkNWSDhoVzEtbU5vMEE?oc=5
+   Özet: Bloomberg Ha Te. Nagel'den yeni faiz artışı sinyali. ECB Başkanı Lagarde, enflasyonun uzun süre hedefin oldukça üzerinde kalacağı uyarısında bulundu. Bu haberi 5 ayrı kaynak yazdı.
+   - Anadolu Ajansı: ECB Başkanı Lagarde, enflasyonun uzun süre hedefin oldukça üzerinde kalacağı uyarısında bulundu
+   - Investing.com Türkiye: ECB faizleri ekonomiyi frenlemek için artırabilir, Nagel
+   - Euronews.com: Avrupa tahvil getirileri küresel satış dalgasıyla yılların zirvesinde
+   Bağlantı: https://news.google.com/rss/articles/CBMiekFVX3lxTFBvcXc0eHR4UWxyd3ZnWE1FQ2ZKTWpyTGJtXzc0UzlXaTJpRElWdC1hYVhmYXJnMnAtZDhhYWJxQ3lrU2pGSE9NYzlhVlhHWmZaa1FKWkFQS3pZV3Z2ZEctU1czakVDOEozb3JkUjVMUXBrWUhsdE1Sc0RR?oc=5
 
-4. AKP'ye geçen Özlem Çerçioğlu'nun ailesine ait Jantsa, TOGG'un tedarikçisi oldu
-   Kaynak: T24 (bu olayı 5 yayıncı yazdı)
-   Özet: Te yirmi dört. A Ka Pe ye geçen Özlem Çerçioğlu'nun ailesine ait Jantsa, TOGG'un tedarikçisi oldu. Jantsa’nın bağlı ortaklığı JMW Jant, Togg’a tedarikçi seçildi. Bu haberi 5 ayrı kaynak yazdı.
-   - Sözcü Gazetesi: Özlem Çerçioğlu ailesine TOGG kıyağı
-   - Investing.com Türkiye: Jantsa’nın bağlı ortaklığı JMW Jant, Togg’a tedarikçi seçildi
-   - birgun.net: CHP’den AKP’ye geçmişti: Özlem Çerçioğlu’nun eşinin şirketine TOGG kıyağı
-   Bağlantı: https://news.google.com/rss/articles/CBMiygFBVV95cUxPRmhBM25nTElfai11bVU2WWZ5VkVrV0l0X2JXUGtiR2NmMEJvVnFmSlFZWEl1M1B0R0tkVTRjZHhiWXNDZ0VJa1hZNXRrWFZVSkhmLUtwMDdZQl9FWWM4amJMdGlEdF9qN09YeERLUDRJSHk3MURXLVM3MWVmZjlWM2wydFdpenNpQVFUeW5LMV95NDZjSjdfOVNGOWNvRmpBSDl0RktmclZzNUJhM1ZmcnFZR3lQMGMyWDl5MzlSZl96cVI3S3VwQVVR?oc=5
-
-5. Bakır 15 bin dolara yaklaşırken ‘balon’ uyarısı
+3. ABD'de motorin fiyatlarında tarihi rekor
    Kaynak: Bloomberght (bu olayı 5 yayıncı yazdı)
-   Özet: Bloomberg Ha Te. Bakır 15 bin dolara yaklaşırken ‘balon uyarısı. Altını tahtından etti yüzde 47 kazandırdı, Rekor üstüne rekor kıran madende yeni hedef belli oldu. Bu haberi 5 ayrı kaynak yazdı.
-   - Investing.com Türkiye: Bakır rekor kırdı ama Kanadalı bakır hisseleri neden düşüyor?
-   - Yeni Şafak: Altını tahtından etti yüzde 47 kazandırdı: Rekor üstüne rekor kıran madende yeni hedef belli oldu
-   - Para Analiz: Bakır altının getirisini ikiye katladı: Fiyatlar tarihi rekora çıktı
-   Bağlantı: https://news.google.com/rss/articles/CBMiiAFBVV95cUxORjFIZjJvQXJlbTQ4cVFQOThWaXI0b2lLZ0JYR2RKeU9OYUJmY25JcGxKalFfY05UanJmSjE3VVBKUHliZUx0ZlE5TmRxclZkVE9SYmxOV0t0b1ZpRmI3OGUxSGlSM1B3dkVQcWo4UFZqdF9TZzJfRXpfUEg2VjlEcnc5MGZ4anV5?oc=5
+   Özet: Bloomberg Ha Te. A Be De de motorin fiyatlarında tarihi rekor. Bu haberi 5 ayrı kaynak yazdı.
+   - Anadolu Ajansı: ABD'de dizel fiyatı ilk kez galon başına 6 doları aştı
+   - Yeni Şafak: Petrol varil fiyatı 2022 ne kadar oldu? 1 litre ham petrolün fiyatı! Benzin ve motorine zam gelecek mi? | Dünya Ekonomisi Haberleri
+   - Investing.com Türkiye: ABD’de dizel fiyatı İran savaşıyla rekor kırdı: Galon başına 6,06 dolar
+   Bağlantı: https://news.google.com/rss/articles/CBMiggFBVV95cUxOakFhMGpncVBZSW90UXpJTm5jb20ybnBMZ05XT1R2M2R1UXRoeEN0eGNJRUZKdTFUbE1kWXRWc1MxR3Y4MmpsQ0d3cmFLOGNXRkVEZ1VsMTh2ank2ejFoUkkyTmVqbi02TTJVWDc3a1FQSVlabUV0ZFlrcWxwQlNLYU13?oc=5
 
-6. Altın ağır adımlarla ilerlerken gümüş kanatlandı: 55 günde getirisi iki katını aştı
-   Kaynak: T24 (bu olayı 5 yayıncı yazdı)
-   Özet: Te yirmi dört. Altın ağır adımlarla ilerlerken gümüş kanatlandı, 55 günde getirisi iki katını aştı. Gümüşte dikkat çeken yükseliş, Neden yükseldi?. Bu haberi 5 ayrı kaynak yazdı.
-   - Sözcü Gazetesi: Gümüş gaza bastı: Yüzde 3'ten fazla yükseldi
-   - Investing.com Türkiye: Altın-gümüş oranı neden düşüyor?
-   - Gazete Oksijen: Gümüş, altından iki kat daha fazla kazandırdı
-   Bağlantı: https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVlc0WWRRZ3Vqd09WbF9JSzI5Y3c0QmtZZWZsU2tvYUJXNGQ0dERGTnlhOWRMS3RSRkVtY3VtdDRmUXZqVkdHY2FmS0ZvbW14ZTc1cWtHOTZVZm9KajUtY3QtY1pOTVZleHRBUVF2MTF2MWUwY3IxQ1FtT0Y4UHNWMGhJWEpTTzdLQndycmd6dzdlcVFKYXNWTGJ1YUNGZUNrZHZVbGw3R0RSLVJ2cmptSXVEX05iWjc2?oc=5
+4. Kredi kartı limitleri düşürülecek mi? BDDK’den kritik düzenleme açıklaması
+   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Cumhuriyet. Kredi kartı limitleri düşürülecek mi? BDDK’den kritik düzenleme açıklaması. Kredi kartı limitlerinde yeni dönem, Beyan değil, Se Ge Ka kayıtları esas alınacak. Bu haberi 5 ayrı kaynak yazdı.
+   - NTV Haber: Kredi kartı limitlerine yeni düzenleme gelecek mi? Yanıt geldi
+   - Habertürk: Kredi kartı sahiplerini ilgilendiriyor: Limitler düşürülecek mi? 2026 Kredi kartı limitleri ne kadar olacak?
+   - Evrensel.net: Kredi kartı limitlerinde yeni dönem: Beyan değil, SGK kayıtları esas alınacak
+   Bağlantı: https://www.cumhuriyet.com.tr/ekonomi/kredi-karti-limitleri-dusurulecek-mi-bddk-den-kritik-duzenleme-aciklamasi-2536671
 
-7. Petrol fırladı: Akaryakıta zam kapıda
-   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Petrol fırladı, Akaryakıta zam kapıda. Küresel piyasalarda kayıplar derinleşiyor. Bu haberi 5 ayrı kaynak yazdı.
-   - Bloomberght: Küresel piyasalarda kayıplar derinleşiyor
-   - Uzmanpara: Brent petrolün varili 100 doları geçti
-   - NTV Haber: Dünya petrolünün "Gözyaşı Kapısı" tehlikede
-   Bağlantı: https://news.google.com/rss/articles/CBMieEFVX3lxTE5pc2xMUjMzeEptcVFaWFc0bGpPUXR6bTdtWFdkVGlMRWlSSjhSc09JZHlvTDhqLWlza2xEck1QTlh0VTBvRGt4ZF9BVzJuUVpuOXpGb1piaGQtSXpIQk1fVlhxU0hPS3BEa05FSEhCQUZzUlYzaHF2Yg?oc=5
+5. 35 yıllık Türk inşaat şirketi iflas etti
+   Kaynak: birgun.net (bu olayı 5 yayıncı yazdı)
+   Özet: birgun. 35 yıllık Türk inşaat şirketi iflas etti. 35 yıllık inşaat şirketinin iflasında yeni gelişme, Alacaklılar için süre başladı. Bu haberi 5 ayrı kaynak yazdı.
+   - Halk TV: Alacaklılar kapıya dayandı... 35 yıllık Türk inşaat şirketi iflas etti
+   - Kocaeli Gazetesi: 35 yıllık inşaat şirketinin iflasında yeni gelişme: Alacaklılar için süre başladı
+   - dokuzeylul.com: İzmir’in 35 yıllık köklü inşaat devi iflas etti
+   Bağlantı: https://news.google.com/rss/articles/CBMiggFBVV95cUxPYXpscWVjN2pRRTRqR2tQX2hnUGFraVJNSzk2R1lUMVZDaVpXdWY5REFFcDYwU3VyZ2xQQy1LY0hQVEpTbFF3N0k0Uy1PSnNaeW44ZlY4REJXZFJSTC00RDhreG5TOWNVaFU2ekNnY3hmalBDcThhTzdObENqN1NnUGV3?oc=5
 
-8. Kredi kartıyla taksiye, markete ödeme yapanlara çağrı: Başvuran ödediği parayı faiziyle geri alacak
-   Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Kredi kartıyla taksiye, markete ödeme yapanlara çağrı, Başvuran ödediği parayı faiziyle geri alacak. Vatandaşa komisyon tuzağı. Yasal faizle geri alınabilir. Bu haberi 5 ayrı kaynak yazdı.
-   - cumhuriyet.com.tr: Uzman isimden kredi kartı kullananlara uyarı: Ödemelerde alınan komisyon geri ödeniyor
-   - Onedio: Kartla Ödeme Yapanlara Kritik Uyarı: Ödediğiniz Parayı Faiziyle Geri Alabilirsiniz
-   - Odatv: Vatandaşa komisyon tuzağı... Yasal faizle geri alınabilir
-   Bağlantı: https://news.google.com/rss/articles/CBMiygFBVV95cUxQR3Y2eV9OSG5aTGNDVTFaTmZ1R1RzYnI5ZFo0X2k4RDdjLXNoZHJOdnFYcFh0ZTVocHgtYmVvWmdhRVRlQW9qVk54ZmpyZHhEdW5uaUwwbGphRzl3Z254aVJQbURJVk91bTJPV3lYaFBjX3puVUoyOWdXeXVZQ1VhdDFYV0M0YXc3akNiRVRyZlNJTk9jZmJqQXdqT0Uza1EtaUp4R2ZsMEFFa1NqQy03b1lxUXNPdHZOMUhkRmpvR3dvYWZrQUl0V3l3?oc=5
+6. EMEKLİ PROMOSYON KAMPANYALARI 2026: Eylül ayında en yüksek emekli promosyonu ne kadar?
+   Kaynak: Sabah (bu olayı 5 yayıncı yazdı)
+   Özet: Sabah. EMEKLİ PROMOSYON KAMPANYALARI 2026, Eylül ayında en yüksek emekli promosyonu ne kadar?. Eylül ayı bitmeden emeklilerin hesabına 25 bin TL yatacak. Bu haberi 5 ayrı kaynak yazdı.
+   - Bigpara: TEB EMEKLİ PROMOSYON 2026
+   - Halk TV: Eylül ayı bitmeden emeklilerin hesabına 25 bin TL yatacak
+   - Uzmanpara: TÜRKİYE FİNANS'IN EMEKLİYE 32.000 TL BANKA PROMOSYON FIRSATI! Türkiye Finans Bankası'nda Emekli Maaşı Banka Promosyonu şartları neler? İşte nakit promosyon ve bonus ödüller
+   Bağlantı: https://news.google.com/rss/articles/CBMiywFBVV95cUxPYndtR2c1OGRkejQ3a1Aza0lyU19kWFk3enJoVnhKWFBuUkloODJJRVBPQm1KZGk0eXAyNE05c2t0a0tzZl9FVXFsLXhXbzZoNUM0bll5eGdfR2RDMnhXRVUtYWJoeEJlbmxmNkVfOEZvZnhmZnBQS2NvZF9mXzFKZGR1eldHem1vaEZTU1lrZVRtQzMtNUJJSHhXWkxfREtWZG4xanJhSUEzQmlaSklmSnNPbVYwMURkZ3NkOU1JNWxub25tTU5PZTQxYw?oc=5
+
+7. Avrupa’da enerji krizi ve Türkiye için fırsatlar
+   Kaynak: Sabah (bu olayı 5 yayıncı yazdı)
+   Özet: Sabah. Avrupa’da enerji krizi ve Türkiye için fırsatlar. Hollanda doğal gaz depolama hedefini fiyatları rahatlatmak için %64’e düşürdü. Bu haberi 5 ayrı kaynak yazdı.
+   - Investing.com Türkiye: Hollanda doğal gaz depolama hedefini fiyatları rahatlatmak için %64’e düşürdü
+   - Bloomberght: Avrupa'da doğalgaz fiyatlarında yüzde 13,2'lik artış
+   - Sözcü Gazetesi: Petrol ve doğal gaz dur durak Bilmiyor: Bu Kış faturalar ağır olacak
+   Bağlantı: https://news.google.com/rss/articles/CBMipwFBVV95cUxNZHEzaVV0MEMzT0V6SFRXTlRRTEduMG5lbG9QREtZS3JPUWRaSTNRMms4bnZlaFA0VlJqUTVtZXVVbU05UFBPMG9GaFU4YjZ3RVBVaFZtYjUwNTQzendPczlUNDJORWZtVmNQbk1hUTdsbjhobGpSQlcwSmpwMm5FWk5RUzhFOW5MWEF4OU5vamkySU1mSmRtblZuWEtleGVLOHdlcmFlOA?oc=5
+
+8. ABD'de tüketici güveni petrol fiyatlarının gölgesinde üst üste ikinci kez geriledi
+   Kaynak: Ekonomim (bu olayı 5 yayıncı yazdı)
+   Özet: Ekonomim. A Be De de tüketici güveni petrol fiyatlarının gölgesinde üst üste ikinci kez geriledi. A Be De de küçük işletmeler alarm veriyor, Enflasyon ve belirsizlik baskısı. Bu haberi 5 ayrı kaynak yazdı.
+   - CGTN Türk: ABD'de küçük işletmeler alarm veriyor: Enflasyon ve belirsizlik baskısı
+   - Paratic Haber: ABD’li tüketicinin ekonomiye güveni Eylül’de dip yaptı
+   - ekotürk: ABD ekonomisinde güven sinyali zayıfladı: Küçük işletme endeksi geriledi
+   Bağlantı: https://www.ekonomim.com/kuresel-ekonomi/abdde-tuketici-guveni-ust-uste-ikinci-kez-geriledi-haberi-917662
 
 ============================================================
 BİLİM & TEKNOLOJİ
 ============================================================
 
-1. Güneş'e en yakın gezegen Merkür küçülüyor
+1. Supergirl'ün başarısızlığı yeni Wonder Woman filmini tehlikeye soktu
+   Kaynak: DonanımHaber
+   Özet: DonanımHaber. Supergirl'ün başarısızlığı yeni Wonder Woman filmini tehlikeye soktu.
+   Bağlantı: https://www.donanimhaber.com/supergirl-un-basarisizligi-yeni-wonder-woman-filmini-erteletti--210376
+
+2. Samsung, Qualcomm için 2 nm çip üretmeye hazır
+   Kaynak: DonanımHaber
+   Özet: DonanımHaber. Samsung, Qualcomm için 2 nm çip üretmeye hazır.
+   Bağlantı: https://www.donanimhaber.com/samsung-qualcomm-icin-2-nm-cip-uretmeye-hazir--210371
+
+3. Anthropic alarm verdi: Claude biyolojik silah araştırmalarında kullanıldı
+   Kaynak: DonanımHaber
+   Özet: DonanımHaber. Anthropic alarm verdi, Claude biyolojik silah araştırmalarında kullanıldı.
+   Bağlantı: https://www.donanimhaber.com/anthropic-alarm-verdi-claude-biyolojik-silahlar-icin-kullanildi--210360
+
+4. Matt Mullenweg reportedly returns as Automattic CEO two days after getting booted
+   Kaynak: The Verge
+   Özet: The Verge. Matt Mullenweg reportedly returns as Automattic CEO two days after getting booted.
+   Bağlantı: https://www.theverge.com/tech/994087/matt-mullenweg-automattic-ceo-return
+
+5. Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO
+   Kaynak: TechCrunch
+   Özet: TechCrunch. Nscale adds former OpenAI exec Fidji Simo to its board ahead of potential IPO.
+   Bağlantı: https://techcrunch.com/2026/09/11/nscale-adds-former-openai-exec-fidji-simo-to-its-board-ahead-of-potential-ipo/
+
+6. We unfolded the iPhone Duo
+   Kaynak: The Verge
+   Özet: The Verge. We unfolded the iPhone Duo.
+   Bağlantı: https://www.theverge.com/podcast/994016/iphone-duo-vergecast-apple-watch-mac-llms
+
+7. The White House says Truth Social is the ‘most powerful and popular social media platform in the world’
+   Kaynak: The Verge
+   Özet: The Verge. The White House says Truth Social is the ‘most powerful and popular social media platform in the world.
+   Bağlantı: https://www.theverge.com/policy/994072/white-house-truth-social-popular-powerful
+
+8. Matt Mullenweg tells (trolls?) Automattic staff, saying he’s back in control after CEO ouster
+   Kaynak: TechCrunch
+   Özet: TechCrunch. Matt Mullenweg tells (trolls?) Automattic staff, saying he’s back in control after CEO ouster.
+   Bağlantı: https://techcrunch.com/2026/09/11/matt-mullenweg-tells-automattic-staff-in-slack-hes-back-in-control-after-ceo-ouster/
+
+9. 144 Hz 75 İnç MiniLED ve 65 İnç QLED: Hisense 75U7SE ve Hisense 65E7S PRO İnceleme
+   Kaynak: ShiftDelete
+   Özet: ShiftDelete. 144 Hz 75 İnç MiniLED ve 65 İnç QLED, Hisense 75U7SE ve Hisense 65E7S PRO İnceleme.
+   Bağlantı: https://shiftdelete.net/144-hz-75-inc-miniled-ve-65-inc-qled-hisense-75u7se-ve-hisense-65e7s-pro-inceleme
+
+10. iPhone 18 Pro’nun Tamir Edilebilirlik Skoru Açıklandı: iPhone 17 Pro ile Ne Kadar Fark Var?
+   Kaynak: Webtekno
+   Özet: Webtekno. iPhone 18 Pro’nun Tamir Edilebilirlik Skoru Açıklandı, iPhone 17 Pro ile Ne Kadar Fark Var?.
+   Bağlantı: https://www.webtekno.com/iphone-18-pro-tamir-edilebilirlik-skoru-aciklandi-h224230.html
+
+11. Direksiyonsuz otomobiller çağı başlıyor
    Kaynak: TRT Haber
-   Özet: Te Re Te Haber. Güneş'e en yakın gezegen Merkür küçülüyor.
-   Bağlantı: https://www.trthaber.com/haber/dunya/gunese-en-yakin-gezegen-merkur-kuculuyor-956482.html
+   Özet: Te Re Te Haber. Direksiyonsuz otomobiller çağı başlıyor.
+   Bağlantı: https://www.trthaber.com/haber/gundem/direksiyonsuz-otomobiller-cagi-basliyor-956550.html
 
-2. Meta’s AI agent Muse is now the No. 2 app in the US
+12. Scammers target hundreds of thousands of crypto owners after Trezor confirms data breach of email provider
    Kaynak: TechCrunch
-   Özet: TechCrunch. Meta’s AI agent Muse is now the No. 2 app in the US.
-   Bağlantı: https://techcrunch.com/2026/09/10/metas-ai-agent-muse-is-now-the-no-2-app-in-the-us/
-
-3. Marvel, One Last Kill sonrası yeni bir Punisher projesi hazırlıyor
-   Kaynak: DonanımHaber
-   Özet: DonanımHaber. Marvel, One Last Kill sonrası yeni bir Punisher projesi hazırlıyor.
-   Bağlantı: https://www.donanimhaber.com/marvel-yeni-bir-punisher-projesi-hazirliyor--210333
-
-4. Schools are catching on to Big Tech’s playbook
-   Kaynak: The Verge
-   Özet: The Verge. Schools are catching on to Big Tech’s playbook.
-   Bağlantı: https://www.theverge.com/policy/993308/computer-science-ai-education-coding-kids
-
-5. Yeni Hızlı ve Öfkeli filmi Paul Walker'ı yapay zekâ ile geri getirebilir
-   Kaynak: DonanımHaber
-   Özet: DonanımHaber. Yeni Hızlı ve Öfkeli filmi Paul Walker'ı yapay zekâ ile geri getirebilir.
-   Bağlantı: https://www.donanimhaber.com/yeni-hizli-ve-ofkeli-filmi-paul-walker-i-ai-ile-geri-getirebilir--210330
-
-6. OpenAI, yapay zeka çipi üretimi için Samsung’a göz kırpıyor
-   Kaynak: DonanımHaber
-   Özet: DonanımHaber. OpenAI, yapay zeka çipi üretimi için Samsung’a göz kırpıyor.
-   Bağlantı: https://www.donanimhaber.com/openai-yapay-zeka-cipi-uretimi-icin-samsung-a-goz-kirpiyor--210329
-
-7. Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers
-   Kaynak: TechCrunch
-   Özet: TechCrunch. Proxima Fusion bets €140M on a critical fusion ingredient dominated by Asian suppliers.
-   Bağlantı: https://techcrunch.com/2026/09/10/proxima-fusion-bets-e140m-on-a-critical-fusion-ingredient-dominated-by-asian-suppliers/
-
-8. KAAN İçin Türkiye-Mısır Teması: Ortak Üretim Masada
-   Kaynak: ShiftDelete
-   Özet: ShiftDelete. KAAN İçin Türkiye-Mısır Teması, Ortak Üretim Masada.
-   Bağlantı: https://shiftdelete.net/kaan-icin-turkiye-misir-temasi-ortak-uretim-masada
-
-9. Amazon makes it easier to buy what you see on Prime Video
-   Kaynak: TechCrunch
-   Özet: TechCrunch. Amazon makes it easier to buy what you see on Prime Video.
-   Bağlantı: https://techcrunch.com/2026/09/10/amazon-makes-it-easier-to-buy-what-you-see-on-prime-video/
-
-10. Google Gemini Windows Masaüstü Uygulaması Yayınlandı
-   Kaynak: ShiftDelete
-   Özet: ShiftDelete. Google Gemini Windows Masaüstü Uygulaması Yayınlandı.
-   Bağlantı: https://shiftdelete.net/google-gemini-windows-uygulamasi-yayinlandi
-
-11. iPhone 18 Pro: f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir
-   Kaynak: ShiftDelete
-   Özet: ShiftDelete. iPhone 18 Pro, f/1.48 Kamerasıyla Fotoğraf Deneyimi Değişebilir.
-   Bağlantı: https://shiftdelete.net/iphone-18-pro-f-1-48-kamerasiyla-fotograf-deneyimi-degisebilir
-
-12. Amazon’s Fire TV Stick 4K is over half off at under $20
-   Kaynak: The Verge
-   Özet: The Verge. Amazon’s Fire TV Stick 4K is over half off at under $20.
-   Bağlantı: https://www.theverge.com/gadgets/993455/fire-tv-stick-4k-resident-evil-requiem-deal-sale
+   Özet: TechCrunch. Scammers target hundreds of thousands of crypto owners after Trezor confirms data breach of email provider.
+   Bağlantı: https://techcrunch.com/2026/09/11/scammers-target-hundreds-of-thousands-of-crypto-owners-after-trezor-confirms-data-breach-of-email-provider/
 
 ============================================================
 BİLİM
 ============================================================
 
-1. Antik Tohumlar Kavunun Nereden Geldiğini Anlatıyor
-   Kaynak: Arkeofili
-   Özet: Arkeofili. Antik Tohumlar Kavunun Nereden Geldiğini Anlatıyor.
-   Bağlantı: https://arkeofili.com/antik-tohumlar-kavunun-nereden-geldigini-anlatiyor/
-
-2. En Eski Uyuşturucu Kullanımı 25.000 Yıl Öncesine Uzandı
-   Kaynak: Arkeofili
-   Özet: Arkeofili. En Eski Uyuşturucu Kullanımı 25.000 Yıl Öncesine Uzandı.
-   Bağlantı: https://arkeofili.com/en-eski-uyusturucu-kullanimi-25-000-yil-oncesine-uzandi/
-
-3. Kara Delikler Gizli Saçlara Sahip Olabilir mi?
-   Kaynak: Evrim Ağacı
-   Özet: Evrim Ağacı. Kara Delikler Gizli Saçlara Sahip Olabilir mi?.
-   Bağlantı: https://evrimagaci.org/kara-delikler-gizli-saclara-sahip-olabilir-mi-23776
-
-4. Bulanık Sular Dikence Balıklarını Daha Koordineli Hale Getiriyor!
-   Kaynak: Evrim Ağacı
-   Özet: Evrim Ağacı. Bulanık Sular Dikence Balıklarını Daha Koordineli Hale Getiriyor.
-   Bağlantı: https://evrimagaci.org/bulanik-sular-dikence-baliklarini-daha-koordineli-hale-getiriyor-23743
-
-5. Denisovalılara Ait İlk Kol Kemiği Çin’de Bulundu!
-   Kaynak: Arkeofili
-   Özet: Arkeofili. Denisovalılara Ait İlk Kol Kemiği Çin’de Bulundu.
-   Bağlantı: https://arkeofili.com/denisovalilara-ait-ilk-kol-kemigi-cinde-bulundu/
-
-6. Bilim insanları osteoporozla mücadele edebilecek kemik yapıcı bir mekanizma buldu
+1. Too much light at night may quietly reshape your heart
    Kaynak: ScienceDaily
-   Özet: ScienceDaily. Scientists find a bone-building switch that could fight osteoporosis.
-   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260909005305.htm
+   Özet: ScienceDaily. Too much light at night may quietly reshape your heart.
+   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260911003847.htm
 
-7. Ozempic ve Wegovy yaklaşık %40 daha az astım kriziyle ilişkilendirildi
+2. Your next prescription could be treating a side effect from the last one
    Kaynak: ScienceDaily
-   Özet: ScienceDaily. Ozempic and Wegovy linked to nearly 40% fewer asthma attacks.
-   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260909005155.htm
+   Özet: ScienceDaily. Your next prescription could be treating a side effect from the last one.
+   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260911003843.htm
 
-8. Uzaylı yaşamını bulduk mu? Yüzlerce bilim insanı değerlendirdi
+3. Tiny nanolaser could cut computer energy use in half
    Kaynak: ScienceDaily
-   Özet: ScienceDaily. Have we found alien life? Hundreds of scientists weigh in.
-   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260909005212.htm
+   Özet: ScienceDaily. Tiny nanolaser could cut computer energy use in half.
+   Bağlantı: https://www.sciencedaily.com/releases/2026/09/260911003858.htm
+
+4. 1.900 Yıllık Yazıt, Roma’nın Yıldırım Kültünü Kanıtladı
+   Kaynak: Arkeofili
+   Özet: Arkeofili. 1.900 Yıllık Yazıt, Roma’nın Yıldırım Kültünü Kanıtladı.
+   Bağlantı: https://arkeofili.com/1-900-yillik-yazit-romanin-yildirim-kultunu-kanitladi/
+
+5. Astrofotoğrafçılık Yarışması’nın Sonuçları Belli Oldu
+   Kaynak: Bilim Genç
+   Özet: Bilim Genç. Astrofotoğrafçılık Yarışması’nın Sonuçları Belli Oldu.
+   Bağlantı: http://bilimgenc.tubitak.gov.tr/makale/astrofotografcilik-yarismasinin-sonuclari-belli-oldu
+
+6. Bir Hitit Kabında Sevgi Çiçeği’nin En Eski Tohumları Bulundu
+   Kaynak: Arkeofili
+   Özet: Arkeofili. Bir Hitit Kabında Sevgi Çiçeği’nin En Eski Tohumları Bulundu.
+   Bağlantı: https://arkeofili.com/bir-hitit-kabinda-sevgi-ciceginin-en-eski-tohumlari-bulundu/
 
 ============================================================
 SAĞLIK
 ============================================================
 
-1. Kene ısırığı sonrası ortaya çıktı! Çin'de yeni virüs alarmı: 7 ölü
-   Kaynak: Milliyet (bu olayı 5 yayıncı yazdı)
-   Özet: Milliyet. Kene ısırığı sonrası ortaya çıktı. Çin'de yeni virüs alarmı, 7 ölü. ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?. Bu haberi 5 ayrı kaynak yazdı.
-   - GZT: Çin'de yeni kene virüsü tespit edildi: Halsizlik ve mide sorunlarına yol açıyor, ABD için de alarm verildi | Asya Haberleri
-   - CNN Türk: Kene Kaynaklı YENİ BİR VİRÜS KEŞFEDİLDİ! Binlerce Hasta İncelendi, Sonuçlar Dikkat Çekti... Hangi Belirtilere Yol Açıyor?
-   - Antalya Körfez Gazetesi: ALTNV nedir? Nasıl bulaşır, öldürür mü? Türkiye’de var mı, belirtileri neler?
-   Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxQNm9ka2JnV0pDVU5RWnR4a1M5TW9QanZ5d1Z6YkxTTnoyMEMzd2huV0JRaGJJeGhTS0VyNm9UV0laYUVIbWpsX1VYNkFtZ0wtcllQNlFFaVNPMnRzZDBqR0JocDJ5X09NUmZVc2piamlpeDUwU19SZGcyM04zVkgxVFdBSWxFb0RzVFRvdlhYWUdpRU1kMVp0N2ZuNk8yUF9VbjV5ZG5pekRkaElnU0kxd1hJbWdxZw?oc=5
-
-2. Genç dansçının Ankara'da estetik kabusu!
+1. Sivrisineklerden bulaşıyor, belirti vermiyor: Vakalar arttı, alarm verildi
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Genç dansçının Ankara'da estetik kabusu. Göğüs büyütme ameliyatı sonrası deri kopması iddiası. Profesyonel dansçı soluğu savcılıkta aldı. Bu haberi 5 ayrı kaynak yazdı.
-   - Odatv: Dansçının hayatını karartan göğüs ameliyatı: Derisi koptu, his kaybı yaşıyor
-   - Mynet: Göğüs büyütme ameliyatı sonrası “deri kopması” iddiası! Profesyonel dansçı soluğu savcılıkta aldı
-   - GZT: Göğüs büyütme ameliyatı sonrası hayatı değişti: Profesyonel dansçı suç duyurusunda bulundu | Yerel Haberler
-   Bağlantı: https://news.google.com/rss/articles/CBMifEFVX3lxTE9XcE02RWNFXy1FS2tXVVJqYUx3Y1lGQnpaanNXRnRsSGFYQzZkYm5uR1c1OWFmTkgzZENXZWgxZ2hVT0hwOWY4emlFYWljZGRYS3pKUXFRN2pYaWFHOS1YaFNwci1DQ1g0ak1UbWhFazJsUmNfdzczY3dpVm0?oc=5
+   Özet: Sözcü Gazetesi. Sivrisineklerden bulaşıyor, belirti vermiyor, Vakalar arttı, alarm verildi. Slovenya'da ölü karga alarmı. Batı Nil virüsü tespit edildi. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Slovenya'da ölü karga alarmı! Batı Nil virüsü tespit edildi
+   - Anadolu Ajansı: Yunanistan'da son bir haftada 34 yeni Batı Nil virüsü vakası kaydedildi
+   - DHA | Demirören Haber Ajansı: Hollanda'da Batı Nil virüsü alarmı: 3 ölü, vaka sayısı 18'e yükseldi
+   Bağlantı: https://www.sozcu.com.tr/sivrisineklerden-bulasiyor-belirti-vermiyor-vakalar-artti-alarm-verildi-p357396
 
-3. Araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi
-   Kaynak: haberturk.com (bu olayı 5 yayıncı yazdı)
-   Özet: haberturk. Araştırma, En ölümcül beyin kanserinde zayıf nokta keşfedildi. Glioblastomun tedavi direncinde yeni hedef, SET proteininin baskılanması tümör oluşumunu engelledi. Bu haberi 5 ayrı kaynak yazdı.
-   - cumhuriyet.com.tr: Yeni araştırma: En ölümcül beyin kanserinde zayıf nokta keşfedildi
-   - Medimagazin: Glioblastomun tedavi direncinde yeni hedef: SET proteininin baskılanması tümör oluşumunu engelledi
-   - Sağlık Aktüel: Glioblastom Tedavisinde Yeni Biyolojik Hedef: SET Proteininin Baskılanması Tümör Büyümesini Durdurdu
-   Bağlantı: https://news.google.com/rss/articles/CBMiowFBVV95cUxOOFpDNXg0MTE0djJhMm1kTnRybXZ1aDF1bHpqbndQdzR6Y2cyRFhKTnNSZld4OUJkUVNQNk80VS00dk5FNGEwc2t4bVJVVGN0TXRoczgtaGtKdU9BbkpjV2paUGhXOG9RX2dtNER6SVJWUWtZQk4zSWF5MWtfczBYcS1SMC16R0VMZzMwLURkZ0tkOUJ4UTlMM3ZwLWw4d3JkN0ow?oc=5
+2. Düşük karbonhidrattan sonra dikkat: Yanlış karbonhidrat tüketimi bağışıklık sistemini etkiliyor
+   Kaynak: Cumhuriyet (bu olayı 4 yayıncı yazdı)
+   Özet: Cumhuriyet. Düşük karbonhidrattan sonra dikkat, Yanlış karbonhidrat tüketimi bağışıklık sistemini etkiliyor. Karbonhidratı artırırken bu detaya dikkat. Bu haberi 4 ayrı kaynak yazdı.
+   - TRT Haber: Düşük karbonhidrattan yüksek karbonhidrata geçiş bağışıklık sistemini etkiliyor
+   - Manşet Haber: Karbonhidratı artırırken bu detaya dikkat
+   - İzmir’de Son Dakika: Karbonhidrat tüketimindeki değişim bağışıklık sistemini etkileyebilir
+   Bağlantı: https://news.google.com/rss/articles/CBMi1AFBVV95cUxPLXBadEdEVFdoZExBUHV5aFRMMUdsR0hiRUl1bDJGd1dOWlRmRWN5TElZbUhiQ0g3WTNaY0NBWnRBV1VQY2dIWTloU3k4RzVHOXpSZlo3cm9DYkJoRThiUGc3b282S1FHZEMxTjAzTGJ3N1JYZzQ3UUFYdldBRjk5VmxtRFVCY1IxV3RJakY3VmNyM2JVVzJad3FpZUhrZ2R0YTlrS01MX2RXcjJpMVBLSHlVVVZLVnFVTTVpbEpibW5ybGdtN2x3N0x0Q2tXRHY0ZWhjYg?oc=5
 
-4. Kolesterol sorununu tek dozda çözen iğne geliştirildi
-   Kaynak: Independent Türkçe (bu olayı 5 yayıncı yazdı)
-   Özet: Independent Türkçe. Kolesterol sorununu tek dozda çözen iğne geliştirildi. Tek Doz In Vivo CRISPR-Cas9 Gen Düzenleme Tedavisiyle Lipit Düzeylerinde 1 Yıllık Kalıcı ve Güvenli Düşüş. Bu haberi 5 ayrı kaynak yazdı.
+3. Kahve zararlı sanılıyordu: Araştırma sonuçları gerçeği ortaya çıkardı
+   Kaynak: Yeniçağ Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Yeniçağ Gazetesi. Kahve zararlı sanılıyordu, Araştırma sonuçları gerçeği ortaya çıkardı. Sabah Kahveniz Boşuna Değil, Kafein Hücresel Yaşlanmayı Yavaşlatan 500 Milyon Yıllık Şalteri Açıyor. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Kahvenin bilinmeyen özelliği ortaya çıktı
+   - Onedio: Sabah Kahveniz Boşuna Değil: Kafein Hücresel Yaşlanmayı Yavaşlatan 500 Milyon Yıllık Şalteri Açıyor
+   - Haber3: Kafein zararlı mı, yararlı mı ? Tüm ezberleri bozan araştırmanın sonuçları açıklandı
+   Bağlantı: https://news.google.com/rss/articles/CBMiswFBVV95cUxPQ2JVU0RmcUFzS2ptbzNmb0tUc180R0NtcVluZDY3VEtzUVlpNXVrMzRlcUdUTVJGQlRDbGhiNnJNNzJMMEhxeWFsT1MwWHBLWENBS25DMjA4M3JuWkNoRUJLd3pWQzVTYm40UUhPX0JYYXRJZzBsWnJZVXdhTHNOZTZHSW5sRmFXTXFTMEcyYUtwdWlfMUMzcVZxOVVlUmVsckwzb090VlphbG1BaEFiOFU0cw?oc=5
+
+4. Kolesterol'ü kökünden bitiriyor. Tek dozu yetiyor. Milyonlarca kişinin hayatı kurtulacak.
+   Kaynak: Nefes Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Nefes Gazetesi. Kolesterol'ü kökünden bitiriyor. Tek dozu yetiyor. Milyonlarca kişinin hayatı kurtulacak. Tek Doz In Vivo CRISPR-Cas9 Gen Düzenleme Tedavisiyle Lipit Düzeylerinde 1 Yıllık Kalıcı ve Güvenli Düşüş. Bu haberi 5 ayrı kaynak yazdı.
+   - Independent Türkçe: Kolesterol sorununu tek dozda çözen iğne geliştirildi
    - Onedio: Tek Dozluk Gen Tedavisi Kötü Kolesterolü Yüzde 52 Azalttı
    - WinAlly: Tek Doz In Vivo CRISPR-Cas9 Gen Düzenleme Tedavisiyle Lipit Düzeylerinde 1 Yıllık Kalıcı ve Güvenli Düşüş
-   - Kütahya Ekspres: Yüksek kolesterol için tek seferlik gen tedavisi umut veriyor
-   Bağlantı: https://news.google.com/rss/articles/CBMivwFBVV95cUxPWS1lZDBEX3lLdE10UzYzaFNTbzZlRmtnQ2FZM2NzdG9BX3M2Tk5iTWtrTGI4UmNBUllwdzZfMTdtYlI0V2tNZWRTcHI5U1g0UlBWcmpuNkVTY3ljeW15M1RxUVNiNGpMa3JkamJMZGlSdGVxZGxMQTltQUtKX2xDeTJPamdjSDhzSTJQQ1BXSGc4aGRkajk3VGIzY1hmUHRTOGV2OV9TM212WTkySDJzZUVrZWlRYjU1WnA2d2RiZw?oc=5
+   Bağlantı: https://news.google.com/rss/articles/CBMiuAFBVV95cUxNUnM0WUZOZTNXaGpOZDgzN1c4VFV4RUhUejR3Xzk5Mi1JcU9kbWJlMW1uQ1hJQmhMZ3RwSWJGdVFuRTdfY0NOblAzeEc1Q2VpUzE1ampGNkpaam40WkE5dm1WYW04R282VmpaM2F1NFRPaWJYSTU1MGNFcE9KR0FYamVHQmNiSk1HdjROQzV1WEtfSW53X1NrTVYtX2k0d0x1TXJJeGNLV1dTakhLZmFPSEpHNkFMS3RT?oc=5
 
-5. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi
-   Kaynak: Nefes Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Nefes Gazetesi. Şeker hastalığının sessiz belirtileri ortaya çıktı. Diyabet yıllarca fark edilmeden ilerledi. Yılda bir defa kontrol şart, Diyabetten korunmak için rakamlarınızı bilin. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Sessiz salgın! Avrupa'da ilk sıradayız... 12 milyon hasta var
-   - Türkiye Gazetesi: Yılda bir defa kontrol şart: Diyabetten korunmak için rakamlarınızı bilin
-   - Sağlık Aktüel: "Sinsi İlerleyen Diyabete Karşı 'Rakamlarınızı Öğrenin' Çağrısı: 35 Yaş Üstüne Yıllık Kontrol Uyarısı"
-   Bağlantı: https://news.google.com/rss/articles/CBMingFBVV95cUxPdlhWT05uVkQ1WnkyVk5iWk1QRi0xbndUUmRTVHFtTEtCUExvQVpESXR5eTNPdmt4bjdLR2g5UjdRVkxuOUVta19ScU1xcEJRSTg3dmQyY3lvbzgzSUF3Zy15LUREM2JYZXU0M2syRjRyQ3BJdHFyQl9Gd3JUbW1Mbk0zd0hReUdGMlFRVUNNWnI3Z2kxdGVNUkhFQmtJUQ?oc=5
+5. Burundan yavaş nefes kaygıyı azaltabilir: Bilim insanları burun-beyin bağlantısını ortaya çıkardı
+   Kaynak: Cumhuriyet (bu olayı 5 yayıncı yazdı)
+   Özet: Cumhuriyet. Burundan yavaş nefes kaygıyı azaltabilir, Bilim insanları burun-beyin bağlantısını ortaya çıkardı. Kaygının çözümü burnumuzda gizliymiş, Anında rahatlatan burun-beyin devresi keşfedildi. Bu haberi 5 ayrı kaynak yazdı.
+   - DHA | Demirören Haber Ajansı: Araştırma: Bilim insanları burun ile beyin arasındaki sinir devresini keşfetti
+   - GZT: Kaygının çözümü burnumuzda gizliymiş: Anında rahatlatan 'burun-beyin' devresi keşfedildi
+   - T24: Burun ve beyin arasındaki gizli sinir keşfedildi: Kaygı sorunlarının çözümü olabilir
+   Bağlantı: https://www.cumhuriyet.com.tr/bilim-teknoloji/burundan-yavas-nefes-kaygiyi-azaltabilir-bilim-insanlari-burun-beyin-baglantisini-ortaya-cikardi-2536502
 
-6. Çok sıcak içecekler neden kanser riskini artırabilir?
-   Kaynak: bbc.com (bu olayı 5 yayıncı yazdı)
-   Özet: bbc. Çok sıcak içecekler neden kanser riskini artırabilir?. İçmeden biraz bekletin. Bu haberi 5 ayrı kaynak yazdı.
-   - Milliyet: İçmeden biraz bekletin
-   - Diken: Araştırma: Çok sıcak içecekler kanser riskini artırıyor
-   - Onedio: 980 Bin Kişilik Araştırmada Ortaya Çıktı: Çayı Bu Sıcaklıkta İçmek Kanser Riskini 3 Kat Artırıyor
-   Bağlantı: https://news.google.com/rss/articles/CBMiXEFVX3lxTE52RXlfenBQR0lCc0J2cG1XYk8ydjJUbmVJVHp4LS05LVpkZFc2NUtvcnFPanpEc1FNM2w4Qm9JRFZ4MkxPZ0Z6YlRjTGl1RURwTHV0bUpRenh0OXdE0gFiQVVfeXFMUFpfS1hXRFl6T1dDdXFtclV5aWVVMjRoaTV0bURwYS1Cc2pBNXN5Yl9MZ1VvcDk0RmZOeWNWOGdCTnNrNXppbmV1SGl6OXpSSEJDbC0xNTBKRC02QXJjclRxSFE?oc=5
+6. Dünya Sağlık Örgütü'nden tütün kullanımının kısırlığa yol açabileceği uyarısı!
+   Kaynak: Habertürk (bu olayı 5 yayıncı yazdı)
+   Özet: Habertürk. Dünya Sağlık Örgütü'nden tütün kullanımının kısırlığa yol açabileceği uyarısı. Sigara, hamile kalma sansını yüzde 40 azaltıyor. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Sigara, hamile kalma sansını yüzde 40 azaltıyor
+   - Halk TV: DSÖ'den kısırlık raporu: O ürün için 'hayati' uyarı!
+   - İnternet Haber: Tütün kullananlar dikkat! Korkutan uyarı geldi
+   Bağlantı: https://news.google.com/rss/articles/CBMixgFBVV95cUxOUXcwSVd3X3BBd05BeTVqRTRBbUMyemdCNXpId1RTT2tsQmNiM2pCVG5lWHVITFctOTRFR0ZFMXlvb0o4UWdZd1pKSkp4eE5wWnVHOWJCX1I3TkdZUzBiLWRid1lHcmRNbnMzeDNUanZ1czVFOHdNU3hSUUNJYzhXUGZRTnd4SXpMb19kQ09QR3d3eDQ4Y1U3TXNEcXBnWTdJcEFuX21Td3dQYW5lVUhHd3hUSGNJX0FRMHZKLXdzZW9tZEFuOXc?oc=5
 
 ============================================================
 SPOR
 ============================================================
 
-1. Mauro Icardi'den sürpriz rota: 2 yıllık sözleşme için görüşmeler başladı
+1. Şampiyonlar Ligi'nde haftanın 11'inde Fenerbahçe'den bir isim
    Kaynak: NTVSpor (bu olayı 5 yayıncı yazdı)
-   Özet: En Te Ve Spor. Mauro Icardi'den sürpriz rota, 2 yıllık sözleşme için görüşmeler başladı. Boşta kalan Icardi'ye sürpriz talip. Fenerbahçe'nin yıldızını da almıştı. Bu haberi 5 ayrı kaynak yazdı.
-   - Fanatik: Arjantinliler duyurdu! İşte Mauro Icardi'nin yeni durağı
-   - Son Dakika: Icardi'ye çok sürpriz bir talip
-   - A Spor: Mauro Icardi'ye sürpriz talip! Transferde yeni adresi...
-   Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxPcEVlLUpId0NvVzBjOWRCVTlxaVlIVFRCOHJWZ19uN1J6VVFuaVB3RUkzUlVYM2hZejUtOENwME5yUDRTUjFYdFBqaC01M1JlMXlVODd2eF9EQzJocnFScXNrUDFoUE1TeVFEaVdqT19JUXQyanRnV085SGpZVmVqMzBCVGlpbFhYWTF1YmowNjlqenFST0FVNERuMWtxbDQ1dXJJSGpXMzRNZTFLQmRNUkIteUNhd9IBuwFBVV95cUxNMVM3RzdybDUwbmVwRFdEQlpYUXNlQThSNE5GemZRZmJ2ZF9iOVRudWJRdkhGb245U3VpRmhNZ3lPajIxVjVwcUJnN3huNXhQRmlSc3ZWOVRiQnBNSWVEM1k1Q3lULUZ6SXpYRHJiaEJhNFpzd1pxMjdtek9DREZkV1V0cTdQNVFjc09Vbkh0WFFSNTE3Z201RVdiR2FxaXJwN25udWMtdHpaVy1mc2xNYnhoNXk0TWluR1JR?oc=5
+   Özet: En Te Ve Spor. Şampiyonlar Ligi'nde haftanın 11'inde Fenerbahçe'den bir isim. Real ve Barcelona'nın yıldızları Şampiyonlar Ligi haftasının ideal 11'ini süslüyor. Bu haberi 5 ayrı kaynak yazdı.
+   - Fenerbahce.org: Archie Brown Şampiyonlar Ligi'nde haftanın 11'ine seçildi
+   - Hürriyet: Archie Brown, Şampiyonlar Ligi'nde haftanın 11'inde!
+   - beinsports.com.tr: Archie Brown, UEFA Şampiyonlar Ligi'nde haftanın 11'ine seçildi!
+   Bağlantı: https://news.google.com/rss/articles/CBMipgFBVV95cUxQNGFaMWRoLWNXMXQ0RTFrVUt5UlBaSERnYllkc2o0YVNCRFJwMmdfX2dINW02a0Jid1VaeFE2d1lZZ21jNVV5UE40LXlzb3VudGtDSTdtVlByRFVORm5xY0laUXJ4bGhORDdxYTd4WFk5QnBRRjFUUEFZYS01d2FzOHpZOWVmbVp5bjFLSVlUY3JWb25VbFNZX2VadWRVb19fVjZNWkZB0gGrAUFVX3lxTE45Wl8zeEp6U29NY3FPb1FVN0V2ZTZRSkEyU2xDWXF5cGM4RnhnTTBZLWF4NE9IZ3lVSXpnTU1MU2lHYW9ubzc1MjlRUUxHNzBGa1ZNR3hKWXJYUlVyVjBZcVNaal9pdUFpOV9xZUxGMXowZEFhZGs2YWJJTllBWFIwc2xPUm4yRkk1bnFtR3FIM1BnTzNVOEVfSm1FaFRKQkhZZnhWX1NScGVocw?oc=5
 
-2. Can Bozdoğan'dan Eyüpspor maçı yorumu: "Daha iyi takımız"
-   Kaynak: NTVSpor (bu olayı 5 yayıncı yazdı)
-   Özet: En Te Ve Spor. Can Bozdoğan'dan Eyüpspor maçı yorumu, Daha iyi takımız. Çaykur Rizespor'da transfer raporu, 20 ayrılık, 9 transfer. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Can Bozdoğan: İyi bir takımız ve birlikte iyi şeyler yapacağımıza inanıyorum
-   - Fotomaç: Recep Uçar’dan kritik toplantı
-   - STAR - Haberler: ﻿Çaykur Rizespor, Eyüpspor için hazırlıklara başladı
-   Bağlantı: https://news.google.com/rss/articles/CBMilgFBVV95cUxNN29od1dvMkQwTnJVcDZQeHJzNkpvTTJoVy00Q0xWNW1vVjhrdXR3NWEzOHFFMXR2eFJadWtuNkl2aVR5M0wtZ3dSV1JBQVB6NmY2OTlKa3FvbllZZE9MWHJtTE03Tk00bWcyTzRMeXRIRDNPd1FxQ0ExbEwtT2hycXFyTFJlbjVZNTJfSEZBZUZCdjFxSlHSAZsBQVVfeXFMUHlQeGlaaXAyN3ctNzdUTjFXRTRlTHZtamt6UDVlVUQ1aUZOMTZtSU9XY2JYMGVKR3l3Uld1MVRkZjhNRnVoN2Nlb1hUWFNKemdpVU81ZkZrcDlTY2pCODMwdTlud2ZFaENFcFRxTG02eVAzeDk5cFF0SVZobVFHZWVJRnZpV0t5VHJRLU5VaHFlMk1IN3F0S3hqLVk?oc=5
-
-3. Iğdır FK'dan ayrılan Hikmet Karaman'ın yeni takımı anında duyuruldu
-   Kaynak: NTVSpor (bu olayı 5 yayıncı yazdı)
-   Özet: En Te Ve Spor. Iğdır FK'dan ayrılan Hikmet Karaman'ın yeni takımı anında duyuruldu. Ya Üzülmez ya Çetin. Bu haberi 5 ayrı kaynak yazdı.
-   - beinsports.com.tr: Turka Esenler Erokspor da Hikmet Karaman dönemi
-   - Habertürk: Iğdır FK, Hikmet Karaman ile yollarını ayırdı
-   - Fotomaç: Ya Üzülmez ya Çetin
-   Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxOUHRJOEVxWERYenNIVFJhclNXa3VpVklrS2ZFYnB5TDI1VkJtNXhQNFp1MkNHcFRqdjNrT1NBbnVydnJ5N0JFSm9idlJ5OUViTmFTWnp2STZ0MDdNUTh3UU1nM0VKTUpPWnBOQnhFRGlkb2Y2STNJSWFITmFPXzNzUnZNZDNrRm9LbWR2TU1TWDE1Ujg2d3VaZWxhZ293WGdRTmRFOVVXNHcwUE5ib2c1dUo4ZjRjZ9IBuwFBVV95cUxQOU8wbm13ZWs5SU9kcnhPZFZJbkFxZzNNam9CQXpJTW5sSjg5Q2MzeVlsTVVRNGE3ZDJkRzdmcGVkQWZhV3JrajhDMTVMUTZwcHN2Y05MM0VFQTVzMUNGTG9UTkJJNzhBWFVzQk52Wlg0aU92aktSdlJDQXVqMllJQVlhN0dreXlRVlJPcXNjOUx0R1FBcG4yMTR2eTlBTlNteDZnZ1dvNHJ1V2dWR1RWRU9ybWdMSEdmczhz?oc=5
-
-4. Gaziantep FK Teknik Direktörü Orhan Ak: Fenerbahçe maçını kazanmak istiyoruz
-   Kaynak: Fanatik (bu olayı 5 yayıncı yazdı)
-   Özet: Fanatik. Gaziantep FK Teknik Direktörü Orhan Ak, Fenerbahçe maçını kazanmak istiyoruz. Gaziantep FK, Fenerbahçe maçı biletleri satışa çıktı En düşük bilet fiyatı 2 bin 227 TL, misafir tribün bilet fiyatı 2 bin 850 TL olarak belirlendi. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Orhan Ak: 'Fenerbahçe'yi yenmek istiyoruz!'
-   - Habertürk: Gaziantep FK - Fenerbahçe maçı biletleri satışa çıktı En düşük bilet fiyatı 2 bin 227 TL, misafir tribün bilet fiyatı 2 bin 850 TL olarak belirlendi
-   - DHA | Demirören Haber Ajansı: Gaziantep FK Teknik Direktörü Orhan Ak: Çok iyi bir başlangıç yaptık
-   Bağlantı: https://news.google.com/rss/articles/CBMiwAFBVV95cUxOV05kcW1GR0xfV2p1SjRQSmVNV1BHT0tqRXFEQlNCRkNaWHcwTGs3Mm9Ha2RuX3NpRU12X0xITG1ITElFQWJsekdiV0NaTVhFbGZPa0pGZ2dpTjdMRFh4UXB4VFhqZ09qQnh4T05WUGlUR3V1X0FFa25sTFVGNHZlaDREaW52VkhOQVBTNUNDQU1jTWRvY2sxY0JubDBGd3o5NjJyS3EzMi1OTUYwWW9JZzhwYWw0V0tvQnF1TllIbUY?oc=5
-
-5. Süper Lig'de 5. haftanın hakemleri açıklandı
-   Kaynak: Hürriyet (bu olayı 5 yayıncı yazdı)
-   Özet: Hürriyet. Süper Lig'de 5. haftanın hakemleri açıklandı. Gaziantep FK maçının hakemi. Mehmet Türkmen. Bu haberi 5 ayrı kaynak yazdı.
-   - Fenerbahce.org: Gaziantep FK maçının hakemi; Mehmet Türkmen
-   - Anadolu Ajansı: Trendyol Süper Lig'de 5. haftanın perdesi açılıyor
-   - GZT: Süper Lig'de 5. hafta fikstürü: Galatasaray ve Fenerbahçe'nin maç tarihi netleşti
-   Bağlantı: https://www.hurriyet.com.tr/sporarena/super-ligde-5-haftanin-hakemleri-aciklandi-43302297
-
-6. Eski takım arkadaşıydı, yardımcısı oldu
+2. Pehlivanları alnından öpen Antalya Büyükşehir Belediye Başkanvekili Büşra Özdemir'den yeni açıklama
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Eski takım arkadaşıydı, yardımcısı oldu. Umut Bulut, Kocaelispor'un teknik ekibine katıldı. Bu haberi 5 ayrı kaynak yazdı.
-   - Son Dakika: 3 eski arkadaş yıllar sonra buluştu! İlk sınav Galatasaray'a karşı
-   - haberturk.com: Umut Bulut, Kocaelispor'un teknik ekibine katıldı
-   - Gazete Vatan: Selçuk İnan istedi, Galatasaray'ın eski golcüsü Kocaelispor'a transfer oldu
-   Bağlantı: https://news.google.com/rss/articles/CBMie0FVX3lxTE0yakxyWjRjNEVGZ0hBQ21meEcyNGxFT1hJRnZCaDZFakdtWGxGS2J0ZU9MaVo2akJDclotRmE0N2NHSDh4b2pCV3dZQjFVWlNiVFFjNGlEN1lxUy1LblQ1MzRfM3lQSWhTbEtvZW5nQmR2REUyQlg2SmRUcw?oc=5
+   Özet: Sözcü Gazetesi. Pehlivanları alnından öpen Antalya Büyükşehir Belediye Başkanvekili Büşra Özdemir'den yeni açıklama. Kumluca'da başpehlivan Orhan Okulu. Bu haberi 5 ayrı kaynak yazdı.
+   - Yeni Şafak: Kumluca'da başpehlivan Orhan Okulu
+   - Yeni Alanya: Antalya BŞB Zabıta Müdürü'nden ahlaksız paylaşım: “Laf söyleyenleri s.....m!!!”
+   - Odatv: Başkan Vekili Özdemir er meydanında: Pehlivanları alnından öptü
+   Bağlantı: https://www.sozcu.com.tr/pehlivanlari-alnindan-open-busra-ozdemir-den-yeni-aciklama-p357418
 
-7. Konya'da gözler Onuachu'da
-   Kaynak: Fanatik (bu olayı 5 yayıncı yazdı)
-   Özet: Fanatik. Konya'da gözler Onuachu'da. Trabzonspor, Konyaspor maçı hazırlıklarını sürdürdü. Bu haberi 5 ayrı kaynak yazdı.
-   - Hürriyet: Trabzonspor, Konyaspor maçı hazırlıklarını sürdürdü
-   - NTVSpor: Carlo Ancelotti'den Ederson ve Gabriel Sara kararı
-   - Sözcü Gazetesi: Trabzonspor'da gözler Onuachu'da
-   Bağlantı: https://news.google.com/rss/articles/CBMie0FVX3lxTE1qaTREQmFKbWFodUN3UUszTTJDd1Q3dXpkSkFpUTNSaGctTnB3TjBGTFR6N2RoTzlBbDBwVGh4RUVwd0xlNTZNc3prQ25RVWRZLWFKVUlyZGJEalR2OFdpVGt4ZGNXTlN6QUZMREx4d0F4Q0taWk1Wd1Npaw?oc=5
+3. Eda Erdem tarihe geçti
+   Kaynak: T24 (bu olayı 5 yayıncı yazdı)
+   Özet: Te yirmi dört. Eda Erdem tarihe geçti. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Sadece kupa kazanmadılar binlerce kız çocuğuna bir yol açtılar | Fulya Soybaş Köşe Yazısı
+   - Odatv: Zehra Güneş'ten final itirafı: Maçı kaybetmeyeceğimizi o anda anladım
+   - Türkiye Voleybol Federasyonu: Cumhurbaşkanımız Erdoğan, Türk Voleybolunun Başarılı Temsilcilerini Kabul Etti
+   Bağlantı: https://news.google.com/rss/articles/CBMiZEFVX3lxTFBmZ193cTl2eC1ONjA4VExPYW1hOEVBWG9INmRKXzhTalNoU1pBakNGWGdnNm85ZkFvb3o2OTFpT1l1aDJSLVhRNXkyNGo3dEp0UlN1dm1BNmtJOXRFcm14aWpaZmo?oc=5
 
-8. Şampiyonlar Ligi performansıyla Süper Lig devlerini pişman etti
+4. Acun Ilıcalı'yı korkutan görüntü: Servet döktüğü ismin kabus anları
    Kaynak: Sözcü Gazetesi (bu olayı 5 yayıncı yazdı)
-   Özet: Sözcü Gazetesi. Şampiyonlar Ligi performansıyla Süper Lig devlerini pişman etti. Hat-trick kahramanı. ama hâlâ şikâyet mi ediyor?. Ermedin Demirovic, 12 dakikalık fırtınanın ardından neden düzgün şekilde kutlama yapmayı reddetti?. Bu haberi 5 ayrı kaynak yazdı.
-   - NTVSpor: Dünya, Galatasaray'ın istediği ismin Şampiyonlar Ligi'nde yaptığını konuşuyor! 12 dakika sürdü
-   - Goal.com: 'Hat-trick kahramanı... ama hâlâ şikâyet mi ediyor?!' Ermedin Demirovic, 12 dakikalık fırtınanın ardından neden düzgün şekilde kutlama yapmayı reddetti?
-   - cumhuriyet.com.tr: Ermedin Demirovic'ten hat-trick: Stuttgart evinde Viking'e geçit vermedi!
-   Bağlantı: https://news.google.com/rss/articles/CBMinAFBVV95cUxOM0tJVXZEVzdiUnpYYXlmTXBNM1V5VzQwN0lRWGw2cm9iLXlTMmpYMWRsRGJtQy1rN1piUHVLRVRXeHQ2ckI5aGd1M2Y2VVNhSzI4eHpLWVlITUgzZS1LenhMQU1lWlpqZk1DNGw1Z0lvb1k4X0hLeHJ0bzBod2Y5c0Y3eHVVQjVjX2NJd0t0dlB1cjYtTjdRbS1ONW0?oc=5
+   Özet: Sözcü Gazetesi. Acun Ilıcalı'yı korkutan görüntü, Servet döktüğü ismin kabus anları. Hull City'nin yeni transferi trafik kazası geçirdi, İlk müdahaleyi Teknik Direktör Jakirovic yaptı. Bu haberi 5 ayrı kaynak yazdı.
+   - Gazete Oksijen: Hull City'nin yeni transferi trafik kazası geçirdi: İlk müdahaleyi Teknik Direktör Jakirovic yaptı
+   - GZT: Hull City'i korkutan kaza: Acun Ilıcalı bonservisine servet ödemişti | Futbol Haberleri
+   - Ajansspor: Hull City’de korkutan kaza: Araba ters döndü...
+   Bağlantı: https://www.sozcu.com.tr/acun-ilicali-yi-korkutan-goruntu-servet-doktugu-ismin-kabus-anlari-p357330
+
+5. A Milli Futsal Takımı'na acı haber
+   Kaynak: Sporx.com (bu olayı 5 yayıncı yazdı)
+   Özet: Sporx. A Milli Futsal Takımı'na acı haber. Adem Küçükkartal'ı Kaybettik. Bu haberi 5 ayrı kaynak yazdı.
+   - TFF: Adem Küçükkartal'ı Kaybettik
+   - Yeniçağ Gazetesi: Milli futbolcu Adem Küçükkartal hayatını kaybetti
+   - NTVSpor: A Milli Futsal Takımı oyuncusu Adem Küçükkartal hayatını kaybetti
+   Bağlantı: https://news.google.com/rss/articles/CBMifEFVX3lxTE1sN3JLdlJYdmE2WWtNbE5QOXBkOC15Y1NIRWJYZzQzcThUQVVWRjNETV9zaWxiWk1CeGZuNkZueVZZaGVKdHFVOGllNjNJeUJ1OThqcnJMM1M5ZFZnQkdxTVFoTlJRUDJxbllnalplcF8wZmUtYWNvcXdFVFfSAX9BVV95cUxPUXJkcGNwYmFNSHlvVEYwN2c1UDJTUUd0YmItVEVYQ0RacEVEZm5nVmtuQmlCc25NRWtVcXdtRUM0NHVoOTVCVk5hV2JlMWJFMmFlYm9XVVdWVlVIb1M1QmVKWmpaYjA1aGZuNEI1TUtLRHlhR0ZYeUFGV2JYc0hn?oc=5
+
+6. Fenerbahçe Tarfin, EuroLeague’de yeni sezon öncesi basın mensuplarıyla buluştu
+   Kaynak: Fenerbahce.org (bu olayı 5 yayıncı yazdı)
+   Özet: Fenerbahce. Fenerbahçe Tarfin, EuroLeague’de yeni sezon öncesi basın mensuplarıyla buluştu. Shane Larkin, Burada hedefim şampiyonluklar kazanmak. Bu haberi 5 ayrı kaynak yazdı.
+   - Hürriyet: Shane Larkin: 'Burada hedefim şampiyonluklar kazanmak!'
+   - Fanatik: Larkin'den Fenerbahçe taraftarına mesaj 'Çok heyecanlıyım'
+   - Eurohoops: Saras Jasikevicius: "Sahada Daha İyi Karar Alabilen Oyuncular İstedik"
+   Bağlantı: https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNWpWR2o4d282Q0szU2VQd2RIM1l6OHlmbjhBQVBRdFFVRnlIT1l0Q21UOGJtQi10eVQ4QVdPX1FHWDhtWFkwZWE0SDhDdURSbzRBemFLVDRJRHFfTFNSSE9sUTZ6bTZzSUpHVmh6eHRETkd0enhyU1drNFkzSExSNXFQZVZWSDJkUl9fdHUwRU1USUNEdnJla0ctUDU5NURFYzc1ZTNWQ2xENXJfOXpEVHFzb3BxNEFLZkRnY1FkeWNRV3JERC1qWkJqaDM4TURJRFcwMGlIbmxCUDZWVzZPRXlrYnR3VS1ERkRpSW9TOA?oc=5
+
+7. Golden Boy 100 listesi açıklandı: Süper Lig'den sadece bir isim yer aldı
+   Kaynak: Yeniçağ Gazetesi (bu olayı 5 yayıncı yazdı)
+   Özet: Yeniçağ Gazetesi. Golden Boy 100 listesi açıklandı, Süper Lig'den sadece bir isim yer aldı. Golden Boy Top 100’de tek Türk. Beşiktaş'ın genç yıldızı listede. Bu haberi 5 ayrı kaynak yazdı.
+   - Transfermarkt: Golden Boy Top 100 listesi güncellendi - Süper Lig’den yalnızca İlhan Fakılı sıralamaya girebildi
+   - NTVSpor: Avrupa'nın konuştuğu listede Süper Lig'den tek isim! 2 ay önce Türkiye'ye transfer oldu
+   - Haber 7: Golden Boy Top 100’de tek Türk! Beşiktaş'ın genç yıldızı listede
+   Bağlantı: https://news.google.com/rss/articles/CBMitgFBVV95cUxQekhyUEUzVGp3b2dzSkRXTEZuQU1mc2pNM1FMUVhGWGJsMVJ2bjc2QmxzZVp2dGdONXc3M1VVQjh5ckxvMWlqX0NtY1Brd2xld0tlNnlkdjNHQ0JpOVVIMXlRSkJGQ2xGQmxEblBvR3B6QXhaSlBsVGJRS3Ffai1NNDA4YlJGekJsb3hsY2JuaktfUVNLZTBDM0RSeUR4X3A0UnVhUUJ0RXk1N0NCRTFzZWpoMGlQQQ?oc=5
+
+8. Hull City'den ayrıldı: Akintola, Beşiktaş'ın rakibine imza attı
+   Kaynak: Sporx.com (bu olayı 5 yayıncı yazdı)
+   Özet: Sporx. Hull City'den ayrıldı, Akintola, Beşiktaş'ın rakibine imza attı. David Akintola, Beşiktaş'ın rakibine transfer oldu. Bu haberi 5 ayrı kaynak yazdı.
+   - NTVSpor: Hull City'den ayrılan David Akintola, Beşiktaş'ın rakibine transfer oldu
+   - GZT: Hull City'den ayrıldı Beşiktaş'ın rakibine transfer oldu: Akintola'nın yeni takımı belli oldu
+   - Bursa Hakimiyet: David Akintola, Beşiktaş'ın rakibine transfer oldu!
+   Bağlantı: https://news.google.com/rss/articles/CBMioAFBVV95cUxQbnJVcWhjbUwzTTMxQ1FheFhXR01hdkFaWTFVZk9WeWN1OU5VVWFzUHAwRW55SlJlcWtGNF9NSjhzR2ZuTG5xLUItWG9xeENMSnFRZllURFlTWElPM0Zxa1lFbEZmekVwLWcxZXI4VHBiRkl5RGhfNlc5VUVmclI4bHAwOW8zNGdLT2tIUk1mWDFPQ2NEZk41Z05aTzRkX29Z0gGjAUFVX3lxTE02dVlkakZRTE9DaWY3XzJyVEJNMnI3bHBmVlZVeFBOSEdLQ1dyMjMwbndSLTJxbUdJWThGNV9xUEpRVC13SGpQeGQ3ZGhpOHl3RHlkd2d2dDZzX01uazNjV0MzNXMxQVF0bkt6TUxrenJBSXZPYU4tbFNody14YUQtRDhIWjRVNHp4c1gzZFo0bFc5X3h6WnBvczh6S0d0aEJxdTg?oc=5
 
 ============================================================
 YAZILIM
 ============================================================
 
-1. Bifrost, Yapay Zeka Build'leri ve Yeni Workflow'lar ile Bir Yaşında
-   Kaynak: Laravel News
-   Özet: Laravel News. Bifrost Turns One With AI Builds and New Workflows.
-   Bağlantı: https://laravel-news.com/bifrost-first-anniversary?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews
-
-2. Laravel & Design Pattern'ler — Pratik Serisi: Builder
-   Kaynak: DEV Laravel
-   Özet: DEV Laravel. Laravel & Design Patterns — Practice Series, Builder.
-   Bağlantı: https://dev.to/demianbuilderdev/laravel-design-patterns-practice-series-builder-1p27
-
-3. Bir Dizi Talihsiz Job
-   Kaynak: DEV Laravel
-   Özet: DEV Laravel. A Series of Unfortunate Jobs.
-   Bağlantı: https://dev.to/oussamamater/a-series-of-unfortunate-jobs-33bk
-
-4. Neden Kendi PR Açıklamalarımızı Kendimiz Yazmamız Gerektiğini Düşünüyorum?
-   Kaynak: Laravel Blog
-   Özet: Laravel Blog. Why I think we should write our own PR descriptions.
-   Bağlantı: https://laravel.com/blog/why-i-think-we-should-write-our-own-pr-descriptions
-
-5. Laravel 11, Livewire 3 & Anlık Telefon Önizlemesi ile Ultra Hızlı Bir Link-in-Bio Platformu İnşa Etmek
-   Kaynak: DEV Laravel
-   Özet: DEV Laravel. Building an Ultra-Fast Link-in-Bio Platform with Laravel 11, Livewire 3 & Real-Time Phone Preview.
-   Bağlantı: https://dev.to/nurmantg/building-an-ultra-fast-link-in-bio-platform-with-laravel-11-livewire-3-real-time-phone-preview-m32
-
-6. GitHub Erişilebilirlik Raporu: Ağustos 2026
+1. Marketing ops as code: Automating events from planning to follow-up on GitHub
    Kaynak: GitHub Blog
-   Özet: GitHub Blog. GitHub availability report, August 2026.
-   Bağlantı: https://github.blog/news-insights/company-news/github-availability-report-august-2026/
+   Özet: GitHub Blog. Marketing ops as code, Automating events from planning to follow-up on GitHub.
+   Bağlantı: https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/
 
-7. Quick Blade ile macOS Finder'da Blade Template'lerinin Önizlemesini Yapın
-   Kaynak: Laravel News
-   Özet: Laravel News. Preview Blade Templates in macOS Finder with Quick Blade.
-   Bağlantı: https://laravel-news.com/quick-blade?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews
+2. The Password Reset Flow: Where Good PHP & Laravel Developers Ship Bad Security
+   Kaynak: DEV Laravel
+   Özet: DEV Laravel. The Password Reset Flow, Where Good PHP & Laravel Developers Ship Bad Security.
+   Bağlantı: https://dev.to/kriosa/the-password-reset-flow-where-good-php-laravel-developers-ship-bad-security-3p2h
 
-8. Laravel Telescope 5.24.0'da Artisan Debugging Komutları
+3. JSON vs MessagePack in Laravel: A Practical API Benchmark
+   Kaynak: DEV Laravel
+   Özet: DEV Laravel. JSON vs MessagePack in Laravel, A Practical API Benchmark.
+   Bağlantı: https://dev.to/smmehdisharifi/json-vs-messagepack-in-laravel-a-practical-api-benchmark-3od9
+
+4. Laravel 13.30: chunkBy() and the Storage::path() Line I Had in Production
+   Kaynak: DEV Laravel
+   Özet: DEV Laravel. Laravel 13.30, chunkBy() and the Storage,, path() Line I Had in Production.
+   Bağlantı: https://dev.to/abyzgenic/laravel-1330-chunkby-and-the-storagepath-line-i-had-in-production-3a3n
+
+5. PayZephyr: One Payment API for Stripe, Paystack, and PayPal
    Kaynak: Laravel News
-   Özet: Laravel News. Artisan Debugging Commands in Laravel Telescope 5.24.0.
-   Bağlantı: https://laravel-news.com/laravel-telescope-5-24-0?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews
+   Özet: Laravel News. PayZephyr, One Payment API for Stripe, Paystack, and PayPal.
+   Bağlantı: https://laravel-news.com/payzephyr?utm_medium=feed&utm_source=feedpress.me&utm_campaign=Feed%3A+laravelnews
+
+6. GitHub Copilot app for Beginners: Using the diff, terminal, and browser
+   Kaynak: GitHub Blog
+   Özet: GitHub Blog. GitHub Copilot app for Beginners, Using the diff, terminal, and browser.
+   Bağlantı: https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/
 
 ============================================================
-Toplam 66 haber.
+Toplam 62 haber.
 Kaynak: https://arifw3.github.io/haber-akisi/

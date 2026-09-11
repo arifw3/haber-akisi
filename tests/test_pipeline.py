@@ -823,6 +823,31 @@ class TestGeminiQuotaDetail(unittest.TestCase):
         self.assertEqual(_quota_detail(json.dumps({"error": {"code": 429}})), ("", 0.0))
 
 
+class TestEmptyPublisherFeeds(unittest.TestCase):
+    """Makale vermeyen yayinci beslemesi denetimde gorunmeli.
+
+    14 beslemenin 5'i olmustu (URL degismis ya da site RSS'i birakmis) ve
+    hicbir yerde gorunmuyordu: kod hatayi yutuyor, haber gorselsiz kaliyor,
+    sebebi bilinmiyordu.
+    """
+
+    def test_empty_feed_fails_the_check(self):
+        bulten = saglikli_bulten(empty_publisher_feeds=["ntvspor.net", "t24.com.tr"])
+        rapor = inspect(bulten)
+        self.assertFalse(rapor.ok)
+        adlar = [c[0] for c in rapor.failed]
+        self.assertIn("yayinci beslemeleri", adlar)
+
+    def test_names_the_broken_feeds(self):
+        bulten = saglikli_bulten(empty_publisher_feeds=["birgun.net"])
+        ayrinti = [c[2] for c in inspect(bulten).failed if c[0] == "yayinci beslemeleri"][0]
+        self.assertIn("birgun.net", ayrinti)
+
+    def test_no_check_when_all_feeds_work(self):
+        adlar = [c[0] for c in inspect(saglikli_bulten()).checks]
+        self.assertNotIn("yayinci beslemeleri", adlar)
+
+
 class TestBulletinSelfCheck(unittest.TestCase):
     """Bulten kendi eksigini tasimali.
 
