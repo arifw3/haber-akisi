@@ -49,6 +49,8 @@ const STRINGS = {
     a11yBack: "Geri", a11ySave: "Kaydet", a11yUnsave: "Kaydedilenlerden çıkar",
     a11yShare: "Paylaş", a11ySource: "Kaynağa git", a11ySearch: "Ara",
     a11yRefresh: "Yenile", a11yVerified: "doğrulanmış kaynak",
+    a11yPause: "Duraklat", a11yResume: "Devam et",
+    ttsUnsupported: "Tarayıcı seslendirmeyi desteklemiyor",
     audioMissing: "Bazı haberlerin seslendirmesi eksik.",
     bulletinIncomplete: "Bu bülten eksik derlendi.",
     downloading: (a, b) => `İndiriliyor… ${a}/${b}`, offlineReady: (n) => `Çevrimdışı hazır · ${n} ses`,
@@ -79,6 +81,8 @@ const STRINGS = {
     a11yBack: "Back", a11ySave: "Save", a11yUnsave: "Remove from saved",
     a11yShare: "Share", a11ySource: "Go to source", a11ySearch: "Search",
     a11yRefresh: "Refresh", a11yVerified: "verified source",
+    a11yPause: "Pause", a11yResume: "Resume",
+    ttsUnsupported: "This browser doesn't support speech synthesis",
     audioMissing: "Some stories are missing narration.",
     bulletinIncomplete: "This bulletin was compiled with gaps.",
     downloading: (a, b) => `Downloading… ${a}/${b}`, offlineReady: (n) => `Ready offline · ${n} clips`,
@@ -937,7 +941,7 @@ function playCurrent() {
 
 function speakItem(item) {
   if (!("speechSynthesis" in window)) {
-    el.miniSub.textContent = "Tarayıcı seslendirmeyi desteklemiyor";
+    el.miniSub.textContent = t("ttsUnsupported");
     state.playing = false;
     return;
   }
@@ -992,15 +996,101 @@ function stopListening(finished = false) {
 function pauseListening() {
   state.playing = false;
   stopKeepAlive();
-  if ("speechSynthesis" in window) speechSynthesis.cancel();
+  // cancel() degil pause(): cancel replikleri yok ediyor ve devam
+  // edildiginde haber bastan basliyordu.
+  if ("speechSynthesis" in window && speechSynthesis.speaking) speechSynthesis.pause();
   el.player.pause();
   updateMini();
+}
+
+/* Duraklatilan yerden devam. playCurrent() kaynagi yeniden yukledigi
+ * icin her zaman bastan basliyordu; iki dakikalik bir podcast bolumunde
+ * bu, duraklatmayi kullanilamaz kiliyor. */
+function resumeCurrent() {
+  const item = state.queue[state.index];
+  if (!item) return;
+  state.playing = true;
+  requestWakeLock();
+
+  if (item.audio && el.player.currentTime > 0 && !el.player.ended) {
+    el.player.playbackRate = state.rate;
+    el.player.play().catch(() => playCurrent());
+    return updateMini();
+  }
+  if (!item.audio && "speechSynthesis" in window && speechSynthesis.paused) {
+    speechSynthesis.resume();
+    startKeepAlive();
+    return updateMini();
+  }
+  playCurrent();
+}
+
+/* Kilit ekrani ve araç / kulaklik tuslari.
+ *
+ * Uygulamanin ilk tarifi "hands-free, ben ekranda olmayacagim"di ama
+ * dinlerken telefon kilitlendiginde ne calanin adi goruluyordu ne de
+ * kulakliktaki ileri tusu calisiyordu. Media Session bu bosluğu kapatir:
+ * baslik, yayinci ve gorsel kilit ekraninda cikar, sistem tuslari
+ * kuyrugu gezer. */
+function updateMediaSession() {
+  if (!("mediaSession" in navigator)) return;
+  const item = state.queue[state.index];
+
+  if (!item) {
+    navigator.mediaSession.metadata = null;
+    navigator.mediaSession.playbackState = "none";
+    return;
+  }
+
+  const artwork = item.image
+    ? [{ src: item.image, sizes: "512x512" }]
+    : [{ src: new URL("icons/icon-512.png", location.href).href, sizes: "512x512", type: "image/png" }];
+
+  try {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: item.title,
+      artist: item.segment === "podcast" ? t("speaking", item.publisher) : item.publisher,
+      album: (state.bulletin && state.bulletin.title) || "Haber Akışı",
+      artwork,
+    });
+    navigator.mediaSession.playbackState = state.playing ? "playing" : "paused";
+  } catch {
+    /* eski tarayicilar MediaMetadata'yi tanimayabilir */
+  }
+}
+
+function initMediaSession() {
+  if (!("mediaSession" in navigator)) return;
+  const set = (action, fn) => {
+    try {
+      navigator.mediaSession.setActionHandler(action, fn);
+    } catch {
+      /* tarayici bu eylemi desteklemiyor */
+    }
+  };
+  set("play", resumeCurrent);
+  set("pause", pauseListening);
+  set("nexttrack", () => {
+    if (state.index >= state.queue.length - 1) return;
+    state.index += 1;
+    playCurrent();
+  });
+  set("previoustrack", () => {
+    if (state.index <= 0) return;
+    state.index -= 1;
+    playCurrent();
+  });
+  set("stop", () => {
+    stopListening(true);
+    state.queue = [];
+    updateMini();
+  });
 }
 
 function updateMini() {
   const item = state.queue[state.index];
   el.mini.classList.toggle("hidden", !item);
-  if (!item) return;
+  if (!item) return updateMediaSession();
 
   el.miniTitle.textContent = item.title;
   const etiket = item.segment === "podcast" ? t("speaking", item.publisher) : item.publisher;
@@ -1009,7 +1099,8 @@ function updateMini() {
   el.miniPause.classList.toggle("hidden", !state.playing);
   el.miniEq.style.visibility = state.playing ? "visible" : "hidden";
   if (el.miniRate) el.miniRate.textContent = `${state.rate}×`;
-  el.miniToggle.setAttribute("aria-label", state.playing ? "Duraklat" : "Devam et");
+  el.miniToggle.setAttribute("aria-label", state.playing ? t("a11yPause") : t("a11yResume"));
+  updateMediaSession();
 }
 
 /* ---------------------------------------------------------- etkileşimler */
@@ -1020,11 +1111,7 @@ document.addEventListener("click", (event) => {
     const view = nav.dataset.nav;
     if (view === "listen") {
       if (state.playing) return pauseListening();
-      if (state.queue.length) {
-        state.playing = true;
-        requestWakeLock();
-        return playCurrent();
-      }
+      if (state.queue.length) return resumeCurrent();
       const queue = filtered().length ? filtered() : allItems();
       return startListening(queue);
     }
@@ -1092,9 +1179,7 @@ document.addEventListener("click", (event) => {
 
 el.miniToggle.addEventListener("click", () => {
   if (state.playing) return pauseListening();
-  state.playing = true;
-  requestWakeLock();
-  playCurrent();
+  resumeCurrent();
 });
 
 el.miniRate?.addEventListener("click", cycleRate);
@@ -1180,6 +1265,7 @@ async function refresh() {
 async function init() {
   document.documentElement.lang = state.lang;
   initVoices();
+  initMediaSession();
   try {
     state.bulletin = await loadBulletin();
   } catch (err) {
