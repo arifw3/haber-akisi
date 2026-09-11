@@ -27,6 +27,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Stiller derlenir; tarayıcıda derlenmez. Bu adım olmazsa app.js'e
+      # eklenen yeni bir Tailwind sınıfı sessizce stilsiz kalırdı — depoya
+      # işlenmiş styles.css o sınıfı tanımıyor olurdu.
+      - name: Stilleri derle
+        run: npx --yes tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o site/styles.css --minify
+
       - name: Feed sağlığını kontrol et
         run: python -m mynews --locale tr health
 

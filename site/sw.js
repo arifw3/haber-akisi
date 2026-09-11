@@ -3,7 +3,7 @@
  * Kabuk (HTML/JS/ikon) cache-first: uygulama çevrimdışı da açılır.
  * Bülten verisi network-first: internet varsa hep taze, yoksa son bülten.
  */
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL_CACHE = `mynews-shell-${VERSION}`;
 const DATA_CACHE = `mynews-data-${VERSION}`;
 // Ses ayrı ve sürümsüz: bülten güncellense de indirilmiş sesler durmalı.
@@ -13,6 +13,7 @@ const SHELL = [
   "./",
   "./index.html",
   "./app.js",
+  "./styles.css",
   "./manifest.webmanifest",
   "./icons/icon.svg",
   "./icons/icon-192.png",
