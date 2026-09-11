@@ -41,6 +41,7 @@ const STRINGS = {
     home: "Ana sayfa", discover: "Keşfet", listen: "Dinle", saved: "Kayıtlı",
     discoverSub: "Tüm kategorilerden haberler", savedSub: "Sonra okumak için ayırdıklarınız",
     search: "Haberlerde ara…", noMatch: "Eşleşen haber yok.", count: (n) => `${n} haber`,
+    appName: "Haber Akışı",
     audioBriefing: "SESLİ BÜLTEN", dailyBriefing: "Günün bülteni",
     episodeMeta: (m) => `İki sunucu · ~${m} dakika`,
     podcastApp: "Podcast uygulamanda dinle", saveOffline: "Çevrimdışı dinlemek için kaydet",
@@ -73,6 +74,7 @@ const STRINGS = {
     home: "Home", discover: "Discover", listen: "Listen", saved: "Saved",
     discoverSub: "Stories from every category", savedSub: "Kept for later",
     search: "Search news…", noMatch: "No matching stories.", count: (n) => `${n} stories`,
+    appName: "News Flow",
     audioBriefing: "AUDIO BRIEFING", dailyBriefing: "Today's briefing",
     episodeMeta: (m) => `Two hosts · ~${m} min`,
     podcastApp: "Listen in your podcast app", saveOffline: "Save for offline listening",
@@ -405,7 +407,7 @@ function renderTopbar() {
       <div class="flex items-center justify-between">
         <div class="min-w-0">
           <p class="text-[12.5px] font-medium text-ink-faint">${escapeHtml(formatDate(state.bulletin?.generated_at))}</p>
-          <h1 class="text-[24px] font-bold leading-tight tracking-tight">${escapeHtml(state.bulletin?.title || "Haber Akışı")}</h1>
+          <h1 class="text-[24px] font-bold leading-tight tracking-tight">${escapeHtml(state.bulletin?.title || t("appName"))}</h1>
         </div>
         <div class="flex shrink-0 items-center gap-2">
           <button data-lang class="h-11 rounded-full bg-white px-3 text-[13px] font-bold uppercase shadow-card transition active:scale-95"
@@ -450,7 +452,7 @@ function podcastQueue() {
     speech: turn.text,
     audio: turn.audio,
     segment: "podcast",
-    segmentTitle: "Günün bülteni",
+    segmentTitle: t("dailyBriefing"),
     source_count: 0,
     related: [],
     link: "",
@@ -1050,7 +1052,7 @@ function updateMediaSession() {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: item.title,
       artist: item.segment === "podcast" ? t("speaking", item.publisher) : item.publisher,
-      album: (state.bulletin && state.bulletin.title) || "Haber Akışı",
+      album: (state.bulletin && state.bulletin.title) || t("appName"),
       artwork,
     });
     navigator.mediaSession.playbackState = state.playing ? "playing" : "paused";
