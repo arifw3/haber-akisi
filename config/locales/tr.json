@@ -75,9 +75,9 @@
       "limit": 8,
       "max_age_days": 7,
       "scoring_override": {
-        "w_sources": 0.0,
         "w_freshness": 1.4,
-        "w_trust": 1.2
+        "w_trust": 1.2,
+        "w_clustered": 0.0
       },
       "sources": [
         {
@@ -127,9 +127,9 @@
       "limit": 8,
       "max_age_days": 7,
       "scoring_override": {
-        "w_sources": 0.0,
         "w_freshness": 1.6,
-        "w_trust": 1.0
+        "w_trust": 1.0,
+        "w_clustered": 0.0
       },
       "sources": [
         {

@@ -53,7 +53,7 @@ def cmd_rank(args: argparse.Namespace) -> int:
             print(f"{rank:>2}. {s.item.title[:72]}")
             print(
                 f"     {s.item.publisher[:20]:<20} skor={s.score:.2f}  "
-                f"kaynak={s.item.source_count} taze={s.freshness:.2f} "
+                f"kume={'evet' if s.clustered else 'hayir '} taze={s.freshness:.2f} "
                 f"guven={s.trust:.2f} bait={s.clickbait:.2f}"
             )
     return 0

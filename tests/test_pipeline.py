@@ -823,6 +823,52 @@ class TestGeminiQuotaDetail(unittest.TestCase):
         self.assertEqual(_quota_detail(json.dumps({"error": {"code": 429}})), ("", 0.0))
 
 
+class TestClusteringSignal(unittest.TestCase):
+    """Kumelenme ikili bir sinyal, derece degil.
+
+    Google Haberler RSS'i kume buyuklugunu tam 5'te kesiyor: bir feed'deki
+    70 haberin 64'u tam 5 yayinci raporladi, 6'si 0. Arasi yok. Bu yuzden
+    "5 kaynak" ile "50 kaynak" ayni; skor da oyle davranmali.
+    """
+
+    def _item(self, kaynak_sayisi):
+        """source_count bir property: related listesindeki farkli yayincilardan turer."""
+        related = [
+            Related(title=f"Ayni olay {n}", source=f"Yayinci{n}", link=f"https://y{n}.test")
+            for n in range(1, kaynak_sayisi)
+        ]
+        return NewsItem(
+            id=f"x{kaynak_sayisi}",
+            title="Merkez Bankası faiz kararını açıkladı",
+            publisher="TRT Haber",
+            publisher_url="https://trthaber.com",
+            published=datetime.now(timezone.utc),
+            link="https://example.com/x",
+            category="turkiye",
+            related=related,
+        )
+
+    def setUp(self):
+        self.ranker = Ranker(load_config("tr"))
+
+    def test_five_and_fifty_score_the_same(self):
+        """Veri ikisini ayirt edemiyor; skor da ayirt ediyormus gibi yapmamali."""
+        bes = self.ranker.score(self._item(5))
+        elli = self.ranker.score(self._item(50))
+        self.assertAlmostEqual(bes.score, elli.score)
+
+    def test_clustered_beats_unclustered(self):
+        """Sinyalin gercek isi bu: kimsenin pesine dusmedigi haber geride kalir."""
+        tek = self.ranker.score(self._item(1))
+        kume = self.ranker.score(self._item(5))
+        self.assertGreater(kume.score, tek.score)
+
+    def test_clustered_flag_is_binary(self):
+        for n, beklenen in ((0, 0.0), (1, 0.0), (2, 1.0), (5, 1.0), (99, 1.0)):
+            with self.subTest(kaynak=n):
+                self.assertEqual(self.ranker.score(self._item(n)).clustered, beklenen)
+
+
 class TestClickbaitLeaks(unittest.TestCase):
     """Bultene gercekten sizmis basliklar cezalandirilmali.
 

@@ -2,89 +2,248 @@
   "language": "en",
   "title": "News Flow",
   "speech_rules": "en",
-  "locale": { "hl": "en-US", "gl": "US", "ceid": "US:en" },
-
+  "locale": {
+    "hl": "en-US",
+    "gl": "US",
+    "ceid": "US:en"
+  },
   "voices": {
-    "read": ["en-US-Chirp3-HD-Aoede"],
+    "read": [
+      "en-US-Chirp3-HD-Aoede"
+    ],
     "podcast": {
       "SARAH": "en-US-Chirp3-HD-Aoede",
       "MARK": "en-US-Chirp3-HD-Charon"
     }
   },
-
   "segments": [
-    { "key": "us",       "title": "United States", "topics": ["NATION"],   "limit": 8 },
-    { "key": "world",    "title": "World",         "topics": ["WORLD"],    "limit": 8 },
-    { "key": "business", "title": "Business",      "topics": ["BUSINESS"], "limit": 8 },
     {
-      "key": "technology", "title": "Technology", "topics": ["TECHNOLOGY"], "limit": 10,
+      "key": "us",
+      "title": "United States",
+      "topics": [
+        "NATION"
+      ],
+      "limit": 8
+    },
+    {
+      "key": "world",
+      "title": "World",
+      "topics": [
+        "WORLD"
+      ],
+      "limit": 8
+    },
+    {
+      "key": "business",
+      "title": "Business",
+      "topics": [
+        "BUSINESS"
+      ],
+      "limit": 8
+    },
+    {
+      "key": "technology",
+      "title": "Technology",
+      "topics": [
+        "TECHNOLOGY"
+      ],
+      "limit": 10,
       "max_age_days": 5,
       "sources": [
-        { "name": "Ars Technica", "url": "https://feeds.arstechnica.com/arstechnica/index", "site": "https://arstechnica.com" },
-        { "name": "The Verge",    "url": "https://www.theverge.com/rss/index.xml",           "site": "https://theverge.com" },
-        { "name": "TechCrunch",   "url": "https://techcrunch.com/feed/",                     "site": "https://techcrunch.com" },
-        { "name": "Wired",        "url": "https://www.wired.com/feed/rss",                   "site": "https://wired.com" }
+        {
+          "name": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index",
+          "site": "https://arstechnica.com"
+        },
+        {
+          "name": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml",
+          "site": "https://theverge.com"
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/feed/",
+          "site": "https://techcrunch.com"
+        },
+        {
+          "name": "Wired",
+          "url": "https://www.wired.com/feed/rss",
+          "site": "https://wired.com"
+        }
       ]
     },
     {
-      "key": "science", "title": "Science", "topics": ["SCIENCE"], "limit": 8, "max_age_days": 7,
+      "key": "science",
+      "title": "Science",
+      "topics": [
+        "SCIENCE"
+      ],
+      "limit": 8,
+      "max_age_days": 7,
       "sources": [
-        { "name": "ScienceDaily", "url": "https://www.sciencedaily.com/rss/all.xml", "site": "https://sciencedaily.com" }
+        {
+          "name": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/rss/all.xml",
+          "site": "https://sciencedaily.com"
+        }
       ]
     },
-    { "key": "health", "title": "Health", "topics": ["HEALTH"], "limit": 6 },
-    { "key": "sports", "title": "Sports", "topics": ["SPORTS"], "limit": 8 },
     {
-      "key": "software", "title": "Software", "topics": [], "limit": 8, "max_age_days": 7,
-      "scoring_override": { "w_sources": 0.0, "w_freshness": 1.6, "w_trust": 1.0 },
+      "key": "health",
+      "title": "Health",
+      "topics": [
+        "HEALTH"
+      ],
+      "limit": 6
+    },
+    {
+      "key": "sports",
+      "title": "Sports",
+      "topics": [
+        "SPORTS"
+      ],
+      "limit": 8
+    },
+    {
+      "key": "software",
+      "title": "Software",
+      "topics": [],
+      "limit": 8,
+      "max_age_days": 7,
+      "scoring_override": {
+        "w_freshness": 1.6,
+        "w_trust": 1.0,
+        "w_clustered": 0.0
+      },
       "sources": [
-        { "name": "Laravel News", "url": "https://laravel-news.com/feed", "site": "https://laravel-news.com" },
-        { "name": "Laravel Blog", "url": "https://blog.laravel.com/feed", "site": "https://blog.laravel.com" },
-        { "name": "DEV Laravel",  "url": "https://dev.to/feed/tag/laravel", "site": "https://dev.to" },
-        { "name": "GitHub Blog",  "url": "https://github.blog/feed/",     "site": "https://github.blog" }
+        {
+          "name": "Laravel News",
+          "url": "https://laravel-news.com/feed",
+          "site": "https://laravel-news.com"
+        },
+        {
+          "name": "Laravel Blog",
+          "url": "https://blog.laravel.com/feed",
+          "site": "https://blog.laravel.com"
+        },
+        {
+          "name": "DEV Laravel",
+          "url": "https://dev.to/feed/tag/laravel",
+          "site": "https://dev.to"
+        },
+        {
+          "name": "GitHub Blog",
+          "url": "https://github.blog/feed/",
+          "site": "https://github.blog"
+        }
       ]
     }
   ],
-
   "publisher_feeds": {
-    "bbc.com": ["https://feeds.bbci.co.uk/news/rss.xml"],
-    "bbc.co.uk": ["https://feeds.bbci.co.uk/news/rss.xml"],
-    "theguardian.com": ["https://www.theguardian.com/international/rss"],
-    "nytimes.com": ["https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"],
-    "npr.org": ["https://feeds.npr.org/1001/rss.xml"],
-    "news.sky.com": ["https://feeds.skynews.com/feeds/rss/world.xml"],
-    "aljazeera.com": ["https://www.aljazeera.com/xml/rss/all.xml"],
-    "arstechnica.com": ["https://feeds.arstechnica.com/arstechnica/index"],
-    "theverge.com": ["https://www.theverge.com/rss/index.xml"],
-    "techcrunch.com": ["https://techcrunch.com/feed/"],
-    "wired.com": ["https://www.wired.com/feed/rss"],
-    "sciencedaily.com": ["https://www.sciencedaily.com/rss/all.xml"]
+    "bbc.com": [
+      "https://feeds.bbci.co.uk/news/rss.xml"
+    ],
+    "bbc.co.uk": [
+      "https://feeds.bbci.co.uk/news/rss.xml"
+    ],
+    "theguardian.com": [
+      "https://www.theguardian.com/international/rss"
+    ],
+    "nytimes.com": [
+      "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+    ],
+    "npr.org": [
+      "https://feeds.npr.org/1001/rss.xml"
+    ],
+    "news.sky.com": [
+      "https://feeds.skynews.com/feeds/rss/world.xml"
+    ],
+    "aljazeera.com": [
+      "https://www.aljazeera.com/xml/rss/all.xml"
+    ],
+    "arstechnica.com": [
+      "https://feeds.arstechnica.com/arstechnica/index"
+    ],
+    "theverge.com": [
+      "https://www.theverge.com/rss/index.xml"
+    ],
+    "techcrunch.com": [
+      "https://techcrunch.com/feed/"
+    ],
+    "wired.com": [
+      "https://www.wired.com/feed/rss"
+    ],
+    "sciencedaily.com": [
+      "https://www.sciencedaily.com/rss/all.xml"
+    ]
   },
-
   "default_trust": 0.5,
   "publisher_trust": {
-    "BBC": 0.95, "BBC News": 0.95, "Reuters": 0.95, "Associated Press": 0.95, "AP News": 0.95,
-    "The Guardian": 0.9, "The New York Times": 0.9, "NPR": 0.9, "Sky News": 0.85,
-    "Al Jazeera": 0.85, "The Washington Post": 0.9, "Bloomberg": 0.9, "Financial Times": 0.9,
-    "CNBC": 0.8, "CNN": 0.8, "ABC News": 0.8, "CBS News": 0.8, "NBC News": 0.8,
-    "Ars Technica": 0.9, "The Verge": 0.85, "TechCrunch": 0.85, "Wired": 0.85,
-    "ScienceDaily": 0.85, "Nature": 0.95, "Laravel News": 0.9, "Laravel Blog": 0.9,
-    "DEV Laravel": 0.75, "GitHub Blog": 0.9,
-    "Daily Mail": 0.25, "The Sun": 0.2, "New York Post": 0.4, "Newsweek": 0.5
+    "BBC": 0.95,
+    "BBC News": 0.95,
+    "Reuters": 0.95,
+    "Associated Press": 0.95,
+    "AP News": 0.95,
+    "The Guardian": 0.9,
+    "The New York Times": 0.9,
+    "NPR": 0.9,
+    "Sky News": 0.85,
+    "Al Jazeera": 0.85,
+    "The Washington Post": 0.9,
+    "Bloomberg": 0.9,
+    "Financial Times": 0.9,
+    "CNBC": 0.8,
+    "CNN": 0.8,
+    "ABC News": 0.8,
+    "CBS News": 0.8,
+    "NBC News": 0.8,
+    "Ars Technica": 0.9,
+    "The Verge": 0.85,
+    "TechCrunch": 0.85,
+    "Wired": 0.85,
+    "ScienceDaily": 0.85,
+    "Nature": 0.95,
+    "Laravel News": 0.9,
+    "Laravel Blog": 0.9,
+    "DEV Laravel": 0.75,
+    "GitHub Blog": 0.9,
+    "Daily Mail": 0.25,
+    "The Sun": 0.2,
+    "New York Post": 0.4,
+    "Newsweek": 0.5
   },
-
   "drop_patterns": [
-    "live updates", "live blog", "live score", "as it happened", "watch live",
-    "how to watch", "what time", "starting lineups", "standings", "highlights video",
-    "horoscope", "weather forecast", "lottery numbers", "recap:", "photos:"
+    "live updates",
+    "live blog",
+    "live score",
+    "as it happened",
+    "watch live",
+    "how to watch",
+    "what time",
+    "starting lineups",
+    "standings",
+    "highlights video",
+    "horoscope",
+    "weather forecast",
+    "lottery numbers",
+    "recap:",
+    "photos:"
   ],
-
   "clickbait_patterns": [
-    "you won't believe", "shocking", "here's why", "this is what happens",
-    "went viral", "slams", "blasts", "destroys", "the truth about",
-    "what happened next", "jaw-dropping", "mind-blowing", "insane"
+    "you won't believe",
+    "shocking",
+    "here's why",
+    "this is what happens",
+    "went viral",
+    "slams",
+    "blasts",
+    "destroys",
+    "the truth about",
+    "what happened next",
+    "jaw-dropping",
+    "mind-blowing",
+    "insane"
   ],
-
   "podcast": {
     "enabled": true,
     "model": "gemini-3.6-flash",
@@ -95,6 +254,9 @@
     "title": "News Flow",
     "author": "News Flow",
     "description": "A daily English news briefing assembled from Google News. Two hosts, the day's most-covered stories, a new episode every morning.",
-    "hosts": ["SARAH", "MARK"]
+    "hosts": [
+      "SARAH",
+      "MARK"
+    ]
   }
 }

@@ -3,7 +3,7 @@
   "language": "tr",
   "title": "Haber Akışı",
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T01:26:01.149542+00:00",
+  "generated_at": "2026-09-12T02:16:47.295028+00:00",
   "segments": [
     {
       "key": "turkiye",
@@ -16,18 +16,22 @@
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-11T19:21:00+00:00",
-          "age_hours": 6.1,
+          "age_hours": 6.9,
           "link": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOcXJXYTdqM3Job3lvaHRaNlhtdVlTQ1otNnNmbnRndmgtVFA4dkNvMVEydGRwSlpKa2JTSl9uVkh2VGhpN293N0d3VGtfQjJseXBVMTd3Wmx1X1ZDM01jUkFYXzloR3ozZmJmcHFEV2xvQVdNYzBjYy1PYlI1Y2J1RDZpc1h4UF9aQkRrWENaS21mdFJva285bVFzMTlHcnN0SlpTOWY3Tmc3ZENLZ2haOHhKQi1ObWJsSmJHVzNoZDlIR2FsQjdQZkxDZUNfOWwtd1lJN2RMaFBqbHZ1ZkNfLWs4bi1INE4xc1ZSenAwZThhenE4di1mZl9fVQ?oc=5",
           "image": "https://media.cumhuriyet.com.tr/Archive/a34af8c5-ab58-4a14-9564-fcace3c36443.jpg",
           "source_url": "https://www.cumhuriyet.com.tr/siyaset/erdogan-kapimiz-acik-demisti-akp-ye-gececegi-one-surulen-chp-li-marmaris-belediye-baskani-acar-unlu-den-yeni-parti-karari-2536825",
           "summary": "AKP'li Cumhurbaşkanı Recep Tayyip Erdoğan'ın partisine davet ettiği Marmaris Belediye Başkanı Acar Ünlü, AKP iddialarını reddetti. Ünlü, YENİ Parti'ye katılacağını açıkladı.",
           "source_count": 5,
-          "score": 3.834,
+          "score": 2.835,
           "speech": "Cumhuriyet. Erdoğan Kapımız açık demişti. A Ka Pe ye geçeceği öne sürülen Ce He Pe li Marmaris Belediye Başkanı Acar Ünlü'den YENİ Parti kararı. Erdoğan kapımız açık demişti tercihini yaptı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
               "title": "Erdoğan'ın AKP'ye davet ettiği CHP'li başkan Yeni Parti'ye geçiyor",
               "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Erdoğan 'Gelirsen kapımız açık' demişti: Marmaris Belediye Başkanı kararını Halk TV'ye açıkladı",
+              "source": "Halk TV"
             },
             {
               "title": "Erdoğan 'kapımız açık' demişti tercihini yaptı",
@@ -36,32 +40,62 @@
             {
               "title": "Marmaris Belediye Başkanı Acar Ünlü YENİ Parti’ye katılacak",
               "source": "Habertürk"
-            },
-            {
-              "title": "Marmaris Belediye Başkanı Acar Ünlü, Yeni Parti'ye katılacağını duyurdu",
-              "source": "Evrensel.net"
             }
           ]
         },
         {
           "id": "turkiye-1",
+          "title": "Seçil Erzan yeniden hakim karşısına çıktı: Arda Turan sözleri damga vurdu",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-11T20:04:00+00:00",
+          "age_hours": 6.2,
+          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRDQ4Ni1vY0RnMXBvSi1VeU5iV3o2Ym5DZXZERER1UjJJSEVJNGhQc1pxWjRMSFYzeGJmRmFEV3d0YmMzSEZyeGE0ek8xclhRYW03XzBoWlJYM0wxdDdQa28wYmYtT0lSTkJqSDZJQ0N3ZWpyTG42U01heUVqTWhuTGV1Q1NyLThqQThGQnJOOUVaSW0yQ1J1bEVILVVubm1zT2c?oc=5",
+          "image": "https://sozcu01.sozcucdn.com/sozcu/production/uploads/images/2026/9/secil-erzan-arda-turanjpg-gRuSuihxcEu5X98eTKm2tQ.jpg",
+          "source_url": "https://www.sozcu.com.tr/secil-erzan-yeniden-hakim-karsisinda-arda-turan-sozleri-damga-vurdu-p357444",
+          "summary": "Seçil Erzan yeniden hakim karşısına çıktı: Arda Turan sözleri damga vurdu",
+          "source_count": 5,
+          "score": 2.797,
+          "speech": "Sözcü Gazetesi. Seçil Erzan yeniden hakim karşısına çıktı, Arda Turan sözleri damga vurdu. Ünlülerin de aralarında olduğu kişileri dolandırdığı iddiasıyla tutuklanmıştı. Seçil Erzan hakim karşısında, Ben her şeyimi verdim, 1 liram yok. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Ünlülerin de aralarında olduğu kişileri dolandırdığı iddiasıyla tutuklanmıştı! Seçil Erzan hakim karşısında: 'Ben her şeyimi verdim, 1 liram yok'",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Seçil Erzan'ın tutukluluğunun devamına karar verildi: Duruşmada Arda Turan iddiası",
+              "source": "NTV Haber"
+            },
+            {
+              "title": "Seçil Erzan’ın tutukluluk halinin devamına karar verildi",
+              "source": "Habertürk"
+            },
+            {
+              "title": "Seçil Erzan’dan bomba Arda Turan çıkışı: 1000 yıl ceza verin",
+              "source": "Haberler"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-2",
           "title": "Girne'deki gemi faciasında yürek yakan telefon görüşmesi | Son sözü 'Yukarı gitmem gerekiyor' olmuş",
           "publisher": "Hürriyet",
           "domain": "hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
           "published": "2026-09-11T13:53:56+00:00",
-          "age_hours": 11.5,
+          "age_hours": 12.4,
           "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPbXlhb256U0tRWllsODNZWHVuSF9ROGxHb0pSbDVRdm9MMnlURnhoNjhHUTFkQ0pHWEh5c2FhdjFLWUVrWEtBcHZFT0N2ZWFfOHlZYlhmSmVHeEVKNl9GUFljZy1xOXVBY1kxZkZJSzVCb05CRERjY3Eyelh5YkE4S2xyUVl1MjVOWXMtMWN5aU9qLTFXUjhyZFJ0MThnSDdMZmZqSTBYQlQxU2UzVjN0SGJxczFvWDhEc29hbEZFOUh5eTRIVWFGVWpDTmtIUVN6N0oxdg?oc=5",
           "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa3ff67c5716b6d6b13122e.jpg",
           "source_url": "https://www.hurriyet.com.tr/gundem/girnedeki-gemi-faciasinda-yurek-yakan-telefon-gorusmesi-son-sozu-yukari-gitmem-gerekiyor-olmus-43303760",
           "summary": "Girne'de 30 Ağustos günü meydana gelen gemi faciasında 14 kişi hayatını kaybederken 14 kişiyi arama çalışmaları hala sürüyor. Acı olayın hemen ardından çok çarpıcı detaylar ortaya çıkmıştı. Kayıp olarak aranan Mehmet Bayhan'ın kardeşi Ahmet Bayhan, kardeşi ile aralarında geçen son görüşmeyi anlattı. Bayhan, kardeşinin kendisine ‘Geminin altı çok su alıyor, herkes dönelim diyor ama kaptan bize kulak vermiyor’ dediğini iddia etti.",
           "source_count": 5,
-          "score": 3.793,
+          "score": 2.794,
           "speech": "Hürriyet. Girne'deki gemi faciasında yürek yakan telefon görüşmesi | Son sözü Yukarı gitmem gerekiyor olmuş. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
               "title": "Gülay Kazancıoğlu | Gömün Beni Çukura: Medusa’nın Salı’ndan çıkamamak",
-              "source": "T24"
+              "source": "t24.com.tr"
             },
             {
               "title": "Batan gemide insanları kurtarabilmek için dakikalarca mücadele veren genç yaşadıklarını anlattı - HATAY",
@@ -78,19 +112,19 @@
           ]
         },
         {
-          "id": "turkiye-2",
+          "id": "turkiye-3",
           "title": "Milyonlarca öğrenciyi ilgilendiren karar: İlk gün saatleri değişti",
           "publisher": "Sözcü Gazetesi",
           "domain": "sozcu.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
           "published": "2026-09-11T18:35:00+00:00",
-          "age_hours": 6.8,
+          "age_hours": 7.7,
           "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPQ3dabUxLelNvX1NCNmhzMkI1ZHpBM0lJeFVkVUxsTTZ3YWduX0hiMThNaGFIeUhQaEdQdkdRTTk2NjVmaWdEMGJYZHJkVTZoczVsOHZucXNjSC1GTWpSMGFaa0c5V0tmaFVKWWFOWktNeDFmeTRBcUhudndIV2xtZXNhZEc3Rm9TNmU4UkZ3WTZ4ZVBzUjRkcDBjYnFyOWs?oc=5",
           "image": "https://sozcu01.sozcucdn.com/sozcu/production/uploads/images/2026/9/ders-zilijpg-juUf0ciQ10e1L5ZAUZZzJg.jpg",
           "source_url": "https://www.sozcu.com.tr/milyonlarca-ogrenciyi-ilgilendiren-karar-ilk-gun-saatleri-degisti-p357425",
           "summary": "Milyonlarca öğrenciyi ilgilendiren karar: İlk gün saatleri değişti",
           "source_count": 5,
-          "score": 3.771,
+          "score": 2.772,
           "speech": "Sözcü Gazetesi. Milyonlarca öğrenciyi ilgilendiren karar, İlk gün saatleri değişti. İ Be Be den 14 Eylül tedbirleri, Toplu ulaşım ücretsiz, 3 bin 665 ek sefer. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -112,19 +146,19 @@
           ]
         },
         {
-          "id": "turkiye-3",
+          "id": "turkiye-4",
           "title": "2 aylık hamileydi: ‘Burada yok’ denilen evde kızı 2 saat sonra asılı bulundu",
           "publisher": "CNN Türk",
           "domain": "cnnturk.com",
           "favicon": "https://www.google.com/s2/favicons?domain=cnnturk.com&sz=128",
           "published": "2026-09-11T11:17:00+00:00",
-          "age_hours": 14.1,
+          "age_hours": 15.0,
           "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOQ3RLSzBObDRiZGlUQ2tndWNzdUxuWFdaSU00Z284TmN0d2Jlai1VSGd1cm1xM0hxQk9NYWMweGh0dnFmZ01IaTV5U01RZUV6WWdpVDU2dlNwRVN3SXM2Wk9jVmVzY2JDZDRRTjVaM3c4YUtSNW16TzRZYjlZcU5WMHRIUk1VU3VQOVZFbS1yRnRVTGxGQ0pIZHYyWE5ZSy1CQ2VaYVI3Y01XcWc0OFVRWU1KSmZoY0NkUUF6aQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.749,
+          "score": 2.75,
           "speech": "Si En En Türk. 2 aylık hamileydi, ‘Burada yok denilen evde kızı 2 saat sonra asılı bulundu. Diyarbakır'da şüpheli ölüm, Evde yok dediler, 2 saat sonra acı haberi geldi. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -146,138 +180,104 @@
           ]
         },
         {
-          "id": "turkiye-4",
+          "id": "turkiye-5",
+          "title": "Mansur Yavaş anketinde sürpriz sonuç: Bir ayda büyük değişim; yüzde 46,7",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-11T16:36:00+00:00",
+          "age_hours": 9.7,
+          "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxON29hYmVMRGNRbnA0T1ZXMDVwRC14QkxmNFZmWmNmZ0tiQlJWM1BnbDJjLTY1RWQwQ3RqQi0zcUdjZGVhMWQyN2JfeWpEdmxRMURHYVZnSEszNEE3Zkw3OHhjTzFUMWhQZi1MclZySzFFdS1LVHY5SENjM3dTQ0lSel8tSWJQNTZE0gGOAUFVX3lxTFB5RGVsWTAzWU51T21ma2RWYmtpVEYxNVJoYTJneF8zZDNEem52bU5SZnJ0SWtjMURZOHg3R0ltU1hONC15UGlZcWtVY3NFUjQ4V3VZNGVQX09MMkY5SU83MWw5aDB2MDlBdFMwUEhXNFdhVW9FY1dzU3E2MlVtMnhkcWtzeHN5NFdWSWZjOWc?oc=5",
+          "image": "https://sozcu01.sozcucdn.com/sozcu/production/uploads/images/2026/5/mansur-yavas-anka-123333jpg-DkTYanxD60yMxk6ziklmZA.jpg",
+          "source_url": "https://www.sozcu.com.tr/mansur-yavas-ne-yaplai-anketi-agustos-eylul-2026-p357413",
+          "summary": "Mansur Yavaş anketinde sürpriz sonuç: Bir ayda büyük değişim; yüzde 46,7",
+          "source_count": 4,
+          "score": 2.739,
+          "speech": "Sözcü Gazetesi. Mansur Yavaş anketinde sürpriz sonuç, Bir ayda büyük değişim. yüzde 46,7. Saraya giden Ce He Pe linin tehdidi, Zafer Şahin. Bu haberi 4 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Bir idare-i maslahatçı olarak Mansur Yavaş | Ahmet HAKAN Köşe Yazısı",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Bahçeli'nin danışmanından çok konuşulacak yazı: \"Mansur Yavaş AKP'ye geçerse şok geçirmeyin!\"",
+              "source": "Sözcü Gazetesi"
+            },
+            {
+              "title": "Saraya giden CHP’linin tehdidi - Zafer Şahin",
+              "source": "Milliyet"
+            },
+            {
+              "title": "Yavaş ziyaretinde kazananlar ve kaybedenler",
+              "source": "Yeni Şafak"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-6",
+          "title": "'3 ilde okul saldırısı hazırlığı' paylaşımı yaptılar: Suç örgütüne operasyon",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-11T07:41:00+00:00",
+          "age_hours": 18.6,
+          "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2tFU285YlNSa19ZMnhsbFRnT0EtejVFdHNYOHVJWm1iR0Rxa20xZjhzc3N5UDBSTXZXOFdBTXdwdk9KeWFhdXFwU0VqVlM1X0NXc01hWXdPdkhpNXZZVnY1dGRhTURiQnJkOElCN1UxWmZPWFZ1ekpsMkk2ek1aWDRpNDZlNEZ1akNNZVpTU2lKbzRaQy0yaTFlRjFRMWlpMU12S2V1ejQ4dnpZVTJ4RkRTdWlOckJG?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 4,
+          "score": 2.69,
+          "speech": "Hürriyet. 3 ilde okul saldırısı hazırlığı paylaşımı yaptılar, Suç örgütüne operasyon. 17 şehitten geriye bu fotoğraflar kaldı. Bu haberi 4 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "'C31K' isimli suç örgütüne yönelik soruşturma! 22 ilde eş zamanlı operasyon",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "SON DAKİKA! 22 ilde yeni nesil suç örgütlerine darbe: 27 şüpheli yakalandı",
+              "source": "CNN Türk"
+            },
+            {
+              "title": "17 şehitten geriye bu fotoğraflar kaldı",
+              "source": "Yeni Şafak"
+            },
+            {
+              "title": "Pazartesi 3 ilde 3 okulda saldırı hazırlığı iddiası. 22 ilde C31K operasyonu",
+              "source": "NTV Haber"
+            }
+          ]
+        },
+        {
+          "id": "turkiye-7",
           "title": "Bir İmamoğlu davası: Eleştiriden hakarete beraatten siyasi yasağa",
           "publisher": "Diken",
           "domain": "diken.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=diken.com.tr&sz=128",
           "published": "2026-09-11T13:31:05+00:00",
-          "age_hours": 11.9,
+          "age_hours": 12.8,
           "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPam1SQzVhbGxpSDBnSFFHMTF2OXBGdUlXcjJkVkxqWDNseGVyMWRBd3VST3hwMFA2OFlsTVVoZ2xONkpWd0lWTmhJRmVBWGtoWTZjRUg5STZoTm5MQ0lmUGxpenNUZDMwUUFycUhPQkVrQl9lLUJTNjhRaXByOVVwOWlLR0RrTXhGNjZwMUFTSDRndW9n?oc=5",
           "image": "",
           "source_url": "https://www.diken.com.tr/bir-imamoglu-davasi-elestiriden-hakarete-beraatten-siyasi-yasaga/?utm_source=rss&utm_medium=rss&utm_campaign=bir-imamoglu-davasi-elestiriden-hakarete-beraatten-siyasi-yasaga",
           "summary": "Bir İmamoğlu davası: Eleştiriden hakarete beraatten siyasi yasağa 11.09.2026 Dikenİmamoğlu iki kez beraat ettiği davada hapsin yanısıra siyasi yasakla cezalandırıldı. Karar kesinleşirse İmaoğlu cezası boyunca siyasi faaliyet yürütemeyecek. İBB'ye yeni başkan seçilecek. The post Bir İmamoğlu davası: Eleştiriden hakarete beraatten siyasi yasağa appeared first on #site_linkat 11.09.2026 .",
           "source_count": 5,
-          "score": 3.637,
-          "speech": "Diken. Bir İmamoğlu davası, Eleştiriden hakarete beraatten siyasi yasağa. Ekrem İmamoğlu'na, hakaret davasında 2 yıl 1 ay hapis cezası. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.637,
+          "speech": "Diken. Bir İmamoğlu davası, Eleştiriden hakarete beraatten siyasi yasağa. İstanbul için kritik viraj. İ Be Be AK Parti'ye geçebilir. İşte sandalye dağılımı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Ekrem İmamoğlu'na, hakaret davasında 2 yıl 1 ay hapis cezası",
-              "source": "bbc.com"
+              "title": "Ekrem İmamoğlu'na hapis cezası ve siyasi yasak!",
+              "source": "Sözcü Gazetesi"
             },
             {
               "title": "Ekrem İmamoğlu'na \"hakaret\" suçundan 2 yıl 1 ay hapis cezası",
               "source": "TRT Haber"
             },
             {
-              "title": "Ekrem İmamoğlu'na hapis cezası ve siyasi yasak!",
-              "source": "Sözcü Gazetesi"
-            },
-            {
-              "title": "Haftaya Bakış (331): Üsküdar olayı | İmamoğlu'na ceza ve siyasi yasak | Mansur Yavaş'ın tercihi",
-              "source": "Medyascope"
-            }
-          ]
-        },
-        {
-          "id": "turkiye-5",
-          "title": "Gölbaşı'nda ormanlık alanda yangın: Çevredeki yerleşim yerleri boşaltıldı",
-          "publisher": "birgun.net",
-          "domain": "birgun.net",
-          "favicon": "https://www.google.com/s2/favicons?domain=birgun.net&sz=128",
-          "published": "2026-09-11T12:31:00+00:00",
-          "age_hours": 12.9,
-          "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcV9WVlVoNWYyekdZTmlydzNCNkJ3eWo5WGZGYWJ6eHZwOUo3Q1prc0MySm9VOU9mSm1UdXpYNnljSDV4U2txWktKU2twN1Bkd01ud2oteTFwbVdVWHhGbUpDdU4tVTJ6Q1p4REE2VFkwOWlUN0RQOHNDbUl5UC1HMVdDLXBXX2RHaVlGb0cxYnVKd0tNUzI2ZWhEaEdEZnByUkNOeThwZDJxWHY0?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.62,
-          "speech": "birgun. Gölbaşı'nda ormanlık alanda yangın, Çevredeki yerleşim yerleri boşaltıldı. Gölbaşı Belediyesi ekiplerinden yangına müdahale İhlas Haber Ajansı. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "Ankara'da ormanlık alanda çıkan yangın söndürüldü",
-              "source": "Hürriyet"
-            },
-            {
-              "title": "Gölbaşı Belediyesi ekiplerinden yangına müdahale İhlas Haber Ajansı",
-              "source": "İhlas Haber Ajansı"
-            },
-            {
-              "title": "Ankara Gölbaşı'nda orman yangını kontrol altında",
-              "source": "NTV Haber"
-            },
-            {
-              "title": "Ankara Gölbaşı’nda korkutan orman yangını... Dumanlar gökyüzünü kapladı",
-              "source": "Odatv"
-            }
-          ]
-        },
-        {
-          "id": "turkiye-6",
-          "title": "AKP’ye geçen Üsküdar Belediye Meclisi üyesi Ayhan Aydın: “Savcı beni tehdit etti” iddiası tamamen kurgu, baskılardan kurtulmak için o konuşmayı yaptım",
-          "publisher": "T24",
-          "domain": "t24.com.tr",
-          "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
-          "published": "2026-09-11T05:28:00+00:00",
-          "age_hours": 20.0,
-          "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPV3RJQWlVbEhrTnZXVlUtTnJUV1NwV0hPS2htbXBYVnM2bktNdVZ1c2tXbjR0aXo1VDhIWDhSLXlUYUo0azA1YkdacVhCRnRIY3NGYTN2ZHJZY3VFUjE1MFdnbjhTaEhnUkptMUxXNGNkaFBOekh2TDNxSWdIZmZkQnVKbjlra3hIXy1YY3pTUXQxV3FTMDNHNHZJYWQwZDJfRl9VdlctQXVqUGItUFZlZ0kzQW94eEVUSjdJRGQ0M245ZXEzRE81ZU9CdUQzWHc2NjRncURSVHl5aVQ3SVBiUUxOeUpVTjJ1aElNSjQtMHZURjRnbzlMcA?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.602,
-          "speech": "Te yirmi dört. A Ka Pe ye geçen Üsküdar Belediye Meclisi üyesi Ayhan Aydın, Savcı beni tehdit etti iddiası tamamen kurgu, baskılardan kurtulmak için o konuşmayı yaptım. Özgür Çelik ifade vermek için adliyede. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "Özgür Çelik ifade vermek için adliyede",
-              "source": "Hürriyet"
-            },
-            {
-              "title": "Özgür Çelik ifade verdi",
-              "source": "NTV Haber"
-            },
-            {
-              "title": "Yeni Parti ve CHP hedef gösterdi! Ayhan Aydın konuştu! Neden istifa etti? Her şeyi anlattı",
+              "title": "İstanbul için kritik viraj! İBB AK Parti'ye geçebilir! İşte sandalye dağılımı...",
               "source": "Haber 7"
             },
             {
-              "title": "Özgür Çelik'in ifadesi: Baskı ve tehdit iddiaları araştırılsın",
-              "source": "Diken"
-            }
-          ]
-        },
-        {
-          "id": "turkiye-7",
-          "title": "Kılıçdaroğlu'nun sözlerine İmamoğlu'ndan duruşmada zehir gibi yanıt",
-          "publisher": "Sözcü Gazetesi",
-          "domain": "sozcu.com.tr",
-          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
-          "published": "2026-09-11T08:07:00+00:00",
-          "age_hours": 17.3,
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObTJseDBuZU15WTlSUkx5cFp2eS1FNzFwUVllbF9yNVlYUjFueWQ3eDVyME9ueVRpLVkzMjRoell3NEliaktQX2g5R3FTQS0zdE9TbmRaT19Ud3d2YkY3MHBVSlJwYjlmQnpISjhwLUN0WG95d29FclZZR0dlVFkwQU1mVUQyaUs4WUJLbl9CY256alZ5Z3Y1NEhGS3dIcU1lU3c?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.596,
-          "speech": "Sözcü Gazetesi. Kılıçdaroğlu'nun sözlerine İmamoğlu'ndan duruşmada zehir gibi yanıt. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "İmamoğlu’na Özgür Özel ve Kılıçdaroğlu’ndan darbe | Abdulkadir SELVİ Köşe Yazısı",
-              "source": "Hürriyet"
-            },
-            {
-              "title": "İmamoğlu'ndan Kılıçdaroğlu'nun \"Siyasi tutsak değil\" sözlerine yanıt: Allah kimseyi 80 yaşında bu duruma düşürmesin",
-              "source": "T24"
-            },
-            {
-              "title": "Ekrem İmamoğlu'ndan Kemal Kılıçdaroğlu'na yanıt: Ben siyasi tutukluyum",
-              "source": "Euronews.com"
-            },
-            {
-              "title": "İmamoğlu, Kılıçdaroğlu'na yanıt verdi: Allah kimseyi 80 yaşında bu duruma düşürmesin",
-              "source": "Bianet"
+              "title": "Ekrem İmamoğlu'na, hakaret davasında 2 yıl 1 ay hapis cezası",
+              "source": "BBC"
             }
           ]
         }
@@ -294,15 +294,19 @@
           "domain": "sozcu.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
           "published": "2026-09-11T20:52:02+00:00",
-          "age_hours": 4.6,
+          "age_hours": 5.4,
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxOTFd4bWg2YTg3bUFVRXcyMC1uYXZPajBYcnRGNXF6OWVNWjQtbkRiRWFfSUgtbmpZZXJvZF9UU3ctX1VHZnNZR3pXR0d5QXNzcnJvUENoR3dKM2VUVGdQOW5uVDkxSnFCdjBOcUhmZzJjbV9pb3o2R2ltTTdtOHBJTjR0T3pDRXNuWHd3TlNESy1IbDNqMjNhNDVDRVVFZw?oc=5",
           "image": "https://sozcu01.sozcucdn.com/sozcu/production/uploads/images/2026/9/putin-avrupajpg-lZQT7nI1zEKSxSajH0HssA.jpg",
           "source_url": "https://www.sozcu.com.tr/avrupa-nin-ukrayna-planina-putin-den-sert-yanit-savas-ilani-olur-p357450",
           "summary": "Avrupa’nın Ukrayna Planına Putin’den sert yanıt: Savaş ilanı olur",
           "source_count": 5,
-          "score": 3.809,
+          "score": 2.81,
           "speech": "Sözcü Gazetesi. Avrupa’nın Ukrayna Planına Putin’den sert yanıt, Savaş ilanı olur. Rusya'dan NATO iddiası, Hazırız. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
+            {
+              "title": "Putin'den Avrupa'ya rest. \"Savaş anlamına gelecek\"",
+              "source": "NTV Haber"
+            },
             {
               "title": "Avrupa ülkelerine sert ültimatom! 'Bu Rusya ile savaş anlamına gelir'",
               "source": "Haber 7"
@@ -312,10 +316,6 @@
               "source": "Hürriyet"
             },
             {
-              "title": "ABD ve Rusya arasında sıkışan Avrupa’yı bekleyen krizler",
-              "source": "Yeni Şafak"
-            },
-            {
               "title": "Avrupa’da Rusya alarmı: İkinci Dünya Savaşı’nın gölgesinde yeni cepheleşme",
               "source": "Evrensel.net"
             }
@@ -323,69 +323,61 @@
         },
         {
           "id": "dunya-1",
-          "title": "'Bitkisel içecek' faciasında can kaybı artıyor: 30 kişi hayatını kaybetti",
-          "publisher": "Cumhuriyet",
-          "domain": "cumhuriyet.com.tr",
-          "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
-          "published": "2026-09-11T17:40:00+00:00",
-          "age_hours": 7.8,
-          "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSklLSndTeXJ0Z0hHX2RFMGd1RFlOU0l1RlIwYlRGQnl3UDFDMDBJd2VsSUlEZFMtd0pkcHJ4N2JxYWM0SnZkejhKOHc4bjl0anRNeWJwY2pvXzRuTk9iZV93RXItSHdQQmRIRWdISEYzMGlKWV9zR1hFYmtQMmNlTUh5U001bk10RGN2YzhOcFZNY1h6NUZWeUJRT0gxTnBEYkotQnotR29Jc0NIMXJ2LTU3Smk?oc=5",
-          "image": "https://media.cumhuriyet.com.tr/Archive/12bcbf86-5540-40d6-bbbe-106a8db74d4f.jpg",
-          "source_url": "https://www.cumhuriyet.com.tr/dunya/bitkisel-icecek-faciasinda-can-kaybi-artiyor-30-kisi-hayatini-kaybetti-2536802",
-          "summary": "Nijerya'da \"bitkisel içecek\" tüketimi nedeniyle ölenlerin sayısı 30'a yükseldi. Eyalet yönetimi, insan tüketimine uygunluğu onaylanmamış maddeler, bitkisel içecekler ve çeşitli karışımların tüketilmemesi çağrısı yaptı.",
-          "source_count": 5,
-          "score": 3.806,
-          "speech": "Cumhuriyet. Bitkisel içecek faciasında can kaybı artıyor, 30 kişi hayatını kaybetti. Nijerya'da bitkisel içecek tüketimi nedeniyle ölenlerin sayısı 30'a yükseldi. Bu haberi 5 ayrı kaynak yazdı.",
+          "title": "Midyeci Ahmet eş ilanı vermişti, 2 ayda talibini buldu",
+          "publisher": "Sözcü Gazetesi",
+          "domain": "sozcu.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
+          "published": "2026-09-11T11:30:00+00:00",
+          "age_hours": 14.8,
+          "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYkk3Yk9hUndsQWNIRldPcjFCZWxqTVo4b09lalRtd2pJc09hMmtkSzBJUnpDMVd5TXZ2QW83Njl5UThkTXJDTFQ3ek9aQkp1NFgxNDllWTkyVGhGdjdzQ0NmT0NoUGJMcy1KWGttbjNRdVZ5ZUR3cVpfajMwaUdhbTU5TlVlMHotRVJvellBZw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 3,
+          "score": 2.654,
+          "speech": "Sözcü Gazetesi. Midyeci Ahmet eş ilanı vermişti, 2 ayda talibini buldu. Evlilik için ilan vermiş, kriterleriyle şaşırtmıştı. Midyeci Ahmet kız istemeye gidiyor, Magazin Haberleri. Bu haberi 3 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Bitkisel içecek faciası: Can kaybı 30’a yükseldi",
-              "source": "Sözcü Gazetesi"
+              "title": "Evlilik için ilan vermiş, kriterleriyle şaşırtmıştı! Midyeci Ahmet kız istemeye gidiyor - Magazin Haberleri",
+              "source": "Mynet"
             },
             {
-              "title": "Nijerya’da ölüm zinciri: Bitkisel içecek sonları oldu",
-              "source": "Hürriyet"
-            },
-            {
-              "title": "Nijerya'da \"bitkisel içecek\" tüketimi nedeniyle ölenlerin sayısı 30'a yükseldi",
-              "source": "Haberler"
-            },
-            {
-              "title": "Nijerya'da \"bitkisel içecek\" 24 kişiyi öldürdü",
-              "source": "NTV Haber"
+              "title": "Midyeci Ahmet aradığı eş adayını buldu: Yarın kız istemeye gidiyor",
+              "source": "bolgegundemi.com"
             }
           ]
         },
         {
           "id": "dunya-2",
-          "title": "OpenAI’ın “90 yıldır çözülemeyen problemi çözdük” açıklaması tartışma yarattı; Türk matematikçiden iddialı çıkış",
-          "publisher": "T24",
-          "domain": "t24.com.tr",
-          "favicon": "https://www.google.com/s2/favicons?domain=t24.com.tr&sz=128",
-          "published": "2026-09-11T14:16:00+00:00",
-          "age_hours": 11.2,
-          "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPc0t5aXdnSHNtYVp4U2plYThpUHJUMEUyampOb040UFlMSzBTazZBb2lSSjVBdm04dVAtaUdUVVhTR0pLSUhxTUk5Yy1MMmd4dWxTS3NabnZ2TThiYVpjTndZRGoxNFA5WmFrakxfTEhmSlVIdGxYWlFrbXlkMkVkTk50MnJWa3VuaFJKTzhaWjJhMnR5RTRtbnRsc0wwQWQ4QW1lTmlMR3cwMjVDWkFuc2F1UlZBY09EbTBfUE5wS3IyUW5wNVB0UkdBdHZ5NFJENTBKMUdQX0laMnM0MXl4eFhrSWxhZzQ?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
+          "title": "İngiltere'de 'turist vergisi' tartışması",
+          "publisher": "Habertürk",
+          "domain": "haberturk.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=haberturk.com&sz=128",
+          "published": "2026-09-11T07:24:24+00:00",
+          "age_hours": 18.9,
+          "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbXRzb25OaXYwUXh1cXM5WlFHX0paMk9uck5vNXdsczFpSWRZbzBMMmJPLWhFT1Q1c1BTMnFfQXpwN3k1aTJYOGhvdTc4TFBoY2x1a3VlaFhzdGc4RDVnTUdtWUNrVVpPaHQzamNnekRVbm9uZTFmYWZ1YkdJSWFoUlFBZGxqeWkweGc?oc=5",
+          "image": "https://im.haberturk.com/l/2026/09/11/ver1789111374/3911740/jpg/1920x1080",
+          "source_url": "https://www.haberturk.com/ekonomi/ingiltere-turist-vergisi-ne-hazirlaniyor-3911740",
+          "summary": "İngiliz medyasında yer alan habere göre, hükümetin konaklama yapan ziyaretçilere yönelik vergi planı kapsamında, yerel yönetimlere turistlerden ücret alma konusunda daha fazla yetki verilecek",
           "source_count": 5,
-          "score": 3.749,
-          "speech": "Te yirmi dört. OpenAI’ın 90 yıldır çözülemeyen problemi çözdük açıklaması tartışma yarattı. Türk matematikçiden iddialı çıkış. Yapay zekanın asırlık matematik problemini çözdüğü iddiası, varoluşsal risk tartışmalarını güçlendirdi. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.636,
+          "speech": "Habertürk. İngiltere'de turist vergisi tartışması. Abta’dan İngiltere Hükümetine Seyahat Sektörü İçin Vergi ve Destek Çağrısı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "OpenAI 90 yıllık matematik problemini çözdü, \"Türk araştırmacının ismini silmeye çalıştılar\"",
-              "source": "NTV Haber"
+              "title": "İngiltere'de turist vergisi: Hangi şehirler gecelik harç getirebilir",
+              "source": "Euronews.com"
             },
             {
-              "title": "Yapay zekanın asırlık matematik problemini çözdüğü iddiası, varoluşsal risk tartışmalarını güçlendirdi",
-              "source": "Anadolu Ajansı"
+              "title": "'Turist vergisi': İngiltere'yi ziyaret daha pahalı hale gelebilir",
+              "source": "BBC"
             },
             {
-              "title": "Codex ile paylaşılan notlar tartışma yarattı",
-              "source": "CNN Türk"
+              "title": "Abta’dan İngiltere Hükümetine Seyahat Sektörü İçin Vergi ve Destek Çağrısı",
+              "source": "Turizm Gazetesi"
             },
             {
-              "title": "10 bin yapay zeka, 90 yıllık matematik problemini çözdü",
-              "source": "Habertürk"
+              "title": "Turizm vergisi ve destinasyonun çekiciliğini koruma zorluğu.",
+              "source": "Vietnam.vn"
             }
           ]
         },
@@ -396,13 +388,13 @@
           "domain": "haberturk.com",
           "favicon": "https://www.google.com/s2/favicons?domain=haberturk.com&sz=128",
           "published": "2026-09-11T06:45:08+00:00",
-          "age_hours": 18.7,
+          "age_hours": 19.5,
           "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQMVVQZUhLODhTMzBYdkNKUVdMQ3c2OTlXSm1wMThVcjM0VklsU25fMUdPeG5ZS3dSam44Y2p2U3A2RTVHSU9ZbGFIMmlSb3I1V1FFbDVGWjN6UDdMM2c3ZnNqbllMdVBjSmZ2X2U2THJaQjdBNHVVc1l3WmpMQ1FscHMwMlJBNk44YWlyREZseEN5LWdQUk5TQ1k3S1NpUmtHeDB5aDFxcUFNV0RMZ2RrbVptSEg3SWpERG1TdDBKWXVPc0U?oc=5",
           "image": "https://im.haberturk.com/l/2026/09/11/ver1789109087/3911730/jpg/1920x1080",
           "source_url": "https://www.haberturk.com/dunya/iran-disisleri-bakani-arakci-abd-halki-israil-in-savaslarinin-maliyetini-ustlenmemeli-3911730",
           "summary": "İran Dışişleri Bakanı Arakçi, Amerikan halkının İsrail'in savaşlarının maliyetini üstlenmemesi gerektiğini söyledi",
           "source_count": 5,
-          "score": 3.624,
+          "score": 2.625,
           "speech": "Habertürk. İran Dışişleri Bakanı Arakçi, A Be De halkı İsrail'in savaşlarının maliyetini üstlenmemeli. Sayın Hung Cao, İran, Bahreyn'deki bir A Be De üssüne ağır hasar verdi. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -411,11 +403,11 @@
             },
             {
               "title": "ABD Donanma Bakan Vekili: İran Bahreyn'deki karargahımızı yerle bir et…",
-              "source": "ydh.com.tr"
+              "source": "Yakın Doğu Haber"
             },
             {
               "title": "İran Dışişleri Bakanı Abbas Erakçi'den ABD halkına İsrail çağrısı",
-              "source": "internethaber.com"
+              "source": "İnternet Haber"
             },
             {
               "title": "Sayın Hung Cao: İran, Bahreyn'deki bir ABD üssüne ağır hasar verdi.",
@@ -425,65 +417,99 @@
         },
         {
           "id": "dunya-4",
-          "title": "Suudi Arabistan saldırıların ardından Doğu-Batı boru hattını kapattı",
-          "publisher": "bloomberght.com",
-          "domain": "bloomberght.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
-          "published": "2026-09-11T19:57:24+00:00",
-          "age_hours": 5.5,
-          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNUMzRnd4UnE3cDFhdTRYU0t5cnc1OHl5UklJOUZNcm84cGtZbTdfbk9JRzVldHFPZ3hjUTR5bmpfdlVpR0FfTWtkQU5jeW5KSEtCcDgzdVllaGxac2xLUGxoazlGdW9YSzBPVU9zVFRsNUdHd2VPQ1YwODFpTm5XN2lWZ1NUcGNIMDhDYnVVZUFPWkYyNGpmNGZNU3ZPbzhaSnBWUGdrNA?oc=5",
+          "title": "FETÖ'de vasiyet krizi: Noter hakkında soruşturma açıldı",
+          "publisher": "Nefes Gazetesi",
+          "domain": "nefes.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=nefes.com.tr&sz=128",
+          "published": "2026-09-11T21:15:27+00:00",
+          "age_hours": 5.0,
+          "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQS3RPZXRHWWdSTUhTZ0Zhb01NOGE2TU5RZFVnRjVKblhTcW5HUmtPWFU1R09FT0NpUTZkMGlQVlFOaE1TakpUU1Jpc1VhUEVxU0ZoYkN0VWw5TUVoWkN6YUlZSm8yN2tjb21NN0w2akxvNnFIY1k0Um1hZXhRMXRTTlRIVVVabFpsNjllWEVR?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.594,
-          "speech": "bloomberght. Suudi Arabistan saldırıların ardından Doğu-Batı boru hattını kapattı. Kızıldeniz’de alarm, Stratejik ada artık Husilerin kontrolünde. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.616,
+          "speech": "Nefes Gazetesi. FETÖ'de vasiyet krizi, Noter hakkında soruşturma açıldı. Gülen’in vasiyeti sahte mi? Vasiyeti onaylayan cemaat bağlantılı Türk noter usulsüzlük yapmış. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "CNN duyurdu... Suudi Arabistan'daki petrol boru hattı vuruldu",
-              "source": "Hürriyet"
+              "title": "Gülen’in vasiyeti sahte mi? Vasiyeti onaylayan cemaat bağlantılı Türk noter usulsüzlük yapmış",
+              "source": "Serbestiyet"
             },
             {
-              "title": "Kızıldeniz’de alarm: Stratejik ada artık Husilerin kontrolünde",
-              "source": "Sözcü Gazetesi"
+              "title": "FETÖ'cüler birbirine düştü: Örgüt liderinin ölümünün ardından sahte vasiyet kavgası çıktı",
+              "source": "Ensonhaber"
             },
             {
-              "title": "Yemen ordusu, Muha'da çok sayıda Husi unsurunun etkisiz hale getirildiğini duyurdu",
-              "source": "Anadolu Ajansı"
+              "title": "FETÖ'de kriz çıktı! Elebaşı Gülen'in vasiyeti sahte mi?",
+              "source": "CNN Türk"
             },
             {
-              "title": "Bakan Fidan ile Suudi mevkidaşı Bin Ferhan ile telefon görüşmesi",
+              "title": "FETÖ’yü karıştıran miras kavgası: Sahte vasiyeti onaylayan notere ABD'de soruşturma",
               "source": "Haber 7"
             }
           ]
         },
         {
           "id": "dunya-5",
+          "title": "Suudi Arabistan saldırıların ardından Doğu-Batı boru hattını kapattı",
+          "publisher": "bloomberght.com",
+          "domain": "bloomberght.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
+          "published": "2026-09-11T19:57:24+00:00",
+          "age_hours": 6.3,
+          "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPNUMzRnd4UnE3cDFhdTRYU0t5cnc1OHl5UklJOUZNcm84cGtZbTdfbk9JRzVldHFPZ3hjUTR5bmpfdlVpR0FfTWtkQU5jeW5KSEtCcDgzdVllaGxac2xLUGxoazlGdW9YSzBPVU9zVFRsNUdHd2VPQ1YwODFpTm5XN2lWZ1NUcGNIMDhDYnVVZUFPWkYyNGpmNGZNU3ZPbzhaSnBWUGdrNA?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 5,
+          "score": 2.595,
+          "speech": "bloomberght. Suudi Arabistan saldırıların ardından Doğu-Batı boru hattını kapattı. Başbakan Zeydi talimat verdi. Operasyonlar Komutanı görevden alındı. Bu haberi 5 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "CNN duyurdu... Suudi Arabistan'daki petrol boru hattı vuruldu",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Başbakan Zeydi talimat verdi! Operasyonlar Komutanı görevden alındı",
+              "source": "Haber 7"
+            },
+            {
+              "title": "Yemen ordusu, Muha'da çok sayıda Husi unsurunun etkisiz hale getirildiğini duyurdu",
+              "source": "Anadolu Ajansı"
+            },
+            {
+              "title": "Dışişleri Bakanı Fidan, Suudi Arabistanlı mevkidaşı Al Suud ile telefonda görüştü",
+              "source": "Sözcü Gazetesi"
+            }
+          ]
+        },
+        {
+          "id": "dunya-6",
           "title": "Trump 5 bin dolarlık seçim parasını dağıtabilecek mi?",
           "publisher": "bloomberght.com",
           "domain": "bloomberght.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bloomberght.com&sz=128",
           "published": "2026-09-11T19:56:24+00:00",
-          "age_hours": 5.5,
+          "age_hours": 6.3,
           "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQVUY1Vl9hOHJoeWcwbTdqRDIycnEyOWE3S1hlRVF5eWd1SE5NSzFsdmRnYmhUR0JBT1dKcWJCOHoySVhCQnU4bklDeWItUUVqQVprSzhwRUFZdlJRU0R0WU5pcDNHMEJXamxXOGZjSWRCZWZZR1VyS2gxZkZ1cmJMUFp4Qk16WlNIbkVIcm52dC12Zw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.593,
-          "speech": "bloomberght. Trump 5 bin dolarlık seçim parasını dağıtabilecek mi?. Trump’tan sıra dışı seçim yemini, Seçmenlerini tehdit etti. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.594,
+          "speech": "bloomberght. Trump 5 bin dolarlık seçim parasını dağıtabilecek mi?. Trump'tan Kongrede Seçmenlere, Oy Vermezseniz Cehenneme Gidersiniz. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Trump’tan sıra dışı seçim yemini: Seçmenlerini tehdit etti",
-              "source": "Sözcü Gazetesi"
-            },
-            {
               "title": "Trump gerçekten her yetişkin Amerikalıya 5 bin dolar ödeyebilir mi?",
-              "source": "bbc.com"
+              "source": "BBC"
             },
             {
               "title": "Trump'ın 5 bin dolarlık çek vaadi yönetimde kargaşa yarattı",
               "source": "TRT Haber"
+            },
+            {
+              "title": "Trump'tan Kongrede Seçmenlere: “Oy Vermezseniz Cehenneme Gidersiniz”",
+              "source": "Onedio"
             },
             {
               "title": "Trump kesenin ağzını açtı: ‘Seçimleri kazanırsak herkese 5 bin dolar’",
@@ -492,20 +518,20 @@
           ]
         },
         {
-          "id": "dunya-6",
+          "id": "dunya-7",
           "title": "Google'ın ardından Anthropic'ten de yapay zekayla biyolojik silah uyarısı",
-          "publisher": "bbc.com",
+          "publisher": "BBC",
           "domain": "bbc.com",
           "favicon": "https://www.google.com/s2/favicons?domain=bbc.com&sz=128",
           "published": "2026-09-11T19:26:42+00:00",
-          "age_hours": 6.0,
+          "age_hours": 6.8,
           "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE0xT19WLWZYTS1CVEt1S0twRDV6VGFXbVZTckNBTERGXzdFS2Z2ODlRdGhNejNsVVR5eERZc2E4ZU5iYjYwREo1OFk4d2c3SVNuOE9ZNHNNVUo5Nkxx0gFiQVVfeXFMTlY1RW14RmtqUGNOeVVOWTViaExhVUFYaTR0X1ZlWnlNbDUyOGVWcTF6NzdIU3dnNDFzaE0wWlNVYkRrQjZ5bkpCVmNBMF9Zcl9xUHhmY3R4dnVHYkQwMmplUEE?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.585,
-          "speech": "bbc. Google'ın ardından Anthropic'ten de yapay zekayla biyolojik silah uyarısı. Yapay zekanın karanlık yüzü ortaya çıktı, Füze ve SİHA yazılımlarına destek verdi. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.586,
+          "speech": "BBC. Google'ın ardından Anthropic'ten de yapay zekayla biyolojik silah uyarısı. Anthropic'in Yeni Raporu, Claude, Füze ve Drone Geliştirmek İçin Kullanılmış. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
               "title": "Yapay zeka: \"Kıyamet ihtimali sıfırdan yüksek\"",
@@ -520,42 +546,8 @@
               "source": "Anadolu Ajansı"
             },
             {
-              "title": "Yapay zekanın karanlık yüzü ortaya çıktı: Füze ve SİHA yazılımlarına destek verdi",
+              "title": "Yapay zekanın karanlık yüzü: Füzeden casusluğa, dolandırıcılıktan dezenformasyona...",
               "source": "A Haber"
-            }
-          ]
-        },
-        {
-          "id": "dunya-7",
-          "title": "Trump’tan İran savaşının sonuna ilişkin yeni tahmin",
-          "publisher": "Hürriyet",
-          "domain": "hurriyet.com.tr",
-          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
-          "published": "2026-09-10T23:08:20+00:00",
-          "age_hours": 26.3,
-          "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQalgwM3FEU0Q1S3BkU2UtWnJUY2stSjN4RzB5ZnZwdVhiVDFJQVpHeGU1ZnpURTlobS1sR25xXzFIdGFLYmlXdXJXSE5BYml4WGpYdXo3LVAxT1ZhN0ZycFlPc2daTkROOXBhM0x5WjMtQ2UxWlBCNlROT0hFYU1ZRGM3ck03ZXdYOW40aDc5S0pjYm5ncnIzbHNyTmpHRGI2dVNyZkoxNS1NOWRIYXpibDFXNXJyLWJ0Sl9mWA?oc=5",
-          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6aa337ff242e1cf6f86a0fcc.jpg",
-          "source_url": "https://www.hurriyet.com.tr/dunya/trump-iranla-savasin-kongre-ara-secimlerinden-once-sonlanabilecegini-belirtti-43303020",
-          "summary": "ABD Başkanı Donald Trump, son açıklamasının aksine, İran'la savaşın 3 Kasım'daki Kongre ara seçimlerinden önce sona erebileceğini söyledi.",
-          "source_count": 5,
-          "score": 3.547,
-          "speech": "Hürriyet. Trump’tan İran savaşının sonuna ilişkin yeni tahmin. A Be De Başkan Yardımcısı Vance'in komutanlarla İran'a saldırılarla ilgili özel olarak görüştüğü iddiası. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "ABD Başkan Yardımcısı Vance'in komutanlarla İran'a saldırılarla ilgili özel olarak görüştüğü iddiası",
-              "source": "Anadolu Ajansı"
-            },
-            {
-              "title": "İran ile savaş 2029’a kadar sürebilir",
-              "source": "Sabah"
-            },
-            {
-              "title": "Trump ABD-İran savaşın biteceği tarihi açıkladı: Ara seçimlerden sonra diye söz verdi",
-              "source": "Haber 7"
-            },
-            {
-              "title": "Trump İran savaşından pişman olmadığını söyledi",
-              "source": "Investing.com Türkiye"
             }
           ]
         }
@@ -572,13 +564,13 @@
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
           "published": "2026-09-11T11:36:00+00:00",
-          "age_hours": 13.8,
+          "age_hours": 14.7,
           "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQZ1lZUEFCTjRSOWkxVkFDNEhJWjNuQ1JKNUZkSEdNVmwxNTBRV1lBaUI5NTU5MkRjRnJjb2ttYVhjWEpWV3pyQkkta3JYY0lGUy0zRjh3WEMta29LS2ZVcktvaTRJSUh1VXdnZ09ibW1vVUR6NnZ0YTNyWkJTYmpSaE1OZE04ajRhNXdCV2xlZEMxd1ZCSjZTcWxLYlAxMHRta2hUZ3dBSEtVbkRRSHR5SEh1UUxsa29hSEE?oc=5",
           "image": "https://media.cumhuriyet.com.tr/Archive/f4840191-9111-4131-9008-5be3c0b96cd9.jpg",
           "source_url": "https://www.cumhuriyet.com.tr/ekonomi/tcmb-anketi-aciklandi-enflasyon-tahmini-yukseldi-buyume-beklentisi-dustu-2536716",
           "summary": "Türkiye Cumhuriyet Merkez Bankası’nın eylül ayı Piyasa Katılımcıları Anketi, enflasyon beklentilerinde sınırlı bozulmaya işaret ederken büyüme tahminlerinin aşağı çekildiğini ortaya koydu. Katılımcılar kurda orta vadede yükseliş beklerken, politika faizinde ise önümüzdeki toplantılarda kademeli düşüş öngörüyor.",
           "source_count": 5,
-          "score": 3.704,
+          "score": 2.705,
           "speech": "Cumhuriyet. Te Ce Em Be anketi açıklandı, Enflasyon tahmini yükseldi, büyüme beklentisi düştü. Merkez Bankası'nın anketinden emekli ve memura yapılacak zam oranı sızdı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -606,13 +598,13 @@
           "domain": "ekonomim.com",
           "favicon": "https://www.google.com/s2/favicons?domain=ekonomim.com&sz=128",
           "published": "2026-09-11T18:13:00+00:00",
-          "age_hours": 7.2,
+          "age_hours": 8.1,
           "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPUmw3TWJnNzl2bG0zaHM0d3FScGhJc3VNd2dQS01NbmMzOXRNZ0Y4cVhPcVF4NUZ0VllQNmU0Znk2YzVCWlpnYlQtSHpkUmpYbEJUdTNQN2lrZ3pRUlhCTHR4NVUwRF9GS0xFMjg2eU95UnBFMXdpbEtMcmFVRTBlcF9RM29tWjFScUZRbi03VGRVeTQtWVctRy1lWkU4MmVEZjhkYXgwQmwzNGVDWkNJTHpTS2NyX1lMMUY3SFpWOEJuMWpkdS1LLVJTakFFWldyNllEZGtfN0NOQkI0WEsyclQyZGdfaVnSAewBQVVfeXFMTVBGaDh0c1RHQ3ljZWZzNFd2aGZlVTdocW9Rd2xHTzJRSTkybnMxUkg0cC1wcFRYWDZMRmtsWU05d2locU1yd0xYQldVU3BGdUdoWDNTR1FnUkwtM0tMWUprcGMxekxWRTNIVWYxbGVZYzdHZ0ViU005VW0xTzhqQ1hsX3B2ZEFZZkprMWhvWG9SLU5BU09kdktQd3lHWmNHMEJOQ2o4anVRaENXU19GTUdYOE81aklfcVc4dlYteGZ4UnkteFRXTDJ4WlJndkU1OGpGN216YlJmX0ZtS1NGSXhXdXh3Zm5BakdLTjQ?oc=5",
           "image": "https://img.ekonomim.com/storage/files/images/2026/09/11/halkbankin-ikincil-halka-arz-surecinde-halkb-islemleri-durdurulacak-tarih-henuz-belli-degil-3eot_cover.jpg",
           "source_url": "https://www.ekonomim.com/finans/haberler/borsa/halkbankin-ikincil-halka-arz-surecinde-halkb-islemleri-durdurulacak-tarih-henuz-belli-degil-haberi-917672",
           "summary": "",
           "source_count": 5,
-          "score": 3.565,
+          "score": 2.566,
           "speech": "Ekonomim. Halkbank'ın ikincil halka arz sürecinde HALKB işlemleri durdurulacak. T. HALK BANKASI (HALKB) 11 Eylül Cuma 2026 Günlük Teknik Analiz. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -640,13 +632,13 @@
           "domain": "ekonomim.com",
           "favicon": "https://www.google.com/s2/favicons?domain=ekonomim.com&sz=128",
           "published": "2026-09-11T18:01:00+00:00",
-          "age_hours": 7.4,
+          "age_hours": 8.3,
           "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxPUmE4TDQzd2NFZENod1Nrc1BUSUNUNjVwZWpPSTQ0T253dE5Gc0JxcVI2RG02c0ZGUzdfUGNLZi05MUVQLWJscjZUQlFIa0t5R1lXUWZnWXJrVDlsWDl2dFBqRWVVYzBUcEUzWERoTkNFM05VMkJTNUl6Y0VCQUVEeXR1R0g0UGlwdHA4MkdzM0ljOTd4OThzQjgzYllzZFpqVFZsUXNwbmdyNjljWEFZemRRSFFPSkZyTkRvWDNlX1RMd09wTGVRa2pHOG5TR1BCVnRmVGRpb1ozbnRqelVpa0dMNNIB6AFBVV95cUxQTjY0blV3ZUpwRHk0SFNiY2JOZDl0MHpIYmk5d0RqMHVmQUhIRHREUTlqZXJhMzl1YTJsQTVJM2pKQTM0dEdFb2ZpNUYzUWVBWUVlSWJ3aDVmb1dNR1plZ1RBZm1wYy0xX3hrVVcwbGtBWUxqVWU0dlF6UVEyM3pzaWNCWEViTV9wdk9YbGdPc0taSmZwM0JUNW1RM0NOUlRpWEluek4teGpwS0lOY3FidVhSWjBERW1JRkE0dmpGYjM5dDBLU25JRmdrakM2d2dZNFZEa2dWY09aWG1NbWRyNV9jTFFXamxh?oc=5",
           "image": "https://img.ekonomim.com/storage/files/images/2026/06/12/tcmb-baskani-karahan-jeopolitik-riskler-artti-siki-durus-devam-edecek-evqv_cover.jpg",
           "source_url": "https://www.ekonomim.com/ekonomi/tcmb-baskani-karahan-son-veriler-ve-gostergeler-enflasyonun-ana-egiliminin-yavasladigina-isaret-ediyor-haberi-917671",
           "summary": "",
           "source_count": 5,
-          "score": 3.561,
+          "score": 2.562,
           "speech": "Ekonomim. Karahan, Veriler enflasyonun ana eğiliminin yavaşladığına işaret ediyor. Merkez Bankası Başkanı sıkı para politikasının bitişini açıkladı, Yatırımcılara anlattı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -659,11 +651,11 @@
             },
             {
               "title": "TCMB Başkanı Karahan'dan enflasyon ve faiz mesajı",
-              "source": "CNBC-e"
+              "source": "cnbce.com"
             },
             {
-              "title": "Karahan: Enflasyonun Ana Eğiliminde Yavaşlama Sürüyor",
-              "source": "Ekonomi Dünya"
+              "title": "TCMB Başkanı Karahan: Enflasyonun ana eğilimi yavaşlıyor, sıkı duruş sürecek",
+              "source": "Gerçek Haberci"
             }
           ]
         },
@@ -674,13 +666,13 @@
           "domain": "ntv.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=ntv.com.tr&sz=128",
           "published": "2026-09-11T16:56:07+00:00",
-          "age_hours": 8.5,
+          "age_hours": 9.3,
           "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPZ2pvZlNwLXBjcE9mdWw5S21vdDJMM3gtTXNIRk5oclJyVlZqcXE1bk5SYTNHTXpfczlhaXdHQlZhTTJabV9WOHFwekdsYjRCb2h3cGFITHl2WmZzOE5aR0tRYUJqWmdueU1YRWZLbzFsTlpDMERZWVAxSU5JVFRybXhoQy1fU2Q3Zjd4X182S3FwNG1IblZBSDYxT0RYSUhNVFA1UXBwRzJRN0tRcG5EaEdPSEpNV1pPY216bG0tXzQ5d9IBxwFBVV95cUxObzJKUExtYndCRXdnczNhT20wSUFwMkdXTXIyUlZrMW0xQ2kxc2VDbFpfcV9fYmc3aXZkbFRibFV6Z2MwZGFOQldyemxwaUJrTHNvX21TZlpvSWRleUpoSlFld0R4NWNQbmRweWhHUnNRcXo4NHhRY0Zrb2hvRnFNcnM4bVpSSFpoanctODdfLV92cjBGREtaeWxoT1FYdk9IbzFlSG9faWJuUnJZYllZbnpJMUVqeGl5b0F3TTdUa3dhT29mZWFJ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.543,
+          "score": 2.544,
           "speech": "NTV Haber. Ormanda dedektörle arama yaparken bin yıllık hazine buldu. İçinde dirhemler de var. Ormanın Ortasında Vikinglerin Kayıp Hazinesini Buldu, Tam 4.5 Kilo Ağırlığında. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -708,13 +700,13 @@
           "domain": "memurlar.net",
           "favicon": "https://www.google.com/s2/favicons?domain=memurlar.net&sz=128",
           "published": "2026-09-11T15:23:00+00:00",
-          "age_hours": 10.0,
+          "age_hours": 10.9,
           "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNczd0WlBLRDlRc1lBbGp3Ujd5RHRubHZuQkNsUkhpVE4wdXNTSDRSQjQwUGRBNl9fNW1oNjdOM3VpSnhLemtkQ1dTbk9Dc3p1cUdIY3RQNjFtc3NNYWE0NjNmZExkQks4dHlBcFhyVDF6cEVUeTRBLVhoeHN5dGFRVUdsYUxXaGk1VFVFLWhDV3hXNjRNT1lRZFh5MTRXSks2VFN2aDZoOFE3ejduOUwzbNIBuAFBVV95cUxPelhJWWhOOC1EMVBXTlZmaG5KZ0tGUXc3NkdRbGx2NGhWeF9SaC03bjRHTzVxQ3l0Nk00RVprcm9MSFlyMGVRZ2hyMW54M3pzeHpYa1hmam1fUTRVYWFnYWZ5X3d1Y2REeUpSRU1zQWkyZW1zNTZOcE92UnN3Y2tILThadFhOTHZKYzRmMkR6dEdHZU1ocjVwRVYwd2kzS3dXMU9aRjZWTFpKVzdNOGFmZnlpUUw0SWdN?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.518,
+          "score": 2.518,
           "speech": "Memurlar. Cevdet Yılmaz, Kişi başına geliri 25 bin dolara taşımayı amaçlıyoruz. TİM Halı Sektör Kurulu Başkanı İskender Kaplan'dan yeni OVP'ye tam destek Kaplan, İhracatta İstikrarın ve Büyümenin Teminatı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -742,13 +734,13 @@
           "domain": "bigpara.hurriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=bigpara.hurriyet.com.tr&sz=128",
           "published": "2026-09-11T13:05:39+00:00",
-          "age_hours": 12.3,
+          "age_hours": 13.2,
           "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPb01WN3dvZE1VTDZQZEZBTXItVHl2VFBvSk40aTdwcVQ0SjJUa25Hck43SklYbG1sdUgtM1ZEdndtTVc4MTFEbk41OERJcXI0X0xEUmJ5QkJ6LTNBX19UdURQbFpFYnRWOXhwNnczR05SMW5sS2JFYzY2bEZtZUNLREZKbk9CSTZoWFJyOW5pWVI3a3hfZGxRSy1GVGthci1zc1ZwN1VFWDRsRFNnQUE5NzdtdXZSdW1samVHNEQ5SmJxQQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.479,
+          "score": 2.48,
           "speech": "Bigpara. A Be De de enflasyon ağustosta beklentilere paralel geldi. Yatırımcılar dikkat, Kritik veri sonrası altın fırladı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -776,13 +768,13 @@
           "domain": "gaziantepolusum.com",
           "favicon": "https://www.google.com/s2/favicons?domain=gaziantepolusum.com&sz=128",
           "published": "2026-09-11T11:40:00+00:00",
-          "age_hours": 13.8,
+          "age_hours": 14.6,
           "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNQ1RBd3lHclJhUVN5cmRYc19rbUMwWnd1MTF3Yi0wMzdNWG5wYXdkQnVtUHVWdlo0Ulltb1YwZDYzUjRFMk0zaUJRUlJ2aUFiZFo5eEFQV0NNNE9YazVqRzZkRWUxdU1zdk5nSVZreWxvc05hQXlOTC1EY3BhRDNYQmJoZUNPeEs2OVFlQmYxZGJrbWRtZW43dGZNNFrSAaIBQVVfeXFMTUFvMlNCRUJNNklYY3ByRnhHVHN0TThMZ00yQ0todGxhcU9VN193WmRVQXFEekdUOWZQRFgwU3IzYVAzSmp3ajlJM3E5MFkwQTFYNVBvRU5oeDdXTWh5UVo2Ym1YbVZ1c1oxTmVlMmtDQmY2YzJNSWI3N0I3T19LZnRNYnhUcS1tUG9SQTFEUjdMN05VNnRDUkswTnI4YlppajFn?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.456,
+          "score": 2.457,
           "speech": "Gaziantep Oluşum Gazetesi. Başvuruya açıldı Gazianteplilere Milyonluk fırsat. Bakan Kacır'dan BİGG Yatırım Programı'nın 2026 yılı ikinci çağrısına ilişkin paylaşım. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -805,35 +797,35 @@
         },
         {
           "id": "ekonomi-7",
-          "title": "Mevduat faizleri 3 yılın en düşük seviyesine geriledi",
-          "publisher": "Ekonomim",
-          "domain": "ekonomim.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=ekonomim.com&sz=128",
-          "published": "2026-09-11T08:34:00+00:00",
-          "age_hours": 16.9,
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNend0WEhycnpBaFZ5UkwwMC1JVnl0TnhPSGtJU2h6a082aVhWcXJaa2cxUmM1T1JENXFwV2VjeHdicGhZcEIyYnJzMDVWS3M0SE9tSWZUWGs1N3gyQkxWdjNhd1laSkJFRGFCZnA2TVRybDRaR0NNZ3lKYlJMU0diY1dxdVVWeUtkN3BrN09QVzdlX1dHVkVNQVJtcGgwMTlEWnfSAacBQVVfeXFMUE01UUdhampEcUEwTlhteGdUUzVYdzZYT3RTVFgwX2Z6LU03WndXYjVmNElFZlozNm1mUHRJUi1vczMxZzZyRmFQaUpGQ1BvcDdHb1VXR3p3M3oySVJSWGdYRDNjNnppUy1wWVVZS2xoSU8yUElrX0dhb0ROekp1bGNKZjNlZEotc3RzYWhvZ0hxajJxSzJhbW9uZl94Z2lwQzlfMHJCZzQ?oc=5",
+          "title": "Tera Yatırım'ın en çok alım satım yaptığı hisseler",
+          "publisher": "borsagundem.com.tr",
+          "domain": "borsagundem.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=borsagundem.com.tr&sz=128",
+          "published": "2026-09-11T11:02:00+00:00",
+          "age_hours": 15.2,
+          "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZ0dwVmdveEJUWWMzY1ZBR0tSVkhmLUdJYi00MEdjTFBDRkQ2UHNZMDBYeTIzMFJFdlpmbHZtVEMxQ3dTTjlzVlFKVW40N0hUZDlTS19mM0JBWmF4ZmM4S1VGa1F5QUM3NF9tMF9tMXFpYVFrMEUxZDJxd0xJdFd6YTE5Y0gySU10UVdneA?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
-          "source_count": 5,
-          "score": 3.404,
-          "speech": "Ekonomim. Mevduat faizleri 3 yılın en düşük seviyesine geriledi. 750 bin TL’nin 32 günlük faiz getirisi belli oldu, En çok bu banka kazandırıyor. Bu haberi 5 ayrı kaynak yazdı.",
+          "source_count": 4,
+          "score": 2.446,
+          "speech": "borsagundem. Tera Yatırım'ın en çok alım satım yaptığı hisseler. Tera Yatırım bu hisselerde rekor satış yaptı. Bu haberi 4 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Mevduat faizi son 3 yılın en düşük seviyesinde: 1 milyon TL'nin 32 günlük getirisi eridi",
-              "source": "Sözcü Gazetesi"
+              "title": "Tera Yatırım bu hisselerde rekor satış yaptı",
+              "source": "Kamu Son Dakika Haberleri"
             },
             {
-              "title": "Merkez indirmedi ama bankalar indirdi: Mevduat faizi oranları düştü",
-              "source": "CNBC-e"
+              "title": "TERA Yatırım 17,97 milyar TL’lik alım yaptı! Hangi hisseleri topladı?",
+              "source": "İnternet Haber"
             },
             {
-              "title": "750 bin TL’nin 32 günlük faiz getirisi belli oldu: En çok bu banka kazandırıyor",
-              "source": "Taka Gazete"
+              "title": "Tera Yatırım'dan 13 Milyar TL Alım: Öne Çıkan Hisseler",
+              "source": "Finans Hattı"
             },
             {
-              "title": "TL mevduat faizi 2023'ten bu yana en düşük seviyesinde",
-              "source": "bloomberght.com"
+              "title": "TERA Yatırım'dan 8.6 Milyar TL Net Alım: En Çok Alınan Hisseler",
+              "source": "Finans Hattı"
             }
           ]
         }
@@ -850,13 +842,13 @@
           "domain": "techcrunch.com",
           "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
           "published": "2026-09-11T22:58:17+00:00",
-          "age_hours": 2.5,
+          "age_hours": 3.3,
           "link": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
           "image": "",
           "source_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/",
           "summary": "The round for the two-year-old startup is coming together months after Mecka announced its Series A.",
           "source_count": 1,
-          "score": 3.179,
+          "score": 2.165,
           "speech": "TechCrunch. Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data.",
           "related": []
         },
@@ -867,13 +859,13 @@
           "domain": "donanimhaber.com",
           "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
           "published": "2026-09-12T00:20:00+03:00",
-          "age_hours": 4.1,
+          "age_hours": 4.9,
           "link": "https://www.donanimhaber.com/yeni-prison-break-ten-beklenen-haber-geldi--210382",
           "image": "https://www.donanimhaber.com/images/images/haber/210382/1200x675yeni-prison-break-ten-beklenen-haber-geldi.jpg",
           "source_url": "https://www.donanimhaber.com/yeni-prison-break-ten-beklenen-haber-geldi--210382",
           "summary": "Bir süredir hazırlık aşamasında olan yeni Prison Break dizisinden beklenen haber geldi. Hulu ve Disney+ üzerinden izleyicilere sunulacak dizi, artık ekranlara gelmeye daha yakın.",
           "source_count": 1,
-          "score": 3.152,
+          "score": 2.138,
           "speech": "DonanımHaber. Yeni Prison Break dizisinden beklenen haber geldi.",
           "related": []
         },
@@ -884,13 +876,13 @@
           "domain": "techcrunch.com",
           "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
           "published": "2026-09-11T21:19:05+00:00",
-          "age_hours": 4.1,
+          "age_hours": 5.0,
           "link": "https://techcrunch.com/2026/09/11/khosla-ventures-is-opening-a-new-york-office-this-fall-its-first-outpost-outside-sand-hill-road/",
           "image": "",
           "source_url": "https://techcrunch.com/2026/09/11/khosla-ventures-is-opening-a-new-york-office-this-fall-its-first-outpost-outside-sand-hill-road/",
           "summary": "\"It's actually allegedly being built out now,\" said Rabois, who has clearly dealt with a missed construction timeline or two.",
           "source_count": 1,
-          "score": 3.151,
+          "score": 2.137,
           "speech": "TechCrunch. Khosla Ventures is opening a New York office this fall — its first outpost outside Sand Hill Road.",
           "related": []
         },
@@ -901,13 +893,13 @@
           "domain": "techcrunch.com",
           "favicon": "https://www.google.com/s2/favicons?domain=techcrunch.com&sz=128",
           "published": "2026-09-11T20:59:47+00:00",
-          "age_hours": 4.4,
+          "age_hours": 5.3,
           "link": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
           "image": "",
           "source_url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
           "summary": "Tan wants smaller, American open-weight AI labs to use the same kind of training techniques on American frontier AI labs, giving the U.S. a more robust set of open-weight options that aren’t Chinese.",
           "source_count": 1,
-          "score": 3.146,
+          "score": 2.132,
           "speech": "TechCrunch. Y Combinator’s Garry Tan wants US open-weight AI labs to ‘distill frontier models, too.",
           "related": []
         },
@@ -918,13 +910,13 @@
           "domain": "theverge.com",
           "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
           "published": "2026-09-11T16:44:02-04:00",
-          "age_hours": 4.7,
+          "age_hours": 5.5,
           "link": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
           "image": "",
           "source_url": "https://www.theverge.com/ai-artificial-intelligence/994207/chatgpt-new-mexico-lawyer-fined-murder-appeal",
           "summary": "New Mexico's Supreme Court is punishing a lawyer for including AI-fabricated witnesses and fake police testimony in an appeal for his client's murder conviction, according to a report from Reuters. In a filing on Wednesday, the court fined Stephen Aarons $5,000 and held him in contempt for failing to \"verify the factual claims and legal authority in his AI-generated brief.\" The filing says the brief \"contained false testimony from wholly fabricated witnesses,\" along with \"false testimony\" about the shooter's clothing and appearance. Justice C. Shannon Bacon questioned how Aarons wasn't aware of the risks posed by AI during an August hearing … Read the full story at The Verge.",
           "source_count": 1,
-          "score": 3.142,
+          "score": 2.128,
           "speech": "The Verge. Lawyer fined $5K over AI-hallucinated witnesses in a murder case.",
           "related": []
         },
@@ -935,13 +927,13 @@
           "domain": "donanimhaber.com",
           "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
           "published": "2026-09-11T23:04:00+03:00",
-          "age_hours": 5.4,
+          "age_hours": 6.2,
           "link": "https://www.donanimhaber.com/microsoft-veri-merkezi-kapasitesini-3-katina-cikaracak--210377",
           "image": "https://www.donanimhaber.com/images/images/haber/210377/1200x675microsoft-veri-merkezi-kapasitesini-3-katina-cikaracak.jpg",
           "source_url": "https://www.donanimhaber.com/microsoft-veri-merkezi-kapasitesini-3-katina-cikaracak--210377",
           "summary": "Microsoft, artan yapay zeka ve bulut talebini karşılamak için veri merkezi kapasitesini 2032’ye kadar 12 gigavat seviyesinden 38 gigavata yükseltmeyi planlıyor.",
           "source_count": 1,
-          "score": 3.131,
+          "score": 2.117,
           "speech": "DonanımHaber. Yavaşlama yok, Microsoft veri merkezi kapasitesini 3 katına çıkaracak.",
           "related": []
         },
@@ -952,13 +944,13 @@
           "domain": "donanimhaber.com",
           "favicon": "https://www.google.com/s2/favicons?domain=donanimhaber.com&sz=128",
           "published": "2026-09-11T19:57:00+03:00",
-          "age_hours": 8.5,
+          "age_hours": 9.3,
           "link": "https://www.donanimhaber.com/cin-2030-a-kadar-surucusuz-araclari-yayginlastiracak--210373",
           "image": "https://www.donanimhaber.com/images/images/haber/210373/1200x675cin-2030-a-kadar-surucusuz-araclari-yayginlastiracak.jpg",
           "source_url": "https://www.donanimhaber.com/cin-2030-a-kadar-surucusuz-araclari-yayginlastiracak--210373",
           "summary": "Çin, elektrikli araçlardaki gücünü otonom sürüşe taşımaya hazırlanıyor. Pekin yönetimi, sürücüsüz araçların 2030’a kadar otoyol ve şehir yollarında yaygınlaşmasını hedefliyor.",
           "source_count": 1,
-          "score": 3.079,
+          "score": 2.065,
           "speech": "DonanımHaber. Büyük plan, Çin, 2030’a kadar sürücüsüz araçları yaygınlaştıracak.",
           "related": []
         },
@@ -969,13 +961,13 @@
           "domain": "theverge.com",
           "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
           "published": "2026-09-11T12:09:14-04:00",
-          "age_hours": 9.3,
+          "age_hours": 10.1,
           "link": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
           "image": "",
           "source_url": "https://www.theverge.com/ai-artificial-intelligence/994064/anthropic-spent-this-week-in-hot-water-over-cybersecurity",
           "summary": "After admitting earlier this year that its AI models had hacked other companies' systems on a handful of occasions, Anthropic released a new report on Wednesday detailing the attacks. It reveals a string of incidents displaying what Anthropic deems its models' single-minded \"recklessness\" - and will likely fuel already raging concerns about cybersecurity and AI. In Anthropic's report, it detailed four cases this year in which its own AI models hacked an external company or exploited vulnerabilities. In one, an \"internal, general-purpose research model\" broke into third-party systems, using access tokens and passwords and downloading files. … Read the full story at The Verge.",
           "source_count": 1,
-          "score": 3.065,
+          "score": 2.051,
           "speech": "The Verge. Anthropic spent this week in hot water over cybersecurity.",
           "related": []
         },
@@ -986,13 +978,13 @@
           "domain": "theverge.com",
           "favicon": "https://www.google.com/s2/favicons?domain=theverge.com&sz=128",
           "published": "2026-09-11T12:01:34-04:00",
-          "age_hours": 9.4,
+          "age_hours": 10.3,
           "link": "https://www.theverge.com/news/993791/microsoft-frank-shaw-leaving-head-of-comms",
           "image": "",
           "source_url": "https://www.theverge.com/news/993791/microsoft-frank-shaw-leaving-head-of-comms",
           "summary": "Frank Shaw in 2025. | Image: Microsoft Frank Shaw is leaving Microsoft after 17 years as chief communications officer. In an internal note to his team, Shaw says he's \"decided it is time for me to move on and try new things,\" after supporting Microsoft's communications for 29 years - nearly 20 years as a Microsoft employee plus time at the Waggener Edstrom agency (now We. Communications) before that. Shaw has been at the heart of Microsoft's communications since 1997, helping the company navigate multiple Windows and Office releases, CEO transitions, the all-important bet on cloud, and huge acquisitions like the $26.2 billion LinkedIn purchase in 2016 and the $69 billion acquisi … Read the full story at The Verge.",
           "source_count": 1,
-          "score": 3.063,
+          "score": 2.049,
           "speech": "The Verge. Microsoft’s head of comms is leaving after almost 20 years.",
           "related": []
         },
@@ -1003,13 +995,13 @@
           "domain": "shiftdelete.net",
           "favicon": "https://www.google.com/s2/favicons?domain=shiftdelete.net&sz=128",
           "published": "2026-09-11T13:30:32+00:00",
-          "age_hours": 11.9,
+          "age_hours": 12.8,
           "link": "https://shiftdelete.net/android-icin-sifre-yoneticileri-arasi-transfer-basladi",
           "image": "",
           "source_url": "https://shiftdelete.net/android-icin-sifre-yoneticileri-arasi-transfer-basladi",
           "summary": "Google, Android cihazlarda şifre ve passkey verilerinin uygulamalar arası güvenli transferini sağlayan yeni bir sistem özelliğini kullanıma sundu.",
           "source_count": 1,
-          "score": 3.021,
+          "score": 2.007,
           "speech": "ShiftDelete. Android için Şifre Yöneticileri Arası Transfer Başladı.",
           "related": []
         },
@@ -1020,13 +1012,13 @@
           "domain": "webtekno.com",
           "favicon": "https://www.google.com/s2/favicons?domain=webtekno.com&sz=128",
           "published": "2026-09-11T16:16:02+03:00",
-          "age_hours": 12.2,
+          "age_hours": 13.0,
           "link": "https://www.webtekno.com/bilim-kurgudan-gerilime-farkli-kategorilerden-kitap-tavsiyeleri-h224179.html",
           "image": "https://imgrosetta.webtekno.com/file/682861/682861-640xauto.jpg",
           "source_url": "https://www.webtekno.com/bilim-kurgudan-gerilime-farkli-kategorilerden-kitap-tavsiyeleri-h224179.html",
           "summary": "Yeni çıkan romanlardan bilim kurgu dünyasının dikkat çeken eserlerine, sürükleyici polisiye kitaplardan fantastik edebiyat örneklerine kadar birçok öneri bu listede yer alıyor. Eğer siz de kitaplığınızda farklı türlere yer vermekten hoşlanıyorsanız içeriğimize göz atabilir, kendinize en uygun kitabı seçebilirsiniz. Satın aldığınız ürünlerde satıcılardan kaynaklanan sorunlardan Webtekno sorumlu değildir. Bu içerik marka iş birliği içeriyor. Yeni Çıkanlar: Hem yeni yazarları keşfetmeyi seviyor hem de sevilen yazarların son çalışmalarını merak ediyorsanız bu kategori tam size göre. Son aylarda yayımlanan ve kısa sürede geniş okuyucu kitlelerine ulaşan eserler şöyle: Theo- Allen Levi El Feneri- Susan Choi Kayıp Anılar Ekspresi- Sim Eunjung Choi Hyunyu Rüzgâr Adımı Biliyor- Isabel Allende Yaratılış Gölü- Rachel Kushner Kaygı Çağında Anlam Arayışı- Steven J. Heine Bilim Kurgu: Teknolojinin sınırlarını zorlayan fikirler, uzak galaksiler ve geleceğe dair çarpıcı senaryolar... Eğer \"Ya bir gün gerçekten böyle olursa?\" sorusunu kendinize sık sık soruyorsanız, aşağıdaki kitaplar tam size göre. Omelas’ı Bırakıp Gidenler- Ursula K. Le Guin Aytozu Faciası- Arthur C. Clarke Bu Ölümsüz- Roger Zelazny Kendinize Çekidüzen Verin- Philip K. Dick Mevki Uygarlığı- Robert Sheckley Houston, Houston Duyuyor Musun?- James Tiptree Jr Polisiye & Gizem & Gerilim: Bir kitabı elimize aldığımızda \"Bir bölüm daha okuyayım.\" dedirten türlerin başında hiç şüphesiz polisiye ve gizem romanları geliyor. Çözülmesi gereken cinayetler, karmaşık olay örgüleri ve beklenmedik ters köşeler... İşte size önerilerimiz: Kuğu ve Yarasa- Keigo Higashino Kiracı- Marie Belloc Lowndes Korku Burnu- John D. MacDonald Cinayet Alfabesi- Agatha Christie Kuzenler- Aurora Venturini Esrarengiz Ev- Edgar Wallace Fantastik Edebiyat:",
           "source_count": 1,
-          "score": 3.017,
+          "score": 2.003,
           "speech": "Webtekno. Farklı Kategorilerden Kitap Tavsiyeleri.",
           "related": []
         },
@@ -1037,13 +1029,13 @@
           "domain": "webtekno.com",
           "favicon": "https://www.google.com/s2/favicons?domain=webtekno.com&sz=128",
           "published": "2026-09-11T16:04:05+03:00",
-          "age_hours": 12.4,
+          "age_hours": 13.2,
           "link": "https://www.webtekno.com/league-of-legends-dev-guncelleme-geliyor-h224197.html",
           "image": "https://imgrosetta.webtekno.com/file/682862/682862-640xauto.jpg",
           "source_url": "https://www.webtekno.com/league-of-legends-dev-guncelleme-geliyor-h224197.html",
           "summary": "Riot Games, önümüzdeki dönemde League of Legends'a eklenecek devasa yenilikleri ve güncellemeleri duyurdu. Genişletilen sesli iletişimden Ranked 5s'in dönüşüne, Classic modundaki iyileştirmelerden yeni ARAM: Mayhem içeriklerine kadar pek çok fark yaratan düzenleme oyuncuları bekliyor. İşte Season 3 Act 2 ve sonrasında Sihirdar Vadisi'ne damga vuracak tüm detaylar! Yeni sesli sohbet geliyor Sadece hazır gruplarla sınırlı olan sesli sohbet sistemi, artık takımdaki tüm oyuncuların erişimine açılıyor. Daha yüksek stabilite, hızlı bağlantı ve gelişmiş gürültü engelleme özellikleriyle desteklenen yeni sistem, oyuncu güvenliğini korumak adına takdir seviyesi 3 ve üzeri olanlara sunulacak. Sistem ilk olarak 26.20 Yaması ile Kuzey Amerika ve Okyanusya sunucularında test edilecek, başarılı bulunması halinde diğer bölgelere yayılacak. Ayrıca oyuncuların ses tonlarını değiştirebilmesine imkan tanıyan “voice skin” özelliği de bu güncellemeyle oyuna eklenecek. Classic moduna yeni şampiyonlar geliyor Classic modunda doğrudan oyuncu geri bildirimlerine dayanan geniş kapsamlı değişiklikler yapılıyor: Oynanış ve Ödüller: Harita ışıklandırması ve dokuları aydınlatılırken IP ve XP kazanım oranları artırıldı. Oyunculara iki ekstra rün sayfası ve ikinci bir “Günün Galibiyeti” bonusu verilirken, rün fiyatlarında da indirime gidildi. Şampiyon Kadrosu: Poppy, Xin Zhao, Shyvana, Galio ve Fiora 26.18 Yaması ile kadroya dâhil oluyor. Graves ve üç Bilgewater şampiyonu ise bir sonraki yamada oyuncularla buluşacak. ARAM: Şamata'ya yeni müzik teması ve görevler yolda Yeni ARAM: Şamata seti, sezonun ana konsepti olan müzik temasını merkezine alıyor. Maç başlangıçlarına eklenen farklı müzikal performanslar, Arena’daki Guests of Honor sistemine benzer bir çeşitlilik sunacak. Yeni eklentilerin yanı sıra Ş",
           "source_count": 1,
-          "score": 3.014,
+          "score": 2.0,
           "speech": "Webtekno. League of Legends'a Dev Güncelleme, Sesli Sohbet, Ranked 5s, Yeni Classic Şampiyonları ve Dahası.",
           "related": []
         }
@@ -1065,18 +1057,18 @@
           "domain": "sozcu.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
           "published": "2026-09-11T12:42:27+00:00",
-          "age_hours": 12.7,
+          "age_hours": 13.6,
           "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB6Y1RDUTBwT0ZicjBVM09HM1dUS2VHZ3FQMFlKUW12dzk2STlselV6OUhyVl9zeC1hVUczN1JmUUR4WE1Ic0NlTDdzNTJ5Nm14NUNNYV9TMmh2V01leGg4ZnVFUHJnenpjT1RKY2p6Ul8?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.673,
+          "score": 2.674,
           "speech": "Sözcü Gazetesi. Çin'de yeni bir virüs hortladı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
               "title": "Grip benzeri semptomlar görülüyor; Çin'de keneden bulaşan yeni virüs tespit edildi!",
-              "source": "T24"
+              "source": "t24.com.tr"
             },
             {
               "title": "Kene kaynaklı yeni bir virüs keşfedildi: Belirtileri neler ve ne kadar ölümcül?",
@@ -1099,22 +1091,22 @@
           "domain": "medyabar.com",
           "favicon": "https://www.google.com/s2/favicons?domain=medyabar.com&sz=128",
           "published": "2026-09-11T08:41:00+00:00",
-          "age_hours": 16.7,
+          "age_hours": 17.6,
           "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxORk5JZjc5MWM2dWJKM05aNjZlWm1PdklEdU9DamZEV0lCQnNXNVJSSl9XallFZHJkaDBOMnJfNVgzd1JzbnJYOHlJdTdYZ1YtQ3VDRTJJaDFOb3BPYjZXX29vNlphWWxHTDZ6dkVrblZXUEVuZWVpY215dFpfN3UwRUNydmhnQWlybjJSVnNBczdGUGYyb3RQVGo1dHdHdzNBUFg1NFlmSTR6VjVtUlHSAbMBQVVfeXFMTmxwV3h2b2dzYUhFaTFpMC1oNnF1MWVjcllDNDloVTE4VGRSeGpwQzRiU3hHVEtZcld6XzVsTFpFdkNvbUpyNFN5bXV6UEtRWGNMaDgzcGVzVVp3UllTQkNGQ1h5cXVzTGc4M0ZiNW9GNjViMzBiaWlNWXFyR0ZfVTFTRUtwRGY3RmZQdnRad2tmYU9kVk9yckY1cWNpQ1JybVB4TUwtNDBkdGpSZFpWUVZsSzA?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 4,
-          "score": 3.143,
-          "speech": "Medyabar. Sakarya’da geliştirilen bileklik Parkinson hastalarının hayatına dokunuyor. Parkinson hastaları için giyilebilir titreşim cihazı geliştirildi. Bu haberi 4 ayrı kaynak yazdı.",
+          "score": 2.407,
+          "speech": "Medyabar. Sakarya’da geliştirilen bileklik Parkinson hastalarının hayatına dokunuyor. Sakarya’da geliştirildi, hastalara umut oldu. Bu haberi 4 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Parkinson hastaları için giyilebilir titreşim cihazı geliştirildi",
-              "source": "Cumhuriyet"
+              "title": "Sakarya Teknokent'te üretilen titreşimli bileklik, Parkinson hastalarının hayatını kolaylaştırıyor",
+              "source": "Anadolu Ajansı"
             },
             {
               "title": "Sakarya’da geliştirildi, hastalara umut oldu!",
-              "source": "sozsakarya.com"
+              "source": "Söz Sakarya"
             },
             {
               "title": "Sakarya’da Parkinson hastalarına umut olacak cihaz geliştirildi",
@@ -1129,13 +1121,13 @@
           "domain": "sozcu.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=sozcu.com.tr&sz=128",
           "published": "2026-09-10T16:45:45+00:00",
-          "age_hours": 32.7,
+          "age_hours": 33.5,
           "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOcWxPd0JTODJuclk3bUFKQU5UX0VyNTdVOTJXb19qMDFOQ0VwX2Z6QXJEOExTb1E0YUNuT1dZVFI4T2xwNEVjRzJyQUp5dzB4WWNvTXI2M01Xdk9Nbjk3STN2R1U1X21qeWEzNldQams4Z2Rnb0psc0dVNlVKQ3NTbWFKODB6TnNmVVA2SWZHQjU0YjJJdFotUkJYS3BFWHJWaUtpWkNR?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 4,
-          "score": 3.077,
+          "score": 2.341,
           "speech": "Sözcü Gazetesi. Domates ya da sarımsak değilmiş, Tansiyon için faydalı sebze belli oldu. Fındık kanser ve kalp krizi riskini azaltıyor, Faydası saymakla bitmiyor. Bu haberi 4 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1154,18 +1146,78 @@
         },
         {
           "id": "saglik-3",
+          "title": "Katarakt Ameliyatından Sonra Gözlüksüz Görmek Mümkün mü?",
+          "publisher": "Haberler",
+          "domain": "haberler.com",
+          "favicon": "https://www.google.com/s2/favicons?domain=haberler.com&sz=128",
+          "published": "2026-09-11T11:38:35+00:00",
+          "age_hours": 14.6,
+          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLU5OdkM0bl9vTnJDcnlnVnJzTjNuUnJrRkdPYWhSY1VEdHAwNUJ1ZkQtTnpxX09sX2owUXc5eFMwTXVhTkI2Tlp1TmwxVkU5STZLNkxBWE1nTFFGdzBlZ3BnekFXMHBxQVRId0E4VWZUeXlobjI2ZURxbXBycnR4NFZJVzRYR2dRWHZ4dEh0OTZNUG4tRTFSZ25B0gGWAUFVX3lxTE11SThqNFloLXh0cHFwMGJudXlYeWN1bUF6R0NHUlBGZEJ1UkFrdTV0aElfMm1XX0pDdmZaR1gwSnpDNzRmZDNhVEFxdjMxeThfUTEyempFSnhYUUxlRnQ4VHE3dXlQZzQ1WjdZcUt1QldSblJfd0pMYmhyRnBCMkpxWXNsZUM5UFc0QVhNaHJ6dDVkV2g4dw?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 4,
+          "score": 2.256,
+          "speech": "Haberler. Katarakt Ameliyatından Sonra Gözlüksüz Görmek Mümkün mü?. Uzm. Dr. Alik Salamatov bilgilendiriyor, Katarakt farklı yaş gruplarında da görülebilir. Bu haberi 4 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Uzm. Dr. Alik Salamatov bilgilendiriyor: Katarakt farklı yaş gruplarında da görülebilir",
+              "source": "Halk 54"
+            },
+            {
+              "title": "Gözlük Takmadan Görmek Mümkün mü? Katarakt Ameliyatında Mercek Seçimi Neden Önemli?",
+              "source": "Halk TV"
+            },
+            {
+              "title": "Katarakt Sadece İleri Yaşlarda Görülmüyor",
+              "source": "aksamhaberleri.com.tr"
+            }
+          ]
+        },
+        {
+          "id": "saglik-4",
+          "title": "Otel duşlarında görünmeyen risk! Gözle görülmüyor, buhar yoluyla bulaşıyor... Banyoya girdiğinizde bunu yapın",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-11T03:51:00+00:00",
+          "age_hours": 22.4,
+          "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQY1F6S2pQTFk0eTJYUUZRZDdjZ3ZHbkdKcnZROHo2ZlRoSHFiMXhKLXBESW1LWWNyNlBkbXJ5TjJTMHlJVnJqdThXQnJoc3VRNU9VR2x6OVVIWlVlbTg1d1FraWJhTlFFWTFEMEhVQlZraHJIbkRKdWNKaUNFNTBwZVB1bGZFU0RkNEhCZkY4NE1NTG5DcktZbVNKN1FlazYxUGFjcVdmZnlGR1VuRkdJc2NONmU3c0s2ZllwSm1HamdEeXU4WC1MLXZtelhwT2ZJMlNxM0hlX1BhRDFkaWNr?oc=5",
+          "image": "",
+          "source_url": "",
+          "summary": "",
+          "source_count": 4,
+          "score": 2.226,
+          "speech": "Hürriyet. Otel duşlarında görünmeyen risk. Gözle görülmüyor, buhar yoluyla bulaşıyor. Banyoya girdiğinizde bunu yapın. Klimalar sağlığınızı etkiliyor. Bu haberi 4 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Otel duşlarındaki gizli tehlike; \"Lejyonelle\" bakterisine dikkat, su damlacıklarıyla buharlaşıyor!",
+              "source": "t24.com.tr"
+            },
+            {
+              "title": "Gözle görülmüyor buhar yoluyla bulaşıyor. Herkesin evinde var",
+              "source": "Nefes Gazetesi"
+            },
+            {
+              "title": "Klimalar sağlığınızı etkiliyor",
+              "source": "mygazete.com"
+            }
+          ]
+        },
+        {
+          "id": "saglik-5",
           "title": "10 Bin Adım Şart Değil: Erken Ölüm Riskini En Çok Düşüren Yürüyüş Aralığı Belli Oldu",
           "publisher": "Onedio",
           "domain": "onedio.com",
           "favicon": "https://www.google.com/s2/favicons?domain=onedio.com&sz=128",
           "published": "2026-09-11T05:55:21+00:00",
-          "age_hours": 19.5,
+          "age_hours": 20.4,
           "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxONnp5ZWtuT0ttbjFOeWRzWE9qdElJQ1NzUmFkbkJzcjJER2tOYmdzNmFQSkgxdV94c0xJZi04MmljamE1R044bXp0XzQ0VF9maUM3ZDdaVU11YVhOWUpVbTZLcGt5eHJXeDR1ZUdDSUpCVXIyYkxvNVgzZklEbjhvc0daLW0xRGpWckJiNng0c3A4SXRGTjN5VmlZQTBlUm1NempVRUJVdmRTNVd3RkNmQlpaNGRpbkU?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.01,
+          "score": 2.011,
           "speech": "Onedio. 10 Bin Adım Şart Değil, Erken Ölüm Riskini En Çok Düşüren Yürüyüş Aralığı Belli Oldu. Hızlı Tempoda Yürüyüş Ömür Uzatıyor, Yeni Çalışma Önemli Bulguları Paylaştı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1185,70 +1237,6 @@
               "source": "Vietnam.vn"
             }
           ]
-        },
-        {
-          "id": "saglik-4",
-          "title": "Katarakt Ameliyatından Sonra Gözlüksüz Görmek Mümkün mü?",
-          "publisher": "Haberler",
-          "domain": "haberler.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=haberler.com&sz=128",
-          "published": "2026-09-11T11:38:35+00:00",
-          "age_hours": 13.8,
-          "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNLU5OdkM0bl9vTnJDcnlnVnJzTjNuUnJrRkdPYWhSY1VEdHAwNUJ1ZkQtTnpxX09sX2owUXc5eFMwTXVhTkI2Tlp1TmwxVkU5STZLNkxBWE1nTFFGdzBlZ3BnekFXMHBxQVRId0E4VWZUeXlobjI2ZURxbXBycnR4NFZJVzRYR2dRWHZ4dEh0OTZNUG4tRTFSZ25B0gGWAUFVX3lxTE11SThqNFloLXh0cHFwMGJudXlYeWN1bUF6R0NHUlBGZEJ1UkFrdTV0aElfMm1XX0pDdmZaR1gwSnpDNzRmZDNhVEFxdjMxeThfUTEyempFSnhYUUxlRnQ4VHE3dXlQZzQ1WjdZcUt1QldSblJfd0pMYmhyRnBCMkpxWXNsZUM5UFc0QVhNaHJ6dDVkV2g4dw?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 4,
-          "score": 2.992,
-          "speech": "Haberler. Katarakt Ameliyatından Sonra Gözlüksüz Görmek Mümkün mü?. Uzm. Dr. Alik Salamatov bilgilendiriyor, Katarakt farklı yaş gruplarında da görülebilir. Bu haberi 4 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "Uzm. Dr. Alik Salamatov bilgilendiriyor: Katarakt farklı yaş gruplarında da görülebilir",
-              "source": "Halk 54"
-            },
-            {
-              "title": "Gözlük Takmadan Görmek Mümkün mü? Katarakt Ameliyatında Mercek Seçimi Neden Önemli?",
-              "source": "Halk TV"
-            },
-            {
-              "title": "Katarakt Sadece İleri Yaşlarda Görülmüyor",
-              "source": "Adapazarı Akşam Haberleri Gazetesi"
-            }
-          ]
-        },
-        {
-          "id": "saglik-5",
-          "title": "Çocuklardaki karın ağrısı ve ateş böbrekleri tehdit eden FMF habercisi olabilir",
-          "publisher": "Haber 7",
-          "domain": "m.haber7.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=m.haber7.com&sz=128",
-          "published": "2026-09-10T16:44:00+00:00",
-          "age_hours": 32.7,
-          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOEpPOWtHR2xoaDFLQW05UjdRX0ZveDRoa2FWNWJFVVhoV0JBV1k5SWk1VXhkUjFERzBhajRVS2JQc19FZ2N6QWFWX0d3a0JlaEhLckJvWjVkelBhaExLTUNUYVhRWVRpeHJZYTQ5LVlfbzlKREc0QjYtTjJab3Y3UVhVZnR3VXpwVDc2UnQ0YXA4eGNiMTI2UHd5allQbmxJcVpNWHYxQ1VfSll6V3lXeE9Jam1ZS0pNa3ZneUFB0gHIAUFVX3lxTE51ZzFKSmUyWnJKV0N5amNucnpzUnd3cHVvWThZWUlROUx0MnkxXzBFVl9BVnNwVXdCYTNmbEc3c3cxY0ctWWROTVdsQkI3blVYdjRsZ0J0MjlYSWs2NEI0Z3hsQ3ZQb0xDdTNiWWl5d3l1NEpBZUt2c3F2Vk5uNjRxa3BMVExqZk9KVjNRb0RYbGxyWWEyZi1ENC0wUTN6eTFEd3dtWFVCakphUkNsZVVTd3pZd2NBaklUMUFZbnZyWVhScHc5NzFR?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 2.99,
-          "speech": "Haber 7. Çocuklardaki karın ağrısı ve ateş böbrekleri tehdit eden FMF habercisi olabilir. Böbreklerin Gizli Düşmanı, Amiloidoz. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "Böbreklerin Gizli Düşmanı: Amiloidoz",
-              "source": "ŞehirMedya"
-            },
-            {
-              "title": "Çocuklukta başlayan ataklar ihmal edilirse böbrekleri tehdit ediyor",
-              "source": "Aksiyon.com.TR"
-            },
-            {
-              "title": "Tekrarlayan karın ağrısı ve ateşi hafife almayın: FMF (Ailesel Akdeniz Ateşi) habercisi olabilir",
-              "source": "Yayla Haber"
-            },
-            {
-              "title": "Çocuklukta başlıyor, böbrekleri tehdit ediyor! Medipol’den Akdeniz Ateşi uyarısı",
-              "source": "internethaber.com"
-            }
-          ]
         }
       ]
     },
@@ -1258,35 +1246,35 @@
       "items": [
         {
           "id": "spor-0",
-          "title": "Beşiktaş'ta Vincenzo Italiano fırtınası: Bir ilki başardı",
+          "title": "Beşiktaş'tan hakem tepkisi: 'Maçı kazandık ama...'",
           "publisher": "Cumhuriyet",
           "domain": "cumhuriyet.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=cumhuriyet.com.tr&sz=128",
-          "published": "2026-09-11T19:20:00+00:00",
-          "age_hours": 6.1,
-          "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQMjBNaXZBSGF4WnlPMF9BZExFc1hmcFZfa3ZYRGhCLVlSVl9fa1BUenQ5Q3FjY01mVGwwRlhZTHdKRDlIWmx1bTZXRjUzVEJ3TDVPWXFpbERoUktCbFUtSkNHWGFodHBfcGQ0UFNQZmd1YlpCVzFYYnFtTzZFdXpGS0ZGdUdlSjBQeXFjX3VRSmtneDQ5cGFiY0IxbTBkcEsw?oc=5",
-          "image": "https://media.cumhuriyet.com.tr/Archive/9378a668-fa52-4b16-b27c-d0bbff62a32f.jpg",
-          "source_url": "https://www.cumhuriyet.com.tr/spor/besiktas-ta-vincenzo-italiano-firtinasi-bir-ilki-basardi-2536824",
-          "summary": "Vincenzo Italiano, Süper Lig'in son 25 sezonluk sürecinde Beşiktaş'ın başında çıktığı ilk üç iç saha maçından da galibiyetle ayrılan ikinci yabancı teknik direktör oldu. Italiano, Beşiktaş'ta kariyerinde ilki de yaşadı.",
+          "published": "2026-09-11T19:53:00+00:00",
+          "age_hours": 6.4,
+          "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOM1ZTel9KOEtRZS1SUmZsYmRDUHhCdmpYcEN3VkZRb2piaC1KQUY2eEhLWnRXVERETWxob1JNR3RwU09FS0J0bjdPMzZIV2J4a3NOd09vbHJCSlNCM2JmeGxXYi1FREN3WjdRazRjYi1mcHgwbnRKQXpVcjBEQVVicVFTSTRmOUVmUndHUG83ajg?oc=5",
+          "image": "https://media.cumhuriyet.com.tr/Archive/21162a2f-2cdf-4cbe-97a3-17edb192159c.jpg",
+          "source_url": "https://www.cumhuriyet.com.tr/spor/besiktas-tan-hakem-tepkisi-maci-kazandik-ama-2536833",
+          "summary": "Süper Lig'in 5. haftasında Beşiktaş, Erzurumspor FK'yi 3-0 mağlup etti. Siyah-beyazlı ekip karşılaşmanın ardından maçın hakemine tepki gösterdi.",
           "source_count": 5,
-          "score": 3.833,
-          "speech": "Cumhuriyet. Beşiktaş'ta Vincenzo Italiano fırtınası, Bir ilki başardı. Italiano'dan oyuncularına yasak. Marsilya maçı öncesi., Beşiktaş (BJK) Haberleri. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.843,
+          "speech": "Cumhuriyet. Beşiktaş'tan hakem tepkisi, Maçı kazandık ama. Bir bilene soracak. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
-              "title": "Italiano, Beşiktaş'ı nasıl değiştirdi? Antrenman metodu ortaya çıktı",
-              "source": "Hürriyet"
+              "title": "Beşiktaş’tan Erzurumspor FK galibiyetinin ardından hakem tepkisi!",
+              "source": "Fotomaç"
             },
             {
-              "title": "Beşiktaş'ta Italiano farkı! Oyuncular yeniden doğdu",
-              "source": "Sporx.com"
+              "title": "Beşiktaş, hakem hatalarına karşı kendi çözümünü hayata geçiriyor! Eski hakemle anlaştı",
+              "source": "Haber 7"
             },
             {
-              "title": "Vincenzo Italiano, Süper Lig'de fark yarattı",
-              "source": "birgun.net"
+              "title": "Anlaşma sağlandı! Beşiktaş bir bilene soracak...",
+              "source": "Ajansspor"
             },
             {
-              "title": "Italiano'dan oyuncularına yasak! Marsilya maçı öncesi... - Beşiktaş (BJK) Haberleri",
-              "source": "Mynet"
+              "title": "Bir bilene soracak!",
+              "source": "Sabah"
             }
           ]
         },
@@ -1297,13 +1285,13 @@
           "domain": "ntvspor.net",
           "favicon": "https://www.google.com/s2/favicons?domain=ntvspor.net&sz=128",
           "published": "2026-09-11T12:37:26+00:00",
-          "age_hours": 12.8,
+          "age_hours": 13.7,
           "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNTMxZDJ2X0VDb3RPWDYtblhPNzdWaWs5T3dmb056dnRodk1VV04yeDdUTnhDMTZrUUU5LVhxUm80dnlhb0FjMVBCdTh5NGhpTFJfN2dJWEpKUmEza2xZeUdaZHZNTjJUWWN2UmFhN0NiUzJJeVdVM3ZqV3lsTzNJNzE3WlBHQ1lzNHdvd3Z4N25xQU9SaHhNSzBR0gGfAUFVX3lxTFBNV185RFF1ajU2U1dDWnRDaW9FSGZFYlgyR2lkRVdPTXZMLU1uOFNXQnhpZ01XOUxJQ0ZXUDg5UjlQQ2dCV2ZLUkZOWGdFbnJWUUNzc2ZQMFVMNkRrM3BnRjY0eXphM0VOSVBMODhyN21yZFlTdWFTanJKM3JxaVIxOEFweWh5RUVWZ01ZU3djREN1dHp2MWtHa2dKQmQ1RQ?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.771,
+          "score": 2.772,
           "speech": "En Te Ve Spor. Galatasaray'da yıllık olağan genel kurul tarihi duyuruldu. Galatasaray Spor Kulübü'nden bildirilmiştir. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1331,13 +1319,13 @@
           "domain": "fanatik.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=fanatik.com.tr&sz=128",
           "published": "2026-09-11T13:35:52+00:00",
-          "age_hours": 11.8,
+          "age_hours": 12.7,
           "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNXzc3QlRZb3cteXd5LWk4clhUb3pobFphekNLOW5YYWxKa21kVmprSzh4UXh1VTdadkNLQTA3WWxmQnJoSjI3emwtWHMxeWtuYkMya09uODR0ZktldUxNMG1aQ0FnanVEWmZyeWpTX2tISER2b3hJTVJHQ0VjNzZEdF9CSzJkNkdwWk15aXcwYw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.688,
+          "score": 2.689,
           "speech": "Fanatik. Trabzonspor'un Konya kafilesi belli oldu. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1354,7 +1342,7 @@
             },
             {
               "title": "Trabzonspor, Konya'da: İşte eksikler",
-              "source": "T24"
+              "source": "t24.com.tr"
             }
           ]
         },
@@ -1365,13 +1353,13 @@
           "domain": "halktv.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=halktv.com.tr&sz=128",
           "published": "2026-09-11T20:42:48+00:00",
-          "age_hours": 4.7,
+          "age_hours": 5.6,
           "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaEtna1p4WmZ1eXl3OERDYmk0Rm11T3Nlbm5pTHFjMm5yb0ZhMElhUkFJRG9jWmlndm1NVmozdURnTFdjejE3b1dOUVI2TzJHRDdYa0l4ZWZFOVFaWEd1aHJMdm1fdDZ6X1RjX2MxSkpkSXplYUVjc01sc0tXUXhZVnZ6dVQyU3RjQnc5NTVsWW9lVm9hZjlmZkpkREpKdw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.606,
+          "score": 2.607,
           "speech": "Halk TV. Te Fe Fe duyurdu, Milli futbolcu Adem Küçükkartal hayatını kaybetti. Adem Küçükkartal'ı Kaybettik. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1399,13 +1387,13 @@
           "domain": "galatasaray.org",
           "favicon": "https://www.google.com/s2/favicons?domain=galatasaray.org&sz=128",
           "published": "2026-09-11T17:07:00+00:00",
-          "age_hours": 8.3,
+          "age_hours": 9.2,
           "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNWmZGM1FpelJjQ2hhSlZ5TGJQSWdFUjdhWGwzcW5aZDRxOEdpendleWl6dzJYTEdjS1p5WUlTdVB1ZmlHTnRQU19LcVh6WVE4UWUtWUVWSVNabkg5bm9ZLXZuNkc0S0ZINjNFR2lQclZ3T3otd1hkLUxfTE83MUtVNG5pNUpMaTdEVnNhQzllank?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.546,
+          "score": 2.547,
           "speech": "GALATASARAY. Kocaelispor maçının hazırlıkları başladı. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1422,7 +1410,7 @@
             },
             {
               "title": "Okan Buruk'un Kocaelispor 11'i netleşti",
-              "source": "T24"
+              "source": "t24.com.tr"
             }
           ]
         },
@@ -1433,13 +1421,13 @@
           "domain": "trtspor.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=trtspor.com.tr&sz=128",
           "published": "2026-09-11T15:34:30+00:00",
-          "age_hours": 9.9,
+          "age_hours": 10.7,
           "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQODdUYkV3ZmE5RkR0NmxObW1yVXY2cG5laWMtbDR3QWZOc1hEU0JscUZkNGs4WFBhc1Fhdk9pcWpQYXJ3MEJlMk4xY0NVeHMtc2xaVkhkbUJpU1VBYUktZ3ZyZjlCWVR2SVhxaXhoWWd2eGYtZFhTNzNRRVJmRjFRNkU2MVZLRHRsM3FoUWVWYlRHcXZtLUNUWGFkVlNlazBTcmhuT1E5Zw?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.521,
+          "score": 2.522,
           "speech": "Te Re Te Spor. Archie Brown, Şampiyonlar Ligi'nde haftanın 11'ine seçildi. Real ve Barcelona'nın yıldızları Şampiyonlar Ligi haftasının ideal 11'ini süslüyor. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
@@ -1462,19 +1450,53 @@
         },
         {
           "id": "spor-6",
+          "title": "Trossard, Beşiktaş'taki hesabı açtı! İkonik gol sevincini Dolmabahçe'ye taşıdı",
+          "publisher": "Hürriyet",
+          "domain": "hurriyet.com.tr",
+          "favicon": "https://www.google.com/s2/favicons?domain=hurriyet.com.tr&sz=128",
+          "published": "2026-09-11T19:17:00+00:00",
+          "age_hours": 7.0,
+          "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQM3Q2Vlc1eE9CQnphT3pNSWFhaE1Tb0hZZWp2bG5mUUFPQXV1YXZkR2pYSkZvNV9hS19Qc1h2MkFiQzJtTGlsRnFxbS1Ia3NpaEFtc2JPdWw1a3pSMHo0bVRnQnEtcnBteG14dXhQRkNVcy1DYi01YS03azV5Ymdkb0tMckxCbzRKdmV3WU9TRldFeVc2Yi0zMkU1M3ltTF9HNGlQNlZ4YTkxMHYxck1yUFM3bC1KdjRuTDA1UnJB?oc=5",
+          "image": "https://image.hurimg.com/i/hurriyet/90/620x350/57bbf91967b0a930747c6900.jpg",
+          "source_url": "https://www.hurriyet.com.tr/sporarena/trossard-besiktastaki-hesabi-acti-ikonik-gol-sevincini-dolmabahceye-tasidi-43304019",
+          "summary": "Beşiktaş’ın Belçikalı oyuncusu Leandro Trossard, Erzurumspor FK karşısında fileleri havalandırarak siyah-beyazlılardaki ilk gol sevincini yaşadı.",
+          "source_count": 4,
+          "score": 2.483,
+          "speech": "Hürriyet. Trossard, Beşiktaş'taki hesabı açtı. İkonik gol sevincini Dolmabahçe'ye taşıdı. Vincenzo Italiano, Yaşadığımız delilikti. Bu haberi 4 ayrı kaynak yazdı.",
+          "related": [
+            {
+              "title": "Beşiktaş 3-0 Erzurumspor FK (Süper Lig maçı özeti)",
+              "source": "Hürriyet"
+            },
+            {
+              "title": "Dolmabahçe'de tartışmalı pozisyonlar! Hakem Beşiktaş'ın iki golünü iptal etti",
+              "source": "Haber 7"
+            },
+            {
+              "title": "Beşiktaş 3 puanı 3 golle aldı! Süper Lig'de liderliğe yükseldi",
+              "source": "A Spor"
+            },
+            {
+              "title": "Vincenzo Italiano: \"Yaşadığımız delilikti!\"",
+              "source": "Fotomaç"
+            }
+          ]
+        },
+        {
+          "id": "spor-7",
           "title": "Pep Guardiola’dan Fatih Terim’e boşta olan teknik direktörler - Kulüpler için geniş teknik direktör seçeneği",
-          "publisher": "transfermarkt.com.tr",
+          "publisher": "Transfermarkt",
           "domain": "transfermarkt.com.tr",
           "favicon": "https://www.google.com/s2/favicons?domain=transfermarkt.com.tr&sz=128",
           "published": "2026-09-11T12:57:42+00:00",
-          "age_hours": 12.5,
+          "age_hours": 13.3,
           "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPdzFiaEl3MWRFQlpsUVh2V183SmVObGtvRl9XaFZTdWJWOE00REFWMFlmMkFjejJPRUZOQXRrTFduRVJGYmw0SlFza1hZbFVZc2wtTWdxZURqYlZuTjM4cUowUFBrT1JVeDVSdGE3X3QxdnhqLVdEOGYzbVFET2NCWGVkWmZ1UG5Fd0psVWd3ZU1CQVJLdXVBSzFwWUZfYkhWNmVtQ2VReENxbEpqdDJpaVpGMEJBVEJfTmRfRUVUUzA4NGxsdUxpR0lmbDZjdk1tZ1dJZFF4cDBvSUlEbU81SkxRSlJydUN0RlE?oc=5",
           "image": "",
           "source_url": "",
           "summary": "",
           "source_count": 5,
-          "score": 3.477,
-          "speech": "transfermarkt. Pep Guardiola’dan Fatih Terim’e boşta olan teknik direktörler, Kulüpler için geniş teknik direktör seçeneği. Fenerbahçe için flaş Guardiola iddiası. Seçim döneminde adı sıkça dillendirilmişti. İsmail Kartal sonrası. Bu haberi 5 ayrı kaynak yazdı.",
+          "score": 2.478,
+          "speech": "Transfermarkt. Pep Guardiola’dan Fatih Terim’e boşta olan teknik direktörler, Kulüpler için geniş teknik direktör seçeneği. Fenerbahçe için flaş Guardiola iddiası. Seçim döneminde adı sıkça dillendirilmişti. İsmail Kartal sonrası. Bu haberi 5 ayrı kaynak yazdı.",
           "related": [
             {
               "title": "Boştaki teknik direktörler belli oldu! Dünyaca ünlü hocalar listede... - Galeri - Trend Spor",
@@ -1493,40 +1515,6 @@
               "source": "Yeni Akit Gazetesi"
             }
           ]
-        },
-        {
-          "id": "spor-7",
-          "title": "Sarıyer'in hocasından rakibe tebrik: Boşa atmamak lazım",
-          "publisher": "Haber 7",
-          "domain": "m.haber7.com",
-          "favicon": "https://www.google.com/s2/favicons?domain=m.haber7.com&sz=128",
-          "published": "2026-09-11T20:58:00+00:00",
-          "age_hours": 4.5,
-          "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdXg5aE5RUDdNYW9OY0pHU1E0RnU4NVN3US1RVjhabHdLdS1tdXloalZiUC1JUXlhcDdya2lNdU1IZTZBelppZ2FIZHZHZjcyY1V5RlVKRDJfencwUUJka1JKREJyWWpoekFueWVwRzc5SnNGcDg5ZFJES0ZyX3FrMDNWRmZ4Q2l0TmVYWElUR2swYlFtSGJNRjVjM3p3bHdXaWfSAawBQVVfeXFMT2gzWWxxTlAtZ3BCS1F2NXBvUFFfNUktMmRvQkQ1Ny1xeVV3elF2OEM3X2J5WlhHdVE3VjlxWnpSRWtpSk5YNDdGYTR0RzJSQlRlNm1hQXFOd1NwTUlGWWMwdjBoSGlQLVd4bXA5aEVfdFNqcm0zclh4cFpRd2NGbnhOZl9iTEJ2NHRVb1lKQ0VVQ09VdUIwZTdGd0k5RHkzZ3NMZDZNd3VCdzFMVg?oc=5",
-          "image": "",
-          "source_url": "",
-          "summary": "",
-          "source_count": 5,
-          "score": 3.461,
-          "speech": "Haber 7. Sarıyer'in hocasından rakibe tebrik, Boşa atmamak lazım. 1. Lig'de 7. haftanın hakemleri belli oldu. Bu haberi 5 ayrı kaynak yazdı.",
-          "related": [
-            {
-              "title": "Trendyol 1. Lig: Sarıyer: 1 - Bandırmaspor: 1 İhlas Haber Ajansı",
-              "source": "İhlas Haber Ajansı"
-            },
-            {
-              "title": "Sarıyer ile Bandırmaspor yenişemedi!",
-              "source": "Habertürk"
-            },
-            {
-              "title": "1. Lig'de 7. haftanın hakemleri belli oldu",
-              "source": "NTVSpor"
-            },
-            {
-              "title": "Sarıyer - Bandırmaspor Maçı Hangi Gün, Saat Kaçta ve Hangi Kanalda?",
-              "source": "birgun.net"
-            }
-          ]
         }
       ]
     },
@@ -1541,13 +1529,13 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-11T11:03:04+00:00",
-          "age_hours": 14.4,
+          "age_hours": 15.2,
           "link": "https://dev.to/deploynix/migrating-a-laravel-app-from-mysql-to-postgresql-a-practical-guide-3pg8",
           "image": "",
           "source_url": "https://dev.to/deploynix/migrating-a-laravel-app-from-mysql-to-postgresql-a-practical-guide-3pg8",
           "summary": "Let's start with the honest part: most Laravel apps do not need to switch databases. MySQL powers an enormous share of production Laravel deployments, it's fast, it's well understood, and Eloquent abstracts away most of the differences anyway. If your app is healthy on MySQL and your team knows it well, the highest-value move is usually to stay put and invest in better indexes and query hygiene instead. But some apps do outgrow MySQL in specific, identifiable ways. Heavy JSON workloads that want real indexing. Migration files that can't be rolled back atomically because MySQL commits DDL implicitly. Deadlocks from gap locking that nobody can quite explain. Reporting queries that would be two lines with a partial index or a proper string_agg. If you've hit two or three of those, PostgreSQL starts earning its migration cost. This post is a runbook, not advocacy. We've helped teams move Laravel apps between engines on Deploynix, and the pattern is consistent: the data transfer is the easy part, and the dialect differences hiding in your codebase are the hard part. We'll cover how to decide, how to audit, how to convert the schema with pgloader, how to fix the Laravel layer, and how to cut over with a rollback path you'd actually trust at 2 a.m. Key Takeaways- Switch for concrete wins (transactional DDL, JSONB, partial indexes), not because Postgres is fashionable - Run your test suite against real PostgreSQL in CI weeks before any data moves - pgloader handles ~90% of schema conversion; enums, fulltext, and spatial need hand-work - Verify with row counts, checksums, and sequence resets before flipping .env - Keep MySQL warm as a rollback target for at least a week Should You Switch at All? This decision deserves more scrutiny than it usually gets. A database migration touc",
           "source_count": 1,
-          "score": 1.861,
+          "score": 1.823,
           "speech": "DEV Laravel. Migrating a Laravel App From MySQL to PostgreSQL, A Practical Guide.",
           "related": []
         },
@@ -1558,13 +1546,13 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-11T10:16:07+00:00",
-          "age_hours": 15.2,
+          "age_hours": 16.0,
           "link": "https://dev.to/xmarynkam/inertiajs-infinite-scroll-why-page-2-replaced-existing-posts-instead-of-appending-them-1jad",
           "image": "",
           "source_url": "https://dev.to/xmarynkam/inertiajs-infinite-scroll-why-page-2-replaced-existing-posts-instead-of-appending-them-1jad",
           "summary": "Infinite Scroll in ICanUp initially looked correct. The first page of Posts loaded, I scrolled down, the request for page=2 completed, and the server returned the next records. Then something unexpected happened: the Posts from page 1 disappeared, and only the records from page 2 remained. The interesting part was that pagination itself worked. The data arrived. The problem was how the next page became part of the list that was already on screen. For Infinite Scroll, successfully loading page 2 is not enough. The application needs an explicit rule for when a response replaces the list and when it extends it. What I Saw on the Page Before scrolling, everything looked normal: the list contained records from the first page. After the next page loaded, the server returned new Posts, but the previous list was no longer preserved. The problem was not that page 2 failed to load. The problem was that page 2 became the new complete list. Step Actual Expected Initial load page=1 page=1 First scroll page=2 replaces page=1 page=2 appends after page=1 Next scroll Only the latest page remains All loaded pages remain Infinite Scroll Changes the Meaning of Pagination For traditional pagination, replacing the list is completely normal. A user opens page 2 and sees the records from page 2. Infinite Scroll has a different contract. The next page is a continuation of data that is already visible. That difference determines whether the local list should be replaced or extended. Two Different Pagination Contracts Traditional pagination: page=1 -> [1, 2, 3, 4] page=2 -> [5, 6, 7, 8] Infinite Scroll: page=1 -> [1, 2, 3, 4] page=2 -> [1, 2, 3, 4, 5, 6, 7, 8] page=3 -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] Replace and Append Are Different Operations A simplified version of the bug can be repre",
           "source_count": 1,
-          "score": 1.826,
+          "score": 1.788,
           "speech": "DEV Laravel. Inertia.js Infinite Scroll, Why Page 2 Replaced Existing Posts Instead of Appending Them.",
           "related": []
         },
@@ -1575,13 +1563,13 @@
           "domain": "dev.to",
           "favicon": "https://www.google.com/s2/favicons?domain=dev.to&sz=128",
           "published": "2026-09-11T04:26:50+00:00",
-          "age_hours": 21.0,
+          "age_hours": 21.8,
           "link": "https://dev.to/nurmantg/why-slow-linktrees-kill-e-commerce-conversions-and-how-we-built-a-200ms-alternative-with-laravel-588k",
           "image": "",
           "source_url": "https://dev.to/nurmantg/why-slow-linktrees-kill-e-commerce-conversions-and-how-we-built-a-200ms-alternative-with-laravel-588k",
           "summary": "When managing social media campaigns for e-commerce, creators, or affiliate stores in Southeast Asia, every millisecond counts. Yet, one of the biggest silent conversion killers today is the slow, bloated Link-in-Bio. In this article, I want to share the architectural decisions behind GAS.PM — an ultra-lightweight link-in-bio platform built with Laravel 11 and Livewire 3 that loads in under 200 milliseconds. 📉 The Hidden Cost of Heavy Biolink Platforms Most mainstream link-in-bio services (Linktree, Beacons, Bio.link) suffer from heavy client-side JavaScript bundles, tracking scripts, and external ad banners. What Actually Happens When a Mobile User Clicks Your Bio Link: DNS Resolution & CDN Handshake: ~300ms Heavy JS Bundle Download: 1.5MB - 3.5MB of React/Next.js/Vue bundles Execution & Layout Shift (CLS): 1.2s - 2.5s Total Time to Interactive (TTI): 3.0s - 4.5s on standard 4G mobile connections. According to Google's mobile commerce research, every 1-second delay in page load drops conversion rates by up to 20%. If you are running paid TikTok Ads or Instagram Reels promotions, a 3-second delay means you are losing nearly 40% of potential buyers before they even see your product catalog! ⚡ The Solution: Server-Driven Reactive Architecture with Laravel 11 & Livewire 3 Instead of shipping heavy client-side SPA frameworks to mobile browsers, we built GAS.PM with a modern Server-Side Rendered (SSR) + Livewire 3 reactive approach. ┌─────────────────────────────────────────────────────────────┐ │ GAS.PM ARCHITECTURE │ ├─────────────────────────────────────────────────────────────┤ │ Client Mobile Browser ( Key Performance Benefits: Critical CSS & Minimal Asset Payload: Profile pages weigh less than 45KB total, allowing instant rendering on 3G, 4G, and Wi-Fi networks. Intera",
           "source_count": 1,
-          "score": 1.567,
+          "score": 1.53,
           "speech": "DEV Laravel. Why Slow Linktrees Kill E-Commerce Conversions (And How We Built a 200ms Alternative with Laravel 11).",
           "related": []
         }
@@ -1594,23 +1582,23 @@
       "segment": "turkiye",
       "status": "ok",
       "count": 70,
-      "newest_age_hours": 5.4,
+      "newest_age_hours": 6.2,
       "error": ""
     },
     {
       "topic": "WORLD",
       "segment": "dunya",
       "status": "ok",
-      "count": 59,
-      "newest_age_hours": 4.2,
+      "count": 62,
+      "newest_age_hours": 5.0,
       "error": ""
     },
     {
       "topic": "BUSINESS",
       "segment": "ekonomi",
       "status": "ok",
-      "count": 44,
-      "newest_age_hours": 2.9,
+      "count": 43,
+      "newest_age_hours": 3.8,
       "error": ""
     },
     {
@@ -1618,7 +1606,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 50,
-      "newest_age_hours": 10.7,
+      "newest_age_hours": 11.6,
       "error": ""
     },
     {
@@ -1626,7 +1614,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 50,
-      "newest_age_hours": 4.1,
+      "newest_age_hours": 4.9,
       "error": ""
     },
     {
@@ -1634,7 +1622,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 20,
-      "newest_age_hours": 10.4,
+      "newest_age_hours": 11.3,
       "error": ""
     },
     {
@@ -1642,7 +1630,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 10,
-      "newest_age_hours": 4.7,
+      "newest_age_hours": 5.5,
       "error": ""
     },
     {
@@ -1650,15 +1638,15 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 20,
-      "newest_age_hours": 2.5,
+      "newest_age_hours": 3.3,
       "error": ""
     },
     {
       "topic": "TECHNOLOGY",
       "segment": "bilim-teknoloji",
       "status": "ok",
-      "count": 60,
-      "newest_age_hours": 3.0,
+      "count": 62,
+      "newest_age_hours": 0.9,
       "error": ""
     },
     {
@@ -1666,7 +1654,7 @@
       "segment": "bilim-teknoloji",
       "status": "ok",
       "count": 50,
-      "newest_age_hours": 7.9,
+      "newest_age_hours": 8.7,
       "error": ""
     },
     {
@@ -1674,7 +1662,7 @@
       "segment": "bilim",
       "status": "ok",
       "count": 5,
-      "newest_age_hours": 41.5,
+      "newest_age_hours": 42.3,
       "error": ""
     },
     {
@@ -1682,7 +1670,7 @@
       "segment": "bilim",
       "status": "ok",
       "count": 10,
-      "newest_age_hours": 13.8,
+      "newest_age_hours": 14.6,
       "error": ""
     },
     {
@@ -1690,7 +1678,7 @@
       "segment": "bilim",
       "status": "ok",
       "count": 1,
-      "newest_age_hours": 15.7,
+      "newest_age_hours": 16.6,
       "error": ""
     },
     {
@@ -1705,16 +1693,16 @@
       "topic": "HEALTH",
       "segment": "saglik",
       "status": "ok",
-      "count": 30,
-      "newest_age_hours": 10.8,
+      "count": 31,
+      "newest_age_hours": 11.6,
       "error": ""
     },
     {
       "topic": "SPORTS",
       "segment": "spor",
       "status": "ok",
-      "count": 58,
-      "newest_age_hours": 4.5,
+      "count": 59,
+      "newest_age_hours": 5.3,
       "error": ""
     },
     {
@@ -1722,7 +1710,7 @@
       "segment": "yazilim",
       "status": "ok",
       "count": 5,
-      "newest_age_hours": 23.7,
+      "newest_age_hours": 24.5,
       "error": ""
     },
     {
@@ -1730,7 +1718,7 @@
       "segment": "yazilim",
       "status": "ok",
       "count": 1,
-      "newest_age_hours": 37.2,
+      "newest_age_hours": 38.0,
       "error": ""
     },
     {
@@ -1746,7 +1734,7 @@
       "segment": "yazilim",
       "status": "ok",
       "count": 12,
-      "newest_age_hours": 8.5,
+      "newest_age_hours": 9.3,
       "error": ""
     },
     {
@@ -1754,21 +1742,21 @@
       "segment": "yazilim",
       "status": "ok",
       "count": 3,
-      "newest_age_hours": 7.0,
+      "newest_age_hours": 7.8,
       "error": ""
     }
   ],
   "total": 53,
   "image_stats": {
-    "aranan": 20,
-    "eslesen": 12,
-    "gorselli": 11,
-    "ozetli": 10
+    "aranan": 23,
+    "eslesen": 14,
+    "gorselli": 13,
+    "ozetli": 12
   },
   "empty_publisher_feeds": [
     "fanatik.com.tr"
   ],
-  "history_skipped": 85,
+  "history_skipped": 88,
   "audio": null,
   "cues": [],
   "check": {

@@ -1,6 +1,6 @@
 {
   "scoring": {
-    "w_sources": 1.0,
+    "w_clustered": 1.6,
     "w_freshness": 0.6,
     "w_trust": 1.0,
     "clickbait_penalty": 1.2,

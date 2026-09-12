@@ -60,7 +60,8 @@ const STRINGS = {
     interestsHelp: "Eşleşen haberler ana sayfada öne çıkar. Yalnızca bu cihazda saklanır.",
     interestsEmpty: "Henüz eklemedin.", interestPlaceholder: "örn. Laravel, deprem, Fenerbahçe",
     add: "Ekle", edit: "Düzenle", read: "okundu",
-    sources: (n) => `${n} kaynak`, singleSource: "tek kaynak",
+    sources: (n) => `${n} kaynak`, sourcesCapped: (n) => `${n}+ kaynak`,
+    singleSource: "tek kaynak",
     listenHere: "Buradan dinle", otherSources: "Aynı olayı yazan diğer kaynaklar",
     sourceNote: "Özet yayıncının kendi akışından alındı; tam metin için kaynağa gidin.",
     sourceNoteBare: "Google Haberler makale gövdesi vermiyor; bu haber için elimizde yalnızca başlık var.",
@@ -93,7 +94,8 @@ const STRINGS = {
     interestsHelp: "Matching stories move to the top. Stored on this device only.",
     interestsEmpty: "Nothing added yet.", interestPlaceholder: "e.g. Laravel, climate, Arsenal",
     add: "Add", edit: "Edit", read: "read",
-    sources: (n) => `${n} sources`, singleSource: "single source",
+    sources: (n) => `${n} sources`, sourcesCapped: (n) => `${n}+ sources`,
+    singleSource: "single source",
     listenHere: "Listen from here", otherSources: "Other outlets covering this",
     sourceNote: "The summary comes from the publisher's own feed; open the source for the full story.",
     sourceNoteBare: "Google News doesn't provide article bodies, so all we have for this story is the headline.",
@@ -300,19 +302,27 @@ function verifiedBadge() {
   </svg>`;
 }
 
+/* Google Haberler kume buyuklugunu tam 5'te kesiyor, dolayisiyla 5 sayisi
+ * "tam bes" degil "en az bes" demek. Rozet bunu 5+ diye gosteriyor. */
+const SOURCE_CAP = 5;
+
+function sourceLabel(count) {
+  return count >= SOURCE_CAP ? t("sourcesCapped", count) : t("sources", count);
+}
+
 function sourceBadge(count) {
   if (count < 3) {
     return `<span class="rounded-full bg-black/25 px-2 py-[3px] text-[11px] font-medium text-white/80 backdrop-blur">${escapeHtml(t("singleSource"))}</span>`;
   }
   return `<span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-2 py-[3px] text-[11px] font-semibold text-white backdrop-blur">
-    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${escapeHtml(t("sources", count))}
+    <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${escapeHtml(sourceLabel(count))}
   </span>`;
 }
 
 function sourceChip(count) {
   const strong = count >= 3;
   return `<span class="inline-flex shrink-0 items-center gap-1 rounded-full ${strong ? "bg-brand-50 text-brand-700" : "bg-black/5 text-ink-faint"} px-2 py-[3px] text-[11px] font-semibold">
-    ${strong ? `<svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${count} kaynak` : "tek kaynak"}
+    ${strong ? `<svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2 4 5.5v6c0 4.7 3.4 9 8 10.5 4.6-1.5 8-5.8 8-10.5v-6z"/></svg>${escapeHtml(sourceLabel(count))}` : escapeHtml(t("singleSource"))}
   </span>`;
 }
 

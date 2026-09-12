@@ -1,17 +1,30 @@
 # coding=utf-8
 """Haber siralama: hangi 10 haber segmente girecek.
 
-Ana sinyal: bir olayi kac farkli yayinci yazmis (Google News'in kendi
-<ol><li> kumesinden geliyor). Canli veriyle dogrulandi: gercek gundem
-maddeleri 4-5 kaynakta cikiyor, clickbait tek kaynakta kaliyor.
+Ana sinyal: baska yayincilar da bu olayin pesine dustu mu (Google
+News'in kendi <ol><li> kumesinden geliyor). Canli veriyle dogrulandi:
+gercek gundem maddeleri kumeleniyor, clickbait tek kaynakta kaliyor.
 
-Skor = w_sources * log2(1+kaynak) + w_freshness * tazelik + w_trust * guven
+Skor = w_clustered * kumelendi + w_freshness * tazelik + w_trust * guven
         - clickbait_penalty * clickbait_orani
+
+"kumelendi" ikili bir sinyaldir, derece degil. Sebebi olcumdur: Google
+Haberler RSS'i kume buyuklugunu tam 5'te kesiyor. 2026-09-12'de NATION
+feed'indeki 70 haberin 64'u tam 5 yayinci, 6'si 0 rapor etti; arasi yok.
+Yani "5 yayinci yazdi" ile "50 yayinci yazdi" ayirt edilemiyor.
+
+Eskiden burada log2(1+kaynak) vardi. Bu, olmayan bir derecelendirme
+vaat ediyordu: ayari okuyan kisi kaynak sayisinin siralamayi
+inceltecegini sanip agirligi buna gore seciyordu. Oysa tek yaptigi,
+kumelenmis habere sabit bir bonus vermekti. Simdi ne yaptigini
+soyluyor.
+
+Sinyalin kendisi degerli ve guclu: hicbir baska yayincinin pesine
+dusmedigi haber gercekten daha az onemli.
 """
 from __future__ import annotations
 
 import json
-import math
 import re
 import unicodedata
 from dataclasses import dataclass
@@ -76,7 +89,7 @@ def similarity(a: str, b: str) -> float:
 class Scored:
     item: NewsItem
     score: float
-    sources: float
+    clustered: float
     freshness: float
     trust: float
     clickbait: float
@@ -145,17 +158,19 @@ class Ranker:
     # --- skor ---
 
     def score(self, item: NewsItem) -> Scored:
-        sources = math.log2(1 + item.source_count)
+        # Ikili: baska bir yayinci bu haberin pesine dustu mu? Kume
+        # buyuklugu derece tasimiyor (bkz. modul basligi).
+        clustered = 1.0 if item.source_count >= 2 else 0.0
         freshness = self.freshness_of(item.age_hours)
         trust = self.trust_of(item.publisher)
         bait = self.clickbait_of(item.title)
         total = (
-            float(self.s["w_sources"]) * sources
+            float(self.s["w_clustered"]) * clustered
             + float(self.s["w_freshness"]) * freshness
             + float(self.s["w_trust"]) * trust
             - float(self.s["clickbait_penalty"]) * bait
         )
-        return Scored(item, total, sources, freshness, trust, bait, self.drop_reason(item))
+        return Scored(item, total, clustered, freshness, trust, bait, self.drop_reason(item))
 
     # --- segment secimi ---
 
