@@ -22,7 +22,7 @@ from mynews.feeds import _parse_date
 from mynews.podcast import format_duration, render_feed
 from mynews.images import ImageResolver, extract_image, extract_summary, parse_articles
 from mynews.script import Turn, _quota_detail, build_context, verify_turns
-from mynews.rank import Ranker, normalize, similarity
+from mynews.rank import Ranker, load_config, normalize, similarity
 from mynews.speech import intro_for, normalize as speech_normalize
 
 NOW = datetime.now(timezone.utc)
@@ -821,6 +821,50 @@ class TestGeminiQuotaDetail(unittest.TestCase):
 
     def test_survives_missing_details(self):
         self.assertEqual(_quota_detail(json.dumps({"error": {"code": 429}})), ("", 0.0))
+
+
+class TestClickbaitLeaks(unittest.TestCase):
+    """Bultene gercekten sizmis basliklar cezalandirilmali.
+
+    Asagidaki basliklarin hepsi 2026-09-11 bulteninde yayindaydi; mevcut
+    anahtar kelime listesi hicbirini yakalamiyordu.
+    """
+
+    SIZANLAR = [
+        "Kolesterol'ü kökünden bitiriyor. Tek dozu yetiyor. Milyonlarca kişiyi ilgilendiriyor",
+        "Kahve zararlı sanılıyordu: Araştırma sonuçları gerçeği ortaya çıkardı",
+        "Gelin arabasına asılan yazıyı gören kayınpeder damadı hastanelik etti",
+        "Acun Ilıcalı'yı korkutan görüntü: Servet döktüğü ismin kabus anları",
+    ]
+
+    TEMIZLER = [
+        "Merkez Bankası faiz kararını açıkladı",
+        "İsviçre Alpleri'nde otobüs kazası: Çok sayıda ölü var",
+        "Samsung, Qualcomm için 2 nm çip üretmeye hazır",
+        "Dünya Sağlık Örgütü'nden tütün raporu",
+    ]
+
+    def setUp(self):
+        self.ranker = Ranker(load_config("tr"))
+
+    def test_leaked_headlines_are_penalised(self):
+        """Hepsi tespit edilmeli; kac isaret tasidiklari degisir."""
+        for baslik in self.SIZANLAR:
+            with self.subTest(baslik=baslik[:40]):
+                self.assertGreater(self.ranker.clickbait_of(baslik), 0.0)
+
+    def test_strongest_leaks_score_high(self):
+        """Iki ya da daha fazla isaret tasiyanlar belirgin ceza almali."""
+        agir = [b for b in self.SIZANLAR if "kabus" in b or "sanılıyordu" in b or "tek doz" in b.lower()]
+        self.assertTrue(agir)
+        for baslik in agir:
+            with self.subTest(baslik=baslik[:40]):
+                self.assertGreaterEqual(self.ranker.clickbait_of(baslik), 0.6)
+
+    def test_plain_headlines_are_not_penalised(self):
+        for baslik in self.TEMIZLER:
+            with self.subTest(baslik=baslik[:40]):
+                self.assertLess(self.ranker.clickbait_of(baslik), 0.34)
 
 
 class TestEmptyPublisherFeeds(unittest.TestCase):
