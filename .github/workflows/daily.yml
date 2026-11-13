@@ -21,9 +21,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -37,7 +37,7 @@ jobs:
         run: python -m mynews --locale tr health
 
       - name: Önbelleği ve geçmişi geri yükle
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           # Ses önbelleği, yayınlanmış bölümler, podcast arşivi, çeviri
           # önbelleği ve günler arası tekrar elemesi için haber geçmişi.
@@ -86,8 +86,8 @@ jobs:
         continue-on-error: true
         run: python -m mynews --locale tr doctor
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
 
@@ -99,7 +99,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
   # Yayınlanan sonucu denetler. Ayrı iş ve if:always() olmasının sebebi:
   # denetim başarısız olsa bile site yayınlanmış olmalı. Podcast üretilemedi
@@ -109,8 +109,8 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -123,4 +123,35 @@ jobs:
         # taşınıyor olmalı. Burada kırmızı yanması "taşıma bozuldu" demek —
         # tam da bilmek istediğimiz şey. Denetimi susturarak yeşile boyamak,
         # sistemin kendi başarısını yanlış ölçmesine geri dönmek olurdu.
-        run: python -m mynews doctor --url https://arifw3.github.io/haber-akisi
+        #
+        # Her dil ayrı denetlenir. Eskiden yalnızca varsayılan dil (tr)
+        # denetleniyordu; İngilizce bülten bozulsa Actions bunu hiç göstermezdi.
+        # Biri düşse de diğeri denetlenir, sonuçta herhangi bir hata kırmızıdır.
+        run: |
+          status=0
+          for locale in tr en; do
+            echo "::group::$locale"
+            python -m mynews --locale "$locale" doctor --url https://arifw3.github.io/haber-akisi || status=1
+            echo "::endgroup::"
+          done
+          exit $status
+
+  # GitHub, 60 gün boyunca commit almayan herkese açık depolarda zamanlanmış
+  # iş akışlarını kendiliğinden kapatır. Bülten depoya işlenmediği için
+  # bu depo kendi başına hiç commit üretmez: 2026-11-11'de tam 60. günde
+  # kapandı ve site iki gün sessizce eskidi.
+  #
+  # İş akışını API üzerinden yeniden etkinleştirmek hareketsizlik sayacını
+  # sıfırlar; boş "canlı tut" commit'leriyle geçmişi kirletmeye gerek kalmaz.
+  # Ayrı iş olmasının sebebi: bülten üretimi düşse bile bu adım çalışmalı,
+  # ve gereken actions:write yetkisi yalnızca burada verilmeli.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - name: İş akışını etkin tut
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/daily.yml/enable"
