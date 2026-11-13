@@ -58,7 +58,7 @@ const STRINGS = {
     offlineUnsupported: "Çevrimdışı kayıt bu tarayıcıda desteklenmiyor",
     interests: "İlgi alanların",
     interestsHelp: "Eşleşen haberler ana sayfada öne çıkar. Yalnızca bu cihazda saklanır.",
-    interestsEmpty: "Henüz eklemedin.", interestPlaceholder: "örn. Laravel, deprem, Fenerbahçe",
+    interestsEmpty: "Henüz eklemedin.", interestPlaceholder: "örn. Beşiktaş, Bilim, Sanat",
     add: "Ekle", edit: "Düzenle", read: "okundu",
     sources: (n) => `${n} kaynak`, sourcesCapped: (n) => `${n}+ kaynak`,
     singleSource: "tek kaynak",
