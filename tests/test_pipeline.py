@@ -174,30 +174,65 @@ class TestRanking(unittest.TestCase):
 
 
 class TestSpeech(unittest.TestCase):
-    TAIL_TR = "Bu haberi {n} ayrı kaynak yazdı."
-
-    def test_speech_mentions_publisher_and_source_count(self):
+    def test_speech_is_publisher_then_title(self):
         from mynews.build import speech_text
 
-        text = speech_text(make_item("Önemli bir gelişme", related=4), tail=self.TAIL_TR)
-        self.assertIn("Hürriyet", text)
-        self.assertIn("5 ayrı kaynak", text)
+        text = speech_text("Hürriyet", "Önemli bir gelişme")
+        self.assertEqual(text, "Hürriyet. Önemli bir gelişme.")
 
-    def test_speech_skips_count_for_single_source(self):
+    def test_speech_has_no_source_count_tail(self):
+        # Her habere ayni kuyruk ekleniyordu ve 5, Google'in ust siniriydi.
         from mynews.build import speech_text
 
-        text = speech_text(make_item("Tek kaynaklı haber"), tail=self.TAIL_TR)
-        self.assertNotIn("ayrı kaynak", text)
+        self.assertNotIn("kaynak", speech_text("Hürriyet", "Önemli bir gelişme"))
+        self.assertNotIn("outlets", speech_text("Reuters", "Big development", rules="en"))
 
-    def test_speech_uses_locale_tail(self):
+    def test_speech_reads_summary_lead(self):
         from mynews.build import speech_text
 
         text = speech_text(
-            make_item("Big development", related=4),
-            rules="en",
-            tail="This story was covered by {n} separate outlets.",
+            "Hürriyet",
+            "İstanbul'da lodos",
+            "Kuvvetli rüzgar nedeniyle vapur seferleri iptal edildi. "
+            "Detaylar haberimizde.",
         )
-        self.assertIn("covered by 5 separate outlets", text)
+        self.assertIn("vapur seferleri iptal edildi.", text)
+        self.assertNotIn("Detaylar", text)
+
+    def test_summary_lead_stops_at_sentence_boundary(self):
+        from mynews.speech import summary_lead
+
+        first = "Birinci cümle yeterince uzun bir açıklama içeriyor."
+        lead = summary_lead(first + " " + "İkinci cümle " * 30 + ".", limit=120)
+        self.assertEqual(lead, first)
+
+    def test_summary_lead_skips_sentence_repeating_title(self):
+        from mynews.speech import summary_lead
+
+        lead = summary_lead(
+            "Merkez Bankası faizi sabit tuttu. Karar piyasada beklentiye uygundu.",
+            title="Merkez Bankası faizi sabit tuttu",
+        )
+        self.assertEqual(lead, "Karar piyasada beklentiye uygundu.")
+
+    def test_shouting_sentence_is_calmed(self):
+        from mynews.speech import normalize
+
+        text = normalize("ERCAN'DA BEYANA TABİ TUTULMAYAN SARIMSAKLAR ELE GEÇİRİLDİ")
+        self.assertTrue(text.startswith("Ercan'da beyana tabi"), text)
+
+    def test_single_abbreviation_is_not_calmed(self):
+        from mynews.speech import calm_shouting
+
+        self.assertEqual(calm_shouting("NATO zirvesi İstanbul'da"), "NATO zirvesi İstanbul'da")
+
+    def test_pipe_separates_sentences(self):
+        from mynews.speech import clean_for_speech
+
+        self.assertEqual(
+            clean_for_speech("11 ilde alarm | Lodos kenti vurdu"),
+            "11 ilde alarm. Lodos kenti vurdu",
+        )
 
     def test_turkish_abbreviations_skipped_for_english(self):
         from mynews.speech import normalize
@@ -207,12 +242,46 @@ class TestSpeech(unittest.TestCase):
         self.assertIn("AKP", normalize("AKP made a statement", "en"))
         self.assertNotIn("A Ka Pe", normalize("AKP made a statement", "en"))
 
-    def test_columnist_headline_not_used_as_context(self):
-        from mynews.build import pick_extra
+    def test_summary_drops_photo_caption(self):
+        node = ET.fromstring(
+            "<item><description>&lt;figure&gt;&lt;img src='x.jpg'/&gt;"
+            "&lt;figcaption&gt;Bekleyen yolcular.&lt;/figcaption&gt;&lt;/figure&gt;"
+            "&lt;p&gt;Uçuşlar yeniden başladı.&lt;/p&gt;</description></item>"
+        )
+        self.assertEqual(extract_summary(node), "Uçuşlar yeniden başladı.")
 
-        item = make_item("Seçim tartışması büyüyor")
-        item.related = [Related(title="Seçimin ucu göründü | Ali Veli Köşe Yazısı", source="X")]
-        self.assertEqual(pick_extra(item), "")
+
+class TestTTSConfig(unittest.TestCase):
+    def test_locale_voices_reach_tts(self):
+        from mynews.tts import config_for
+
+        tts = config_for({
+            "tts": {"google_voices": ["tr-TR-Chirp3-HD-Aoede"], "google_language": "tr-TR"},
+            "voices": {
+                "read": ["en-US-Chirp3-HD-Aoede"],
+                "podcast": {"SARAH": "en-US-Chirp3-HD-Aoede", "MARK": "en-US-Chirp3-HD-Charon"},
+            },
+        })
+        self.assertEqual(tts["google_voices"], ["en-US-Chirp3-HD-Aoede"])
+        self.assertEqual(tts["google_language"], "en-US")
+        self.assertEqual(tts["podcast_voices"]["MARK"], "en-US-Chirp3-HD-Charon")
+
+    def test_shipped_locales_use_their_own_language(self):
+        from mynews.tts import config_for
+
+        for locale in ("tr", "en"):
+            tts = config_for(load_config(locale))
+            prefix = "tr-TR" if locale == "tr" else "en-US"
+            self.assertEqual(tts["google_language"], prefix)
+            for voice in list(tts["podcast_voices"].values()) + tts["google_voices"]:
+                self.assertTrue(voice.startswith(prefix), (locale, voice))
+
+    def test_voice_pick_is_stable(self):
+        from mynews.tts import pick_voice
+
+        voices = ["a", "b", "c"]
+        self.assertEqual(pick_voice(voices, "metin"), pick_voice(voices, "metin"))
+        self.assertEqual(pick_voice([], "metin"), "")
 
 
 PUB_FEED = b"""<?xml version="1.0" encoding="UTF-8"?>

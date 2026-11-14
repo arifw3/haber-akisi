@@ -15,8 +15,8 @@ from .feeds import collect as collect_direct
 from .gnews import NewsItem, check_feed
 from .history import History, path_for
 from .images import ImageResolver
-from .rank import Ranker, Scored, load_config, similarity
-from .speech import intro_for, normalize
+from .rank import Ranker, Scored, load_config
+from .speech import intro_for, normalize, summary_lead
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "site" / "data"
@@ -28,42 +28,30 @@ def favicon_for(domain: str) -> str:
     return FAVICON.format(domain=domain) if domain else ""
 
 
-def speech_text(item: NewsItem, extra: str = "", rules: str = "tr", tail: str = "") -> str:
-    """Hands-free modda seslendirilecek metin.
+def speech_text(publisher: str, title: str, summary: str = "", rules: str = "tr") -> str:
+    """Hands-free modda seslendirilecek metin: kaynak, baslik, ozetin basi.
 
-    Sadece basliklarda gecen bilgiyi kullanir - RSS govde vermiyor,
-    uydurmamak icin bilincli olarak yuzeysel tutuluyor.
+    Yalnizca yayincinin kendi yazdigini okur; LLM'e serbest metin
+    yazdirilmaz, uydurma riski tasarimdan uzak tutulur.
+
+    Eskiden burada iki sey daha vardi ve dinleyeni yoruyordu:
+      - Google'in ilgili baslik listesinden secilen "ek cumle": cogu zaman
+        baska bir yayincinin kose yazisi ya da yan haber basligiydi,
+        anlatilan haberle ilgisi belirsizdi.
+      - "Bu haberi 5 ayri kaynak yazdi" kuyrugu: haberlerin cogunda ayni
+        cumle tekrar ediyordu; ustelik 5, Google'in kume buyuklugune
+        koydugu ust sinir (bkz. rank.py). Bilgi zaten kartta rozet olarak var.
     """
-    publisher = intro_for(item.publisher, rules) or ("Google Haberler" if rules == "tr" else "Google News")
+    intro = intro_for(publisher, rules) or ("Google Haberler" if rules == "tr" else "Google News")
     # Iki nokta ust uste yerine nokta: TTS iki noktada duraklamiyordu.
-    parts = [f"{publisher}. {normalize(item.title, rules).rstrip('.')}."]
-    if extra:
-        parts.append(normalize(extra, rules).rstrip(".") + ".")
-    if item.source_count >= 3:
-        parts.append(tail.format(n=item.source_count) if tail else "")
-    return " ".join(p for p in parts if p)
+    parts = [f"{intro}. {normalize(title, rules).rstrip('.')}."]
+    lead = summary_lead(summary, title)
+    if lead:
+        parts.append(normalize(lead, rules).rstrip(".") + ".")
+    return " ".join(parts)
 
 
-def pick_extra(item: NewsItem) -> str:
-    """Ilgili basliklardan en farkli olani ek cumle olarak kullan."""
-    best, best_score = "", 1.0
-    for rel in item.related:
-        if not rel.title or rel.title == item.title:
-            continue
-        sim = similarity(item.title, rel.title)
-        if sim < best_score:
-            best, best_score = rel.title, sim
-    # Cok benzerse ek bilgi tasimiyor demektir.
-    if not best or best_score >= 0.6:
-        return ""
-    # Kose yazisi / bolunmus basliklar seslendirmeye uygun degil.
-    lowered = best.casefold()
-    if "|" in best or "köşe yazısı" in lowered or best.count(" - ") > 1:
-        return ""
-    return best
-
-
-def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = None, rules: str = "tr", tail: str = "") -> str | dict:
+def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = None, unknown: str = "") -> dict:
     item = scored.item
 
     # Yayincinin kendi feed'inde eslesme varsa gorsel ve dogrudan baglanti
@@ -83,7 +71,7 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
     return {
         "id": f"{item.category}-{index}",
         "title": item.title,
-        "publisher": item.publisher or "Bilinmeyen kaynak",
+        "publisher": item.publisher or unknown,
         "domain": item.domain,
         "favicon": favicon_for(item.domain),
         "published": item.published.isoformat(),
@@ -95,7 +83,8 @@ def item_payload(scored: Scored, index: int, resolver: ImageResolver | None = No
         "needs_translation": bool(item.direct.get("translate")),
         "source_count": item.source_count,
         "score": round(scored.score, 3),
-        "speech": speech_text(item, pick_extra(item), rules, tail),
+        # Seslendirme metni burada degil, ceviriden sonra uretilir (bkz. build).
+        "speech": "",
         "related": [
             {"title": r.title, "source": r.source}
             for r in item.related
@@ -119,11 +108,7 @@ def build(config: dict | None = None) -> dict:
     )
 
     rules = cfg.get("speech_rules", "tr")
-    source_tail = (
-        "Bu haberi {n} ayrı kaynak yazdı."
-        if rules == "tr"
-        else "This story was covered by {n} separate outlets."
-    )
+    unknown = "Bilinmeyen kaynak" if cfg.get("language", "tr") == "tr" else "Unknown source"
     locale_params = cfg.get("locale")
 
     matching = cfg.get("image_matching", {})
@@ -175,7 +160,7 @@ def build(config: dict | None = None) -> dict:
         if history:
             for scored in chosen:
                 history.remember(scored.item.title, scored.item.link)
-        payloads = [item_payload(s, i, resolver, rules, source_tail) for i, s in enumerate(chosen)]
+        payloads = [item_payload(s, i, resolver, unknown) for i, s in enumerate(chosen)]
 
         # Ingilizce kaynaklar Turkce'ye cevrilir; ceviri basarisiz olursa
         # haberler Ingilizce kalir - bulteni kaybetmektense oyle yayinlanir.
@@ -191,6 +176,11 @@ def build(config: dict | None = None) -> dict:
                     print(f"  {seg['title']}: {count} baslik Turkce'ye cevrildi")
             except Exception as exc:  # ceviri hicbir zaman bulteni dusurmemeli
                 print(f"  {seg['title']}: ceviri atlandi ({str(exc)[:70]})")
+
+        # Seslendirme metni ceviriden SONRA: once uretildiginde Ingilizce
+        # kaynaklar Turkce bultende Turkce sesle Ingilizce okunuyordu.
+        for scored, p in zip(chosen, payloads):
+            p["speech"] = speech_text(scored.item.publisher, p["title"], p.get("summary", ""), rules)
 
         segments.append(
             {

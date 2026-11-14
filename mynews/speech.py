@@ -89,10 +89,85 @@ def expand_abbreviations(text: str) -> str:
     return _ABBR_RE.sub(repl, text)
 
 
+_TR_LOWER = str.maketrans("Iİ", "ıi")
+_WORD_RE = re.compile(r"[A-Za-zÇĞİÖŞÜçğıöşü]+")
+
+
+def _lower(word: str, rules: str) -> str:
+    return (word.translate(_TR_LOWER) if rules == "tr" else word).lower()
+
+
+def calm_shouting(text: str, rules: str = "tr") -> str:
+    """Tamami buyuk harf cumleleri normal yaziya cevir.
+
+    Yayincilar ozeti bazen manset gibi buyuk harfle yaziyor ("ERCAN'DA
+    BEYANA TABI ..."). TTS bunu ya bagirarak ya da kelimeleri kisaltma
+    sanip harf harf okuyor. Kisaltma listesindekiler (ABD, NATO) korunur.
+    Tek tek buyuk harfli kelimelere dokunulmaz: onlar gercek kisaltma
+    olabilir; yalnizca en az uc kelimelik buyuk harf dizisi "bagirma"dir.
+    """
+    known = set(SPELLED) | PRONOUNCED
+
+    def fix(sentence: str) -> str:
+        words = _WORD_RE.findall(sentence)
+        upper = [w for w in words if len(w) > 1 and w.isupper() and w not in known]
+        if len(upper) < 3 or len(upper) < 0.6 * len(words):
+            return sentence
+        out = _WORD_RE.sub(
+            lambda m: m.group(0) if m.group(0) in known else _lower(m.group(0), rules),
+            sentence,
+        )
+        # Cumle basi buyuk harfle baslasin ("i" -> "İ" Turkce'de).
+        for idx, ch in enumerate(out):
+            if ch.isalpha():
+                head = "İ" if (ch == "i" and rules == "tr") else ch.upper()
+                return out[:idx] + head + out[idx + 1:]
+        return out
+
+    return "".join(fix(part) for part in re.split(r"(?<=[.!?])(\s+)", text))
+
+
+# Ozetin sonundaki "devami icin tiklayin" turu cumleler okunmamali.
+_TEASER_RE = re.compile(
+    r"\b(işte|detaylar|haberin devamı|devamı için|tıkla|okumak için|"
+    r"read more|continue reading|click here|the post .* appeared first)\b",
+    re.I,
+)
+_SENTENCE_RE = re.compile(r"(?<=[.!?…])\s+")
+
+
+def summary_lead(summary: str, title: str = "", limit: int = 240) -> str:
+    """Ozetin basindan, okunacak kadar cumle.
+
+    Ozet yayincinin kendi metnidir; ilgili baslik listesinden secilen ek
+    cumlenin aksine ayni haberi anlatir ve tam cumledir. Cumle ortasindan
+    kesmek kotu duyuldugu icin karakter siniri cumle sinirinda uygulanir:
+    ilk cumle tek basina cok uzunsa ozet hic kullanilmaz.
+    """
+    from .rank import similarity
+
+    out: list[str] = []
+    total = 0
+    for sentence in _SENTENCE_RE.split(re.sub(r"\s+", " ", summary or "").strip()):
+        sentence = sentence.strip()
+        if len(sentence) < 15 or _TEASER_RE.search(sentence):
+            continue
+        # Basligi tekrar eden cumle bilgi tasimiyor.
+        if title and similarity(sentence, title) >= 0.6:
+            continue
+        if total + len(sentence) > limit:
+            break
+        out.append(sentence)
+        total += len(sentence) + 1
+    return " ".join(out)
+
+
 def clean_for_speech(text: str) -> str:
     """Yazili dile ait isaretleri sesli okuma icin sadelestir."""
     # Alan adi yayinci adi olarak geliyor: "birgun.net" -> "birgun"
     text = _DOMAIN_RE.sub(lambda m: m.group(1), text)
+    # "Baslik | Baska baslik": iki ayri cumle.
+    text = re.sub(r"\s*\|\s*", ". ", text)
 
     text = text.translate(_QUOTES)          # tirnaklar okunmaz, duraklama yaratir
     text = _APOSTROPHE_RE.sub("", text)    # tirnak gorevindeki apostroflar
@@ -117,6 +192,9 @@ def normalize(text: str, rules: str = "tr") -> str:
     dillerde uygulanmaz, cunku o dillerin TTS'i kendi kurallariyla okur.
     Noktalama sadelestirmesi ise dilden bagimsizdir.
     """
+    # Once bagirma duzeltilir: aksi halde buyuk harf kelimeler kisaltma
+    # sanilip acilabilirdi.
+    text = calm_shouting(text, rules)
     if rules == "tr":
         text = expand_abbreviations(text)
     return clean_for_speech(text)

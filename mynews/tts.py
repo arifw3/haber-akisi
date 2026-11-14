@@ -38,6 +38,38 @@ class TTSError(RuntimeError):
     pass
 
 
+def config_for(cfg: dict) -> dict:
+    """Ortak TTS ayarlarini dilin seslerinle birlestir.
+
+    settings.json'daki tts blogu dilden bagimsizdir; sesler ise
+    locales/<dil>.json -> voices altindadir. Bu birlestirme eskiden yoktu:
+    Ingilizce haberler tr-TR sesiyle okunuyor, Ingilizce podcast'in iki
+    sunucusu ayni Turkce sesle konusuyordu.
+    """
+    tts = dict(cfg.get("tts", {}))
+    voices = cfg.get("voices") or {}
+    read = voices.get("read") or []
+    if read:
+        tts["google_voices"] = list(read)
+        # "en-US-Chirp3-HD-Aoede" -> "en-US"
+        tts["google_language"] = "-".join(read[0].split("-")[:2])
+    if voices.get("podcast"):
+        tts["podcast_voices"] = dict(voices["podcast"])
+    return tts
+
+
+def pick_voice(voices: list[str], text: str) -> str:
+    """Metne gore kararli ses secimi.
+
+    hash() kullanilamaz: Python her surecte farkli tohumla hash'liyor,
+    yani ayni metin her calismada baska sese duser ve onbellek bosa gider.
+    """
+    if not voices:
+        return ""
+    digest = hashlib.sha256(text.encode("utf-8")).digest()
+    return voices[int.from_bytes(digest[:4], "big") % len(voices)]
+
+
 @dataclass
 class Clip:
     path: Path
@@ -75,7 +107,7 @@ def synth_eleven(text: str, out: Path, config: dict) -> Clip:
 
     # Her haberi tek bir ses okuyor. Sesler arasinda donusum yaparak
     # bulten monotonluktan cikiyor.
-    voice_id = voices[hash(text) % len(voices)]
+    voice_id = pick_voice(voices, text)
 
     audio = _post(
         ELEVEN_URL.format(voice_id=voice_id),
@@ -153,7 +185,7 @@ def synth_google(text: str, out: Path, config: dict) -> Clip:
         raise TTSError("GOOGLE_TTS_API_KEY tanimli degil")
 
     voices = config.get("google_voices") or ["tr-TR-Wavenet-E"]
-    voice = voices[hash(text) % len(voices)]
+    voice = pick_voice(voices, text)
 
     data = _post(
         f"{GOOGLE_TTS_URL}?key={key}",
@@ -207,7 +239,7 @@ def cache_key(text: str, engine: str, config: dict) -> str:
     """
     voices = config.get(f"{engine}_voices") or []
     model = config.get(f"{engine}_model", "")
-    voice = voices[hash(text) % len(voices)] if voices else ""
+    voice = pick_voice(voices, text)
     raw = "|".join([engine, model, voice, text])
     return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
 

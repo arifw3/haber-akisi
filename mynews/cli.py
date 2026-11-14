@@ -16,6 +16,7 @@ from .digest import write as write_digest
 from .gnews import check_feed
 from .rank import Ranker, load_config
 from .tts import available_engine, synthesize_bulletin
+from .tts import config_for as tts_config_for
 
 
 def cmd_health(args: argparse.Namespace) -> int:
@@ -67,7 +68,7 @@ def cmd_build(args: argparse.Namespace) -> int:
     if args.with_audio:
         from pathlib import Path
 
-        tts_cfg = cfg.get("tts", {})
+        tts_cfg = tts_config_for(cfg)
         engine = available_engine(tts_cfg.get("engine", "auto"))
         if not engine:
             print("Ses motoru anahtari yok; PWA tarayici sesini kullanacak.")
@@ -92,7 +93,7 @@ def cmd_build(args: argparse.Namespace) -> int:
                 print(f"  ayiklandi -> {line}")
 
             site = Path(__file__).resolve().parent.parent / "site"
-            segments = synthesize_script(turns, site, cfg.get("tts", {}), bulletin["date"])
+            segments = synthesize_script(turns, site, tts_config_for(cfg), bulletin["date"])
             bulletin["podcast"] = {
                 "date": bulletin["date"],
                 "turns": segments,

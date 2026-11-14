@@ -58,8 +58,15 @@ class Article:
     published: str = ""   # ISO 8601; bos ise tarih bulunamamistir
 
 
+# Fotograf altyazisi metnin parcasi degil. The Verge gibi feed'lerde ozet
+# altyaziyla basliyordu ve seslendirmede "…bilgi panosu gorunumu" diye
+# haberle ilgisiz bir cumle okunuyordu.
+_FIGURE_RE = re.compile(r"<(figure|figcaption)\b.*?</\1\s*>", re.S | re.I)
+
+
 def _clean(text: str) -> str:
-    return re.sub(r"\s+", " ", _TAG_RE.sub("", html.unescape(text or ""))).strip()
+    text = _FIGURE_RE.sub(" ", html.unescape(text or ""))
+    return re.sub(r"\s+", " ", _TAG_RE.sub("", text)).strip()
 
 
 def extract_image(item: ET.Element) -> str:
